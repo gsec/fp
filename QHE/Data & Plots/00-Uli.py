@@ -20,7 +20,7 @@ txt_filename_to_open=[]
 line=[]
 colors = [(0.0, 0.75, 0.75),(0.0, 0.5, 0.0),(0.75, 0.75, 0),(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
-txt_filename_to_open.append("2-4,2-Hallspannung-9-0.dat")
+txt_filename_to_open.append("4,2-Hallspannung.dat")
 line.append(1)
 # ------------------------------------------
 
