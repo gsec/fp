@@ -13,15 +13,15 @@ fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k'
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
-data = genfromtxt("4,2-Hallwiderstand-Magnetfeld_bereinigt.dat")
+data = genfromtxt("4,2-Hallspannung.dat")
 
 #print data[100:,1]
 
-B = data[:8500,0]
-#U_H = data[:,2]/10 * 1e-3
-#I_H = (data[:,3]/10 * 2e-3)/4981
+B = data[:,1]
+U_H = data[:,2]/10 * 1e-3
+I_H = (data[:,3]/10 * 2e-3)/4981
 
-R_H = data[:8500,1]
+R_H = U_H/I_H
 
 delta = 50
 step = 100
@@ -59,38 +59,18 @@ print "Maxima:", maximum1, maximum2, maximum3, maximum4, maximum5, maximum6, max
 print "argmax:", wertmaximum1, wertmaximum2, wertmaximum3, wertmaximum4, wertmaximum5, wertmaximum6, wertmaximum7
 print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mittelwertkandidaten[wertmaximum2], Mittelwertkandidaten[wertmaximum3], Mittelwertkandidaten[wertmaximum4], Mittelwertkandidaten[wertmaximum5], Mittelwertkandidaten[wertmaximum6], Mittelwertkandidaten[wertmaximum7]
 
-#lines = plt.plot(0,12500,2000,12500, "g--")
-#plt.setp(lines, color="g", linewidth=2.0)
 
 ax = fig.add_subplot(111)
-ax.plot(B*100, R_H, "b", label=u"Messwerte")
-
+ax.plot(B*100, R_H, "x", label=u"Messwerte")
 ax.set_xlabel(u"Magnetfeld $B$")
 ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}$")
 
 ax2 = ax.twiny()
 ax2.plot(counts,Mittelwertkandidaten, "r", label=u"liste")
-
 ax2.set_xlabel(r"Anzahl $N$")
 
-ax.legend(loc=3)
+ax.legend(loc=2)
 ax2.legend(loc=4)
-
-ax2.plot([0,760],[Mittelwertkandidaten[wertmaximum1],Mittelwertkandidaten[wertmaximum1]], "g--")
-ax2.plot([0,410],[Mittelwertkandidaten[wertmaximum2],Mittelwertkandidaten[wertmaximum2]], "g--")
-ax2.plot([0,300],[Mittelwertkandidaten[wertmaximum3],Mittelwertkandidaten[wertmaximum3]], "g--")
-ax2.plot([0,250],[Mittelwertkandidaten[wertmaximum4],Mittelwertkandidaten[wertmaximum4]], "g--")
-ax2.plot([0,220],[Mittelwertkandidaten[wertmaximum5],Mittelwertkandidaten[wertmaximum5]], "g--")
-ax2.plot([0,195],[Mittelwertkandidaten[wertmaximum6],Mittelwertkandidaten[wertmaximum6]], "g--")
-ax2.plot([0,180],[Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertmaximum7]], "g--")
-
-
-text(750, Mittelwertkandidaten[wertmaximum1]+500, r"$\nu = 2$", va='center', ha='center')
-text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 3$", va='center', ha='center')
-text(210, Mittelwertkandidaten[wertmaximum3]+500, r"$\nu = 4$", va='center', ha='center')
-text(200, Mittelwertkandidaten[wertmaximum4]+500, r"$\nu = 5$", va='center', ha='center')
-text(190, Mittelwertkandidaten[wertmaximum5]+500, r"$\nu = 6$", va='center', ha='center')
-text(180, Mittelwertkandidaten[wertmaximum6]+500, r"$\nu = 7$", va='center', ha='center')
 
 # y = log(data[:,1]/(8e-3*1.63e-3*2.74e-3))
 # y = log(data[:,1]*(1.63e-3*2.74e-3)/(8e-3*4.2e-3))
