@@ -1,0 +1,40 @@
+%%% For Windows/MikTex
+%%% Put me into C:\Program Files\MiKTeX 2.9\tex\latex\bijan\
+%%% Go to MikTex Options -> Refresh FNDB, Update Formats
+
+%%% For Linux with Texlive vanilla setup
+%%% /usr/local/texlive/texmf-local/tex/latex/local
+
+\NeedsTeXFormat{LaTeX2e} 
+\ProvidesPackage{bijan_koma} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{lastpage}            % allows to use the last page number
+\RequirePackage{subfig}							 % Subcaption for several pics
+\RequirePackage[utf8]{inputenc}
+\RequirePackage{relsize}             % Allows to use relative sizes
+\RequirePackage[tbtags]{amsmath}     % tbtags sets the number of split 
+                                     % environments at the end 
+\RequirePackage{amssymb,amsthm,amsfonts}
+\RequirePackage{simplewick}          % Wick contractions
+\RequirePackage{slashed}             % The almighty slash-notation
+\RequirePackage{xcolor}              % Allows every colormixture
+\RequirePackage{bbm}                 % $\mathbbm{N}$ -> |N, etc.
+
+\RequirePackage{feynmp}              % Feynman diagrams. Compile with mp.
+\RequirePackage[pdftex]{graphicx}    % To include graphics. Option necessary
+                                     % for feynmp.
+\DeclareGraphicsRule{*}{mps}{*}{}
+
+\RequirePackage{hyperref}            % Customize with \hypersetup{}
+\RequirePackage{cleveref}            % Recognizes type of reference
+\RequirePackage{booktabs}            % Pretty tables. Use \toprule,
+                                     % \midrule and \bottomrule
+\RequirePackage{setspace}            % Provides: /onehalfspacing,..
+\RequirePackage{nicefrac}            % Nice small fractions
+\RequirePackage{tikz}                % Provides the means for \circled
+
+\RequirePackage{bijan_commands}
+
+\endinput

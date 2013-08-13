@@ -1,0 +1,3 @@
+Style-Ordnet irgendwo in den tex-Ordner kopieren
+MiKTex Maintenace Settings
+Refresh FNDB

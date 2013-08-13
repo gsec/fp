@@ -1,0 +1,32 @@
+%%% For Windows/MikTex
+%%% Put me into C:\Program Files\MiKTeX 2.9\tex\latex\bijan\
+%%% Go to MikTex Options -> Refresh FNDB, Update Formats
+
+%%% For Linux with Texlive vanilla setup
+%%% /usr/local/texlive/texmf-local/tex/latex/local
+
+\NeedsTeXFormat{LaTeX2e} 
+\ProvidesPackage{bijan_beamer} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{relsize}             % Allows to use relative sizes
+\RequirePackage{siunitx}             % Correct typesetting of units
+\RequirePackage{simplewick}          % Wick contractions
+\RequirePackage{slashed}             % The almighty slash-notation
+\RequirePackage{bbm}                 % $\mathbbm{N}$ -> |N, etc.
+\RequirePackage{booktabs}            % Pretty tables. Use \toprule,
+                                     % \midrule and \bottomrule
+                                     
+\RequirePackage{bijan_commands}
+
+%%%%%%%%%%%%%%%%%%%%%% Beamer commands %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\beamersection}[1]{
+    \section{#1}
+    \begin{frame}
+        \centering\huge \alert{#1}
+    \end{frame}
+}
+
+\endinput
