@@ -20,7 +20,12 @@ txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
-txt_filename_to_open.append("1,5-Laengsspannung.dat")
+Grenzen=[[322,4714,5066,9469],[320,4707,5097,9501],[322,4704,5035,9436],[318,4700,5011,9413]]
+Eingaben=["4,2-Laengsspannung.dat","3,0-Laengsspannung.dat","2,1-Laengsspannung.dat","1,5-Laengsspannung.dat"]
+Ausgaben=['4,2-Laengswiderstand-Magnetfeld_bereinigt.dat','3,0-Laengswiderstand-Magnetfeld_bereinigt.dat','2,1-Laengswiderstand-Magnetfeld_bereinigt.dat','1,5-Laengswiderstand-Magnetfeld_bereinigt.dat']
+
+Fall=3
+txt_filename_to_open.append(Eingaben[Fall])
 line.append(1)
 # ------------------------------------------
 
@@ -35,11 +40,11 @@ for n in range(len(txt_filename_to_open)):
     U_laengs_down=[]
     I_down=[]
     B_down=[]
-    for i in range(321,4717): #321-4716 und 5025-9436
+    for i in range(Grenzen[Fall][0],Grenzen[Fall][1]): #4,2K: 321-4716 und 5025-9436 3,0K: 2,1K: 1,5K:
         U_laengs_up=append(U_laengs_up,float(txt_file[i][2])/10*0.001)
         I_up=append(I_up,float(txt_file[i][3])/10*0.002/4981)
         B_up=append(B_up,float(txt_file[i][1]))
-    for i in range(5025,9426): #321-4716 und 5025-9436
+    for i in range(Grenzen[Fall][2],Grenzen[Fall][3]): #321-4716 und 5025-9436
         U_laengs_down=append(U_laengs_down,float(txt_file[i][2])/10*0.001)
         I_down=append(I_down,float(txt_file[i][3])/10*0.002/4981)
         B_down=append(B_down,float(txt_file[i][1]))       
@@ -136,7 +141,7 @@ ax.xaxis.set_minor_locator( AutoMinorLocator(5))
 ax.legend(loc=1)	
 show()
 
-f = open('1,5-Laengswiderstand-Magnetfeld_bereinigt.dat', 'w+')
+f = open(Ausgaben[Fall], 'w+')
 
 for i in range(len(B_sorted)):
     f.write(str(B_sorted[i])+"\t"+str(R_H_sorted[i])+"\n")

@@ -20,7 +20,7 @@ txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
-txt_filename_to_open.append("4,2-Hallspannung.dat")
+txt_filename_to_open.append("1,5-Hallspannung.dat")
 line.append(1)
 # ------------------------------------------
 
@@ -35,12 +35,12 @@ for n in range(len(txt_filename_to_open)):
     U_H_down=[]
     I_down=[]
     B_down=[]
-    for i in range(321,4717): #321-4716 und 5025-9436
-        U_H_up=append(U_H_up,float(txt_file[i][2])/10*0.001)
+    for i in range(309,4743): #4,2K: 324-4713 und 5027-9429     3,0K: 319-4711 und 5055-9484   2,1K: 311-4739 und 5023-9428   1,5K:309-4743 und 5046-9453 
+        U_H_up=append(U_H_up,-float(txt_file[i][2])/10*0.001)
         I_up=append(I_up,float(txt_file[i][3])/10*0.002/4981)
         B_up=append(B_up,float(txt_file[i][1]))
-    for i in range(5025,9426): #321-4716 und 5025-9436
-        U_H_down=append(U_H_down,float(txt_file[i][2])/10*0.001)
+    for i in range(5046,9453): 
+        U_H_down=append(U_H_down,-float(txt_file[i][2])/10*0.001)
         I_down=append(I_down,float(txt_file[i][3])/10*0.002/4981)
         B_down=append(B_down,float(txt_file[i][1]))       
     # print xdata
@@ -56,7 +56,7 @@ for n in range(len(txt_filename_to_open)):
         #print shift
         for i in range(len(B_up_copy)):
             B_up_copy[i]-=shift/1000.0
-        for i in range(len(B_up_copy)):
+        for i in range(len(B_down_copy)):
             B_down_copy[i]+=shift/1000.0
             
         R_H_all=append(R_H_up,R_H_down)
@@ -95,7 +95,7 @@ R_H_down=U_H_down/I_down
 
 for i in range(len(B_up)):
     B_up[i]-=shift_min/1000.0
-for i in range(len(B_up)):
+for i in range(len(B_down)):
     B_down[i]+=shift_min/1000.0
     
 R_H_all=append(R_H_up,R_H_down)
@@ -133,7 +133,7 @@ ax.xaxis.set_minor_locator( AutoMinorLocator(5))
 ax.legend(loc=1)	
 show()
 
-f = open('4,2-Hallwiderstand-Magnetfeld_bereinigt.dat', 'w+')
+f = open('2,1-Hallwiderstand-Magnetfeld_bereinigt.dat', 'w+')
 
 for i in range(len(B_sorted)):
     f.write(str(B_sorted[i])+"\t"+str(R_H_sorted[i])+"\n")
