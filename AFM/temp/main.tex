@@ -1,0 +1,187 @@
+\documentclass[paper=a4,fontsize=10pt,DIV=18,twocolumn,parskip=half]{scrartcl}
+\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
+%\usepackage{bijan_koma}
+\usepackage[ngerman]{babel} 
+\usepackage[]{amsmath}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
+\sisetup{       
+  separate-uncertainty,
+  per-mode=fraction
+}
+
+%\colorlet{darkblue}{blue!70!black}
+%\hypersetup{
+  %colorlinks,
+  %citecolor=darkblue,
+  %filecolor=darkblue,
+  %linkcolor=darkblue,
+  %urlcolor=black
+%}
+
+%\crefformat{equation}{Glg.~(#2#1#3)}
+%\crefformat{section}{Abschnitt~#2#1#3}
+%\crefformat{figure}{Abb.~#2#1#3}
+%\crefformat{table}{Tab.~#2#1#3}
+%\crefformat{chapter}{Kapitel~#2#1#3}
+
+
+\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
+  \renewcommand{\figurename}{Abb.}
+  \renewcommand{\tablename}{Tab.}
+}
+
+%\numberwithin{equation}{section}    % Number equations after sections, e.g. (1.2)
+
+%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
+\pagestyle{scrheadings}                           % Apply userdefined settings
+\setheadsepline{.5 pt}                            % Width of seperation line
+\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
+\cfoot{\thepage}                                  % Page numbering 
+
+%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\columnsep20pt                                  % Width inbetween \twocolumns
+%\onehalfspacing                                 % 1.5 line spacing
+\linespread{1.2}
+
+\setlength{\headheight}{2.0\baselineskip}       % Fixes the 'small headhight'
+
+\renewcommand*{\chapterheadstartvskip}{\vspace{0\baselineskip}} 
+% Spacing Pagehead-Headline. Standard: 2
+
+\renewcommand*{\chapterheadendvskip}{\vspace{\baselineskip}}
+% Spacing Headline-Text
+
+% Spacing in math environments \,\;.. 
+%\thinmuskip=3mu % default
+%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
+%\thickmuskip=5mu plus 5mu % default
+
+%\allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
+% in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\title{Rasterkraftmikroskopie}                  
+\author{Guilherme Stein \& Ulrich Müller}         
+\date{}                                % Turn off automatic date
+\twocolumn[\begin{@twocolumnfalse}
+\vspace{-3em}
+\maketitle      
+% =============================================================================
+\begin{abstract}      
+% =============================================================================
+  \vspace{-2em}
+  \noindent {\small Mithilfe von drei Röntgenanoden sowie verschiedenen
+    Streuobjekten konnten wir die theoretischen Werte der
+$K_{\alpha}$- und $K_{\beta}$-Linie von Kupfer, Eisen und Molybdän
+    bestätigen. Zudem war die
+Feinstruktur von Eisen und Molybdän 
+    im Spektrum erkennbar.  Über das Duane-Hunt-Gesetz haben wir Plancksche
+    Wirkungsquantum zu
+$h = \SI{6.645+-0.059e-34}{\joule\second}$
+    bestimmt. 
+%{R_{H} = \SI{14.02+-0.76}{\eV}} anhand der $K_{\beta}$ Linien
+    Anhand des Effekts der inelastischen Streuung von Photonen an Elektronen
+    haben wir die Compton-Wellenlänge zu
+$\lambda_c=\SI{2.25+-0.43}{\pico\meter}$
+    ermittelt. Schließlich haben wir zwei
+Laue-Aufnahmen
+    eines Materials gemacht, den Reflexen Miller-Indices zugeordnet und damit 
+    die Diamandstruktur der Probe
+    identifiziert haben.
+    }
+  \vspace{1em}
+
+  \noindent Betreuer: Dr. Charles Gould
+  \hfill Versuchsdurchführung: 05. Oktober 2012
+  \begin{flushright}
+    Protokollabgabe: 12. Oktober 2012        
+  \end{flushright}
+\end{abstract}
+\vspace{2em}
+%
+\end{@twocolumnfalse}
+]
+%
+% =============================================================================
+%\section{Einleitung}
+% =============================================================================
+%
+%\input{Einleitung}
+%\label{Einleitung}
+%
+% =============================================================================
+%\section{Theorie}
+% =============================================================================
+%
+\input{roughness.tex}
+%\input{Theorie}
+%\label{Theorie}
+%
+% =============================================================================
+%\section{Experimenteller Aufbau}
+% =============================================================================
+%
+%\input{Experiment}
+%\label{Experiment}
+%
+% =============================================================================
+%\section{Auswertung}
+% =============================================================================
+%
+
+%\input{AuswertungGui}
+%\input{AuswertungGui}
+
+%\input{AuswertungUli}
+%\input{AuswertungUli}
+%
+% =============================================================================
+%\section{Zusammenfassung}
+% =============================================================================
+%
+%\input{Zusammenfassung}
+%
+% =============================================================================
+%\begin{thebibliography}{}   
+% =============================================================================
+%
+%
+  %\bibitem{vb} Röntgenstrahlung  (Versuchsbeschreibung), Universität Würzburg
+  %(2010) 
+  %\bibitem{gerthsen} \textit{D. Meschede}, Gerthsen Physik, 24. Auflage (2010) 
+  %\bibitem{codata} CODATA Physical Constants,
+    %\textbf{\url{http://physics.nist.gov/cuu/Constants/index.html}} 
+    %(September 2012)
+  %\bibitem{moseley} \textit{H.G.J. Moseley},
+  %\href{http://www.chemistry.co.nz/henry_moseley_article.htm}{\textbf{{Philos.
+        %Mag. 26, 1024 (1913).  }}} 
+  %\bibitem{lesk} \textit{A. M. Lesk}, Am. J. Phys. 48, 492 (1980),
+    %\href{http://ajp.aapt.org/resource/1/ajpias/v48/i6/p492_s1?ver=pdfcov}
+    %{\textbf{doi:10.1119/1.12320.}}
+    %\bibitem{BSchaefer} \textit{L. Bergmann \& C. Schaefer}, Lehrbuch der
+    %Experimentalphysik, Bd. 4 (2003)
+  %\bibitem{si111} Vorlesungskript Advanced Solid State Physics SS12, Universität
+    %Freiburg, 
+    %\textbf{\url{http://cluster.physik.uni-freiburg.de/lehre/SS12/material/mat1.pdf}} 
+%\end{thebibliography}
+%
+%
+\onecolumn
+\pagestyle{empty}
+% =============================================================================
+\section{Anhang}
+\label{Anhang}
+% =============================================================================
+
+\end{document}

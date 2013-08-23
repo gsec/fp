@@ -1,0 +1,36 @@
+\section{Roughness of the surface}
+
+One of the goals of this experiment, is to determine a method of reducing the 
+roughness on the wafer we want to grow on optical structures. This is important 
+on the behalf of ithe optical quality the device can operate at.
+For this purpose we need to define roughness as a way to quantify the properties 
+of the surface of interest.
+%-------
+%Since absolute height differences can also be intoduced by a constant slope, 
+%not scattering the light in the sense of a defect
+%-------
+We think that the concept of a surface energy is a good approach to address 
+those optical qualities. One of the simplest models of surface energy or surface 
+tension  is to assign an atom an energy depending on how many sides it has a 
+neighbouring atom. The neighbour positions are those of the nearest neighbours 
+in the lattice of the material.  In a simple cubic lattice the energy of a free 
+atom would be six, the energy of a surface atom would be one.
+%
+Large fluctuations have a small effect, already represented by the surface 
+energy. On the other hand very small fluctuations, much smaller than the 
+wavelength of the light, also have a small effect on the optical properties.  
+Since they would have a big, but also unwanted contribution to the surface 
+energy, we need to define the size of the 'atoms' with a parameter $\lambda$.
+A natural choice is to set $\lambda$ to the wavelength of the light which the 
+device will interact with. All smaller fluctiations are then neglected and 
+averaged to a mean height with the quantization of the axis in $x$ and $y$ 
+direction to the length scale of $\lambda$.
+\begin{align}
+    \rho = \sum_i \epsilon_i \\
+    \text{where} \epsilon_i = \sum_{r=x,y,z}\sum_{j=i-1,i+1}r_j \\
+    \text{and}  \\
+    r_j =   \begin{cases}
+                1 \mbox{if  site contains an atom }//
+                0 \mbox{else }
+            \end{cases}
+\end{align}
