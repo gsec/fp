@@ -26,11 +26,12 @@ device will interact with. All smaller fluctiations are then neglected and
 averaged to a mean height with the quantization of the axis in $x$ and $y$ 
 direction to the length scale of $\lambda$.
 \begin{align}
-    \rho = \sum_i \epsilon_i \\
-    \text{where} \epsilon_i = \sum_{r=x,y,z}\sum_{j=i-1,i+1}r_j \\
-    \text{and}  \\
-    r_j =   \begin{cases}
-                1 \mbox{if  site contains an atom }//
-                0 \mbox{else }
+    \Upsilon &=  \sum_i \epsilon_i \hfill ~ \\
+    \text{where} \quad 
+    \epsilon_i &=  \sum_{r=x,y,z} \Bigl( r_{i-1} + r_{i+1} \Bigr) \\
+    \text{and}  \quad 
+    r_j &=    \begin{cases}
+                1 &\mbox{if site contains an atom } \\
+                0 &\mbox{else }
             \end{cases}
 \end{align}
