@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.1)  13 AUG 2013 19:19
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.1)  23 AUG 2013 14:47
 entering extended mode
 **main.tex
 (D:\Git\F-Praktikum\AFM\main.tex
@@ -1487,7 +1487,27 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count199
 
-(D:\Git\F-Praktikum\AFM\Einleitung.tex) (D:\Git\F-Praktikum\AFM\Theorie.tex)
+(D:\Git\F-Praktikum\AFM\Expose.tex
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 1.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+<Bilder/A2749_50_1.jpg, id=58, 642.4pt x 513.92pt>
+File: Bilder/A2749_50_1.jpg Graphic file (type jpg)
+ <use Bilder/A2749_50_1.jpg>
+Package pdftex.def Info: Bilder/A2749_50_1.jpg used on input line 9.
+(pdftex.def)             Requested size: 238.96164pt x 191.16684pt.
+) (D:\Git\F-Praktikum\AFM\Einleitung.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <D:/Git/F-Praktikum/AFM/Bilder/A2749_50_1.jpg>] (D:\Git\F-Praktikum\AFM\Theori
+e.tex)
 (D:\Git\F-Praktikum\AFM\Experiment.tex
 Underfull \hbox (badness 2644) in paragraph at lines 1--3
 \OT1/cmr/m/n/10 wen-di-gen R[]ontgenstrahlung fin-det in ei-nem Voll-
@@ -1497,62 +1517,55 @@ Underfull \hbox (badness 2644) in paragraph at lines 1--3
 (D:\Git\F-Praktikum\AFM\AuswertungGui.tex)
 (D:\Git\F-Praktikum\AFM\AuswertungUli.tex)
 (D:\Git\F-Praktikum\AFM\AuswertungUli.tex)
-(D:\Git\F-Praktikum\AFM\Zusammenfassung.tex) [1
-
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
-]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 162.
-
-Underfull \hbox (badness 3536) in paragraph at lines 167--170
-[]\OT1/cmr/m/it/10 A. M. Lesk\OT1/cmr/m/n/10 , Am. J. Phys. 48, 492 (1980),
+(D:\Git\F-Praktikum\AFM\Zusammenfassung.tex)
+Underfull \hbox (badness 8075) in paragraph at lines 147--148
+\OT1/cmr/m/n/10 Based Vertical-Cavity Surface-Emitting La-sers.
  []
 
-[2
 
-] 
+Underfull \hbox (badness 3209) in paragraph at lines 149--150
+\OT1/cmr/m/n/10 Ap-pl. Phys. Lett. 102 (23), S. 231123. DOI:
+ []
+
+[2] 
 AED: lastpage setting LastPage
 [3
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  (D:\Git\F-Praktikum\AFM\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 185.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: ABDE122952D9A4D4FEAA76B840B700AA;708.
+(rerunfilecheck)             Checksum: D933FA9231435878D81A011E967641D4;751.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
- 27760 strings out of 493921
- 543189 string characters out of 3147274
+ 27793 strings out of 493921
+ 544362 string characters out of 3147274
  601648 words of memory out of 3000000
- 30548 multiletter control sequences out of 15000+200000
- 14642 words of font info for 58 fonts, out of 3000000 for 9000
+ 30576 multiletter control sequences out of 15000+200000
+ 11911 words of font info for 46 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 74i,10n,77p,423b,934s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (3 pages, 173374 bytes).
+ 74i,10n,77p,1387b,770s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (3 pages, 187681 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  22 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
