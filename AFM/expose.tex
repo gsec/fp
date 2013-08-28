@@ -1,16 +1,14 @@
-The III-V semiconductor system based on GaSb is commonly used for optical semiconductor devices with wavelengths beyond $\SI{2.3}{\micro\meter}$ \cite{arafin}. In Würzburg especially the interband cascade lasers, which are grown by MBE on GaSb substrate, made significant progress during the last years \cite{weih}. In order to grow devices with high performance it is inevitable to use high quality substrates with a minimum of defects. Despite the use of 'epi-ready' substrates the wafers suffer from native oxide like $\mathrm{Ga}_2 \mathrm{O}_3$ and $\mathrm{Sb}_2 \mathrm{O}_3$ \cite{vineis}. The growth of devices on top of this oxide would lead to non-monocrystal layers. To remove this oxide a commonly used technique in Würzburg is to heat the substrate to about $\SI{580}{\degree}$ for short time. At this temperature the most of the oxide desorbes from the surface but leaving holes in the surface with about  $\SI{10}{\nano\meter}$ in size \cite{murray}. Hereupon a $\SI{200}{\nano\meter}$ GaSb buffer layer is grown at $\SI{485}{\degree}$ to flatten the surface. This method has been established during the last years although it has never been investigated whether a different technique would lead to smoother surfaces. Therefore one of the goals of this experiment is to determine a method of reducing the roughness on the wafer we want to grow on optical structures. This is important on the behalf of the optical quality the device can operate at.\\
-From an intuitive point of view it is clear what roughness is. Trying to quantify in a mathematical way however is not obvious. Common definitions use the standard deviation of the surface's mean height as 
-$ S_a = \frac{1}{A} \iint\limits_{A}  \vert z \left( x,y \right)  \vert \mathrm dx \mathrm dy $ and are suitable in many applications. Problems arise when applying this definition to non-flat surfaces like a soup bowl which is smooth on a small scale but irregular on a big scale. This example shows that roughness is not independent of the scale. 
+The III-V semiconductor system based on GaSb is commonly used for optical semiconductor devices with wavelengths beyond $\SI{2.3}{\micro\meter}$ \cite{arafin}. In Würzburg especially the interband cascade lasers, which are grown by MBE on GaSb substrate, made significant progress during the last years \cite{weih}. In order to grow devices with high performance it is inevitable to use high quality substrates with a minimum of defects. Despite the use of 'epi-ready' substrates the wafers suffer from native oxide like $\mathrm{Ga}_2 \mathrm{O}_3$ and $\mathrm{Sb}_2 \mathrm{O}_3$ \cite{vineis}. The growth of devices on top of this oxide would lead to non-monocrystal layers. To remove this oxide a commonly used technique in Würzburg is to heat the substrate to about $\SI{580}{\degree}$ for a short time. At this temperature the most of the oxide desorbes from the surface but leaving holes in the surface with about  $\SI{10}{\nano\meter}$ in size \cite{murray}. Hereupon a $\SI{200}{\nano\meter}$ GaSb buffer layer is grown at $\SI{485}{\degree}$ to flatten the surface. \\  This method has been established during the last years although it is not clear whether a different technique would lead to smoother surfaces. Therefore one of the goals of this experiment is to determine a method of reducing the roughness on the wafer we want to grow on optical structures. This is important on the behalf of the optical quality the device can operate at.
 
-For this purpose we need to define roughness as a way to quantify the properties 
+From an intuitive point of view it is clear what roughness is. Trying to quantify in a mathematical way however is not obvious. Common definitions use the standard deviation of the surface's mean height as 
+\mbox{$ S_a = \frac{1}{A} \iint\limits_{A}  \vert z \left( x,y \right)  \vert \mathrm dx \mathrm dy $} and are suitable in many applications. Problems arise when applying this definition to non-flat surfaces like a soup bowl which is smooth on a small scale but irregular on a big scale. This example shows that roughness is not independent of the scale. For this purpose we need to define roughness as a way to quantify the properties 
 of the surface of interest.
 %------- [??] find ich super! Vielleicht auch gleich schreiben, dass wir etwa suchen, was von der Skala abhängt, auf der man die Rauigkeit betrachtet. Wir könnten vielleicht auch noch was dazu schreiben, wie Bildkorrekturen sich auf die Rauigkeit auswirken.
 %Since absolute height differences can also be intoduced by a constant slope, 
 %not scattering the light in the sense of a defect
 %-------
 In general we think that the concept of a surface energy is a better approach to address 
-the optical properties arising from surface irregularities. 
-We want to model the surface as polygons connecting the mean heights of a discrete lattice.
+the optical properties arising from surface irregularities. The more the size of the surface differs from a perfect flat surface the rougher the surface is. We want to model the surface as polygons connecting the mean heights of a discrete lattice. 
 The lattice size represents the scaling parameter mentioned above. Here we make the arbitrary choice of the AFM's resolution which will be the scale on which we measure the roughness of the samples.
 
 
@@ -21,35 +19,34 @@ The lattice size represents the scaling parameter mentioned above. Here we make 
 %atom would be six, the energy of a surface atom would be one.
 %
 
-Large fluctuations have a small effect, already represented by the surface 
-energy. On the other hand very small fluctuations, much smaller than the 
-wavelength of the light, also have a small effect on the optical properties.  
-They have a big, but also unwanted contribution to the surface energy.
+%Large fluctuations have a small effect, already represented by the surface 
+%energy. On the other hand very small fluctuations, much smaller than the 
+%wavelength of the light, also have a small effect on the optical properties.  
+%They have a big, but also unwanted contribution to the surface energy.
 
-% we need to define the size of the 'atoms' with a parameter $\lambda$.
-A natural choice is to set $\lambda$ to the wavelength of the light which the 
-device will interact with. All smaller fluctiations are then neglected and 
-averaged to a mean height with the quantization of the axis in $x$ and $y$ 
-direction to the length scale of $\lambda$.
-\begin{align}
-    \Upsilon &=  \sum_i \epsilon_i \hfill ~ \\
-    \text{where} \quad 
-    \epsilon_i &=  \sum_{r=x,y,z} \Bigl( r_{i-1} + r_{i+1} \Bigr) \\
-    \text{and}  \quad 
-    r_j &=    \begin{cases}
-                1 &\mbox{if site contains an atom } \\
-                0 &\mbox{else }
-            \end{cases}
-\end{align}
+%% we need to define the size of the 'atoms' with a parameter $\lambda$.
+%A natural choice is to set $\lambda$ to the wavelength of the light which the 
+%device will interact with. All smaller fluctiations are then neglected and 
+%averaged to a mean height with the quantization of the axis in $x$ and $y$ 
+%direction to the length scale of $\lambda$.
+%\begin{align}
+%    \Upsilon &=  \sum_i \epsilon_i \hfill ~ \\
+%    \text{where} \quad 
+%    \epsilon_i &=  \sum_{r=x,y,z} \Bigl( r_{i-1} + r_{i+1} \Bigr) \\
+%    \text{and}  \quad 
+%    r_j &=    \begin{cases}
+%                1 &\mbox{if site contains an atom } \\
+%                0 &\mbox{else }
+%            \end{cases}
+%\end{align}
 The Atomic Force Microscope (AFM) is the perfect instrument to characterize this roughness of the wafers as it determines the height of the surface very precisely. The expected differences in height on the surface is about $\SI{10}{\nano\meter}$ which is within the resolution of the AFM.
-As the AFM doesn't work in situ we have to produce and investigate the surface at each step of the growth process to understand the mechanisms of oxide desorbtion and flattening of the surface. We going to characterize the single steps of the standard process which are: an untreated GaSb Wafer, the Wafer after the oxide desortion and after $\SI{200}{\nano\meter}$ GaSb buffer. To vary this process we want to test two aspects: first the increase of the GaSb buffer's growth temperature up to $\SI{500}{\degree}$ and $\SI{515}{\degree}$ and second the growth of a $\SI{30}{\nano\meter}$ GaSb/AlAsSb superlattice directly after oxide desorbtion. Recent research showed that the growth of AlAsSb shutting down the step-flow growth mode. This  step-flow growth mode is dominant during the growth of GaSb layers and is not very successful in flattening bigger defects like defects in pyramidal shape \cite{murray}. The growth of a superlattice is nevertheless necessary to maintain the electrical conductivity of the sample.\\
-It would be helpful to understand how these defects can be removed from the surface and how the process can be improved. If the smoothing is not successful theses pyramidal defects tend to grow bigger as the growth progresses. After the growth of structures with a thickness of several microns these defects can even be observed by a optical microscope with a magnification of $50$.
+As the AFM doesn't work in situ we have to produce and investigate the surface at each step of the growth process to understand the mechanisms of oxide desorbtion and flattening of the surface. We are going to characterize the single steps of the standard process which are: an untreated GaSb Wafer, the Wafer after the oxide desortion and after the growth of $\SI{200}{\nano\meter}$ GaSb buffer. To vary this process we want to test two aspects: first the increase of the GaSb buffer's growth temperature up to $\SI{500}{\degree}$ and $\SI{515}{\degree}$ and second the growth of a $\SI{30}{\nano\meter}$ GaSb/AlAsSb superlattice directly after oxide desorbtion. Recent research showed that the growth of AlAsSb shutting down the step-flow growth mode. This  step-flow growth mode is dominant during the growth of GaSb layers and is not very successful in flattening bigger defects like defects in pyramidal shape \cite{murray}. The growth of a superlattice instead of a bulk layer is nevertheless necessary to maintain the electrical conductivity of the sample.
+It would be helpful to understand how these defects can be removed from the surface and how the process can be improved. If the smoothing is not successful theses pyramidal defects tend to grow bigger as the growth progresses. After the growth of structures with a thickness of several microns these defects can even be observed by a optical microscope with a magnification of $50$.\\
 \begin{figure}
   \includegraphics[width=\linewidth]{Bilder/A2749_50_1}
   \caption{At the sample's surface after several micrometer growth small pyramidal defects are visible. The image was taken by an optical microscope at a magnification of 50.}
   \label{bandluecke}
 \end{figure}
-
 After producing the samples we can't avoid a expose them to the atmosphere. Nevertheless we are going to produce the samples promptly before the AFM experiment and store them in a cabinet flooded by pure nitrogen in order to reduce surface corrosion.
 
 
