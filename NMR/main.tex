@@ -70,6 +70,11 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
+
+\usepackage{url}
+\usepackage[numbers]{natbib}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -207,20 +212,30 @@ der Filme ist gut, eine größere Fläche wäre zwar wünschenswert, ist für di
 Auswertung aber nicht unbedingt notwendig. 
 %
 % =============================================================================
-\begin{thebibliography}{}   
-% =============================================================================
+%\begin{thebibliography}{}   
+%% =============================================================================
+%%
+%%
+%  \bibitem{levitt} Levitt, Malcolm H. (2008): Spin dynamics. Basics of nuclear magnetic resonance. 2nd ed. Chichester, England, Hoboken, NJ: John Wiley \& Sons.
+%    \bibitem{hanson} Lars G. Hanson (2008): Is Quantum Mechanics Necessary for Understanding Magnetic Resonance?
+%    Danish Research Centre for Magnetic Resonance, Copenhagen University Hospital, Hvidovre, Denmark.
+%
+%\end{thebibliography}
 %
 %
-  \bibitem{levitt} Levitt, Malcolm H. (2008): Spin dynamics. Basics of nuclear magnetic resonance. 2nd ed. Chichester, England, Hoboken, NJ: John Wiley \& Sons.
-    \bibitem{hanson} Lars G. Hanson (2008): Is Quantum Mechanics Necessary for Understanding Magnetic Resonance?
-    Danish Research Centre for Magnetic Resonance, Copenhagen University Hospital, Hvidovre, Denmark.
 
-\end{thebibliography}
-%
-%
+\small
+\bibliographystyle{dinat}
+\nocite{*}
+\bibliography{lit}
+\normalsize
+
+
 \onecolumn
 \pagestyle{empty}
-% =============================================================================
+% 
+
+%=============================================================================
 \section{Anhang}
 \label{Anhang}
 % =============================================================================
