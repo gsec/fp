@@ -65,13 +65,17 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
+
+\usepackage{url}
+\usepackage[numbers]{natbib}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
 \title{Quanten-Hall-Effekt}                  
-\author{Daniel Friedrichs \& Ulrich Müller}         
+\author{Daniel Friedrich \& Ulrich Müller}         
 \date{}                                % Turn off automatic date
 \twocolumn[\begin{@twocolumnfalse}
 \vspace{-3em}
@@ -99,17 +103,19 @@ Laue-Aufnahmen
     die Diamandstruktur der Probe
     identifiziert haben.
     }
+\end{abstract}
+
   \vspace{1em}
 
-  \noindent Betreuer: Dr. Charles Gould
-  \hfill Versuchsdurchführung: 05. Oktober 2012
-  \begin{flushright}
-    Protokollabgabe: 12. Oktober 2012        
-  \end{flushright}
-\end{abstract}
+\centerline{Betreuer: Christoph Brüne \hfill
+   Versuchsdurchführung am 12. Oktober 2013}
+\centerline{\hfill  Protokollabgabe am ??. Oktober 2013}
+ 
+
 \vspace{2em}
 %
-\end{@twocolumnfalse}]
+\end{@twocolumnfalse}
+]
 %
 % =============================================================================
 \section{Einleitung}
@@ -238,35 +244,46 @@ Auswertung aber nicht unbedingt notwendig.
 
 %
 % =============================================================================
-\begin{thebibliography}{}   
-% =============================================================================
+%\begin{thebibliography}{}   
+%% =============================================================================
+%%
+%%
+%  \bibitem{janssen} Janssen,T J B M; Fletcher, N. E.; Goebel, R.; Williams, J. M.; Tzalenchuk, A.; Yakimova, R. et al. (2011): Graphene, universality of the quantum Hall effect and redefinition of the SI system. In: New J. Phys. 13 (9), S. 93026. DOI: 10.1088/1367-2630/13/9/093026.
+%
+%  \bibitem{gerthsen} \textit{D. Meschede}, Gerthsen Physik, 24. Auflage (2010) 
+%  \bibitem{codata} CODATA Physical Constants,
+%    \textbf{\url{http://physics.nist.gov/cuu/Constants/index.html}} 
+%    (September 2012)
+%  \bibitem{moseley} \textit{H.G.J. Moseley},
+%  \href{http://www.chemistry.co.nz/henry_moseley_article.htm}{\textbf{{Philos.
+%        Mag. 26, 1024 (1913).  }}} 
+%  \bibitem{lesk} \textit{A. M. Lesk}, Am. J. Phys. 48, 492 (1980),
+%    \href{http://ajp.aapt.org/resource/1/ajpias/v48/i6/p492_s1?ver=pdfcov}
+%    {\textbf{doi:10.1119/1.12320.}}
+%    \bibitem{BSchaefer} \textit{L. Bergmann \& C. Schaefer}, Lehrbuch der
+%    Experimentalphysik, Bd. 4 (2003)
+%  %\bibitem{si111} Vorlesungskript Advanced Solid State Physics SS12, Universität
+%    %Freiburg, 
+%    %\textbf{\url{http://cluster.physik.uni-freiburg.de/lehre/SS12/material/mat1.pdf}} 
+%\end{thebibliography}
 %
 %
-  \bibitem{janssen} Janssen,T J B M; Fletcher, N. E.; Goebel, R.; Williams, J. M.; Tzalenchuk, A.; Yakimova, R. et al. (2011): Graphene, universality of the quantum Hall effect and redefinition of the SI system. In: New J. Phys. 13 (9), S. 93026. DOI: 10.1088/1367-2630/13/9/093026.
 
-  \bibitem{gerthsen} \textit{D. Meschede}, Gerthsen Physik, 24. Auflage (2010) 
-  \bibitem{codata} CODATA Physical Constants,
-    \textbf{\url{http://physics.nist.gov/cuu/Constants/index.html}} 
-    (September 2012)
-  \bibitem{moseley} \textit{H.G.J. Moseley},
-  \href{http://www.chemistry.co.nz/henry_moseley_article.htm}{\textbf{{Philos.
-        Mag. 26, 1024 (1913).  }}} 
-  \bibitem{lesk} \textit{A. M. Lesk}, Am. J. Phys. 48, 492 (1980),
-    \href{http://ajp.aapt.org/resource/1/ajpias/v48/i6/p492_s1?ver=pdfcov}
-    {\textbf{doi:10.1119/1.12320.}}
-    \bibitem{BSchaefer} \textit{L. Bergmann \& C. Schaefer}, Lehrbuch der
-    Experimentalphysik, Bd. 4 (2003)
-  %\bibitem{si111} Vorlesungskript Advanced Solid State Physics SS12, Universität
-    %Freiburg, 
-    %\textbf{\url{http://cluster.physik.uni-freiburg.de/lehre/SS12/material/mat1.pdf}} 
-\end{thebibliography}
-%
-%
+\small
+\bibliographystyle{dinat}
+\nocite{*}
+\bibliography{lit}
+\normalsize
+
 \onecolumn
 \pagestyle{empty}
-% =============================================================================
+% 
+
+
+
+%=============================================================================
 \section{Anhang}
 \label{Anhang}
-% =============================================================================
+% %=============================================================================
 
 \end{document}

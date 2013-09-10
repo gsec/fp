@@ -1,0 +1,39 @@
+\begin{thebibliography}{5}
+% this bibliography was produced with the style dinat.bst v2.5
+\makeatletter
+\newcommand{\dinatlabel}[1]%
+{\ifNAT@numbers\else\NAT@biblabelnum{#1}\hspace{2\labelsep}\fi}
+\makeatother
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
+
+\bibitem[Kittel(1996)]{kittel}
+\dinatlabel{Kittel 1996} \textsc{Kittel}, Charles:
+\newblock \emph{{Introduction to Solid State Physics}}.
+\newblock 7th.
+\newblock New York~: John Wiley \& Sons, Inc., 1996
+
+\bibitem[Melissinos(1966)]{mellissinos}
+\dinatlabel{Melissinos 1966} \textsc{Melissinos}, Adrian~C.:
+\newblock \emph{Experiments in Modern Physics}.
+\newblock New York and London~: Academic Press, 1966. --
+\newblock {\small insbesondere Abschnitt 3.3 aus dem Buch}
+
+\bibitem[Singh(2001)]{singh}
+\dinatlabel{Singh 2001} \textsc{Singh}, Jasprit:
+\newblock \emph{Semiconductor Devices: Basic Principles}.
+\newblock New York~: John Wiley \& Sons, 2001
+
+\bibitem[Sze()]{sze}
+\dinatlabel{Sze } \textsc{Sze}, S.~M.:
+\newblock \emph{Physics of Semiconductor Devices}.
+\newblock Second Edition.
+\newblock John Wiley \& Sons
+
+\bibitem[Wikipedia(2007)]{tellur}
+\dinatlabel{Wikipedia 2007} \textsc{Wikipedia}:
+\newblock \emph{Tellur}.
+\newblock April 2007. --
+\newblock URL \url{http://de.wikipedia.org/wiki/Tellur}
+
+\end{thebibliography}

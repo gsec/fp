@@ -1,4 +1,9 @@
-\documentclass[paper=a4,fontsize=10pt,DIV=18,twocolumn,parskip=half]{scrartcl}
+\documentclass[paper=a4,
+	fontsize=10pt,
+	DIV=18,
+	twocolumn,
+	parskip=half
+	]{scrartcl}
 \usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
 \usepackage{bijan_koma}
 \usepackage[ngerman]{babel} 
@@ -65,8 +70,12 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{url}
+\usepackage[numbers]{natbib}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -76,9 +85,9 @@
 \twocolumn[\begin{@twocolumnfalse}
 \vspace{-3em}
 \maketitle      
-% =============================================================================
+%=============================================================================
 \begin{abstract}      
-% =============================================================================
+%=============================================================================
   \vspace{-2em}
   \noindent {\small Mithilfe von drei Röntgenanoden sowie verschiedenen
     Streuobjekten konnten wir die theoretischen Werte der
@@ -87,26 +96,27 @@ $K_{\alpha}$- und $K_{\beta}$-Linie von Kupfer, Eisen und Molybdän
 Feinstruktur von Eisen und Molybdän 
     im Spektrum erkennbar.  Über das Duane-Hunt-Gesetz haben wir Plancksche
     Wirkungsquantum zu
-$h = \SI{6.645+-0.059e-34}{\joule\second}$
+%$h = \SI{6.645+-0.059e-34}{\joule\second}$
     bestimmt. 
 %{R_{H} = \SI{14.02+-0.76}{\eV}} anhand der $K_{\beta}$ Linien
     Anhand des Effekts der inelastischen Streuung von Photonen an Elektronen
     haben wir die Compton-Wellenlänge zu
-$\lambda_c=\SI{2.25+-0.43}{\pico\meter}$
+%$\lambda_c=\SI{2.25+-0.43}{\pico\meter}$
     ermittelt. Schließlich haben wir zwei
 Laue-Aufnahmen
     eines Materials gemacht, den Reflexen Miller-Indices zugeordnet und damit 
     die Diamandstruktur der Probe
     identifiziert haben.
     }
+\end{abstract}
+
   \vspace{1em}
 
-  \noindent Betreuer: Dr. Charles Gould
-  \hfill Versuchsdurchführung: 05. Oktober 2012
-  \begin{flushright}
-    Protokollabgabe: 12. Oktober 2012        
-  \end{flushright}
-\end{abstract}
+\centerline{Betreuer: Dr. Charles Gould \hfill
+   Versuchsdurchführung am 18. Oktober 2013}
+\centerline{\hfill  Protokollabgabe am ??. Oktober 2013}
+ 
+
 \vspace{2em}
 %
 \end{@twocolumnfalse}
@@ -114,57 +124,118 @@ Laue-Aufnahmen
 %
 % =============================================================================
 \section{Einleitung}
-% =============================================================================
-%
-\input{Einleitung}
 \label{Einleitung}
+%
+Befindet sich ein Atomkern mit einem nichtverschwindem Spin in einem Magnetfeld, so kann er elektromagnetische Strahlung absorbieren sowie emittieren. Dieser Effekt wird als Kernspinresonanz (eng.: nuclear magnetic resonanz NMR) bezeichnet.
+Zurückzuführen ist der Effekt auf das magnetische Moment, das durch den Spin des Atomkerns hervorgerufen wird. Dieses magnetische Moment besitzt, je nach Orientierung in einem äußeren Magnetfeld, unterschiedlich viel Energie. 
+Die Energieaufspaltung eines Spins im äußeren Magnetfeld wurde zuerst im Jahre 1896 von Pieter Zeeman an Elektronen in einem Atom und 40 Jahre später von Isidor Rabi an Atomkernen nachgewiesen [citation needed].\\
+Kleinste Unterschiede im lokalen magnetischen Feld von Atomkernen werden in der Chemie eingesetzt um Informationen über den Bindungszustand von Atomen zu gewinnen. Die Unterscheidung von Materialien aufgrund der Kernspinresonanz ermöglicht in der Magnetresonanztomographie zerstörungsfrei Bilder von organischen Proben in Echtzeit aufzunehmen. [citation needed, vielleicht was von der Uni zitieren]
+
+
 %
 % =============================================================================
 \section{Theorie}
-% =============================================================================
-%
-\input{Theorie}
 \label{Theorie}
+%
+\label{theorie}
+Die Theorie der Kernspinresonanz ist auf die Wechselwirkung zwischen dem magnetischen Moment des Atomkerns und dem äußeren Magnetfeld zurück zu führen.
+Das magnetische Moment des Kerns wird dabei von dessen Spin verursacht und folgt der Beziehung
+\begin{align}
+\vec{\mu}=g \frac{\mu_N}{\hbar}\vec{s}
+\end{align}
+mit g dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_N$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_N=\frac{e \hbar}{2m_p}$ mit $2m_p$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5,59.\\
+Befindet sich das magnetische Moment nun in einem Magnetfeld, so besitzt es die potentielle Energie 
+\begin{align}
+E_M=-\vec{\mu} \cdot \vec{B}
+\end{align}
+und ist somit in seiner energetisch günstigsten Position, wenn es parallel zum äußeren Feld ausgerichtet ist.
+Nettomagnetisierung
+Temperaturverhalten
+Bloch-Gleichung
+Relaxation
+...
+QM vs Klassisch
 %
 % =============================================================================
 \section{Experimenteller Aufbau}
 % =============================================================================
 %
-\input{Experiment}
 \label{Experiment}
+Die Experimente und die Erzeugung der dafür notwendigen Röntgenstrahlung findet
+in einem Vollschutzröntgengerät der Firma PHYWE statt...
+
+\subsection{Charakteristische Röntgenstrahlung von Kupfer}
+
 %
 % =============================================================================
 \section{Auswertung}
 % =============================================================================
 %
+\label{AuswertungDaniel}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Charakteristische Röntgenstrahlung von Kupfer}
+\label{01_Auswertung}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-\input{AuswertungDaniel}
-\input{AuswertungDaniel}
 
-\input{AuswertungUli}
-\input{AuswertungUli}
+\label{AuswertungUli}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Laue-Aufnahme}
+\label{07_Auswertung}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
 % =============================================================================
 \section{Zusammenfassung}
 % =============================================================================
 %
-\input{Zusammenfassung}
+Wir konnten mit dem Versuch einen guten Einblick in die Röntgenspektroskopie
+gewinnen. Die charakteristischen Linien von Eisen, Molybdän und Kupfer wurden mit
+recht hoher Genaugikeit nachgewiesen, wobei der größte Abstand von unseren
+Bestwerten zu den Theoriewerten 
+\SI{0.65}{\percent} betrag. Im Rahmen der Fehler gab es keine Abweichung. 
+ Das empirische Gesetz zwischen der Intensität der
+charakteristischen Strahlung und der Spannung zeigt systematische Abweichungen
+für Spannungen ab \SI{30}{\kilo\volt} und sollte eher als Faustregel verstanden
+werden. Das Duane-Hunt-Gesetz hingegen konnte gut bestätigt werden und hat uns
+erlaubt, das Plancksche Wirkungsquantum zu bestimmen. Das Moseley-Gesetz wurde
+ausführlich diskutiert und hat gute Abschätzungen für die Rydberg-Konstante
+ergeben. Allerdings ist die Auswertung der \emph{Abschirmkonstante} $\sigma(Z)$
+nicht wirklich sinnvoll. Mit dem Compton-Effekt konnte eine überraschend gute
+Bestimmung der Compton-Wellenlänge durchgeführt werden. Eine vollständige
+Aufnahme des Transmissionsspektrums von Al im gesamten Wellenlängenbereich der
+Kupferanode würde helfen zu verstehen, warum die Näherung eines linearen
+Spektrums solch gute Ergebnisse liefert. Die Laue-Aufnahme hat insgesamt gut
+funktioniert. Allerdings könnte man die Aufhängung der Dentalfilme zum Beispiel
+mit einer optischen Bank o.Ä. verbessern. Dadurch wird ein zentrales 
+Auftreffen garantiert. Die Auflösung 
+der Filme ist gut, eine größere Fläche wäre zwar wünschenswert, ist für die
+Auswertung aber nicht unbedingt notwendig. 
 %
 % =============================================================================
-\begin{thebibliography}{}   
-% =============================================================================
+%\begin{thebibliography}{}   
+%% =============================================================================
+%%
+%%
+%  \bibitem{levitt} Levitt, Malcolm H. (2008): Spin dynamics. Basics of nuclear magnetic resonance. 2nd ed. Chichester, England, Hoboken, NJ: John Wiley \& Sons.
+%    \bibitem{hanson} Lars G. Hanson (2008): Is Quantum Mechanics Necessary for Understanding Magnetic Resonance?
+%    Danish Research Centre for Magnetic Resonance, Copenhagen University Hospital, Hvidovre, Denmark.
+%
+%\end{thebibliography}
 %
 %
-  \bibitem{levitt} Levitt, Malcolm H. (2008): Spin dynamics. Basics of nuclear magnetic resonance. 2nd ed. Chichester, England, Hoboken, NJ: John Wiley \& Sons.
-    \bibitem{hanson} Lars G. Hanson (2008): Is Quantum Mechanics Necessary for Understanding Magnetic Resonance?
-    Danish Research Centre for Magnetic Resonance, Copenhagen University Hospital, Hvidovre, Denmark.
 
-\end{thebibliography}
-%
-%
+\small
+\bibliographystyle{dinat}
+\nocite{*}
+\bibliography{lit}
+\normalsize
+
+
 \onecolumn
 \pagestyle{empty}
-% =============================================================================
+% 
+
+%=============================================================================
 \section{Anhang}
 \label{Anhang}
 % =============================================================================
