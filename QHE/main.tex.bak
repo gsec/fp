@@ -65,9 +65,12 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
+\newcommand{\note}[1]{{\color{red}??#1}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
+\usepackage{paralist}
+\usepackage{upgreek}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -159,12 +162,12 @@ mit der Zyklotronfrequenz $\omega_c$. Diese Niveaus besitzen den Entartungsgrad
 N_{\rm LL}= \frac{e B}{\hbar}
 \end{equation}
 pro Volumen. ??ICH HAB MICH EIN BISSCHEN UM DIE ERKLÄRUNG GEDRÜCKT; WARUM ES DANN ÜBERHAUPT ZU EINER HALL SPANNUNG KOMMT: WENN MAN DEN QM-ANSATZ OHNE SPANNUNG MACHT, KOMMT HALT AUCH KEINE HALL-SPANNUNG RAUS?? \\
-Gleichzeitig zu den Plateaus im Hallwiderstand, tritt ein anderer bemerkenswerter Effekt auf, der als Schubnikow-de-Haas-Effekt bezeichnet wird. Dabei verliert der Festkörper seinen Widerstand in Längsrichtung, so dass der angelegten Strom ohne Verluste im Festkörper transportiert wird. Liegt die Fermienergie zwischen zwei Landauniveaus, so gibt es für die Elektronen keine Zustände innerhalb der thermischen Energie in die gestreut werden kann. Die Leitung wird damit dissipationslos. Das Randkanalmodell beschreibt anschaulich, wie am Rand der Probe die Probenoberfläche die Energieniveaus der Landaulevel anhebt und so einen eindimensionalen leitenden Randkanal formt, indem ebenfalls dissipationslose Leitung möglich ist.
+Gleichzeitig zu den Plateaus im Hallwiderstand, tritt ein anderer bemerkenswerter Effekt auf, der als Shubnikow-de-Haas-Effekt bezeichnet wird. Dabei verliert der Festkörper seinen Widerstand in Längsrichtung, so dass der angelegten Strom ohne Verluste im Festkörper transportiert wird. Liegt die Fermienergie zwischen zwei Landauniveaus, so gibt es für die Elektronen keine Zustände innerhalb der thermischen Energie in die gestreut werden kann. Die Leitung wird damit dissipationslos. Das Randkanalmodell beschreibt anschaulich, wie am Rand der Probe die Probenoberfläche die Energieniveaus der Landaulevel anhebt und so einen eindimensionalen leitenden Randkanal formt, indem ebenfalls dissipationslose Leitung möglich ist.
 Das Verhalten der Probe wird also im wesentlich von der Magnetfeldstärke beeinflusst, die den Entartungsgrad der Landauniveuas erhöht und damit sowohl die Lage der Fermienergie als auch den Füllfaktor, d.h. die Anzahl der besetzten Landauniveaus, festlegt. Der Füllfaktor ist als
 \begin{equation}
 \nu=\frac{N_s}{N_{\rm LL}}
 \end{equation}
-definiert, wobei $N_s$ der Teilchendichte und $N_l$ dem Entartungsgrad der Landauniveaus entspricht. Bei einem ganzzahligen Füllfaktor befindet man sich im Bereich eines Plateaus des Quanten-Hall-Effektes und man misst den beschriebenen Schubnikow-de-Haas-Effekt.\\
+definiert, wobei $N_s$ der Teilchendichte und $N_l$ dem Entartungsgrad der Landauniveaus entspricht. Bei einem ganzzahligen Füllfaktor befindet man sich im Bereich eines Plateaus des Quanten-Hall-Effektes und man misst den beschriebenen Shubnikow-de-Haas-Effekt.\\
 Idealer Weise sind diese Energieniveaus delta-förmig, in der Realität aber oft durch Streuung mit Phononen und Störstellen, sowie die Zeeman-Aufspaltung verbreitert. Damit sind die Bedingungen zu verstehen, bei denen der Quanten-Hall-Effekt auftritt. Bei starken Magnetfeldern treten wenige stark besetzte Landaulevel auf. Zudem verringern hohe Beweglichkeiten der Elektronen die Stoßverbreiterung. Als letztes werden hinreichend tiefe Temperaturen benötigt, damit nur Landauniveaus unterhalb der Fermienergie besetzt sind.\\
 
 %Entdeckung des QHE Klaus von Klitzing 1980
@@ -180,30 +183,86 @@ Idealer Weise sind diese Energieniveaus delta-förmig, in der Realität aber oft
 %
 % =============================================================================
 \section{Experimenteller Aufbau}
+\label{Experiment}
 % =============================================================================
 %
-\section{Experiment}
-\label{Experiment}
-Die Experimente und die Erzeugung der dafür notwendigen Röntgenstrahlung findet
-in einem Vollschutzröntgengerät der Firma PHYWE statt...
+\begin{compactitem}
+	\item Kryostat
+	\item Kohlethermometer
+	\item Hallbar - Probe
+	\item Aufbau
+	\item Magnetfeld
+\end{compactitem}
+%
+% =============================================================================
+\section{Versuchsdurchführung}
+\label{versuch}
+% =============================================================================
+%
+Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Spannungen $U_{\rm A,B}$, $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ bei steigendem Magnetfeld von $0 \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $9 \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-ins verwenden nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch Regelung des Druckes des Heliums im Kryostaten können wir die Temperatur regeln uns somit die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
+Um eine Abhängigkeit der Temperatur erkennen zu können messen wir bei den Temperaturen $T=\SI{4.2}{\kelvin}$, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
-\subsection{Charakteristische Röntgenstrahlung von Kupfer}
-
+Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die Füllfaktoren bestimmen. Des weiteren können wir die Ladungsträgerdichte, die relative Spinaufspaltung, Elektronenbeweglichkeit und Leitfähigkeit der Probe bestimmen. Aus der Amplitude der Shubnikov-de-Haas Oszillation lässt sich die Zyklotronmasse.
 
 %
 % =============================================================================
 \section{Auswertung}
+\label{Auswertung}
 % =============================================================================
 %
+\begin{compactitem}
+	\item Temperaturen im Experiment $\rightarrow$ Auswertung werden zur Beschreibung die Temperaturwerte wie in Anleitung (\SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \dots) verwendet.
+	\item Hystereseeffekte $\rightarrow$ bereinigte Daten für den Hall\textbf{widerstand}
+\end{compactitem}
 
-
-
+Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm Shunt})$ aus den gemessenen Daten für die Hallspannung $U_{\rm Hall}$ und denen der Probenspannung $U_{\rm Shunt}$
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{AuswertungDaniel}
-\label{AuswertungDaniel}
-\subsection{Charakteristische Röntgenstrahlung von Kupfer}
-\label{01_Auswertung}
+\subsection{Hall-Plateaus und Klitzing-Konstante}
+\label{a1}
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/05-1,5-Hallplateaus.pdf}
+		\caption{Hallplateaus bei $T=\SI{1.5}{\kelvin}$}.
+		\label{hallplateau}
+	\end{center}
+\end{figure}
+
+Für die Auswertung der Hall-Plateaus wurde für jede gemessenen Temperatur ein eigenes Diagramm erstellt. In Abbildung~\ref{hallplateau} ist die Auswertung für die Messung bei $T=\SI{1.5}{\kelvin}$ gezeigt. Die Diagramme für die anderen Temperaturen sind im Anhang~\ref{Anhang} in Abbildung~\ref{hallplateau42}, \ref{hallplateau30} und~\\ref{hallplateau21} gezeigt.
+
+In der blauen Kurve wurde der Verlauf des Hall-Widerstandes $R_{\rm H}$ aus den Hysterese bereinigten Daten über dem Magnetfeld $B$.
+
+Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von $\pm \SI{50}{\ohm}$ in dem wir die Anzahl an Messpunkten zählen und über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} auswerten. Hieraus ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}, die ebenfalls über das Magnetfeld aufgetragen wird. Durch die verwendete Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit uns somit einen Fehler von \SI{10}{\ohm}.
+
+$(4.2 \pm 1.1)\,\SI{}{\ohm}$
+
+\begin{table}[htp]
+	\begin{center}
+	\begin{tabular}{r|rrrr}
+		$\nu$\textbackslash$T$ & \SI{4.2}{\kelvin} & \SI{3.0}{\kelvin} & \SI{2.1}{\kelvin} & \SI{1.5}{\kelvin} \\
+		\hline
+		2.00  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
+		2.96  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
+		4.00  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
+		4.70  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
+		6.00  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
+		8.01  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
+		10.02 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
+		12.05 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
+		13.96 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
+		\hline
+		$\overline{R_{\rm K}}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
+		
+	\end{tabular}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
+	\label{klitzing}	
+	\end{center}
+\end{table}
+
+
+\subsection{Oberflächenladungsträgerdichte}
+\label{a2}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

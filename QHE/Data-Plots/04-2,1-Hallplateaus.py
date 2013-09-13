@@ -9,12 +9,12 @@ from numpy import *
 
 rc('font', family = 'serif', serif = 'STIXGeneral')
 fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
-fig.suptitle(r"Hallplateaus bei $T=1.5\,$K", fontsize=14, fontweight='bold')
+fig.suptitle(r"Hallplateaus bei $T=2.1\,$K", fontsize=14, fontweight='bold')
 
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
-data = genfromtxt("1,5-Hallwiderstand-Magnetfeld_bereinigt.dat")
+data = genfromtxt("2,1-Hallwiderstand-Magnetfeld_bereinigt.dat")
 
 #print data[100:,1]
 
@@ -92,33 +92,33 @@ ax2.plot([0,170],[Mittelwertkandidaten[wertmaximum8],Mittelwertkandidaten[wertma
 ax2.plot([0,170],[Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertmaximum9]], "g--")
 
 
-text(750, Mittelwertkandidaten[wertmaximum1]+500, r"$\nu = 1$", va='center', ha='center')
-text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 2$", va='center', ha='center')
-text(210, Mittelwertkandidaten[wertmaximum3]+500, r"$\nu = 3$", va='center', ha='center')
-text(210, Mittelwertkandidaten[wertmaximum4]+500, r"$\nu = 4$", va='center', ha='center')
-text(200, Mittelwertkandidaten[wertmaximum5]+500, r"$\nu = 5$", va='center', ha='center')
-text(190, Mittelwertkandidaten[wertmaximum6]+500, r"$\nu = 6$", va='center', ha='center')
-text(180, Mittelwertkandidaten[wertmaximum7]+500, r"$\nu = 7$", va='center', ha='center')
-text(170, Mittelwertkandidaten[wertmaximum8]+500, r"$\nu = 8$", va='center', ha='center')
-text(160, Mittelwertkandidaten[wertmaximum9]+500, r"$\nu = 9$", va='center', ha='center')
+text(750, Mittelwertkandidaten[wertmaximum1]+500, r"$\nu = 2$", va='center', ha='center')
+text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 3$", va='center', ha='center')
+text(210, Mittelwertkandidaten[wertmaximum3]+500, r"$\nu = 4$", va='center', ha='center')
+text(210, Mittelwertkandidaten[wertmaximum4]+500, r"$\nu = 5$", va='center', ha='center')
+text(200, Mittelwertkandidaten[wertmaximum5]+500, r"$\nu = 6$", va='center', ha='center')
+text(190, Mittelwertkandidaten[wertmaximum6]+500, r"$\nu = 8$", va='center', ha='center')
+text(180, Mittelwertkandidaten[wertmaximum7]+500, r"$\nu = 10$", va='center', ha='center')
+text(170, Mittelwertkandidaten[wertmaximum8]+500, r"$\nu = 12$", va='center', ha='center')
+text(160, Mittelwertkandidaten[wertmaximum9]+500, r"$\nu = 14$", va='center', ha='center')
 
-text(700,8000, u"$R_\mathrm{H1}$ bei ", va='center', ha='center')
+text(700,8000, u"$R_\mathrm{H2}$ bei ", va='center', ha='center')
 text(780,8000, Mittelwertkandidaten[wertmaximum1], va='center', ha='center')
-text(700,7200, u"$R_\mathrm{H2}$ bei ", va='center', ha='center')
+text(700,7200, u"$R_\mathrm{H3}$ bei ", va='center', ha='center')
 text(780,7200, Mittelwertkandidaten[wertmaximum2], va='center', ha='center')
-text(700,6600, u"$R_\mathrm{H3}$ bei ", va='center', ha='center')
+text(700,6600, u"$R_\mathrm{H4}$ bei ", va='center', ha='center')
 text(780,6600, Mittelwertkandidaten[wertmaximum3], va='center', ha='center')
-text(700,5800, u"$R_\mathrm{H4}$ bei ", va='center', ha='center')
+text(700,5800, u"$R_\mathrm{H5}$ bei ", va='center', ha='center')
 text(780,5800, Mittelwertkandidaten[wertmaximum4], va='center', ha='center')
-text(700,5000, u"$R_\mathrm{H5}$ bei ", va='center', ha='center')
+text(700,5000, u"$R_\mathrm{H6}$ bei ", va='center', ha='center')
 text(780,5000, Mittelwertkandidaten[wertmaximum5], va='center', ha='center')
-text(700,4200, u"$R_\mathrm{H6}$ bei ", va='center', ha='center')
+text(700,4200, u"$R_\mathrm{H8}$ bei ", va='center', ha='center')
 text(780,4200, Mittelwertkandidaten[wertmaximum6], va='center', ha='center')
-text(700,3600, u"$R_\mathrm{H7}$ bei ", va='center', ha='center')
+text(700,3600, u"$R_\mathrm{H10}$ bei ", va='center', ha='center')
 text(780,3600, Mittelwertkandidaten[wertmaximum7], va='center', ha='center')
-text(700,2800, u"$R_\mathrm{H8}$ bei ", va='center', ha='center')
+text(700,2800, u"$R_\mathrm{H12}$ bei ", va='center', ha='center')
 text(780,2800, Mittelwertkandidaten[wertmaximum8], va='center', ha='center')
-text(700,2000, u"$R_\mathrm{H9}$ bei ", va='center', ha='center')
+text(700,2000, u"$R_\mathrm{H14}$ bei ", va='center', ha='center')
 text(780,2000, Mittelwertkandidaten[wertmaximum9], va='center', ha='center')
 
 # y = log(data[:,1]/(8e-3*1.63e-3*2.74e-3))
@@ -148,6 +148,6 @@ text(780,2000, Mittelwertkandidaten[wertmaximum9], va='center', ha='center')
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-fig.savefig("05-1,5-Hallplateaus.pdf")
+fig.savefig("04-2,1-Hallplateaus.pdf")
 
 show()
