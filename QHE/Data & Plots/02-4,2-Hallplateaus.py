@@ -9,6 +9,7 @@ from numpy import *
 
 rc('font', family = 'serif', serif = 'STIXGeneral')
 fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
+fig.suptitle(r"Hallplateaus bei $T=4.2\,$K", fontsize=14, fontweight='bold')
 
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
@@ -24,7 +25,7 @@ B = data[:8500,0]
 R_H = data[:8500,1]
 
 delta = 50
-step = 100
+step = 10
 
 Mittelwertkandidaten=range(0,16000,step)
 counts = zeros(len(Mittelwertkandidaten))
@@ -62,6 +63,7 @@ print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mi
 #lines = plt.plot(0,12500,2000,12500, "g--")
 #plt.setp(lines, color="g", linewidth=2.0)
 
+
 ax = fig.add_subplot(111)
 ax.plot(B*100, R_H, "b", label=u"Messwerte")
 
@@ -86,11 +88,28 @@ ax2.plot([0,180],[Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertma
 
 
 text(750, Mittelwertkandidaten[wertmaximum1]+500, r"$\nu = 2$", va='center', ha='center')
-text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 3$", va='center', ha='center')
-text(210, Mittelwertkandidaten[wertmaximum3]+500, r"$\nu = 4$", va='center', ha='center')
-text(200, Mittelwertkandidaten[wertmaximum4]+500, r"$\nu = 5$", va='center', ha='center')
-text(190, Mittelwertkandidaten[wertmaximum5]+500, r"$\nu = 6$", va='center', ha='center')
-text(180, Mittelwertkandidaten[wertmaximum6]+500, r"$\nu = 7$", va='center', ha='center')
+text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 2$", va='center', ha='center')
+text(210, Mittelwertkandidaten[wertmaximum3]+500, r"$\nu = 3$", va='center', ha='center')
+text(200, Mittelwertkandidaten[wertmaximum4]+500, r"$\nu = 4$", va='center', ha='center')
+text(190, Mittelwertkandidaten[wertmaximum5]+500, r"$\nu = 5$", va='center', ha='center')
+text(180, Mittelwertkandidaten[wertmaximum6]+500, r"$\nu = 6$", va='center', ha='center')
+text(170, Mittelwertkandidaten[wertmaximum7]+500, r"$\nu = 7$", va='center', ha='center')
+
+text(700,8000, u"$R_\mathrm{H1}$ bei ", va='center', ha='center')
+text(780,8000, Mittelwertkandidaten[wertmaximum1], va='center', ha='center')
+text(700,7200, u"$R_\mathrm{H2}$ bei ", va='center', ha='center')
+text(780,7200, Mittelwertkandidaten[wertmaximum2], va='center', ha='center')
+text(700,6600, u"$R_\mathrm{H3}$ bei ", va='center', ha='center')
+text(780,6600, Mittelwertkandidaten[wertmaximum3], va='center', ha='center')
+text(700,5800, u"$R_\mathrm{H4}$ bei ", va='center', ha='center')
+text(780,5800, Mittelwertkandidaten[wertmaximum4], va='center', ha='center')
+text(700,5000, u"$R_\mathrm{H5}$ bei ", va='center', ha='center')
+text(780,5000, Mittelwertkandidaten[wertmaximum5], va='center', ha='center')
+text(700,4200, u"$R_\mathrm{H6}$ bei ", va='center', ha='center')
+text(780,4200, Mittelwertkandidaten[wertmaximum6], va='center', ha='center')
+text(700,3600, u"$R_\mathrm{H7}$ bei ", va='center', ha='center')
+text(780,3600, Mittelwertkandidaten[wertmaximum7], va='center', ha='center')
+
 
 # y = log(data[:,1]/(8e-3*1.63e-3*2.74e-3))
 # y = log(data[:,1]*(1.63e-3*2.74e-3)/(8e-3*4.2e-3))
@@ -119,6 +138,6 @@ text(180, Mittelwertkandidaten[wertmaximum6]+500, r"$\nu = 7$", va='center', ha=
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-
+fig.savefig("02-4,2-Hallplateaus.pdf")
 
 show()
