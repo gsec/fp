@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\note}[1]{{\color{red}??#1}}
+\renewcommand{\note}[1]{{\color{red}??#1}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -210,14 +210,7 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 \label{Auswertung}
 % =============================================================================
 %
-\subsection{Bestimmung der Oberflächenladungsdichte}
-Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir durch zwei Hilfsgeraden in Abbildung \ref{hallsteigung} abgeschätzt. 
-PLOT??
-Als Steigung erhalten wir die Hall-konstante $A_H=\SI{1750+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
-\begin{equation}
-N_S=A_H e = \SI{2.80 \pm 0.16e-1}{\per\square\meter}
-\label{ns1}
-\end{equation}
+
 
 \begin{compactitem}
 	\item Temperaturen im Experiment $\rightarrow$ Auswertung werden zur Beschreibung die Temperaturwerte wie in Anleitung (\SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \dots) verwendet.
@@ -269,8 +262,16 @@ Mit dieser Methode haben wir die Widerstandswerte für jedes sichtbare Niveau au
 \end{table}
 
 
-\subsection{Oberflächenladungsträgerdichte}
-\label{a2}
+
+\subsection{Bestimmung der Oberflächenladungsdichte}
+Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir durch zwei Hilfsgeraden in Abbildung \ref{hallsteigung} abgeschätzt. 
+PLOT??
+Als Steigung erhalten wir die Hall-konstante $A_H=\SI{1750+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
+\begin{equation}
+N_S=A_H e = \SI{2.80 \pm 0.16e-1}{\per\square\meter}
+\label{ns1}
+\end{equation}
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
