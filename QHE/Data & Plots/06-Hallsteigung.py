@@ -54,8 +54,8 @@ xdata=B
 ydata=U_H
 plt.plot(xdata,ydata,color=colors[0],label="Messwerte")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5], 'b-', lw=2, label="Fit")
-plt.plot([0, 1.6*2.5], [0, 2800*2.5+200], 'b--', lw=1, label="Fehlergeraden")
-plt.plot([0, 1.6*2.5], [0, 2800*2.5-200], 'b--', lw=1)
+plt.plot([0, 1.6*2.5], [0, 2800*2.5+160], 'b--', lw=1, label="Fehlergeraden")
+plt.plot([0, 1.6*2.5], [0, 2800*2.5-160], 'b--', lw=1)
 plt.legend(loc=0)	
 plt.savefig("Hallsteigung.pdf")
 show()
