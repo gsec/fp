@@ -57,7 +57,7 @@ plt.plot([0, 1.6*2.5], [0, 2800*2.5], 'b-', lw=2, label="Fit")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5+200], 'b--', lw=1, label="Fehlergeraden")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5-200], 'b--', lw=1)
 plt.legend(loc=0)	
-plt.savefig("Hallsteigung.pdf")
+plt.savefig("02-Hallsteigung.pdf")
 show()
 
 
