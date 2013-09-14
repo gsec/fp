@@ -4,37 +4,30 @@
 # 1. just copy the .dat file in the folder of this file 
 # add a txt_filename_to_open
 # execute "python make_plot_from_NextNano_output.py
-# first collum on the input file is name of data
-
-
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from pylab import *
 from matplotlib.ticker import AutoMinorLocator, AutoLocator
+from scipy.interpolate import interp1d
 
 txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
-Eingaben=['4,2-Hallwiderstand-Magnetfeld_bereinigt.dat','3,0-Hallwiderstand-Magnetfeld_bereinigt.dat','2,1-Hallwiderstand-Magnetfeld_bereinigt.dat','1,5-Hallwiderstand-Magnetfeld_bereinigt.dat']
-
+Eingaben=['4,2-Laengswiderstand-Magnetfeld_bereinigt.dat','3,0-Laengswiderstand-Magnetfeld_bereinigt.dat','2,1-Laengswiderstand-Magnetfeld_bereinigt.dat','1,5-Laengswiderstand-Magnetfeld_bereinigt.dat']
 Fall=0
 txt_filename_to_open.append(Eingaben[Fall])
 line.append(1)
 # ------------------------------------------
 txt_file = [i.strip().split() for i in open(txt_filename_to_open[0]).readlines()]
-
-#txt_file.remove(txt_file[0])
-U_H=[]
+U_laengs=[]
 B=[]
-
 for i in range(len(txt_file)):
     B=append(B,float(txt_file[i][0]))
-    U_H=append(U_H,float(txt_file[i][1]))
-
-
+    U_laengs=append(U_laengs,float(txt_file[i][1]))
+f2 = interp1d(1/B, U_laengs, kind='cubic')
+B_inv_intpol=np.linspace(0, 9, 1000)
+R_laengs=f2(B_inv_intpol)
 
 plt.figure(1)
 #plt.set_xlabel(txt_file[0][0])
@@ -50,12 +43,10 @@ font = {'family' : 'serif',
 matplotlib.rc('font', **font)
 subplots_adjust(left=0.18, bottom=0.12, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
     
-xdata=B
-ydata=U_H
-plt.plot(xdata,ydata,color=colors[0],label="Messwerte")
-plt.plot([0, 1.6*2.5], [0, 2800*2.5], 'b-', lw=2, label="Fit")
-plt.plot([0, 1.6*2.5], [0, 2800*2.5+160], 'b--', lw=1, label="Fehlergeraden")
-plt.plot([0, 1.6*2.5], [0, 2800*2.5-160], 'b--', lw=1)
+xdata=1/B
+ydata=U_laengs
+plt.plot(xdata,ydata,"x",color=colors[0],label="Messwerte")
+plt.plot(B_inv_intpol,R_laengs,color=colors[0],label="Interpolation")
 plt.legend(loc=0)	
 plt.savefig("Hallsteigung.pdf")
 show()
