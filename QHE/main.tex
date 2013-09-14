@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\renewcommand{\note}[1]{{\color{red}??#1}}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -215,28 +215,29 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 \begin{compactitem}
 	\item Temperaturen im Experiment $\rightarrow$ Auswertung werden zur Beschreibung die Temperaturwerte wie in Anleitung (\SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \dots) verwendet.
 	\item Hystereseeffekte $\rightarrow$ bereinigte Daten für den Hall\textbf{widerstand}
+	\item Fehleranalyse/-abschätzung der Spannungsmessungen!!
 \end{compactitem}
 
 Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm Shunt})$ aus den gemessenen Daten für die Hallspannung $U_{\rm Hall}$ und denen der Probenspannung $U_{\rm Shunt}$
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Hall-Plateaus und Klitzing-Konstante}
+\subsection{Hall-Plateaus, Klitzing-Konstante und Füllfaktoren}
 \label{a1}
 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/05-1,5-Hallplateaus.pdf}
-		\caption{Hallplateaus bei $T=\SI{1.5}{\kelvin}$}.
+		\caption{Hallplateaus bei $T=\SI{1.5}{\kelvin}$.}
 		\label{hallplateau}
 	\end{center}
 \end{figure}
 
-Für die Auswertung der Hall-Plateaus wurde für jede gemessenen Temperatur ein eigenes Diagramm erstellt. In Abbildung~\ref{hallplateau} ist die Auswertung für die Messung bei $T=\SI{1.5}{\kelvin}$ gezeigt. Die Diagramme für die anderen Temperaturen sind im Anhang~\ref{Anhang} in Abbildung~\ref{hallplateau42}, \ref{hallplateau30} und~\\ref{hallplateau21} gezeigt.
+Für die Auswertung der Hall-Plateaus wurde für jede gemessenen Temperatur ein eigenes Diagramm erstellt. In Abbildung~\ref{hallplateau} ist die Auswertung für die Messung bei $T=\SI{1.5}{\kelvin}$ gezeigt. Die Diagramme für die Temperaturen $T = \SI{4.2}{\kelvin}$, \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} sind im Anhang~\ref{Anhang} in Abbildung~\ref{hallplateau42}, \ref{hallplateau30} und~\ref{hallplateau21} gezeigt.
 
-In der blauen Kurve wurde der Verlauf des Hall-Widerstandes $R_{\rm H}$ aus den hysterese bereinigten Daten über dem Magnetfeld $B$ aufgetragen.
-Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von $\pm \SI{50}{\ohm}$ in dem wir die Anzahl an Messpunkten zählen und über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} auswerten. Hieraus ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}, die ebenfalls über das Magnetfeld aufgetragen wird. Durch die verwendete Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit und somit einen Fehler von \SI{10}{\ohm}.
+In der blauen Kurve aus Abbildung~\ref{hallplateau} wurde der Verlauf des Hall-Widerstandes $R_{\rm H}$ aus den hysterese-bereinigten Daten über dem Magnetfeld $B$ aufgetragen.
+Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von $\pm \SI{50}{\ohm}$ in dem wir die Anzahl an Messpunkten zählen und über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} auswerten. Hieraus ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}, die ebenfalls über das Magnetfeld aufgetragen wird. Durch dieses Zählverfahren ergeben sich an den Stellen der Plateaus klar erkennbare Peaks, an dessen Maximum der Wert des Hall-Plateaus ausgelesen werden kann. Mit dieser Methode und der verwendeten Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit von \SI{10}{\ohm}.
 
-Mit dieser Methode haben wir die Widerstandswerte für jedes sichtbare Niveau ausgelesen und aus dem Verhältnis zur Klitzing-Konstante in Abhängigkeit ihres Füllfaktors für jede Temperatur in Tabelle~\ref{klitzing} aufgetragen.
+Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir aus dem Verhältnis zur Klitzing-Konstante in Abhängigkeit ihres Füllfaktors für jede Temperatur in Tabelle~\ref{klitzing} aufgetragen.
 
 \begin{table}[htp]
 	\begin{center}
@@ -253,22 +254,31 @@ Mit dieser Methode haben wir die Widerstandswerte für jedes sichtbare Niveau au
 		12.05 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
 		13.96 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
 		\hline
-		$\overline{R_{\rm K}}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
-		
+		$\overline{R_{\rm K}\nu}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
 	\end{tabular}
-	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten. \note{Fehler}}
 	\label{klitzing}	
 	\end{center}
 \end{table}
 
+Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils den selben Wert, der Klitzing-Konstante genannt wird. 
 
+Aus der Ablesegenauigkeit und einem Fehler von \note{Gerätefehler, systematischer Fehler, geschätzter Fehler}.
+
+In der letzten Zeile von Tabelle~\ref{klitzing} wurden für jede Temperatur die Werte der verschiedenen Plateaus (multipliziert mit dem Füllfaktor) gemittelt und zeigen die Klitzing-Konstanten bei verschiedenen Temperaturen mit Standardabweichung. Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was im Rahmen der Fehler \note{Fehleranalyse}.
+
+Aus den obigen Werten können wir folglich die Klitzing-Konstante bestimmen zu
+\begin{equation}
+	R_{\rm K} = (24.845 \pm ??)\,\SI{}{\kilo\ohm}.
+\end{equation}
+Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung \note{Analyse}.
 
 \subsection{Bestimmung der Oberflächenladungsdichte}
 Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir durch zwei Hilfsgeraden in Abbildung \ref{hallsteigung} abgeschätzt. 
 PLOT??
-Als Steigung erhalten wir die Hall-konstante $A_H=\SI{1750+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
+Als Steigung erhalten wir die Hall-konstante $A_H=(1750 \pm 100)\SI{}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
-N_S=A_H e = \SI{2.80 \pm 0.16e-1}{\per\square\meter}
+N_S=A_H e = (2.80 \pm 0.16e-1)\SI{}{\per\square\meter}.
 \label{ns1}
 \end{equation}
 
@@ -276,15 +286,47 @@ Die in Abbildung \ref{hallsteigung} gezeichnete Gerade lässt sich an die andere
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Leitfähigkeit, Hall-Faktor und Elektronenbeweglichkeit}
+\label{a3}
 
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{AuswertungUli}
-\label{AuswertungUli}
-\subsection{Laue-Aufnahme}
-\label{07_Auswertung}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als
+\begin{align}
+	\sigma_{\rm 2D} &= N_{\rm s} e^2 \frac{\tau}{m^*} = \frac{L}{R_{xx} W}\\
+	A_{\rm H} 		&= -\frac{1}{N_{\rm s}e}\\
+	\mu 			&= A_{\rm H} \sigma_{\rm 2D}.
+	\label{eq.leithallbeweg}
+\end{align}
+Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\meter}$ der Probe erhalten wir aus der Geometrie der Hallbar das Verhältnis
+\begin{equation}
+	\frac{L}{W} = 3.
+\end{equation}
 
+Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen.
 
+\note{hast du in den bereinigten Daten für die Längsspannung tatsächlich schon den Längswiderstand ausgerechnet}
+
+\begin{table}[htp]
+	\begin{center}
+		\begin{tabular}{rrrrr}
+			\hline
+			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\rm ??]$ & $A_{\rm H}\left[ \mathrm{m}^2/\mathrm{C} \right]$ & $\mu \left[ \mathrm{m}^2/\mathrm{Vs} \right]$\\
+			\hline
+			4.2 &&&&\\
+			3.0 &&&&\\
+			2.1 &&&&\\
+			1.5 &&&&\\
+			\hline
+		\end{tabular}
+		\caption{Leitfähigkeit $\sigma_{\rm 2D}$, Hall-Konstante $A_{\rm H}$ und Elektronenbeweglichkeit $\mu$.}
+		\label{tab.leithallbeweg}
+	\end{center}
+\end{table}
+Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
+
+%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Zyklotronmasse}
+\label{a4}
 %
 % =============================================================================
 \section{Zusammenfassung}
@@ -355,6 +397,29 @@ Auswertung aber nicht unbedingt notwendig.
 %=============================================================================
 \section{Anhang}
 \label{Anhang}
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/02-4,2-Hallplateaus.pdf}
+		\caption{Hallplateaus bei $T=\SI{4.2}{\kelvin}$.}
+		\label{hallplateau42}
+	\end{center}
+\end{figure}
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/03-3,0-Hallplateaus.pdf}
+		\caption{Hallplateaus bei $T=\SI{3.0}{\kelvin}$.}
+		\label{hallplateau30}
+	\end{center}
+\end{figure}
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/04-2,1-Hallplateaus.pdf}
+		\caption{Hallplateaus bei $T=\SI{2.1}{\kelvin}$.}
+		\label{hallplateau21}
+	\end{center}
+\end{figure}
+
 % %=============================================================================
 
 \end{document}
