@@ -39,7 +39,7 @@ f2 = interp1d(B_inv, R_laengs)#, kind='cubic'
 print min(B_inv)
 Bmin=0.111
 Bmax=3.0
-steps=4064.0#*16
+steps=4064.0*16
 B_inv_intpol=linspace(Bmin,Bmax,steps)
 #print B_inv_Bsort[::100]
 R_laengs_intpol=f2(B_inv_intpol)

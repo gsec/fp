@@ -264,8 +264,15 @@ Mit dieser Methode haben wir die Widerstandswerte für jedes sichtbare Niveau au
 
 
 \subsection{Bestimmung der Oberflächenladungsdichte}
+\subsubsection*{- Durch die Steigung des Hall-Wtderstandes}
 Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir durch zwei Hilfsgeraden in Abbildung \ref{hallsteigung} abgeschätzt. 
-PLOT??
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/02-Hallsteigung.pdf}
+		\caption{Hall-Widerstand als Funktion des Magnetfeldes. An die Kurve wird nach Augenmaß eine Ursprungsgerade angelegt}.
+		\label{hallsteigung}
+	\end{center}
+\end{figure}
 Als Steigung erhalten wir die Hall-konstante $A_H=\SI{1750+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
 N_S=A_H e = \SI{2.80 \pm 0.16e-1}{\per\square\meter}
