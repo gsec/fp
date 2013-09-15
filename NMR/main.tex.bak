@@ -1,0 +1,276 @@
+\documentclass[paper=a4,
+	fontsize=10pt,
+	DIV=18,
+	twocolumn,
+	parskip=half
+	]{scrartcl}
+\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
+\usepackage{bijan_koma}
+\usepackage[ngerman]{babel} 
+
+
+%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
+\sisetup{       
+  separate-uncertainty,
+  per-mode=fraction
+}
+
+\colorlet{darkblue}{blue!70!black}
+\hypersetup{
+  colorlinks,
+  citecolor=darkblue,
+  filecolor=darkblue,
+  linkcolor=darkblue,
+  urlcolor=black
+}
+
+\crefformat{equation}{Glg.~(#2#1#3)}
+\crefformat{section}{Abschnitt~#2#1#3}
+\crefformat{figure}{Abb.~#2#1#3}
+\crefformat{table}{Tab.~#2#1#3}
+\crefformat{chapter}{Kapitel~#2#1#3}
+
+
+\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
+  \renewcommand{\figurename}{Abb.}
+  \renewcommand{\tablename}{Tab.}
+}
+
+\numberwithin{equation}{section}    % Number equations after sections, e.g. (1.2)
+
+%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
+\pagestyle{scrheadings}                           % Apply userdefined settings
+\setheadsepline{.5 pt}                            % Width of seperation line
+\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
+\cfoot{\thepage}                                  % Page numbering 
+
+%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\columnsep20pt                                  % Width inbetween \twocolumns
+%\onehalfspacing                                 % 1.5 line spacing
+\linespread{1.2}
+
+\setlength{\headheight}{2.0\baselineskip}       % Fixes the 'small headhight'
+
+\renewcommand*{\chapterheadstartvskip}{\vspace{0\baselineskip}} 
+% Spacing Pagehead-Headline. Standard: 2
+
+\renewcommand*{\chapterheadendvskip}{\vspace{\baselineskip}}
+% Spacing Headline-Text
+
+% Spacing in math environments \,\;.. 
+%\thinmuskip=3mu % default
+%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
+%\thickmuskip=5mu plus 5mu % default
+
+\allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
+% in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
+
+
+\usepackage{url}
+\usepackage[numbers]{natbib}
+\usepackage{textcomp}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Kernspinresonanz}                  
+\author{Daniel Friedrich \& Ulrich Müller}         
+\date{}                                % Turn off automatic date
+\twocolumn[\begin{@twocolumnfalse}
+\vspace{-3em}
+\maketitle      
+%=============================================================================
+\begin{abstract}      
+%=============================================================================
+  \vspace{-2em}
+  \noindent {\small Mithilfe von drei Röntgenanoden sowie verschiedenen
+    Streuobjekten konnten wir die theoretischen Werte der
+$K_{\alpha}$- und $K_{\beta}$-Linie von Kupfer, Eisen und Molybdän
+    bestätigen. Zudem war die
+Feinstruktur von Eisen und Molybdän 
+    im Spektrum erkennbar.  Über das Duane-Hunt-Gesetz haben wir Plancksche
+    Wirkungsquantum zu
+%$h = \SI{6.645+-0.059e-34}{\joule\second}$
+    bestimmt. 
+%{R_{H} = \SI{14.02+-0.76}{\eV}} anhand der $K_{\beta}$ Linien
+    Anhand des Effekts der inelastischen Streuung von Photonen an Elektronen
+    haben wir die Compton-Wellenlänge zu
+%$\lambda_c=\SI{2.25+-0.43}{\pico\meter}$
+    ermittelt. Schließlich haben wir zwei
+Laue-Aufnahmen
+    eines Materials gemacht, den Reflexen Miller-Indices zugeordnet und damit 
+    die Diamandstruktur der Probe
+    identifiziert haben.
+    }
+\end{abstract}
+
+  \vspace{1em}
+
+\centerline{Betreuer: Dr. Charles Gould \hfill
+   Versuchsdurchführung am 18. Oktober 2013}
+\centerline{\hfill  Protokollabgabe am ??. Oktober 2013}
+ 
+
+\vspace{2em}
+%
+\end{@twocolumnfalse}
+]
+%
+% =============================================================================
+\section{Einleitung}
+\label{Einleitung}
+%
+Befindet sich ein Atomkern mit einem nichtverschwindem Spin in einem Magnetfeld, so kann er elektromagnetische Strahlung absorbieren sowie emittieren. Dieser Effekt wird als Kernspinresonanz (eng.: nuclear magnetic resonanz NMR) bezeichnet.
+Zurückzuführen ist der Effekt auf das magnetische Moment, das durch den Spin des Atomkerns hervorgerufen wird. Dieses magnetische Moment besitzt, je nach Orientierung in einem äußeren Magnetfeld, unterschiedlich viel Energie. 
+Die Energieaufspaltung eines Spins im äußeren Magnetfeld wurde zuerst im Jahre 1896 von Pieter Zeeman an Elektronen in einem Atom und 40 Jahre später von Isidor Rabi an Atomkernen nachgewiesen [citation needed].\\
+Kleinste Unterschiede im lokalen magnetischen Feld von Atomkernen werden in der Chemie eingesetzt um Informationen über den Bindungszustand von Atomen zu gewinnen. Die Unterscheidung von Materialien aufgrund der Kernspinresonanz ermöglicht in der Magnetresonanztomographie zerstörungsfrei Bilder von organischen Proben in Echtzeit aufzunehmen. [citation needed, vielleicht was von der Uni zitieren]
+
+
+%
+% =============================================================================
+\section{Theorie}
+\label{Theorie}
+%
+\label{theorie}
+Die Theorie der Kernspinresonanz ist auf die Wechselwirkung zwischen dem magnetischen Moment des Atomkerns und dem äußeren Magnetfeld zurück zu führen.
+Das magnetische Moment des Kerns wird dabei von dessen Spin verursacht und folgt der Beziehung
+\begin{align}
+\vec{\mu}=g \frac{\mu_{\rm N}}{\hbar}\vec{s}
+\end{align}
+mit $g$ dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_N$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_{\rm N}=\frac{e \hbar}{2m_{\rm p}}$ mit $m_{\rm p}$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5.59.\\
+Befindet sich das magnetische Moment nun in einem Magnetfeld, so besitzt es die potentielle Energie 
+\begin{align}
+E_{\rm M}=-\vec{\mu} \cdot \vec{B}
+\end{align}
+und ist somit in seiner energetisch günstigsten Position, wenn es parallel zum äußeren Feld ausgerichtet ist.
+
+Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipol $\vec{\mu}$, wodurch in einem Magnetfeld $\vec{B}$ ein Drehmoment $\vec{M}$ auf das Teilchen wirkt. Hierdurch beginnt der Drehimpuls des Teilchens um das angelegte Magnetfeld mit $\vec{M} = \vec{\mu} \times \vec{B}$ zu präzedieren. Die Präzessionsbewegung kann nach~\citet{anleitung} durch
+\begin{equation}
+	\mathrm{d}\vec{M}(t) = \gamma\vec{M}(t) \times \vec{B}(t)\,\mathrm{d}t
+\end{equation}
+beschrieben werden, wobei $\gamma$ dem gyromagnetischen Verhältnis entspricht, durch das ebenso die Richtung und Größe des Dipols mit $\vec{\mu} = \gamma\vec{J}$ definiert ist.
+Die Frequenz der Präzession wird Larmorfrequenz $\omega_{\rm Larmor}$ genannt und ist gegeben durch~\citep{mueller}
+\begin{equation}
+	\omega_{\rm Larmor} = \frac{g \mu N}{\hbar}B = \gamma \cdot B
+\end{equation}
+mit dem Landé-Faktor $g$.
+
+In einer Probe kommt ein großes Ensemble von Protenenspins vor, sodass sich die Gesamtmagnetisierung $\vec{M}$ der Probe aus der Summe der Erwartungswerte aller magnetischen Momente ergibt~\citep{anleitung}.
+\begin{equation}
+	\vec{M} = \underset{k=1}{\overset{N}{\sum}} \braketop{\psi_k}{\hat{\vec{\mu}}}{\psi_k}
+\end{equation}
+$\ket{\psi_k}$ beschreibt hier die Zustandsfunktionen der $N$ Protonen.
+Um nun die dynamische makroskopische Magnetisierung der Probe zu beschreiben werden die sogenannten Bloch-Gleichungen verwendet~\citep{anleitung}.
+\begin{equation}
+	\frac{\mathrm{d}\vec{M}}{\mathrm{d}t} = \gamma\vec{M} \times \vec{B}(t) - \vec{e}_x \frac{M_x}{T_2} - \vec{e}_y \frac{M_y}{T_2} - \vec{e}_z \frac{M_z}{T_1}
+	\label{bloch}
+\end{equation}
+$T_{1,2}$ sind hier Relaxationszeiten, wobei $T_{1}$ der Zeit entspricht, mit der sich die Spintemperatur an die Temperatur des Gesamtsystems angleicht ($z$-Richtung) und $T_2$ der Zeit, in der die Spins in $x$-$y$-Richtung dephasieren.
+
+Im Experiment befindet sich die Probe in einem statischen Magnetfeld $B_0$, wodurch eine Präzession mit der Larmorfrequenz um die Magnetfeldachse zustande kommt. Wird nun ein zusätzliches zirkular polarisiertes Feld $B_1$ eingestrahlt, kann der Drehwinkel der Präzessionsbewegung verändert werden. Das zirkulare Feld $B_1$ wird mit der selben Frequenz wie die Präzessionsfrequenz der Teilchen eingestrahlt. Hierdurch wirkt im Bezugssystems des Spins ein konstantes Magnetfeld, welches die Präzessionsbewegung des Drehimpulses neu ausrichtet. Stehen $B_1$ und $B_0$ genau senkrecht aufeinander, wird der Drehwinkel um exakt $90\textdegree$ gedreht. Die nötige Frequenz das zirkularen Feldes $B_1$ wird durch die Resonanzfrequenz $\nu_{\rm res}$ beschrieben~\citep{anleitung}
+\begin{equation}
+	\nu_{\rm res} = \frac{\gamma B_0}{2\pi}
+\end{equation}
+und entspricht genau der Larmorfrequenz der Präzessionsbewegung der Teilchen.
+
+Befinden sich die Protonen nicht dauerhaft im zirkularen polarisiertem Magnetfeld, so kann erreicht werden, dass sich die Magnetisierung nur um einen gewissen Winkel, den Drehwinkel $\Phi$, dreht. So kann erreicht werden, dass sich die Magnetisierung von der z- z.B. in die x-Achse Dreht. Der Drehwinkel ergibt sich aus dem gyromagnetischen Verhältnis $\gamma$, der Magnetfeldstärke $B_1$ und der Zeit $t_\mathrm{Spule}$ in der sich die Protonen im Magnetfeld befinden
+\begin{align}
+	\Phi=\gamma B_1 t_\mathrm{Spule}.
+\end{align}
+In der Realität kämpft man mit zwei Herausforderungen: Erstens entspricht die Anregungsfrequenz oft nicht der Frequenz, mit der die Protonen um die z-Achse präzedieren und zum andern ist die Zeit $t_\mathrm{Spule}$ aufgrund unterschiedlicher Geschwindigkeiten der Protonen nicht identisch. Die Abweichung der Anregungsfrequenz kann zumindest für unendlich große Relaxationszeiten analytisch gelöst werden. Die normierte z-Komponente der Magnetisierung ergibt sich dabei zu
+\begin{align}
+	\frac{M_z(\Phi, \nu)}{M(t=0)}=\frac{1}{1+u(\nu)^2}\left[ u(\nu)^2+\cos(\Phi)\sqrt{1+u(\nu)^2} \right].
+\end{align}
+Die Verweildauer der Protonen in der Spule kann durch eine Gaußfunktion genähert das obere Ergebnis als Integral über unterschiedliche Drehwinkel numerisch gelöst werden.
+%
+% =============================================================================
+\section{Experimenteller Aufbau}
+% =============================================================================
+%
+\label{Experiment}
+Die Experimente und die Erzeugung der dafür notwendigen Röntgenstrahlung findet
+in einem Vollschutzröntgengerät der Firma PHYWE statt...
+
+\subsection{Charakteristische Röntgenstrahlung von Kupfer}
+
+%
+% =============================================================================
+\section{Auswertung}
+% =============================================================================
+%
+\label{AuswertungDaniel}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Charakteristische Röntgenstrahlung von Kupfer}
+\label{01_Auswertung}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+\label{AuswertungUli}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Laue-Aufnahme}
+\label{07_Auswertung}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%
+% =============================================================================
+\section{Zusammenfassung}
+% =============================================================================
+%
+Wir konnten mit dem Versuch einen guten Einblick in die Röntgenspektroskopie
+gewinnen. Die charakteristischen Linien von Eisen, Molybdän und Kupfer wurden mit
+recht hoher Genaugikeit nachgewiesen, wobei der größte Abstand von unseren
+Bestwerten zu den Theoriewerten 
+\SI{0.65}{\percent} betrag. Im Rahmen der Fehler gab es keine Abweichung. 
+ Das empirische Gesetz zwischen der Intensität der
+charakteristischen Strahlung und der Spannung zeigt systematische Abweichungen
+für Spannungen ab \SI{30}{\kilo\volt} und sollte eher als Faustregel verstanden
+werden. Das Duane-Hunt-Gesetz hingegen konnte gut bestätigt werden und hat uns
+erlaubt, das Plancksche Wirkungsquantum zu bestimmen. Das Moseley-Gesetz wurde
+ausführlich diskutiert und hat gute Abschätzungen für die Rydberg-Konstante
+ergeben. Allerdings ist die Auswertung der \emph{Abschirmkonstante} $\sigma(Z)$
+nicht wirklich sinnvoll. Mit dem Compton-Effekt konnte eine überraschend gute
+Bestimmung der Compton-Wellenlänge durchgeführt werden. Eine vollständige
+Aufnahme des Transmissionsspektrums von Al im gesamten Wellenlängenbereich der
+Kupferanode würde helfen zu verstehen, warum die Näherung eines linearen
+Spektrums solch gute Ergebnisse liefert. Die Laue-Aufnahme hat insgesamt gut
+funktioniert. Allerdings könnte man die Aufhängung der Dentalfilme zum Beispiel
+mit einer optischen Bank o.Ä. verbessern. Dadurch wird ein zentrales 
+Auftreffen garantiert. Die Auflösung 
+der Filme ist gut, eine größere Fläche wäre zwar wünschenswert, ist für die
+Auswertung aber nicht unbedingt notwendig. 
+%
+% =============================================================================
+%\begin{thebibliography}{}   
+%% =============================================================================
+%%
+%%
+%  \bibitem{levitt} Levitt, Malcolm H. (2008): Spin dynamics. Basics of nuclear magnetic resonance. 2nd ed. Chichester, England, Hoboken, NJ: John Wiley \& Sons.
+%    \bibitem{hanson} Lars G. Hanson (2008): Is Quantum Mechanics Necessary for Understanding Magnetic Resonance?
+%    Danish Research Centre for Magnetic Resonance, Copenhagen University Hospital, Hvidovre, Denmark.
+%
+%\end{thebibliography}
+%
+%
+
+\small
+\bibliographystyle{dinat}
+\nocite{*}
+\bibliography{lit}
+\normalsize
+
+
+\onecolumn
+\pagestyle{empty}
+% 
+
+%=============================================================================
+\section{Anhang}
+\label{Anhang}
+% =============================================================================
+
+\end{document}

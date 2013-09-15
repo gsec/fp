@@ -73,7 +73,7 @@
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
-
+\usepackage{textcomp}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -141,20 +141,53 @@ Kleinste Unterschiede im lokalen magnetischen Feld von Atomkernen werden in der 
 Die Theorie der Kernspinresonanz ist auf die Wechselwirkung zwischen dem magnetischen Moment des Atomkerns und dem äußeren Magnetfeld zurück zu führen.
 Das magnetische Moment des Kerns wird dabei von dessen Spin verursacht und folgt der Beziehung
 \begin{align}
-\vec{\mu}=g \frac{\mu_N}{\hbar}\vec{s}
+\vec{\mu}=g \frac{\mu_{\rm N}}{\hbar}\vec{s}
 \end{align}
-mit g dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_N$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_N=\frac{e \hbar}{2m_p}$ mit $2m_p$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5,59.\\
+mit $g$ dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_N$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_{\rm N}=\frac{e \hbar}{2m_{\rm p}}$ mit $m_{\rm p}$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5.59.\\
 Befindet sich das magnetische Moment nun in einem Magnetfeld, so besitzt es die potentielle Energie 
 \begin{align}
-E_M=-\vec{\mu} \cdot \vec{B}
+E_{\rm M}=-\vec{\mu} \cdot \vec{B}
 \end{align}
 und ist somit in seiner energetisch günstigsten Position, wenn es parallel zum äußeren Feld ausgerichtet ist.
-Nettomagnetisierung
-Temperaturverhalten
-Bloch-Gleichung
-Relaxation
-...
-QM vs Klassisch
+
+Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipol $\vec{\mu}$, wodurch in einem Magnetfeld $\vec{B}$ ein Drehmoment $\vec{M}$ auf das Teilchen wirkt. Hierdurch beginnt der Drehimpuls des Teilchens um das angelegte Magnetfeld mit $\vec{M} = \vec{\mu} \times \vec{B}$ zu präzedieren. Die Präzessionsbewegung kann nach~\citet{anleitung} durch
+\begin{equation}
+	\mathrm{d}\vec{M}(t) = \gamma\vec{M}(t) \times \vec{B}(t)\,\mathrm{d}t
+\end{equation}
+beschrieben werden, wobei $\gamma$ dem gyromagnetischen Verhältnis entspricht, durch das ebenso die Richtung und Größe des Dipols mit $\vec{\mu} = \gamma\vec{J}$ definiert ist.
+Die Frequenz der Präzession wird Larmorfrequenz $\omega_{\rm Larmor}$ genannt und ist gegeben durch~\citep{mueller}
+\begin{equation}
+	\omega_{\rm Larmor} = \frac{g \mu N}{\hbar}B = \gamma \cdot B
+\end{equation}
+mit dem Landé-Faktor $g$.
+
+In einer Probe kommt ein großes Ensemble von Protenenspins vor, sodass sich die Gesamtmagnetisierung $\vec{M}$ der Probe aus der Summe der Erwartungswerte aller magnetischen Momente ergibt~\citep{anleitung}.
+\begin{equation}
+	\vec{M} = \underset{k=1}{\overset{N}{\sum}} \braketop{\psi_k}{\hat{\vec{\mu}}}{\psi_k}
+\end{equation}
+$\ket{\psi_k}$ beschreibt hier die Zustandsfunktionen der $N$ Protonen.
+Um nun die dynamische makroskopische Magnetisierung der Probe zu beschreiben werden die sogenannten Bloch-Gleichungen verwendet~\citep{anleitung}.
+\begin{equation}
+	\frac{\mathrm{d}\vec{M}}{\mathrm{d}t} = \gamma\vec{M} \times \vec{B}(t) - \vec{e}_x \frac{M_x}{T_2} - \vec{e}_y \frac{M_y}{T_2} - \vec{e}_z \frac{M_z}{T_1}
+	\label{bloch}
+\end{equation}
+$T_{1,2}$ sind hier Relaxationszeiten, wobei $T_{1}$ der Zeit entspricht, mit der sich die Spintemperatur an die Temperatur des Gesamtsystems angleicht ($z$-Richtung) und $T_2$ der Zeit, in der die Spins in $x$-$y$-Richtung dephasieren.
+
+Im Experiment befindet sich die Probe in einem statischen Magnetfeld $B_0$, wodurch eine Präzession mit der Larmorfrequenz um die Magnetfeldachse zustande kommt. Wird nun ein zusätzliches zirkular polarisiertes Feld $B_1$ eingestrahlt, kann der Drehwinkel der Präzessionsbewegung verändert werden. Das zirkulare Feld $B_1$ wird mit der selben Frequenz wie die Präzessionsfrequenz der Teilchen eingestrahlt. Hierdurch wirkt im Bezugssystems des Spins ein konstantes Magnetfeld, welches die Präzessionsbewegung des Drehimpulses neu ausrichtet. Stehen $B_1$ und $B_0$ genau senkrecht aufeinander, wird der Drehwinkel um exakt $90\textdegree$ gedreht. Die nötige Frequenz das zirkularen Feldes $B_1$ wird durch die Resonanzfrequenz $\nu_{\rm res}$ beschrieben~\citep{anleitung}
+\begin{equation}
+	\nu_{\rm res} = \frac{\gamma B_0}{2\pi}
+\end{equation}
+und entspricht genau der Larmorfrequenz der Präzessionsbewegung der Teilchen.
+
+Befinden sich die Protonen nicht dauerhaft im zirkularen polarisiertem Magnetfeld, so kann erreicht werden, dass sich die Magnetisierung nur um einen gewissen Winkel, den Drehwinkel $\Phi$, dreht. So kann erreicht werden, dass sich die Magnetisierung von der z- z.B. in die x-Achse Dreht. Der Drehwinkel ergibt sich aus dem gyromagnetischen Verhältnis $\gamma$, der Magnetfeldstärke $B_1$ und der Zeit $t_\mathrm{Spule}$ in der sich die Protonen im Magnetfeld befinden
+\begin{align}
+	\Phi=\gamma B_1 t_\mathrm{Spule}.
+\end{align}
+In der Realität kämpft man mit zwei Herausforderungen: Erstens entspricht die Anregungsfrequenz oft nicht der Frequenz, mit der die Protonen um die z-Achse präzedieren und zum andern ist die Zeit $t_\mathrm{Spule}$ aufgrund unterschiedlicher Geschwindigkeiten der Protonen nicht identisch. Die Abweichung der Anregungsfrequenz kann zumindest für unendlich große Relaxationszeiten analytisch gelöst werden. Die normierte z-Komponente der Magnetisierung ergibt sich dabei zu
+\begin{align}
+	\frac{M_z(\Phi, \nu)}{M(t=0)}=\frac{1}{1+u(\nu)^2}\left[ u(\nu)^2+\cos(\Phi)\sqrt{1+u(\nu)^2} \right].
+\end{align}
+Die Verweildauer der Protonen in der Spule kann durch eine Gaußfunktion genähert das obere Ergebnis als Integral über unterschiedliche Drehwinkel numerisch gelöst werden.
 %
 % =============================================================================
 \section{Experimenteller Aufbau}
