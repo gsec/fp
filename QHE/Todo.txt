@@ -1,29 +1,33 @@
 Aufgabe 1:
-	- Diagramme mit R_Hall für alle Temperaturen
-	- Auswertung der Plateaus mit Angabe der Werte
-	- R_Hall der Plateaus mit der Klitzig-Konstante
-	- Tabelle mit R_nu, nu und R_nu*nu für versch. Temperaturen
+	+ Diagramme mit R_Hall für alle Temperaturen
+	+ Auswertung der Plateaus mit Angabe der Werte
+	+ R_Hall der Plateaus mit der Klitzig-Konstante
+	+ Tabelle mit R_nu, nu und R_nu*nu für versch. Temperaturen
 		nu\T	T_1 T_2 ...
 		1
 		2
 		3
 		___________________
 		mittelwerte
-	- Mittelung über R_nu*nu Ergebnisse -> Klitzing-Konstante
-	- vgl Kliting-Konstanten für versch Temp und mit Literatur
-
+	+Mittelung über R_nu*nu Ergebnisse -> Klitzing-Konstante
+	+ vgl Kliting-Konstanten für versch Temp und mit Literatur
+	- Fehlerbestimmung
+	- Fehleranalyse
 
 Aufgabe 2: Oberflächenladungsträgerdichte
 	a) - Gerade an Hall-Widerständsdiagramme für kleine B
-	b) - N_s aus Hall-Plateau-Positionen und den Füllfakoten
+	b) + N_s aus Hall-Plateau-Positionen und den Füllfakoten
+	   - Fehleranalyse
 	c) - Diagramme Fourier-Transformierte von <U_xx(1/B)>
 	   --> N_s aus Periode Delta(1/B) der Längsspannung
 
 Aufgabe 3: Leitfähigkeit für B=0, Hall-Faktor und Elektronenbeweglichkeit 
-	- Leitfähigkeit der Probe bei B=0 mit
-	- Hall-Konstante R_Hall = -1/(N_s e)
-	- Elektronenbeweglichkeit 
-	- alle Werte in eine Tabelle für alle Temperaturen
+	+ Leitfähigkeit der Probe bei B=0 mit
+	+ Hall-Konstante R_Hall = -1/(N_s e)
+	+ Elektronenbeweglichkeit 
+	+ alle Werte in eine Tabelle für alle Temperaturen
+	- Werte ausrechnen mit Aufgabe 2
+	- Fehlerbestimmung und /-analyse
 
 Aufgabe 4: Zyklotronmasse 
 	- 
