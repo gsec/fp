@@ -274,7 +274,10 @@ Aus den obigen Werten können wir folglich die Klitzing-Konstante bestimmen zu
 Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung \note{Analyse}.
 
 \subsection{Bestimmung der Oberflächenladungsdichte}
-Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir durch zwei Hilfsgeraden in Abbildung \ref{hallsteigung} abgeschätzt. 
+Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. 
+
+\subsubsection*{Aus der Steigung des klassischen Hall-Effekts}
+Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir durch zwei Hilfsgeraden in Abbildung \ref{hallsteigung} abgeschätzt. 
 PLOT??
 Als Steigung erhalten wir die Hall-konstante $A_H=(1750 \pm 100)\SI{}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
@@ -284,12 +287,72 @@ N_S=A_H e = (2.80 \pm 0.16e-1)\SI{}{\per\square\meter}.
 
 Die in Abbildung \ref{hallsteigung} gezeichnete Gerade lässt sich an die anderen Hall-Widerstandswerte bei niedrigeren Temperaturen ohne sichtbare Abweichung anlegen. Daher ergibt sich nach dieser Bestimmungsmethode kein Einfluss der Temperatur auf die Ladungsträgerdichte.
 
+\subsubsection*{Mit Hilfe der Hall-Plateaus}
+Die Ladungsträgerdichte können wir ebenso über die Lage der Hall-Pateaus und die ermittelten Füllfaktoren aus Tabelle~\ref{klitzing}, Aufgabenteil~\ref{a1} bestimmen. Nach~\citet{anleitung} ist die Ladungsträgerdichte $N_{\rm s}$ gegeben durch
+\begin{equation}
+	N_{\rm s} = \nu\frac{e B}{\hbar} = \frac{B}{e R_{\rm Shunt}}.
+\end{equation}
+Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm Shunt}$ durch die Plateus der gesamte Plateau-Bereich gehört. Für die Auswertung haben wir den Wert an der Mitte des Plateaus verwendet. Der Wert für die Mitte des Plateaus entspricht den Werten der Hall-Widerstände, die in Aufgabenteil~\ref{a1} ermittelt wurden. Unser Fehler entspricht folglich der Unsicherheit die sich in der Widerstandsbestimmung der Hall-Plateaus ergibt.
+
+Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabelle~\ref{ladungstraegerdichte2} für die gemessenen Temperaturen aufgetragen.
+\begin{table}[htp]
+	\begin{center}
+	\begin{tabular}{rrrr|r}
+		\hline
+			$T[\mathrm{K}]$ & $\nu$ & $B[\mathrm{T}]$ & $N_{\rm s}[10^{15}\,\mathrm{m}^{-2}]$ & $\overline{N_{\rm s}}$\\
+		\hline
+			4.2 &  2 & 6.627045 & 3.20482&\\
+			4.2 &  4 & 3.421468 & 3.30657&\\
+			4.2 &  6 & 2.340491 & 3.39011&\\
+			4.2 &  8 & 1.785758 & 3.44052& 3.3786\\
+			4.2 & 10 & 1.421508 & 3.43167&\\
+			4.2 & 12 & 1.182364 & 3.43349&\\
+			4.2 & 14 & 1.008150 & 3.44324&\\
+			\hline
+			3.0 &  2 & 7.503921 & 3.62888&\\
+			3.0 &  3 & 4.579870 & 3.06667&\\
+			3.0 &  4 & 3.381269 & 3.27562&\\
+			3.0 &  6 & 2.230601 & 3.35365& 3.3876\\
+			3.0 &  8 & 1.759941 & 3.40991&\\
+			3.0 & 10 & 1.418456 & 3.43534&\\
+			3.0 & 12 & 1.197486 & 3.45791&\\
+			3.0 & 14 & 1.029202 & 3.47285&\\
+			\hline
+			2.1 &  2 & 6.4414809 & 3.11509&\\
+			2.1 &  3 & 4.9591533 & 3.42763&\\
+			2.1 &  4 & 3.3555236 & 3.24545&\\
+			2.1 &  5 & 2.8444933 & 3.20541&\\
+			2.1 &  6 & 2.2776080 & 3.30434& 3.33096\\
+			2.1 &  8 & 1.7310212 & 3.35387&\\
+			2.1 & 10 & 1.4093391 & 3.39956&\\
+			2.1 & 12 & 1.1797264 & 3.43970&\\
+			2.1 & 14 & 1.0335822 & 3.48763&\\
+			\hline
+			1.5 &  2 & 6.5134249 & 3.14734&\\
+			1.5 &  3 & 4.8218214 & 3.45188&\\
+			1.5 &  4 & 3.3847981 & 3.26850&\\
+			1.5 &  5 & 2.7925610 & 3.17669&\\
+			1.5 &  6 & 2.7760800 & 4.02752& 3.41067\\
+			1.5 &  8 & 1.7310212 & 3.35387&\\
+			1.5 & 10 & 1.3969114 & 3.38316&\\
+			1.5 & 12 & 1.1797264 & 3.43970&\\
+			1.5 & 14 & 1.0216550 & 3.44739&\\
+		\hline	
+	\end{tabular}	
+	\caption{Bestimmung der Ladungsträgerdichte mit Hilfe der Hall-Plateaus.}
+	\label{ladungstraegerdichte2}
+	\end{center}
+\end{table}
+Der Fehler der gemittelten Ladungsträgerdichten wurden aus Gauß'scher Fehlerfortpflanzung bestimmt.\\
+\note{Fehleranalyse}
+
+\subsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Leitfähigkeit, Hall-Faktor und Elektronenbeweglichkeit}
 \label{a3}
 
-Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als
+Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als \note{benötige Werte aus Aufgabe 2}
 \begin{align}
 	\sigma_{\rm 2D} &= N_{\rm s} e^2 \frac{\tau}{m^*} = \frac{L}{R_{xx} W}\\
 	A_{\rm H} 		&= -\frac{1}{N_{\rm s}e}\\
