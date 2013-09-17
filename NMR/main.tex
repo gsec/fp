@@ -70,11 +70,15 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
+\newcommand{\tra}{$\rightarrow$}
+\newcommand{\Tra}{$\Rightarrow$}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
 \usepackage{textcomp}
 
+
+\usepackage{paralist}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -199,23 +203,131 @@ in einem Vollschutzröntgengerät der Firma PHYWE statt...
 
 \subsection{Charakteristische Röntgenstrahlung von Kupfer}
 
+% =============================================================================
+\section{Versuchsdurchführung}
+\label{versuchsdurchführung}
+% =============================================================================
+%
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Inbetriebnahme des Funktionsgenerators}
+\label{vorbereitung1}
+
+\begin{compactitem}
+	\item Geräte überprüfen
+	\item Vergleich Funktionsgenerator mit Oszillograph
+	\item[\tra] führt zu Korrekturfaktoren
+	\item Verglich Funktionsgenerator mit Oszillograph bei angeschlossener Einstrahlspule \--- Vorwiderstand \SI{47}{\ohm} Ausgangswiderstand \SI{50}{\ohm}
+	\item[\tra] liefert Eichfaktor \--- Funktionsgenerator/Einstrahlspule
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Inbetriebnahme Wasserkreislauf, Polaristor und Analysator}
+\label{vorbereitung2}
+
+\begin{compactitem}
+	\item Pumpe und Polarisationsstrom anschalten (Helmholtz und Manipulation aus)
+	\item Analysator anschalten
+	\item Signal des Detektors (Analysator/Schwingkreis) anschauen
+	\item Ziel: Resonanzfall finden; Ändern der Frequenz des Schwingkreises bis Peaks sichtbar
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Inbetriebnahme Computer und Messung von $S2(t_{12})$}
+\label{vorbereitung3}
+
+\begin{compactitem}
+	\item Messung von $S(t)$ und Resonanzfrequenz bei verschiedenen Impulsabständen $t_{12}$
+	\item[d.h.] Resonanzfall finden und leicht verstellen + schauen was passiert \--- Abstände der Peaks
+	\item Signal mit und ohne Terminator betrachten
+	\item Frequenz des Schwingkreises ändern + zehn Aufnahmen mit dem Computer \--- Frequenz notieren!
+	\item schrittweise Änderung der Analysatorspule \--- Aufnahme der Zeitdifferenz der Peaks
+	\item[\tra] Resonanzfrequenz bei $t_{12} = \SI{10}{\milli\second}$
+	\item[\Tra] Energieaufspaltung und Magnetfeld im Analysator
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Inbetriebnahme Sample and Hold Verstärker und Messung von $S2(t,I_{\rm pol})$}
+\label{vorbereitung4}
+
+\begin{compactitem}
+	\item Anschließen Sample and Hold Verstärker
+	\item Einstellen der Phase über Oszillograph auf $S2$ und Messung von $S2(t)$ verschiedenen Polaristionsströmen $I_{\rm pol}$
+	\item[\tra] Abhängigkeit der Höhe von $S2(t)$ von der Polarisationsstromstärke $I_{\rm pol}$
+	\item Messung Polarisationsstrom und Magnetfeld mit Hall-Sonde \tra linearer Zusammenhang
+	\item[\tra] Linearität von Magnetfeld zur Signalhöhe
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Messung der Spindrehung im Störfeld, $S2(\nu)$}
+\label{vorbereitung5}
+
+\begin{compactitem}
+	\item Anschließen Einstrahlspule und Funktionsgenerator
+	\item Suchen der Resonanz im Störfeld und Messung der Resonanz im Phasenraum
+	\item Protonen im Erdmagnetfeld Larmorfrequenz $\approx \SI{1.2}{\kilo\hertz}$
+	\item Funktionsgenerator Amplitude \SI{50}{\milli\volt}
+	\item[\tra] Spektrum aufnehmen mit Frequenzgrenzen, dass \SI{1000}{\hertz} durchgefahren wird \--- Durchlaufzeit ca. \SI{60}{\second}
+	\item Messung in anderen Frequenzintervallen ober- und unterhalb der Resonanzfrequenz im Erdmagnetfeld 
+	\item[\tra] Resonanzfrequenz außerhalb berechneten Stelle \--- Warum?
+	\item Messung bei steigender und fallender Frequenz \tra 2 verschobenen, richtige in der Mitte
+	\item Amplitude auf \SI{20}{\milli\volt} und Frequenzbereich auch \SI{200}{\hertz}
+	\item Resonanzkurven in mehreren Frequenzfenster ohne Bereichsänderung mit Amplituden von $10-\SI{100}{\milli\volt}$ im Abstand von \SI{5}{\milli\volt}
+	\item Wann Resonanzpeak besonders deutlich
+	\item[\tra] Auflösung des Phasenraums in Amplitude und Frequenz
+	\item Resonanzfrequenz genau einstellen, Amplitudenbereich so, dass möglichst viele Spindrehungen zu sehen
+	\item[\tra] Aufnahme der Spindrehung in Abhängigkeit der Amplitude
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Messung der Resonanz im Feld der Helmholtzspulen}
+\label{vorbereitung6}
+
+\begin{compactitem}
+	\item 
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Bestimmung der Relaxationszeit von Protonen}
+\label{vorbereitung7}
+
+\begin{compactitem}
+	\item Pumpe aus (20s) Messung starten \--- 2s Pumpe wieder an
+	\item Stärke Signal in Abhängigkeit der Pumpleistung messen
+	\item[\tra] Relaxationszeit
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Bestimmung des Störfeldes}
+\label{vorbereitung8}
+
+\begin{compactitem}
+	\item Messung der Resonanzfrequenz für positive und negative Helmholtzströme
+	\item[\tra] Störfeld
+\end{compactitem}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 %
 % =============================================================================
 \section{Auswertung}
+\label{auswertung}
 % =============================================================================
 %
-\label{AuswertungDaniel}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Charakteristische Röntgenstrahlung von Kupfer}
-\label{01_Auswertung}
+\subsection{Inbetriebnahme des Funktionsgenerators}
+\label{aufgabe1}
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-\label{AuswertungUli}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Laue-Aufnahme}
-\label{07_Auswertung}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
 %
 % =============================================================================
 \section{Zusammenfassung}
