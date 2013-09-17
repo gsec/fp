@@ -20,7 +20,7 @@ colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
 Eingaben=['4,2-Hallwiderstand-Magnetfeld_bereinigt.dat','3,0-Hallwiderstand-Magnetfeld_bereinigt.dat','2,1-Hallwiderstand-Magnetfeld_bereinigt.dat','1,5-Hallwiderstand-Magnetfeld_bereinigt.dat']
 
-Fall=0
+Fall=3
 txt_filename_to_open.append(Eingaben[Fall])
 line.append(1)
 # ------------------------------------------
@@ -57,7 +57,7 @@ plt.plot([0, 1.6*2.5], [0, 2800*2.5], 'b-', lw=2, label="Fit")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5+200], 'b--', lw=1, label="Fehlergeraden")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5-200], 'b--', lw=1)
 plt.legend(loc=0)	
-plt.savefig("02-Hallsteigung.pdf")
+#plt.savefig("02-Hallsteigung.pdf")
 show()
 
 
