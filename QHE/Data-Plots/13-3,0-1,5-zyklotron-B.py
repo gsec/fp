@@ -13,29 +13,47 @@ fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k'
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
-data = genfromtxt("4,2-Hallwiderstand-Magnetfeld_bereinigt.dat")
-data2 = genfromtxt("4,2-Laengsspannung.dat")
+data = genfromtxt("3,0-Laengsspannung.dat")
+data2 = genfromtxt("1,5-Laengsspannung.dat")
 #print data[100:,1]
 
-B = data[:8500,0]
-B2 = data2[:,1]
+B = data[:4795,1]
+B2 = data2[:4706,1]
 #U_H = data[:,2]/10 * 1e-3
 #I_H = (data[:,3]/10 * 2e-3)/4981
 
-R_H = data[:8500,1]
-U_xx = data2[:,2]
+U_xx = data[:4795,2]
+U_xx2 = data2[:4706,2]
 
 ax = fig.add_subplot(111)
-ax.plot(B, R_H, "b", label=u"Hallwiderstand")
+ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $4.2\,\mathrm{K}$')
+ax.plot([0.792618,0.792618],[0.420798+0.65,0.32332+0.65], "g:")
+ax.plot([0.885362,0.885362],[0.564149+0.65,0.345374+0.65], "g:")
+ax.plot([1.00299,1.00299],[0.789982+0.65,0.343169+0.65], "g:")
+ax.yaxis.label.set_color('blue')
+ax.set_xlim(0.75,1.1)
+ax.set_ylim(0.9,1.9)
 
+#ax.set_xlim(0.9,1.1)
+#ax.set_ylim(1,2)
 ax.set_xlabel(u"Magnetfeld $B$")
-ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}$")
+ax.set_ylabel(u"L\xe4ngsspannung $U_{\mathrm{xx,4.2}}$")
+
 
 ax2 = ax.twinx()
-ax2.plot(1/B2/10,U_xx*1000, "r", label=u"Laengsspannung")
+ax2.plot(B2, U_xx2, "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
+ax2.plot([0.796011,0.796011],[0.51469,0.343928], "g--")
+ax2.plot([0.887058,0.887058],[0.610938,0.323747], "g--")
+ax2.plot([1.00355,1.00355],[0.745995,0.28649], "g--")
+ax2.yaxis.label.set_color('red')
+ax2.set_xlim(0.75,1.1)
+ax2.set_ylim(0.25,1.25)
+
+#ax2.set_xlim(0.9,1.1)
+#ax2.set_ylim(0,1)
 #ax2.plt.ylim([0,10])
 
-ax2.set_ylabel(r"Laengsspannung $U_xx$")
+ax2.set_ylabel(u"L\xe4ngsspannung $U_{xx,2.1}$")
 
 ax.legend(loc=0)
 ax2.legend(loc=0)
@@ -67,6 +85,6 @@ ax2.legend(loc=0)
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-
+fig.savefig("11-4,2-2,1-zyklotron-B.pdf")
 
 show()

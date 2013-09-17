@@ -219,6 +219,14 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 \end{compactitem}
 
 Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm Shunt})$ aus den gemessenen Daten für die Hallspannung $U_{\rm Hall}$ und denen der Probenspannung $U_{\rm Shunt}$
+
+\paragraph*{Fehler}
+\begin{compactitem}
+	\item Fehler $U_{H}$: Rauschen $10^[-4}$
+	\item Fehler $I_{H}$: Rauschen $10^{-4}$
+	\item Fehler Shuntwiderstand: 1 Ohm
+	\item Ablesefehler Hallwiderstand 0.08\%
+\end{compactitem}
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Hall-Plateaus, Klitzing-Konstante und Füllfaktoren}
@@ -244,19 +252,19 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir aus dem 
 	\begin{tabular}{r|rrrr}
 		$\nu$\textbackslash$T$ & \SI{4.2}{\kelvin} & \SI{3.0}{\kelvin} & \SI{2.1}{\kelvin} & \SI{1.5}{\kelvin} \\
 		\hline
-		2.00  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
-		2.96  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
-		4.00  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
-		4.70  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
-		6.00  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
-		8.01  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
-		10.02 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
-		12.05 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
-		13.96 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
+		2  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
+		3  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
+		4  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
+		5  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
+		6  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
+		8  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
+		10 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
+		12 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
+		14 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
 		\hline
 		$\overline{R_{\rm K}\nu}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
 	\end{tabular}
-	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten. \note{Fehler}}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten. \note{werte 10 Ohm} \note{$R_{\nu}$ mit ganzzahligen $\nu$}}
 	\label{klitzing}	
 	\end{center}
 \end{table}
@@ -392,6 +400,60 @@ Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Zyklotronmasse}
 \label{a4}
+
+In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein. So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
+\begin{equation}
+	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\arccos\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
+\end{equation}
+bestimmt werden, wobei $A(B,T,\tau)$ die Amplitude der Oszillation der Längsspannung entspricht.
+
+Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und in Abbildung~\ref{fig:zyklotronmasse} für die Auftragung über $b$ abgebildet.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/11-4,2-2,1-zyklotron-B.pdf}
+		\caption{Auftragund der Längsspannung über dem Magnetfeld bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
+		\label{fig:zyklotronmasse}
+	\end{center}
+\end{figure}
+Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Da wir aus der Auftragung über $1/B$ die selben Werte für die Amplituden erhalten, geben wir die Werte nicht extra an. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
+		\caption{Auftragund der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
+		\label{fig:zyklotronmasse2}
+	\end{center}
+\end{figure}
+
+\begin{table}[htp]
+	\begin{center}
+		\begin{tabular}{r|rrr}
+			\hline
+			$T[\mathrm{K}]$ & $\frac{A(B,T_2)}{A(B,T_1)}$ & $B[\mathrm{T}]$ & $\frac{m_{\rm c}}{m_{\rm e}}$\\
+			\hline
+			 		& 0.29515443 & 0.885485 & 0.03647987 \\
+			4.2/2.1 & 0.49870897 & 1.002040 & 0.03405622 \\
+			 		& 0.75887862 & 1.153665 & 0.02651661 \\
+			\hline
+					& 0.57084129 & 0.794315 & 0.03471604 \\
+			3.0/1.5 & 0.76177526 & 0.886210 & 0.02833759 \\
+					& 0.97237897 & 1.003270 & 0.01072385 \\
+		\end{tabular}
+		\caption{Berechnung des Zyklotronmassenverhältnisses.}
+		\label{tab:zyklotronmasse}
+	\end{center}
+\end{table}
+Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
+\begin{align}
+	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.03235090 \\
+	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.02459249
+\end{align}
+Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
+\begin{equation}
+	\frac{m^*}{m_{\rm e}} = 0.067
+\end{equation}
+
+\note{Fehlerbeschreibung und /-analyse}
+% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
 % =============================================================================
 \section{Zusammenfassung}
