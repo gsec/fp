@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -22,5 +22,13 @@
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Aufgabenstellung_QHE.pdf}.
   --
 \newblock Physikalisches Fortgeschrittenen Praktikum
+
+\bibitem[{Universität des Saarlandes}(2013)]{saarland}
+\dinatlabel{{Universität des Saarlandes} 2013} \textsc{{Universität des
+  Saarlandes}}:
+\newblock \emph{Materialkonstanten}.
+\newblock September 2013. --
+\newblock URL
+  \url{http://www.uni-saarland.de/fileadmin/user_upload/Professoren/fr74_ProfMoeller/Vorlesung/V_Erster_Studienabschnitt_Bachelor/V_B_Aktuelle_Semester/V_B_WS09_10/fermidirac.htm}
 
 \end{thebibliography}

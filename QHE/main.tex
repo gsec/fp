@@ -294,35 +294,6 @@ N_S=\frac{1}{A_H e} = (3.57 \pm 0.20) \cdot 10^{11}\SI{}{\per\square\centi\meter
 Die Ergebnisse der anderen Temperaturen sind in Tabelle \ref{nswerte} aufgeführt.
 Verglichen mit den Fehlern der Geradensteigung unterscheiden sich die einzelnen Steigungen bei unterschiedlichen Temperaturen nur wenig. Dies ist intuitiv klar, da die Ladungsträgerdichte beim untersuchten 2DEG des GaAs/AlGaAs-System nicht von der Temperatur abhängen sollte.
 
-\subsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
-Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
-\begin{equation}
-\frac{1}{B}=\frac{e}{N_{\rm LL} h}=\frac{e}{N_S h} \nu.
-\end{equation}
-Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun diskret fourie-transformieren. Als Periodendauer in $\frac{1}{B}$ können wir
-\begin{equation}
-T_{\frac{1}{B}}=(1375\pm 31) \cdot 10^{-4}\SI{}{\per\tesla}
-\label{periodizitaet}
-\end{equation}
-aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der diskreten Fourietransformation beschränkt und als halben Abstand zur nächsten Datenpunkt im Graphen angenommen.
-
-\begin{figure}[]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/06-Fourietransformation.pdf}
-		\caption{Disktrete Fourietransformation des Längsiwderstandes aufgetragen über die Periodendauer in $\frac{1}{B}$. Neben der Hauptfrequenz sind auch höhere Frequenzen zu erkennen.}
-		\label{fft}
-	\end{center}
-\end{figure}
-
-Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen Zahle mit dem Faktor $\frac{e}{N_S h}$ multipliziert.
-Dadurch wird der Wert für die Ladungsträgerdichte festgelegt.
-\begin{equation}
-N_S=\frac{e}{T_{\frac{1}{B}} h}=(1.756 \pm 0.040) \cdot 10^{-11}\SI{}{\per\square\centi\meter}
-\label{ns_periode}
-\end{equation}
-Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils der der selbe Wert ermittelt und zur Übersicht in Tabelle \ref{nswerte} eingetragen.
-
-
 \subsubsection*{Mit Hilfe der Hall-Plateaus}
 Die Ladungsträgerdichte können wir ebenso über die Lage der Hall-Pateaus und die ermittelten Füllfaktoren aus Tabelle~\ref{klitzing}, Aufgabenteil~\ref{a1} bestimmen. Nach~\citet{anleitung} ist die Ladungsträgerdichte $N_{\rm s}$ gegeben durch
 \begin{equation}
@@ -382,6 +353,53 @@ Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabell
 Der Fehler der gemittelten Ladungsträgerdichten wurden aus Gauß'scher Fehlerfortpflanzung bestimmt.\\
 \note{Fehleranalyse}
 
+\subsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
+Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
+\begin{equation}
+\frac{1}{B}=\frac{e}{N_{\rm LL} h}=\frac{e}{N_S h} \nu.
+\end{equation}
+Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun diskret fourie-transformieren. Als Periodendauer in $\frac{1}{B}$ können wir
+\begin{equation}
+T_{\frac{1}{B}}=(1375\pm 31) \cdot 10^{-4}\SI{}{\per\tesla}
+\label{periodizitaet}
+\end{equation}
+aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der diskreten Fourietransformation beschränkt und als halben Abstand zur nächsten Datenpunkt im Graphen angenommen.
+
+\begin{figure}[]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/06-Fourietransformation.pdf}
+		\caption{Disktrete Fourietransformation des Längsiwderstandes aufgetragen über die Periodendauer in $\frac{1}{B}$. Neben der Hauptfrequenz sind auch höhere Frequenzen zu erkennen.}
+		\label{fft}
+	\end{center}
+\end{figure}
+
+Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{e}{N_S h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden werden.
+
+Dadurch wird der Wert für die Ladungsträgerdichte festgelegt.
+\begin{equation}
+N_S=\frac{2 e}{T_{\frac{1}{B}} h}=(3.517 \pm 0.079) \cdot 10^{-11}\SI{}{\per\square\centi\meter}
+\label{ns_periode}
+\end{equation}
+Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils der selbe Wert ermittelt.
+
+Um die Ergebnisse aller drei Methoden zusammen zu fassend, tragen wir die ermittelten Werte für $N_S$ in Tabelle \ref{nswerte} ein und bilden die, mit den inversen Fehlern gewichteten, Mittelwerte $\overline{N_S}(T)$ die wir für die weiteren Rechnungen verwenden.
+
+\begin{table}[htp]
+	\begin{center}
+		\begin{tabular}{rrrrr}
+			\hline
+			$T[/frac{1}{K}]$ & Hall-Steigung & $k_F[]$ & $v_F[]$\\
+			\hline
+			4.2 &&&\\
+			3.0 &&&\\
+			2.1 &&&\\
+			1.5 &&&\\
+			\hline
+		\end{tabular}
+		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
+		\label{fermitabelle}
+	\end{center}
+\end{table}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Leitfähigkeit, Hall-Faktor und Elektronenbeweglichkeit}
@@ -425,6 +443,41 @@ Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Zyklotronmasse}
 \label{a4}
+%
+%
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Fermi-Energie /-Wellenvektor und -Geschwindigkeit}
+\label{a5}
+Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \cite{saarland} $m^*=0.067$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
+\begin{equation}
+E_F=\frac{\hbar^2 k_F^2}{2 m^*}.
+\end{equation}
+Auf der anderen Seite ergibt sich Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2DEG den konstanten Wert $D(E)=\frac{\hbar^2 \pi}{m^*}$ \citep{anleitung}.
+Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeit:
+\begin{align}
+E_F&=N_S \cdot \frac{\hbar^2 \pi}{m}\\
+k_F&=\sqrt{2 \pi N_S}\\
+v_F&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_S}
+\end{align}
+Die Ergebnisse sind für die verschiedenen Temperaturen Tabelle \ref{Fermi} aufgelistet.
+
+\begin{table}[htp]
+	\begin{center}
+		\begin{tabular}{rrrrr}
+			\hline
+			$T[]$ & $E_F[]$ & $k_F[]$ & $v_F[]$\\
+			\hline
+			4.2 &&&\\
+			3.0 &&&\\
+			2.1 &&&\\
+			1.5 &&&\\
+			\hline
+		\end{tabular}
+		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
+		\label{fermitabelle}
+	\end{center}
+\end{table}
+
 %
 % =============================================================================
 \section{Zusammenfassung}

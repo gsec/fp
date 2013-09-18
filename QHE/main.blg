@@ -1,12 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: dinat.bst
 Database file #1: lit.bib
-You're missing a field name---line 14 of file lit.bib
+You're missing a field name---line 20 of file lit.bib
  : 
  : % author = {Herbert M"uller},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 23 of file lit.bib
+You're missing a field name---line 29 of file lit.bib
  : 
  : %author = {Adrian C. Melissinos},
 (Error may have been on previous line)
