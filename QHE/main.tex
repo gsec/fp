@@ -254,32 +254,32 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir aus dem 
 	\begin{tabular}{r|rrrr}
 		$\nu$\textbackslash$T$ & \SI{4.2}{\kelvin} & \SI{3.0}{\kelvin} & \SI{2.1}{\kelvin} & \SI{1.5}{\kelvin} \\
 		\hline
-		2.00  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
-		2.96  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
-		4.00  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
-		4.70  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
-		6.00  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
-		8.01  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
-		10.02 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
-		12.05 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
-		13.96 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
+		2  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
+		3  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
+		4  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
+		5  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
+		6  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
+		8  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
+		10 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
+		12 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
+		14 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
 		\hline
-		$\overline{R_{\rm K}\nu}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
+		$\overline{R_{\rm K}\nu}$ & \SI[separate-uncertainty=false]{24860(54)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm}
 	\end{tabular}
-	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten. \note{werte 10 Ohm} \note{$R_{\nu}$ mit ganzzahligen $\nu$}}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
 	\label{klitzing}	
 	\end{center}
 \end{table}
 
 Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils den selben Wert, der Klitzing-Konstante genannt wird. 
 
-Aus der Ablesegenauigkeit und einem Fehler von \note{Gerätefehler, systematischer Fehler, geschätzter Fehler}.
+Aus der Ablesegenauigkeit der Auswertmethode von $10\Upomega$ lässt sich der Fehler der in Tabelle~\ref{klitzing} gemittelten Klitzing-Konstanten für verschieden Temperaturen berechnen. Die Messfehler aus denen die Widerstandswerte berechnet wurden ist im Vergleich zu der Ablesegenauigkeit vernachlässigbar ($<0.1\%$). Für die Berechnung wurden die Widerstandswerte mit den entsprechenden Füllfaktoren gewichtet und aus der Genauigkeit und Fehlerfortpflanzung die gemittelten Widerstandswerte mit Fehler bestimmt. 
 
 In der letzten Zeile von Tabelle~\ref{klitzing} wurden für jede Temperatur die Werte der verschiedenen Plateaus (multipliziert mit dem Füllfaktor) gemittelt und zeigen die Klitzing-Konstanten bei verschiedenen Temperaturen mit Standardabweichung. Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was im Rahmen der Fehler \note{Fehleranalyse}.
 
 Aus den obigen Werten können wir folglich die Klitzing-Konstante bestimmen zu
 \begin{equation}
-	R_{\rm K} = (24.845 \pm ??)\,\SI{}{\kilo\ohm}.
+	R_{\rm K} = \SI{25114(50)}{\ohm}.
 \end{equation}
 Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung \note{Analyse}.
 
@@ -293,9 +293,9 @@ Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
-Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI{1750+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
+Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI[per-mode=symbol]{1750(100)}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
-N_S=\frac{1}{A_H e} = (3.57 \pm 0.20) \cdot 10^{11}\SI{}{\per\square\centi\meter}.
+N_S=\frac{1}{A_H e} = \SI{3.57(20)e11}{\per\square\centi\meter}.
 \label{ns1}
 \end{equation}
 
@@ -369,7 +369,7 @@ Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \
 \end{equation}
 Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun diskret fourie-transformieren. Als Periodendauer in $\frac{1}{B}$ können wir
 \begin{equation}
-T_{\frac{1}{B}}=(1375\pm 31) \cdot 10^{-4}\SI{}{\per\tesla}
+T_{\frac{1}{B}}=\SI{1375(31)e-4}{\per\tesla}
 \label{periodizitaet}
 \end{equation}
 aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der diskreten Fourietransformation beschränkt und als halben Abstand zur nächsten Datenpunkt im Graphen angenommen.
@@ -386,7 +386,7 @@ Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} 
 
 Dadurch wird der Wert für die Ladungsträgerdichte festgelegt.
 \begin{equation}
-N_S=\frac{2 e}{T_{\frac{1}{B}} h}=(3.517 \pm 0.079) \cdot 10^{-11}\SI{}{\per\square\centi\meter}
+N_S=\frac{2 e}{T_{\frac{1}{B}} h}=\SI{3.517(079)e-11}{\per\square\centi\meter}
 \label{ns_periode}
 \end{equation}
 Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils der selbe Wert ermittelt.
@@ -461,7 +461,7 @@ Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Te
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/11-4,2-2,1-zyklotron-B.pdf}
-		\caption{Auftragund der Längsspannung über dem Magnetfeld bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
+		\caption{Auftragung der Längsspannung über dem Magnetfeld bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
 		\label{fig:zyklotronmasse}
 	\end{center}
 \end{figure}
@@ -469,7 +469,7 @@ Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitu
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
-		\caption{Auftragund der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
+		\caption{Auftragung der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
 		\label{fig:zyklotronmasse2}
 	\end{center}
 \end{figure}

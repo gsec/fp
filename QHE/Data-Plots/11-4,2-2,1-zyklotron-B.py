@@ -9,7 +9,7 @@ from numpy import *
 
 rc('font', family = 'serif', serif = 'STIXGeneral')
 fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
-
+fig.suptitle(r"Amplitudenverhltnisse $T=4.2 \mathrm{K}$ und $T=2.1 \mathrm{K}$ ueber $B$", fontsize=14, fontweight='bold')
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
@@ -27,24 +27,42 @@ U_xx2 = data2[:4733,2]
 
 ax = fig.add_subplot(111)
 ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $4.2\,\mathrm{K}$')
+ax.plot([0,0],[0,0], "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
 ax.plot([0.885485,0.885485],[1.180796,1.24356], "g:")
+ax.plot([0.875485,0.895485],[1.180796,1.180796], "g")
+ax.plot([0.875485,0.895485],[1.24356,1.24356], "g")
+
 ax.plot([1.00102,1.00102],[1.418924,1.236789], "g:")
+ax.plot([0.99102,1.01102],[1.418924,1.418924], "g")
+ax.plot([0.99102,1.01102],[1.236789,1.236789], "g")
+
 ax.plot([1.15392,1.15392],[1.702035,1.251573], "g:")
+ax.plot([1.14392,1.16392],[1.702035,1.702035], "g")
+ax.plot([1.14392,1.16392],[1.251573,1.251573], "g")
+
 ax.yaxis.label.set_color('blue')
 ax.set_xlim(0.85,1.25)
 ax.set_ylim(1,2)
 
 #ax.set_xlim(0.9,1.1)
 #ax.set_ylim(1,2)
-ax.set_xlabel(u"Magnetfeld $B$")
-ax.set_ylabel(u"L\xe4ngsspannung $U_{\mathrm{xx,4.2}}$")
+ax.set_xlabel(u"Magnetfeld $B [\mathrm{T}]$")
+ax.set_ylabel(u"L\xe4ngsspannung $U_{\mathrm{xx,4.2}} [\mathrm{V}]$")
 
 
 ax2 = ax.twinx()
 ax2.plot(B2, U_xx2, "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
 ax2.plot([0.885485,0.885485],[0.611754,0.399106], "g--")
+ax2.plot([0.875485,0.895485],[0.611754,0.611754], "g--")
+ax2.plot([0.875485,0.895485],[0.399106,0.399106], "g--")
+
 ax2.plot([1.00306,1.00306],[0.737266,0.372053], "g--")
+ax2.plot([0.99306,1.01306],[0.737266,0.737266], "g--")
+ax2.plot([0.99306,1.01306],[0.372053,0.372053], "g--")
+
 ax2.plot([1.15341,1.15341],[0.906818,0.313229], "g--")
+ax2.plot([1.14341,1.16341],[0.906818,0.906818], "g--")
+ax2.plot([1.14341,1.16341],[0.313229,0.313229], "g--")
 ax2.yaxis.label.set_color('red')
 ax2.set_xlim(0.85,1.25)
 ax2.set_ylim(0,1)
@@ -53,10 +71,10 @@ ax2.set_ylim(0,1)
 #ax2.set_ylim(0,1)
 #ax2.plt.ylim([0,10])
 
-ax2.set_ylabel(u"L\xe4ngsspannung $U_{xx,2.1}$")
+ax2.set_ylabel(u"L\xe4ngsspannung $U_{xx,2.1} [\mathrm{V}]$")
 
-ax.legend(loc=0)
-ax2.legend(loc=0)
+ax.legend(loc=2)
+#ax2.legend(loc=0)
 
 # y = log(data[:,1]/(8e-3*1.63e-3*2.74e-3))
 # y = log(data[:,1]*(1.63e-3*2.74e-3)/(8e-3*4.2e-3))

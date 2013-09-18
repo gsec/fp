@@ -9,12 +9,12 @@ from numpy import *
 
 rc('font', family = 'serif', serif = 'STIXGeneral')
 fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
-fig.suptitle(r"Hallplateaus bei $T=4.2\,$K", fontsize=14, fontweight='bold')
+fig.suptitle(r"Hallplateaus bei $T=4.2\,$K", fontsize=14, fontweight='bold', y=1)
 
 data = genfromtxt("4,2-Hallwiderstand-Magnetfeld_bereinigt.dat")
 
 
-B = data[:8500,0]
+B = data[:8500,0]								
 #U_H = data[:,2]/10 * 1e-3
 #I_H = (data[:,3]/10 * 2e-3)/4981
 
@@ -57,15 +57,18 @@ print "argmax:", wertmaximum1, wertmaximum2, wertmaximum3, wertmaximum4, wertmax
 print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mittelwertkandidaten[wertmaximum2], Mittelwertkandidaten[wertmaximum3], Mittelwertkandidaten[wertmaximum4], Mittelwertkandidaten[wertmaximum5], Mittelwertkandidaten[wertmaximum6], Mittelwertkandidaten[wertmaximum7]
 
 ax = fig.add_subplot(111)
-ax.plot(B*100, R_H, "b", label=u"Messwerte")
-ax.plot([0,0],[0,0], "r", label=u"liste")
 
-ax.set_xlabel(u"Magnetfeld $B$")
-ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}$")
+subplots_adjust(top=0.87, right=0.96)
+ax.plot(B*100, R_H, "b", label=u"Messwerte $R_\mathrm{H}$")
+ax.plot([0,0],[0,0], "r", label=u"Anzahl von Messpunkten")
+
+ax.set_xlabel(u"Magnetfeld $B[T]$")
+ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}[\Omega]$")
+ax.xaxis.label.set_color('blue')
 
 ax2 = ax.twiny()
 ax2.plot(counts,Mittelwertkandidaten, "r", label=u"liste")
-
+ax2.xaxis.label.set_color('red')
 ax2.set_xlabel(r"Anzahl $N$")
 
 ax.legend(loc=4)
@@ -104,6 +107,6 @@ ax2.plot([0,180],[Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertma
 #text(780,3600, Mittelwertkandidaten[wertmaximum7], va='center', ha='center')
 
 
-fig.savefig("02-4,2-Hallplateaus-.pdf")
+fig.savefig("02-4,2-Hallplateaus.pdf")
 
 show()
