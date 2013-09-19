@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -15,7 +15,7 @@
 \newblock 37 (1974), Nr.~1233
 
 \bibitem[Batke(2010)]{anleitung}
-\dinatlabel{Batke 2010} \textsc{Batke}, ??:
+\dinatlabel{Batke 2010} \textsc{Batke}, Edwin:
 \newblock \emph{Anleitung - Quanten-Hall-Effekt}.
 \newblock Physikalisches Institut der Universit"at W"urzburg.
 \newblock Juli 2010. --
@@ -23,6 +23,15 @@
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Aufgabenstellung_QHE.pdf}.
   --
 \newblock Physikalisches Fortgeschrittenen Praktikum
+
+\bibitem[Janssen(2011)]{janssen}
+\dinatlabel{Janssen 2011} \textsc{Janssen}, N. E.; Goebel R.; Williams J. M.;
+  Tzalenchuk A.; Yakimova R. et~a.:
+\newblock Graphene, universality of the quantum Hall effect and redefinition of
+  the SI system.
+\newblock In: \emph{New J. Phys. 13 (9), S. 93026.}
+\newblock 37 (2011), Nr.~1233. --
+\newblock DOI: 10.1088/1367-2630/13/9/093026
 
 \bibitem[{Universität des Saarlandes}(2013)]{saarland}
 \dinatlabel{{Universität des Saarlandes} 2013} \textsc{{Universität des
