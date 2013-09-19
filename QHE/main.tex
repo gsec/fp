@@ -321,7 +321,8 @@ Die Ladungsträgerdichte können wir ebenso über die Lage der Hall-Pateaus und 
 \begin{equation}
 	N_{\rm s} = \nu\frac{e B}{h}.
 \end{equation}
-Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm H}$ durch die Plateus der gesamte Plateau-Bereich gehört. Für die Auswertung haben wir den Wert der Hall-Widerstände verwendet, der in Aufgabenteil~\ref{a1} ermittelt wurde. Dieser sollte die Stelle des Plateaus (minimale Steigung) am Genauesten wiedergeben. Der Fehler in der Widerstandsbestimmung der Hall-Plateaus beträgt $\SI{10}{\ohm}$, wodurch sich der Fehler in der Bestimmung der $B$-Felder durch die Breite der Plateaus abschätzen lässt.
+%Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm H}$ durch die Plateus der gesamte Plateau-Bereich gehört. 
+Für die Auswertung haben wir die Werte der Hall-Widerstände verwendet, die in Aufgabenteil~\ref{a1} ermittelt wurden. Diese geben die Stelle des Plateaus (minimale Steigung) am genauesten wieder. . Der Fehler der zugehörigen $B$-Felder lässt sich durch die Breite der Plateaus abschätzen. %Der Ablesefehler in  der Hall-Plateaus beträgt $\SI{10}{\ohm}$. Brauchen wir hier glaub ich nicht
 
 Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabelle~\ref{ladungstraegerdichte2} für die gemessenen Temperaturen aufgetragen.
 \begin{table}[htp]
@@ -372,7 +373,7 @@ Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabell
 	\label{ladungstraegerdichte2}
 	\end{center}
 \end{table}
-Der Fehler der gemittelten Ladungsträgerdichten wurden aus Gauß'scher Fehlerfortpflanzung bestimmt.\\
+Der Fehler der gemittelten Ladungsträgerdichten wurden mit Gauß'scher Fehlerfortpflanzung aus den Einzelwerten bestimmt.\\
 
 \subsubsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
 Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
@@ -394,7 +395,7 @@ aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der
 	\end{center}
 \end{figure}
 
-Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{e}{N_\mathrm{S} h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden werden.
+Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{2 e}{N_\mathrm{S} h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden.
 
 Durch die Periodendauer $T_{\frac{1}{B}}$ wird somit der Wert für die Ladungsträgerdichte festgelegt.
 \begin{equation}
@@ -478,7 +479,7 @@ Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Te
 		\label{fig:zyklotronmasse}
 	\end{center}
 \end{figure}
-Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Da wir aus der Auftragung über $1/B$ die selben Werte für die Amplituden erhalten, geben wir die Werte nicht extra an. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
+Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragung über $1/B$ verändert den Wert der Amplituden nicht. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
@@ -516,14 +517,15 @@ ergeben. Das gesamte gemittelte Massenverhältnis ist somit
 	\frac{m_{\rm c}}{m_{\rm e}} = 0.0318 \pm 0.0076.
 	\label{zyklotronmasse}
 \end{equation}
-Die Fehler der Amplituden und des $B$-Felds der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte sind durch einen Ablesefehler von $\pm 0.001$, können jedoch zur Berechnung des Massenverhältnisses vernachlässigt werden, da der Fehler in der Temperaturbestimmung deutlich darüber liegt. Die Temperaturschwankungen sind zu Beginn der Auswertung~\ref{Auswertung} genannt. Die Auswirkung von Temperaturschwankungen auf die gemessenen Spannungen sind allerdings nicht bekannt. Somit bestimmen wir den Fehler der gemittelten Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt.
+Die Ablesefehler der Amplituden und des $B$-Feldes der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte werden vernachlässigt, da der Fehler der korrekten Temperaturbestimmung deutlich höher eingeschätzt wird.
+Wie sich eine Abweichung von der Bedingung $T_{1}=2T_{2}$ auf die Massenbestimmung auswirkt ist im Detail nicht bekannt, der Fehler kann jedoch aus Diskrepanz der Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt werden.
 
 Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
 \begin{equation}
 	\frac{m^*}{m_{\rm e}} = 0.067
 \end{equation}
 
-Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$. Diese Bedingung konnte im Experiment nicht realisiert werden, da durch den vorhandenen Versuchsaufbau keine konstante Temperatur eingestellt werden konnte. 
+Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$, welche im Experiment nicht sehr exakt realisiert werden konnte.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
