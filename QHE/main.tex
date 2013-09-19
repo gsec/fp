@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\renewcommand{\note}[1]{{\color{red}#1??}}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -184,12 +184,12 @@ Im folgendem Versuch messen wir den Quanten-Hall-Effekt an einer AlGaAs/GaAs Hal
 	\end{center}
 \end{figure}
 
-Um die Hallbar anzusteuern, liegt ein Probenbox am Arbeitsplatz, die mit der Hallbar verbunden ist. An den Kontakten 3, 4, 6 und 7 kann die Längsspannung sowie die Querspannung abgegriffen werden. An den Kontakten 5 und 8 wird der Gleichstrom bereitgestellt.
+Um die Hallbar anzusteuern, liegt ein Probenbox am Arbeitsplatz vor, die mit der Hallbar verbunden ist. An den Kontakten 3, 4, 6 und 7 kann die Längsspannung sowie die Querspannung abgegriffen werden. An den Kontakten 5 und 8 wird der Gleichstrom bereitgestellt.
 Da für die Messung des Quanten-Hall-Effektes niedrige Temperaturen nötig sind, befindet sich die Probe in einen Kryostaten im Heliumbad. Zur Wärmeisolation befindet sich das Bad innerhalb von Vakuum-Kammern und einem Stickstofftank, was den gesamten Kryostaten darstellt. Durch eine Pumpe mit Druckregelung kann der Druck über dem Heliumbad beeinflusst werden, wodurch sich Temperaturen zwischen \SI{1.5}{\kelvin} und \SI{4.2}{\kelvin} einstellen lassen. Die Bestimmung der Temperatur an der Probe erfolgt mit einem geeichten, temperaturabhängigen Kohlewiderstand, dem Allen Bradley-Widerstand, der mit einem Spannungsmessgerät ausgelesen wird. Zur Erzeugung des Hall-Effektes wird ein zwischen \SI{0}{\tesla} und \SI{9}{\tesla} verstellbares Magnetfeld senkrecht zur Probenebene angelegt. Zur Ermittlung des Probenstroms
-wird ein mit \SI{13}{\hertz} und \SI{1}{\volt} betriebener Funktionsgenerator über einen 1000:1 Spannungsteiler und einem Vorwiderstand von $R_{\rm Shunt} = \SI{4981}{\ohm}$ an das Probenbox angelegt und der Spannungsabfall über dem Shuntwiderstand gemessen.
+wird ein mit \SI{13}{\hertz} und \SI{1}{\volt} betriebener Funktionsgenerator über einen 1000:1 Spannungsteiler und einem Vorwiderstand von $R_{\rm Shunt} = \SI{4981}{\ohm}$ an die Probenbox angelegt und der Spannungsabfall über den Shuntwiderstand gemessen.
 
 %Die Spannung, die an der Probe anliegt wird am Vorwiderstand abgegriffen. I dont belive you :)
-Die Querspannung sowie die Shuntspannung sind über zwei Lock-In-Verstärker mit einem Computer verbunden.
+Die Querspannung sowie die Shuntspannung sind jeweils über einen Lock-In-Verstärker mit einem Computer verbunden.
 Das Magnetfeld, die Shunt- und die Querspannung können mit LabView über die Zeit aufgezeichnet werden.
 
 % =============================================================================
@@ -197,11 +197,11 @@ Das Magnetfeld, die Shunt- und die Querspannung können mit LabView über die Ze
 \label{versuch}
 % =============================================================================
 %
-Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Shuntspannung $U_{\rm Shunt}$ und die Querspannungen $U_{xx}$ bzw. $U_{\rm Hall}$ bei steigendem Magnetfeld von $0 \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $9 \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-ins verwenden, nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch die Druckregelung des Heliums im Kryostaten können wir die Temperatur regeln und die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
+Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Shuntspannung $U_{\rm Shunt}$ und die Querspannungen $U_{xx}$ bzw. $U_{\rm Hall}$ bei steigendem Magnetfeld von $0 \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $9 \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-In-Verstärker verwenden, nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch die Druckregelung des Heliums im Kryostaten können wir die Temperatur regeln und die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
 Um eine Einfluss der Temperatur untersuchen zu können messen wir bei den Temperaturen $T=\SI{4.2}{\kelvin}$, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
 %passt doch super hier hin, oder?
-Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums vor allem an den Stellen \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} schwierig einzustellen und konnte darüber hinaus nicht konstant gehalten werden. Um die Schwankung während der Messung abzuschätzen, haben wir jeweils vor und nach der Messung die Temperatur über den Allen-Bradley Widerstand ausgelesen. Folglich lagen unsere gemittelten Temperaturwerte bei \SI{4.2}{\kelvin}, welcher durch die Sidetemperatur des Heliums nahezu konstant ist, bei \SI{3.03(50)}{\kelvin}, bei \SI{2.1(30)}{\kelvin} und bei \SI{1.53(20)}{\kelvin}. In folgender Auswertung verwenden wir für die Bezeichnungen nach der Praktikumsanleitung durchgehend die Werte \SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
+Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums vor allem an den Stellen \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} schwierig einzustellen und konnte darüber hinaus nicht konstant gehalten werden. Um die Schwankung während der Messung abzuschätzen, haben wir jeweils vor und nach der Messung die Temperatur über den Allen-Bradley Widerstand ausgelesen. Folglich lagen unsere gemittelten Temperaturwerte bei \SI{4.2}{\kelvin}, welcher durch die Sidetemperatur des Heliums nahezu konstant ist, bei \SI{3.03(50)}{\kelvin}, bei \SI{2.1(30)}{\kelvin} und bei \SI{1.53(20)}{\kelvin}. In folgender Auswertung verwenden wir für die Bezeichnungen und Kennzeichnungen nach der Praktikumsanleitung durchgehend die Werte \SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
 Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die Füllfaktoren bestimmen. Des Weiteren können wir hieraus die Ladungsträgerdichte, die relative Spinaufspaltung, Elektronenbeweglichkeit und Leitfähigkeit der Probe ermitteln und aus den Amplituden der Shubnikov-de-Haas Oszillation lässt sich die Zyklotronmasse berechnen.
 
@@ -241,7 +241,7 @@ In der blauen Kurve aus Abbildung~\ref{hallplateau} wurde der Verlauf des Hall-W
 Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von $\pm \SI{50}{\ohm}$ um einen Mittelwert in dem wir die Anzahl an Messpunkten zählen und den Mittelwert über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} variieren. Aus der Anzahl der Messpunkte in diesem Bereich ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}. %, die ebenfalls über das Magnetfeld aufgetragen wird. nop.
 Durch dieses Zählverfahren ergeben sich an den Stellen der Plateaus klar erkennbare Peaks, an dessen Maximum der Wert des Hall-Plateaus ausgelesen werden kann. Mit dieser Methode und der verwendeten Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit von \SI{10}{\ohm}. Die Messfehler der Lock-in-Verstärker ($<0.1\%$) wurden im Vergleich zu der Ablesegenauigkeit im Graphen vernachlässigt. 
 
-Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben zusammen mit den Füllfaktoren für jede Temperatur in Tabelle~\ref{klitzing} aufgetragen.
+Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir zusammen mit den Füllfaktoren für jede Temperatur in Tabelle~\ref{klitzing} aufgetragen.
 
 \begin{table}[htp]
 	\begin{center}
@@ -266,18 +266,22 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben zusammen mit
 
 Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils einen ähnlichen Wert,
 %leider nicht den gleichen
- der der Klitzing-Konstante nahe kommt. Diese Werte sind in Tabelle~\ref{klitzing2} aufgetragen.
+der der Klitzing-Konstante nahe kommt. 
+Wie schon zu Beginn der Auswertung bemerkt, ist die Hauptfehlerquelle die geschätzten Ungenauigkeit von \SI{0.05}{\percent} des Vorwiderstandes. Aufgrund der Linearität von Spannung und Widerstand, besitzen die erhaltenen Werte ebenso eine Unsicherheit von \SI{5}{\percent}. 
+
+Für jede Temperatur wurde ein Bestwert der Klitzing-Konstante bestimmt. Dazu wurden die Widerstandswerte der Plateaus jeweils mit den entsprechenden Füllfaktoren multipliziert und für den Bestwert gemittelt, wobei der Fehler der Widerstandswerte von \SI{5}{\percent} mit beachtet wurde.
+Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet. 
 
 \begin{table}[htp]
 \begin{center}
 	\begin{tabular}{rr}
 		\hline
-		$T\,[\mathrm{K}]$ & $\overline{R_{\rm K}\nu}\,[\Upomega]$\\
+		$T\,[\mathrm{K}]$ & $\overline{R_{\rm K}\nu}\,[\mathrm{k}\Upomega]$\\
 		\hline
-		4.2 & \SI[separate-uncertainty=false]{24868(54)}{\ohm} \\
-		3.0 & \SI[separate-uncertainty=false]{25255(49)}{\ohm} \\
-		2.1 & \SI[separate-uncertainty=false]{25260(49)}{\ohm} \\
-		1.5 & \SI[separate-uncertainty=false]{25074(49)}{\ohm}
+		4.2 & \SI{24.8(12)}{\kilo\ohm} \\
+		3.0 & \SI{25.2(13)}{\kilo\ohm} \\
+		2.1 & \SI{25.2(13)}{\kilo\ohm} \\
+		1.5 & \SI{25.0(13)}{\kilo\ohm}
 	\end{tabular}
 	\caption{Aus Tabelle~\ref{klitzing} berechnete gemittelte Werte für $R_{\rm K}\nu$ mit Fehler.}
 	\label{klitzing2}
@@ -287,15 +291,14 @@ Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den 
 %Aus der Ablesegenauigkeit der Auswertmethode von $10\Upomega$ lässt sich der Fehler der in Tabelle~\ref{klitzing} gemittelten Klitzing-Konstanten für verschieden Temperaturen berechnen. 
 %Die Messfehler aus denen die Widerstandswerte berechnet wurden sind im Vergleich zu der Ablesegenauigkeit vernachlässigbar ($<0.1\%$). 
 
-Für jede Temperatur wurde ein Bestwert der Klitzing-Konstante bestimmt. Dazu wurden die Widerstandswerte der Plateaus jeweils mit den entsprechenden Füllfaktoren multipliziert und für den Bestwert gemittelt.
-Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet. 
 %Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was allerdings mit den vorhandenen Fehlern vereinbar ist. [hat irgendwie keine Aussage]
 
 Aus diesen Werten können wir nun die Klitzing-Konstante bestimmen zu
 \begin{equation}
-	R_{\rm K} = \SI{25114(50)}{\ohm}.
+	R_{\rm K} = \SI{25.1(13)}{\kilo\ohm}.
 \end{equation}
-Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung, die auch im Rahmen der Fehler nicht mehr vereinbar ist. Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen. \note{Idee für Abweichung - Bitte noch einen Satz zum Widerstand schreiben. Den nimmst du oben mit 0.05 an, berücksichtigst ihn in der Messung aber nicht.}
+Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ zeigt sich eine große Abweichung, die jedoch im Rahmen des (großen) Fehler vereinbar ist. Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen, der eventuell in einem falsch angegebenen Widerstand zu suchen ist. Der Vorwiderstand ist demnach nach unseren erhaltenen Wert circa \SI{18}{\ohm} größer als angegebenen. Diese Abweichung wäre völlig im Rahmen der Fehlertoleranz des Widerstandes ($<\SI{1}{\percent}$).
+
 
 \subsection{Bestimmung der Oberflächenladungsdichte}
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
@@ -307,7 +310,7 @@ Die Oberflächenladungsdiche des 2\,DEGs wird auf drei verschiedene Arten bestim
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
-Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI[per-mode=symbol]{1775(100)}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
+Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_{\rm H}=\SI[per-mode=symbol]{1775(100)}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
 N_{\rm S}=\frac{1}{A_{\rm H} e} = \SI{3.52(20)e11}{\per\square\centi\meter}.
 \label{ns1}
@@ -533,23 +536,23 @@ Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der r
 \label{a5}
 Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \cite{saarland} $m^*=0.067$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
 \begin{equation}
-E_F=\frac{\hbar^2 k_F^2}{2 m^*}.
+E_{\rm F}=\frac{\hbar^2 k_{\rm F}^2}{2 m^*}.
 \end{equation}
 Auf der anderen Seite ergibt sich Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2\,DEG den konstanten Wert $D(E)=\frac{\hbar^2 \pi}{m^*}$ \citep{anleitung}.
 Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeit:
 \begin{align}
-E_F&=N_\mathrm{S} \cdot \frac{\hbar^2 \pi}{m^*}\\
-k_F&=\sqrt{2 \pi N_\mathrm{S}}\\
-v_F&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_\mathrm{S}}
+E_{\rm F}&=N_\mathrm{S} \cdot \frac{\hbar^2 \pi}{m^*}\\
+k_{\rm F}&=\sqrt{2 \pi N_\mathrm{S}}\\
+v_{\rm F}&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_\mathrm{S}}
 \end{align}
 Für nicht verschwindende Magnetfelder ist zu bemerken, dass je nach Eichung der Wellenwektor $\vec{k}$ keine sinnvolle Quantenzahl mehr darstellt und die Energiedispersion durch die Laundau-Quantenzahlen beschrieben wird.
-Für B=0 sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
+Für $B=0$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
 
 \begin{table}[htp]
 	\begin{center}
 		\begin{tabular}{rrrrr}
 			\hline
-			$T[\frac{1}{\mathrm{K}}]$ & $E_F[\mathrm{eV}]$ & $k_F[\SI{}{\per\nano\meter}]$ & $v_F[\SI{}{\kilo\meter\per\second}]$\\
+			$T[\frac{1}{\mathrm{K}}]$ & $E_{\rm F}[\mathrm{eV}]$ & $k_{\rm F}[\SI{}{\per\nano\meter}]$ & $v_{\rm F}[\SI{}{\kilo\meter\per\second}]$\\
 			\hline
 			4.2 &12.35(33)	&0.1473(40)&	254.6(69)\\
 			3.0 &12.43(36)	&0.1478(42)&	255.5(73)\\
@@ -567,14 +570,14 @@ Für B=0 sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit i
 \label{a6}
 Wie in Aufgabe 2 gesehen fällt der Längswiderstand periodisch mit dem inversen Magnetfeld auf Null ab. Den maximalen Widerstand misst man hingegen, wenn die Fermi-Energie (d.h. das chemisches Potential) genau innerhalb der Landau-Niveaus liegt. Dies ist der Fall wenn
 \begin{equation}
-E_F=\hbar \omega_c\left( n+\frac{1}{2}\pm\frac{M}{2}\right).
+E_{\rm F}=\hbar \omega_{\rm c}\left( n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
 In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor g des Elektronen und GaAs bestimmt werden, der mit der Magnetisierung folgenden Zusammenhang besitzt.
 \begin{equation}
-M=\frac{g \mu_B B}{\hbar \omega_c}
+M=\frac{g \mu_{\rm B} B}{\hbar \omega_{\rm c}}
 \label{lande}
 \end{equation}
-In einem ersten Schritt werden nun aus den Graphen des Längswiderstandes die inversen Feldstärken $\frac{1}{B_{n\pm}}$ der Maxima für verschiedene n-Quantenzahlen und Spinaufspaltungen abgelesen, wobei $\pm$ das Maximum mit größerer bzw. kleinerer Magnetfeldstärke beschreibt.
+In einem ersten Schritt werden nun aus den Graphen des Längswiderstandes die inversen Feldstärken $1/B_{n\pm}$ der Maxima für verschiedene n-Quantenzahlen und Spinaufspaltungen abgelesen, wobei $\pm$ das Maximum mit größerer bzw. kleinerer Magnetfeldstärke beschreibt.
 
 \begin{figure}[]
 	\begin{center}
@@ -584,9 +587,9 @@ In einem ersten Schritt werden nun aus den Graphen des Längswiderstandes die in
 	\end{center}
 \end{figure}
 
-In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ aufgetragen, um sie bis zu $\frac{1}{B}=0$ zu extrapolieren. Am Schnittpunkt mit der x-Achse verschwinden beide Seiten der Identität
+In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ aufgetragen, um sie bis zu $\frac{1}{B}=0$ zu extrapolieren. Am Schnittpunkt mit der $x$-Achse verschwinden beide Seiten der Identität
 \begin{equation}
-\frac{1}{B_{n\pm}}=\frac{\hbar e}{m_c}\frac{1}{E_F}\left(n+\frac{1}{2}\pm\frac{M}{2}\right).
+\frac{1}{B_{n\pm}}=\frac{\hbar e}{m_{\rm c}}\frac{1}{E_{\rm F}}\left(n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
 Damit ergibt sich die relative Spinaufspaltung $M$ als die Differenz der Schnittpunkte mit der x-Achse
 \begin{equation}
@@ -605,9 +608,9 @@ M=|0.160(80)-0.560(80)|=0.40(11).
 \end{equation}
 Daraus ergibt sich nach \ref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
 \begin{equation}
-g=\frac{M \hbar e}{\mu_B m_c}=-0.80\pm29.
+g=\frac{M \hbar e}{\mu_{\rm B} m_{\rm c}}=-0.80\pm29.
 \end{equation}
-Diese Wert ist fast doppelt so hoch, wie der in der Literatur \citep{anleitung} angegebene Wert von g=-0.44 im Einteilchenbild. Damit wird deutlich, dass Mehrteilcheneffekte beim Quanten-Hall-Effekt nicht zu vernachlässigen sind und das magnetische Moment der Elektronen im Kollektiv stärker ist als die Summe der Einzelmagnetisierungen.
+Diese Wert ist fast doppelt so hoch, wie der in der Literatur \citep{anleitung} angegebene Wert von $g=-0.44$ im Einteilchenbild. Damit wird deutlich, dass Mehrteilcheneffekte beim Quanten-Hall-Effekt nicht zu vernachlässigen sind und das magnetische Moment der Elektronen im Kollektiv stärker ist als die Summe der Einzelmagnetisierungen.
 Die Bestimmung der Ladungsträgerdichte aus diesem Plot ist mathematisch ähnlich, wenn auch ungenauer, zur Bestimmung mittels Schubnikow-de-Haas-Oszillationen.
 Wir erhalten mit zwei Landau-Niveaus pro Landau Quantenzahl
 \begin{equation}
@@ -629,9 +632,9 @@ Ergebnisse. Ohne Magnetfeld wurden Längswiderstand, Leitfähigkeit und Beweglic
 der Elektronen untersucht, wobei wir eine deutliche Leitfähigkeitszunahme untehalb von 
 $\SI{3}{\kelvin}$ messen konnten. Aus der Oszillationen der Längsspannung bei niedrigen 
 Magnetfeldstärken wurde die Zyklotronmasse der Elektronen in GaAs bestimmt. Die 
-Analyse war nicht sehr genau und die bestimmte Masse mit $0.032 m_e$ nur etwa halb 
+Analyse war nicht sehr genau und die bestimmte Masse mit $0.032\,m_e$ nur etwa halb 
 so groß wie der Literaturwert. Aus der Ladungsträgerdichte wurde die Fermi-Geschwindigkeit 
-bestimmt und macht mit etwa $\SI{250}{\kilo\meter\per\second}$ den fermionischen Charakter
+bestimmt und macht mit etwa $\SI[per-mode=symbol]{250}{\kilo\meter\per\second}$ den fermionischen Charakter
 der Elektronen deutlich. Zuletzt wurden bei tiefen Temperaturen die Zeeman-Aufspaltung 
 beobachtet und daraus der Landé-Faktor zu bestimmen. Dieser lag mit $-0.80$ deutlich über
 dem Wert des Elektrons im Einteilchenbild, was den Mehrteilchen-Charakter des Experiments

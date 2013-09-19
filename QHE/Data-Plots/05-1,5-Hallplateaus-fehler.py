@@ -23,7 +23,7 @@ B = data[:8500,0]
 #I_H = (data[:,3]/10 * 2e-3)/4981
 
 R_H = data[:8500,1]
-
+fehlerR=0.05
 delta = 50
 step = 100
 
@@ -69,9 +69,12 @@ print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mi
 
 ax = fig.add_subplot(111)
 subplots_adjust(top=0.87, right=0.96)
-ax.plot(B*100, R_H, "b", label=u"Messwerte $R_\mathrm{H}$")
+ax.plot(B*100, R_H, "b", xmin=0, xmax=900, label=u"Messwerte $R_\mathrm{H}$")
+ax.plot(B*100, R_H-fehlerR*R_H, "b:", label=u"Fehler der Messwerte")
+ax.plot(B*100, R_H+fehlerR*R_H, "b:")
 ax.plot([0,0],[0,0], "r", label=u"Anzahl von Messpunkten")
 ax.plot([0,0],[0,0], "g--", label=u"Niveau der Hall-Plateaus")
+ax.plot([0,0],[0,0], "g:", label=u"Fehler der Hall-Plateaus")
 
 ax.set_xlabel(u"Magnetfeld $B[T]$")
 ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}[\Omega]$")
@@ -95,6 +98,25 @@ ax2.plot([0,290],[Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertma
 ax2.plot([0,262],[Mittelwertkandidaten[wertmaximum8],Mittelwertkandidaten[wertmaximum8]], "g--")
 ax2.plot([0,238],[Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertmaximum9]], "g--")
 
+ax2.plot([0,1003],[Mittelwertkandidaten[wertmaximum1]+fehlerR*Mittelwertkandidaten[wertmaximum1],Mittelwertkandidaten[wertmaximum1]+fehlerR*Mittelwertkandidaten[wertmaximum1]], "g:")
+ax2.plot([0,665],[Mittelwertkandidaten[wertmaximum2]+fehlerR*Mittelwertkandidaten[wertmaximum2],Mittelwertkandidaten[wertmaximum2]+fehlerR*Mittelwertkandidaten[wertmaximum2]], "g:")
+ax2.plot([0,544],[Mittelwertkandidaten[wertmaximum3]+fehlerR*Mittelwertkandidaten[wertmaximum3],Mittelwertkandidaten[wertmaximum3]+fehlerR*Mittelwertkandidaten[wertmaximum3]], "g:")
+ax2.plot([0,456],[Mittelwertkandidaten[wertmaximum4]+fehlerR*Mittelwertkandidaten[wertmaximum4],Mittelwertkandidaten[wertmaximum4]+fehlerR*Mittelwertkandidaten[wertmaximum4]], "g:")
+ax2.plot([0,404],[Mittelwertkandidaten[wertmaximum5]+fehlerR*Mittelwertkandidaten[wertmaximum5],Mittelwertkandidaten[wertmaximum5]+fehlerR*Mittelwertkandidaten[wertmaximum5]], "g:")
+ax2.plot([0,333],[Mittelwertkandidaten[wertmaximum6]+fehlerR*Mittelwertkandidaten[wertmaximum6],Mittelwertkandidaten[wertmaximum6]+fehlerR*Mittelwertkandidaten[wertmaximum6]], "g:")
+ax2.plot([0,290],[Mittelwertkandidaten[wertmaximum7]+fehlerR*Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertmaximum7]+fehlerR*Mittelwertkandidaten[wertmaximum7]], "g:")
+ax2.plot([0,262],[Mittelwertkandidaten[wertmaximum8]+fehlerR*Mittelwertkandidaten[wertmaximum8],Mittelwertkandidaten[wertmaximum8]+fehlerR*Mittelwertkandidaten[wertmaximum8]], "g:")
+ax2.plot([0,238],[Mittelwertkandidaten[wertmaximum9]+fehlerR*Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertmaximum9]+fehlerR*Mittelwertkandidaten[wertmaximum9]], "g:")
+
+ax2.plot([0,1003],[Mittelwertkandidaten[wertmaximum1]-fehlerR*Mittelwertkandidaten[wertmaximum1],Mittelwertkandidaten[wertmaximum1]-fehlerR*Mittelwertkandidaten[wertmaximum1]], "g:")
+ax2.plot([0,665],[Mittelwertkandidaten[wertmaximum2]-fehlerR*Mittelwertkandidaten[wertmaximum2],Mittelwertkandidaten[wertmaximum2]-fehlerR*Mittelwertkandidaten[wertmaximum2]], "g:")
+ax2.plot([0,544],[Mittelwertkandidaten[wertmaximum3]-fehlerR*Mittelwertkandidaten[wertmaximum3],Mittelwertkandidaten[wertmaximum3]-fehlerR*Mittelwertkandidaten[wertmaximum3]], "g:")
+ax2.plot([0,456],[Mittelwertkandidaten[wertmaximum4]-fehlerR*Mittelwertkandidaten[wertmaximum4],Mittelwertkandidaten[wertmaximum4]-fehlerR*Mittelwertkandidaten[wertmaximum4]], "g:")
+ax2.plot([0,404],[Mittelwertkandidaten[wertmaximum5]-fehlerR*Mittelwertkandidaten[wertmaximum5],Mittelwertkandidaten[wertmaximum5]-fehlerR*Mittelwertkandidaten[wertmaximum5]], "g:")
+ax2.plot([0,333],[Mittelwertkandidaten[wertmaximum6]-fehlerR*Mittelwertkandidaten[wertmaximum6],Mittelwertkandidaten[wertmaximum6]-fehlerR*Mittelwertkandidaten[wertmaximum6]], "g:")
+ax2.plot([0,290],[Mittelwertkandidaten[wertmaximum7]-fehlerR*Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertmaximum7]-fehlerR*Mittelwertkandidaten[wertmaximum7]], "g:")
+ax2.plot([0,262],[Mittelwertkandidaten[wertmaximum8]-fehlerR*Mittelwertkandidaten[wertmaximum8],Mittelwertkandidaten[wertmaximum8]-fehlerR*Mittelwertkandidaten[wertmaximum8]], "g:")
+ax2.plot([0,238],[Mittelwertkandidaten[wertmaximum9]-fehlerR*Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertmaximum9]-fehlerR*Mittelwertkandidaten[wertmaximum9]], "g:")
 
 #text(750, Mittelwertkandidaten[wertmaximum1]+500, r"$\nu = 2$", va='center', ha='center')
 #text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 3$", va='center', ha='center')
@@ -152,6 +174,6 @@ ax2.plot([0,238],[Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertma
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-fig.savefig("05-1,5-Hallplateaus.pdf")
+fig.savefig("05-1,5-Hallplateaus-fehler.pdf")
 
 show()
