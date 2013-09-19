@@ -221,23 +221,6 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 \end{compactitem}
 
 Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm Shunt})$ aus den gemessenen Daten für die Hallspannung $U_{\rm Hall}$ und denen der Probenspannung $U_{\rm Shunt}$
-
-\paragraph*{Fehler}
-\begin{compactitem}
-	\item Fehler $U_{H}$: Rauschen $10^{-4}$
-	\item Fehler $I_{H}$: Rauschen $10^{-4}$
-	\item Fehler Shuntwiderstand: $5\,\%$
-	\item Ablesefehler Hallwiderstand $0.08\%$
-	\item Fehler Temperatur\\
-		schwer einstellbar, nicht konstant, ändert sich während der Messung,
-		Anfangs- und Endtemperatur gemessen und mittlere Abweichung bestimmt
-		\begin{compactitem}
-			\item für \SI{4.2}{\kelvin} exakt
-			\item für \SI{3.0}{\kelvin} $\pm \SI{0.5}{\kelvin}$ um \SI{3.03}{\kelvin}
-			\item für \SI{2.1}{\kelvin} $\pm \SI{0.3}{\kelvin}$ um \SI{2.1}{\kelvin}
-			\item für \SI{1.5}{\kelvin} $\pm \SI{0.2}{\kelvin}$ um \SI{1.53}{\kelvin}
-		\end{compactitem}
-\end{compactitem}
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Hall-Plateaus, Klitzing-Konstante und Füllfaktoren}
@@ -263,34 +246,34 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir aus dem 
 	\begin{tabular}{r|rrrr}
 		$\nu$\textbackslash$T$ & \SI{4.2}{\kelvin} & \SI{3.0}{\kelvin} & \SI{2.1}{\kelvin} & \SI{1.5}{\kelvin} \\
 		\hline
-		2  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
-		3  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
-		4  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
-		5  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
-		6  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
-		8  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
-		10 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
-		12 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
-		14 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
+		2.00  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
+		2.96  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
+		4.00  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
+		4.70  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
+		6.00  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
+		8.01  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
+		10.02 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
+		12.05 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
+		13.96 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
 		\hline
-		$\overline{R_{\rm K}\nu}$ & \SI[separate-uncertainty=false]{24860(54)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm}
+		$\overline{R_{\rm K}\nu}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
 	\end{tabular}
-	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten. \note{Fehler}}
 	\label{klitzing}	
 	\end{center}
 \end{table}
 
 Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils den selben Wert, der Klitzing-Konstante genannt wird. 
 
-Aus der Ablesegenauigkeit der Auswertmethode von $10\Upomega$ lässt sich der Fehler der in Tabelle~\ref{klitzing} gemittelten Klitzing-Konstanten für verschieden Temperaturen berechnen. Die Messfehler aus denen die Widerstandswerte berechnet wurden ist im Vergleich zu der Ablesegenauigkeit vernachlässigbar ($<0.1\%$). Für die Berechnung wurden die Widerstandswerte mit den entsprechenden Füllfaktoren gewichtet und aus der Genauigkeit und Fehlerfortpflanzung die gemittelten Widerstandswerte mit Fehler bestimmt. 
+Aus der Ablesegenauigkeit und einem Fehler von \note{Gerätefehler, systematischer Fehler, geschätzter Fehler}.
 
-In der letzten Zeile von Tabelle~\ref{klitzing} wurden für jede Temperatur die Werte der verschiedenen Plateaus (multipliziert mit dem Füllfaktor) gemittelt und zeigen die Klitzing-Konstanten bei verschiedenen Temperaturen. Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was allerdings mit den vorhandenen Fehlern vereinbar ist.
+In der letzten Zeile von Tabelle~\ref{klitzing} wurden für jede Temperatur die Werte der verschiedenen Plateaus (multipliziert mit dem Füllfaktor) gemittelt und zeigen die Klitzing-Konstanten bei verschiedenen Temperaturen mit Standardabweichung. Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was im Rahmen der Fehler \note{Fehleranalyse}.
 
 Aus den obigen Werten können wir folglich die Klitzing-Konstante bestimmen zu
 \begin{equation}
-	R_{\rm K} = \SI{25114(50)}{\ohm}.
+	R_{\rm K} = (24.845 \pm ??)\,\SI{}{\kilo\ohm}.
 \end{equation}
-Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung, die auch im Rahmen der Fehler nicht mehr vereinbar ist. Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen. \note{Idee für Abweichung}
+Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung \note{Analyse}.
 
 \subsection{Bestimmung der Oberflächenladungsdichte}
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
@@ -302,9 +285,9 @@ Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
-Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI[per-mode=symbol]{1775(100)}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
+Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI{1775+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
-N_{\rm S}=\frac{1}{A_{\rm H} e} = \SI{3.52(20)e11}{\per\square\centi\meter}.
+N_S=\frac{1}{A_H e} = (3.52 \pm 0.20) \cdot 10^{11}\SI{}{\per\square\centi\meter}.
 \label{ns1}
 \end{equation}
 
@@ -314,53 +297,53 @@ Verglichen mit den Fehlern der Geradensteigung unterscheiden sich die einzelnen 
 \subsubsection*{Mit Hilfe der Hall-Plateaus}
 Die Ladungsträgerdichte können wir ebenso über die Lage der Hall-Pateaus und die ermittelten Füllfaktoren aus Tabelle~\ref{klitzing}, Aufgabenteil~\ref{a1} bestimmen. Nach~\citet{anleitung} ist die Ladungsträgerdichte $N_{\rm s}$ gegeben durch
 \begin{equation}
-	N_{\rm s} = \nu\frac{e B}{h}.
+	N_{\rm s} = \nu\frac{e B}{\hbar} = \frac{B}{e R_{\rm Shunt}}.
 \end{equation}
-Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm H}$ durch die Plateus der gesamte Plateau-Bereich gehört. Für die Auswertung haben wir den Wert der Hall-Widerstände verwendet, der in Aufgabenteil~\ref{a1} ermittelt wurde. Dieser sollte die Stelle des Plateaus (minimale Steigung) am Genauesten wiedergeben. Der Fehler in der Widerstandsbestimmung der Hall-Plateaus beträgt $\SI{10}{\ohm}$, wodurch sich der Fehler in der Bestimmung der $B$-Felder durch die Breite der Plateaus abschätzen lässt.
+Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm Shunt}$ durch die Plateus der gesamte Plateau-Bereich gehört. Für die Auswertung haben wir den Wert an der Mitte des Plateaus verwendet. Der Wert für die Mitte des Plateaus entspricht den Werten der Hall-Widerstände, die in Aufgabenteil~\ref{a1} ermittelt wurden. Unser Fehler entspricht folglich der Unsicherheit die sich in der Widerstandsbestimmung der Hall-Plateaus ergibt.
 
 Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabelle~\ref{ladungstraegerdichte2} für die gemessenen Temperaturen aufgetragen.
 \begin{table}[htp]
 	\begin{center}
-	\begin{tabular}{r|rrr|r}
+	\begin{tabular}{rrrr|r}
 		\hline
 			$T[\mathrm{K}]$ & $\nu$ & $B[\mathrm{T}]$ & $N_{\rm s}[10^{15}\,\mathrm{m}^{-2}]$ & $\overline{N_{\rm s}}$\\
 		\hline
-			 &  2 & 6.627(80) & 3.20(26)&\\
-			 &  4 & 3.421(20) & 3.306(66)&\\
-			 &  6 & 2.340(10) & 3.390(34)&\\
-			4.2 &  8 & 1.785(10) & 3.440(34)& 3.378(70)\\
-			 & 10 & 1.421(10) & 3.431(34)&\\
-			 & 12 & 1.182(10) & 3.433(34)&\\
-			 & 14 & 1.008(10) & 3.443(34)&\\
+			4.2 &  2 & 6.627045 & 3.20482&\\
+			4.2 &  4 & 3.421468 & 3.30657&\\
+			4.2 &  6 & 2.340491 & 3.39011&\\
+			4.2 &  8 & 1.785758 & 3.44052& 3.3786\\
+			4.2 & 10 & 1.421508 & 3.43167&\\
+			4.2 & 12 & 1.182364 & 3.43349&\\
+			4.2 & 14 & 1.008150 & 3.44324&\\
 			\hline
-			 &  2 & 7.503(80) & 3.62(29)&\\
-			 &  3 & 4.579(40) & 3.06(12)&\\
-			 &  4 & 3.381(20) & 3.275(65)&\\
-			3.0 &  6 & 2.230(10) & 3.353(34)& 3.387(81)\\
-			 &  8 & 1.759(10) & 3.409(34)&\\
-			 & 10 & 1.418(10) & 3.435(34)&\\
-			 & 12 & 1.197(10) & 3.457(34)&\\
-			 & 14 & 1.029(10) & 3.472(34)&\\
+			3.0 &  2 & 7.503921 & 3.62888&\\
+			3.0 &  3 & 4.579870 & 3.06667&\\
+			3.0 &  4 & 3.381269 & 3.27562&\\
+			3.0 &  6 & 2.230601 & 3.35365& 3.3876\\
+			3.0 &  8 & 1.759941 & 3.40991&\\
+			3.0 & 10 & 1.418456 & 3.43534&\\
+			3.0 & 12 & 1.197486 & 3.45791&\\
+			3.0 & 14 & 1.029202 & 3.47285&\\
 			\hline
-			 &  2 & 6.44(10) & 3.11(31)&\\
-			 &  3 & 4.959(40) & 3.42(14)&\\
-			 &  4 & 3.355(10) & 3.245(32)&\\
-			 &  5 & 2.844(10) & 3.205(34)&\\
-			2.1 &  6 & 2.277(10) & 3.304(34)& 3.330(76)\\
-			 &  8 & 1.731(10) & 3.353(34)&\\
-			 & 10 & 1.409(10) & 3.399(34)&\\
-			 & 12 & 1.179(10) & 3.439(34)&\\
-			 & 14 & 1.033(10) & 3.487(34)&\\
+			2.1 &  2 & 6.4414809 & 3.11509&\\
+			2.1 &  3 & 4.9591533 & 3.42763&\\
+			2.1 &  4 & 3.3555236 & 3.24545&\\
+			2.1 &  5 & 2.8444933 & 3.20541&\\
+			2.1 &  6 & 2.2776080 & 3.30434& 3.33096\\
+			2.1 &  8 & 1.7310212 & 3.35387&\\
+			2.1 & 10 & 1.4093391 & 3.39956&\\
+			2.1 & 12 & 1.1797264 & 3.43970&\\
+			2.1 & 14 & 1.0335822 & 3.48763&\\
 			\hline
-			 &  2 & 6.51(12) & 3.14(38)&\\
-			 &  3 & 4.821(40) & 3.45(14)&\\
-			 &  4 & 3.384(10) & 3.268(33)&\\
-			 &  5 & 2.792(10) & 3.176(34)&\\
-			1.5 &  6 & 2.776(10) & 4.027(34)& 3.410(84)\\
-			 &  8 & 1.731(10) & 3.353(34)&\\
-			 & 10 & 1.396(10) & 3.383(34)&\\
-			 & 12 & 1.179(10) & 3.439(34)&\\
-			 & 14 & 1.021(10) & 3.447(34)&\\
+			1.5 &  2 & 6.5134249 & 3.14734&\\
+			1.5 &  3 & 4.8218214 & 3.45188&\\
+			1.5 &  4 & 3.3847981 & 3.26850&\\
+			1.5 &  5 & 2.7925610 & 3.17669&\\
+			1.5 &  6 & 2.7760800 & 4.02752& 3.41067\\
+			1.5 &  8 & 1.7310212 & 3.35387&\\
+			1.5 & 10 & 1.3969114 & 3.38316&\\
+			1.5 & 12 & 1.1797264 & 3.43970&\\
+			1.5 & 14 & 1.0216550 & 3.44739&\\
 		\hline	
 	\end{tabular}	
 	\caption{Bestimmung der Ladungsträgerdichte mit Hilfe der Hall-Plateaus.}
@@ -394,7 +377,7 @@ Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} 
 
 Durch die Periodendauer $T_{\frac{1}{B}}$ wird somit der Wert für die Ladungsträgerdichte festgelegt.
 \begin{equation}
-N_S=\frac{2 e}{T_{\frac{1}{B}} h}=\SI{3.517(079)e11}{\per\square\centi\meter}
+N_S=\frac{2 e}{T_{\frac{1}{B}} h}=(3.517 \pm 0.079) \cdot 10^{-11}\SI{}{\per\square\centi\meter}
 \label{ns_periode}
 \end{equation}
 Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils exakt der selbe Wert abgelesen.
@@ -403,17 +386,18 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{ccccc}
+		\begin{tabular}{rrrrr}
+			& \multicolumn{2}{l}{$N_S$-Werte in $\SI{e11}{\per\square\centi\meter}$}&&\\
 			\hline
-			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S1}$ & $N_{\rm S1}$ & $\overline{N_{\rm S}}$\\
+			$T[\frac{1}{K}]$ & Hall-Steigung & Hall-Plateaus & SDH-Oszillationen & $\overline{N_S}$\\
 			\hline
-			4.2 & 3.52(20) & 3.378(70) & 3.517(79) & 3.47(12)\\
-			3.0 & 3.61(20) & 3.387(81) & 3.517(79) & 3.50(12)\\
-			2.1 & 3.58(20) & 3.330(76) & 3.517(79) & 3.45(12)\\
-			1.5 & 2.58(20) & 3.341(84) & 3.517(79) & 3.15(12)\\
+			4.2 &3.52(20)&??&3.517(79) &??\\
+			3.0 &3.61(20)&??&3.517(79) &??\\
+			2.1 &3.58(20)&??&3.517(79) &??\\
+			1.5 &2.58(20)&??&3.517(79) &??\\
 			\hline
 		\end{tabular}
-		\caption{Werte für die Ladungsträgerkonzentration $N_{\rm S}$ in \SI[per-mode=symbol]{e11}{1\per\centi\meter\squared} mit $N_{\rm S1}$ für die Werte aus der Hall-Steigung, $N_{\rm S2}$ aus den Hall-Plateaus und $N_{\rm S3}$ aus der Shubnikov-de Haas Oszillation. Die letzte Spalte mit $\overline{N_{\rm S}}$ entspricht den gemittelten $N_{\rm S}$-Werten der verschiedenen Methoden.}
+		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
 		\label{nswerte}
 	\end{center}
 \end{table}
@@ -422,7 +406,7 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 \subsection{Leitfähigkeit, Hall-Faktor und Elektronenbeweglichkeit}
 \label{a3}
 
-Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als
+Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als \note{benötige Werte aus Aufgabe 2}
 \begin{align}
 	\sigma_{\rm 2D} &= N_{\rm s} e^2 \frac{\tau}{m^*} = \frac{L}{R_{xx} W}\\
 	A_{\rm H} 		&= -\frac{1}{N_{\rm s}e}\\
@@ -434,88 +418,32 @@ Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\mete
 	\frac{L}{W} = 3.
 \end{equation}
 
-Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen. Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von $5\%$. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
+Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen.
+
+\note{hast du in den bereinigten Daten für die Längsspannung tatsächlich schon den Längswiderstand ausgerechnet}
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{ccccc}
+		\begin{tabular}{rrrrr}
 			\hline
-			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\frac{1}{\Upomega}]$ & $A_{\rm H}\left[ \frac{\mathrm{m}^2}{\mathrm{C}} \right]$ & $\mu \left[ \frac{\mathrm{m}^2}{\mathrm{C}\Upomega} \right]$\\
+			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\rm ??]$ & $A_{\rm H}\left[ \mathrm{m}^2/\mathrm{C} \right]$ & $\mu \left[ \mathrm{m}^2/\mathrm{Vs} \right]$\\
 			\hline
-			4.2 & 521(26) & 0.00575(29) & 1799(60) & 10.35(52)\\
-			3.0 & 505(25) & 0.00593(30) & 1783(61) & 10.59(53)\\
-			2.1 & 247(12) & 0.01212(61) & 1809(63) & 21.9(1.1)\\
-			1.5 & 244(12) & 0.01227(61) & 1981(75) & 24.3(1.2)\\
+			4.2 &&&&\\
+			3.0 &&&&\\
+			2.1 &&&&\\
+			1.5 &&&&\\
 			\hline
 		\end{tabular}
-		\caption{Ergebnisse für die Leitfähigkeit $\sigma_{\rm 2D}$, die Hall-Konstante $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$.}
+		\caption{Leitfähigkeit $\sigma_{\rm 2D}$, Hall-Konstante $A_{\rm H}$ und Elektronenbeweglichkeit $\mu$.}
 		\label{tab.leithallbeweg}
 	\end{center}
 \end{table}
+Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
+
 %
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Zyklotronmasse}
 \label{a4}
-
-In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein. So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
-\begin{equation}
-	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\mathrm{arcosh}\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
-	\label{eq:zyklotronmasse}
-\end{equation}
-bestimmt werden, wobei $A(B,T,\tau)$ die Amplitude der Oszillation der Längsspannung entspricht.
-
-Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und in Abbildung~\ref{fig:zyklotronmasse} für die Auftragung über $B$ abgebildet.
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/11-4,2-2,1-zyklotron-B.pdf}
-		\caption{Auftragung der Längsspannung über dem Magnetfeld bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
-		\label{fig:zyklotronmasse}
-	\end{center}
-\end{figure}
-Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Da wir aus der Auftragung über $1/B$ die selben Werte für die Amplituden erhalten, geben wir die Werte nicht extra an. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
-		\caption{Auftragung der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
-		\label{fig:zyklotronmasse2}
-	\end{center}
-\end{figure}
-
-\begin{table}[htp]
-	\begin{center}
-		\begin{tabular}{c|ccc}
-			\hline
-			$T[\mathrm{K}]$ & $\frac{A(B,T_2)}{A(B,T_1)}$ & $B[\mathrm{T}]$ & $\frac{m_{\rm c}}{m_{\rm e}}$\\
-			\hline
-			 		& 0.295 & 0.885 & 0.0412 \\
-			4.2/2.1 & 0.498 & 1.002 & 0.0358 \\
-			 		& 0.758 & 1.153 & 0.0250 \\
-			\hline
-					& 0.570 & 0.794 & 0.0418 \\
-			3.0/1.5 & 0.761 & 0.886 & 0.0310 \\
-					& 0.972 & 1.003 & 0.0108 \\
-		\end{tabular}
-		\caption{Berechnung des Zyklotronmassenverhältnisses.}
-		\label{tab:zyklotronmasse}
-	\end{center}
-\end{table}
-
-Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
-\begin{align}
-	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.03402 \pm 0.0058 \label{zyklotron1}\\
-	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.0278 \pm 0.011 \label{zyklotron2}
-\end{align}
-
-Die Fehler der Amplituden und des $B$-Felds der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte sind durch einen Ablesefehler von $\pm 0.001$, können jedoch zur Berechnung des Massenverhältnisses vernachlässigt werden, da der Fehler in der Temperaturbestimmung deutlich darüber liegt. Die Temperaturschwankungen sind zu Beginn der Auswertung~\ref{Auswertung} genannt. Die Auswirkung von Temperaturschwankungen auf die gemessenen Spannungen sind allerdings nicht bekannt. Somit bestimmen wir den Fehler der gemittelten Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt.
-
-Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
-\begin{equation}
-	\frac{m^*}{m_{\rm e}} = 0.067
-\end{equation}
-
-Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$. Diese Bedingung konnte im Experiment nicht realisiert werden, da durch den vorhandenen Versuchsaufbau keine konstante Temperatur eingestellt werden konnte. 
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
 %
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
