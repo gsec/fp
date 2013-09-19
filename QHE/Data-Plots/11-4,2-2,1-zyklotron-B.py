@@ -9,7 +9,7 @@ from numpy import *
 
 rc('font', family = 'serif', serif = 'STIXGeneral')
 fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
-fig.suptitle(u'Amplitudenverh\xe4ltnisse $T=4.2 \mathrm{K}$ und $T=2.1 \mathrm{K}$ \xfcber $B$', fontsize=14, fontweight='bold')
+fig.suptitle(u'Amplitudenverh\xe4ltnisse $T=4.2\,\mathrm{K}$ und $T=2.1\,\mathrm{K}$ \xfcber $B$', fontsize=14, fontweight='bold')
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
@@ -48,7 +48,7 @@ ax.set_ylim(1,2)
 #ax.set_xlim(0.9,1.1)
 #ax.set_ylim(1,2)
 ax.set_xlabel(u"Magnetfeld $B [\mathrm{T}]$")
-ax.set_ylabel(u"L\xe4ngsspannung $U_{\mathrm{xx,4.2}} [\mathrm{V}]$")
+ax.set_ylabel(u"L\xe4ngsspannung $U_{xx,4.2} [\mathrm{V}]$")
 
 
 ax2 = ax.twinx()
