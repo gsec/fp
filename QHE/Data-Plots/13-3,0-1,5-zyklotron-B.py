@@ -85,6 +85,6 @@ ax2.legend(loc=0)
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-fig.savefig("11-4,2-2,1-zyklotron-B.pdf")
+#fig.savefig("11-4,2-2,1-zyklotron-B.pdf")
 
 show()

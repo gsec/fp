@@ -1,25 +1,5 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: dinat.bst
 Database file #1: lit.bib
-You're missing a field name---line 20 of file lit.bib
- : 
- : % author = {Herbert M"uller},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 29 of file lit.bib
- : 
- : %author = {Adrian C. Melissinos},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "janssen"
-Warning--to sort, need author or key in mueller
-Warning--to sort, need author, editor, or key in mellissinos
-Warning--empty author in mueller
-Warning--empty title in mueller
-Warning--empty school in mueller
-Warning--empty year in mueller
-Warning--empty author and editor in mellissinos
-Warning--empty title in mellissinos
-Warning--no publisher, address, url or date in mellissinos
-Warning--empty publisher in mellissinos
-(There were 2 error messages)
+(There was 1 warning)

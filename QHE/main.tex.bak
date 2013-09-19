@@ -226,8 +226,17 @@ Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm
 \begin{compactitem}
 	\item Fehler $U_{H}$: Rauschen $10^{-4}$
 	\item Fehler $I_{H}$: Rauschen $10^{-4}$
-	\item Fehler Shuntwiderstand: 1 Ohm
+	\item Fehler Shuntwiderstand: $5\,\%$
 	\item Ablesefehler Hallwiderstand $0.08\%$
+	\item Fehler Temperatur\\
+		schwer einstellbar, nicht konstant, ändert sich während der Messung,
+		Anfangs- und Endtemperatur gemessen und mittlere Abweichung bestimmt
+		\begin{compactitem}
+			\item für \SI{4.2}{\kelvin} exakt
+			\item für \SI{3.0}{\kelvin} $\pm \SI{0.5}{\kelvin}$ um \SI{3.03}{\kelvin}
+			\item für \SI{2.1}{\kelvin} $\pm \SI{0.3}{\kelvin}$ um \SI{2.1}{\kelvin}
+			\item für \SI{1.5}{\kelvin} $\pm \SI{0.2}{\kelvin}$ um \SI{1.53}{\kelvin}
+		\end{compactitem}
 \end{compactitem}
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -395,18 +404,17 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{rrrrr}
-			& \multicolumn{2}{l}{$N_S$-Werte in $\SI{e11}{\per\square\centi\meter}$}&&\\
+		\begin{tabular}{ccccc}
 			\hline
-			$T[\frac{1}{K}]$ & Hall-Steigung & Hall-Plateaus & SDH-Oszillationen & $\overline{N_S}$\\
+			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S1}$ & $N_{\rm S1}$ & $\overline{N_{\rm S}}$\\
 			\hline
-			4.2 &3.52(20)&3.378(70)&3.517(79) &??\\
-			3.0 &3.61(20)&3.387(81)&3.517(79) &??\\
-			2.1 &3.58(20)&3.330(76)&3.517(79) &??\\
-			1.5 &2.58(20)&3.3410(84)&3.517(79) &??\\
+			4.2 & 3.52(20) & 3.378(70) & 3.517(79) & 3.47(12)\\
+			3.0 & 3.61(20) & 3.387(81) & 3.517(79) & 3.50(12)\\
+			2.1 & 3.58(20) & 3.330(76) & 3.517(79) & 3.45(12)\\
+			1.5 & 2.58(20) & 3.341(84) & 3.517(79) & 3.15(12)\\
 			\hline
 		\end{tabular}
-		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
+		\caption{Werte für die Ladungsträgerkonzentration $N_{\rm S}$ in \SI[per-mode=symbol]{e11}{1\per\centi\meter\squared} mit $N_{\rm S1}$ für die Werte aus der Hall-Steigung, $N_{\rm S2}$ aus den Hall-Plateaus und $N_{\rm S3}$ aus der Shubnikov-de Haas Oszillation. Die letzte Spalte mit $\overline{N_{\rm S}}$ entspricht den gemittelten $N_{\rm S}$-Werten der verschiedenen Methoden.}
 		\label{nswerte}
 	\end{center}
 \end{table}
@@ -415,7 +423,7 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 \subsection{Leitfähigkeit, Hall-Faktor und Elektronenbeweglichkeit}
 \label{a3}
 
-Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als \note{benötige Werte aus Aufgabe 2}
+Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach~\citet{anleitung} definiert als
 \begin{align}
 	\sigma_{\rm 2D} &= N_{\rm s} e^2 \frac{\tau}{m^*} = \frac{L}{R_{xx} W}\\
 	A_{\rm H} 		&= -\frac{1}{N_{\rm s}e}\\
@@ -427,26 +435,24 @@ Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\mete
 	\frac{L}{W} = 3.
 \end{equation}
 
-Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen.
+Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen. Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von $5\%$. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{rrrrr}
+		\begin{tabular}{ccccc}
 			\hline
-			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[1/\Upomega]$ & $A_{\rm H}\left[ \mathrm{m}^2/\mathrm{C} \right]$ & $\mu \left[ \mathrm{m}^2/\mathrm{Vs} \right]$\\
+			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\frac{1}{\Upomega}]$ & $A_{\rm H}\left[ \frac{\mathrm{m}^2}{\mathrm{C}} \right]$ & $\mu \left[ \frac{\mathrm{m}^2}{\mathrm{C}\Upomega} \right]$\\
 			\hline
-			4.2 & 521.453 & 0.00575316 &&\\
-			3.0 & 505.111 & 0.00593929 &&\\
-			2.1 & 247.378 & 0.01212719 &&\\
-			1.5 & 244.340 & 0.01227797 &&\\
+			4.2 & 521(26) & 0.00575(29) & 1799(60) & 10.35(52)\\
+			3.0 & 505(25) & 0.00593(30) & 1783(61) & 10.59(53)\\
+			2.1 & 247(12) & 0.01212(61) & 1809(63) & 21.9(1.1)\\
+			1.5 & 244(12) & 0.01227(61) & 1981(75) & 24.3(1.2)\\
 			\hline
 		\end{tabular}
-		\caption{Leitfähigkeit $\sigma_{\rm 2D}$, Hall-Konstante $A_{\rm H}$ und Elektronenbeweglichkeit $\mu$.}
+		\caption{Ergebnisse für die Leitfähigkeit $\sigma_{\rm 2D}$, die Hall-Konstante $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$.}
 		\label{tab.leithallbeweg}
 	\end{center}
 \end{table}
-Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
-
 %
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Zyklotronmasse}
@@ -454,7 +460,8 @@ Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
 
 In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein. So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
 \begin{equation}
-	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\arccos\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
+	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\arcosh\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
+	\label{eq:zyklotronmasse}
 \end{equation}
 bestimmt werden, wobei $A(B,T,\tau)$ die Amplitude der Oszillation der Längsspannung entspricht.
 
@@ -477,33 +484,38 @@ Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitu
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{r|rrr}
+		\begin{tabular}{c|ccc}
 			\hline
 			$T[\mathrm{K}]$ & $\frac{A(B,T_2)}{A(B,T_1)}$ & $B[\mathrm{T}]$ & $\frac{m_{\rm c}}{m_{\rm e}}$\\
 			\hline
-			 		& 0.29515443 & 0.885485 & 0.03647987 \\
-			4.2/2.1 & 0.49870897 & 1.002040 & 0.03405622 \\
-			 		& 0.75887862 & 1.153665 & 0.02651661 \\
+			 		& 0.295 & 0.885 & 0.0412 \\
+			4.2/2.1 & 0.498 & 1.002 & 0.0358 \\
+			 		& 0.758 & 1.153 & 0.02501165 \\
 			\hline
-					& 0.57084129 & 0.794315 & 0.03471604 \\
-			3.0/1.5 & 0.76177526 & 0.886210 & 0.02833759 \\
-					& 0.97237897 & 1.003270 & 0.01072385 \\
+					& 0.570 & 0.794 & 0.04180877 \\
+			3.0/1.5 & 0.761 & 0.886 & 0.03102453 \\
+					& 0.972 & 1.003 & 0.01082444 \\
 		\end{tabular}
 		\caption{Berechnung des Zyklotronmassenverhältnisses.}
 		\label{tab:zyklotronmasse}
 	\end{center}
 \end{table}
+
 Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
 \begin{align}
-	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.03235090 \\
-	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.02459249
+	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.03402 \pm 0.0058 \label{zyklotron1}\\
+	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.0278\pm 0.011 \label{zyklotron2}
 \end{align}
+
+Die Fehler der Amplituden und des $B$-Felds der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte sind durch einen Ablesefehler von $\pm 0.001$, können jedoch zur Berechnung des Massenverhältnisses vernachlässigt werden, da der Fehler in der Temperaturbestimmung deutlich darüber liegt. Die Temperaturschwankungen sind zu Beginn der Auswertung~\ref{Auswertung} genannt. Die Auswirkung von Temperaturschwankungen auf die gemessenen Spannungen sind allerdings nicht bekannt. Somit bestimmen wir den Fehler der gemittelten Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt.
+
 Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
 \begin{equation}
 	\frac{m^*}{m_{\rm e}} = 0.067
 \end{equation}
 
-\note{Fehlerbeschreibung und /-analyse}
+Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$. Diese Bedingung konnte im Experiment nicht realisiert werden, da durch den vorhandenen Versuchsaufbau keine konstante Temperatur eingestellt werden konnte. 
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
 %
