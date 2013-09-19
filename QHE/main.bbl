@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{3}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -7,11 +7,12 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
 
-\bibitem[mueller()]{mueller}
-\dinatlabel{mueller } Dissertation
-
-\bibitem[mellissinos()]{mellissinos}
-\dinatlabel{mellissinos }
+\bibitem[Ando(1974)]{ando}
+\dinatlabel{Ando 1974} \textsc{Ando}, T.:
+\newblock Theory of quantum transport in a two-dimensional electron system
+  under magnetic fields. IV. Oscillatory conductivity.
+\newblock In: \emph{J. Phys. Soc. Japan}
+\newblock 37 (1974), Nr.~1233
 
 \bibitem[Batke(2010)]{anleitung}
 \dinatlabel{Batke 2010} \textsc{Batke}, ??:
