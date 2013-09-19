@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from pylab import *
 from matplotlib.ticker import AutoMinorLocator, AutoLocator
 from scipy.interpolate import interp1d
+from scipy import optimize  
 
 txt_filename_to_open=[]
 line=[]
@@ -82,8 +83,8 @@ plt.xlim([0.1,0.55])
 plt.ylim([-500,22000])
 plt.plot(xdata,ydata,color="blue",label="Messpunkte")
 #Messpunkte=[[0.117895,207990],[0.185677,2928],[0.235633,6265],[0.322256,1602],[0.368582,2597],[0.464694,1402],[0.480978,1622]]
-Messpunkte=[[0.117895,0.185677,0.235633,0.322256,0.368582,0.464694,0.489948],[20799,2928,6287,1602,2597,1402,1622]]
-Fehler=[0.117895-0.11509,0.185677-0.17919,0.235633-0.229908,0.322256-0.313463,0.368582-0.360618,0.464694-0.449689,0.489948-0.474507]
+Messpunkte=[[0.117895,0.185677,0.235633,0.322256,0.368582,0.459816,0.489948],[20799,2928,6287,1602,2597,1402,1622]]
+Fehler=[0.117895-0.112831,0.185677-0.17666,0.235633-0.229908,0.322256-0.3111161,0.368582-0.360618,0.459816-0.442119,0.489948-0.506713]
 plt.errorbar(Messpunkte[0],Messpunkte[1],xerr=Fehler,color="red",fmt='.',label="Ablesepunkte")
 
 # plt.plot([Messpunkte[0][0]-Fehler[0],Messpunkte[0][0]+Fehler[0]],[Messpunkte[1][0],Messpunkte[1][0]],color="red",linewidth = 1.5)
@@ -100,19 +101,55 @@ plt.legend(loc=0)
 
 
 
-# plt.figure(2)
-# #plt.set_xlabel(txt_file[0][0])
-# #plt.set_ylabel(txt_file[0][1])
-# plt.ylabel(u'$|\mathrm{DFT}|^2$ des Längswiderstandes')
-# plt.xlabel(u'Periodendauer der Oszillationen $[\\frac{1}{T}]$')#\\frac{1}{B}$-Frequenz des Längswiderstandes [T]$
-# plt.ylim([0,4])
-# plt.xlim([0,0.2])
-# title(u'Fourietransformation des Längswiderstandes')
-# font = {'family' : 'serif',
-        # 'weight' : 'normal',
-        # 'size'   : 20}
-# matplotlib.rc('font', **font)
-# subplots_adjust(left=0.11, bottom=0.13, right=0.95, top=0.92, wspace=0.2, hspace=0.2)
+plt.figure(2)
+npunkte_plus=[[2,3,4],[0.185677,0.322256,0.464694]]
+Fehler_plus=[Fehler[1],Fehler[3],Fehler[5]]
+npunkte_minus=[[1,2,3,4],[0.117895,0.235633,0.368582,0.480978]]
+Fehler_minus=[Fehler[0],Fehler[2],Fehler[4],Fehler[6]]
+
+p0=[0,0]
+fit = lambda p, x: 0.13096125*(x-p[1])#.130864 0.1253435p[0]
+
+def residuals(p, x, y):
+	err = y-fit(p,x)
+	return err
+	
+# 	http://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.leastsq.html
+xdata=array(npunkte_plus[0][0:2])
+ydata=array(npunkte_plus[1][0:2])
+outu= optimize.leastsq(residuals, p0, args=(xdata, ydata), full_output=1)
+xdata=array(npunkte_minus[0][0:3])
+ydata=array(npunkte_minus[1][0:3])
+outo= optimize.leastsq(residuals, p0, args=(xdata, ydata), full_output=1)
+
+
+
+print "Untere Kurve: Schnittpunkt: ",outu[0][0],"Steigung",outu[0][1]
+print "Obere Kurve: Schnittpunkt: ",outo[0][0],"Steigung",outo[0][1]
+xdata=linspace(0,4,100)
+plt.plot(xdata,fit(outu[0],xdata),color="blue")
+plt.plot(xdata,fit(outo[0],xdata),color="blue")
+
+plt.plot((0.0790416,4),(0,0.490569),"--", color="blue")
+plt.plot((0.2416784,4),(0,0.515763),"--", color="blue")
+plt.plot((0.48058,4),(0,0.440961),"--", color="blue")
+plt.plot((0.63984,4),(0,0.46096),"--", color="blue")
+
+plt.errorbar((0.161620,0.559675),(0,0),xerr=(0.08502,0.079225),color="red",fmt='.',label="Ablesepunkte", linewidth=2)
+plt.errorbar(npunkte_plus[0],npunkte_plus[1],yerr=Fehler_plus,color="red",fmt='x',label="abgelesene Werte")
+plt.errorbar(npunkte_minus[0],npunkte_minus[1],yerr=Fehler_minus,color="red",fmt='x',label="abgelesene Werte")
+#plt.set_xlabel(txt_file[0][0])
+#plt.set_ylabel(txt_file[0][1])
+plt.ylabel(u'abgelesene inverse Feldstärken in [1/T]')
+plt.xlabel(u'n')
+plt.ylim([0,0.55])
+plt.xlim([0,4.2])
+title(u'Bestimmung der relativen Spinaufspaltung')
+font = {'family' : 'serif',
+        'weight' : 'normal',
+        'size'   : 20}
+matplotlib.rc('font', **font)
+subplots_adjust(left=0.11, bottom=0.13, right=0.95, top=0.92, wspace=0.2, hspace=0.2)
    
 
   

@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -221,14 +221,6 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 \end{compactitem}
 
 Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm Shunt})$ aus den gemessenen Daten für die Hallspannung $U_{\rm Hall}$ und denen der Probenspannung $U_{\rm Shunt}$
-
-\paragraph*{Fehler}
-\begin{compactitem}
-	\item Fehler $U_{H}$: Rauschen $10^{-4}$
-	\item Fehler $I_{H}$: Rauschen $10^{-4}$
-	\item Fehler Shuntwiderstand: 1 Ohm
-	\item Ablesefehler Hallwiderstand $0.08\%$
-\end{compactitem}
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Hall-Plateaus, Klitzing-Konstante und Füllfaktoren}
@@ -254,32 +246,32 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir aus dem 
 	\begin{tabular}{r|rrrr}
 		$\nu$\textbackslash$T$ & \SI{4.2}{\kelvin} & \SI{3.0}{\kelvin} & \SI{2.1}{\kelvin} & \SI{1.5}{\kelvin} \\
 		\hline
-		2  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
-		3  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
-		4  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
-		5  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
-		6  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
-		8  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
-		10 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
-		12 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
-		14 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
+		2.00  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
+		2.96  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
+		4.00  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
+		4.70  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
+		6.00  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
+		8.01  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
+		10.02 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
+		12.05 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
+		13.96 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
 		\hline
-		$\overline{R_{\rm K}\nu}$ & \SI[separate-uncertainty=false]{24860(54)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm}
+		$\overline{R_{\rm K}\nu}$ & \SI{24860}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm} & \SI{24840}{\ohm}
 	\end{tabular}
-	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten. \note{Fehler}}
 	\label{klitzing}	
 	\end{center}
 \end{table}
 
 Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils den selben Wert, der Klitzing-Konstante genannt wird. 
 
-Aus der Ablesegenauigkeit der Auswertmethode von $10\Upomega$ lässt sich der Fehler der in Tabelle~\ref{klitzing} gemittelten Klitzing-Konstanten für verschieden Temperaturen berechnen. Die Messfehler aus denen die Widerstandswerte berechnet wurden ist im Vergleich zu der Ablesegenauigkeit vernachlässigbar ($<0.1\%$). Für die Berechnung wurden die Widerstandswerte mit den entsprechenden Füllfaktoren gewichtet und aus der Genauigkeit und Fehlerfortpflanzung die gemittelten Widerstandswerte mit Fehler bestimmt. 
+Aus der Ablesegenauigkeit und einem Fehler von \note{Gerätefehler, systematischer Fehler, geschätzter Fehler}.
 
 In der letzten Zeile von Tabelle~\ref{klitzing} wurden für jede Temperatur die Werte der verschiedenen Plateaus (multipliziert mit dem Füllfaktor) gemittelt und zeigen die Klitzing-Konstanten bei verschiedenen Temperaturen mit Standardabweichung. Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was im Rahmen der Fehler \note{Fehleranalyse}.
 
 Aus den obigen Werten können wir folglich die Klitzing-Konstante bestimmen zu
 \begin{equation}
-	R_{\rm K} = \SI{25114(50)}{\ohm}.
+	R_{\rm K} = (24.845 \pm ??)\,\SI{}{\kilo\ohm}.
 \end{equation}
 Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25812.807}{\ohm}$ zeigt sich eine große Abweichung \note{Analyse}.
 
@@ -302,11 +294,10 @@ N_S=\frac{1}{A_H e} = (3.52 \pm 0.20) \cdot 10^{11}\SI{}{\per\square\centi\meter
 Die Ergebnisse der anderen Temperaturen sind in Tabelle \ref{nswerte} aufgeführt.
 Verglichen mit den Fehlern der Geradensteigung unterscheiden sich die einzelnen Steigungen bei unterschiedlichen Temperaturen nur wenig. Dies ist intuitiv klar, da die Ladungsträgerdichte beim untersuchten 2DEG des GaAs/AlGaAs-System nicht von der Temperatur abhängen sollte.
 
-Die in Abbildung \ref{hallsteigung} gezeichnete Gerade lässt sich an die anderen Hall-Widerstandswerte bei niedrigeren Temperaturen ohne sichtbare Abweichung anlegen. Daher ergibt sich nach dieser Bestimmungsmethode kein Einfluss der Temperatur auf die Ladungsträgerdichte.
 \subsubsection*{Mit Hilfe der Hall-Plateaus}
 Die Ladungsträgerdichte können wir ebenso über die Lage der Hall-Pateaus und die ermittelten Füllfaktoren aus Tabelle~\ref{klitzing}, Aufgabenteil~\ref{a1} bestimmen. Nach~\citet{anleitung} ist die Ladungsträgerdichte $N_{\rm s}$ gegeben durch
 \begin{equation}
-	N_{\rm s} = \nu\frac{e B}{h}.
+	N_{\rm s} = \nu\frac{e B}{\hbar} = \frac{B}{e R_{\rm Shunt}}.
 \end{equation}
 Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm Shunt}$ durch die Plateus der gesamte Plateau-Bereich gehört. Für die Auswertung haben wir den Wert an der Mitte des Plateaus verwendet. Der Wert für die Mitte des Plateaus entspricht den Werten der Hall-Widerstände, die in Aufgabenteil~\ref{a1} ermittelt wurden. Unser Fehler entspricht folglich der Unsicherheit die sich in der Widerstandsbestimmung der Hall-Plateaus ergibt.
 
@@ -386,7 +377,7 @@ Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} 
 
 Durch die Periodendauer $T_{\frac{1}{B}}$ wird somit der Wert für die Ladungsträgerdichte festgelegt.
 \begin{equation}
-N_S=\frac{2 e}{T_{\frac{1}{B}} h}=\SI{3.517(079)e11}{\per\square\centi\meter}
+N_S=\frac{2 e}{T_{\frac{1}{B}} h}=(3.517 \pm 0.079) \cdot 10^{-11}\SI{}{\per\square\centi\meter}
 \label{ns_periode}
 \end{equation}
 Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils exakt der selbe Wert abgelesen.
@@ -429,16 +420,18 @@ Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\mete
 
 Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen.
 
+\note{hast du in den bereinigten Daten für die Längsspannung tatsächlich schon den Längswiderstand ausgerechnet}
+
 \begin{table}[htp]
 	\begin{center}
 		\begin{tabular}{rrrrr}
 			\hline
-			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[1/\Upomega]$ & $A_{\rm H}\left[ \mathrm{m}^2/\mathrm{C} \right]$ & $\mu \left[ \mathrm{m}^2/\mathrm{Vs} \right]$\\
+			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\rm ??]$ & $A_{\rm H}\left[ \mathrm{m}^2/\mathrm{C} \right]$ & $\mu \left[ \mathrm{m}^2/\mathrm{Vs} \right]$\\
 			\hline
-			4.2 & 521.453 & 0.00575316 &&\\
-			3.0 & 505.111 & 0.00593929 &&\\
-			2.1 & 247.378 & 0.01212719 &&\\
-			1.5 & 244.340 & 0.01227797 &&\\
+			4.2 &&&&\\
+			3.0 &&&&\\
+			2.1 &&&&\\
+			1.5 &&&&\\
 			\hline
 		\end{tabular}
 		\caption{Leitfähigkeit $\sigma_{\rm 2D}$, Hall-Konstante $A_{\rm H}$ und Elektronenbeweglichkeit $\mu$.}
@@ -451,60 +444,6 @@ Die Fehler ergeben sich aus \note{Fehleranalyse + Diskussion}.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Zyklotronmasse}
 \label{a4}
-
-In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein. So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
-\begin{equation}
-	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\arccos\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
-\end{equation}
-bestimmt werden, wobei $A(B,T,\tau)$ die Amplitude der Oszillation der Längsspannung entspricht.
-
-Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und in Abbildung~\ref{fig:zyklotronmasse} für die Auftragung über $b$ abgebildet.
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/11-4,2-2,1-zyklotron-B.pdf}
-		\caption{Auftragung der Längsspannung über dem Magnetfeld bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
-		\label{fig:zyklotronmasse}
-	\end{center}
-\end{figure}
-Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Da wir aus der Auftragung über $1/B$ die selben Werte für die Amplituden erhalten, geben wir die Werte nicht extra an. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
-		\caption{Auftragung der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
-		\label{fig:zyklotronmasse2}
-	\end{center}
-\end{figure}
-
-\begin{table}[htp]
-	\begin{center}
-		\begin{tabular}{r|rrr}
-			\hline
-			$T[\mathrm{K}]$ & $\frac{A(B,T_2)}{A(B,T_1)}$ & $B[\mathrm{T}]$ & $\frac{m_{\rm c}}{m_{\rm e}}$\\
-			\hline
-			 		& 0.29515443 & 0.885485 & 0.03647987 \\
-			4.2/2.1 & 0.49870897 & 1.002040 & 0.03405622 \\
-			 		& 0.75887862 & 1.153665 & 0.02651661 \\
-			\hline
-					& 0.57084129 & 0.794315 & 0.03471604 \\
-			3.0/1.5 & 0.76177526 & 0.886210 & 0.02833759 \\
-					& 0.97237897 & 1.003270 & 0.01072385 \\
-		\end{tabular}
-		\caption{Berechnung des Zyklotronmassenverhältnisses.}
-		\label{tab:zyklotronmasse}
-	\end{center}
-\end{table}
-Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
-\begin{align}
-	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.03235090 \\
-	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} = 0.02459249
-\end{align}
-Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
-\begin{equation}
-	\frac{m^*}{m_{\rm e}} = 0.067
-\end{equation}
-
-\note{Fehlerbeschreibung und /-analyse}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
 %
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -540,8 +479,52 @@ Für B=0 sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit i
 		\label{fermitabelle}
 	\end{center}
 \end{table}
-Obwohl die magnetische Feldstärke keinen Einfluss auf die Ladungsträgerflächendichte hat, beeinflusst sie sehr wohl die 
 %
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\subsection{Bestimmung der Spinaufspaltung}
+\label{a6}
+Wie in Aufgabe 2 gesehen fällt der Längswiderstand periodisch mit dem inversen Magnetfeld auf Null ab. Den maximalen Widerstand misst man hingegen, wenn die Fermi-Energie (d.h. das chemisches Potential) genau innerhalb der Landau-Niveaus liegt. Dies ist der Fall wenn
+\begin{equation}
+E_F=\hbar \omega_c\left( n+\frac{1}{2}\pm\frac{M}{2}\right).
+\end{equation}
+In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor g des Elektronen und GaAs bestimmt werden, der mit der Magnetisierung folgenden Zusammenhang besitzt.
+\begin{equation}
+M=\frac{g \mu_B B}{\hbar \omega_c}
+\label{lande}
+\end{equation}
+In einem ersten Schritt werden nun aus den Graphen des Längswiderstandes die inversen Feldstärken $\frac{1}{B_{n\pm}}$ der Maxima für verschiedene n-Quantenzahlen und Spinaufspaltungen abgelesen, wobei $\pm$ das Maximum mit größerer bzw. kleinerer Magnetfeldstärke beschreibt.
+
+\begin{figure}[]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/07-maxima_ablesen.pdf}
+		\caption{Abgelesene Werte der maximalen Längsspannung. Die Fehler wurden anhand der Breite der Breite der Peaks abgeschätzt.}
+		\label{maxima}
+	\end{center}
+\end{figure}
+
+In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ aufgetragen, um sie bis zu $\frac{1}{B}=0$ zu extrapolieren. Am Schnittpunkt mit der x-Achse verschwinden beide Seiten der Identität
+\begin{equation}
+\frac{1}{B_{n\pm}}=\frac{\hbar e}{m_c}\frac{1}{E_F}\left(n+\frac{1}{2}\pm\frac{M}{2}\right).
+\end{equation}
+Damit ergibt sich die relative Spinaufspaltung $M$ als die Differenz der Schnittpunkte mit der x-Achse
+\begin{equation}
+M=|n_+(B\rightarrow \infty)- n_-(B\rightarrow \infty)|
+\end{equation}
+Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten für die Differenz
+\begin{figure}[]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/07-Spinaufspaltung.pdf}
+		\caption{Bestimmung der Schnittpunkte mit x-Achse. Die in Abbildung \ref{maxima}ausgelesenen Messpunkte werden linear bis zum Punkt $B\rightarrow \infty$ extrapoliert und der Schnittpunkt mit der x-Achse abgelesen. Die Fehler werden jeweils mithilfe zweier Hilfsgeraden abgeschätzt.}
+		\label{spinaufspaltung}
+	\end{center}
+\end{figure}
+\begin{equation}
+M=|0.160(80)-0.560(80)|=0.40(11).
+\end{equation}
+Daraus ergibt sich nach \eqref{lande} der Landé-Faktor zu
+\begin{equation}
+g=\frac{M \hbar e}{\mu_B m_c}.
+\end{equation}
 % =============================================================================
 \section{Zusammenfassung}
 \label{Zusammenfassung}
