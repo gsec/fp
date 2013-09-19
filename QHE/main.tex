@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -87,32 +87,18 @@
 \begin{abstract}      
 % =============================================================================
   \vspace{-2em}
-  \noindent {\small Mithilfe von drei Röntgenanoden sowie verschiedenen
-    Streuobjekten konnten wir die theoretischen Werte der
-$K_{\alpha}$- und $K_{\beta}$-Linie von Kupfer, Eisen und Molybdän
-    bestätigen. Zudem war die
-Feinstruktur von Eisen und Molybdän 
-    im Spektrum erkennbar.  Über das Duane-Hunt-Gesetz haben wir Plancksche
-    Wirkungsquantum zu
-%$h = \SI{6.645+-0.059e-34}{\joule\second}$
-    bestimmt. 
-%{R_{H} = \SI{14.02+-0.76}{\eV}} anhand der $K_{\beta}$ Linien
-    Anhand des Effekts der inelastischen Streuung von Photonen an Elektronen
-    haben wir die Compton-Wellenlänge zu
-%$\lambda_c=\SI{2.25+-0.43}{\pico\meter}$
-    ermittelt. Schließlich haben wir zwei
-Laue-Aufnahmen
-    eines Materials gemacht, den Reflexen Miller-Indices zugeordnet und damit 
-    die Diamandstruktur der Probe
-    identifiziert haben.
-    }
+  \noindent {\small Mithilfe einer AlGaAs/GaAs Heterostruktur wurde der Quanten-Hall-Effekt
+  nachgewiesen. Die von Klitzing wurde zu $\SI{25.1}{\kilo\ohm}$ bestimmt und Hall-Plateaus bis
+  zur Quantenzahl 14 beobachtet. Mit verschiedenen Methoden wurde die 
+  Ladungsträgerkonzentration im 2DEG untersucht die sich als weitgehendst 
+  temperaturunabhängig herausstellte. Bei niedrigen Temperaturen wurde die Zeeman-Aufspaltung beobachtet und 	quantitativ untersucht, um den Landé-Faktor zu bestimmen.   }
 \end{abstract}
 
   \vspace{1em}
 
 \centerline{Betreuer: Christoph Brüne \hfill
    Versuchsdurchführung am 12. Oktober 2013}
-\centerline{\hfill  Protokollabgabe am ??. Oktober 2013}
+\centerline{\hfill  Protokollabgabe am 19. Oktober 2013}
  
 
 \vspace{2em}
@@ -368,7 +354,6 @@ Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabell
 	\end{center}
 \end{table}
 Der Fehler der gemittelten Ladungsträgerdichten wurden aus Gauß'scher Fehlerfortpflanzung bestimmt.\\
-\note{Fehleranalyse}
 
 \subsubsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
 Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
@@ -407,13 +392,15 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 			\hline
 			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S1}$ & $N_{\rm S1}$ & $\overline{N_{\rm S}}$\\
 			\hline
-			4.2 & 3.52(20) & 3.378(70) & 3.517(79) & 3.47(12)\\
-			3.0 & 3.61(20) & 3.387(81) & 3.517(79) & 3.50(12)\\
-			2.1 & 3.58(20) & 3.330(76) & 3.517(79) & 3.45(12)\\
-			1.5 & 2.58(20) & 3.341(84) & 3.517(79) & 3.15(12)\\
+			4.2 & 3.52(20) & 3.378(70) & 3.517(79) & 3.455(93)\\
+			3.0 & 3.61(20) & 3.387(81) & 3.517(79) & 3.48(10)\\
+			2.1 & 3.58(20) & 3.330(76) & 3.517(79) & 3.447(97)\\
+			1.5 & 2.58(20) & 3.341(84) & 3.517(79) & 3.29(10)\\
 			\hline
+			\hline
+			 &  &  &  &3.419(98)\\
 		\end{tabular}
-		\caption{Werte für die Ladungsträgerkonzentration $N_{\rm S}$ in \SI[per-mode=symbol]{e11}{1\per\centi\meter\squared} mit $N_{\rm S1}$ für die Werte aus der Hall-Steigung, $N_{\rm S2}$ aus den Hall-Plateaus und $N_{\rm S3}$ aus der Shubnikov-de Haas Oszillation. Die letzte Spalte mit $\overline{N_{\rm S}}$ entspricht den gemittelten $N_{\rm S}$-Werten der verschiedenen Methoden.}
+		\caption{Werte für die Ladungsträgerkonzentration $N_{\rm S}$ in \SI[per-mode=symbol]{e11}{1\per\centi\meter\squared} mit $N_{\rm S1}$ für die Werte aus der Hall-Steigung, $N_{\rm S2}$ aus den Hall-Plateaus und $N_{\rm S3}$ aus der Shubnikov-de Haas Oszillation. Die letzte Spalte mit $\overline{N_{\rm S}}$ entspricht den mit den inversen Fehlern gewichteten $N_{\rm S}$-Werten der verschiedenen Methoden.}
 		\label{nswerte}
 	\end{center}
 \end{table}
@@ -528,7 +515,7 @@ E_F=\frac{\hbar^2 k_F^2}{2 m^*}.
 Auf der anderen Seite ergibt sich Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2DEG den konstanten Wert $D(E)=\frac{\hbar^2 \pi}{m^*}$ \citep{anleitung}.
 Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeit:
 \begin{align}
-E_F&=N_S \cdot \frac{\hbar^2 \pi}{m}\\
+E_F&=N_S \cdot \frac{\hbar^2 \pi}{m^*}\\
 k_F&=\sqrt{2 \pi N_S}\\
 v_F&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_S}
 \end{align}
@@ -539,12 +526,12 @@ Für B=0 sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit i
 	\begin{center}
 		\begin{tabular}{rrrrr}
 			\hline
-			$T[\frac{1}{\mathrm{K}}]$ & $E_F[]$ & $k_F[]$ & $v_F[]$\\
+			$T[\frac{1}{\mathrm{K}}]$ & $E_F[\mathrm{eV}]$ & $k_F[\SI{}{\per\nano\meter}]$ & $v_F[\SI{}{\kilo\meter\per\second}]$\\
 			\hline
-			4.2 &??&??&??\\
-			3.0 &??&??&??\\
-			2.1 &??&??&??\\
-			1.5 &??&??&??\\
+			4.2 &12.35(33)	&0.1473(40)&	254.6(69)\\
+			3.0 &12.43(36)	&0.1478(42)&	255.5(73)\\
+			2.1 &12.32(34)	&0.1472(42)&	254.3(72)\\
+			1.5 &11.71(36)	&0.1437(44)&	248.3(77)\\
 			\hline
 		\end{tabular}
 		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
@@ -593,36 +580,40 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 \begin{equation}
 M=|0.160(80)-0.560(80)|=0.40(11).
 \end{equation}
-Daraus ergibt sich nach \eqref{lande} der Landé-Faktor zu
+Daraus ergibt sich nach \ref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
 \begin{equation}
-g=\frac{M \hbar e}{\mu_B m_c}.
+g=\frac{M \hbar e}{\mu_B m_c}=-0.80\pm29.
 \end{equation}
+Diese Wert ist fast doppelt so hoch, wie der in der Literatur \citep{anleitung} angegebene Wert von g=-0.44 im Einteilchenbild. Damit wird deutlich, dass Mehrteilcheneffekte beim Quanten-Hall-Effekt nicht zu vernachlässigen sind und das magnetische Moment der Elektronen im Kollektiv stärker ist als die Summe der Einzelmagnetisierungen.
+Die Bestimmung der Ladungsträgerdichte aus diesem Plot ist mathematisch ähnlich, wenn auch ungenauer, zur Bestimmung mittels Schubnikow-de-Haas-Oszillationen.
+Wir erhalten mit zwei Landau-Niveaus pro Landau Quantenzahl
+\begin{equation}
+N_S=\frac{2e}{h}\frac{\Delta n}{\Delta \frac{1}{B}}=\SI{3.69(083)e11}{\per\square\centi\meter}
+\end{equation}
+
 % =============================================================================
 \section{Zusammenfassung}
 \label{Zusammenfassung}
 
-Wir konnten mit dem Versuch einen guten Einblick in die Röntgenspektroskopie
-gewinnen. Die charakteristischen Linien von Eisen, Molybdän und Kupfer wurden mit
-recht hoher Genaugikeit nachgewiesen, wobei der größte Abstand von unseren
-Bestwerten zu den Theoriewerten 
-\SI{0.65}{\percent} betrag. Im Rahmen der Fehler gab es keine Abweichung. 
- Das empirische Gesetz zwischen der Intensität der
-charakteristischen Strahlung und der Spannung zeigt systematische Abweichungen
-für Spannungen ab \SI{30}{\kilo\volt} und sollte eher als Faustregel verstanden
-werden. Das Duane-Hunt-Gesetz hingegen konnte gut bestätigt werden und hat uns
-erlaubt, das Plancksche Wirkungsquantum zu bestimmen. Das Moseley-Gesetz wurde
-ausführlich diskutiert und hat gute Abschätzungen für die Rydberg-Konstante
-ergeben. Allerdings ist die Auswertung der \emph{Abschirmkonstante} $\sigma(Z)$
-nicht wirklich sinnvoll. Mit dem Compton-Effekt konnte eine überraschend gute
-Bestimmung der Compton-Wellenlänge durchgeführt werden. Eine vollständige
-Aufnahme des Transmissionsspektrums von Al im gesamten Wellenlängenbereich der
-Kupferanode würde helfen zu verstehen, warum die Näherung eines linearen
-Spektrums solch gute Ergebnisse liefert. Die Laue-Aufnahme hat insgesamt gut
-funktioniert. Allerdings könnte man die Aufhängung der Dentalfilme zum Beispiel
-mit einer optischen Bank o.Ä. verbessern. Dadurch wird ein zentrales 
-Auftreffen garantiert. Die Auflösung 
-der Filme ist gut, eine größere Fläche wäre zwar wünschenswert, ist für die
-Auswertung aber nicht unbedingt notwendig. 
+Mit dem F-Praktikumsversuch zum Quanten-Hall-Effekt konnten wir die Quantisierung
+der elektronischen Zustände und deren Einfluss auf die makroskopischen Eigenschaften 
+der Probe nachweisen. Es konnten ganzzahlige Hall-Plateaus bis zur Quantenzahl 14 bei 
+$\SI{1.5}{K}$ beobachtet werden. Die bestimmte Klitzing-Konstante weichte 
+mit $\SI{25.1}{\kilo\ohm}$ etwa $\SI{3}{\percent}$ vom Literaturwert ab.
+Wir verwendeten unterschiedliche Methoden, um die Ladungsträgerkonzentration unserer
+Probe zu bestimmen. Dabei lieferte die Auswertung der Hall-Plateaus die genauesten 
+Ergebnisse. Ohne Magnetfeld wurden Längswiderstand, Leitfähigkeit und Beweglichkeit 
+der Elektronen untersucht, wobei wir eine deutliche Leitfähigkeitszunahme untehalb von 
+$\SI{3}{\kelvin}$ messen konnten. Aus der Oszillationen der Längsspannung bei niedrigen 
+Magnetfeldstärken wurde die Zyklotronmasse der Elektronen in GaAs bestimmt. Die 
+Analyse war nicht sehr genau und die bestimmte Masse mit $0.032 m_e$ nur etwa halb 
+so groß wie der Literaturwert. Aus der Ladungsträgerdichte wurde die Fermi-Geschwindigkeit 
+bestimmt und macht mit etwa $\SI{250}{\kilo\meter\per\second}$ den fermionischen Charakter
+der Elektronen deutlich. Zuletzt wurden bei tiefen Temperaturen die Zeeman-Aufspaltung 
+beobachtet und daraus der Landé-Faktor zu bestimmen. Dieser lag mit $-0.80$ deutlich über
+dem Wert des Elektrons im Einteilchenbild, was den Mehrteilchen-Charakter des Experiments
+deutlich macht.
+
 
 %
 % =============================================================================

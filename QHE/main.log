@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.1)  19 SEP 2013 15:36
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.1)  19 SEP 2013 18:45
 entering extended mode
 **main.tex
 (D:\Git\F-Praktikum\QHE\main.tex
@@ -1498,11 +1498,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c__siunitx_mathtt_int=\count200
 
 
-Package natbib Warning: Citation `janssen' on page 1 undefined on input line 12
-6.
+Package natbib Warning: Citation `janssen' on page 1 undefined on input line 11
+2.
 
 
-Underfull \hbox (badness 1199) in paragraph at lines 148--152
+Underfull \hbox (badness 1199) in paragraph at lines 134--138
 \OT1/cmr/m/n/10 so schei-nen die beim La-dungs-trans-port be-tei-lig-ten
  []
 
@@ -1515,201 +1515,219 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 4036) in paragraph at lines 164--168
+Underfull \hbox (badness 4036) in paragraph at lines 150--154
 \OT1/cmr/m/n/10 Gleichzeitig zu den Pla-te-aus im Hall-wi-der-stand,
  []
 
 
-Underfull \hbox (badness 1552) in paragraph at lines 164--168
+Underfull \hbox (badness 1552) in paragraph at lines 150--154
 \OT1/cmr/m/n/10 tritt ein an-de-rer be-mer-kens-wer-ter Ef-fekt auf, der
  []
 
 
-Underfull \hbox (badness 1178) in paragraph at lines 164--168
+Underfull \hbox (badness 1178) in paragraph at lines 150--154
 \OT1/cmr/m/n/10 als Shubnikow-de-Haas-Effekt be-zeich-net wird. Da-
  []
 
 
-Underfull \hbox (badness 2310) in paragraph at lines 164--168
+Underfull \hbox (badness 2310) in paragraph at lines 150--154
 \OT1/cmr/m/n/10 bei ver-liert der Festk[]orper sei-nen Wi-der-stand in
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 171--174
+Underfull \hbox (badness 1953) in paragraph at lines 157--160
 \OT1/cmr/m/n/10 Ent-ar-tungs-grad der Land-au-ni-ve-aus ent-spricht. Bei
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 171--174
+Underfull \hbox (badness 2205) in paragraph at lines 157--160
 \OT1/cmr/m/n/10 man misst den be-schrie-be-nen Shubnikow-de-Haas-
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 171--174
+Underfull \hbox (badness 1931) in paragraph at lines 157--160
 \OT1/cmr/m/n/10 Land-au-ni-ve-aus un-ter-halb der Fer-mi-ener-gie be-setzt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--174
+Underfull \hbox (badness 10000) in paragraph at lines 157--160
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 192.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 178.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
  [2]
-Underfull \hbox (badness 2521) in paragraph at lines 219--220
+Underfull \hbox (badness 2521) in paragraph at lines 205--206
 []\OT1/cmr/m/n/10 Hystereseeffekte $\OMS/cmsy/m/n/10 !$ \OT1/cmr/m/n/10 be-rei-
 nig-te Da-ten f[]ur den
  []
 
 
-Underfull \hbox (badness 3108) in paragraph at lines 220--221
+Underfull \hbox (badness 3108) in paragraph at lines 206--207
 []\OT1/cmr/m/n/10 Fehleranalyse/-absch[]atzung der Span-nungs-mes-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
-\OT1/cmr/m/n/10 aus den ge-mes-se-nen Da-ten f[]ur die Hall-span-
+Underfull \hbox (badness 1168) in paragraph at lines 217--221
+\OT1/cmr/m/n/10 schwer ein-stell-bar, nicht kon-stant, []andert sich
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 223--226
-\OT1/cmr/m/n/10 nung $\OML/cmm/m/it/10 U[]$ \OT1/cmr/m/n/10 und de-nen der Pro-
-ben-span-nung
- []
-
-<Data-Plots/05-1,5-Hallplateaus.pdf, id=90, 505.89pt x 331.4784pt>
+<Data-Plots/05-1,5-Hallplateaus.pdf, id=89, 505.89pt x 331.4784pt>
 File: Data-Plots/05-1,5-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/05-1,5-Hallplateaus.pdf>
 Package pdftex.def Info: Data-Plots/05-1,5-Hallplateaus.pdf used on input line 
-231.
+234.
 (pdftex.def)             Requested size: 238.96164pt x 156.57884pt.
 
-Underfull \hbox (badness 1622) in paragraph at lines 268--269
-[]\OT1/cmr/m/n/10 Aus der Ab-le-se-ge-nau-ig-keit und ei-nem Feh-ler von
+Overfull \hbox (54.56096pt too wide) in paragraph at lines 249--264
+ [] 
  []
 
 [3 <D:/Git/F-Praktikum/QHE/Data-Plots/05-1,5-Hallplateaus.pdf>]
-Underfull \hbox (badness 1418) in paragraph at lines 275--277
+Underfull \hbox (badness 1418) in paragraph at lines 278--280
 \OT1/cmr/m/n/10 Der Ver-gleich mit dem Li-te-ra-tur-wert von $\OML/cmm/m/it/10 
 R[] \OT1/cmr/m/n/10 =$
  []
 
-<Data-Plots/02-Hallsteigung.pdf, id=185, 578.16pt x 433.62pt>
+<Data-Plots/02-Hallsteigung.pdf, id=188, 578.16pt x 433.62pt>
 File: Data-Plots/02-Hallsteigung.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-Hallsteigung.pdf>
-Package pdftex.def Info: Data-Plots/02-Hallsteigung.pdf used on input line 283.
+Package pdftex.def Info: Data-Plots/02-Hallsteigung.pdf used on input line 286.
 
 (pdftex.def)             Requested size: 238.96164pt x 179.22113pt.
  [4 <D:/Git/F-Praktikum/QHE/Data-Plots/02-Hallsteigung.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 307--357
+
+ []
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 368.
+               Default added (so using `tbp') on input line 370.
 
 <Data-Plots/06-Fourietransformation.pdf, id=253, 683.85486pt x 484.209pt>
 File: Data-Plots/06-Fourietransformation.pdf Graphic file (type pdf)
 
 <use Data-Plots/06-Fourietransformation.pdf>
 Package pdftex.def Info: Data-Plots/06-Fourietransformation.pdf used on input l
-ine 370.
+ine 372.
 (pdftex.def)             Requested size: 238.96164pt x 169.19492pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 373--373
 []\OT1/cmr/bx/n/9 Abb. 3: |\OT1/cmr/m/n/9 Disktre-te Fou-rie-trans-for-ma-ti-on
  des
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--371
+Underfull \hbox (badness 10000) in paragraph at lines 373--373
 \OT1/cmr/m/n/9 L[]angsiwderstandes auf-ge-tra-gen []uber die Pe-ri-
  []
 
 [5 <D:/Git/F-Praktikum/QHE/Data-Plots/06-Fourietransformation.pdf>]
-Overfull \hbox (55.98686pt too wide) in paragraph at lines 389--400
+Overfull \hbox (8.82712pt too wide) in paragraph at lines 391--403
  [] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 400--400
-[]\OT1/cmr/bx/n/9 Tab. 3: |\OT1/cmr/m/n/9 Fermi-Energie /-Wellenvektor und -
- []
-
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 416.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 419.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 2753) in paragraph at lines 423--424
-\OT1/cmr/m/n/10 tats[]achlich schon den L[]angswiderstand aus-ge-rech-
+Overfull \hbox (2.8243pt too wide) in paragraph at lines 428--438
+ [] 
+ []
+
+<Data-Plots/11-4,2-2,1-zyklotron-B.pdf, id=328, 505.89pt x 331.4784pt>
+File: Data-Plots/11-4,2-2,1-zyklotron-B.pdf Graphic file (type pdf)
+
+<use Data-Plots/11-4,2-2,1-zyklotron-B.pdf>
+Package pdftex.def Info: Data-Plots/11-4,2-2,1-zyklotron-B.pdf used on input li
+ne 457.
+(pdftex.def)             Requested size: 238.96164pt x 156.57884pt.
+
+<Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf, id=332, 505.89pt x 331.4784pt>
+File: Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf Graphic file (type pdf)
+
+<use Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>
+Package pdftex.def Info: Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf used on input 
+line 465.
+(pdftex.def)             Requested size: 238.96164pt x 156.57884pt.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 485--485
+[]\OT1/cmr/bx/n/9 Tab. 5: |\OT1/cmr/m/n/9 Be-rech-nung des Zy-klo-tron-mas-sen-
+
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 452--453
+Underfull \hbox (badness 1092) in paragraph at lines 511--512
 \OT1/cmr/m/n/10 F[]ur Elek-tro-nen, die sich im Festk[]orper auf-hal-ten,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 478--478
-[]\OT1/cmr/bx/n/9 Tab. 5: |\OT1/cmr/m/n/9 Fermi-Energie /-Wellenvektor und -
+[7 <D:/Git/F-Praktikum/QHE/Data-Plots/11-4,2-2,1-zyklotron-B.pdf> <D:/Git/F-Pra
+ktikum/QHE/Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 537--537
+[]\OT1/cmr/bx/n/9 Tab. 6: |\OT1/cmr/m/n/9 Fermi-Energie /-Wellenvektor und -
  []
 
-[6]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 497.
+               Default added (so using `tbp') on input line 556.
 
-<Data-Plots/07-maxima_ablesen.pdf, id=347, 589.00049pt x 444.4605pt>
+<Data-Plots/07-maxima_ablesen.pdf, id=522, 589.00049pt x 444.4605pt>
 File: Data-Plots/07-maxima_ablesen.pdf Graphic file (type pdf)
 
 <use Data-Plots/07-maxima_ablesen.pdf>
-Package pdftex.def Info: Data-Plots/07-maxima_ablesen.pdf used on input line 49
-9.
+Package pdftex.def Info: Data-Plots/07-maxima_ablesen.pdf used on input line 55
+8.
 (pdftex.def)             Requested size: 238.96164pt x 180.32426pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--500
-[]\OT1/cmr/bx/n/9 Abb. 4: |\OT1/cmr/m/n/9 Ab-ge-le-se-ne Wer-te der ma-xi-ma-le
+Underfull \hbox (badness 10000) in paragraph at lines 559--559
+[]\OT1/cmr/bx/n/9 Abb. 6: |\OT1/cmr/m/n/9 Ab-ge-le-se-ne Wer-te der ma-xi-ma-le
 n
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 500--500
+Underfull \hbox (badness 4634) in paragraph at lines 559--559
 \OT1/cmr/m/n/9 L[]angsspannung. Die Feh-ler wur-den an-hand der
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 505--506
+Underfull \hbox (badness 2426) in paragraph at lines 564--565
 \OT1/cmr/m/n/10 Energie in-ner-halb der spin-auf-ge-spal-te-nen Landau-
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 514.
+               Default added (so using `tbp') on input line 573.
 
-<Data-Plots/07-Spinaufspaltung.pdf, id=350, 813.0375pt x 517.63388pt>
+<Data-Plots/07-Spinaufspaltung.pdf, id=525, 813.0375pt x 517.63388pt>
 File: Data-Plots/07-Spinaufspaltung.pdf Graphic file (type pdf)
 
 <use Data-Plots/07-Spinaufspaltung.pdf>
 Package pdftex.def Info: Data-Plots/07-Spinaufspaltung.pdf used on input line 5
-16.
+75.
 (pdftex.def)             Requested size: 238.96164pt x 152.13197pt.
- [7 <D:/Git/F-Praktikum/QHE/Data-Plots/07-maxima_ablesen.pdf> <D:/Git/F-Praktik
-um/QHE/Data-Plots/07-Spinaufspaltung.pdf
 
-pdfTeX warning: pdflatex (file D:/Git/F-Praktikum/QHE/Data-Plots/07-Spinaufspal
-tung.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
-ge
->] (D:\Git\F-Praktikum\QHE\main.bbl
+
+LaTeX Warning: Reference `zyklotronmasse' on page 8 undefined on input line 583
+.
+
+[8 <D:/Git/F-Praktikum/QHE/Data-Plots/07-maxima_ablesen.pdf>]
+Underfull \hbox (badness 1859) in paragraph at lines 598--616
+\OT1/cmr/m/n/10 Mit dem F-Praktikumsversuch zum Quanten-Hall-
+ []
+
+(D:\Git\F-Praktikum\QHE\main.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 18--26
 $\OT1/cmtt/m/n/9 fileadmin / 11999999 / Aufgabenstellung _ QHE . pdf$[][]\OT1/c
 mr/m/n/9 . --
@@ -1742,58 +1760,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--34
 $\OT1/cmtt/m/n/9 Erster _ Studienabschnitt _ Bachelor / V _ B _ Aktuelle _$
  []
 
-) [8
-
-] <Data-Plots/02-4,2-Hallplateaus.pdf, id=491, 505.89pt x 331.4784pt>
+) [9 <D:/Git/F-Praktikum/QHE/Data-Plots/07-Spinaufspaltung.pdf>]
+<Data-Plots/02-4,2-Hallplateaus.pdf, id=672, 505.89pt x 331.4784pt>
 File: Data-Plots/02-4,2-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-4,2-Hallplateaus.pdf>
 Package pdftex.def Info: Data-Plots/02-4,2-Hallplateaus.pdf used on input line 
-600.
+663.
 (pdftex.def)             Requested size: 497.92328pt x 326.26282pt.
 
-<Data-Plots/03-3,0-Hallplateaus.pdf, id=492, 505.89pt x 331.4784pt>
+<Data-Plots/03-3,0-Hallplateaus.pdf, id=673, 505.89pt x 331.4784pt>
 File: Data-Plots/03-3,0-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/03-3,0-Hallplateaus.pdf>
 Package pdftex.def Info: Data-Plots/03-3,0-Hallplateaus.pdf used on input line 
-607.
+670.
 (pdftex.def)             Requested size: 497.92328pt x 326.26282pt.
 
-<Data-Plots/04-2,1-Hallplateaus.pdf, id=493, 505.89pt x 331.4784pt>
+<Data-Plots/04-2,1-Hallplateaus.pdf, id=674, 505.89pt x 331.4784pt>
 File: Data-Plots/04-2,1-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/04-2,1-Hallplateaus.pdf>
 Package pdftex.def Info: Data-Plots/04-2,1-Hallplateaus.pdf used on input line 
-614.
+677.
 (pdftex.def)             Requested size: 497.92328pt x 326.26282pt.
  
 AED: lastpage setting LastPage
-[9
+[10
 
- <D:/Git/F-Praktikum/QHE/Data-Plots/02-4,2-Hallplateaus.pdf>] [10 <D:/Git/F-Pra
-ktikum/QHE/Data-Plots/03-3,0-Hallplateaus.pdf>] [11 <D:/Git/F-Praktikum/QHE/Dat
+ <D:/Git/F-Praktikum/QHE/Data-Plots/02-4,2-Hallplateaus.pdf>] [11 <D:/Git/F-Pra
+ktikum/QHE/Data-Plots/03-3,0-Hallplateaus.pdf>] [12 <D:/Git/F-Praktikum/QHE/Dat
 a-Plots/04-2,1-Hallplateaus.pdf>]
 
 Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 622.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 622.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
 (D:\Git\F-Praktikum\QHE\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 622.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 622.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 946D7765C3448BCAA79CD255DE59C8B5;894.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 622.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 685.
  ) 
 Here is how much of TeX's memory you used:
- 28487 strings out of 493921
- 553386 string characters out of 3147274
- 617760 words of memory out of 3000000
- 31197 multiletter control sequences out of 15000+200000
- 21884 words of font info for 82 fonts, out of 3000000 for 9000
+ 28518 strings out of 493921
+ 554148 string characters out of 3147274
+ 616760 words of memory out of 3000000
+ 31217 multiletter control sequences out of 15000+200000
+ 21538 words of font info for 81 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 74i,26n,77p,883b,1160s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 74i,19n,77p,883b,1160s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files/MiKTe
@@ -1814,16 +1835,16 @@ m/cmr9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/euler/eurm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols
-/msbm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.pf
-b>
-Output written on main.pdf (11 pages, 742796 bytes).
+onts/type1/public/amsfonts/cm/cmti9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmtt9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/euler/eurm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/euler/eurm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
+mbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbo
+ls/msbm7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1000.
+pfb>
+Output written on main.pdf (12 pages, 823226 bytes).
 PDF statistics:
- 833 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1017 PDF objects out of 1200 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 167 words of extra memory for PDF output out of 10000 (max. 10000000)
 
