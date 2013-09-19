@@ -10,6 +10,7 @@ from pylab import *
 from matplotlib.ticker import AutoMinorLocator, AutoLocator
 from scipy.interpolate import interp1d
 
+rc('font', family = 'serif', serif = 'STIXGeneral')
 txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75), (0, 0, 0)]
