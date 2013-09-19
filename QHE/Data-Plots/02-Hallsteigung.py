@@ -14,13 +14,14 @@ import matplotlib.pyplot as plt
 from pylab import *
 from matplotlib.ticker import AutoMinorLocator, AutoLocator
 
+rc('font', family = 'serif', serif = 'STIXGeneral')
 txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
 Eingaben=['4,2-Hallwiderstand-Magnetfeld_bereinigt.dat','3,0-Hallwiderstand-Magnetfeld_bereinigt.dat','2,1-Hallwiderstand-Magnetfeld_bereinigt.dat','1,5-Hallwiderstand-Magnetfeld_bereinigt.dat']
 
-Fall=3
+Fall=0
 txt_filename_to_open.append(Eingaben[Fall])
 line.append(1)
 # ------------------------------------------

@@ -16,6 +16,7 @@ from mpl_toolkits.axes_grid1.inset_locator import inset_axes, zoomed_inset_axes
 from mpl_toolkits.axes_grid.inset_locator import mark_inset
 from matplotlib.ticker import AutoMinorLocator, AutoLocator
 
+rc('font', family = 'serif', serif = 'STIXGeneral')
 txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
