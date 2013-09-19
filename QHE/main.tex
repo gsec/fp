@@ -285,9 +285,9 @@ Die Oberflächenladungsdiche des 2DEGs wird auf drei verschiedene Arten bestimmt
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
-Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI{1750+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
+Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_H=\SI{1775+-100}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
 \begin{equation}
-N_S=\frac{1}{A_H e} = (3.57 \pm 0.20) \cdot 10^{11}\SI{}{\per\square\centi\meter}.
+N_S=\frac{1}{A_H e} = (3.52 \pm 0.20) \cdot 10^{11}\SI{}{\per\square\centi\meter}.
 \label{ns1}
 \end{equation}
 
@@ -353,12 +353,12 @@ Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabell
 Der Fehler der gemittelten Ladungsträgerdichten wurden aus Gauß'scher Fehlerfortpflanzung bestimmt.\\
 \note{Fehleranalyse}
 
-\subsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
+\subsubsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
 Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
 \begin{equation}
 \frac{1}{B}=\frac{e}{N_{\rm LL} h}=\frac{e}{N_S h} \nu.
 \end{equation}
-Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun diskret fourie-transformieren. Als Periodendauer in $\frac{1}{B}$ können wir
+Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun ableiten und diskret fourie-transformieren. Als Periodendauer in $\frac{1}{B}$ können wir
 \begin{equation}
 T_{\frac{1}{B}}=(1375\pm 31) \cdot 10^{-4}\SI{}{\per\tesla}
 \label{periodizitaet}
@@ -375,29 +375,30 @@ aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der
 
 Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{e}{N_S h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden werden.
 
-Dadurch wird der Wert für die Ladungsträgerdichte festgelegt.
+Durch die Periodendauer $T_{\frac{1}{B}}$ wird somit der Wert für die Ladungsträgerdichte festgelegt.
 \begin{equation}
 N_S=\frac{2 e}{T_{\frac{1}{B}} h}=(3.517 \pm 0.079) \cdot 10^{-11}\SI{}{\per\square\centi\meter}
 \label{ns_periode}
 \end{equation}
-Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils der selbe Wert ermittelt.
+Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils exakt der selbe Wert abgelesen.
 
-Um die Ergebnisse aller drei Methoden zusammen zu fassend, tragen wir die ermittelten Werte für $N_S$ in Tabelle \ref{nswerte} ein und bilden die, mit den inversen Fehlern gewichteten, Mittelwerte $\overline{N_S}(T)$ die wir für die weiteren Rechnungen verwenden.
+Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermittelten Werte für $N_S$ in Tabelle \ref{nswerte} ein und bilden die, mit den inversen Fehlern gewichteten, Mittelwerte $\overline{N_S}(T)$ die wir für die weiteren Rechnungen verwenden.
 
 \begin{table}[htp]
 	\begin{center}
 		\begin{tabular}{rrrrr}
+			& \multicolumn{2}{l}{$N_S$-Werte in $\SI{e11}{\per\square\centi\meter}$}&&\\
 			\hline
-			$T[/frac{1}{K}]$ & Hall-Steigung & $k_F[]$ & $v_F[]$\\
+			$T[\frac{1}{K}]$ & Hall-Steigung & Hall-Plateaus & SDH-Oszillationen & $\overline{N_S}$\\
 			\hline
-			4.2 &&&\\
-			3.0 &&&\\
-			2.1 &&&\\
-			1.5 &&&\\
+			4.2 &3.52(20)&??&3.517(79) &??\\
+			3.0 &3.61(20)&??&3.517(79) &??\\
+			2.1 &3.58(20)&??&3.517(79) &??\\
+			1.5 &2.58(20)&??&3.517(79) &??\\
 			\hline
 		\end{tabular}
 		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
-		\label{fermitabelle}
+		\label{nswerte}
 	\end{center}
 \end{table}
 
@@ -459,25 +460,26 @@ E_F&=N_S \cdot \frac{\hbar^2 \pi}{m}\\
 k_F&=\sqrt{2 \pi N_S}\\
 v_F&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_S}
 \end{align}
-Die Ergebnisse sind für die verschiedenen Temperaturen Tabelle \ref{Fermi} aufgelistet.
+Für nicht verschwindende Magnetfelder ist zu bemerken, dass je nach Eichung der Wellenwektor $\vec{k}$ keine sinnvolle Quantenzahl mehr darstellt und die Energiedispersion durch die Laundau-Quantenzahlen beschrieben wird.
+Für B=0 sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
 
 \begin{table}[htp]
 	\begin{center}
 		\begin{tabular}{rrrrr}
 			\hline
-			$T[]$ & $E_F[]$ & $k_F[]$ & $v_F[]$\\
+			$T[\frac{1}{\mathrm{K}}]$ & $E_F[]$ & $k_F[]$ & $v_F[]$\\
 			\hline
-			4.2 &&&\\
-			3.0 &&&\\
-			2.1 &&&\\
-			1.5 &&&\\
+			4.2 &??&??&??\\
+			3.0 &??&??&??\\
+			2.1 &??&??&??\\
+			1.5 &??&??&??\\
 			\hline
 		\end{tabular}
 		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
 		\label{fermitabelle}
 	\end{center}
 \end{table}
-
+Obwohl die magnetische Feldstärke keinen Einfluss auf die Ladungsträgerflächendichte hat, beeinflusst sie sehr wohl die 
 %
 % =============================================================================
 \section{Zusammenfassung}
