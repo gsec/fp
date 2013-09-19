@@ -174,23 +174,30 @@ Idealer Weise sind diese Energieniveaus delta-förmig, in der Realität aber oft
 \label{Experiment}
 % =============================================================================
 %
-\begin{compactitem}
-	\item Kryostat
-	\item Kohlethermometer
-	\item Hallbar - Probe
-	\item Aufbau
-	\item Magnetfeld
-\end{compactitem}
-%
+Im folgendem Versuch messen wir den Quanten-Hall-Effekt an einer GaAs/AlGaAs Hallbar. Die Hallbar besitzt 6 Anschlüsse die in Abbildung~\ref{fig.hallbar} zu sehen sind. 
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=.8\columnwidth]{Bilder/hallbar.pdf}
+		\caption{Verwendete Struktur der Hallbar mit Abmessungen.}
+		\label{fig.hallbar}
+	\end{center}
+\end{figure}
+
+Um die Hallbar anzusteuern liegt ein Probenbox am Arbeitsplatz das, mit der Hallbar verbunden ist. An den Kontakten 5 und 8 kann die Längsspannung und an den Kontakten 3, 4, 6 und 7 die Querspannung abgegriffen werden.
+Da für die Messung des Quanten-Hall-Effektes niedrige Temperaturen nötig sind, befindet sich die Probe in einen Kryostaten im Heliumbad. Zur Wärmeisolation befindet sich das Bad innerhalb von Vakuum-Kammern und einem Stickstofftank, was den gesamten Kryostaten ergibt. Durch eine Druckregelung mit Manostat kann der Dampfdruck von Helium verändert werden, wodurch sich Temperaturen zwischen \SI{1.5}{\kelvin} und \SI{4.2}{\kelvin} einstellen lassen. Die Bestimmung der Temperatur an der Probe erfolgt mit einem geeichten, temperaturabhängigen Kohlewiderstand, dem Allen Bradley-Widerstand, der mit einem Spannungsmessgerät ausgelesen wird. Zur Erzeugung des Hall-Effektes wird ein zwischen \SI{0}{\tesla} und \SI{9}{\tesla} verstellbares Magnetfeld senkrecht zur Probenebene angelegt. Zur Messung des Spannungsabfalls an der Probe wird ein mit \SI{13}{\hertz} und \SI{1}{\volt} betriebener Funktionsgenerator über einen 1000:1 Spannungsteiler und einem Vorwiderstand von $R_{\rm Shunt} = \SI{4981}{\ohm}$ an das Probenbox angelegt.
+
+Die Spannung, die an der Probe anliegt wird am Vorwiderstand abgegriffen. Die Querspannung sowie die Shuntspannung sind über zwei Lock-In-Verstärker mit einem Computer verbunden. Die gemessenen Daten können mit LabView aufgezeichnet werden, wobei das Magnetfeld, die Shunt- und die Querspannung über die Zeit aufgezeichnet wird.
+
 % =============================================================================
 \section{Versuchsdurchführung}
 \label{versuch}
 % =============================================================================
 %
-Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Spannungen $U_{\rm A,B}$, $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ bei steigendem Magnetfeld von $0 \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $9 \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-ins verwenden nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch Regelung des Druckes des Heliums im Kryostaten können wir die Temperatur regeln uns somit die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
+Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Shuntspannung $U_{\rm Shunt}$ und die Querspannungen $U_{xx}$ bzw. $U_{\rm Hall}$ bei steigendem Magnetfeld von $0 \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $9 \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-ins verwenden nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch die Druckregelung des Heliums im Kryostaten können wir die Temperatur regeln und die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
 Um eine Abhängigkeit der Temperatur erkennen zu können messen wir bei den Temperaturen $T=\SI{4.2}{\kelvin}$, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
-Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die Füllfaktoren bestimmen. Des weiteren können wir die Ladungsträgerdichte, die relative Spinaufspaltung, Elektronenbeweglichkeit und Leitfähigkeit der Probe bestimmen. Aus der Amplitude der Shubnikov-de-Haas Oszillation lässt sich die Zyklotronmasse.
+Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die Füllfaktoren bestimmen. Des Weiteren können wir hieraus die Ladungsträgerdichte, die relative Spinaufspaltung, Elektronenbeweglichkeit und Leitfähigkeit der Probe ermitteln und aus den Amplituden der Shubnikov-de-Haas Oszillation lässt sich die Zyklotronmasse berechnen.
 
 %
 % =============================================================================
@@ -199,31 +206,13 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 % =============================================================================
 %
 
+Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums vor allem an den Stellen \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} schwierig einzustellen und konnte darüber hinaus nicht konstant gehalten werden. Um die Schwankung während der Messung abzuschätzen, haben wir jeweils vor und nach der Messung die Temperatur über den Allen-Bradley Widerstand ausgelesen. Folglich lagen unsere gemittelten Temperaturwerte bei \SI{4.2}{\kelvin}, welcher durch die Sidetemperatur des Heliums nahezu konstant ist, bei \SI{3.03(50)}{\kelvin}, bei \SI{2.1(30)}{\kelvin} und bei \SI{1.53(20)}{\kelvin}. In folgender Auswertung verwenden wir für die Bezeichnungen nach der Praktikumsanleitung durchgehend die Werte \SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
-\begin{compactitem}
-	\item Temperaturen im Experiment $\rightarrow$ Auswertung werden zur Beschreibung die Temperaturwerte wie in Anleitung (\SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \dots) verwendet.
-	\item Hystereseeffekte $\rightarrow$ bereinigte Daten für den Hall\textbf{widerstand}
-	\item Fehleranalyse/-abschätzung der Spannungsmessungen!!
-\end{compactitem}
+Die gemessenen Spannungen über die Lock-In-Verstärker sind durch das Messgerät relativ genau bestimmt. Allerdings wird der Fehler durch ein Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{10e-4}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \SI{5}{\percent} abgeschätzt. Somit können wir den Widerstand für die meisten Messungen als Hauptfehlerquelle identifizieren.
+
+\note{Hystereseeffekte $\rightarrow$ bereinigte Daten für den Hall-/ und Längswiderstand}
 
 Hall-Widerstand $R_{\rm H}=U_{\rm H}/I_{\rm H} = U_{\rm H}/(U_{\rm Shunt}/R_{\rm Shunt})$ aus den gemessenen Daten für die Hallspannung $U_{\rm Hall}$ und denen der Probenspannung $U_{\rm Shunt}$
-
-\paragraph*{Fehler}
-\begin{compactitem}
-	\item Fehler $U_{H}$: Rauschen $10^{-4}$
-	\item Fehler $I_{H}$: Rauschen $10^{-4}$
-	\item Fehler Shuntwiderstand: $5\,\%$
-	\item Ablesefehler Hallwiderstand $0.08\%$
-	\item Fehler Temperatur\\
-		schwer einstellbar, nicht konstant, ändert sich während der Messung,
-		Anfangs- und Endtemperatur gemessen und mittlere Abweichung bestimmt
-		\begin{compactitem}
-			\item für \SI{4.2}{\kelvin} exakt
-			\item für \SI{3.0}{\kelvin} $\pm \SI{0.5}{\kelvin}$ um \SI{3.03}{\kelvin}
-			\item für \SI{2.1}{\kelvin} $\pm \SI{0.3}{\kelvin}$ um \SI{2.1}{\kelvin}
-			\item für \SI{1.5}{\kelvin} $\pm \SI{0.2}{\kelvin}$ um \SI{1.53}{\kelvin}
-		\end{compactitem}
-\end{compactitem}
 % 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Hall-Plateaus, Klitzing-Konstante und Füllfaktoren}
@@ -259,14 +248,29 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir aus dem 
 		12 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
 		14 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
 		\hline
-		$\overline{R_{\rm K}\nu}$ & \SI[separate-uncertainty=false]{24860(54)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm} & \SI[separate-uncertainty=false]{24840(49)}{\ohm}
 	\end{tabular}
 	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
 	\label{klitzing}	
 	\end{center}
 \end{table}
 
-Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils den selben Wert, der Klitzing-Konstante genannt wird. 
+Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils den selben Wert, der Klitzing-Konstante genannt wird. Diese Werte sind in Tabelle~\ref{klitzing2} aufgetragen.
+
+\begin{table}[htp]
+\begin{center}
+	\begin{tabular}{rr}
+		\hline
+		$T\,[\mathrm{K}]$ & $\overline{R_{\rm K}\nu}\,[\Upomega]$\\
+		\hline
+		4.2 & \SI[separate-uncertainty=false]{24868(54)}{\ohm} \\
+		3.0 & \SI[separate-uncertainty=false]{25255(49)}{\ohm} \\
+		2.1 & \SI[separate-uncertainty=false]{25260(49)}{\ohm} \\
+		1.5 & \SI[separate-uncertainty=false]{25074(49)}{\ohm}
+	\end{tabular}
+	\caption{Aus Tabelle~\ref{klitzing} berechnete gemittelte Werte für $R_{\rm K}\nu$ mit Fehler.}
+	\label{klitzing2}
+\end{center}
+\end{table}
 
 Aus der Ablesegenauigkeit der Auswertmethode von $10\Upomega$ lässt sich der Fehler der in Tabelle~\ref{klitzing} gemittelten Klitzing-Konstanten für verschieden Temperaturen berechnen. Die Messfehler aus denen die Widerstandswerte berechnet wurden ist im Vergleich zu der Ablesegenauigkeit vernachlässigbar ($<0.1\%$). Für die Berechnung wurden die Widerstandswerte mit den entsprechenden Füllfaktoren gewichtet und aus der Genauigkeit und Fehlerfortpflanzung die gemittelten Widerstandswerte mit Fehler bestimmt. 
 
@@ -427,7 +431,7 @@ Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemesse
 	\begin{center}
 		\begin{tabular}{ccccc}
 			\hline
-			$T[\rm T]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\frac{1}{\Upomega}]$ & $A_{\rm H}\left[ \frac{\mathrm{m}^2}{\mathrm{C}} \right]$ & $\mu \left[ \frac{\mathrm{m}^2}{\mathrm{C}\Upomega} \right]$\\
+			$T[\rm K]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\frac{1}{\Upomega}]$ & $A_{\rm H}\left[ \frac{\mathrm{m}^2}{\mathrm{C}} \right]$ & $\mu \left[ \frac{\mathrm{m}^2}{\mathrm{C}\Upomega} \right]$\\
 			\hline
 			4.2 & 521(26) & 0.00575(29) & 1799(60) & 10.35(52)\\
 			3.0 & 505(25) & 0.00593(30) & 1783(61) & 10.59(53)\\
@@ -492,7 +496,11 @@ Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der 
 	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.03402 \pm 0.0058 \label{zyklotron1}\\
 	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.0278 \pm 0.011 \label{zyklotron2}
 \end{align}
-
+ergeben. Das gesamte gemittelte Massenverhältnis ist somit
+\begin{equation}
+	\frac{m_{\rm c}}{m_{\rm e}} = 0.0318 \pm 0.0076.
+	\label{zyklotronmasse}
+\end{equation}
 Die Fehler der Amplituden und des $B$-Felds der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte sind durch einen Ablesefehler von $\pm 0.001$, können jedoch zur Berechnung des Massenverhältnisses vernachlässigt werden, da der Fehler in der Temperaturbestimmung deutlich darüber liegt. Die Temperaturschwankungen sind zu Beginn der Auswertung~\ref{Auswertung} genannt. Die Auswirkung von Temperaturschwankungen auf die gemessenen Spannungen sind allerdings nicht bekannt. Somit bestimmen wir den Fehler der gemittelten Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt.
 
 Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
