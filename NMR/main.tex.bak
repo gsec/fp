@@ -72,6 +72,7 @@
 
 \newcommand{\tra}{$\rightarrow$}
 \newcommand{\Tra}{$\Rightarrow$}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -202,13 +203,30 @@ Der verwendete Versuchsaufbau ist in Abbildung~\ref{fig.aufbau} schematisch darg
 
 \begin{figure}[htp]
 	\begin{center}
-		\includegraphics[width=\columnwidth]{Bilder/nmr-aufbau}
+		\includegraphics[width=\columnwidth]{Bilder/nmr_aufbau}
+		\caption{Schematischer Versuchsaufbau nach~\citet{anleitung}.}
+		\label{fig.versuchsaufbau}
 	\end{center}
 \end{figure}
 
 Das für die Magnetisierung verwendete destillierte Wasser wird von einer Pumpe  mit einstellbarer Geschwindigkeit (über die betriebene Spannung) durch einen Wasserkreislauf gepumpt.
 Als erstes wird das Wasser durch einen Polarisationsmagneten befördert. Im Magneten durchläuft es ein Labyrinth mit dem die Verweildauer erhöht wurde um eine ausreichende Magnetisierung zu erzeugen.
 Das magnetisierte Wasser durchläuft dann ein Hemholzspulenpaar mit dem ein statisches Magnetfeld erzeugt werden kann. Im Zentrum der Spulen ist der Wasserschlauf von einer Einstrahlspule umwickelt, die über ein Funktionsgenerator mit \SI{50}{\ohm} Output, ein Wechselfeld $B_{1}$ erzeugen kann. Mit dem Wechselfeld kann im Versuch die Richtung der Magnetisierung manipuliert werden. Der Teil wird somit auch Manipulator genannt.
+Aus dem Manipulator wird das Wasser in den Analysator gepumpt, in dem die $z$-Komponente der Magnetisierung gemessen werden kann. Der Analysator besteht aus einem Hufeisenmagneten, der ein konstantes Magnetfeld erzeugt. Der Hufeisenmagnet ist zudem mit einer Spule umwickelt an die ein Wechselfeld mit \SI{50}{\hertz}, das sogenannte Wobbelfeld, angelegt wird. Somit können wir ein sich zeitlich langsam änderndes Magnetfeld erzeugen, das zu jedem Zeitpunkt für die Magnetisierung als statisch angesehen werden kann. Um den Schlauch im Inneren des Hufeisenmagneten ist eine weitere Spule gewickelt, die mit einem Schwingkreis verbunden ist, dessen Frequenz des Wechselfeldes wir einstellen können. 
+Nach dem Analysator gelangt das Wasser zurück in einem Sammelbehälter indem durch eine lange Verweilzeit das Wasser vollständig depolarisieren kann. Der Sammelbehälter schließt letztendlich den Wasserkreislauf.
+
+Durch den Aufbau des Analysators kann die Frequenz des Regelkreis ebenso auf Resonanzfrequenz eingestellt werden, wodurch Übergänge zwischen den Energieniveaus der Protonen angeregt werden. Dieser Übergang absorbiert oder überträgt Leistung auf den Schwingkreis. Der Schwingkreis wird automatisch nachgeregelt. Aus diesem Leistungsausgleich entsteht unser Messsignal.
+Das Signal des Analysators kann über einen Sample/Hold Verstärker (S/H-Verstärker) mit dem Oszillographen verbunden und mit dem Computer ausgelesen werden.
+Der S/H-Verstärker wird durch die selbe Sinusspannung getriggert, die das Wobbelfeld erzeugt. Der Verstärker misst zu jedem Triggerimpuls kurz das Messsignal und gibt es bis zum nächsten Impuls als Gleichspannung aus. So kann durch richtige Einstellung der Phase die Höhe der Resonanzpeaks ausgelesen werden.
+
+Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} gezeigt. Im Versuch wurden allerdings nur für den jeweiligen Versuchsteil wichtige Geräte miteinander verschaltet.
+
+\begin{figure}[htp]
+	\includegraphics[width=\columnwidth]{Bilder/messbeschaltung.pdf}
+	\caption{Beschaltung des gesamten Messaufbaus. Auszüge aus~\citet{anleitung}.}
+	\label{fig.beschaltung}
+\end{figure}
+
 
 % =============================================================================
 \section{Versuchsdurchführung}
@@ -329,11 +347,63 @@ Das magnetisierte Wasser durchläuft dann ein Hemholzspulenpaar mit dem ein stat
 \subsection{Inbetriebnahme des Funktionsgenerators}
 \label{auswertung1}
 
+Um die Genauigkeit des Funktionsgenerators zu überprüfen wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} in der Amplitude und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
+
+\begin{table}[htp]
+\begin{center}
+	\begin{tabular}{cc|ccc}
+		\hline
+		\multicolumn{2}{c|}{Funktionsgenerator} &\multicolumn{3}{c}{Oszillograph}\\
+		\footnotesize Amplitude & \footnotesize Frequenz & \footnotesize Spitze/Spitze & \footnotesize Amplitude & \footnotesize Effektivwert\\
+		\hline
+		\SI{50}{\milli\volt} & \SI{1.3}{\kilo\hertz} & \note{} & \note{} & \note{}\\
+		\SI{50}{\milli\volt} & \SI{2.6}{\kilo\hertz} & \note{} & \note{} & \note{}\\
+		\SI{100}{\milli\volt} & \SI{1.3}{\kilo\hertz} & \note{} & \note{} & \note{}\\
+		\SI{100}{\milli\volt} & \SI{2.6}{\kilo\hertz} & \note{} & \note{} & \note{}\\
+		\hline
+	\end{tabular}
+	\caption{Vergleich der eingestellten Werte am Funktionsgenerator mit den am Oszilloskop gemessen Daten, sowie die gemessenen Spitze/Spitze Werte, die Amplituden und Effektivwerten.}
+	\label{tab.funktionsgenerator}
+\end{center}
+\end{table}
+
+Aus dem Vergleich der Werte in Tabelle~\ref{tab.funktionsgenerator} ergibt sich ein Unterschied von \note{Faktor} zwischen den Werten am Oszillographen und den eingestellten Werten. Folglich muss in allen Messungen dieser Art der Korrekturfaktor berücksichtigt werden.
+
+Die Einstrahlspule im Manipulator besitzt einen kleinen Innenwiderstand. Allerdings ist der Spule um den Strom zu begrenzen und messbar zu machen ein Vorwiderstand von \SI{47}{\ohm} eingebaut~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $E_{\rm Spule}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die Amplituden \SI{10}{\milli\volt}, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und ein ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $E_{\rm Spule}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
+
+\begin{figure}[htp]
+%	\includegraphics[width=\columnwidth]{}
+	\caption{Gemessene Spulenspannung an der Einstrahlspule $U_{\rm ES}$ über die eingestellte Spannung am Funktionsgenerators $E_{\rm FG}$ zur Bestimmung des Eichfaktors.}
+	\label{fig.eichfaktor}
+\end{figure}
+
+Die Werte in Abbildung~\ref{fig.eichfaktor} sind mit den entsprechenden Fehlern in der Amplitude des Funktionsgenerators (\SI{2}{\percent}) und der Spannung am Oszillographen (\SI{3}{\percent}) aufgetragen. Zur Bestimmung der Steigung haben wir eine ausgleichende Gerade mit Fehlergeraden an die Daten gelegt.
+Für den gemessenen Eichfaktor ergibt sich somit
+\begin{align}
+	E_{\rm Spule,\SI{1.3}{\kilo\hertz}} &= \frac{U_{\rm ES}}{U_{\rm FG}} = \note{}\\
+	E_{\rm Spule,\SI{2.6}{\kilo\hertz}} &= \frac{U_{\rm ES}}{U_{\rm FG}} = \note{}.
+\end{align}
+Aus den gemessen Werten erkennen wir, dass der Eichfaktor unabhängig von der gemessenen Frequenz der Wechselspannung an der Einstrahlspule ist. Dies ist auch wichtig um den Eichfaktor für spätere Versuche verwenden zu können, da dort an unterschiedlichen Frequenzen gemessen wird.
+
+Der Eichfaktor kann zudem theoretisch aus der Kenntnis der Widerstandswerte bestimmt werden. 
+\begin{equation}
+	E_{\rm Spule,theo} = \frac{R_{\rm ES}}{R_{\rm FG}} = \SI{0.940(19)}{}
+\end{equation}
+Der Fehler ergibt sich aus dem geschätzten Fehler des Vorwiderstandes von \SI{2}{\percent}.
+
+Aus dem Vergleich des experimentell bestimmten Wertes mit dem berechneten sehen wir eine \note{} Übereinstimmung im Rahmen der Fehler. Für nachfolgende Messungen verwenden wir den aus unserer Messung erhaltenen gemittelten Eichfaktor von
+\begin{equation}
+	E_{\rm Spule} = \frac{U_{\rm ES}}{U_{\rm FG}} = \note{}.
+\end{equation}
+Der Fehler entspricht dem gemittelten Fehler der erhaltenen Werte bei verschiedenen Frequenzen.
+
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Inbetriebnahme Wasserkreislauf, Polaristor und Analysator}
 \label{auswertung2}
+
+In diesem Versuchsteil sollte bei eingeschalteter Wasserpumpe, Analysator und Polarisator der Schwingkreis des Analysators auf die Resonanzfrequenz eingestellt werden. Das Signal konnten wir über den Oszillographen beobachtet und durch verändern der Frequenz des Schwingkreises so einstellen, dass die erhaltenen Resonanzsignale mit einem äquidistanten Abstand detektiert werden.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
