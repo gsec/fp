@@ -72,7 +72,7 @@
 
 \newcommand{\tra}{$\rightarrow$}
 \newcommand{\Tra}{$\Rightarrow$}
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -262,6 +262,8 @@ Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} g
 \subsection{Inbetriebnahme Computer und Messung von $S2(t_{12})$}
 \label{vorbereitung3}
 
+
+
 \begin{compactitem}
 	\item Messung von $S(t)$ und Resonanzfrequenz bei verschiedenen Impulsabständen $t_{12}$
 	\item[d.h.] Resonanzfall finden und leicht verstellen + schauen was passiert \--- Abstände der Peaks
@@ -405,6 +407,60 @@ In diesem Versuchsteil sollte bei eingeschalteter Wasserpumpe, Analysator und Po
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Inbetriebnahme Computer und Messung von $S2(t_{12})$}
 \label{auswerung3}
+
+Im dritten Versuchsteil soll die Resonanzfrequenz der Protonenspins im Magnetfeld des Analysator-Magneten bestimmt werden.
+Daraus lassen sich die magnetische Feldstärke des Analysator-Magneten und die Energieaufspaltung der Protonen-Spins bestimmen.
+Wir variieren dazu die Analysatorfrequenz in kleinen Schritten.
+Zweimal pro Periode des Wobbelstromes tritt dabei der Resonanzfall im äußeren Feld auf, wie in \cref{wobbel} skizziert ist.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=0.7\columnwidth]{Bilder/Wobbel}
+		\caption{Die Analysatorfrequenz trifft zweimal pro Periode des Wobbelfeldes die Resonanzfrequenz. Sie bestimmt mit ihrer Höhe den zeitlichen Abstand zweier Resonanzfälle.}
+		\label{wobbel}
+	\end{center}
+\end{figure}
+Damit wird deutlich, dass die Resonanzfrequenz und der zeitliche Abstand $t_{12}$ zwischen zwei Resonanzfällen einen Cosinus-Zusammenhang besitzen.
+Wie in \cref{t12} messen wir für 10 verschiedene Analysatorfrequenzen den zeitlichen Abstand zweier der Resonanzen aus.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/02-Zeitabstaende.pdf}
+		\caption{Für jede Frequenz wird der zeitliche Abstand zweier Resonanzereignisse abgelesen.}
+		\label{t12}
+	\end{center}
+\end{figure}
+Die Ablesegenauigkeit der Zeitdifferenzen schätzen wir auf $\SI{0.0002}{}$ Sekunden. 
+Der Frequenzzähler zeigte während der Messung leicht unterschiedliche Werte im Bereich von $\SI{\pm 1}{\hertz}$ an.
+Diese Unsicherheit vernachlässigen wir gegenüber der Ablesegenauigkeit der Zeitdifferenzen.
+Nun tragen wir die Frequenzen über die abgelesenen Zeitdifferenzen  in \cref{resonanzfrequenz} auf und lesen bei $\SI{0.01}{\second}$ die Resonanzfrequenz der Protonen im Feld des Dauermagneten ab.
+\begin{align}
+	\nu_{\mathrm{res}}=\SI{4712.31\pm 0.20}{\kilo\hertz}
+\end{align}
+Der Fehler der Resonanzfrequenz ergibt sich auch der Unsicherheit der Zeitdifferenz und der Steigung der Fit-Kurve im Ablesepunkt.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/02-Resonanzfrequenz.pdf}
+		\caption{Abgelesene Zeitdifferenzen sind in Abhängigkeit der Frequenz aufgetragen und besitzen eine Cosinus-Abhängikeit.}
+		\label{resonanzfrequenz}
+	\end{center}
+\end{figure}
+Die Energieaufspaltung und die Magnetfeldstärke des Dauermagneten ergeben sich nun zu
+\begin{align}
+	\Delta E =h\nu_{\mathrm{res}}=\SI[separate-uncertainty=false]{19.48854(83) e-9}{\eV}
+\end{align}
+und
+\begin{align}
+	B_0=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}
+\end{align}
+%\begin{compactitem}
+%	\item Messung von $S(t)$ und Resonanzfrequenz bei verschiedenen Impulsabständen $t_{12}$
+%	\item[d.h.] Resonanzfall finden und leicht verstellen + schauen was passiert \--- Abstände der Peaks
+%	\item Signal mit und ohne Terminator betrachten
+%	\item Frequenz des Schwingkreises ändern + zehn Aufnahmen mit dem Computer \--- Frequenz notieren!
+%	\item schrittweise Änderung der Analysatorspule \--- Aufnahme der Zeitdifferenz der Peaks
+%	\item[\tra] Resonanzfrequenz bei $t_{12} = \SI{10}{\milli\second}$
+%	\item[\Tra] Energieaufspaltung und Magnetfeld im Analysator
+%\end{compactitem}
+
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
