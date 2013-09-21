@@ -1,29 +1,29 @@
 # -*- coding: utf-8 -*-
 
 
-#from scipy import *
+from scipy import *
 
-#from scipy.optimize import *
-#from matplotlib import rc
+from scipy.optimize import *
+from matplotlib import rc
 from numpy import *
 import matplotlib.pyplot as plt
 
-#from fitting import *
-#from pylab import *
+# from fitting import *
+from pylab import *
 
-#rc('font', family = 'serif', serif = 'STIXGeneral')
-#fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
+rc('font', family = 'serif', serif = 'STIXGeneral')
+fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
 
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
-#data = genfromtxt("01-Funktionsgenerator-50mV-1,3kHz.dat")
-#print data
+data = genfromtxt("01-Funktionsgenerator-50mV-1,3kHz.dat")
+print data
 
-#t = data[:,0]
-#U_A = data[:,1]
-#x=t
-#y=U_A
+t = data[:,0]
+U_A = data[:,1]
+x=t
+y=U_A
 
 #fitfunc = lambda p, x: p[0] * exp(-p[1] * (x - p[2])**2) + p[3]
 #errfunc = lambda p, x, y: fitfunc(p, x) - y
@@ -31,8 +31,8 @@ import matplotlib.pyplot as plt
 #p1, success = optimize.leastsq(errfunc, p0[:], args=(x, y))
 
 	
-#ax = fig.add_subplot(111)
-#ax.plot(t, U_A, "b", label=u"Messwerte")
+ax = fig.add_subplot(111)
+ax.plot(t, U_A, "b", label=u"Messwerte")
 
 #ax.set_xlabel(u"Magnetfeld $B$")
 #ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}$")
@@ -40,7 +40,7 @@ import matplotlib.pyplot as plt
 #ax.legend(loc=0)
 
 #fig.savefig("03-3,0-Hallplateaus.pdf")
-#show()
+show()
 
 
 # #################################################################################
