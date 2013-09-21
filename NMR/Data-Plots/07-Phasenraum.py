@@ -20,7 +20,8 @@ Plots=0
 if Alle_Daten_plotten==True:
     txt_filename_to_open=[]
     for i in range(10):
-        filename="03-Resonanzfrequenz-"+str(i)+".dat"
+   05-phasenraum-010mV-minmax-FM.dat
+        filename="05-phasenraum-"+str(i)+"mV-minmax-FM.dat"
         txt_filename_to_open.append(filename)
         
     for n in range(len(txt_filename_to_open)):
