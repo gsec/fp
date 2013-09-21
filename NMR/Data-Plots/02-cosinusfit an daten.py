@@ -2,7 +2,6 @@
 
 
 from scipy import *
-
 from scipy import optimize
 from matplotlib import rc
 from numpy import *
@@ -17,8 +16,12 @@ fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k'
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
-data = genfromtxt("01-Funktionsgenerator-50mV-1,3kHz.dat")
-#print data
+data1 = genfromtxt("01-Funktionsgenerator-50mV-1,3kHz.dat")
+data2 = genfromtxt("01-Funktionsgenerator-50mV-2,6kHz.dat")
+data3 = genfromtxt("01-Funktionsgenerator-100mV-1,3kHz.dat")
+data4 = genfromtxt("01-Funktionsgenerator-100mV-2,6kHz.dat")
+
+data = data4
 
 t = data[:,0]
 U_A = data[:,1]
@@ -26,14 +29,42 @@ x = data[:100,0]
 y = data[:100,1]
 print type(x)
 
+
+
 fitfunc = lambda p, x: p[0] * cos(2*pi*p[1]*x+p[2])+p[3]
 errfunc = lambda p, x, y: fitfunc(p, x) - y
-p0 = [5.0e-02, 1.3e3, -1.9, 1.8e-4]
+p0 = [5.0e-02, 2.6e3, -1.9, 1.8e-4]
 pbest, success = optimize.leastsq(errfunc, p0, args=(x, y))
 #print x 
 #print y
 print pbest
 #print cos(1*x+pbest[2])	
+def residual_var(pbest,xdata,ydata):
+	sum=0.0
+	for i in range(len(xdata)):
+		sum+=(errfunc(pbest, xdata[i], ydata[i]))**2
+	return sum
+
+print "pbest: ",pbest
+# zweiter outout ist die Kovarianzmatrix
+out= optimize.leastsq(errfunc, p0, args=(x, y), full_output=1)
+cov_x=out[1]
+print "cov_x: ",cov_x
+# das Residuum des Fits
+print "residual_var(pbest,xdata,ydata): ",residual_var(pbest,x,y)
+# und das reduzierte chi quadrat berechnen
+reduced_chi_square=residual_var(pbest,x,y)/(len(x)-len(pbest))
+print "reduced_chi_square: ",reduced_chi_square
+# Kovarianzmatrix wird reduziert durch chi quadrat
+red_cov_x=cov_x*reduced_chi_square
+# in den diagonaleintraegen stehen die Varianzen der Parameter
+# sqrt liefert die Standardabweichungen
+std_error = np.array([sqrt(red_cov_x[i, i]) for i in range(len(pbest))])
+print "std_error: ",std_error
+
+
+
+
 ax = fig.add_subplot(111)
 ax.plot(t, U_A, "b", label=u"Messwerte")
 x = linspace(0,t[-1],100000)
