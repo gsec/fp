@@ -380,7 +380,7 @@ Die Einstrahlspule im Manipulator besitzt einen kleinen Innenwiderstand. Allerdi
 Die Werte in Abbildung~\ref{fig.eichfaktor} sind mit den entsprechenden Fehlern in der Amplitude des Funktionsgenerators (\SI{2}{\percent}) aufgetragen. Zur Bestimmung der Steigung haben wir eine ausgleichende Gerade mit Fehlergeraden an die Daten gelegt. Die Fehler des Fits können vernachlässigt werden.
 Für den gemessenen Eichfaktor ergibt sich somit
 \begin{equation}
-	E_{\rm Spule,\SI{1.3}{\kilo\hertz}} = \frac{U_{\rm ES}}{U_{\rm FG}} = \SI{0.4839(97)}{}
+	E_{\rm Spule} = \frac{U_{\rm ES}}{U_{\rm FG}} = \SI{0.4839(97)}{}
 \end{equation}
 Aus den gemessen Werten erkennen wir, dass der Eichfaktor unabhängig von der gemessenen Frequenz der Wechselspannung an der Einstrahlspule ist. Dies ist auch wichtig um den Eichfaktor für spätere Versuche verwenden zu können, da dort an unterschiedlichen Frequenzen gemessen wird.
 
@@ -390,11 +390,7 @@ Der Eichfaktor kann zudem theoretisch aus der Kenntnis der Widerstandswerte best
 \end{equation}
 Der Fehler ergibt sich aus dem geschätzten Fehler des Vorwiderstandes von \SI{2}{\percent}.
 
-Aus dem Vergleich des experimentell bestimmten Wertes mit dem berechneten sehen wir eine \note{} Übereinstimmung im Rahmen der Fehler. Für nachfolgende Messungen verwenden wir den aus unserer Messung erhaltenen gemittelten Eichfaktor von
-\begin{equation}
-	E_{\rm Spule} = \frac{U_{\rm ES}}{U_{\rm FG}} = \note{}.
-\end{equation}
-Der Fehler entspricht dem gemittelten Fehler der erhaltenen Werte bei verschiedenen Frequenzen.
+Aus dem Vergleich des experimentell bestimmten Wertes mit dem berechneten sehen wir im Rahmen der Fehler eine sehr gute Übereinstimmung. Für nachfolgende Messungen verwenden wir somit den aus unserer Messung erhaltenen Eichfaktor.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -427,11 +423,13 @@ Um die Linearität des Messsignals in Abhängigkeit vom Magnetfeld zu untersuche
 
 \begin{figure}[htp]
 	\begin{center}
-%		\includegraphics[width=\columnwidth]{}
+		\includegraphics[width=\columnwidth]{Data-Plots/04-signal-polarisationsstrom.pdf}
 		\caption{Signalhöhe $S2$ der Resonanzpeaks in Abhängigkeit der Polarisationsfeldstärke zur Untersuchung der Linearität.}
 		\label{fig.polarisationsstrom}
 	\end{center}
 \end{figure}
+
+In Abbildung~\ref{fig.polarisationsstrom} sehen wir, dass sich die Linearität des Messsignals $S2$ zur Polarisationsstromstärke $I_{\rm pol}$ sehr gut bestätigen lässt. Die Fehler im $B$-Feld ergeben sich aus der Ungenauigkeit der Strommessung am Polarisator von \SI{2}{\percent} und der Bestimmung des Magnetfeldes mit der Hallsonde. Der Fehler im Messsignal schätzen wir auf \SI{4}{\percent}. Durch die Anzahl der Messungen können statistische Schwankungen vernachlässigt werden. Der Fehler resultiert somit nur aus der Ungenauigkeit in der Einstellung der Resonanz, sowie die 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Spindrehung im Störfeld, $S2(\nu)$}
