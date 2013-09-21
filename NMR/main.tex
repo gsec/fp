@@ -451,15 +451,6 @@ und
 \begin{align}
 	B_0=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}
 \end{align}
-%\begin{compactitem}
-%	\item Messung von $S(t)$ und Resonanzfrequenz bei verschiedenen Impulsabständen $t_{12}$
-%	\item[d.h.] Resonanzfall finden und leicht verstellen + schauen was passiert \--- Abstände der Peaks
-%	\item Signal mit und ohne Terminator betrachten
-%	\item Frequenz des Schwingkreises ändern + zehn Aufnahmen mit dem Computer \--- Frequenz notieren!
-%	\item schrittweise Änderung der Analysatorspule \--- Aufnahme der Zeitdifferenz der Peaks
-%	\item[\tra] Resonanzfrequenz bei $t_{12} = \SI{10}{\milli\second}$
-%	\item[\Tra] Energieaufspaltung und Magnetfeld im Analysator
-%\end{compactitem}
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -491,8 +482,46 @@ Mit Abbildung~\ref{fig.polarisationsstrom} können wir die Linearität des Messs
 \subsection{Messung der Spindrehung im Störfeld, $S2(\nu)$}
 \label{auswertung5}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In diesem Aufgabenteil sollen die Spins der Protonen im Störfeld des Raumes manipuliert werden, um damit die Stärke des Störfeldes zu bestimmen.
+Dazu werden die Protonen, wie im letzten Versuchtsteil, im Polarisator polarisiert.
+Anschließend gelangen sie zur Manipulatorspule, wo der Spin mit Hilfe der passenden Einstahlfrequenz gedreht werden kann.
+Die Resonanzfrequenz entspricht dabei wieder der Lamor-Frequenz im Störfeld.
+Für jede Frequenz wird das Signal am Analysator detektiert.
+Bei der Bestimmung der Resonanzfrequenz stößt man auf folgendes Problem:
+Am Computer werden gleichzeitig das Signal der Analysators und die Amplitude/Frequenz der Einstrahlspule gespeichert.
+Dies geschieht, obwohl das Wasser eine gewisse Zeit vom Manipulator zum Analysator benötigt.
+Man miss also beim Durchfahren von niedrigen zu hohen Frequenzen die Signale am Analysator, die von vergangenen, sprich niedrigeren Frequenzen stammen.
+Das Maximum des gemessenen Signals scheint zu höheren Frequenzen verschoben zu sein.
+Um diesen Effekt auszugleichen, messen wir zweimal. 
+Mit ansonsten gleichen Einstellungen messen wir einmal von niedrigen zu hohen und anschließend von hohen zu niedrigen Frequenzen.
+In \cref{gewichte} sind die zwei Resonanzkurven zu sehen, die jeweils von der wahren Resonanzkurve nach links und nach rechts verschoben sind.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/05-Gewichte.pdf}
+		\caption{Resonanzkurven des Up- und Down-sweeps mit verschobenen Schwerpunkten.}
+		\label{gewichte}
+	\end{center}
+\end{figure}
+Zu den Messwerten wurden die Schwerpunkte der Peaks berechnet. Sie unterscheiden sich von ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1507(1)}{\hertz}$ um  $\pm \Delta \nu=\SI{17}{\hertz}$.
+Aus der Verschiebung lässt sich ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
+Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{??}.
 
-
+%\begin{compactitem}
+%	\item Anschließen Einstrahlspule und Funktionsgenerator
+%	\item Suchen der Resonanz im Störfeld und Messung der Resonanz im Phasenraum
+%	\item Protonen im Erdmagnetfeld Larmorfrequenz $\approx \SI{1.2}{\kilo\hertz}$
+%	\item Funktionsgenerator Amplitude \SI{50}{\milli\volt}
+%	\item[\tra] Spektrum aufnehmen mit Frequenzgrenzen, dass \SI{1000}{\hertz} durchgefahren wird \--- Durchlaufzeit ca. \SI{60}{\second}
+%	\item Messung in anderen Frequenzintervallen ober- und unterhalb der Resonanzfrequenz im Erdmagnetfeld 
+%	\item[\tra] Resonanzfrequenz außerhalb berechneten Stelle \--- Warum?
+%	\item Messung bei steigender und fallender Frequenz \tra 2 verschobenen, richtige in der Mitte
+%	\item Amplitude auf \SI{20}{\milli\volt} und Frequenzbereich auch \SI{200}{\hertz}
+%	\item Resonanzkurven in mehreren Frequenzfenster ohne Bereichsänderung mit Amplituden von $10-\SI{100}{\milli\volt}$ im Abstand von \SI{5}{\milli\volt}
+%	\item Wann Resonanzpeak besonders deutlich
+%	\item[\tra] Auflösung des Phasenraums in Amplitude und Frequenz
+%	\item Resonanzfrequenz genau einstellen, Amplitudenbereich so, dass möglichst viele Spindrehungen zu sehen
+%	\item[\tra] Aufnahme der Spindrehung in Abhängigkeit der Amplitude
+%\end{compactitem}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Resonanz im Feld der Helmholtzspulen}
 \label{auswertung6}

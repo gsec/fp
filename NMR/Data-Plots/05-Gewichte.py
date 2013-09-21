@@ -87,9 +87,6 @@ if Alle_Daten_plotten==True:
     font = {'family' : 'serif',
             'weight' : 'normal',
             'size'   : 20}
-    print len(t1)
-    print len(out[0]*t1)
-    print out[0][0]
     #plt.xlim([0.049,0.0885])
     plt.ylim([-1,0.4])
     matplotlib.rc('font', **font)
@@ -99,7 +96,10 @@ if Alle_Daten_plotten==True:
     plt.plot(t2,S2,"g.")
     plt.plot([Gewicht2],[-0.6],"go",label="Messpunkte mit dem Gewicht des Peaks")
     # plt.plot(t1,linspace(out[0][0],out[0][0],len(t1)),"r",label="Messwerte", linewidth=3)
-
+    print "Gewicht1 ",Gewicht1
+    print "Gewicht2 ",Gewicht2
+    print "Mittel: ", (Gewicht1+Gewicht2)/2
+    print "Verschiebung: ", (Gewicht1-Gewicht2)/2
     plt.legend(loc=4)	
     # plt.savefig("Hallsteigung.pdf")
     show()
