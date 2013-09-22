@@ -72,7 +72,7 @@
 
 \newcommand{\tra}{$\rightarrow$}
 \newcommand{\Tra}{$\Rightarrow$}
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -503,8 +503,44 @@ In \cref{gewichte} sind die zwei Resonanzkurven zu sehen, die jeweils von der wa
 	\end{center}
 \end{figure}
 Zu den Messwerten wurden die Schwerpunkte der Peaks berechnet. Sie unterscheiden sich von ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1507(1)}{\hertz}$ um  $\pm \Delta \nu=\SI{17}{\hertz}$.
-Aus der Verschiebung lässt sich ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
+Die Resonanzfrequenz entspricht der Präzessionsfrequenz der Protonen in einer Feldstärke von 
+\begin{align}
+	B_{\mathrm{Raum}}=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{36.39(1)}{\micro\tesla}.
+\end{align}
+Diese Feldstärke liegt in der Größenordnung der Erd-Magnetfeldstärke.
+Aus der Verschiebung lässt sich außerdem ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
 Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{??}.
+% Teil B
+
+Im Magnetfeld des Raumes soll nun untersucht werden, wie sich das Messsignal in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität verhält.
+Wir messen für Spannungen von $10$ bis $\SI{100}{\milli\volt}$ bei Frequenzen von $1200$ bis $\SI{1800}{\hertz}$.
+Die Messpunkte sind in \cref{phasenraum} dargestellt.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/07-Phasenraum.pdf}
+		\caption{Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
+		\label{gewichte}
+	\end{center}
+\end{figure}
+Man erkennt, dass sich die Intensität des Messsignals bei etwa $\SI{45}{\milli\volt}$ Einstrahlamplitude komplett das Vorzeichen gewechselt hat. 
+Die Analysatorspule gewinnt an diesem Punkt Energie aus den polarisierten Protonen, deren Spin von der Einstrahlspule zuvor in die höherenergetische Richtung gedreht wurde.
+Wir überprüfen, ob sich der Spin bei den verwendeten Einstellungen tatsächlich um $180$\textdegree dreht, indem wir folgende Überlegung machen:
+Durchquert ein Spin eine Leiterschleife, deren Magnetfeld mit der Resonanzfrequenz oszilliert, dann wird der Spin um
+\begin{align}
+	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}} \gamma \frac{B_\circ(t)}{2} \mathrm{d}t
+\end{align}
+gedreht. Der Faktor $\frac{1}{2}$ berücksichtigt dabei die Zerlegung des linear oszillierenden $B$-Feldes in zwei zirkulare $B$-Felder, von denen eines vernachlässigt wird.
+Bewegt sich der Spin auf der Achse dieser Leiterschleife, kann die Gleichung mit dem Biot-Savart-Gesetz auf
+\begin{align}
+	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}}  \frac{\gamma \mu_0 I}{4}  \frac{r^2}{(r^2+l^2)^{\frac{3}{2}}} \frac{\mathrm{d}l}{v}
+\end{align}
+umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt.
+Das bedeutet, dass jede Spule diesen Beitrag zum Drehwinkel liefert.
+Der Gesamtdrehwinkel ergibt sich dann nach dem lösen des Integrals zu
+\begin{align}
+	\Theta=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = ??
+\end{align}
+und ist somit unabhängig von den geometrischen Abmessungen der Spule
 
 %\begin{compactitem}
 %	\item Anschließen Einstrahlspule und Funktionsgenerator
