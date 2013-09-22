@@ -14,12 +14,12 @@ rc('font', family = 'serif', serif = 'STIXGeneral')
 #fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
 
 #fig.suptitle(u"Untersuchung der Linearit\xe4t von Messsignal zu Polarisationsstrom", fontsize=14, fontweight='bold')
-print "Lese Daten ein"
+
 txt_filename_to_open_10C=["07-relaxation-10C-6V.dat", "07-relaxation-10C-7,5V.dat", "07-relaxation-10C-9V.dat", "07-relaxation-10C-10,5V.dat", "07-relaxation-10C-12V-2.dat"]
 txt_filename_to_open_20C=["07-relaxation-20C-3V.dat", "07-relaxation-20C-5V.dat", "07-relaxation-20C-5,5V.dat", "07-relaxation-20C-6V.dat", "07-relaxation-20C-7,5V.dat", "07-relaxation-20C-9V.dat", "07-relaxation-20C-10,5V.dat", "07-relaxation-20C-12V.dat"]
 txt_filename_to_open_40C=["07-relaxation-40C-6V.dat", "07-relaxation-40C-7,5V.dat", "07-relaxation-40C-9V.dat", "07-relaxation-40C-10,5V.dat", "07-relaxation-40C-12V.dat"]
 txt_filename_to_open_60C=["07-relaxation-60C-6V.dat", "07-relaxation-60C-7,5V-2.dat", "07-relaxation-60C-9V.dat", "07-relaxation-60C-10,5V.dat", "07-relaxation-60C-12V.dat", ]
-print "Daten eingelesen"
+
 
 
 plotdata = genfromtxt(txt_filename_to_open_20C[-1])
@@ -150,7 +150,7 @@ pbest_60C, success = optimize.leastsq(errfunc_60C, p0_60C, args=(t_60C, y_60C))
 
 
 fehlerx = 0.05
-fehlery = (0.02*2)/sqrt(2)
+fehlery = 0.02
 
 
 plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
@@ -158,38 +158,27 @@ title(u"Bestimmung der Relaxationszeit in Abh\xe4nigigkeit der Temperatur")
 
 xlim(2, 6.5)
 #ylim(-0.7, 0)
+plt.yscale('log')
 
-errorbar(t_10C, log(-S2_10C), xerr= fehlerx, yerr=log(fehlery/abs(S2_10C)+1.05), color="black", label=u"Messdaten f\xfcr $13.86\pm 0.94$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
+errorbar(t_10C, -S2_10C, xerr= fehlerx, yerr=fehlery+0.05*abs(S2_10C), color="black", label=u"Messdaten f\xfcr $13.86\pm 0.94$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
 plot(t_10C, fitfunc_10C(pbest_10C, t_10C), "k")#, label=u"ausgleichene Gerade f\xfcr $10\mathrm{C}$")
-plot([t_10C[1],t_10C[-1]],[log(-S2_10C[1])-log(fehlery/abs(S2_10C[1])+1.05), log(-S2_10C[-1])+log(fehlery/abs(S2_10C[-1])+1.05)], "k:")#, label=u"Fehlergeraden $10\mathrm{C}$")
-plot([t_10C[1],t_10C[-1]],[log(-S2_10C[1])+log(fehlery/abs(S2_10C[1])+1.05), log(-S2_10C[-1])-log(fehlery/abs(S2_10C[-1])+1.05)], "k:")
-print "Steigung 10C :", pbest_10C[0]
-print "Fehler max Gerade 10C :", ((log(-S2_10C[-1])+log(fehlery/abs(S2_10C[-1])+1.05))-(log(-S2_10C[1])-log(fehlery/abs(S2_10C[1])+1.05)))/(t_10C[-1]-t_10C[1])
-print "Fehler min Gerade 10C :", ((log(-S2_10C[-1])-log(fehlery/abs(S2_10C[-1])+1.05))-(log(-S2_10C[1])+log(fehlery/abs(S2_10C[1])+1.05)))/(t_10C[-1]-t_10C[1])
+plot([t_10C[1],t_10C[-1]],[log(-S2_10C[1])-fehlery, log(-S2_10C[-1])+fehlery], "k:")#, label=u"Fehlergeraden $10\mathrm{C}$")
+plot([t_10C[1],t_10C[-1]],[log(-S2_10C[1])+fehlery, log(-S2_10C[-1])-fehlery], "k:")
 
-errorbar(t_20C, log(-S2_20C), xerr=fehlerx, yerr=log(fehlery/abs(S2_20C)+1.05), color="blue", label=u"Messdaten f\xfcr $34.00\pm 0.10$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
+errorbar(t_20C, -S2_20C, xerr=fehlerx, yerr=fehlery, color="blue", label=u"Messdaten f\xfcr $34.00\pm 0.10$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
 plot(t_20C, fitfunc_20C(pbest_20C, t_20C), "b")#, label=u"ausgleichene Gerade f\xfcr $10\mathrm{C}$")
-plot([t_20C[3],t_20C[-1]],[log(-S2_20C[3])-log(fehlery/abs(S2_20C[3])+1.05), log(-S2_20C[-1])+log(fehlery/abs(S2_20C[-1])+1.05)], "b:")#, label=u"Fehlergeraden $20\mathrm{C}$")
-plot([t_20C[3],t_20C[-1]],[log(-S2_20C[3])+log(fehlery/abs(S2_20C[3])+1.05), log(-S2_20C[-1])-log(fehlery/abs(S2_20C[-1])+1.05)], "b:")
-print "Steigung 20C :", pbest_20C[0]
-print "Fehler max Gerade 20C :", ((log(-S2_20C[-1])+log(fehlery/abs(S2_20C[-1])+1.05))-(log(-S2_20C[3])-log(fehlery/abs(S2_20C[3])+1.05)))/(t_20C[-1]-t_20C[3])
-print "Fehler min Gerade 20C :", ((log(-S2_20C[-1])-log(fehlery/abs(S2_10C[-1])+1.05))-(log(-S2_20C[3])+log(fehlery/abs(S2_20C[3])+1.05)))/(t_20C[-1]-t_20C[3])
+plot([t_20C[3],t_20C[-1]],[log(-S2_20C[3])-fehlery, log(-S2_20C[-1])+fehlery], "b:")#, label=u"Fehlergeraden $20\mathrm{C}$")
+plot([t_20C[3],t_20C[-1]],[log(-S2_20C[3])+fehlery, log(-S2_20C[-1])-fehlery], "b:")
 
-errorbar(t_40C, log(-S2_40C), xerr=fehlerx, yerr=log(fehlery/abs(S2_40C)+1.05), color="green", label=u"Messdaten f\xfcr $42.52\pm 0.69$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
+errorbar(t_40C, -S2_40C, xerr=fehlerx, yerr=fehlery, color="green", label=u"Messdaten f\xfcr $42.52\pm 0.69$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
 plot(t_40C, fitfunc_40C(pbest_40C, t_40C), "g")#, label=u"ausgleichene Gerade f\xfcr $10\mathrm{C}$")
-plot([t_40C[0],t_40C[-1]],[log(-S2_40C[0])-log(fehlery/abs(S2_40C[0])+1.05), log(-S2_40C[-1])+log(fehlery/abs(S2_40C[-1])+1.05)], "g:")#, label=u"Fehlergeraden $40\mathrm{C}$")
-plot([t_40C[0],t_40C[-1]],[log(-S2_40C[0])+log(fehlery/abs(S2_40C[0])+1.05), log(-S2_40C[-1])-log(fehlery/abs(S2_40C[-1])+1.05)], "g:")
-print "Steigung 40C :", pbest_40C[0]
-print "Fehler max Gerade 40C :", ((log(-S2_40C[-1])+log(fehlery/abs(S2_40C[-1])+1.05))-(log(-S2_40C[0])-log(fehlery/abs(S2_40C[0])+1.05)))/(t_40C[-1]-t_40C[0])
-print "Fehler min Gerade 40C :", ((log(-S2_40C[-1])-log(fehlery/abs(S2_40C[-1])+1.05))-(log(-S2_40C[0])+log(fehlery/abs(S2_40C[0])+1.05)))/(t_40C[-1]-t_40C[0])
+plot([t_40C[0],t_40C[-1]],[log(-S2_40C[0])-fehlery, log(-S2_40C[-1])+fehlery], "g:")#, label=u"Fehlergeraden $40\mathrm{C}$")
+plot([t_40C[0],t_40C[-1]],[log(-S2_40C[0])+fehlery, log(-S2_40C[-1])-fehlery], "g:")
 
-errorbar(t_60C, log(-S2_60C), xerr=fehlerx, yerr=log(fehlery/abs(S2_60C)+1.05), color="red", label=u"Messdaten f\xfcr $63.0\pm 2.2$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
+errorbar(t_60C, -S2_60C, xerr=fehlerx, yerr=fehlery, color="red", label=u"Messdaten f\xfcr $63.0\pm 2.2$\u00b0C mit ausgleichender Kurve und Fehlerkurven", fmt=".")
 plot(t_60C, fitfunc_60C(pbest_60C, t_60C), "r")#, label=u"ausgleichene Gerade f\xfcr $10\mathrm{C}$")
-plot([t_60C[0],t_60C[-1]],[log(-S2_60C[0])-log(fehlery/abs(S2_60C[0])+1.05), log(-S2_60C[-1])+log(fehlery/abs(S2_60C[-1])+1.05)], "r:")#, label=u"Fehlergeraden $60\mathrm{C}$")
-plot([t_60C[0],t_60C[-1]],[log(-S2_60C[0])+log(fehlery/abs(S2_60C[0])+1.05), log(-S2_60C[-1])-log(fehlery/abs(S2_60C[-1])+1.05) ], "r:")
-print "Steigung 50C :", pbest_60C[0]
-print "Fehler max Gerade 60C :", ((log(-S2_60C[-1])+log(fehlery/abs(S2_60C[-1])+1.05))-(log(-S2_60C[0])-log(fehlery/abs(S2_60C[0])+1.05)))/(t_60C[-1]-t_60C[0])
-print "Fehler min Gerade 60C :", ((log(-S2_60C[-1])-log(fehlery/abs(S2_60C[-1])+1.05))-(log(-S2_60C[0])+log(fehlery/abs(S2_60C[0])+1.05)))/(t_60C[-1]-t_60C[0])
+plot([t_60C[0],t_60C[-1]],[log(-S2_60C[0])-fehlery, log(-S2_60C[-1])+fehlery], "r:")#, label=u"Fehlergeraden $60\mathrm{C}$")
+plot([t_60C[0],t_60C[-1]],[log(-S2_60C[0])+fehlery, log(-S2_60C[-1])-fehlery], "r:")
 
 plot([5.55,5.55],[0,-3], ":", color="black")
 plt.xlabel(u"Zeitdifferenz $t_v[\mathrm{s}]$")
