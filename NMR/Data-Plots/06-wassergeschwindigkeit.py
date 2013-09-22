@@ -40,7 +40,7 @@ text(1.77129,0.0268, u"$t_0$", va="center", ha="right")
 text(1.96474,-0.493808, u"$t_1$", va="center", ha="right")
 text(2.78691,-0.493808, u"$t_2$", va="center", ha="left")
 text(2.78691,0.0268, u"$t_3$", va="center", ha="left")
-text(4.38,0.0268, u"$t_4$", va="center", ha="right")
+text(4.14,0.0268, u"$t_4$", va="center", ha="right")
 text(5.495,-0.3, u"$t_{4/5}$", va="center", ha="left")
 text(5.301,-0.654, u"$t_5$", va="center", ha="left")
 text(14,-0.645, u"$t_6$", va="center", ha="left")
@@ -52,38 +52,38 @@ plt.savefig("06-wassergeschwindigkeit.pdf")
 show()
 
 #############Plotausgabe einzelne Datensätze################
-for n in range(len(txt_filename_to_open_10C)):
-	data = genfromtxt(txt_filename_to_open_10C[n])
-	print "n: ", n
-	x=data[:,0]
-	y=data[:,1]
+# for n in range(len(txt_filename_to_open_10C)):
+	# data = genfromtxt(txt_filename_to_open_10C[n])
+	# print "n: ", n
+	# x=data[:,0]
+	# y=data[:,1]
 
-	# fitfunc = lambda p, x: 0*x+p[0]
-	# errfunc = lambda p, x, y: fitfunc(p, x) - y
-	# p0 = [0]
-	# pbest, success = optimize.leastsq(errfunc, p0, args=(x, y))
-	# print "pbest :", pbest
-	# Signal[n] = abs(pbest[0])
+	# # fitfunc = lambda p, x: 0*x+p[0]
+	# # errfunc = lambda p, x, y: fitfunc(p, x) - y
+	# # p0 = [0]
+	# # pbest, success = optimize.leastsq(errfunc, p0, args=(x, y))
+	# # print "pbest :", pbest
+	# # Signal[n] = abs(pbest[0])
 
-	# total=0
-	# for k in data[:,1]:
-		# total += k
-	# mittel = total/len(data)
-	# print "mittel:", mittel
+	# # total=0
+	# # for k in data[:,1]:
+		# # total += k
+	# # mittel = total/len(data)
+	# # print "mittel:", mittel
 	
-	# abweichung=0
-	# for k in data[:,1]:
-		# abweichung += (mittel-k)**2
-	# print "abweichung:", abweichung
-	# Fehler[n] = sqrt(abweichung)/sqrt(len(data))
+	# # abweichung=0
+	# # for k in data[:,1]:
+		# # abweichung += (mittel-k)**2
+	# # print "abweichung:", abweichung
+	# # Fehler[n] = sqrt(abweichung)/sqrt(len(data))
 	
-	plt.figure(n)
-	plt.plot(x,y,"b")
-	#plt.plot(x,mittel,"g")
-	# plt.plot(x,fitfunc(pbest,x),"r")
-	# plt.plot(x,fitfunc(pbest,x)-Fehler[n],"r--")
-	# plt.plot(x,fitfunc(pbest,x)+Fehler[n],"r--")
-	show()
+	# plt.figure(n)
+	# plt.plot(x,y,"b")
+	# #plt.plot(x,mittel,"g")
+	# # plt.plot(x,fitfunc(pbest,x),"r")
+	# # plt.plot(x,fitfunc(pbest,x)-Fehler[n],"r--")
+	# # plt.plot(x,fitfunc(pbest,x)+Fehler[n],"r--")
+	# show()
 
 #Ausgelesenen Daten t_0, t_4/5 und S2(t_5) für versch. Temp
 U_10C=[6, 7.5, 9, 10.5, 12]
@@ -192,6 +192,7 @@ print "Fehler max Gerade 60C :", ((log(-S2_60C[-1])+log(fehlery/abs(S2_60C[-1])+
 print "Fehler min Gerade 60C :", ((log(-S2_60C[-1])-log(fehlery/abs(S2_60C[-1])+1.05))-(log(-S2_60C[0])+log(fehlery/abs(S2_60C[0])+1.05)))/(t_60C[-1]-t_60C[0])
 
 plot([5.55,5.55],[0,-3], ":", color="black")
+text(5.57,-0.402, u"$t_\mathrm{max}$", va="center", ha="left")
 plt.xlabel(u"Zeitdifferenz $t_v[\mathrm{s}]$")
 plt.ylabel(u"logarithmische Signalh\xf6he $S2(t_5)$")
 

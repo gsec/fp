@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{4}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -26,5 +26,13 @@
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/NMR_Anleitung_Jul2009.pdf}.
   --
 \newblock Physikalisches Fortgeschrittenen Praktikum
+
+\bibitem[of~Standards und Technology(2011)]{codata}
+\dinatlabel{of~Standards und Technology 2011} \textsc{Standards}, National~I.
+  of~; \textsc{Technology}:
+\newblock \emph{Physical Reference Data - The NIST Reference on Constants,
+  Units and Uncertainty}.
+\newblock June 2011. --
+\newblock URL \url{http://physics.nist.gov/cuu/index.html}
 
 \end{thebibliography}

@@ -8,14 +8,20 @@
 	note = {Physikalisches Fortgeschrittenen Praktikum},
 }
 
-
+@misc{codata,
+	author = {National Institude of Standards and Technology},
+	title = {Physical Reference Data - The NIST Reference on Constants, Units and Uncertainty},
+	year = {2011},
+	month = {June},
+	url={http://physics.nist.gov/cuu/index.html}
+	}
 
 @phdthesis{mueller,
 	author = {Herbert M"uller},
 	title = {Magnetische Kernresonanz},
 	month = {Februar},
 	year = {1990},
-	school = {Physikalisches Institut der Universit"at W"uerzburg},
+	school = {Physikalisches Institut der Universit"at W"urzburg},
 	url = {http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Staatsexamensarbeit_Mueller_NMR.pdf}
 }
 
