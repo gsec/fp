@@ -451,15 +451,6 @@ und
 \begin{align}
 	B_0=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}
 \end{align}
-%\begin{compactitem}
-%	\item Messung von $S(t)$ und Resonanzfrequenz bei verschiedenen Impulsabständen $t_{12}$
-%	\item[d.h.] Resonanzfall finden und leicht verstellen + schauen was passiert \--- Abstände der Peaks
-%	\item Signal mit und ohne Terminator betrachten
-%	\item Frequenz des Schwingkreises ändern + zehn Aufnahmen mit dem Computer \--- Frequenz notieren!
-%	\item schrittweise Änderung der Analysatorspule \--- Aufnahme der Zeitdifferenz der Peaks
-%	\item[\tra] Resonanzfrequenz bei $t_{12} = \SI{10}{\milli\second}$
-%	\item[\Tra] Energieaufspaltung und Magnetfeld im Analysator
-%\end{compactitem}
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -491,8 +482,46 @@ Mit Abbildung~\ref{fig.polarisationsstrom} können wir die Linearität des Messs
 \subsection{Messung der Spindrehung im Störfeld, $S2(\nu)$}
 \label{auswertung5}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In diesem Aufgabenteil sollen die Spins der Protonen im Störfeld des Raumes manipuliert werden, um damit die Stärke des Störfeldes zu bestimmen.
+Dazu werden die Protonen, wie im letzten Versuchtsteil, im Polarisator polarisiert.
+Anschließend gelangen sie zur Manipulatorspule, wo der Spin mit Hilfe der passenden Einstahlfrequenz gedreht werden kann.
+Die Resonanzfrequenz entspricht dabei wieder der Lamor-Frequenz im Störfeld.
+Für jede Frequenz wird das Signal am Analysator detektiert.
+Bei der Bestimmung der Resonanzfrequenz stößt man auf folgendes Problem:
+Am Computer werden gleichzeitig das Signal der Analysators und die Amplitude/Frequenz der Einstrahlspule gespeichert.
+Dies geschieht, obwohl das Wasser eine gewisse Zeit vom Manipulator zum Analysator benötigt.
+Man miss also beim Durchfahren von niedrigen zu hohen Frequenzen die Signale am Analysator, die von vergangenen, sprich niedrigeren Frequenzen stammen.
+Das Maximum des gemessenen Signals scheint zu höheren Frequenzen verschoben zu sein.
+Um diesen Effekt auszugleichen, messen wir zweimal. 
+Mit ansonsten gleichen Einstellungen messen wir einmal von niedrigen zu hohen und anschließend von hohen zu niedrigen Frequenzen.
+In \cref{gewichte} sind die zwei Resonanzkurven zu sehen, die jeweils von der wahren Resonanzkurve nach links und nach rechts verschoben sind.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/05-Gewichte.pdf}
+		\caption{Resonanzkurven des Up- und Down-sweeps mit verschobenen Schwerpunkten.}
+		\label{gewichte}
+	\end{center}
+\end{figure}
+Zu den Messwerten wurden die Schwerpunkte der Peaks berechnet. Sie unterscheiden sich von ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1507(1)}{\hertz}$ um  $\pm \Delta \nu=\SI{17}{\hertz}$.
+Aus der Verschiebung lässt sich ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
+Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{??}.
 
-
+%\begin{compactitem}
+%	\item Anschließen Einstrahlspule und Funktionsgenerator
+%	\item Suchen der Resonanz im Störfeld und Messung der Resonanz im Phasenraum
+%	\item Protonen im Erdmagnetfeld Larmorfrequenz $\approx \SI{1.2}{\kilo\hertz}$
+%	\item Funktionsgenerator Amplitude \SI{50}{\milli\volt}
+%	\item[\tra] Spektrum aufnehmen mit Frequenzgrenzen, dass \SI{1000}{\hertz} durchgefahren wird \--- Durchlaufzeit ca. \SI{60}{\second}
+%	\item Messung in anderen Frequenzintervallen ober- und unterhalb der Resonanzfrequenz im Erdmagnetfeld 
+%	\item[\tra] Resonanzfrequenz außerhalb berechneten Stelle \--- Warum?
+%	\item Messung bei steigender und fallender Frequenz \tra 2 verschobenen, richtige in der Mitte
+%	\item Amplitude auf \SI{20}{\milli\volt} und Frequenzbereich auch \SI{200}{\hertz}
+%	\item Resonanzkurven in mehreren Frequenzfenster ohne Bereichsänderung mit Amplituden von $10-\SI{100}{\milli\volt}$ im Abstand von \SI{5}{\milli\volt}
+%	\item Wann Resonanzpeak besonders deutlich
+%	\item[\tra] Auflösung des Phasenraums in Amplitude und Frequenz
+%	\item Resonanzfrequenz genau einstellen, Amplitudenbereich so, dass möglichst viele Spindrehungen zu sehen
+%	\item[\tra] Aufnahme der Spindrehung in Abhängigkeit der Amplitude
+%\end{compactitem}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Resonanz im Feld der Helmholtzspulen}
 \label{auswertung6}
@@ -508,30 +537,30 @@ Der typische Kurvenverlauf der Messung ist in Abbildung~\ref{fig.wassergeschwind
 
 \begin{figure}[htp]
 	\begin{center}
-%		\includegraphics[width=\columnwidth]{}
+		\includegraphics[width=\columnwidth]{Data-Plots/06-wassergeschwindigkeit.pdf}
 		\caption{Verlauf des Messsignals $S2(t)$ über die Zeit bei $T=\SI{34.0}{\celsius}$ und einer Pumpspannung von $U_{\rm pump}=\SI{12}{\volt}$.}
 		\label{fig.wassergeschwindigkeit}
 	\end{center}
 \end{figure}
 
-Dem Verlauf kann man entnehmen, dass bei abgeschalteter Pumpe $t<t_1$ nahezu kein Signal aufgenommen wird. Nach Einschalten der Pumpe messen wir zunächst die Protonen die noch durch das Feld des Analysatormagneten polarisiert sind. Da durch den Versuchsaufbau der Wasserschlauch zunächst direkt am Analysatormagneten vorbeiführt und erst dann über eine Kurve in den Analysator gelangt, erkennen wir einen Peak bei $t_1$ und einen bei $t_2$. Der große Peak $t_1$ kommt von den Protonen die sich noch im Analysator befunden haben und der Kleine bei $t_2$ von den Protonen die sich zu Beginn neben dem Analysator, jedoch in seinem Feld befunden haben. Nachdem die Protonen aus dem Analysatorfeld gemessen wurden $t_3$, messen wir bis $t_4$ kein Signal. Bei $t_4$ messen wir die Protonen, die im Polarisator polarisiert wurden. Diese besitzen eine Signalstärke, die an $t_5$ abgelesen werden kann. Zur Zeit $t_5$ messen wir die Protonen aus dem Polarisator. Diese sind am stärksten polarisiert. Nach der Zeit $t_6$ geht das Signal zurück, da nun die Protonen gemessen werden, die zum ausgeschalteten Zustand der Pumpe noch nicht im Polarisator waren und erst beim durchfließen, also kürzer und somit weniger, polarisiert wurden.
+Dem Verlauf kann man entnehmen, dass bei abgeschalteter Pumpe $t<t_0$ nahezu kein Signal aufgenommen wird. Nach Einschalten der Pumpe, diesen Zeitpunkt kennzeichnen wir mit $t_0$ messen wir zunächst die Protonen die noch durch das Feld des Analysatormagneten polarisiert sind. Da durch den Versuchsaufbau der Wasserschlauch zunächst direkt am Analysatormagneten vorbeiführt und erst dann über eine Kurve in den Analysator gelangt, erkennen wir einen Peak bei $t_1$ und einen bei $t_2$. Der große Peak $t_1$ kommt von den Protonen die sich noch im Analysator befunden haben und der Kleine bei $t_2$ von den Protonen die sich zu Beginn neben dem Analysator, jedoch in seinem Feld befunden haben. Nachdem die Protonen aus dem Analysatorfeld gemessen wurden $t_3$, messen wir bis $t_4$ kein Signal. Bei $t_4$ messen wir die Protonen, die im Polarisator polarisiert wurden. Diese besitzen eine Signalstärke, die an $t_5$ abgelesen werden kann. Zur Zeit $t_5$ messen wir die Protonen aus dem Polarisator. Diese sind am stärksten polarisiert. Wir lesen im Experiment die Zeit bei $t_{4/5}$ ab, da hier ein Proton mit mittlerer Geschwindigkeit im Analysator ankommt. Nach der Zeit $t_6$ geht das Signal zurück, da nun die Protonen gemessen werden, die zum ausgeschalteten Zustand der Pumpe noch nicht im Polarisator waren und erst beim durchfließen, also kürzer und somit weniger, polarisiert wurden.
 
 Anhand der Messung kann die Zeit $t$ abgelesen werden, welche die Protonen aus dem Polarisator benötigen um in den Analysator zu gelangen.
 \begin{equation}
-	t_v = t_4 - t_1
+	t_v = t_{4/5} - t_0
 \end{equation}
 
 Aus den Messungen für verschiedenen Pumpspannungen, also Wassergeschwindigkeiten, lesen wir die Zeiten $t_v$ ab und tragen die Signalhöhe $S2(t_5)$ halblogarihmisch auf um die Relaxationszeit bestimmen zu können. Die Kurven für die gemessenen Temperaturen sind in Abbildung~\ref{fig.relaxation} gezeigt.
 
 \begin{figure}[htp]
 	\begin{center}
-%		\includegraphics[width=\columnwidth]{}
+		\includegraphics[width=\columnwidth]{Data-Plots/06-relaxation.pdf}
 		\caption{Halblogarithmische Auftragung der Signalhöhe $S2(t_5)$ über die Zeitdifferenz $t_v$ für verschiedenen Geschwindigkeiten und Temperaturen.}
 		\label{fig.relaxation}
 	\end{center}
 \end{figure}
 
-Da die Temperatur im Versuch nicht konstant gehalten konnte, haben wir bei jeder Messung die Temperatur mit einem batteriebetriebenen Thermometer gemessen und für die gemeinsame Auftragung bei verschieden Wassergeschwindigkeiten gemittelt. Die Fehler in Abbildung~\ref{fig.relaxation} \note{}.
+Da die Temperatur im Versuch nicht konstant gehalten konnte, haben wir bei jeder Messung die Temperatur mit einem batteriebetriebenen Thermometer gemessen und für die gemeinsame Auftragung bei verschieden Wassergeschwindigkeiten gemittelt. Die Fehler in Abbildung~\ref{fig.relaxation} resultieren bei der Zeitdifferenz aus einem Ablesefehler von \SI{0.05}{\second} und in der Signalhöhe aus einem Ablesefehler von \SI{0.02}{\volt} und der Ungenauigkeit in S/H-Signal von \SI{5}{\percent}.
 Die Messung ist zudem nur aussagekräftig, wenn Strömungen turbulent sind. Die minimale Fließgeschwindigkeit kann mit einer Reynoldszahl von 3000 bestimmt werden. Bei über $R = 3000$ spricht man von turbulenter und unter $R=2000$ von laminarer Strömung. Mit folgender Formel aus~\citet{anleitung}
 \begin{equation}
 	R=\frac{2\rho rv}{\eta}
@@ -570,16 +599,18 @@ Um eine zusätzliche Abschätzung zu bekommen, ab welcher Geschwindigkeit die St
 \end{equation}
 Hier wurde die Länge mit maximalen Fehler $L = (3.765-0.050)\SI{}{\meter}$ verwendet um einen sicheren Wert für $t_{\rm min}$ zu erhalten, der folglich fehlerfrei ist. Folglich können wir nur die Messwerte verwenden, für die $t_v>t_{\rm max}$ gilt.
 
-An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen gefittet und mit \note{Formel} die Relaxationszeit $T_1$ bestimmt. Die erhaltenen Werte sind in Tabelle~\ref{tab.relaxationszeit} aufgetragen.
+An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen gefittet und mit $\mathrm{d}M_{z}(t) = -1/T_1 M_{z}(t)\mathrm{d}t$ nach~\citet{anleitung} die Relaxationszeit $T_1$ bestimmt. Die erhaltenen Werte sind in Tabelle~\ref{tab.relaxationszeiten} aufgetragen.
 
 \begin{table}
 	\begin{center}
 	\begin{tabular}{cc}
 		\hline
-		$T[\textdegree\mathrm{C}]$ & $T_1[\mathrm{s}]$\\
-		&\\
-		&\\
-		&\\
+		$T[\textdegree\mathrm{C}]$ & $T_1[1/\mathrm{s}]$\\
+		\hline
+		\SI{13.86(94)}{\celsius} & $3.6 \pm 1.7$\\ %3.647301884	1.701329412
+		\SI{34.00(10)}{\celsius} & $4.6 \pm 1.5$\\ %4.606282289	1.51535674
+		\SI{42.52(69)}{\celsius} & $5.5 \pm 1.9$\\ %5.487573373	1.937461341
+		\SI{63.0(22)}{\celsius}  & $9.8 \pm 6.1$\\ %9.814701108	6.141836515
 		\hline
 	\end{tabular}
 	\caption{Relaxationszeiten für verschiedenen Temperaturen}
@@ -587,27 +618,29 @@ An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen
 	\end{center}
 \end{table}
 
-Die Fehler in den Relaxationszeiten erhalten wir aus den Fehlergeraden in Abbildung~\ref{fig.relaxation}. \note{Vergleich der Relaxationszeiten + warum Zeiten bei höheren Temperaturen größer}
+Die Fehler in den Relaxationszeiten erhalten wir aus den Fehlerkurven in Abbildung~\ref{fig.relaxation}. Im Vergleich ist zu erkennen, dass der Fehler für die Relaxationszeit bei \SI{60}{\celsius} deutlich größer als die restlichen sind. Dies liegt daran, dass die Steigung wesentlich kleiner ist, was bei gleicher Abweichung durch die Fehlerkurven in einem deutlich größeren Fehler resultiert. Zudem können wir aus Abbildung~\ref{fig.relaxation} wie auch an den Werten in Tabelle~\ref{tab.relaxationszeiten} erkennen, dass die Relaxationszeiten bei höheren Temperaturen größer werden. Die Protonen relaxieren also langsamer wenn sie warm sind. \note{Warum}
 
 \paragraph*{Wassergeschwindigkeit in der Einstrahlspule}
 Im folgendem wird zudem die Wassergeschwindigkeit in der Einstrahlspule bestimmt, da diese für Versuchsteil~\ref{auswertung5} benötigt wird.
-Hierfür verwenden wir die Zeit $t=\note{}$, die das Wasser durch den gesamten Schlauch bei maximaler Pumpleistung und Raumtemperatur benötigt. 
+Hierfür verwenden wir die Zeit $t_{v}(\SI{12}{\volt},\SI{20}{\celsius})= \SI{2.661(28)}{\second}$, die das Wasser durch den gesamten Schlauch bei maximaler Pumpleistung und Raumtemperatur benötigt. 
 Der Schlauch besitzt bis zum Schlauchstück der Einstrahlspule nach Tabelle~\ref{tab.schlauch} eine Länge von $l_1 = \SI{168(2)}{\centi\meter}$ und ab dem Stück bis zum Analysator eine Länge von $l_3 = (146.0+46.0)\pm(3.0)\SI{}{\centi\meter}$. In diesen Stücken beträgt der Innendurchmesser $d_1 = \SI{6}{\milli\meter}$~\citep{anleitung}. Das Schlauchstück durch die Einstrahlspule beträgt $l_2 = \SI{16.5(5)}{\centi\meter}$ mit einem Innendurchmesser von $d_2 = \SI{4}{\milli\meter}$~\citep{anleitung}. Die Fehler der Durchmesser werden im Vergleich zum Fehler in der Länge als vernachlässigbar angenommen. 
 Nach der Kontinuitätsgleichung gilt, dass das Verhältnis von durchflossener Fläche zum Verhältnis der Stömungsgeschwindigkeiten invers ist. Es fließt also gleiches Volumen pro Zeit durch einen den Schlauch und es gilt daraus
 \begin{equation}
 	\frac{v_2}{v_1} = \left(\frac{d_1}{d_2}\right)^2.
+	\label{eq.kontinuitaet}
 \end{equation}
 Für die Zeit $t_v$ die das Wasser von Polarisator zum Analysator benötigt gilt
 \begin{equation}
 	t_v = \frac{L_1}{v_1} + \frac{L_2}{v_2}.
+	\label{eq.tv}
 \end{equation}
 Für $v_1$ verwenden wir die Geschwindigkeit des Wassers unter der Annahme, dass der Schlauchdurchmesser auf der gesamten Länge konstant ist.
 \begin{equation}
-	v_1 = \frac{L_{\rm gesamt}}{t} \note{}
+	v_1 = \frac{L_{\rm gesamt}}{t_{v}(\SI{12}{\volt},\SI{20}{\celsius})} = \SI{1.415(34)}{\meter\per\second}
 \end{equation}
-Durch Einsetzten der einen Gleichung in die andere und Auflösen nach der Geschwindigkeit $v_2$ im Inneren des Schlauchstücks durch die Einstrahlspule, erhalten wir
+Durch Einsetzten von Gleichung~\eqref{eq.tv} in Gleichung~\eqref{eq.kontinuitaet} und Auflösen nach der Geschwindigkeit $v_2$ im Inneren des Schlauchstücks durch die Einstrahlspule, erhalten wir
 \begin{equation}
-	v_2 = \frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right) = \note{}
+	v_2 = \frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right) = 3.
 \end{equation}
 
 
