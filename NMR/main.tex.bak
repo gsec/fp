@@ -503,8 +503,44 @@ In \cref{gewichte} sind die zwei Resonanzkurven zu sehen, die jeweils von der wa
 	\end{center}
 \end{figure}
 Zu den Messwerten wurden die Schwerpunkte der Peaks berechnet. Sie unterscheiden sich von ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1507(1)}{\hertz}$ um  $\pm \Delta \nu=\SI{17}{\hertz}$.
-Aus der Verschiebung lässt sich ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
+Die Resonanzfrequenz entspricht der Präzessionsfrequenz der Protonen in einer Feldstärke von 
+\begin{align}
+	B_{\mathrm{Raum}}=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{36.39(1)}{\micro\tesla}.
+\end{align}
+Diese Feldstärke liegt in der Größenordnung der Erd-Magnetfeldstärke.
+Aus der Verschiebung lässt sich außerdem ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
 Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{??}.
+% Teil B
+
+Im Magnetfeld des Raumes soll nun untersucht werden, wie sich das Messsignal in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität verhält.
+Wir messen für Spannungen von $10$ bis $\SI{100}{\milli\volt}$ bei Frequenzen von $1200$ bis $\SI{1800}{\hertz}$.
+Die Messpunkte sind in \cref{phasenraum} dargestellt.
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/07-Phasenraum.pdf}
+		\caption{Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
+		\label{gewichte}
+	\end{center}
+\end{figure}
+Man erkennt, dass sich die Intensität des Messsignals bei etwa $\SI{45}{\milli\volt}$ Einstrahlamplitude komplett das Vorzeichen gewechselt hat. 
+Die Analysatorspule gewinnt an diesem Punkt Energie aus den polarisierten Protonen, deren Spin von der Einstrahlspule zuvor in die höherenergetische Richtung gedreht wurde.
+Wir überprüfen, ob sich der Spin bei den verwendeten Einstellungen tatsächlich um $180$\textdegree dreht, indem wir folgende Überlegung machen:
+Durchquert ein Spin eine Leiterschleife, deren Magnetfeld mit der Resonanzfrequenz oszilliert, dann wird der Spin um
+\begin{align}
+	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}} \gamma \frac{B_\circ(t)}{2} \mathrm{d}t
+\end{align}
+gedreht. Der Faktor $\frac{1}{2}$ berücksichtigt dabei die Zerlegung des linear oszillierenden $B$-Feldes in zwei zirkulare $B$-Felder, von denen eines vernachlässigt wird.
+Bewegt sich der Spin auf der Achse dieser Leiterschleife, kann die Gleichung mit dem Biot-Savart-Gesetz auf
+\begin{align}
+	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}}  \frac{\gamma \mu_0 I}{4}  \frac{r^2}{(r^2+l^2)^{\frac{3}{2}}} \frac{\mathrm{d}l}{v}
+\end{align}
+umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt.
+Das bedeutet, dass jede Spule diesen Beitrag zum Drehwinkel liefert.
+Der Gesamtdrehwinkel ergibt sich dann nach dem lösen des Integrals zu
+\begin{align}
+	\Theta=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = ??
+\end{align}
+und ist somit unabhängig von den geometrischen Abmessungen der Spule
 
 %\begin{compactitem}
 %	\item Anschließen Einstrahlspule und Funktionsgenerator
@@ -525,6 +561,102 @@ Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{??}.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Resonanz im Feld der Helmholtzspulen}
 \label{auswertung6}
+
+Zur Bestimmung von Betrag und Winkel des Störfeldes sowie das Magneton des Protons, verwenden wir das Helmholtzspulenpaar um die Einstrahlspule. Der Strom in der Helmholtzspule regeln wir über die Spannung an der Stromquelle und lesen den Wert über ein Präzisionsmultimeter aus. Durch einen Serienwiderstand an der Helholtzspule wird der Strom stabilisiert. Wir messen bei den Helmholtzspulenströmen von $I_{\rm HH} = \SI{45}{\milli\ampere}$, \SI{65}{\milli\ampere} und \SI{80}{\milli\ampere} wie im vorherigen Versuchsteil die Resonanzkurven durch einen Frequenz-Sweep am Funktionsgenerator. 
+
+Das Feld im Zentrum der beiden Spulen kann mit der Näherung aus~\citet{anleitung} bestimmt werden.
+\begin{equation}
+	B_{\rm HH} \approx \frac{\mu_0 n I_{\rm HH}}{R} \left[ \frac{8}{5\sqrt{5}} \left( 1 - \frac{\zeta^2}{60R^2} \right) - \frac{31\zeta^2 - 36\eta^2}{125 R^4}r^2\right]
+\end{equation}
+Hier gilt aus der Spulengeometrie $\zeta=\SI{0.03}{\meter}$, $\eta=\SI{0.046}{\meter}$, der Radius der Spulen $R=\SI{0.207}{\meter}$, die Windungszahl $n=720$ und die Abweichung der Spulenachse zur Einstrahlspule $r=\SI{0.015}{\centi\meter}$~\citep{anleitung}. Somit können wir die Proportionalitätskonstante $c$ bestimmen.
+\begin{align}
+	B_{\rm HH} &= c\cdot I_{\rm HH}\\
+	c &= \SI{0.003127}{\tesla\per\ampere}
+\end{align}
+
+Die Bestimmung von Betrag und Winkel des Störfeldes erhalten wird dadurch, dass in der Helmholtzspule das effektiv wirkende Feld aus dem Störfeld $\vec{B}_{\rm S}$ und dem Spulenfeld $\vec{B}_{\rm HH}$ zusammensetzt~\citep{anleitung}.
+\begin{equation}
+	\vec{B}_{\rm eff} = \vec{B}_{\rm HH} + \vec{B}_{\rm S}
+\end{equation}
+Für die Resonanzfrequenzen im Magnetfeld gilt nach~\citet{anleitung}
+\begin{equation}
+	\nu_{\rm res} = \frac{g\mu_{\rm K}}{h}B_{\rm eff}.
+\end{equation}
+Da das Helmholtzspulenfeld zudem vom Spulenstrom $I_{\rm HH}$ abhängig ist, gilt~\citep{anleitung}
+\begin{equation}
+	\nu^2(+I_{\rm HH}) + \nu^2(-I_{\rm HH}) = 2\frac{g^2\mu_{\rm K}^2}{h^2}\left( c^2I^2 + B^2_{\rm S} \right).
+	\label{eq.stoerfeld}
+\end{equation}
+Aus diesem Grund messen wir die Kurven für positive $I_{\rm HH}$ und negative $-I_{\rm HH}$ Hemholtzspulenströme. Aus den selben Gründen wie im Versuchsteil~\ref{auswertung5} messen wir einmal von niedrigen und einmal von hohen Frequenzen kommend.
+
+Wie im Teil~\ref{auswertung5} bestimmen wir aus den Messungen für steigende und fallende Frequenz-Sweeps die Resonanzfrequenz für einen eingestellten Spulenstrom. Die Werte sind in Tabelle~\ref{tab.helmholtzfrequenz} aufgetragen.
+
+\begin{table}[htp]
+	\begin{center}	
+	\begin{tabular}{cc}
+		\hline
+		$I_{\rm HH}[\mathrm{mA}]$ & $\nu_{\rm res}[\mathrm{Hz}]$\\
+		\hline	
+		$+ 45.0 \pm 0.2$   & $ 6826.3 \pm 2.0$\\
+		$- 45.0 \pm 0.2$   & $ 5562.2 \pm 2.0$\\
+		$+ 65.0 \pm 0.2$   & $ 9480.2 \pm 2.0$\\
+		$- 65.0 \pm 0.2$   & $ 8207.7 \pm 2.0$\\
+		$+ 80.0 \pm 0.2$   & $11473.2 \pm 2.0$\\
+		$- 80.0 \pm 0.2$   & $10195.6 \pm 2.0$\\
+		\hline
+	\end{tabular}	
+	\caption{Resonanzfrequenz in Abhängigkeit des Spulenstroms.}
+	\label{tab.helmholtzfrequenz}
+	\end{center}
+\end{table}
+
+Der Ungenauigkeit in der Einstellung des Helmholtzspulenstroms betrug \SI{0.2}{\milli\ampere} und ergibt den Fehler in $I_{\rm HH}$. Der Fehler der Resonanzfrequenz entspricht der Ablesegenauigkeit von \SI{1}{\hertz}.
+Zur Auswertung sind in Abbildung~\ref{fig.stoerfeld} die Summe der Frequenzquadrate über das Quadrat des Spulenstroms nach Gleichung~\eqref{eq.stoerfeld} aufgetragen.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/10-helmholtz-summe.pdf}
+		\caption{Summe der Resonanzfrequenzquadrate für verschiedene Spulenströme zur Bestimmung des Magnetons des Protons und der Amplitude des Störfeldes.}
+		\label{fig.stoerfeld}
+	\end{center}
+\end{figure}
+
+Aus Abbildung~\ref{fig.stoerfeld} erhalten wird die Steigung der Ausgleichsgeraden $m_{\rm Summe} = \SI[per-mode=symbol]{36125(22)}{\hertz\squared\per\milli\ampere\squared} $ und den $y$-Achsenabschnitt $y(0) = \SI{4458(80)e3}{\hertz\squared}$ mit den Fehlern aus den Geraden maximaler und minimaler Steigung.
+Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton $\mu_{\rm K}$ und die Amplitude des Störfeldes $B_{\rm S}$ bestimmen.
+\begin{align}
+	\mu_{\rm K} &= \SI{5.0979(16)e-27}{\tesla\per\ampere}\\
+	B_{\rm S} &=  \SI{34.74(31)}{\micro\tesla}
+\end{align}
+
+Der Literaturwert für den Landé-Faktor beträgt nach~\citet{constants}
+\begin{equation}
+	\mu_{\rm K} = \SI{5.05078e-27}{\tesla\per\ampere}.
+\end{equation}
+
+Der experimentell ermittelte Wert ist im Rahmen seiner Fehler leider nicht mehr mit dem Literaturwert vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war.
+
+Um nun noch den Winkel  des Störfeldes zu bestimmen verwenden wir die Differenz der Frequenzquadrat nach~\citet{anleitung},
+\begin{equation}
+	\nu^2(+I_{\rm HH}) - \nu^2(-I_{\rm HH}) = 4\frac{g^2\mu_{\rm K}^2}{h^2} \left( c I_{\rm HH} B_{\rm S} \cos\phi \right)
+	\label{eq.stoerwinkel}
+\end{equation}
+woraus wir den Winkel $\phi$ des Störfeldes bestimmen können.
+Die Auftragung der Differenz der Frequenzquadrate über den Helmholtzspulenstrom ist in Abbildung~\ref{fig.stoerwinkel} aufgetragen.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/10-helmholtz-diff.pdf}
+	\caption{Differenz der Resonanzfrequenzquadrate für verschiedenen Spulenströme zur Bestimmung des Winkels des Störfeldes.}
+	\label{fig.stoerwinkel}
+	\end{center}
+\end{figure}
+
+Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden $m_{\rm Differenz} = \SI[per-mode=symbol]{3434(27)e2}{\hertz\squared\per\milli\ampere}$ mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
+Mit Gleichung~\eqref{eq.stoerwinkel} erhalten wir somit den Winkel des Störfeldes.
+\begin{equation}
+	\phi = \SI{89.997546(46)}{\degree}
+\end{equation}
+Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_2$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi \approx 90\textdegree$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -555,7 +687,7 @@ Aus den Messungen für verschiedenen Pumpspannungen, also Wassergeschwindigkeite
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/06-relaxation.pdf}
-		\caption{Halblogarithmische Auftragung der Signalhöhe $S2(t_5)$ über die Zeitdifferenz $t_v$ für verschiedenen Geschwindigkeiten und Temperaturen.}
+		\caption{Halblogarithmische Auftragung der Signalhöhe $S2(t_5)$ über die Zeitdifferenz $t_v$ für verschiedenen Geschwindigkeiten und Temperaturen. $t_\mathrm{max}$ kennzeichnet die Zeit, welche die Protonen maximal benötigen dürfen, damit von einer turbulenten Strömung ausgegangen werden kann.}
 		\label{fig.relaxation}
 	\end{center}
 \end{figure}
@@ -582,7 +714,8 @@ Die Schlauchlänge haben wir mit einem Maßband gemessen und erhalten folgende W
 		Polaristor \tra Einstrahlspule & \SI{168(2)}{\centi\meter}\\
 		Einstrahlspule \tra Analysator & \SI{146(2)}{\centi\meter}\\
 		im Inneren des Analysators & \SI{46.0(5)}{\centi\meter}\\
-		Schlauch durch Einstahlspule & \SI{16.5(5)}{\centi\meter}
+		Schlauch durch Einstahlspule & \SI{16.5(5)}{\centi\meter}\\
+		\hline
 	\end{tabular}
 	\caption{Gemessenen Schlauchlängen für verschiedene Teile des Versuchs.}
 	\label{tab.schlauch}
@@ -597,7 +730,7 @@ Um eine zusätzliche Abschätzung zu bekommen, ab welcher Geschwindigkeit die St
 \begin{equation}
 	t_{\rm max} = \frac{L}{v_{\rm min}} = \SI{5.55}{\second}
 \end{equation}
-Hier wurde die Länge mit maximalen Fehler $L = (3.765-0.050)\SI{}{\meter}$ verwendet um einen sicheren Wert für $t_{\rm min}$ zu erhalten, der folglich fehlerfrei ist. Folglich können wir nur die Messwerte verwenden, für die $t_v>t_{\rm max}$ gilt.
+Hier wurde die Länge mit maximalen Fehler $L = (3.765-0.050)\SI{}{\meter}$ verwendet um einen sicheren Wert für $t_{\rm max}$ zu erhalten, der folglich fehlerfrei ist. Folglich können wir nur die Messwerte verwenden, für die $t_v>t_{\rm max}$ gilt. Diese Bedingung wurde bei den Fitkurven in Abbildung~\ref{fig.relaxation} und der Auswertung berücksichtigt.
 
 An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen gefittet und mit $\mathrm{d}M_{z}(t) = -1/T_1 M_{z}(t)\mathrm{d}t$ nach~\citet{anleitung} die Relaxationszeit $T_1$ bestimmt. Die erhaltenen Werte sind in Tabelle~\ref{tab.relaxationszeiten} aufgetragen.
 
@@ -640,7 +773,7 @@ Für $v_1$ verwenden wir die Geschwindigkeit des Wassers unter der Annahme, dass
 \end{equation}
 Durch Einsetzten von Gleichung~\eqref{eq.tv} in Gleichung~\eqref{eq.kontinuitaet} und Auflösen nach der Geschwindigkeit $v_2$ im Inneren des Schlauchstücks durch die Einstrahlspule, erhalten wir
 \begin{equation}
-	v_2 = \frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right) = 3.
+	v_2 = \SI{3.10(24)}{\meter\per\second} %\frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right)
 \end{equation}
 
 
