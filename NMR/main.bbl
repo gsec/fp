@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{3}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -7,15 +7,20 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
 
-\bibitem[mellissinos()]{mellissinos}
-\dinatlabel{mellissinos }
-
 \bibitem[M"uller(1990)]{mueller}
 \dinatlabel{M"uller 1990} \textsc{M"uller}, Herbert:
 \newblock \emph{Magnetische Kernresonanz}, Physikalisches Institut der
   Universit"at W"urzburg, Dissertation, Februar 1990. --
 \newblock URL
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Staatsexamensarbeit_Mueller_NMR.pdf}
+
+\bibitem[{National Institude of Standards and Technology}(2011)]{codata}
+\dinatlabel{{National Institude of Standards and Technology} 2011}
+  \textsc{{National Institude of Standards and Technology}}:
+\newblock \emph{Physical Reference Data - The NIST Reference on Constants,
+  Units and Uncertainty}.
+\newblock June 2011. --
+\newblock URL \url{http://physics.nist.gov/cuu/index.html}
 
 \bibitem[Radestock(2009)]{anleitung}
 \dinatlabel{Radestock 2009} \textsc{Radestock}, Oliver:
@@ -26,13 +31,5 @@
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/NMR_Anleitung_Jul2009.pdf}.
   --
 \newblock Physikalisches Fortgeschrittenen Praktikum
-
-\bibitem[of~Standards und Technology(2011)]{codata}
-\dinatlabel{of~Standards und Technology 2011} \textsc{Standards}, National~I.
-  of~; \textsc{Technology}:
-\newblock \emph{Physical Reference Data - The NIST Reference on Constants,
-  Units and Uncertainty}.
-\newblock June 2011. --
-\newblock URL \url{http://physics.nist.gov/cuu/index.html}
 
 \end{thebibliography}

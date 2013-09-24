@@ -46,8 +46,8 @@ B_S_fehler = sqrt( (1.0/2 * (( t *h**2 )/( 2 *g**2 *mu_k**2 ))**(-1.0/2) * ( t*h
 
 print "B_S: ", B_S, "+-", B_S_fehler
 
-m_2 = 3434*10**(-2)*1000
-m_2_fehler = 27*10**(-2)*1000
+m_2 = 3434*10**(2)*1000
+m_2_fehler = 27*10**(2)*1000
 
 cos_phi = ( m_2*h**2 )/( 4*g**2 *mu_k**2 *c*B_S )
 phi = arccos(cos_phi)
@@ -56,6 +56,7 @@ phi_fehler = sqrt(( (1.0/(sqrt( 1-cos_phi**2 )) * h**2/( 4*g**2 *mu_k**2 *c*B_S 
 
 
 print "phi: ", phi, "+-", phi_fehler
-
-
+print "phi in Grad", phi/pi * 180, "+-", phi_fehler/pi * 180
+print "rest", m_2/cos_phi
+print cos_phi
 
