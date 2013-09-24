@@ -94,24 +94,8 @@
 \begin{abstract}      
 %=============================================================================
   \vspace{-2em}
-  \noindent {\small Mithilfe von drei Röntgenanoden sowie verschiedenen
-    Streuobjekten konnten wir die theoretischen Werte der
-$K_{\alpha}$- und $K_{\beta}$-Linie von Kupfer, Eisen und Molybdän
-    bestätigen. Zudem war die
-Feinstruktur von Eisen und Molybdän 
-    im Spektrum erkennbar.  Über das Duane-Hunt-Gesetz haben wir Plancksche
-    Wirkungsquantum zu
-%$h = \SI{6.645+-0.059e-34}{\joule\second}$
-    bestimmt. 
-%{R_{H} = \SI{14.02+-0.76}{\eV}} anhand der $K_{\beta}$ Linien
-    Anhand des Effekts der inelastischen Streuung von Photonen an Elektronen
-    haben wir die Compton-Wellenlänge zu
-%$\lambda_c=\SI{2.25+-0.43}{\pico\meter}$
-    ermittelt. Schließlich haben wir zwei
-Laue-Aufnahmen
-    eines Materials gemacht, den Reflexen Miller-Indices zugeordnet und damit 
-    die Diamandstruktur der Probe
-    identifiziert haben.
+  \noindent {\small 
+  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, zeigen \note{anzahl} Spindrehungen und  bestimmen das Kernmagneton $mu_{\rm K} = \SI[per-mode=symbol]{5.0979e-27}{\tesla\per\ampere}$. Für verschiedene Temperaturen vergleichen wir die Relaxationszeiten und bestimmen das vorhandene Störfeld. Durch verschiedene Messungen können wir die, durch die Bloch-Gleichungen vorhergesagte, Dynamik in großen Teilen bestätigt.
     }
 \end{abstract}
 
@@ -119,7 +103,7 @@ Laue-Aufnahmen
 
 \centerline{Betreuer: Dr. Charles Gould \hfill
    Versuchsdurchführung am 18. Oktober 2013}
-\centerline{\hfill  Protokollabgabe am ??. Oktober 2013}
+\centerline{\hfill  Protokollabgabe am 25. Oktober 2013}
  
 
 \vspace{2em}
@@ -406,7 +390,7 @@ In diesem Versuchsteil sollte bei eingeschalteter Wasserpumpe, Analysator und Po
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Inbetriebnahme Computer und Messung von $S2(t_{12})$}
-\label{auswerung3}
+\label{auswertung3}
 
 Im dritten Versuchsteil soll die Resonanzfrequenz der Protonenspins im Magnetfeld des Analysator-Magneten bestimmt werden.
 Daraus lassen sich die magnetische Feldstärke des Analysator-Magneten und die Energieaufspaltung der Protonen-Spins bestimmen.
@@ -642,7 +626,8 @@ Der Literaturwert für das Kernmagneton beträgt nach~\citet{codata}
 	\mu_{\rm K,Lit} = \SI{5.05078e-27}{\tesla\per\ampere}.
 \end{equation}
 
-Der experimentell ermittelte Wert ist im Rahmen seiner Fehler leider nicht mehr mit dem Literaturwert vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war.
+Der experimentell ermittelte Wert ist im Rahmen seiner Fehler leider nicht mehr mit dem Literaturwert vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war. Allerdings beträgt die Abweichung lediglich \SI{0.9}{\percent} und ist nur durch den kleinen Fehler nicht mehr mit $\mu_{\rm K, Lit}$ vereinbar.
+Das Ergebnis des Betrags des Störfeldes $B_{\rm S}$ liegt im Bereich der Stärke des Erdmagnetfeldes, was wir auch erwartet hatten.
 
 Um nun noch den Winkel  des Störfeldes zu bestimmen verwenden wir die Differenz der Frequenzquadrat nach~\citet{anleitung},
 \begin{equation}
@@ -783,9 +768,9 @@ Für $v_1$ verwenden wir die Geschwindigkeit des Wassers unter der Annahme, dass
 \end{equation}
 Durch Einsetzten von Gleichung~\eqref{eq.tv} in Gleichung~\eqref{eq.kontinuitaet} und Auflösen nach der Geschwindigkeit $v_2$ im Inneren des Schlauchstücks durch die Einstrahlspule, erhalten wir
 \begin{equation}
-	v_2 = \SI{3.10(24)}{\meter\per\second} %\frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right)
+	v_2 = \SI{3.10(24)}{\meter\per\second}. %\frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right)
 \end{equation}
-
+In Versuchsteil~\ref{auswertung5} konnten wir die Wassergeschwindigkeit auf etwa \SI{3}{\second} abgeschätzen, was unser Ergebnis bestätigt. Das hier erhaltenen Ergebnis wird für die Berechnungen in Versuchsteil~\ref{auswertung5} verwendet.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -795,28 +780,11 @@ Durch Einsetzten von Gleichung~\eqref{eq.tv} in Gleichung~\eqref{eq.kontinuitaet
 \section{Zusammenfassung}
 % =============================================================================
 %
-Wir konnten mit dem Versuch einen guten Einblick in die Röntgenspektroskopie
-gewinnen. Die charakteristischen Linien von Eisen, Molybdän und Kupfer wurden mit
-recht hoher Genaugikeit nachgewiesen, wobei der größte Abstand von unseren
-Bestwerten zu den Theoriewerten 
-\SI{0.65}{\percent} betrag. Im Rahmen der Fehler gab es keine Abweichung. 
- Das empirische Gesetz zwischen der Intensität der
-charakteristischen Strahlung und der Spannung zeigt systematische Abweichungen
-für Spannungen ab \SI{30}{\kilo\volt} und sollte eher als Faustregel verstanden
-werden. Das Duane-Hunt-Gesetz hingegen konnte gut bestätigt werden und hat uns
-erlaubt, das Plancksche Wirkungsquantum zu bestimmen. Das Moseley-Gesetz wurde
-ausführlich diskutiert und hat gute Abschätzungen für die Rydberg-Konstante
-ergeben. Allerdings ist die Auswertung der \emph{Abschirmkonstante} $\sigma(Z)$
-nicht wirklich sinnvoll. Mit dem Compton-Effekt konnte eine überraschend gute
-Bestimmung der Compton-Wellenlänge durchgeführt werden. Eine vollständige
-Aufnahme des Transmissionsspektrums von Al im gesamten Wellenlängenbereich der
-Kupferanode würde helfen zu verstehen, warum die Näherung eines linearen
-Spektrums solch gute Ergebnisse liefert. Die Laue-Aufnahme hat insgesamt gut
-funktioniert. Allerdings könnte man die Aufhängung der Dentalfilme zum Beispiel
-mit einer optischen Bank o.Ä. verbessern. Dadurch wird ein zentrales 
-Auftreffen garantiert. Die Auflösung 
-der Filme ist gut, eine größere Fläche wäre zwar wünschenswert, ist für die
-Auswertung aber nicht unbedingt notwendig. 
+In dem Praktikumsversuch zur magnetischen Kernresonanz konnten wir mit einem Aufbau nach Abbildung~\ref{fig.versuchsaufbau} Protonen in einem Wasserkreislauf polarisieren, deren Magnetisierung messen und manipulieren.
+Nach eichen der Messgeräte~\ref{auswertung1} konnten wir die Resonanzfrequenz der polarisierten Protonen aus den Zeitabständen der Resonanzfälle auf $\nu_{\rm res} = \SI{4712.31(20)}{\kilo\hertz}$~\ref{auswertung2} bestimmen, das Signal darstellen und die Auswirkung verschiedener Versuche beobachten.
+So konnten wir die Magnetfeldstärke des Dauermagneten im Analysator zu $B_0 = \SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}$ und die Energieaufspaltung $\Delta E = \SI[separate-uncertainty=false]{19.48854(83)e-9}{\electronvolt}$ bestimmen~\ref{auswertung3}. Durch Variation des Polarisationsstroms $I_{\rm pol}$ bestätigen wir den linearen Zusammenhang zwischen Polarisationsfeldstärke und Messsignal~\ref{auswertung4}.
+Durch aufnehmen von korrigierten Amplituden- und Frequenz-Sweeps um die Resonanzfrequenz können wir den gesamten Phasenraum von Amplitude, Frequenz und Signal darstellen~\ref{phasenraum}. Die Messungen entsprechen leider nicht unseren theoretischen Erwartungen \note{hier fehlen noch unsere Feststellungen}. Den durch die Manipulation erzeugten Drehwinkel der Magnetisierung bei einer Einstrahlamplitude von \SI{45}{\volt} wir auf \SI{3.14(67)}{} bestimmen~\ref{auswertung5}. \note{Spindrehungen in Abhängigkeit der Amplitude fehlt noch}. Mit Hilfe eines Helmholtzspulenpaares konnten wir verschieden starke statische Magnetfelder bereitstellen. Aus der Untersuchung der entsprechenden Resonanzfrequenzen konnten wir das im Raum vorhandenen Störfeld $\vec{B}_{\rm S}$ vermessen und eine Stärke von $B_{\rm S} = \SI{34.74(31)}{\micro\tesla}$ und einen relativen Winkel zum Helmholtzspulenfeld $\phi = \SI{64.67(32)}{\degree}$~\ref{auswertung6}. Der Betrag des Störfeldes konnten wir zudem schon durch die Resonanzfrequenz aus den Frequenz-Sweeps abschätzen und sehen, dass die Werte nahezu übereinstimmen~\ref{auswertung5}. Den Wert für das Kernmagneton konnten wir mit $\mu_{\rm K} = \SI[separate-uncertainty=false, per-mode=symbol]{5.0979(19)e-27}{\tesla\per\ampere}$ mit \SI{0.9}{\percent} Abweichung vom Literaturwert bestimmen~\ref{auswertung6}.
+Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ und die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur auf $\SI{3.6(17)}{1\per\second}$ bestimmen~\ref{auswertung7}. Die Wassergeschwindigkeit konnte auch schon durch die Korrektur der Frequenz-Sweeps abgeschätzt werden und bestätigt das Ergebnis~\ref{auswertung5}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung, deren Manipulation gut untersuchen und die Vorhersagen der Bloch-Gleichungen zu großen Teilen bestätigen. 
 %
 % =============================================================================
 %\begin{thebibliography}{}   
