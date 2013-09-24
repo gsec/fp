@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import optimize  
+import scipy as sp
 from matplotlib import cm
+import matplotlib.colors as colors
 from matplotlib.ticker import LinearLocator, FormatStrFormatter
 from mpl_toolkits.mplot3d import Axes3D
 from pylab import *
@@ -22,39 +24,51 @@ abgelesene_Werte_plotten = False #False
 
 Plots=0
 
-# dataset=zeros(18)
-# for i in range(18):
-	# filename="05-phasenraum-0"+str(10+5*i)+"mV-minmax-FM.dat"
-	# dataset[i]=float(filename)
-	
+cc = lambda arg: colorConverter.to_rgba(arg, alpha=0.6)
+
+dataset=[]
+for i in range(19):
+	filename="05-phasenraum-0"+str(10+5*i)+"mV-minmax-FM.dat"
+	dataset.append(filename)
 
 fig = plt.figure()
 ax = fig.gca(projection='3d')
 
 verts=[]
-zdata = np.arange(10,100,5)
-# for z in zdata:
-	# data = genfromtxt("05-phasenraum-040mV-minmax-FM.dat")
-	# #data = genfromtxt(dataset[z])
-	# xdata = data[:,0]
-	# ydata = data[:,1]
-	# verts.append(list(zip(xdata,ydata)))
-	
-data = genfromtxt("05-phasenraum-040mV-minmax-FM.dat")
+zdata = np.arange(10,105,5)
+print zdata
+for z in range(len(dataset)-1):
+	#data = genfromtxt("05-phasenraum-040mV-minmax-FM.dat")
+	data = genfromtxt(dataset[z])
+	xdata = data[:,0]
+	ydata = data[:,1]
+	verts.append(list(zip(xdata,ydata)))
 
-xdata = data[:,0]
-ydata = data[:,1]
-verts.append(list(zip(xdata,ydata)))
-
-	
-poly = PolyCollection(verts)
+colors = ['#be1e2d',
+	'#666699',
+	'#92d5ea',
+	'#ee8310',
+	'#8d10ee',
+	'#5a3b16',
+	'#26a4ed',
+	'#f45a90',
+	'#e9e744']
+cc = [colorConverter.to_rgba(c,alpha=0.6) for c in ('r','g','b','c','y','m','k')]
+ncc = len(cc)
+nzs = 4
+colorlist = [cc[j%ncc] for j in range(nzs)]
+# vtx = sp.rand(3,3)
+# tri = Axes3D.art3d.Poly3DCollection([vtx])
+# verts.set_color(colors.rgb2hex(sp.ran(3)))
+poly = PolyCollection(verts, closed=False, facecolor=colorlist)
 #poly.set_alpha(0.7)
 ax.add_collection3d(poly, zs=zdata, zdir='y')
+
 
 ax.set_xlabel('X')
 ax.set_xlim3d(1200, 1800)
 ax.set_ylabel('Y')
-ax.set_ylim3d(0, 100)
+ax.set_ylim3d(0,100)
 ax.set_zlabel('Z')
 ax.set_zlim3d(-0.8, 0.6)
 
