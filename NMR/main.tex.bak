@@ -70,8 +70,8 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\tra}{$\rightarrow$}
-\newcommand{\Tra}{$\Rightarrow$}
+\newcommand{\tra}{$\rightarrow $}
+\newcommand{\Tra}{$\Rightarrow $}
 \newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
@@ -382,13 +382,13 @@ Die Einstrahlspule im Manipulator besitzt einen kleinen Innenwiderstand. Allerdi
 Die Werte in Abbildung~\ref{fig.eichfaktor} sind mit den entsprechenden Fehlern in der Amplitude des Funktionsgenerators (\SI{2}{\percent}) aufgetragen. Zur Bestimmung der Steigung haben wir eine ausgleichende Gerade mit Fehlergeraden an die Daten gelegt. Die Fehler des Fits können vernachlässigt werden.
 Für den gemessenen Eichfaktor ergibt sich somit
 \begin{equation}
-	E_{\rm Spule} = \frac{U_{\rm ES}}{U_{\rm FG}} = \SI{0.4839(97)}{}
+	f_{\rm ES} = \frac{U_{\rm ES}}{U_{\rm FG}} = \SI{0.4839(97)}{}
 \end{equation}
 Aus den gemessen Werten erkennen wir, dass der Eichfaktor unabhängig von der gemessenen Frequenz der Wechselspannung an der Einstrahlspule ist. Dies ist auch wichtig um den Eichfaktor für spätere Versuche verwenden zu können, da dort an unterschiedlichen Frequenzen gemessen wird.
 
 Der Eichfaktor kann zudem theoretisch aus der Kenntnis der Widerstandswerte bestimmt werden. 
 \begin{equation}
-	E_{\rm Spule,theo} = \frac{R_{\rm ES}}{R_{\rm FG}+R_{\rm ES}} = \SI{0.4845(97)}{}
+	f_{\rm ES} = \frac{R_{\rm ES}}{R_{\rm FG}+R_{\rm ES}} = \SI{0.4845(97)}{}
 \end{equation}
 Der Fehler ergibt sich aus dem geschätzten Fehler des Vorwiderstandes von \SI{2}{\percent}.
 
@@ -497,19 +497,20 @@ Mit ansonsten gleichen Einstellungen messen wir einmal von niedrigen zu hohen un
 In \cref{gewichte} sind die zwei Resonanzkurven zu sehen, die jeweils von der wahren Resonanzkurve nach links und nach rechts verschoben sind.
 \begin{figure}[htp]
 	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/05-Gewichte.pdf}
+		\includegraphics[width=\columnwidth]{Data-Plots/05-Resonanzfrequenz.pdf}
 		\caption{Resonanzkurven des Up- und Down-sweeps mit verschobenen Schwerpunkten.}
 		\label{gewichte}
 	\end{center}
 \end{figure}
-Zu den Messwerten wurden die Schwerpunkte der Peaks berechnet. Sie unterscheiden sich von ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1507(1)}{\hertz}$ um  $\pm \Delta \nu=\SI{17}{\hertz}$.
+Wir messen die Maxima der Resonanzkurven aus und errechnen,dass sie vom ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1510(2)}{\hertz}$ um  $\pm \Delta \nu=\SI{18}{\hertz}$ verschoben sind.
+Diese Verschiebung der Peaks verwenden wir um bei den folgenden Plots des Phasenraumes, die Position der Peaks zu korrigieren.
 Die Resonanzfrequenz entspricht der Präzessionsfrequenz der Protonen in einer Feldstärke von 
 \begin{align}
-	B_{\mathrm{Raum}}=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{36.39(1)}{\micro\tesla}.
+	B_{\mathrm{Raum}}=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{35.46(5)}{\micro\tesla}.
 \end{align}
 Diese Feldstärke liegt in der Größenordnung der Erd-Magnetfeldstärke.
 Aus der Verschiebung lässt sich außerdem ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
-Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{??}.
+Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{wg}.
 % Teil B
 
 Im Magnetfeld des Raumes soll nun untersucht werden, wie sich das Messsignal in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität verhält.
@@ -518,8 +519,8 @@ Die Messpunkte sind in \cref{phasenraum} dargestellt.
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/07-Phasenraum.pdf}
-		\caption{Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
-		\label{gewichte}
+		\caption{Bei diesem Plot wurden die Frequenzshifts noch nicht herausgerechnet ??. Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
+		\label{phasenraum}
 	\end{center}
 \end{figure}
 Man erkennt, dass sich die Intensität des Messsignals bei etwa $\SI{45}{\milli\volt}$ Einstrahlamplitude komplett das Vorzeichen gewechselt hat. 
@@ -535,29 +536,37 @@ Bewegt sich der Spin auf der Achse dieser Leiterschleife, kann die Gleichung mit
 	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}}  \frac{\gamma \mu_0 I}{4}  \frac{r^2}{(r^2+l^2)^{\frac{3}{2}}} \frac{\mathrm{d}l}{v}
 \end{align}
 umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt.
-Das bedeutet, dass jede Spule diesen Beitrag zum Drehwinkel liefert.
-Der Gesamtdrehwinkel ergibt sich dann nach dem lösen des Integrals zu
+Das bedeutet, dass jede der $125$ Spulen diesen Beitrag zum Drehwinkel liefert.
+Der Gesamtdrehwinkel bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ ergibt sich dann nach dem lösen des Integrals zu
 \begin{align}
-	\Theta=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = ??
+	\Theta_{\SI{45}{\milli\volt}}=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = \SI{3.14(67)}{}.
 \end{align}
-und ist somit unabhängig von den geometrischen Abmessungen der Spule
+Der Dehwinkel ist somit unabhängig von den geometrischen Abmessungen der Spule.
+Das Ergebnis bestätigt die Vermutung, dass die Protonen bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ um $180$\textdegree\ gedreht wurden.
+Dementsprechnend wurden sie Spins am Sattelpunkt in \cref{phasenraum} um eine volle Umdrehung gedreht.
+Wir wollen nun einige Eigenschaften des Phasenraumdiagramms überprüfen, die in der Theorie in \citep{anleitung} vorausgesagt wurden.
+Das Phasenraumdiagramm, das sich aus der Theorie ergibt, wurde in \cref{TheoriePR} simuliert. 
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/TheoriePR.jpg}
+		\caption{Bei diesem Plot wurden die Frequenzshifts noch nicht herausgerechnet ??. Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
+		\label{phasenraum}
+	\end{center}
+\end{figure}
+% Effekte
+%  - Asymmetrie des Signals
+%  - unterschiedlich lange in der Manipulatorspule
+%  - unterschielich starken Einstrahlfeldern ausgesetzt, die sowohl einen Einfluss auf die Oszillation als auch auf die Halbwertsbreiten haben
+%  - schnellere Spindrehung, wenn off-Resonanz
+
+
 
 %\begin{compactitem}
-%	\item Anschließen Einstrahlspule und Funktionsgenerator
-%	\item Suchen der Resonanz im Störfeld und Messung der Resonanz im Phasenraum
-%	\item Protonen im Erdmagnetfeld Larmorfrequenz $\approx \SI{1.2}{\kilo\hertz}$
-%	\item Funktionsgenerator Amplitude \SI{50}{\milli\volt}
-%	\item[\tra] Spektrum aufnehmen mit Frequenzgrenzen, dass \SI{1000}{\hertz} durchgefahren wird \--- Durchlaufzeit ca. \SI{60}{\second}
-%	\item Messung in anderen Frequenzintervallen ober- und unterhalb der Resonanzfrequenz im Erdmagnetfeld 
-%	\item[\tra] Resonanzfrequenz außerhalb berechneten Stelle \--- Warum?
-%	\item Messung bei steigender und fallender Frequenz \tra 2 verschobenen, richtige in der Mitte
-%	\item Amplitude auf \SI{20}{\milli\volt} und Frequenzbereich auch \SI{200}{\hertz}
-%	\item Resonanzkurven in mehreren Frequenzfenster ohne Bereichsänderung mit Amplituden von $10-\SI{100}{\milli\volt}$ im Abstand von \SI{5}{\milli\volt}
-%	\item Wann Resonanzpeak besonders deutlich
-%	\item[\tra] Auflösung des Phasenraums in Amplitude und Frequenz
-%	\item Resonanzfrequenz genau einstellen, Amplitudenbereich so, dass möglichst viele Spindrehungen zu sehen
-%	\item[\tra] Aufnahme der Spindrehung in Abhängigkeit der Amplitude
-%\end{compactitem}
+%	+ Resonanz im Störfeld finden 
+%	+ Phasenraum aufnehmen
+%	- Spindrehung aufnehmen
+%	+ Wassergeschwindigkeit bestimmen
+%	- Vergleich mit Theorie -Halbswertsbreiten 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Resonanz im Feld der Helmholtzspulen}
 \label{auswertung6}
@@ -628,9 +637,9 @@ Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton 
 	B_{\rm S} &=  \SI{34.74(31)}{\micro\tesla}
 \end{align}
 
-Der Literaturwert für den Landé-Faktor beträgt nach~\citet{constants}
+Der Literaturwert für das Kernmagneton beträgt nach~\citet{codata}
 \begin{equation}
-	\mu_{\rm K} = \SI{5.05078e-27}{\tesla\per\ampere}.
+	\mu_{\rm K,Lit} = \SI{5.05078e-27}{\tesla\per\ampere}.
 \end{equation}
 
 Der experimentell ermittelte Wert ist im Rahmen seiner Fehler leider nicht mehr mit dem Literaturwert vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war.
@@ -654,9 +663,9 @@ Die Auftragung der Differenz der Frequenzquadrate über den Helmholtzspulenstrom
 Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden $m_{\rm Differenz} = \SI[per-mode=symbol]{3434(27)e2}{\hertz\squared\per\milli\ampere}$ mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
 Mit Gleichung~\eqref{eq.stoerwinkel} erhalten wir somit den Winkel des Störfeldes.
 \begin{equation}
-	\phi = \SI{89.997546(46)}{\degree}
+	\phi = \SI{64.67(32)}{\degree}
 \end{equation}
-Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_2$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi \approx 90\textdegree$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
+Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_2$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi = \SI{64.67(32)}{\degree}$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -754,6 +763,7 @@ An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen
 Die Fehler in den Relaxationszeiten erhalten wir aus den Fehlerkurven in Abbildung~\ref{fig.relaxation}. Im Vergleich ist zu erkennen, dass der Fehler für die Relaxationszeit bei \SI{60}{\celsius} deutlich größer als die restlichen sind. Dies liegt daran, dass die Steigung wesentlich kleiner ist, was bei gleicher Abweichung durch die Fehlerkurven in einem deutlich größeren Fehler resultiert. Zudem können wir aus Abbildung~\ref{fig.relaxation} wie auch an den Werten in Tabelle~\ref{tab.relaxationszeiten} erkennen, dass die Relaxationszeiten bei höheren Temperaturen größer werden. Die Protonen relaxieren also langsamer wenn sie warm sind. \note{Warum}
 
 \paragraph*{Wassergeschwindigkeit in der Einstrahlspule}
+\label{wg}
 Im folgendem wird zudem die Wassergeschwindigkeit in der Einstrahlspule bestimmt, da diese für Versuchsteil~\ref{auswertung5} benötigt wird.
 Hierfür verwenden wir die Zeit $t_{v}(\SI{12}{\volt},\SI{20}{\celsius})= \SI{2.661(28)}{\second}$, die das Wasser durch den gesamten Schlauch bei maximaler Pumpleistung und Raumtemperatur benötigt. 
 Der Schlauch besitzt bis zum Schlauchstück der Einstrahlspule nach Tabelle~\ref{tab.schlauch} eine Länge von $l_1 = \SI{168(2)}{\centi\meter}$ und ab dem Stück bis zum Analysator eine Länge von $l_3 = (146.0+46.0)\pm(3.0)\SI{}{\centi\meter}$. In diesen Stücken beträgt der Innendurchmesser $d_1 = \SI{6}{\milli\meter}$~\citep{anleitung}. Das Schlauchstück durch die Einstrahlspule beträgt $l_2 = \SI{16.5(5)}{\centi\meter}$ mit einem Innendurchmesser von $d_2 = \SI{4}{\milli\meter}$~\citep{anleitung}. Die Fehler der Durchmesser werden im Vergleich zum Fehler in der Länge als vernachlässigbar angenommen. 

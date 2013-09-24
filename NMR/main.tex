@@ -70,8 +70,8 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\tra}{$\rightarrow$}
-\newcommand{\Tra}{$\Rightarrow$}
+\newcommand{\tra}{$\rightarrow $}
+\newcommand{\Tra}{$\Rightarrow $}
 \newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
@@ -639,7 +639,7 @@ Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton 
 
 Der Literaturwert für das Kernmagneton beträgt nach~\citet{codata}
 \begin{equation}
-	\mu_{\rm K} = \SI{5.05078e-27}{\tesla\per\ampere}.
+	\mu_{\rm K,Lit} = \SI{5.05078e-27}{\tesla\per\ampere}.
 \end{equation}
 
 Der experimentell ermittelte Wert ist im Rahmen seiner Fehler leider nicht mehr mit dem Literaturwert vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war.
@@ -663,9 +663,9 @@ Die Auftragung der Differenz der Frequenzquadrate über den Helmholtzspulenstrom
 Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden $m_{\rm Differenz} = \SI[per-mode=symbol]{3434(27)e2}{\hertz\squared\per\milli\ampere}$ mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
 Mit Gleichung~\eqref{eq.stoerwinkel} erhalten wir somit den Winkel des Störfeldes.
 \begin{equation}
-	\phi = \SI{89.997546(46)}{\degree}
+	\phi = \SI{64.67(32)}{\degree}
 \end{equation}
-Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_2$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi \approx 90\textdegree$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
+Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_2$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi = \SI{64.67(32)}{\degree}$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
