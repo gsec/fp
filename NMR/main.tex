@@ -72,7 +72,7 @@
 
 \newcommand{\tra}{$\rightarrow $}
 \newcommand{\Tra}{$\Rightarrow $}
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -98,7 +98,7 @@
 %=============================================================================
   \vspace{-2em}
   \noindent {\small 
-  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ der Protonen im Feld des Analysators sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, nehmen 4 volle Drehungen des Spins auf und bestimmen das Kernmagneton $\mu_{\rm K} = \SI[per-mode=symbol]{5.0979e-27}{\tesla\per\ampere}$. Für verschiedene Temperaturen vergleichen wir die Relaxationszeiten $T_1$, wobei wir bei höherer Temperatur längere Relaxationszeit messen. Wir bestimmen das vorhandene Störfeld im Raum. Insgesamt konnten wir die vorhergesagte Dynamik der Magnetisierung bestätigt.
+  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ der Protonen im Feld des Analysators sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, nehmen 4 volle Drehungen des Spins auf und bestimmen das Kernmagneton $\mu_{\rm K} = \SI[per-mode=symbol]{5.0979e-27}{\tesla\per\ampere}$. Wir bestimmen das vorhandene Störfeld im Raum und vergleichen für verschiedene Temperaturen die Relaxationszeiten $T_1$, wobei wir bei höherer Temperatur längere Relaxationszeit messen. Insgesamt konnten wir die theoretisch vorhergesagte Dynamik der Magnetisierung bestätigt.
     }
 \end{abstract}
 
@@ -135,7 +135,7 @@ Das magnetische Moment des Kerns wird dabei von dessen Spin verursacht und folgt
 \begin{align}
 \vec{\mu}=g \frac{\mu_{\rm K}}{\hbar}\vec{s}
 \end{align}
-mit $g$ dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_K$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_{\rm K}=\frac{e \hbar}{2m_{\rm p}}$ mit $m_{\rm p}$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5.59.\\
+mit $g$ dem Landé-Faktor des Protons, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_K$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_{\rm K}=\frac{e \hbar}{2m_{\rm p}}$ mit $m_{\rm p}$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5.59.\\
 Befindet sich das magnetische Moment nun in einem Magnetfeld, so besitzt es die potentielle Energie 
 \begin{align}
 E_{\rm M}=-\vec{\mu} \cdot \vec{B}
@@ -155,9 +155,8 @@ Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipo
 beschrieben werden, wobei $\gamma$ dem gyromagnetischen Verhältnis entspricht, durch das ebenso die Richtung und Größe des Dipols mit $\vec{\mu} = \gamma\vec{J}$ definiert ist.
 Die Frequenz der Präzession wird Larmorfrequenz $\omega_{\rm Larmor}$ genannt und ist gegeben durch~\citep{mueller}
 \begin{equation}
-	\omega_{\rm Larmor} = \frac{g \mu_{\rm K}}{\hbar}B = \gamma \cdot B
+	\omega_{\rm Larmor} = \frac{g \mu_{\rm K}}{\hbar}B = \gamma \cdot B.
 \end{equation}
-mit dem Landé-Faktor $g$.
 
 Um nun die dynamische makroskopische Magnetisierung der Probe zu beschreiben werden die sogenannten Bloch-Gleichungen verwendet~\citep{anleitung}.
 \begin{equation}
@@ -291,7 +290,7 @@ Im dritten Versuchsteil soll die Resonanzfrequenz der Protonenspins im Magnetfel
 Daraus lassen sich die magnetische Feldstärke des Analysator-Magneten und die Energieaufspaltung der Protonen-Spins bestimmen.
 Wir variieren dazu die Analysatorfrequenz in kleinen Schritten.
 Zweimal pro Periode des Wobbelstromes tritt dabei der Resonanzfall im äußeren Feld auf, wie in \cref{wobbel} skizziert ist.
-\begin{figure}[htp]
+\begin{figure}[t!]
 	\begin{center}
 		\includegraphics[width=0.7\columnwidth]{Bilder/Wobbel}
 		\caption{Die Analysatorfrequenz trifft zweimal pro Periode des Wobbelfeldes die Resonanzfrequenz. Sie bestimmt mit ihrer Höhe den zeitlichen Abstand zweier Resonanzfälle.}
@@ -300,7 +299,7 @@ Zweimal pro Periode des Wobbelstromes tritt dabei der Resonanzfall im äußeren 
 \end{figure}
 Damit wird deutlich, dass die Resonanzfrequenz und der zeitliche Abstand $t_{12}$ zwischen zwei Resonanzfällen einen Cosinus-Zusammenhang besitzen.
 Wie in \cref{t12} messen wir für zehn verschiedene Analysatorfrequenzen den zeitlichen Abstand zweier der Resonanzen aus.
-\begin{figure}[htp]
+\begin{figure}[t!]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Zeitabstaende.pdf}
 		\caption{Für jede Frequenz wird der zeitliche Abstand zweier Resonanzereignisse abgelesen.}
@@ -637,10 +636,10 @@ Die Schlauchlänge haben wir mit einem Maßband gemessen und erhalten folgende W
 	\begin{center}
 	\begin{tabular}{cc}
 		\hline
-		von \tra bis & Länge \\
+		von \tra\ bis & Länge \\
 		\hline
-		Polaristor \tra Einstrahlspule & \SI{168(2)}{\centi\meter}\\
-		Einstrahlspule \tra Analysator & \SI{146(2)}{\centi\meter}\\
+		Polaristor \tra\ Einstrahlspule & \SI{168(2)}{\centi\meter}\\
+		Einstrahlspule \tra\ Analysator & \SI{146(2)}{\centi\meter}\\
 		im Inneren des Analysators & \SI{46.0(5)}{\centi\meter}\\
 		Schlauch durch Einstahlspule & \SI{16.5(5)}{\centi\meter}\\
 		\hline
