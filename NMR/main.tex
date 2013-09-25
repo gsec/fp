@@ -70,9 +70,9 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\tra}{$\rightarrow$}
-\newcommand{\Tra}{$\Rightarrow$}
-\renewcommand{\note}[1]{{\color{red}#1??}}
+\newcommand{\tra}{$\rightarrow $}
+\newcommand{\Tra}{$\Rightarrow $}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -98,7 +98,7 @@
 %=============================================================================
   \vspace{-2em}
   \noindent {\small 
-  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, zeigen \note{anzahl} Spindrehungen und  bestimmen das Kernmagneton $mu_{\rm K} = \SI[per-mode=symbol]{5.0979e-27}{\tesla\per\ampere}$. Für verschiedene Temperaturen vergleichen wir die Relaxationszeiten und bestimmen das vorhandene Störfeld. Durch verschiedene Messungen können wir die, durch die Bloch-Gleichungen vorhergesagte, Dynamik in großen Teilen bestätigt.
+  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ der Protonen im Feld des Analysators sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, nehmen 4 volle Drehungen des Spins auf und bestimmen das Kernmagneton $\mu_{\rm K} = \SI[per-mode=symbol]{5.0979e-27}{\tesla\per\ampere}$. Für verschiedene Temperaturen vergleichen wir die Relaxationszeiten $T_1$, wobei wir bei höherer Temperatur längere Relaxationszeit messen. Wir bestimmen das vorhandene Störfeld im Raum. Insgesamt konnten wir die vorhergesagte Dynamik der Magnetisierung bestätigt.
     }
 \end{abstract}
 
@@ -120,8 +120,8 @@
 %
 Befindet sich ein Atomkern mit einem nichtverschwindem Spin in einem Magnetfeld, so kann er elektromagnetische Strahlung absorbieren sowie emittieren. Dieser Effekt wird als Kernspinresonanz (eng.: nuclear magnetic resonanz NMR) bezeichnet.
 Zurückzuführen ist der Effekt auf das magnetische Moment, das durch den Spin des Atomkerns hervorgerufen wird. Dieses magnetische Moment besitzt, je nach Orientierung in einem äußeren Magnetfeld, unterschiedlich viel Energie. 
-Die Energieaufspaltung eines Spins im äußeren Magnetfeld wurde zuerst im Jahre 1896 von Pieter Zeeman an Elektronen in einem Atom und 40 Jahre später von Isidor Rabi an Atomkernen nachgewiesen [citation needed].\\
-Kleinste Unterschiede im lokalen magnetischen Feld von Atomkernen werden in der Chemie eingesetzt um Informationen über den Bindungszustand von Atomen zu gewinnen. Die Unterscheidung von Materialien aufgrund der Kernspinresonanz ermöglicht in der Magnetresonanztomographie zerstörungsfrei Bilder von organischen Proben in Echtzeit aufzunehmen. [citation needed, vielleicht was von der Uni zitieren]
+Die Energieaufspaltung eines Spins im äußeren Magnetfeld wurde zuerst im Jahre 1896 von Pieter Zeeman an Elektronen in einem Atom und 40 Jahre später von Isidor Rabi an Atomkernen nachgewiesen~\citep{rabi}.\\
+Kleinste Unterschiede im lokalen magnetischen Feld von Atomkernen werden in der Chemie eingesetzt um Informationen über den Bindungszustand von Atomen zu gewinnen. Die Unterscheidung von Materialien aufgrund der Kernspinresonanz ermöglicht in der Magnetresonanztomographie zerstörungsfrei Bilder von organischen Proben in Echtzeit aufzunehmen~\citep{nmr}.
 
 
 %
@@ -133,31 +133,32 @@ Kleinste Unterschiede im lokalen magnetischen Feld von Atomkernen werden in der 
 Die Theorie der Kernspinresonanz ist auf die Wechselwirkung zwischen dem magnetischen Moment des Atomkerns und dem äußeren Magnetfeld zurück zu führen.
 Das magnetische Moment des Kerns wird dabei von dessen Spin verursacht und folgt der Beziehung
 \begin{align}
-\vec{\mu}=g \frac{\mu_{\rm N}}{\hbar}\vec{s}
+\vec{\mu}=g \frac{\mu_{\rm K}}{\hbar}\vec{s}
 \end{align}
-mit $g$ dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_N$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_{\rm N}=\frac{e \hbar}{2m_{\rm p}}$ mit $m_{\rm p}$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5.59.\\
+mit $g$ dem Landé-Faktor, $\hbar$ dem planck'schen Wirkungsquantum und $\mu_K$ dem Kernmagneton. Für ein Proton entspricht dabei das Kernmagneton äquivalent zum Bohrschen Magneton $\mu_{\rm K}=\frac{e \hbar}{2m_{\rm p}}$ mit $m_{\rm p}$ der Protonenmasse. Der Landé-Faktor des Protons beträgt etwa 5.59.\\
 Befindet sich das magnetische Moment nun in einem Magnetfeld, so besitzt es die potentielle Energie 
 \begin{align}
 E_{\rm M}=-\vec{\mu} \cdot \vec{B}
 \end{align}
 und ist somit in seiner energetisch günstigsten Position, wenn es parallel zum äußeren Feld ausgerichtet ist.
 
-Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipol $\vec{\mu}$, wodurch in einem Magnetfeld $\vec{B}$ ein Drehmoment $\vec{M}$ auf das Teilchen wirkt. Hierdurch beginnt der Drehimpuls des Teilchens um das angelegte Magnetfeld mit $\vec{M} = \vec{\mu} \times \vec{B}$ zu präzedieren. Die Präzessionsbewegung kann nach~\citet{anleitung} durch
-\begin{equation}
-	\mathrm{d}\vec{M}(t) = \gamma\vec{M}(t) \times \vec{B}(t)\,\mathrm{d}t
-\end{equation}
-beschrieben werden, wobei $\gamma$ dem gyromagnetischen Verhältnis entspricht, durch das ebenso die Richtung und Größe des Dipols mit $\vec{\mu} = \gamma\vec{J}$ definiert ist.
-Die Frequenz der Präzession wird Larmorfrequenz $\omega_{\rm Larmor}$ genannt und ist gegeben durch~\citep{mueller}
-\begin{equation}
-	\omega_{\rm Larmor} = \frac{g \mu N}{\hbar}B = \gamma \cdot B
-\end{equation}
-mit dem Landé-Faktor $g$.
-
 In einer Probe kommt ein großes Ensemble von Protenenspins vor, sodass sich die Gesamtmagnetisierung $\vec{M}$ der Probe aus der Summe der Erwartungswerte aller magnetischen Momente ergibt~\citep{anleitung}.
 \begin{equation}
 	\vec{M} = \underset{k=1}{\overset{N}{\sum}} \braketop{\psi_k}{\hat{\vec{\mu}}}{\psi_k}
 \end{equation}
 $\ket{\psi_k}$ beschreibt hier die Zustandsfunktionen der $N$ Protonen.
+
+Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipol $\vec{\mu}$, wodurch in einem Magnetfeld $\vec{B}$ ein Drehmoment $\vec{D}$ auf das Teilchen wirkt. Hierdurch beginnt der Drehimpuls des Teilchens um das angelegte Magnetfeld mit $\vec{D} = \vec{\mu} \times \vec{B}$ zu präzedieren. Die Präzessionsbewegung kann nach~\citet{anleitung} durch
+\begin{equation}
+	\mathrm{d}\vec{D}(t) = \gamma\vec{M}(t) \times \vec{B}(t)\,\mathrm{d}t
+\end{equation}
+beschrieben werden, wobei $\gamma$ dem gyromagnetischen Verhältnis entspricht, durch das ebenso die Richtung und Größe des Dipols mit $\vec{\mu} = \gamma\vec{J}$ definiert ist.
+Die Frequenz der Präzession wird Larmorfrequenz $\omega_{\rm Larmor}$ genannt und ist gegeben durch~\citep{mueller}
+\begin{equation}
+	\omega_{\rm Larmor} = \frac{g \mu_{\rm K}}{\hbar}B = \gamma \cdot B
+\end{equation}
+mit dem Landé-Faktor $g$.
+
 Um nun die dynamische makroskopische Magnetisierung der Probe zu beschreiben werden die sogenannten Bloch-Gleichungen verwendet~\citep{anleitung}.
 \begin{equation}
 	\frac{\mathrm{d}\vec{M}}{\mathrm{d}t} = \gamma\vec{M} \times \vec{B}(t) - \vec{e}_x \frac{M_x}{T_2} - \vec{e}_y \frac{M_y}{T_2} - \vec{e}_z \frac{M_z}{T_1}
@@ -165,28 +166,29 @@ Um nun die dynamische makroskopische Magnetisierung der Probe zu beschreiben wer
 \end{equation}
 $T_{1,2}$ sind hier Relaxationszeiten, wobei $T_{1}$ der Zeit entspricht, mit der sich die Spintemperatur an die Temperatur des Gesamtsystems angleicht ($z$-Richtung) und $T_2$ der Zeit, in der die Spins in $x$-$y$-Richtung dephasieren.
 
-Im Experiment befindet sich die Probe in einem statischen Magnetfeld $B_0$, wodurch eine Präzession mit der Larmorfrequenz um die Magnetfeldachse zustande kommt. Wird nun ein zusätzliches zirkular polarisiertes Feld $B_1$ eingestrahlt, kann der Drehwinkel der Präzessionsbewegung verändert werden. Das zirkulare Feld $B_1$ wird mit der selben Frequenz wie die Präzessionsfrequenz der Teilchen eingestrahlt. Hierdurch wirkt im Bezugssystems des Spins ein konstantes Magnetfeld, welches die Präzessionsbewegung des Drehimpulses neu ausrichtet. Stehen $B_1$ und $B_0$ genau senkrecht aufeinander, wird der Drehwinkel um exakt $90\textdegree$ gedreht. Die nötige Frequenz das zirkularen Feldes $B_1$ wird durch die Resonanzfrequenz $\nu_{\rm res}$ beschrieben~\citep{anleitung}
+Im Experiment befindet sich die Probe in einem statischen Magnetfeld $B_0$, wodurch eine Präzession mit der Larmorfrequenz um die Magnetfeldachse zustande kommt. Wird nun ein zusätzliches zirkular polarisiertes Feld $B_1$ eingestrahlt, kann der Drehwinkel der Präzessionsbewegung verändert werden. Das zirkulare Feld $B_1$ wird mit der selben Frequenz wie die Präzessionsfrequenz der Teilchen eingestrahlt. Hierdurch wirkt im Bezugssystems des Spins ein konstantes Magnetfeld, welches die Präzessionsbewegung des Drehimpulses neu ausrichtet. Die nötige Frequenz das zirkularen Feldes $B_1$ wird durch die Resonanzfrequenz $\nu_{\rm res}$ beschrieben~\citep{anleitung},
 \begin{equation}
 	\nu_{\rm res} = \frac{\gamma B_0}{2\pi}
 \end{equation}
 und entspricht genau der Larmorfrequenz der Präzessionsbewegung der Teilchen.
 
-Befinden sich die Protonen nicht dauerhaft im zirkularen polarisiertem Magnetfeld, so kann erreicht werden, dass sich die Magnetisierung nur um einen gewissen Winkel, den Drehwinkel $\Phi$, dreht. So kann erreicht werden, dass sich die Magnetisierung von der z- z.B. in die x-Achse Dreht. Der Drehwinkel ergibt sich aus dem gyromagnetischen Verhältnis $\gamma$, der Magnetfeldstärke $B_1$ und der Zeit $t_\mathrm{Spule}$ in der sich die Protonen im Magnetfeld befinden
+Befinden sich die Protonen nicht dauerhaft im zirkularen polarisiertem Magnetfeld, so kann erreicht werden, dass sich die Magnetisierung nur um einen gewissen Winkel, den Drehwinkel $\Phi$, dreht. So kann erreicht werden, dass sich die Magnetisierung von der $z$-Achse zum Beispiel in die $x$-Achse dreht. Der Drehwinkel ergibt sich aus dem gyromagnetischen Verhältnis $\gamma$, der Magnetfeldstärke $B_1$ und der Zeit $t_\mathrm{Spule}$ in der sich die Protonen im Magnetfeld befinden
 \begin{align}
 	\Phi=\gamma B_1 t_\mathrm{Spule}.
 \end{align}
-In der Realität kämpft man mit zwei Herausforderungen: Erstens entspricht die Anregungsfrequenz oft nicht der Frequenz, mit der die Protonen um die z-Achse präzedieren und zum andern ist die Zeit $t_\mathrm{Spule}$ aufgrund unterschiedlicher Geschwindigkeiten der Protonen nicht identisch. Die Abweichung der Anregungsfrequenz kann zumindest für unendlich große Relaxationszeiten analytisch gelöst werden. Die normierte z-Komponente der Magnetisierung ergibt sich dabei zu
+In der Realität kämpft man mit zwei Herausforderungen: Erstens entspricht die Anregungsfrequenz oft nicht der Frequenz, mit der die Protonen um die $z$-Achse präzedieren und zum andern ist die Zeit $t_\mathrm{Spule}$ aufgrund unterschiedlicher Geschwindigkeiten der Protonen nicht identisch. Die Abweichung der Anregungsfrequenz kann zumindest für unendlich große Relaxationszeiten analytisch gelöst werden. Die normierte $z$-Komponente der Magnetisierung ergibt sich dabei zu
 \begin{align}
-	\frac{M_z(\Phi, \nu)}{M(t=0)}=\frac{1}{1+u(\nu)^2}\left[ u(\nu)^2+\cos(\Phi)\sqrt{1+u(\nu)^2} \right].
+	\frac{M_z(\Phi, \nu)}{M(t=0)}=\frac{\left[ u(\nu)^2+\cos(\Phi)\sqrt{1+u(\nu)^2} \right]}{1+u(\nu)^2},
 \end{align}
-Die Verweildauer der Protonen in der Spule kann durch eine Gaußfunktion genähert das obere Ergebnis als Integral über unterschiedliche Drehwinkel numerisch gelöst werden.
+wobei $u(\nu)$ die Abweichung von der Resonanzfrequenz berücksichtigt.
+Die unterschiedliche Verweildauer der Protonen in der Spule kann bei turbulenter Strömung mit einer Gaußverteilung des Drehwinkels berücksichtigt werden. 
 %
 % =============================================================================
 \section{Experimenteller Aufbau}
 \label{Experiment}
 % =============================================================================
 %
-Der verwendete Versuchsaufbau ist in Abbildung~\ref{fig.aufbau} schematisch dargestellt.
+Der verwendete Versuchsaufbau ist in Abbildung~\ref{fig.versuchsaufbau} schematisch dargestellt.
 
 \begin{figure}[htp]
 	\begin{center}
@@ -196,13 +198,13 @@ Der verwendete Versuchsaufbau ist in Abbildung~\ref{fig.aufbau} schematisch darg
 	\end{center}
 \end{figure}
 
-Das für die Magnetisierung verwendete destillierte Wasser wird von einer Pumpe  mit einstellbarer Geschwindigkeit (über die betriebene Spannung) durch einen Wasserkreislauf gepumpt.
-Als erstes wird das Wasser durch einen Polarisationsmagneten befördert. Im Magneten durchläuft es ein Labyrinth mit dem die Verweildauer erhöht wurde um eine ausreichende Magnetisierung zu erzeugen.
-Das magnetisierte Wasser durchläuft dann ein Hemholzspulenpaar mit dem ein statisches Magnetfeld erzeugt werden kann. Im Zentrum der Spulen ist der Wasserschlauf von einer Einstrahlspule umwickelt, die über ein Funktionsgenerator mit \SI{50}{\ohm} Output, ein Wechselfeld $B_{1}$ erzeugen kann. Mit dem Wechselfeld kann im Versuch die Richtung der Magnetisierung manipuliert werden. Der Teil wird somit auch Manipulator genannt.
-Aus dem Manipulator wird das Wasser in den Analysator gepumpt, in dem die $z$-Komponente der Magnetisierung gemessen werden kann. Der Analysator besteht aus einem Hufeisenmagneten, der ein konstantes Magnetfeld erzeugt. Der Hufeisenmagnet ist zudem mit einer Spule umwickelt an die ein Wechselfeld mit \SI{50}{\hertz}, das sogenannte Wobbelfeld, angelegt wird. Somit können wir ein sich zeitlich langsam änderndes Magnetfeld erzeugen, das zu jedem Zeitpunkt für die Magnetisierung als statisch angesehen werden kann. Um den Schlauch im Inneren des Hufeisenmagneten ist eine weitere Spule gewickelt, die mit einem Schwingkreis verbunden ist, dessen Frequenz des Wechselfeldes wir einstellen können. 
+Das für die Magnetisierung verwendete destillierte Wasser wird von einer Pumpe  mit einstellbarer Geschwindigkeit durch einen Wasserkreislauf gepumpt.
+Als erstes wird das Wasser durch einen Polarisationsmagneten befördert. Im Magneten durchläuft es ein Labyrinth mit dem die Verweildauer erhöht wurde um eine ausreichende Polarisierung zu erzeugen.
+Das polarisierte Wasser durchläuft dann ein Hemholtzspulenpaar mit dem ein statisches Magnetfeld erzeugt werden kann. Im Zentrum der Spulen ist der Wasserschlauch von einer Einstrahlspule umwickelt, die über ein Funktionsgenerator mit \SI{50}{\ohm} Output, ein Wechselfeld erzeugen kann. Mit dem Wechselfeld kann im Versuch die Richtung der Magnetisierung manipuliert werden. Der Teil wird somit auch Manipulator genannt.
+Aus dem Manipulator wird das Wasser in den Analysator gepumpt, in dem die $z$-Komponente der Magnetisierung gemessen werden kann. Der Analysator besteht aus einem Hufeisenmagneten, der ein konstantes Magnetfeld erzeugt. Der Hufeisenmagnet ist zudem mit einer Spule umwickelt an die ein Wechselfeld mit \SI{50}{\hertz}, das sogenannte Wobbelfeld, angelegt wird. Somit können wir ein sich zeitlich langsam änderndes Magnetfeld erzeugen, das zu jedem Zeitpunkt für die Magnetisierung als statisch angesehen werden kann. Um den Schlauch im Inneren des Hufeisenmagneten ist eine weitere Spule gewickelt, die mit einem Schwingkreis verbunden ist, dessen Frequenz des Wechselfeldes einstellbar ist.
 Nach dem Analysator gelangt das Wasser zurück in einem Sammelbehälter indem durch eine lange Verweilzeit das Wasser vollständig depolarisieren kann. Der Sammelbehälter schließt letztendlich den Wasserkreislauf.
 
-Durch den Aufbau des Analysators kann die Frequenz des Regelkreis ebenso auf Resonanzfrequenz eingestellt werden, wodurch Übergänge zwischen den Energieniveaus der Protonen angeregt werden. Dieser Übergang absorbiert oder überträgt Leistung auf den Schwingkreis. Der Schwingkreis wird automatisch nachgeregelt. Aus diesem Leistungsausgleich entsteht unser Messsignal.
+Durch den Aufbau des Analysators kann die Frequenz des Regelkreises ebenso auf Resonanzfrequenz eingestellt werden, wodurch Übergänge zwischen den Energieniveaus der Protonen angeregt werden. Dieser Übergang absorbiert oder überträgt Leistung auf den Schwingkreis. Der Schwingkreis wird automatisch nachgeregelt. Aus diesem Leistungsausgleich entsteht unser Messsignal.
 Das Signal des Analysators kann über einen Sample/Hold Verstärker (S/H-Verstärker) mit dem Oszillographen verbunden und mit dem Computer ausgelesen werden.
 Der S/H-Verstärker wird durch die selbe Sinusspannung getriggert, die das Wobbelfeld erzeugt. Der Verstärker misst zu jedem Triggerimpuls kurz das Messsignal und gibt es bis zum nächsten Impuls als Gleichspannung aus. So kann durch richtige Einstellung der Phase die Höhe der Resonanzpeaks ausgelesen werden.
 
@@ -214,118 +216,6 @@ Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} g
 	\label{fig.beschaltung}
 \end{figure}
 
-
-% =============================================================================
-\section{Versuchsdurchführung}
-\label{durchfuehrung}
-% =============================================================================
-%
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme des Funktionsgenerators}
-\label{vorbereitung1}
-
-\begin{compactitem}
-	\item Geräte überprüfen
-	\item Vergleich Funktionsgenerator mit Oszillograph
-	\item[\tra] führt zu Korrekturfaktoren
-	\item Verglich Funktionsgenerator mit Oszillograph bei angeschlossener Einstrahlspule \--- Vorwiderstand \SI{47}{\ohm} Ausgangswiderstand \SI{50}{\ohm}
-	\item[\tra] liefert Eichfaktor \--- Funktionsgenerator/Einstrahlspule
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme Wasserkreislauf, Polaristor und Analysator}
-\label{vorbereitung2}
-
-\begin{compactitem}
-	\item Pumpe und Polarisationsstrom anschalten (Helmholtz und Manipulation aus)
-	\item Analysator anschalten
-	\item Signal des Detektors (Analysator/Schwingkreis) anschauen
-	\item Ziel: Resonanzfall finden; Ändern der Frequenz des Schwingkreises bis Peaks sichtbar
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme Computer und Messung von $S2(t_{12})$}
-\label{vorbereitung3}
-
-
-
-\begin{compactitem}
-	\item Messung von $S(t)$ und Resonanzfrequenz bei verschiedenen Impulsabständen $t_{12}$
-	\item[d.h.] Resonanzfall finden und leicht verstellen + schauen was passiert \--- Abstände der Peaks
-	\item Signal mit und ohne Terminator betrachten
-	\item Frequenz des Schwingkreises ändern + zehn Aufnahmen mit dem Computer \--- Frequenz notieren!
-	\item schrittweise Änderung der Analysatorspule \--- Aufnahme der Zeitdifferenz der Peaks
-	\item[\tra] Resonanzfrequenz bei $t_{12} = \SI{10}{\milli\second}$
-	\item[\Tra] Energieaufspaltung und Magnetfeld im Analysator
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme Sample and Hold Verstärker und Messung von $S2(t,I_{\rm pol})$}
-\label{vorbereitung4}
-
-\begin{compactitem}
-	\item Anschließen Sample and Hold Verstärker
-	\item Einstellen der Phase über Oszillograph auf $S2$ und Messung von $S2(t)$ verschiedenen Polaristionsströmen $I_{\rm pol}$
-	\item[\tra] Abhängigkeit der Höhe von $S2(t)$ von der Polarisationsstromstärke $I_{\rm pol}$
-	\item Messung Polarisationsstrom und Magnetfeld mit Hall-Sonde \tra linearer Zusammenhang
-	\item[\tra] Linearität von Magnetfeld zur Signalhöhe
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Messung der Spindrehung im Störfeld, $S2(\nu)$}
-\label{vorbereitung5}
-
-\begin{compactitem}
-	\item Anschließen Einstrahlspule und Funktionsgenerator
-	\item Suchen der Resonanz im Störfeld und Messung der Resonanz im Phasenraum
-	\item Protonen im Erdmagnetfeld Larmorfrequenz $\approx \SI{1.2}{\kilo\hertz}$
-	\item Funktionsgenerator Amplitude \SI{50}{\milli\volt}
-	\item[\tra] Spektrum aufnehmen mit Frequenzgrenzen, dass \SI{1000}{\hertz} durchgefahren wird \--- Durchlaufzeit ca. \SI{60}{\second}
-	\item Messung in anderen Frequenzintervallen ober- und unterhalb der Resonanzfrequenz im Erdmagnetfeld 
-	\item[\tra] Resonanzfrequenz außerhalb berechneten Stelle \--- Warum?
-	\item Messung bei steigender und fallender Frequenz \tra 2 verschobenen, richtige in der Mitte
-	\item Amplitude auf \SI{20}{\milli\volt} und Frequenzbereich auch \SI{200}{\hertz}
-	\item Resonanzkurven in mehreren Frequenzfenster ohne Bereichsänderung mit Amplituden von $10-\SI{100}{\milli\volt}$ im Abstand von \SI{5}{\milli\volt}
-	\item Wann Resonanzpeak besonders deutlich
-	\item[\tra] Auflösung des Phasenraums in Amplitude und Frequenz
-	\item Resonanzfrequenz genau einstellen, Amplitudenbereich so, dass möglichst viele Spindrehungen zu sehen
-	\item[\tra] Aufnahme der Spindrehung in Abhängigkeit der Amplitude
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Messung der Resonanz im Feld der Helmholtzspulen}
-\label{vorbereitung6}
-
-\begin{compactitem}
-	\item 
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Bestimmung der Relaxationszeit von Protonen}
-\label{vorbereitung7}
-
-\begin{compactitem}
-	\item Pumpe aus (20s) Messung starten \--- 2s Pumpe wieder an
-	\item Stärke Signal in Abhängigkeit der Pumpleistung messen
-	\item[\tra] Relaxationszeit
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Bestimmung des Störfeldes}
-\label{vorbereitung8}
-
-\begin{compactitem}
-	\item Messung der Resonanzfrequenz für positive und negative Helmholtzströme
-	\item[\tra] Störfeld
-\end{compactitem}
-% ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 %
 % =============================================================================
 \section{Auswertung}
@@ -333,32 +223,34 @@ Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} g
 % =============================================================================
 %
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme des Funktionsgenerators}
+\subsection{Eichen des Funktionsgenerators}
 \label{auswertung1}
 
-Um die Genauigkeit des Funktionsgenerators zu überprüfen wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} in der Amplitude und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Der Fehler der Werte ergibt sich aus der Ungenauigkeit in der Amplitude des Funktionsgenerators von \SI{2}{\percent}. Der Fehler der Fitfunktion kann gegen den Fehler in der Amplitude vernachlässigt werden. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
+Um die Genauigkeit des Funktionsgenerators zu überprüfen, wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} in der Amplitude und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Cosinus-Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Der Fehler der Werte ergibt sich aus der Ungenauigkeit in der Amplitude des Funktionsgenerators von \SI{2}{\percent}. Der Fehler der Fitfunktion kann gegen den Fehler in der Amplitude vernachlässigt werden. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
 
 \begin{table}[htp]
 \begin{center}
-	\begin{tabular}{cc|ccc}
+	\begin{tabular}{c|ccc}
 		\hline
-		\multicolumn{2}{c|}{Funktionsgenerator} &\multicolumn{3}{c}{Oszillograph Spannung in \SI{}{\milli\volt}}\\
-		\footnotesize Amplitude & \footnotesize Frequenz & \footnotesize Spitze/Spitze & \footnotesize Amplitude & \footnotesize Effektivwert\\
+		\multicolumn{1}{c|}{FG \SI{50}{\milli\volt}} &\multicolumn{3}{c}{Oszillograph Spannung in \SI{}{\milli\volt}}\\
+\footnotesize Frequenz & \footnotesize Amplitude & \footnotesize Spitze/Spitze & \footnotesize Effektivwert\\
 		\hline
-		\SI{50}{\milli\volt} & \SI{1.3}{\kilo\hertz} & \SI{50.2(10)}{} & \SI{100.6(20)}{} & \SI{35.55(71)}{}\\
-		\SI{50}{\milli\volt} & \SI{2.6}{\kilo\hertz} & \SI{49.9(10)}{} & \SI{99.9(20)}{} & \SI{35.31(71)}{}\\
-		\SI{100}{\milli\volt} & \SI{1.3}{\kilo\hertz} & \SI{100.2(20)}{} & \SI{200.2(40)}{} & \SI{70.87(14)}{}\\
-		\SI{100}{\milli\volt} & \SI{2.6}{\kilo\hertz} & \SI{100.3(20)}{} & \SI{200.6(40)}{} & \SI{70.93(14)}{}\\
+		 \SI{1.3}{\kilo\hertz} & \SI{50.2(10)}{} & \SI{100.6(20)}{} & \SI{35.55(71)}{}\\
+		 \SI{2.6}{\kilo\hertz} & \SI{49.9(10)}{} & \SI{99.9(20)}{} & \SI{35.31(71)}{}\\
+		 \hline
+		\multicolumn{1}{c|}{FG \SI{100}{\milli\volt}} && \\
+		 \SI{1.3}{\kilo\hertz} & \SI{100.2(20)}{} & \SI{200.2(40)}{} & \SI{70.87(14)}{}\\
+		 \SI{2.6}{\kilo\hertz} & \SI{100.3(20)}{} & \SI{200.6(40)}{} & \SI{70.93(14)}{}\\
 		\hline
 	\end{tabular}
-	\caption{Vergleich der eingestellten Werte am Funktionsgenerator mit den am Oszilloskop gemessen Daten, sowie die gemessenen Spitze/Spitze Werte, die Amplituden und Effektivwerten.}
+	\caption{Vergleich der eingestellten Werte am Funktionsgenerator (FG) mit den am Oszilloskop gemessen Daten, sowie die gemessenen Spitze/Spitze Werte, die Amplituden und Effektivwerten.}
 	\label{tab.funktionsgenerator}
 \end{center}
 \end{table}
 
 Aus dem Vergleich der Werte in Tabelle~\ref{tab.funktionsgenerator} ergibt sich im Rahmen der Fehler kein Unterschied zwischen den Werten am Oszillographen und den eingestellten Werten. Anhand der berechneten Werte erkennt man, dass die Genauigkeit des Funktionsgenerators auch bei unterschiedlichen Amplituden und Frequenzen erhalten bleibt.
 
-Die Einstrahlspule im Manipulator besitzt einen kleinen Innenwiderstand. Allerdings ist der Spule um den Strom zu begrenzen und messbar zu machen ein Vorwiderstand von \SI{47}{\ohm} eingebaut~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $E_{\rm Spule}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die Amplituden \SI{10}{\milli\volt}, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und ein ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $E_{\rm Spule}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
+Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenwiderstand. Allerdings ist der Spule um, den Strom zu begrenzen und messbar zu machen ein Vorwiderstand von \SI{47}{\ohm} eingebaut~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $E_{\rm Spule}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die Amplituden \SI{10}{\milli\volt}, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und eine ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $f_{\rm ES}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
 
 \begin{figure}[htp]
 	\includegraphics[width=\columnwidth]{Data-Plots/03-Effektivwert-es-fg.pdf}
@@ -384,7 +276,7 @@ Aus dem Vergleich des experimentell bestimmten Wertes mit dem berechneten sehen 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme Wasserkreislauf, Polaristor und Analysator}
+\subsection{Einstellen der Resonanzfrequenz}
 \label{auswertung2}
 
 In diesem Versuchsteil sollte bei eingeschalteter Wasserpumpe, Analysator und Polarisator der Schwingkreis des Analysators auf die Resonanzfrequenz eingestellt werden. Das Signal konnten wir über den Oszillographen beobachtet und durch verändern der Frequenz des Schwingkreises so einstellen, dass die erhaltenen Resonanzsignale mit einem äquidistanten Abstand detektiert werden.
@@ -392,7 +284,7 @@ In diesem Versuchsteil sollte bei eingeschalteter Wasserpumpe, Analysator und Po
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme Computer und Messung von $S2(t_{12})$}
+\subsection{Bestimmung der Resonanzfrequenz im Analysator}
 \label{auswertung3}
 
 Im dritten Versuchsteil soll die Resonanzfrequenz der Protonenspins im Magnetfeld des Analysator-Magneten bestimmt werden.
@@ -443,17 +335,17 @@ und
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Inbetriebnahme Sample and Hold Verstärker und Messung von $S2(t,I_{\rm pol})$}
+\subsection{Linearität zwischen Signal und Polarisationsfeldstärke}
 \label{auswertung4}
 
-Unser Versuchsaufbau wird nun um den S/H-Verstärker erweitert. Mit dem S/H-Verstärker kann nun die Signalhöhe der Resonanzpeaks $S2(t)$ ausgelesen werden. Im folgendem Versuchsteil soll die Abhängigkeit der Signalhöhe von der Polarisationsstromstärke $I_{\rm pol}$ des Polarisators, also der Polarisierung der Protonen im Wasser untersucht werden. Hierfür nehmen wir das Signal $S2(t)$ über die Zeit von \SI{50}{\second} für Polarisationsstöme von \SI{1.3}{\ampere} bis \SI{2.5}{\ampere} in \SI{0.2}{\ampere}-Schritten auf.
+Unser Versuchsaufbau wird nun um den S/H-Verstärker erweitert. Mit dem S/H-Verstärker kann nun die Signalhöhe der Resonanzpeaks $S2(t)$ ausgelesen werden. Im folgendem Versuchsteil soll die Abhängigkeit der Signalhöhe von der Polarisationsstromstärke $I_{\rm pol}$ des Polarisators, also der Polarisierung der Protonen im Wasser, untersucht werden. Hierfür nehmen wir das Signal $S2(t)$ über die Zeit von \SI{50}{\second} für Polarisationsstöme von \SI{1.3}{\ampere} bis \SI{2.5}{\ampere} in \SI{0.2}{\ampere}-Schritten auf.
 
-Zur Verifikation des Magnetfeldes im Polarisator messen wir mit einer Hall-Sonde das Magnetfeld bei \SI{2.5}{\ampere}. Die Messung mit der Hallsonde beträgt
+Zum Eichen des Magnetfeldes im Polarisator messen wir mit einer Hall-Sonde das Magnetfeld bei \SI{2.5}{\ampere}. Die Messung mit der Hallsonde beträgt
 \begin{equation}
 	U_{\rm pol}(\SI{2.5}{\ampere}) = \SI{5.60(5)}{\milli\volt},
 \end{equation}
 wobei sich der Fehler aus der Ablesegenauigkeit der analogen Spannungsanzeige ergibt. Da der Strom und das Feld im Magneten proportional sind, kann jeder eingestellten Stromstärke am Polarisator eine Magnetfeldstärke zugeordnet werden. Der Fehler des eingestellten Stroms am Polarisatormagneten wird mit \SI{2}{\percent} Anzeigegenauigkeit abgeschätzt.
-Um die Linearität des Messsignals in Abhängigkeit vom Magnetfeld zu untersuchen sind die gemessenen Werte in Abbildung~\ref{fig.polarisationsstrom} abgebildet. Die Werte für die Signalhöhe ergeben sich aus einen linearen Fig an die Messdaten der über die Zeit von \SI{50}{\second} aufgenommen Messungen für verschiedene Stromstärken.
+Um die Linearität des Messsignals in Abhängigkeit vom Magnetfeld zu untersuchen, sind die gemessenen Werte in Abbildung~\ref{fig.polarisationsstrom} abgebildet. Die Werte für die Signalhöhe ergeben sich aus einen linearen Fit an die Messdaten der über die Zeit von \SI{50}{\second} aufgenommen Messungen für verschiedene Stromstärken.
 
 \begin{figure}[htp]
 	\begin{center}
@@ -466,7 +358,7 @@ Um die Linearität des Messsignals in Abhängigkeit vom Magnetfeld zu untersuche
 Mit Abbildung~\ref{fig.polarisationsstrom} können wir die Linearität des Messsignals $S2$ zur Polarisationsstromstärke $I_{\rm pol}$ sehr gut bestätigen. Die Fehler im $B$-Feld ergeben sich aus der Ungenauigkeit der Strommessung am Polarisator von \SI{2}{\percent} und der Bestimmung des Magnetfeldes mit der Hallsonde. Der Fehler im Messsignal schätzen wir auf \SI{4}{\percent}. Durch die Anzahl der Messungen können statistische Schwankungen vernachlässigt werden. Der Fehler resultiert somit nur aus der Ungenauigkeit in der Einstellung der Resonanz, sowie der Phase des S/H-Verstärkers.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Messung der Spindrehung im Störfeld, $S2(\nu)$}
+\subsection{Messung der Spindrehung im Störfeld}
 \label{auswertung5}
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 In diesem Aufgabenteil sollen die Spins der Protonen im Störfeld des Raumes manipuliert werden, um damit die Stärke des Störfeldes zu bestimmen.
@@ -581,7 +473,7 @@ Ein anderer Schnitt durch den Phasenraum ist in \cref{halbwertsbreite} gezeichne
 Die Daten wurden wieder mit den oben bestimmten $k$- und $l$-Parametern symmetrisiert.
 Die experimentelle Halbwertsbreite beträgt
 \begin{align}
-	\nu_\mathrm{Halb}= \SI{134\pm3}{\hertz}.
+	\nu_\mathrm{Halb}= \SI{134(3)}{\hertz}.
 \end{align}
 Eine theoretische Kurve kann nur in ungenügendem Maße den experimentellen Verlauf beschreiben.
 Der experimentell bestimmte Peak ist deutlich schmäler als der theoretische und es sind keine Oszillationen bei größeren Frequenzen zu sehen.
@@ -597,7 +489,7 @@ Obwohl die Theorie nicht alle Einzelheiten des Experimentes berücksichtigt, hil
 \subsection{Messung der Resonanz im Feld der Helmholtzspulen}
 \label{auswertung6}
 
-Zur Bestimmung von Betrag und Winkel des Störfeldes sowie das Magneton des Protons, verwenden wir das Helmholtzspulenpaar um die Einstrahlspule. Der Strom in der Helmholtzspule regeln wir über die Spannung an der Stromquelle und lesen den Wert über ein Präzisionsmultimeter aus. Durch einen Serienwiderstand an der Helholtzspule wird der Strom stabilisiert. Wir messen bei den Helmholtzspulenströmen von $I_{\rm HH} = \SI{45}{\milli\ampere}$, \SI{65}{\milli\ampere} und \SI{80}{\milli\ampere} wie im vorherigen Versuchsteil die Resonanzkurven durch einen Frequenz-Sweep am Funktionsgenerator. 
+Wir bestimmen Betrag und Winkel des Störfeldes sowie das Magneton des Protons. Dazu verwenden wir das Helmholtzspulenpaar, das die Einstrahlspule umgibt. Der Strom in der Helmholtzspule regeln wir über die Spannung an der Stromquelle und lesen die Stromstärke über ein Präzisionsmultimeter aus. Durch einen Serienwiderstand an der Helholtzspule wird der Strom stabilisiert. Wir messen bei den Helmholtzspulenströmen von $I_{\rm HH} = \SI{45}{\milli\ampere}$, \SI{65}{\milli\ampere} und \SI{80}{\milli\ampere} wie im vorherigen Versuchsteil die Resonanzkurven durch einen Frequenz-Sweep am Funktionsgenerator. 
 
 Das Feld im Zentrum der beiden Spulen kann mit der Näherung aus~\citet{anleitung} bestimmt werden.
 \begin{equation}
@@ -657,22 +549,21 @@ Zur Auswertung sind in Abbildung~\ref{fig.stoerfeld} die Summe der Frequenzquadr
 	\end{center}
 \end{figure}
 
-Aus Abbildung~\ref{fig.stoerfeld} erhalten wird die Steigung der Ausgleichsgeraden $m_{\rm Summe} = \SI[per-mode=symbol]{36125(22)}{\hertz\squared\per\milli\ampere\squared} $ und den $y$-Achsenabschnitt $y(0) = \SI{4458(80)e3}{\hertz\squared}$ mit den Fehlern aus den Geraden maximaler und minimaler Steigung.
+Aus Abbildung~\ref{fig.stoerfeld} erhalten wird die Steigung der Ausgleichsgeraden $m_{\rm Sum} = \SI[per-mode=symbol]{36125(22)}{\hertz\squared\per\milli\ampere\squared} $ und den $y$-Achsenabschnitt $y(0) = \SI{4458(80)e3}{\hertz\squared}$ mit den Fehlern aus den Geraden maximaler und minimaler Steigung. In der Abbildung sind zwar die Fehlergeraden kaum zu erkennen, sind aber für die Bestimmung der Fehler des Kernmagnetons und dem Störfeld entscheidend.
 Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton $\mu_{\rm K}$ und die Amplitude des Störfeldes $B_{\rm S}$ bestimmen.
 \begin{align}
 	\mu_{\rm K} &= \SI{5.098(51)e-27}{\tesla\per\ampere}\\
 	B_{\rm S} &=  \SI{34.74(36)}{\micro\tesla}
 \end{align}
 
-Der Literaturwert für das Kernmagneton beträgt nach~\citet{codata}
+Der Literaturwert für das Kernmagneton beträgt nach dem~\citet{codata}
 \begin{equation}
 	\mu_{\rm K,Lit} = \SI{5.05078e-27}{\tesla\per\ampere}.
 \end{equation}
 
-Der experimentell ermittelte Wert ist im Rahmen seiner Fehler leider nicht mehr mit dem Literaturwert vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war. Allerdings beträgt die Abweichung lediglich \SI{0.9}{\percent} und ist nur durch den kleinen Fehler nicht mehr mit $\mu_{\rm K, Lit}$ vereinbar.
-Das Ergebnis des Betrags des Störfeldes $B_{\rm S}$ liegt im Bereich der Stärke des Erdmagnetfeldes, was wir auch erwartet hatten.
+Der experimentell ermittelte Wert ist im Rahmen seiner Fehler mit dem Literaturwert vereinbar. Das Ergebnis für den Betrag des Störfeldes $B_{\rm S}$ liegt im Bereich der Stärke des Erdmagnetfeldes, was wir auch erwartet hatten. Den Wert des Störfeldes im Raum haben wir zudem in Versuchsteil~\ref{auswertung5} durch die Bestimmung der Resonanzfrequenz bestimmt. Die beiden erhaltenen Werte sind im Rahmen ihrer Fehler leider nicht mehr vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war. 
 
-Um nun noch den Winkel  des Störfeldes zu bestimmen verwenden wir die Differenz der Frequenzquadrat nach~\citet{anleitung},
+Um nun noch den Winkel  des Störfeldes zu bestimmen, verwenden wir die Differenz der Frequenzquadrate nach~\citet{anleitung},
 \begin{equation}
 	\nu^2(+I_{\rm HH}) - \nu^2(-I_{\rm HH}) = 4\frac{g^2\mu_{\rm K}^2}{h^2} \left( c I_{\rm HH} B_{\rm S} \cos\phi \right)
 	\label{eq.stoerwinkel}
@@ -688,19 +579,19 @@ Die Auftragung der Differenz der Frequenzquadrate über den Helmholtzspulenstrom
 	\end{center}
 \end{figure}
 
-Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden $m_{\rm Differenz} = \SI[per-mode=symbol]{3434(27)e2}{\hertz\squared\per\milli\ampere}$ mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
+Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden $m_{\rm Diff} = \SI[per-mode=symbol]{3434(27)e2}{\hertz\squared\per\milli\ampere}$ mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
 Mit Gleichung~\eqref{eq.stoerwinkel} erhalten wir somit den Winkel des Störfeldes.
 \begin{equation}
 	\phi = \SI{64.67(32)}{\degree}
 \end{equation}
-Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_2$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi = \SI{64.67(32)}{\degree}$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
+Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_{\rm Diff}$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi = \SI{64.67(32)}{\degree}$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\subsection{Bestimmung der Relaxationszeit von Protonen}
+\subsection{Bestimmung der $T_1$-Relaxationszeit von Protonen}
 \label{auswertung7}
 
-Um die Relaxationszeit $T_1$ von polarisierten Protonen zu bestimmen und die Abhängigkeit von der Wassertemperatur zu untersuchen, verwenden wir den Aufbau wie in Versuchsteil~\ref{auswertung5}. Wir untersuchen die Zeit, welche die Protonen benötigen um aus dem Polarisator in den Analysator zu gelangen. Dazu schalten wir zunächst die Pumpe ab und warte circa \SI{20}{\second} bis das Wasser nicht mehr fließt, die Protonen im Polarisator polarisiert und die Protonen im restlichem Teil depolarisiert sind. Anschließend starten wir die Aufzeichnung des Messsignals $S2(t)$ und kurz danach die Wasserpumpe. Diesen Versuch führen wir bei Pumpspannungen von $U_{\rm pump}=\SI{6}{\volt}$ bis \SI{12}{\volt} in \SI{1.5}{\volt}-Schritten durch. Unter \SI{6}{\volt} Pumpspannung führen wir keine Messung mehr durch, da bei so niedriger Pumpleistung die Turbulenz des Wassers im Schlauch nicht mehr gewährleistet ist. Den Wert haben wir gewählt, indem wir unterhalb dieses Wertes gemessen haben und die Kurven nicht mehr dem erwarteten Verlauf zeigen. Zudem führen wir das Experiment bei den Temperaturen von circa \SI{10}{\celsius}, \SI{20}{\celsius}, \SI{40}{\celsius} und \SI{60}{\celsius} um die Abhängigkeit der Temperatur zu untersuchen. Die Temperaturwerte sind natürlich nicht exakt und dienen hier der Zuordnung, werden aber in der Auswertung exakt genannt.
+Um die Relaxationszeit $T_1$ von polarisierten Protonen zu bestimmen und die Abhängigkeit von der Wassertemperatur zu untersuchen, verwenden wir den Aufbau wie in Versuchsteil~\ref{auswertung5}. Wir untersuchen die Zeit, welche die Protonen benötigen um aus dem Polarisator in den Analysator zu gelangen. Dazu schalten wir zunächst die Pumpe ab und warte circa \SI{20}{\second} bis das Wasser nicht mehr fließt, die Protonen im Polarisator polarisiert und die Protonen im restlichem Teil depolarisiert sind. Anschließend starten wir die Aufzeichnung des Messsignals $S2(t)$ und kurz danach die Wasserpumpe. Diesen Versuch führen wir bei Pumpspannungen von $U_{\rm pump}=\SI{6}{\volt}$ bis \SI{12}{\volt} in \SI{1.5}{\volt}-Schritten durch. Unter \SI{6}{\volt} Pumpspannung führen wir keine Messung mehr durch, da bei so niedriger Pumpleistung die Turbulenz des Wassers im Schlauch nicht mehr gewährleistet ist. Den Wert haben wir gewählt, indem wir unterhalb dieses Wertes gemessen haben und die Kurven nicht mehr dem erwarteten Verlauf zeigen. Zudem führen wir das Experiment bei den Temperaturen von etwa \SI{10}{\celsius}, \SI{20}{\celsius}, \SI{40}{\celsius} und \SI{60}{\celsius} um die Abhängigkeit der Temperatur zu untersuchen. Die Temperaturwerte sind natürlich nicht exakt und dienen hier der Zuordnung, werden aber in der Auswertung exakt genannt.
 
 Der typische Kurvenverlauf der Messung ist in Abbildung~\ref{fig.wassergeschwindigkeit} für eine Temperatur von \SI{34.0}{\celsius} und einer Pumpspannung von \SI{12}{\volt} gezeigt.
 
@@ -712,7 +603,7 @@ Der typische Kurvenverlauf der Messung ist in Abbildung~\ref{fig.wassergeschwind
 	\end{center}
 \end{figure}
 
-Dem Verlauf kann man entnehmen, dass bei abgeschalteter Pumpe $t<t_0$ nahezu kein Signal aufgenommen wird. Nach Einschalten der Pumpe, diesen Zeitpunkt kennzeichnen wir mit $t_0$ messen wir zunächst die Protonen die noch durch das Feld des Analysatormagneten polarisiert sind. Da durch den Versuchsaufbau der Wasserschlauch zunächst direkt am Analysatormagneten vorbeiführt und erst dann über eine Kurve in den Analysator gelangt, erkennen wir einen Peak bei $t_1$ und einen bei $t_2$. Der große Peak $t_1$ kommt von den Protonen die sich noch im Analysator befunden haben und der Kleine bei $t_2$ von den Protonen die sich zu Beginn neben dem Analysator, jedoch in seinem Feld befunden haben. Nachdem die Protonen aus dem Analysatorfeld gemessen wurden $t_3$, messen wir bis $t_4$ kein Signal. Bei $t_4$ messen wir die Protonen, die im Polarisator polarisiert wurden. Diese besitzen eine Signalstärke, die an $t_5$ abgelesen werden kann. Zur Zeit $t_5$ messen wir die Protonen aus dem Polarisator. Diese sind am stärksten polarisiert. Wir lesen im Experiment die Zeit bei $t_{4/5}$ ab, da hier ein Proton mit mittlerer Geschwindigkeit im Analysator ankommt. Nach der Zeit $t_6$ geht das Signal zurück, da nun die Protonen gemessen werden, die zum ausgeschalteten Zustand der Pumpe noch nicht im Polarisator waren und erst beim durchfließen, also kürzer und somit weniger, polarisiert wurden.
+Dem Verlauf kann man entnehmen, dass bei abgeschalteter Pumpe $t<t_0$ nahezu kein Signal aufgenommen wird. Nach Einschalten der Pumpe, diesen Zeitpunkt kennzeichnen wir mit $t_0$, messen wir zunächst die Protonen die noch durch das Feld des Analysatormagneten polarisiert sind. Da durch den Versuchsaufbau der Wasserschlauch zunächst direkt am Analysatormagneten vorbeiführt und erst dann über eine Kurve in den Analysator gelangt, erkennen wir einen Peak bei $t_1$ und einen bei $t_2$. Der große Peak $t_1$ kommt von den Protonen die sich noch im Analysator befunden haben und der Kleine bei $t_2$ von den Protonen die sich zu Beginn neben dem Analysator, jedoch in seinem Feld befunden haben. Nachdem die Protonen aus dem Analysatorfeld gemessen wurden $t_3$, messen wir bis $t_4$ kein Signal. Bei $t_4$ messen wir die Protonen, die im Polarisator polarisiert wurden. Zur Zeit $t_5$ messen wir die Protonen aus dem Polarisator und lesen dort die Signalstärke ab. Diese sind am stärksten polarisiert. Wir lesen im Experiment die Zeit bei $t_{4/5}$ ab, da hier ein Proton mit mittlerer Geschwindigkeit im Analysator ankommt. Nach der Zeit $t_6$ geht das Signal zurück, da nun die Protonen gemessen werden, die zum ausgeschalteten Zustand der Pumpe noch nicht im Polarisator waren und erst beim durchfließen, also kürzer und somit weniger, polarisiert wurden.
 
 Anhand der Messung kann die Zeit $t$ abgelesen werden, welche die Protonen aus dem Polarisator benötigen um in den Analysator zu gelangen.
 \begin{equation}
@@ -734,7 +625,7 @@ Die Messung ist zudem nur aussagekräftig, wenn Strömungen turbulent sind. Die 
 \begin{equation}
 	R=\frac{2\rho rv}{\eta}
 \end{equation}
-ergibt sich mit dem Innenradius des Wasserschlauches $r=\SI{2.25e-3}{\meter}$, der Dichte des Wassers $\rho=\SI{998.2}{\kilo\per\meter^3}$ und seiner Zähigkeit $\eta = \SI{1.002e-3}{\newton\second\per\meter\squared}$ die minimale Flussgeschwindigkeit
+ergibt sich mit dem Innenradius des Wasserschlauches $r=\SI{2.25e-3}{\meter}$, der Dichte des Wassers $\rho=\SI[per-mode=symbol]{998.2}{\kilogram\per\meter^3}$ und seiner Zähigkeit $\eta = \SI[per-mode=symbol]{1.002e-3}{\newton\second\per\meter\squared}$ die minimale Flussgeschwindigkeit
 \begin{equation}
 	v_{\rm min} = \SI{0.6692}{\meter\per\second}.
 	\label{eq.vmin}
@@ -760,14 +651,15 @@ Die Schlauchlänge haben wir mit einem Maßband gemessen und erhalten folgende W
 \end{table}
 
 Die Gesamtlänge des Schlauches vom Polarisator bis zur Analysatorspule ergibt sich aus Tabelle~\ref{tab.schlauch} zu 
-\begin{equation}
-	L_{\rm gesamt} = \SI{376.5(50)}{\centi\meter} = \SI{3.765(50)}{\meter}
-\end{equation}
+\begin{align}
+	L_{\rm gesamt} &= \SI{376.5(50)}{\centi\meter} \nonumber+\\
+						 &= \SI{3.765(50)}{\meter}
+\end{align}
 Um eine zusätzliche Abschätzung zu bekommen, ab welcher Geschwindigkeit die Strömung laminar wurde, bestimmen wir die minimale Zeit $t_{\rm max}$, die das Wasser vom Polarisator bis zum Analysator maximal benötigen darf, damit es die Bedingung~\eqref{eq.vmin} erfüllt.
 \begin{equation}
 	t_{\rm max} = \frac{L}{v_{\rm min}} = \SI{5.55}{\second}
 \end{equation}
-Hier wurde die Länge mit maximalen Fehler $L = (3.765-0.050)\SI{}{\meter}$ verwendet um einen sicheren Wert für $t_{\rm max}$ zu erhalten, der folglich fehlerfrei ist. Folglich können wir nur die Messwerte verwenden, für die $t_v>t_{\rm max}$ gilt. Diese Bedingung wurde bei den Fitkurven in Abbildung~\ref{fig.relaxation} und der Auswertung berücksichtigt.
+Hier wurde die Länge mit maximalen Fehler $L = (3.765-0.050)\SI{}{\meter}$ verwendet um einen sicheren Wert für $t_{\rm max}$ zu erhalten, der folglich fehlerfrei ist. Folglich können wir nur die Messwerte verwenden, für die $t_v<t_{\rm max}$ gilt. Diese Bedingung wurde bei den Fitkurven in Abbildung~\ref{fig.relaxation} und der Auswertung berücksichtigt.
 
 An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen gefittet und mit $\mathrm{d}M_{z}(t) = -1/T_1 M_{z}(t)\mathrm{d}t$ nach~\citet{anleitung} die Relaxationszeit $T_1$ bestimmt. Die erhaltenen Werte sind in Tabelle~\ref{tab.relaxationszeiten} aufgetragen.
 
@@ -788,7 +680,7 @@ An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen
 	\end{center}
 \end{table}
 
-Die Fehler in den Relaxationszeiten erhalten wir aus den Fehlerkurven in Abbildung~\ref{fig.relaxation}. Im Vergleich ist zu erkennen, dass der Fehler für die Relaxationszeit bei \SI{60}{\celsius} deutlich größer als die restlichen sind. Dies liegt daran, dass die Steigung wesentlich kleiner ist, was bei gleicher Abweichung durch die Fehlerkurven in einem deutlich größeren Fehler resultiert. Zudem können wir aus Abbildung~\ref{fig.relaxation} wie auch an den Werten in Tabelle~\ref{tab.relaxationszeiten} erkennen, dass die Relaxationszeiten bei höheren Temperaturen größer werden. Die Protonen relaxieren also langsamer wenn sie warm sind. \note{Warum}
+Die Fehler in den Relaxationszeiten erhalten wir aus den Fehlerkurven in Abbildung~\ref{fig.relaxation}. Im Vergleich ist zu erkennen, dass der Fehler für die Relaxationszeit bei \SI{60}{\celsius} deutlich größer als die restlichen sind. Dies liegt daran, dass die Steigung wesentlich kleiner ist, was bei gleicher Abweichung durch die Fehlerkurven in einem deutlich größeren Fehler resultiert. Zudem können wir aus Abbildung~\ref{fig.relaxation} wie auch an den Werten in Tabelle~\ref{tab.relaxationszeiten} erkennen, dass die Relaxationszeiten bei höheren Temperaturen größer werden. Die Protonen relaxieren also langsamer wenn sie warm sind. Diese längeren Relaxationszeiten waren für uns nicht intuitiv, leider haben wir auch nach langer Diskussion noch keine plausible Erklärung für diesen Effekt gefunden.
 
 \paragraph*{Wassergeschwindigkeit in der Einstrahlspule}
 \label{wg}

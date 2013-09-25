@@ -9,7 +9,7 @@
 }
 
 @misc{codata,
-	author = {{National Institude of Standards and Technology}},
+	author = {{National Institute of Standards and Technology}},
 	title = {Physical Reference Data - The NIST Reference on Constants, Units and Uncertainty},
 	year = {2011},
 	month = {June},
@@ -23,4 +23,22 @@
 	year = {1990},
 	school = {Physikalisches Institut der Universit"at W"urzburg},
 	url = {http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Staatsexamensarbeit_Mueller_NMR.pdf}
+}
+
+@misc{rabi,
+	author = {{The Nobel Foundation}},
+	title = {Isodor Isaac Rabi - Biographical},
+	year = {2013},
+	url = {http://www.nobelprize.org/nobel_prizes/physics/laureates/1944/rabi-bio.html},
+}
+
+@article{nmr,
+	author = {Ioannis Koktzoglou},
+	title = {4D Dark Blood Arterial Wall Magnetic Resonance Imaging: Methodology and Demonstration in the Carotid Arteries},
+	year = {2013},
+	month = {Abril},
+	journal = {Magnetic Resonance in Medicine},
+	volume= {69},
+	number = {4},
+	pages = {956--965}
 }

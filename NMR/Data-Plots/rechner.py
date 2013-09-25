@@ -12,7 +12,7 @@ from pylab import *
 
 
 zeta = 0.03
-eta = 0.046
+eta = 0.04
 r = 0.015*10**(-2)
 R = 0.207
 n = 720
@@ -20,6 +20,7 @@ mu_0 = 1.25663706*10**(-6)
 
 
 c = (mu_0*n)/R * ( 8/(5*sqrt(5)) * (1- zeta**2/(60*R)) - (31*zeta**2 - 36*eta**2)/(125*R**4)*r**2 )
+fehler_c = 0.01*c
 
 print "c: ", c
 
@@ -29,7 +30,9 @@ steigung = 36125.0*(1000**2) #Hz^2/A^2
 steigung_fehler = 22.0*(1000**2)
 
 mu_k = sqrt( (steigung*h**2)/(2*g**2*c**2) )
-mu_k_fehler = (1.0/2*((steigung*h**2)/(2*g**2*c**2))**(-1.0/2)*h**2/(2*g**2*c**2))*steigung_fehler
+mu_k_fehler = sqrt(((1.0/2*((steigung*h**2)/(2*g**2*c**2))**(-1.0/2)*h**2/(2*g**2*c**2))**2 *steigung_fehler**2) + ((sqrt(steigung/2)*h/(g*c**2))**2 * fehler_c**2) )
+
+
 
 mu_p_lit = 1.410606743*10**(-26) #J/T
 mu_k_lit = 5.05078353*10**(-27) #J/T
