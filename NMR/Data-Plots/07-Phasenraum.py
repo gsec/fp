@@ -39,7 +39,7 @@ if Alle_Daten_plotten==True:
         data = [i.strip().split() for i in open(txt_filename_to_open[n]).readlines()]
 
         for i in range(len(data[read_start-1:])):
-            if nj==200:
+            if nj==40:
                 nj=0
                 Frequenz[z]=float(data[read_start-1+i][0])
                 Amplitude[z]=10+n*5
@@ -55,8 +55,14 @@ if Alle_Daten_plotten==True:
        
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
+plt.ylabel(u"Intensit\xe4t [mV]")
+plt.xlabel(u"Frequenz [Hz]")
+# plt.zlabel(u"Signal [arb.u.]")
 print type(matplotlib.colors.Normalize(abs(Signal)))
-ax.scatter(Frequenz, Amplitude, Signal,s=50, c=abs(Signal), cmap="jet")#, rstride=1, cstride=1, cmap=cm.coolwarm,
+ax.scatter(Frequenz-18, Amplitude, Signal,s=15, c=abs(Signal), cmap="jet")#, rstride=1, cstride=1, cmap=cm.coolwarm,
+ax.set_xlabel(u'Frequenz [Hz]')
+ax.set_ylabel(u"Intensit\xe4t [mV]")
+ax.set_zlabel('Signal [arb.u.]')
         #linewidth=0, antialiased=False)
 # #ax.set_zlim(-1.01, 1.01)
 

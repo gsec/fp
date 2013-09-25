@@ -81,7 +81,7 @@
 
 \usepackage{paralist}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-ToDo:
+%ToDo:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -407,7 +407,7 @@ Zweimal pro Periode des Wobbelstromes tritt dabei der Resonanzfall im äußeren 
 	\end{center}
 \end{figure}
 Damit wird deutlich, dass die Resonanzfrequenz und der zeitliche Abstand $t_{12}$ zwischen zwei Resonanzfällen einen Cosinus-Zusammenhang besitzen.
-Wie in \cref{t12} messen wir für 10 verschiedene Analysatorfrequenzen den zeitlichen Abstand zweier der Resonanzen aus.
+Wie in \cref{t12} messen wir für zehn verschiedene Analysatorfrequenzen den zeitlichen Abstand zweier der Resonanzen aus.
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Zeitabstaende.pdf}
@@ -426,7 +426,7 @@ Der Fehler der Resonanzfrequenz ergibt sich auch der Unsicherheit der Zeitdiffer
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Resonanzfrequenz.pdf}
-		\caption{Abgelesene Zeitdifferenzen sind in Abhängigkeit der Frequenz aufgetragen und besitzen eine Cosinus-Abhängikeit.}
+		\caption{Abgelesene Zeitdifferenzen sind in Abhängigkeit der Frequenz aufgetragen und besitzen eine Cosinus-Abhängigkeit.}
 		\label{resonanzfrequenz}
 	\end{center}
 \end{figure}
@@ -436,7 +436,7 @@ Die Energieaufspaltung und die Magnetfeldstärke des Dauermagneten ergeben sich 
 \end{align}
 und
 \begin{align}
-	B_0=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}
+	B_0=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}.
 \end{align}
 
 
@@ -477,7 +477,7 @@ Für jede Frequenz wird das Signal am Analysator detektiert.
 Bei der Bestimmung der Resonanzfrequenz stößt man auf folgendes Problem:
 Am Computer werden gleichzeitig das Signal der Analysators und die Amplitude/Frequenz der Einstrahlspule gespeichert.
 Dies geschieht, obwohl das Wasser eine gewisse Zeit vom Manipulator zum Analysator benötigt.
-Man miss also beim Durchfahren von niedrigen zu hohen Frequenzen die Signale am Analysator, die von vergangenen, sprich niedrigeren Frequenzen stammen.
+Man misst also beim Durchfahren von niedrigen zu hohen Frequenzen die Signale am Analysator, die von vergangenen, sprich niedrigeren Frequenzen stammen.
 Das Maximum des gemessenen Signals scheint zu höheren Frequenzen verschoben zu sein.
 Um diesen Effekt auszugleichen, messen wir zweimal. 
 Mit ansonsten gleichen Einstellungen messen wir einmal von niedrigen zu hohen und anschließend von hohen zu niedrigen Frequenzen.
@@ -485,11 +485,11 @@ In \cref{gewichte} sind die zwei Resonanzkurven zu sehen, die jeweils von der wa
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/05-Resonanzfrequenz.pdf}
-		\caption{Resonanzkurven des Up- und Down-sweeps mit verschobenen Schwerpunkten.}
+		\caption{Die verschobenen Resonanzkurven des Up- und Down-sweeps.}
 		\label{gewichte}
 	\end{center}
 \end{figure}
-Wir messen die Maxima der Resonanzkurven aus und errechnen,dass sie vom ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1510(2)}{\hertz}$ um  $\pm \Delta \nu=\SI{18}{\hertz}$ verschoben sind.
+Wir messen die Maxima der Resonanzkurven aus und errechnen, dass sie vom ihrem Mittelwert $\nu_{\mathrm{res}}=\SI{1510(2)}{\hertz}$ um  $\pm \Delta \nu=\SI{18}{\hertz}$ verschoben sind.
 Diese Verschiebung der Peaks verwenden wir um bei den folgenden Plots des Phasenraumes, die Position der Peaks zu korrigieren.
 Die Resonanzfrequenz entspricht der Präzessionsfrequenz der Protonen in einer Feldstärke von 
 \begin{align}
@@ -501,32 +501,32 @@ Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{wg}.
 % Teil B
 
 Im Magnetfeld des Raumes soll nun untersucht werden, wie sich das Messsignal in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität verhält.
-Wir messen für Spannungen von $10$ bis $\SI{100}{\milli\volt}$ bei Frequenzen von $1200$ bis $\SI{1800}{\hertz}$.
+Wir messen für Spannungen von $\SI{10}{\milli\volt}$ bis $\SI{100}{\milli\volt}$ bei Frequenzen von $\SI{1200}{\hertz}$ bis $\SI{1800}{\hertz}$.
 Die Messpunkte sind in \cref{phasenraum} dargestellt.
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/07-Phasenraum.pdf}
-		\caption{Bei diesem Plot wurden die Frequenzshifts noch nicht herausgerechnet ??. Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
+		\caption{Abbildung des Phasenraums. Signalhöhe in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität.}
 		\label{phasenraum}
 	\end{center}
 \end{figure}
 Man erkennt, dass sich die Intensität des Messsignals bei etwa $\SI{45}{\milli\volt}$ Einstrahlamplitude komplett das Vorzeichen gewechselt hat. 
 Die Analysatorspule gewinnt an diesem Punkt Energie aus den polarisierten Protonen, deren Spin von der Einstrahlspule zuvor in die höherenergetische Richtung gedreht wurde.
-Wir überprüfen, ob sich der Spin bei den verwendeten Einstellungen tatsächlich um $180$\textdegree dreht, indem wir folgende Überlegung machen:
+Wir überprüfen, ob sich der Spin bei den verwendeten Einstellungen tatsächlich um $180$\textdegree\ dreht, indem wir folgende Überlegung machen:
 Durchquert ein Spin eine Leiterschleife, deren Magnetfeld mit der Resonanzfrequenz oszilliert, dann wird der Spin um
 \begin{align}
-	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}} \gamma \frac{B_\circ(t)}{2} \mathrm{d}t
+	\Phi(n=1)= \overset{\infty}{\underset{-\infty}{\int}} \gamma \frac{B_0}{2} \mathrm{d}t
 \end{align}
-gedreht. Der Faktor $\frac{1}{2}$ berücksichtigt dabei die Zerlegung des linear oszillierenden $B$-Feldes in zwei zirkulare $B$-Felder, von denen eines vernachlässigt wird.
+gedreht. Der Faktor $1/2$ berücksichtigt dabei die Zerlegung des linear oszillierenden $B$-Feldes in zwei zirkulare $B$-Felder, von denen eines vernachlässigt wird.
 Bewegt sich der Spin auf der Achse dieser Leiterschleife, kann die Gleichung mit dem Biot-Savart-Gesetz auf
 \begin{align}
-	\Theta(n=1)= \overset{\infty}{\underset{-\infty}{\int}}  \frac{\gamma \mu_0 I}{4}  \frac{r^2}{(r^2+l^2)^{\frac{3}{2}}} \frac{\mathrm{d}l}{v}
+	\Phi(n=1)= \overset{\infty}{\underset{-\infty}{\int}}  \frac{\gamma \mu_0 I}{4}  \frac{r^2}{(r^2+l^2)^{\frac{3}{2}}} \frac{\mathrm{d}l}{v}
 \end{align}
 umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt.
 Das bedeutet, dass jede der $125$ Spulen diesen Beitrag zum Drehwinkel liefert.
 Der Gesamtdrehwinkel bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ ergibt sich dann nach dem lösen des Integrals zu
 \begin{align}
-	\Theta_{\SI{45}{\milli\volt}}=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = \SI{3.14(67)}{}.
+	\Phi_{\SI{45}{\milli\volt}}=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = \SI{3.14(67)}{}.
 \end{align}
 Der Drehwinkel ist somit unabhängig von den geometrischen Abmessungen der Spule.
 Das Ergebnis bestätigt die Vermutung, dass die Protonen bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ um $180$\textdegree\ ($\widehat{=} \pi$) gedreht wurden.
@@ -548,12 +548,12 @@ Grund dafür sind die unterschiedlichen Bewegungsgeschwindigkeiten der Protonen 
 Dadurch werden unterschieliche Protonenspins unterschiedlich weit gedreht, was zu einer Verwischung der Funktion in der Drehwinkel-Achse führt.\\
 Wird die Manipulatorfeldstärke abseits der Resonanzfrequenz durchgefahren, so findet man, dass der Spin schwächer in der Amplitude, dafür aber schneller gedreht wird.
 Um dies zu überprüfen, führten wir neben der Messung auf der Resonanzfrequenz auch Messungen knapp darüber und darunter durch. 
-Eine Abweichung von $\pm \SI{10}{\hertz}$ reiche jedoch nicht aus, um eine abweichende Oszillationsfrequenz  fest zu stellen.\\
+Eine Abweichung von $\pm \SI{10}{\hertz}$ reichte jedoch nicht aus, um eine abweichende Oszillationsfrequenz  fest zu stellen.\\
 Die Messung auf der Resonanzfrequenz soll nun genauer untersucht werden. 
 Vor dem Plotten werden die Messignale durch die Abbildung $S=k(1-\sqrt{1+l \Delta n})$ auf die Populationsunterschiede für Spin-up und Spin-down umgerechnet.
 So wird der Einfluss des Detektors berücksichtigt.
 Die beste Symmetrisierung ergibt die Wahl der Parameter zu $k=0.85$ und $l=1.14$. 
-Sie symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer Symmetrischen Kurve geplottet.
+Die symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer symmetrischen Kurve geplottet.
 
 \begin{figure}[htp]
 	\begin{center}
@@ -566,7 +566,7 @@ Sie symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer Symmetri
 Wir finden keine gute Übereinstimmung mit der Theorie.
 Die Theorie Berücksichtigt nach \cite{anleitung} unterschiedliche Wassergeschwindigkeiten in der Manipulatorspule was den Abfall der Intensitäten bei größeren Drehwinkeln erklärt.
 Auffällig ist eine sich ändernde Periodendauer der Oszillation der experimentellen Daten. 
-Diese kann theoretisch nur erklärt werden, wenn sich während des Durchfahren der Einstrahlintensität das Verhältnis zwischen Resonanzfrequenz und Einstrahlfrequenz verändert.
+Diese kann theoretisch nur erklärt werden, wenn sich während des Durchfahrens der Einstrahlintensität das Verhältnis zwischen Resonanzfrequenz und Einstrahlfrequenz verändert.
 Die beschriebene Symmetrisierung der Daten lässt den Nullpunkt unverändert. 
 Trotzdem ist eine unterschiedlich lange obere und untere Halbperiode zu erkennen.
 Dieser Effekt wird ebenfalls von der theoretischen Kurve nicht erfasst und könnte mit einem Signaloffset des Analysators erklärt werden.
@@ -584,13 +584,14 @@ Die experimentelle Halbwertsbreite beträgt
 	\nu_\mathrm{Halb}= \SI{134\pm3}{\hertz}.
 \end{align}
 Eine theoretische Kurve kann nur in ungenügendem Maße den experimentellen Verlauf beschreiben.
-Der experimentell bestimmte Peak ist deutlich schmäler als der theoretische und es sind keine Oyzillationen bei größeren Frequenzen zu sehen.
+Der experimentell bestimmte Peak ist deutlich schmäler als der theoretische und es sind keine Oszillationen bei größeren Frequenzen zu sehen.
 Während die Theorie von einem homogenen Magnetischen Feld ausgeht, sind die Protonen im Experiment, während sie sich der Einstrahlspule nähern, auch schwächeren Magnetfeldern ausgesetzt. 
 In diesen schwächeren Magnetfeldern, wirkt sich eine Abweichung der Einstrahlfrequenz stärker auf das Signal aus, was zu schmäleren Peaks führt.
 Die Theorie beschreibt deshalb diesen Resonanzpeak nur ungenau.\\
 Ebenfalls keine Übereinstimmung zwischen Theorie und Experiment finden wir für den Fall der $360$\textdegree -Drehung.
 Hier sagt die Theorie ein Minimum des Signals bei der Resonanzfrequenz voraus. 
-Wir messen aber bei allen Einstrahlintensitäten ein Maximales Signal bei der Resonanzfrequenz.
+Wir messen aber bei allen Einstrahlintensitäten ein maximales Signal bei der Resonanzfrequenz.
+Obwohl die Theorie nicht alle Einzelheiten des Experimentes berücksichtigt, hilft sie uns dennoch, die Vorgänge bei der Manipulation von Spins in ihren Grundzügen zu verstehen.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Resonanz im Feld der Helmholtzspulen}
@@ -608,6 +609,7 @@ Hier gilt aus der Spulengeometrie $\zeta=\SI{0.03}{\meter}$, $\eta=\SI{0.046}{\m
 	c &= \SI{0.003127}{\tesla\per\ampere}
 \end{align}
 
+Aufgrund der Bauart der Spule und den Angaben der Abmessungen schätzen wir den Fehler des $c$-Parameters auf $\SI{1}{\percent}$.
 Die Bestimmung von Betrag und Winkel des Störfeldes erhalten wird dadurch, dass in der Helmholtzspule das effektiv wirkende Feld aus dem Störfeld $\vec{B}_{\rm S}$ und dem Spulenfeld $\vec{B}_{\rm HH}$ zusammensetzt~\citep{anleitung}.
 \begin{equation}
 	\vec{B}_{\rm eff} = \vec{B}_{\rm HH} + \vec{B}_{\rm S}
@@ -658,8 +660,8 @@ Zur Auswertung sind in Abbildung~\ref{fig.stoerfeld} die Summe der Frequenzquadr
 Aus Abbildung~\ref{fig.stoerfeld} erhalten wird die Steigung der Ausgleichsgeraden $m_{\rm Summe} = \SI[per-mode=symbol]{36125(22)}{\hertz\squared\per\milli\ampere\squared} $ und den $y$-Achsenabschnitt $y(0) = \SI{4458(80)e3}{\hertz\squared}$ mit den Fehlern aus den Geraden maximaler und minimaler Steigung.
 Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton $\mu_{\rm K}$ und die Amplitude des Störfeldes $B_{\rm S}$ bestimmen.
 \begin{align}
-	\mu_{\rm K} &= \SI{5.0979(16)e-27}{\tesla\per\ampere}\\
-	B_{\rm S} &=  \SI{34.74(31)}{\micro\tesla}
+	\mu_{\rm K} &= \SI{5.098(51)e-27}{\tesla\per\ampere}\\
+	B_{\rm S} &=  \SI{34.74(36)}{\micro\tesla}
 \end{align}
 
 Der Literaturwert für das Kernmagneton beträgt nach~\citet{codata}
@@ -821,39 +823,21 @@ In Versuchsteil~\ref{auswertung5} konnten wir die Wassergeschwindigkeit auf etwa
 \section{Zusammenfassung}
 % =============================================================================
 %
-In dem Praktikumsversuch zur magnetischen Kernresonanz konnten wir mit einem Aufbau nach Abbildung~\ref{fig.versuchsaufbau} Protonen in einem Wasserkreislauf polarisieren, deren Magnetisierung messen und manipulieren.
-Nach eichen der Messgeräte~\ref{auswertung1} konnten wir die Resonanzfrequenz der polarisierten Protonen aus den Zeitabständen der Resonanzfälle auf $\nu_{\rm res} = \SI{4712.31(20)}{\kilo\hertz}$~\ref{auswertung2} bestimmen, das Signal darstellen und die Auswirkung verschiedener Versuche beobachten.
-So konnten wir die Magnetfeldstärke des Dauermagneten im Analysator zu $B_0 = \SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}$ und die Energieaufspaltung $\Delta E = \SI[separate-uncertainty=false]{19.48854(83)e-9}{\electronvolt}$ bestimmen~\ref{auswertung3}. Durch Variation des Polarisationsstroms $I_{\rm pol}$ bestätigen wir den linearen Zusammenhang zwischen Polarisationsfeldstärke und Messsignal~\ref{auswertung4}.
-Durch aufnehmen von korrigierten Amplituden- und Frequenz-Sweeps um die Resonanzfrequenz können wir den gesamten Phasenraum von Amplitude, Frequenz und Signal darstellen~\ref{phasenraum}. Die Messungen entsprechen leider nicht unseren theoretischen Erwartungen \note{hier fehlen noch unsere Feststellungen}. Den durch die Manipulation erzeugten Drehwinkel der Magnetisierung bei einer Einstrahlamplitude von \SI{45}{\volt} wir auf \SI{3.14(67)}{} bestimmen~\ref{auswertung5}. \note{Spindrehungen in Abhängigkeit der Amplitude fehlt noch}. Mit Hilfe eines Helmholtzspulenpaares konnten wir verschieden starke statische Magnetfelder bereitstellen. Aus der Untersuchung der entsprechenden Resonanzfrequenzen konnten wir das im Raum vorhandenen Störfeld $\vec{B}_{\rm S}$ vermessen und eine Stärke von $B_{\rm S} = \SI{34.74(31)}{\micro\tesla}$ und einen relativen Winkel zum Helmholtzspulenfeld $\phi = \SI{64.67(32)}{\degree}$~\ref{auswertung6}. Der Betrag des Störfeldes konnten wir zudem schon durch die Resonanzfrequenz aus den Frequenz-Sweeps abschätzen und sehen, dass die Werte nahezu übereinstimmen~\ref{auswertung5}. Den Wert für das Kernmagneton konnten wir mit $\mu_{\rm K} = \SI[separate-uncertainty=false, per-mode=symbol]{5.0979(19)e-27}{\tesla\per\ampere}$ mit \SI{0.9}{\percent} Abweichung vom Literaturwert bestimmen~\ref{auswertung6}.
-Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ und die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur auf $\SI{3.6(17)}{1\per\second}$ bestimmen~\ref{auswertung7}. Die Wassergeschwindigkeit konnte auch schon durch die Korrektur der Frequenz-Sweeps abgeschätzt werden und bestätigt das Ergebnis~\ref{auswertung5}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung, deren Manipulation gut untersuchen und die Vorhersagen der Bloch-Gleichungen zu großen Teilen bestätigen. 
-%
-% =============================================================================
-%\begin{thebibliography}{}   
-%% =============================================================================
-%%
-%%
-%  \bibitem{levitt} Levitt, Malcolm H. (2008): Spin dynamics. Basics of nuclear magnetic resonance. 2nd ed. Chichester, England, Hoboken, NJ: John Wiley \& Sons.
-%    \bibitem{hanson} Lars G. Hanson (2008): Is Quantum Mechanics Necessary for Understanding Magnetic Resonance?
-%    Danish Research Centre for Magnetic Resonance, Copenhagen University Hospital, Hvidovre, Denmark.
-%
-%\end{thebibliography}
-%
-%
+In dem Praktikumsversuch zur magnetischen Kernresonanz konnten wir mit einem Aufbau nach Abbildung~\eqref{fig.versuchsaufbau} Protonen in einem Wasserkreislauf polarisieren, deren Magnetisierung nachweisen und manipulieren.
+Nach dem eichen der Messgeräte~\eqref{auswertung1} konnten wir die Resonanzfrequenz der Protonenspins im Magnetfeld des Analysators $\nu_{\rm res} = \SI{4712.31(20)}{\kilo\hertz}$~\eqref{auswertung2} bestimmen.
+Daraus leißen sich Magnetfeldstärke des Dauermagneten im Analysator zu $B_0 = \SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}$ und die Energieaufspaltung $\Delta E = \SI[separate-uncertainty=false]{19.48854(83)e-9}{\electronvolt}$ berechnen~\eqref{auswertung3}. Durch Variation des Polarisationsstroms $I_{\rm pol}$ bestätigen wir den linearen Zusammenhang zwischen Polarisationsfeldstärke und Messsignal~\eqref{auswertung4}.
+Das Aufnehmen von Amplituden- und Frequenz-Sweeps in der Nähe der Resonanzfrequenz ermöglichte den Phasenraum von Einstrahlamplitude und Frequenz darstellen~\eqref{phasenraum}. 
+Die Form des Messsignals im Phasenraum entsprach dabei nur bedingt unseren theoretischen Erwartungen. 
+Die Drehwinkel der Magnetisierung im Manipulator wurden den Einstrahlamplitude eindeutig zugeordnet~\eqref{auswertung5}.
+
+ Mit Hilfe eines Helmholtzspulenpaares konnten wir verschieden starke statische Magnetfelder bereitstellen. Aus der Untersuchung der entsprechenden Resonanzfrequenzen konnten wir das im Raum vorhandenen Störfeld $\vec{B}_{\rm S}$ berechnen. Die Stärke des Störfeldes betrug $B_{\rm S} = \SI{34.74(31)}{\micro\tesla}$ und hatte einen Winkel von $\phi = \SI{64.67(36)}{\degree}$~\eqref{auswertung6} zum Helmholtzspulenfeld. 
+Der Betrag des Störfeldes stimmt dabei gut mit der bestimmten Resonanzfrequenz aus den Frequenz-Sweeps überein~\eqref{auswertung5}. Den Wert für das Kernmagneton konnten wir mit $\mu_{\rm K} = \SI[separate-uncertainty=false, per-mode=symbol]{5.098(51)e-27}{\tesla\per\ampere}$ in Übereinstimmung mit dem Literaturwert bestimmen~\eqref{auswertung6}.
+Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit bei maximaler Pumpenleistung auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ in der Manipulatorspule bestimmen. Daraus errechneten wir die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur zu $\SI{3.6(17)}{1\per\second}$ ~\eqref{auswertung7}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung und deren Manipulation  untersuchen und die vorhergesagt Dynamik zu großen Teilen bestätigen. 
 
 \small
 \bibliographystyle{dinat}
 \nocite{*}
 \bibliography{lit}
 \normalsize
-
-
-\onecolumn
-\pagestyle{empty}
-% 
-
-%=============================================================================
-\section{Anhang}
-\label{Anhang}
-% =============================================================================
 
 \end{document}
