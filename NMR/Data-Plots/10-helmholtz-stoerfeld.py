@@ -99,7 +99,7 @@ print "--------------------------------"
 print "Steigung: ", pbest_diff[0], "+-", (m_max-m_min)/2 
 print "--------------------------------"
 
-plt.xlabel(u"Spulenstromquadrat $I_\mathrm{HH}[\mathrm{mA}]$")
+plt.xlabel(u"Spulenstrom $I_\mathrm{HH}[\mathrm{mA}]$")
 plt.ylabel(r"Differenz der Frequenzquadrate $(\nu(I_\mathrm{HH})^2+\nu(-I_\mathrm{HH})^2)[\mathrm{Hz}^2]$")
 
 

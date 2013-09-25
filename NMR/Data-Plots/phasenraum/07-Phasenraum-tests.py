@@ -37,11 +37,15 @@ ax = fig.gca(projection='3d')
 verts=[]
 zdata = np.arange(10,105,5)
 print zdata
+step = 10
 for z in range(len(dataset)-1):
 	#data = genfromtxt("05-phasenraum-040mV-minmax-FM.dat")
 	data = genfromtxt(dataset[z])
-	xdata = data[:,0]
-	ydata = data[:,1]
+	xdata=zeros(len(data)/step)
+	ydata=zeros(len(data)/step)
+	for i in range(len(data)/step):
+		xdata[i] = data[step*i,0]
+		ydata[i] = data[step*i,1]
 	verts.append(list(zip(xdata,ydata)))
 
 colors = ['#be1e2d',
@@ -60,7 +64,7 @@ colorlist = [cc[j%ncc] for j in range(nzs)]
 # vtx = sp.rand(3,3)
 # tri = Axes3D.art3d.Poly3DCollection([vtx])
 # verts.set_color(colors.rgb2hex(sp.ran(3)))
-poly = PolyCollection(verts, closed=False, facecolor=colorlist)
+poly = PolyCollection(verts, closed=False, edgecolor="black", facecolor='#be1e2d', alpha=0.8)#facecolor=colorlist
 #poly.set_alpha(0.7)
 ax.add_collection3d(poly, zs=zdata, zdir='y')
 
