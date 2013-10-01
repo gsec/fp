@@ -94,7 +94,7 @@ if abgelesene_Werte_plotten==True:
     Frequenzen=array([4706.795,4707.792,4709.002,4710.266,4711.791,4712.76,4713.89,4715.023,4716.449,4717.478])
     Delta_t=array([0.0175821,0.0150391,0.0135779,0.0122491,0.0105905,0.0095616,0.0083961,0.007123,0.0054044,0.0038974])
     p0=[1,5,0.04]
-    fit = lambda p, x: p[0]+p[1]*cos(2*pi*x/p[2])
+    fit = lambda p, x: p[0]+p[1]*cos(2*pi*x/0.04)
 
     def residuals(p, x, y):
         err = y-fit(p,x)
@@ -115,7 +115,7 @@ if abgelesene_Werte_plotten==True:
     subplots_adjust(left=0.13, bottom=0.12, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
     plt.errorbar(Delta_t,Frequenzen,xerr=0.0002,yerr=0.002,label="bestimmte Zeitdifferenzen",fmt='r.')
     xdata=linspace(0,0.02,1000)
-    plt.plot(xdata,fit(out[0],xdata),"b--",label="Cosinus-fit")
+    plt.plot(xdata,fit(out[0],xdata),"b--",label=r'Cosinus-fit mit Periodendauer 0.04s')
     plt.plot([0.01,0.01],[4700,4712.31],"black",label="abgelesene Resonanzfrequenz")
     plt.plot([0.00,0.01],[4712.31,4712.31],"black")
     plt.legend(loc=0)	
