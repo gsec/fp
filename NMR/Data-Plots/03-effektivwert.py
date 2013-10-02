@@ -25,7 +25,7 @@ Amplitude_mit=zeros(len(txt_filename_to_open_mit))
 Amplitude_ohne=zeros(len(txt_filename_to_open_ohne))
 
 
-print "=======ohne ESP========="
+print "=======mit ESP========="
 for n in range(len(txt_filename_to_open_mit)):
 	data = genfromtxt(txt_filename_to_open_mit[n])
 	print "n: ", n
@@ -52,7 +52,7 @@ for n in range(len(txt_filename_to_open_ohne)):
 	p0 = [5.0e-02, 1.3e3, -1.9, 1.8e-4]
 	pbest, success = optimize.leastsq(errfunc, p0, args=(x, y))
 	print "pbest :", pbest
-	Amplitude_ohne[n] = abs(pbest[0])
+	Amplitude_ohne[n] = abs(pbest[0]/2) # oder *47/(47+50) ??
 
 
 	
@@ -74,7 +74,7 @@ ax.plot(Amplitude_ohne, Amplitude_mit+Amplitude_mit*0.02, "b--", label="Fehlerge
 ax.plot(Amplitude_ohne, Amplitude_mit-Amplitude_mit*0.02, "b--")
 
 ax.set_xlabel(u"Spannung der Amplitude am Funtionsgeneragor $U_\mathrm{FG}[\mathrm{mV}]$")
-ax.set_ylabel(u"Spannung der Amplitude am der Einstrahlspule $U_\mathrm{ES}[\mathrm{mV}]$")
+ax.set_ylabel(u"Spannung der Amplitude an der Einstrahlspule $U_\mathrm{ES}[\mathrm{mV}]$")
 
 
 
