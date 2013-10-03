@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     54152,        993]
-NotebookOptionsPosition[     53456,        965]
-NotebookOutlinePosition[     53834,        981]
-CellTagsIndexPosition[     53791,        978]
+NotebookDataLength[     55351,       1019]
+NotebookOptionsPosition[     54571,        989]
+NotebookOutlinePosition[     54949,       1005]
+CellTagsIndexPosition[     54906,       1002]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -860,10 +860,9 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`k$$], -2, 2}, {
-      Hold[$CellContext`l$$], 0.1, 50}}, Typeset`size$$ = {
-    756., {243., 250.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`k$2557604$$ = 
-    0, $CellContext`l$2557605$$ = 0}, 
+      Hold[$CellContext`l$$], 0.1, 50}}, Typeset`size$$ = {499., {5., 13.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`k$2557604$$ = 0, $CellContext`l$2557605$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`k$$ = -2, $CellContext`l$$ = 0.1}, 
@@ -875,12 +874,12 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
          Typeset`skipInitDone$$}, "Body" :> ListPlot[
-        Abs[$CellContext`xData^2 ($CellContext`l$$/$CellContext`k$$^2) - 
-         2 ($CellContext`xData/$CellContext`k$$) $CellContext`l$$], 
+        Abs[$CellContext`xData^2 ($CellContext`l$$/$CellContext`k$$^2) - (
+          2 ($CellContext`xData/$CellContext`k$$)) $CellContext`l$$], 
         PlotRange -> {0, 10}], 
       "Specifications" :> {{$CellContext`k$$, -2, 2}, {$CellContext`l$$, 0.1, 
          50}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{813., {347., 352.}},
+     ImageSizeCache->{556., {78., 83.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -894,7 +893,20 @@ Cell[BoxData[
   3.5889254474727445`*^9, {3.5889254852627974`*^9, 3.5889255402528744`*^9}, 
    3.5889255760729246`*^9, {3.588925612282975*^9, 3.5889256183929834`*^9}, 
    3.588925690033084*^9, 3.588925721423128*^9, {3.588925826383275*^9, 
-   3.588925835193287*^9}}]
+   3.588925835193287*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(Abs[\\(\\(\\(\\(4.2748091603053435`\\\\ \
+xData\\)\\) + \\(\\(3.263213099469728`\\\\ \
+xData\\^2\\)\\)\\)\\)]\\)\[NoBreak] is not a list of numbers or pairs of \
+numbers. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\
+\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
+\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5896282343645515`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -931,10 +943,9 @@ Cell[BoxData[
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`k$$], -2, 2}, {
-      Hold[$CellContext`l$$], 0.1, 50}}, Typeset`size$$ = {
-    822., {263., 271.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`k$2558163$$ = 
-    0, $CellContext`l$2558164$$ = 0}, 
+      Hold[$CellContext`l$$], 0.1, 50}}, Typeset`size$$ = {475., {5., 13.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`k$2558163$$ = 0, $CellContext`l$2558164$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`k$$ = -2, $CellContext`l$$ = 0.1}, 
@@ -950,7 +961,7 @@ Cell[BoxData[
           1) $CellContext`l$$], PlotRange -> {0, 10}], 
       "Specifications" :> {{$CellContext`k$$, -2, 2}, {$CellContext`l$$, 0.1, 
          50}}, "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{879., {367., 372.}},
+     ImageSizeCache->{532., {78., 83.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -960,7 +971,20 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.5889260071145277`*^9, 3.5889260155145397`*^9}}]
+ CellChangeTimes->{{3.5889260071145277`*^9, 3.5889260155145397`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot", "::", "lpn"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(10\\\\ \\(\\(Abs[\\(\\(\\(\\(-1\\)\\) + \
+\\((\\(\\(-1\\)\\) - \\(\\(1.5625000000000002`\\\\ xData\\)\\))\\)\\^2\\)\\)]\
+\\)\\)\\)\[NoBreak] is not a list of numbers or pairs of numbers. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot\\\", ButtonNote -> \
+\\\"ListPlot::lpn\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5896282344215546`*^9}]
 }, Open  ]]
 },
 WindowSize->{1904, 942},
@@ -989,15 +1013,16 @@ Cell[2260, 67, 45303, 750, 293, "Output"]
 Cell[47578, 820, 170, 4, 34, "Input"],
 Cell[CellGroupData[{
 Cell[47773, 828, 918, 24, 34, "Input"],
-Cell[48694, 854, 2124, 42, 719, "Output"]
+Cell[48694, 854, 2117, 41, 181, "Output"],
+Cell[50814, 897, 554, 11, 34, "Message"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[50855, 901, 725, 22, 34, "Input"],
-Cell[51583, 925, 1857, 37, 759, "Output"]
+Cell[51405, 913, 725, 22, 34, "Input"],
+Cell[52133, 937, 1847, 36, 181, "Output"],
+Cell[53983, 975, 572, 11, 34, "Message"]
 }, Open  ]]
 }
 ]
 *)
 
 (* End of internal cache information *)
-

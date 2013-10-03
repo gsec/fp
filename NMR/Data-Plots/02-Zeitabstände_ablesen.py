@@ -115,7 +115,7 @@ if abgelesene_Werte_plotten==True:
     subplots_adjust(left=0.13, bottom=0.12, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
     plt.errorbar(Delta_t,Frequenzen,xerr=0.0002,yerr=0.002,label="bestimmte Zeitdifferenzen",fmt='r.')
     xdata=linspace(0,0.02,1000)
-    plt.plot(xdata,fit(out[0],xdata),"b--",label=r'Cosinus-fit mit Periodendauer 0.04s')
+    plt.plot(xdata,fit(out[0],xdata),"b--",label=r'Cosinus-fit mit Periodendauer 0.04s') # ,prop='size':10)
     plt.plot([0.01,0.01],[4700,4712.31],"black",label="abgelesene Resonanzfrequenz")
     plt.plot([0.00,0.01],[4712.31,4712.31],"black")
     plt.legend(loc=0)	
