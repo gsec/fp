@@ -26,11 +26,11 @@ print "c: ", c
 
 g = 5.585694713
 h = 6.62606957*10**(-34) #Js
-steigung = 36125.0*(1000**2) #Hz^2/A^2
-steigung_fehler = 22.0*(1000**2)
+m_sum = 36125.0*(1000**2) #Hz^2/A^2
+m_sum_fehler = 2799.0*(1000**2)
 
-mu_k = sqrt( (steigung*h**2)/(2*g**2*c**2) )
-mu_k_fehler = sqrt(((1.0/2*((steigung*h**2)/(2*g**2*c**2))**(-1.0/2)*h**2/(2*g**2*c**2))**2 *steigung_fehler**2) + ((sqrt(steigung/2)*h/(g*c**2))**2 * fehler_c**2) )
+mu_k = sqrt( (m_sum*h**2)/(2*g**2*c**2) )
+mu_k_fehler = sqrt(((1.0/2*((m_sum*h**2)/(2*g**2*c**2))**(-1.0/2)*h**2/(2*g**2*c**2))**2 *m_sum_fehler**2) + ((sqrt(m_sum/2)*h/(g*c**2))**2 * fehler_c**2) )
 
 
 
@@ -41,7 +41,7 @@ print "mu_k: ", mu_k, "+-", mu_k_fehler
 print "mu_k_lit: ", mu_k_lit
 
 t = 4458*1000 #Hz^2
-t_fehler = 80*1000 
+t_fehler = 2725*1000 
 
 B_S = sqrt( ( t*h**2 )/( 2 *g**2 *mu_k**2  ) )
 B_S_fehler = sqrt( (1.0/2 * (( t *h**2 )/( 2 *g**2 *mu_k**2 ))**(-1.0/2) * ( t*h**2 )/( 2 *g**2 *mu_k**3 ))**2 * mu_k_fehler**2 + 
@@ -49,17 +49,17 @@ B_S_fehler = sqrt( (1.0/2 * (( t *h**2 )/( 2 *g**2 *mu_k**2 ))**(-1.0/2) * ( t*h
 
 print "B_S: ", B_S, "+-", B_S_fehler
 
-m_2 = 3434*10**(2)*1000
-m_2_fehler = 27*10**(2)*1000
+m_diff = 3434*10**(2)*1000
+m_diff_fehler = 247*10**(2)*1000
 
-cos_phi = ( m_2*h**2 )/( 4*g**2 *mu_k**2 *c*B_S )
+cos_phi = ( m_diff*h**2 )/( 4*g**2 *mu_k**2 *c*B_S )
 phi = arccos(cos_phi)
-phi_fehler = sqrt(( (1.0/(sqrt( 1-cos_phi**2 )) * h**2/( 4*g**2 *mu_k**2 *c*B_S ))**2 *m_2_fehler**2 )+ 
-			((1.0/(sqrt( 1-cos_phi**2 )) * (m_2*h**2)/( 4*g**2 *mu_k**2 *c*B_S**2 ))**2 * B_S_fehler**2 ))
+phi_fehler = sqrt(( (1.0/(sqrt( 1-cos_phi**2 )) * h**2/( 4*g**2 *mu_k**2 *c*B_S ))**2 *m_diff_fehler**2 )+ 
+			((1.0/(sqrt( 1-cos_phi**2 )) * (m_diff*h**2)/( 4*g**2 *mu_k**2 *c*B_S**2 ))**2 * B_S_fehler**2 ))
 
 
 print "phi: ", phi, "+-", phi_fehler
 print "phi in Grad", phi/pi * 180, "+-", phi_fehler/pi * 180
-print "rest", m_2/cos_phi
+print "rest", m_diff/cos_phi
 print cos_phi
 

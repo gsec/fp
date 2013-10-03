@@ -71,7 +71,7 @@
 \usepackage[numbers]{natbib}
 \usepackage{paralist}
 \usepackage{upgreek}
-
+\newcommand{\kor}[1]{{\color{green}#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -132,13 +132,13 @@ mit den ganzen Zahlen $n=1,2,...$ beschrieben werden.  Das höchste messbare Pla
 \begin{equation}
 R_{\rm K}=\frac{h}{e^2}= \SI{25812.807}{\ohm}
 \end{equation}
-und wird als Klitzing-Konstante für die Definition des Ohm verwendet.\\
-Vergleicht man den Hall-Widerstand des klassischen Hall-Effekt \ref{rhall} mit dem des Quanten-Hall-Effekts \ref{rqhe}, so scheinen die beim Ladungstransport beteiligten Elektronen pro Volumen immer in Paketen zu $e B/\hbar$ zur Leitung beizutragen. Dieser Ausdruck wird als Entartungsgrad diskreter Landauniveaus bezeichnet die sich aus der vollen quantenmechanischen Beschreibung ergeben.
+und wird als Klitzing-Konstante für die Definition des Ohms verwendet.\\
+Vergleicht man den Hall-Widerstand des klassischen Hall-Effekts \ref{rhall} mit dem des Quanten-Hall-Effekts \ref{rqhe}, so scheinen die beim Ladungstransport beteiligten Elektronen pro Volumen immer in Paketen von $e B/\hbar$ zur Leitung beizutragen. Dieser Ausdruck wird als Entartungsgrad diskreter Landauniveaus bezeichnet, die sich aus der quantenmechanischen Beschreibung ergeben.
 Dazu wird der Hamiltonoperatur für Elektronen im äußeren Magnetfeld aufgestellt.
 \begin{equation}
 H=\frac{1}{2 m} \left(\vec{p} - \frac{e \vec{A}}{\mathrm{i} \hbar}\right)^2
 \end{equation}
-Lässt man nur Bewegungen der Elektronen in der $x$-$y$-Ebene zu und eicht das Vektorpotential auf  $\vec{A}= (0, \; B x, \; 0)$, so kann man mit dem Ansatz $\Phi(x,y)=C \cdot \mathrm{e}^{\mathrm{i} k_x k} u(x)$ die Schrödingergleichung auf eine Differenzialgleichung des harmonischen Oszillators umformen.
+Lässt man nur Bewegungen der Elektronen in der $x$-$y$-Ebene zu und eicht das Vektorpotential auf  $\vec{A}= (0, \; B\cdot x, \; 0)$, so kann man mit dem Ansatz $\Phi(x,y)=C \cdot \mathrm{e}^{\mathrm{i} k_x x} u(x)$ die Schrödingergleichung auf eine Differenzialgleichung des harmonischen Oszillators umformen.
 Die Energieeigenwerte beschreiben die Landauniveaus und besitzen die Form
 \begin{equation}
 E_n=\hbar \omega_\mathrm{c} \left(n+\frac{1}{2}\right)
@@ -149,14 +149,14 @@ N_{\rm LL}= \frac{e B}{h}
 \label{entartung}
 \end{equation}
 pro Volumen.  \\
-Gleichzeitig zu den Plateaus im Hallwiderstand, tritt ein anderer bemerkenswerter Effekt auf, der als Shubnikow-de-Haas-Effekt bezeichnet wird. Dabei verliert das zweidimensionale Elektronengas (2\,DEG) seinen Widerstand in Längsrichtung, so dass der angelegten Strom ohne Verluste im Festkörper transportiert wird. Liegt die Fermienergie zwischen zwei Landauniveaus, so gibt es für die Elektronen keine Zustände innerhalb der thermischen Energie in die gestreut werden kann. Die Leitung wird damit dissipationslos. Das Randkanalmodell beschreibt anschaulich, wie das Oberflächenpotential die Energieniveaus der Landaulevel anhebt und so einen eindimensionalen leitenden Randkanal formt, in dem ebenfalls dissipationslose Leitung möglich ist.
-Das Verhalten der Probe wird also im wesentlich von der Magnetfeldstärke beeinflusst. Diese erhöht den Entartungsgrad der Landauniveuas  und damit sowohl die Lage der Fermienergie als auch den Füllfaktor, d.h. die Anzahl der besetzten Landauniveaus, festlegt. Der Füllfaktor ist als
+Gleichzeitig zu den Plateaus im Hallwiderstand, tritt ein anderer bemerkenswerter Effekt auf, der als Shubnikow-de-Haas-Effekt bezeichnet wird. Dabei verliert das zweidimensionale Elektronengas (2\,DEG) seinen Widerstand in Längsrichtung, so dass der angelegte Strom ohne Verluste im Festkörper transportiert wird. Liegt die Fermienergie zwischen zwei Landauniveaus, so gibt es für die Elektronen keine Zustände innerhalb der thermischen Energie in die gestreut werden kann. Die Leitung wird damit dissipationslos. Das Randkanalmodell beschreibt anschaulich, wie das Oberflächenpotential die Energieniveaus der Landaulevel anhebt und so einen eindimensionalen leitenden Randkanal formt, in dem ebenfalls dissipationslose Leitung möglich ist.
+Das Verhalten der Probe wird also wesentlich von der Magnetfeldstärke beeinflusst. Diese erhöht den Entartungsgrad der Landauniveaus  und damit sowohl die Lage der Fermienergie als auch den Füllfaktor, d.h. die Anzahl der besetzten Landauniveaus, festlegt. Der Füllfaktor ist als
 \begin{equation}
 \nu=\frac{N_\mathrm{S}}{N_{\rm LL}}
 \label{fuellfaktor}
 \end{equation}
 definiert, wobei $N_\mathrm{S}$ der Teilchendichte und $N_{\mathrm{LL}}$ dem Entartungsgrad der Landauniveaus entspricht. Bei einem ganzzahligen Füllfaktor befindet man sich im Bereich eines Plateaus des Quanten-Hall-Effektes und man misst den beschriebenen Shubnikow-de-Haas-Effekt.\\
-Idealer Weise sind diese Energieniveaus delta-förmig, in der Realität aber oft durch Streuung mit Phononen und Störstellen, sowie die Zeeman-Aufspaltung verbreitert. Damit sind die Bedingungen zu verstehen, bei denen der Quanten-Hall-Effekt auftritt. Bei starken Magnetfeldern treten wenige stark besetzte Landaulevel auf. Zudem verringern hohe Beweglichkeiten der Elektronen die Stoßverbreiterung. Als letztes werden hinreichend tiefe Temperaturen benötigt, damit nur Landauniveaus unterhalb der Fermienergie besetzt sind.\\
+Idealer Weise sind diese Energieniveaus delta-förmig, in der Realität aber oft durch Streuung mit Phononen und Störstellen, sowie die Zeeman-Aufspaltung verbreitert. Damit sind die Bedingungen zu verstehen, bei denen der Quanten-Hall-Effekt auftritt. Bei starken Magnetfeldern treten wenige stark besetzte Landaulevel auf. Zudem verringern hohe Beweglichkeiten der Elektronen die Stoßverbreiterung. Als Letztes werden hinreichend tiefe Temperaturen benötigt, damit nur Landauniveaus unterhalb der Fermienergie besetzt sind.\\
 
 %Entdeckung des QHE Klaus von Klitzing 1980
 %2\,DEG mit hohen beweglichkeiten
@@ -174,36 +174,37 @@ Idealer Weise sind diese Energieniveaus delta-förmig, in der Realität aber oft
 \label{Experiment}
 % =============================================================================
 %
-Im folgendem Versuch messen wir den Quanten-Hall-Effekt an einer AlGaAs/GaAs Hallbar. Durch den Kontakt der GaAs- und der AlGaAs-Schicht entsteht ein 2\,DEG, an dem wir die Messungen für den Versuch durchführen können. Die Hallbar besitzt 6 Anschlüsse die in Abbildung~\ref{fig.hallbar} zu sehen sind. 
+Im folgendem Versuch messen wir den Quanten-Hall-Effekt an einer AlGaAs/GaAs-Hallbar. Durch den Kontakt der GaAs- und der AlGaAs-Schicht entsteht ein 2\,DEG, an dem wir die Messungen für den Versuch durchführen können. Die Hallbar besitzt 6 Anschlüsse die in Abbildung~\ref{fig.hallbar} zu sehen sind. 
 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=.8\columnwidth]{Bilder/hallbar.pdf}
-		\caption{Verwendete Struktur der Hallbar mit Abmessungen.}
+		\caption{Verwendete Struktur der AlGaAs/GaAs-Hallbar mit Beschriftung und Abmessungen.}
 		\label{fig.hallbar}
 	\end{center}
 \end{figure}
 
-Um die Hallbar anzusteuern, liegt ein Probenbox am Arbeitsplatz vor, die mit der Hallbar verbunden ist. An den Kontakten 3, 4, 6 und 7 kann die Längsspannung sowie die Querspannung abgegriffen werden. An den Kontakten 5 und 8 wird der Gleichstrom bereitgestellt.
-Da für die Messung des Quanten-Hall-Effektes niedrige Temperaturen nötig sind, befindet sich die Probe in einen Kryostaten im Heliumbad. Zur Wärmeisolation befindet sich das Bad innerhalb von Vakuum-Kammern und einem Stickstofftank, was den gesamten Kryostaten darstellt. Durch eine Pumpe mit Druckregelung kann der Druck über dem Heliumbad beeinflusst werden, wodurch sich Temperaturen zwischen \SI{1.5}{\kelvin} und \SI{4.2}{\kelvin} einstellen lassen. Die Bestimmung der Temperatur an der Probe erfolgt mit einem geeichten, temperaturabhängigen Kohlewiderstand, dem Allen Bradley-Widerstand, der mit einem Spannungsmessgerät ausgelesen wird. Zur Erzeugung des Hall-Effektes wird ein zwischen \SI{0}{\tesla} und \SI{9}{\tesla} verstellbares Magnetfeld senkrecht zur Probenebene angelegt. Zur Ermittlung des Probenstroms
-wird ein mit \SI{13}{\hertz} und \SI{1}{\volt} betriebener Funktionsgenerator über einen 1000:1 Spannungsteiler und einem Vorwiderstand von $R_{\rm Shunt} = \SI{4981}{\ohm}$ an die Probenbox angelegt und der Spannungsabfall über den Shuntwiderstand gemessen.
+Um die Hallbar anzusteuern, liegt ein Probenbox am Arbeitsplatz vor, die mit der Hallbar verbunden ist. An den Kontakten 3, 4, 6 und 7 kann die Längsspannung sowie die Querspannung abgegriffen werden. An den Kontakten 5 und 8 wird der Probenstrom bereitgestellt.
+Da für die Messung des Quanten-Hall-Effektes niedrige Temperaturen nötig sind, befindet sich die Probe in einen Kryostaten im Heliumbad. Zur Wärmeisolation befindet sich das Bad innerhalb von Vakuum-Kammern und einem Stickstofftank, was den gesamten Kryostaten darstellt. Durch eine Pumpe mit Druckregelung kann der Dampfdruck über dem Heliumbad beeinflusst werden, wodurch sich Temperaturen zwischen \SI{1.5}{\kelvin} und \SI{4.2}{\kelvin} einstellen lassen. Die Bestimmung der Temperatur an der Probe erfolgt mit einem geeichten, temperaturabhängigen Kohlewiderstand, dem Allen Bradley-Widerstand, der mit einem Spannungsmessgerät ausgelesen wird. Zur Erzeugung des Hall-Effektes wird ein zwischen \SI{0}{\tesla} und \SI{9}{\tesla} verstellbares Magnetfeld senkrecht zur Probenebene angelegt. 
+Zur Bereitstellung des Probenstroms wird ein mit \SI{13}{\hertz} und \SI{1}{\volt} betriebener Funktionsgenerator über einen 1000:1 Spannungsteiler und einem Vorwiderstand von $R_{\rm Shunt} = \SI{4981}{\ohm}$ an die Probenbox angelegt. Mit dem Spannungsabfall über den Shuntwiderstand lässt sich der Probenstrom bestimmen.
 
 %Die Spannung, die an der Probe anliegt wird am Vorwiderstand abgegriffen. I dont belive you :)
-Die Querspannung sowie die Shuntspannung sind jeweils über einen Lock-In-Verstärker mit einem Computer verbunden.
-Das Magnetfeld, die Shunt- und die Querspannung können mit LabView über die Zeit aufgezeichnet werden.
+Die Querspannung sowie die Shuntspannung werden jeweils über einen Lock-In-Verstärker ausgelesen, die mit einem Computer verbunden sind.
+Das Magnetfeld, die Shunt- und die Querspannung können mit einem LabView-Programm über die Zeit aufgezeichnet werden.
 
 % =============================================================================
 \section{Versuchsdurchführung}
 \label{versuch}
 % =============================================================================
 %
-Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Shuntspannung $U_{\rm Shunt}$ und die Querspannungen $U_{xx}$ bzw. $U_{\rm Hall}$ bei steigendem Magnetfeld von $0 \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $9 \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-In-Verstärker verwenden, nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch die Druckregelung des Heliums im Kryostaten können wir die Temperatur regeln und die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
+Um die Hall-Plateaus und die Shubnikov-de-Haas Oszillation zu beobachten, messen wird die Shuntspannung $U_{\rm Shunt}$ und die Längsspannung $U_{xx}$ bzw. Hallspannung $U_{\rm Hall}$ bei steigendem Magnetfeld von $\SI{0}{\tesla} \rightarrow \SI{9}{\tesla}$ und bei fallendem Magnetfeld von $\SI{9}{\tesla} \rightarrow \SI{0}{\tesla}$. Da wir nur zwei Lock-In-Verstärker verwenden, nehmen wir die Hallspannung $U_{\rm Hall}$ und die Längsspannung $U_{xx}$ in getrennten Messungen auf. An der Probe wird die Hallspannung an den Kontakten 4 und 6, sowie die Längsspannung an den Kontakten 6 und 7 abgegriffen. Durch die Druckregelung des Heliums im Kryostaten können wir die Temperatur regeln und die obigen Messungen bei verschiedenen Temperaturen aufnehmen.
 Um eine Einfluss der Temperatur untersuchen zu können messen wir bei den Temperaturen $T=\SI{4.2}{\kelvin}$, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
 %passt doch super hier hin, oder?
-Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums vor allem an den Stellen \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} schwierig einzustellen und konnte darüber hinaus nicht konstant gehalten werden. Um die Schwankung während der Messung abzuschätzen, haben wir jeweils vor und nach der Messung die Temperatur über den Allen-Bradley Widerstand ausgelesen. Folglich lagen unsere gemittelten Temperaturwerte bei \SI{4.2}{\kelvin}, welcher durch die Sidetemperatur des Heliums nahezu konstant ist, bei \SI{3.03(50)}{\kelvin}, bei \SI{2.1(30)}{\kelvin} und bei \SI{1.53(20)}{\kelvin}. In folgender Auswertung verwenden wir für die Bezeichnungen und Kennzeichnungen nach der Praktikumsanleitung durchgehend die Werte \SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
+Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums vor allem an den Stellen \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} schwierig einzustellen und konnte darüber hinaus nicht konstant gehalten werden. Um die Schwankung während der Messung abzuschätzen, haben wir jeweils vor und nach der Messung die Temperatur über den Allen-Bradley Widerstand ausgelesen. Folglich lagen unsere gemittelten Temperaturwerte bei \SI{4.2}{\kelvin}, welcher durch die Sidetemperatur des Heliums nahezu konstant ist, bei \SI{3.0(5)}{\kelvin}, bei \SI{2.1(3)}{\kelvin} und bei \SI{1.5(2)}{\kelvin}. 
+%In folgender Auswertung verwenden wir für die Bezeichnungen und Kennzeichnungen nach der Praktikumsanleitung durchgehend die Werte \SI{4.2}{\kelvin}, \SI{3.0}{\kelvin}, \SI{2.1}{\kelvin} und \SI{1.5}{\kelvin}.
 
-Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die Füllfaktoren bestimmen. Des Weiteren können wir hieraus die Ladungsträgerdichte, die relative Spinaufspaltung, Elektronenbeweglichkeit und Leitfähigkeit der Probe ermitteln und aus den Amplituden der Shubnikov-de-Haas Oszillation lässt sich die Zyklotronmasse berechnen.
+%Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die Füllfaktoren bestimmen. Des Weiteren können wir hieraus die Ladungsträgerdichte, die relative Spinaufspaltung, Elektronenbeweglichkeit und Leitfähigkeit der Probe ermitteln und aus den Amplituden der Shubnikov-de-Haas Oszillation lässt sich die Zyklotronmasse berechnen.
 
 %
 % =============================================================================
@@ -214,9 +215,9 @@ Durch Bestimmung der Hall-Plateaus können wir die Klitzing-Konstante sowie die 
 
 
 
-Die gemessenen Spannungen über die Lock-In-Verstärker sind durch das Messgerät relativ genau bestimmt. Allerdings wird der Fehler durch ein Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{e-4}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \SI{5}{\percent} abgeschätzt. Somit können wir den Widerstand für die meisten Messungen als Hauptfehlerquelle identifizieren.
+Die gemessenen Spannungen über die Lock-In-Verstärker sind von einem Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{e-3}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \SI{5}{\percent} abgeschätzt. Somit können wir den Widerstand für unsere Messungen als Hauptfehlerquelle identifizieren.
 
-Beim Durchfahren des Magnetfeldes von $0$ nach $9$ Tesla konnte ein leichter Hysterese-Effekt festgestellt werden. Das bedeutet, dass der Elektromagnet zwar eine Magnetfeldstärke anzeigt, die wirkliche Feldstärke der angezeigten leicht nacheilt. Um diesen Effekt auszugleichen, wurden die Aufnahmen für jede Messung in beide 
+Beim Durchfahren des Magnetfeldes von $0$ nach $9$ Tesla konnte ein leichter Hysterese-Effekt festgestellt werden. Das bedeutet, dass der Elektromagnet zwar eine Magnetfeldstärke anzeigt, die wirkliche Feldstärke der Angezeigten leicht nacheilt. Um diesen Effekt auszugleichen, wurden die Aufnahmen für jede Messung in beide 
 Richtungen durchgefahren. Bei diesen zwei Datensätzen wurde dann gleichzeitig das Magnetfeld des Up-sweeps erniedrigt und die Down-sweeps erhöht, bis die Daten symmetrisch in der Mitte der Hysterese zusammen fielen.
 Die beschriebene Verschiebung in der Magnetfeldstärke war gering und betrug $\SI{\pm0.037}{\tesla}$. Die kollabierten Daten wurden für die weiteren Auswertungen verwendet.
 
@@ -324,7 +325,8 @@ Die Ladungsträgerdichte können wir ebenso über die Lage der Hall-Pateaus und 
 \begin{equation}
 	N_{\rm s} = \nu\frac{e B}{h}.
 \end{equation}
-Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm H}$ durch die Plateus der gesamte Plateau-Bereich gehört. Für die Auswertung haben wir den Wert der Hall-Widerstände verwendet, der in Aufgabenteil~\ref{a1} ermittelt wurde. Dieser sollte die Stelle des Plateaus (minimale Steigung) am Genauesten wiedergeben. Der Fehler in der Widerstandsbestimmung der Hall-Plateaus beträgt $\SI{10}{\ohm}$, wodurch sich der Fehler in der Bestimmung der $B$-Felder durch die Breite der Plateaus abschätzen lässt.
+%Der hier auftretende Fehler ist relativ groß, da zu einem Wert von $R_{\rm H}$ durch die Plateus der gesamte Plateau-Bereich gehört. 
+Für die Auswertung haben wir die Werte der Hall-Widerstände verwendet, die in Aufgabenteil~\ref{a1} ermittelt wurden. Diese geben die Stelle des Plateaus (minimale Steigung) am genauesten wieder. . Der Fehler der zugehörigen $B$-Felder lässt sich durch die Breite der Plateaus abschätzen. %Der Ablesefehler in  der Hall-Plateaus beträgt $\SI{10}{\ohm}$. Brauchen wir hier glaub ich nicht
 
 Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabelle~\ref{ladungstraegerdichte2} für die gemessenen Temperaturen aufgetragen.
 \begin{table}[htp]
@@ -375,7 +377,7 @@ Die mit Hilfe der Hall-Plateaus ermittelten Ladungsträgerdichten sind in Tabell
 	\label{ladungstraegerdichte2}
 	\end{center}
 \end{table}
-Der Fehler der gemittelten Ladungsträgerdichten wurden aus Gauß'scher Fehlerfortpflanzung bestimmt.\\
+Der Fehler der gemittelten Ladungsträgerdichten wurden mit Gauß'scher Fehlerfortpflanzung aus den Einzelwerten bestimmt.\\
 
 \subsubsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
 Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
@@ -397,7 +399,7 @@ aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der
 	\end{center}
 \end{figure}
 
-Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{e}{N_\mathrm{S} h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden werden.
+Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{2 e}{N_\mathrm{S} h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden.
 
 Durch die Periodendauer $T_{\frac{1}{B}}$ wird somit der Wert für die Ladungsträgerdichte festgelegt.
 \begin{equation}
@@ -481,7 +483,7 @@ Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Te
 		\label{fig:zyklotronmasse}
 	\end{center}
 \end{figure}
-Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Da wir aus der Auftragung über $1/B$ die selben Werte für die Amplituden erhalten, geben wir die Werte nicht extra an. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
+Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragung über $1/B$ verändert den Wert der Amplituden nicht. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
@@ -519,14 +521,15 @@ ergeben. Das gesamte gemittelte Massenverhältnis ist somit
 	\frac{m_{\rm c}}{m_{\rm e}} = 0.0318 \pm 0.0076.
 	\label{zyklotronmasse}
 \end{equation}
-Die Fehler der Amplituden und des $B$-Felds der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte sind durch einen Ablesefehler von $\pm 0.001$, können jedoch zur Berechnung des Massenverhältnisses vernachlässigt werden, da der Fehler in der Temperaturbestimmung deutlich darüber liegt. Die Temperaturschwankungen sind zu Beginn der Auswertung~\ref{Auswertung} genannt. Die Auswirkung von Temperaturschwankungen auf die gemessenen Spannungen sind allerdings nicht bekannt. Somit bestimmen wir den Fehler der gemittelten Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt.
+Die Ablesefehler der Amplituden und des $B$-Feldes der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte werden vernachlässigt, da der Fehler der korrekten Temperaturbestimmung deutlich höher eingeschätzt wird.
+Wie sich eine Abweichung von der Bedingung $T_{1}=2T_{2}$ auf die Massenbestimmung auswirkt ist im Detail nicht bekannt, der Fehler kann jedoch aus Diskrepanz der Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt werden.
 
 Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
 \begin{equation}
 	\frac{m^*}{m_{\rm e}} = 0.067
 \end{equation}
 
-Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$. Diese Bedingung konnte im Experiment nicht realisiert werden, da durch den vorhandenen Versuchsaufbau keine konstante Temperatur eingestellt werden konnte. 
+Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$, welche im Experiment nicht sehr exakt realisiert werden konnte.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %
@@ -534,7 +537,7 @@ Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der r
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Fermi-Energie /-Wellenvektor und -Geschwindigkeit}
 \label{a5}
-Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \cite{saarland} $m^*=0.067$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
+Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \cite{saarland} $m^*=0.067 m_\mathrm{e}$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
 \begin{equation}
 E_{\rm F}=\frac{\hbar^2 k_{\rm F}^2}{2 m^*}.
 \end{equation}
@@ -572,7 +575,7 @@ Wie in Aufgabe 2 gesehen fällt der Längswiderstand periodisch mit dem inversen
 \begin{equation}
 E_{\rm F}=\hbar \omega_{\rm c}\left( n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
-In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor g des Elektronen und GaAs bestimmt werden, der mit der Magnetisierung folgenden Zusammenhang besitzt.
+In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor g des Elektronen und GaAs bestimmt werden, der mit der relativen Magnetisierung folgenden Zusammenhang besitzt.
 \begin{equation}
 M=\frac{g \mu_{\rm B} B}{\hbar \omega_{\rm c}}
 \label{lande}
@@ -606,7 +609,7 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 \begin{equation}
 M=|0.160(80)-0.560(80)|=0.40(11).
 \end{equation}
-Daraus ergibt sich nach \ref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
+Daraus ergibt sich nach \eqref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
 \begin{equation}
 g=\frac{M \hbar e}{\mu_{\rm B} m_{\rm c}}=-0.80\pm29.
 \end{equation}

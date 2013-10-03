@@ -48,7 +48,7 @@ text(14,-0.645, u"$t_6$", va="center", ha="left")
 plt.xlabel(u"Zeit $t[\mathrm{s}]$")
 plt.ylabel(u"Signalh\xf6he $S2[\mathrm{V}]$")
 
-plt.savefig("06-wassergeschwindigkeit.pdf")
+##plt.savefig("06-wassergeschwindigkeit.pdf")
 show()
 
 #############Plotausgabe einzelne Datensätze################
@@ -238,6 +238,8 @@ legend(loc=0, prop={'size':10})
 #ax.legend(loc=0)
 
 #fig.savefig("04-signal-polarisationsstrom.pdf")
-plt.savefig("06-relaxation.pdf")
+
+
+##plt.savefig("06-relaxation.pdf")
 show()
 

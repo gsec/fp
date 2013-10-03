@@ -9,11 +9,11 @@
 }
 
 @misc{codata,
-	author = {{National Institute of Standards and Technology}},
-	title = {Physical Reference Data - The NIST Reference on Constants, Units and Uncertainty},
-	year = {2011},
-	month = {June},
-	url={http://physics.nist.gov/cuu/index.html}
+	author = {{Committee on Data for Science and Technology}},
+	title = {CODATA - International Council for Science},
+	year = {2013},
+	month = {Oktober},
+	url={http://www.codata.org/}
 	}
 
 @phdthesis{mueller,
@@ -36,7 +36,7 @@
 	author = {Ioannis Koktzoglou},
 	title = {4D Dark Blood Arterial Wall Magnetic Resonance Imaging: Methodology and Demonstration in the Carotid Arteries},
 	year = {2013},
-	month = {Abril},
+	month = {April},
 	journal = {Magnetic Resonance in Medicine},
 	volume= {69},
 	number = {4},

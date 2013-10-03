@@ -72,7 +72,7 @@
 
 \newcommand{\tra}{$\rightarrow $}
 \newcommand{\Tra}{$\Rightarrow $}
-\renewcommand{\note}[1]{{\color{red}#1??}}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -80,6 +80,12 @@
 
 
 \usepackage{paralist}
+
+\definecolor{darkblue}{rgb}{0,0,.4}
+\definecolor{darkred}{rgb}{.5,0,0}
+\definecolor{darkgreen}{rgb}{0,.5,0}
+
+\newcommand{\kor}[1]{{\color{darkgreen}#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %ToDo:
 
@@ -98,7 +104,7 @@
 %=============================================================================
   \vspace{-2em}
   \noindent {\small 
-  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ der Protonen im Feld des Analysators sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, nehmen 4 volle Drehungen des Spins auf und bestimmen das Kernmagneton $\mu_{\rm K} = \SI[per-mode=symbol]{5.0979e-27}{\tesla\per\ampere}$. Wir bestimmen das vorhandene Störfeld im Raum und vergleichen für verschiedene Temperaturen die Relaxationszeiten $T_1$, wobei wir bei höherer Temperatur längere Relaxationszeit messen. Insgesamt konnten wir die theoretisch vorhergesagte Dynamik der Magnetisierung bestätigt.
+  	Ein Wasserkreislauf, Polarisator, Manipulator und Analysator ergeben einen Aufbau zur Untersuchung der magnetischen Kernresonanz. Wir bestimmen die Resonanzfrequenz $\nu_{\rm res} = \SI{4712.31}{\kilo\hertz}$ der Protonen im Feld des Analysators sowie die Energieaufspaltung $\Delta E = \SI{19.48854e-9}{\electronvolt}$. Wir stellen den Phasenraum von Frequenz, Amplitude und Signal dar, nehmen 4 volle Drehungen des Spins auf und bestimmen das Kernmagneton $\mu_{\rm K} = \SI[per-mode=symbol]{5.10e-27}{\tesla\per\ampere}$. Wir bestimmen das vorhandene Störfeld im Raum und vergleichen für verschiedene Temperaturen die Relaxationszeiten $T_1$, wobei wir bei höherer Temperatur längere Relaxationszeit messen. Insgesamt konnten wir die theoretisch vorhergesagte Dynamik der Magnetisierung bestätigt.
     }
 \end{abstract}
 
@@ -148,7 +154,7 @@ In einer Probe kommt ein großes Ensemble von Protenenspins vor, sodass sich die
 \end{equation}
 $\ket{\psi_k}$ beschreibt hier die Zustandsfunktionen der $N$ Protonen.
 
-Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipol $\vec{\mu}$, wodurch in einem Magnetfeld $\vec{B}$ ein Drehmoment $\vec{D}$ auf das Teilchen wirkt. Hierdurch beginnt der Drehimpuls des Teilchens um das angelegte Magnetfeld mit $\vec{D} = \vec{\mu} \times \vec{B}$ zu präzedieren. Die Präzessionsbewegung kann nach~\citet{anleitung} ?? durch
+Jedes geladene Teilchen mit Drehimpuls $\vec{J}$ besitzt einen magnetischen Dipol $\vec{\mu}$, wodurch in einem Magnetfeld $\vec{B}$ ein Drehmoment $\vec{D}$ auf das Teilchen wirkt. Hierdurch beginnt der Drehimpuls des Teilchens um das angelegte Magnetfeld mit $\vec{D} = \vec{\mu} \times \vec{B}$ zu präzedieren. Die Präzessionsbewegung kann nach~\kor{Praktikumsanleitung  \citep{anleitung}} durch
 \begin{equation}
 	\mathrm{d}\vec{D}(t) = \gamma\vec{M}(t) \times \vec{B}(t)\,\mathrm{d}t
 \end{equation}
@@ -192,7 +198,7 @@ Der verwendete Versuchsaufbau ist in Abbildung~\ref{fig.versuchsaufbau} schemati
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Bilder/nmr_aufbau}
-		\caption{Schematischer Versuchsaufbau nach~\citet{anleitung}.}
+		\caption{Schematischer Versuchsaufbau nach~\kor{Praktikumsanleitung  \citep{anleitung}}.}
 		\label{fig.versuchsaufbau}
 	\end{center}
 \end{figure}
@@ -211,7 +217,7 @@ Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} g
 
 \begin{figure}[htp]
 	\includegraphics[width=\columnwidth]{Bilder/messbeschaltung.pdf}
-	\caption{Beschaltung des gesamten Messaufbaus. Auszüge aus~\citet{anleitung}.}
+	\caption{Beschaltung des gesamten Messaufbaus. Auszüge aus~\kor{Praktikumsanleitung  \citep{anleitung}}.}
 	\label{fig.beschaltung}
 \end{figure}
 
@@ -225,20 +231,20 @@ Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} g
 \subsection{Eichen des Funktionsgenerators}
 \label{auswertung1}
 
-Um die ?? Genauigkeit des Funktionsgenerators zu überprüfen, wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} in der Amplitude und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Cosinus-Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Der Fehler der Werte ergibt sich aus der Ungenauigkeit in der Amplitude des Funktionsgenerators von \SI{2}{\percent}. Der Fehler der Fitfunktion kann gegen den Fehler in der Amplitude vernachlässigt werden. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
+Um die \kor{Abweichung der eingestellten Ausgangsspannung des Funktionsgenerators bei Belastung} zu bestimmen, wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} \kor{für die Spitze/Spitze Werte} und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Cosinus-Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Der Fehler der Werte ergibt sich aus der Ungenauigkeit in \kor{den Spitze/Spitze Werten} des Funktionsgenerators von \SI{2}{\percent}. Der Fehler der Fitfunktion kann gegen den Fehler in \kor{den Spannungswerten} vernachlässigt werden. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden \kor{$U_{\rm Oszi}$} und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
 
 \begin{table}[htp]
 \begin{center}
 	\begin{tabular}{c|ccc}
 		\hline
-		\multicolumn{1}{c|}{FG \SI{50}{\milli\volt}} &\multicolumn{3}{c}{Oszillograph Spannung in \SI{}{\milli\volt}}\\
+		\multicolumn{1}{c|}{FG $\kor{\SI{50}{\milli\volt}_{\rm PP}}$} &\multicolumn{3}{c}{Oszillograph Spannung in \SI{}{\milli\volt}}\\
 \footnotesize Frequenz & \footnotesize Amplitude & \footnotesize Spitze/Spitze & \footnotesize Effektivwert\\
 		\hline
 		 \SI{1.3}{\kilo\hertz} & \SI{50.2(10)}{} & \SI{100.6(20)}{} & \SI{35.55(71)}{}\\
 		 \SI{2.6}{\kilo\hertz} & \SI{49.9(10)}{} & \SI{99.9(20)}{} & \SI{35.31(71)}{}\\
 		 \hline
-		\multicolumn{1}{c|}{FG \SI{100}{\milli\volt}} && \\
-		 \SI{1.3}{\kilo\hertz} & \SI{100.2(20)}{} & \SI{200.2(40)}{} & \SI{70.87(14)}{}\\
+		\multicolumn{1}{c|}{FG $\kor{\SI{100}{\milli\volt}_{\rm PP}}$} && \\
+		 \SI{1.3}{\kilo\hertz} & \SI{100.2(20)}{} & \SI{200.4(40)}{} & \SI{70.87(14)}{}\\
 		 \SI{2.6}{\kilo\hertz} & \SI{100.3(20)}{} & \SI{200.6(40)}{} & \SI{70.93(14)}{}\\
 		\hline
 	\end{tabular}
@@ -249,7 +255,7 @@ Um die ?? Genauigkeit des Funktionsgenerators zu überprüfen, wird dieser mit d
 
 Aus dem Vergleich der Werte in Tabelle~\ref{tab.funktionsgenerator} ergibt sich im Rahmen der Fehler kein Unterschied zwischen den Werten am Oszillographen und den eingestellten Werten. Anhand der berechneten Werte erkennt man, dass die Genauigkeit des Funktionsgenerators auch bei unterschiedlichen Amplituden und Frequenzen erhalten bleibt.
 
-Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenwiderstand. Allerdings ist der Spule um, den Strom zu begrenzen und messbar zu machen ein Vorwiderstand von \SI{47}{\ohm} eingebaut~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $E_{\rm Spule}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die Amplituden \SI{10}{\milli\volt}, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und eine ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $f_{\rm ES}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
+Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenwiderstand. Allerdings ist der Spule um, den Strom zu begrenzen und messbar zu machen ein Vorwiderstand von \SI{47}{\ohm} eingebaut~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $f_{\rm ES}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die \kor{Spitze/Spitze Werte} $\kor{U_{\rm PP}} = \SI{10}{\milli\volt}$, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und eine ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $f_{\rm ES}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
 
 \begin{figure}[htp]
 	\includegraphics[width=\columnwidth]{Data-Plots/03-Effektivwert-es-fg.pdf}
@@ -260,17 +266,18 @@ Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenw
 Die Werte in Abbildung~\ref{fig.eichfaktor} sind mit den entsprechenden Fehlern in der Amplitude des Funktionsgenerators (\SI{2}{\percent}) aufgetragen. Zur Bestimmung der Steigung haben wir eine ausgleichende Gerade mit Fehlergeraden an die Daten gelegt. Die Fehler des Fits können vernachlässigt werden.
 Für den gemessenen Eichfaktor ergibt sich somit ??
 \begin{equation}
-	f_{\rm ES} = \frac{U_{\rm ES}}{U_{\rm FG}} = \SI{0.4839(97)}{}
+	f_{\rm ES} = \frac{U_{\rm ES}}{U_{\rm FG}} = \kor{\SI{0.967(19)}{}}
+	\label{eq.eichfaktor}
 \end{equation}
 Aus den gemessen Werten erkennen wir, dass der Eichfaktor unabhängig von der gemessenen Frequenz der Wechselspannung an der Einstrahlspule ist. Dies ist auch wichtig um den Eichfaktor für spätere Versuche verwenden zu können, da dort an unterschiedlichen Frequenzen gemessen wird.
 
 Der Eichfaktor kann zudem theoretisch aus der Kenntnis der Widerstandswerte bestimmt werden. 
 \begin{equation}
-	f_{\rm ES} = \frac{R_{\rm ES}}{R_{\rm FG}+R_{\rm ES}} = \SI{0.4845(97)}{}
+	\kor{f_{\rm ES} = \frac{U_{\rm Oszi}}{U_{\rm FG}} \cdot \frac{R_{\rm ES}}{R_{\rm FG}+R_{\rm ES}} = \SI{0.969(36)}{}}
 \end{equation}
-Der Fehler ergibt sich aus dem geschätzten Fehler des Vorwiderstandes von \SI{2}{\percent}.
+Der Fehler ergibt sich aus \kor{den Fehlern der gemessenen Spannungen und} dem geschätzten Fehler des Vorwiderstandes von \SI{2}{\percent}.
 
-Aus dem Vergleich des experimentell bestimmten Wertes mit dem berechneten sehen wir im Rahmen der Fehler eine sehr gute Übereinstimmung. Für nachfolgende Messungen verwenden wir somit den aus unserer Messung erhaltenen Eichfaktor.
+Aus dem Vergleich des experimentell bestimmten Wertes mit dem berechneten sehen wir im Rahmen der Fehler eine sehr gute Übereinstimmung. Für nachfolgende Messungen verwenden wir somit den aus unserer Messung erhaltenen Eichfaktor~\eqref{eq.eichfaktor}.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -297,7 +304,7 @@ Zweimal pro Periode des Wobbelstromes tritt dabei der Resonanzfall im äußeren 
 		\label{wobbel}
 	\end{center}
 \end{figure}
-Damit wird deutlich, dass die Resonanzfrequenz und der zeitliche Abstand $t_{12}$ zwischen zwei Resonanzfällen einen Cosinus-Zusammenhang besitzen. \textcolor{green}{Die Periodendauer entspricht dabei der doppelten Periodendauer des Wobbelfeldes.}
+Damit wird deutlich, dass die Resonanzfrequenz und der zeitliche Abstand $t_{12}$ zwischen zwei Resonanzfällen einen Cosinus-Zusammenhang besitzen. \kor{Die Periodendauer entspricht dabei der doppelten Periodendauer des Wobbelfeldes.}
 Wir beobachten, 
 Wie in \cref{t12} messen wir für zehn verschiedene Analysatorfrequenzen den zeitlichen Abstand zweier der Resonanzen aus.
 \begin{figure}[t!]
@@ -318,7 +325,7 @@ Der Fehler der Resonanzfrequenz ergibt sich auch der Unsicherheit der Zeitdiffer
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Resonanzfrequenz.pdf}
-		\caption{Abgelesene Zeitdifferenzen sind in Abhängigkeit der Frequenz aufgetragen und besitzen eine Cosinus-Abhängigkeit \textcolor{green}{mit einer Periodendauer von $\SI{0.04}{\second}$}.}
+		\caption{Abgelesene Zeitdifferenzen sind in Abhängigkeit der Frequenz aufgetragen und besitzen eine Cosinus-Abhängigkeit \kor{mit einer Periodendauer von $\SI{0.04}{\second}$}.}
 		\label{resonanzfrequenz}
 	\end{center}
 \end{figure}
@@ -492,7 +499,7 @@ Obwohl die Theorie nicht alle Einzelheiten des Experimentes berücksichtigt, hil
 
 Wir bestimmen Betrag und Winkel des Störfeldes sowie das Magneton des Protons. Dazu verwenden wir das Helmholtzspulenpaar, das die Einstrahlspule umgibt. Der Strom in der Helmholtzspule regeln wir über die Spannung an der Stromquelle und lesen die Stromstärke über ein Präzisionsmultimeter aus. Durch einen Serienwiderstand an der Helholtzspule wird der Strom stabilisiert. Wir messen bei den Helmholtzspulenströmen von $I_{\rm HH} = \SI{45}{\milli\ampere}$, \SI{65}{\milli\ampere} und \SI{80}{\milli\ampere} wie im vorherigen Versuchsteil die Resonanzkurven durch einen Frequenz-Sweep am Funktionsgenerator. 
 
-Das Feld im Zentrum der beiden Spulen kann mit der Näherung aus~\citet{anleitung} bestimmt werden.
+Das Feld im Zentrum der beiden Spulen kann mit der Näherung aus~\kor{Praktikumsanleitung  \citep{anleitung}} bestimmt werden.
 \begin{equation}
 	B_{\rm HH} \approx \frac{\mu_0 n I_{\rm HH}}{R} \left[ \frac{8}{5\sqrt{5}} \left( 1 - \frac{\zeta^2}{60R^2} \right) - \frac{31\zeta^2 - 36\eta^2}{125 R^4}r^2\right]
 \end{equation}
@@ -507,7 +514,7 @@ Die Bestimmung von Betrag und Winkel des Störfeldes erhalten wird dadurch, dass
 \begin{equation}
 	\vec{B}_{\rm eff} = \vec{B}_{\rm HH} + \vec{B}_{\rm S}
 \end{equation}
-Für die Resonanzfrequenzen im Magnetfeld gilt nach~\citet{anleitung}
+Für die Resonanzfrequenzen im Magnetfeld gilt nach~\kor{Praktikumsanleitung  \citep{anleitung}}
 \begin{equation}
 	\nu_{\rm res} = \frac{g\mu_{\rm K}}{h}B_{\rm eff}.
 \end{equation}
@@ -526,20 +533,20 @@ Wie im Teil~\ref{auswertung5} bestimmen wir aus den Messungen für steigende und
 		\hline
 		$I_{\rm HH}[\mathrm{mA}]$ & $\nu_{\rm res}[\mathrm{Hz}]$\\
 		\hline	
-		$+ 45.0 \pm 0.2$   & $ 6826.3 \pm 2.0$\\
-		$- 45.0 \pm 0.2$   & $ 5562.2 \pm 2.0$\\
-		$+ 65.0 \pm 0.2$   & $ 9480.2 \pm 2.0$\\
-		$- 65.0 \pm 0.2$   & $ 8207.7 \pm 2.0$\\
-		$+ 80.0 \pm 0.2$   & $11473.2 \pm 2.0$\\
-		$- 80.0 \pm 0.2$   & $10195.6 \pm 2.0$\\
+		$+ 45.0 \pm \kor{0.9}$   & $ 6826.3 \pm 2.0$\\
+		$- 45.0 \pm \kor{0.9}$   & $ 5562.2 \pm 2.0$\\
+		$+ 65.0 \pm \kor{1.3}$   & $ 9480.2 \pm 2.0$\\
+		$- 65.0 \pm \kor{1.3}$   & $ 8207.7 \pm 2.0$\\
+		$+ 80.0 \pm \kor{1.6}$   & $11473.2 \pm 2.0$\\
+		$- 80.0 \pm \kor{1.6}$   & $10195.6 \pm 2.0$\\
 		\hline
 	\end{tabular}	
 	\caption{Resonanzfrequenz in Abhängigkeit des Spulenstroms.}
 	\label{tab.helmholtzfrequenz}
 	\end{center}
 \end{table}
-??
-Der Ungenauigkeit in der Einstellung des Helmholtzspulenstroms betrug \SI{0.2}{\milli\ampere} ?? und ergibt den Fehler in $I_{\rm HH}$. Der Fehler der Resonanzfrequenz entspricht der Ablesegenauigkeit von \SI{1}{\hertz}.
+
+Der Ungenauigkeit in der Einstellung des Helmholtzspulenstroms betrug \SI{0.2}{\milli\ampere}. \kor{Dieser Fehler wird allerdings vom Fehler des Strommessgerätes von etwa \SI{2}{\percent} überlagert} und ergibt den Fehler in $I_{\rm HH}$. Der Fehler der Resonanzfrequenz entspricht der Ablesegenauigkeit von \SI{2}{\hertz}.
 Zur Auswertung sind in Abbildung~\ref{fig.stoerfeld} die Summe der Frequenzquadrate über das Quadrat des Spulenstroms nach Gleichung~\eqref{eq.stoerfeld} aufgetragen.
 
 \begin{figure}[htp]
@@ -550,21 +557,21 @@ Zur Auswertung sind in Abbildung~\ref{fig.stoerfeld} die Summe der Frequenzquadr
 	\end{center}
 \end{figure}
 
-Aus Abbildung~\ref{fig.stoerfeld} erhalten wird die Steigung der Ausgleichsgeraden $m_{\rm Sum} = \SI[per-mode=symbol]{36125(22)}{\hertz\squared\per\milli\ampere\squared} $ und den $y$-Achsenabschnitt $y(0) = \SI{4458(80)e3}{\hertz\squared}$ mit den Fehlern aus den Geraden maximaler und minimaler Steigung. In der Abbildung sind zwar die Fehlergeraden kaum zu erkennen, sind aber für die Bestimmung der Fehler des Kernmagnetons und dem Störfeld entscheidend.
-Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton $\mu_{\rm K}$ und die Amplitude des Störfeldes $B_{\rm S}$ bestimmen. ??
-\begin{align}
-	\mu_{\rm K} &= \SI{5.098(51)e-27}{\tesla\per\ampere}\\
-	B_{\rm S} &=  \SI{34.74(36)}{\micro\tesla}
-\end{align}
+Aus Abbildung~\ref{fig.stoerfeld} erhalten wird die Steigung der Ausgleichsgeraden \kor{$m_{\rm Sum} = \SI[per-mode=symbol]{36.1(28)e3}{\hertz\squared\per\milli\ampere\squared} $} und den $y$-Achsenabschnitt \kor{$y(0) = \SI{45(27)e5}{\hertz\squared}$} mit den Fehlern aus den Geraden maximaler und minimaler Steigung. In der Abbildung sind zwar die Fehlergeraden kaum zu erkennen, sind aber für die Bestimmung der Fehler des Kernmagnetons und dem Störfeld entscheidend.
+Mit Hilfe von Gleichung~\eqref{eq.stoerfeld} können wir somit das Kernmagneton $\mu_{\rm K}$ und die Amplitude des Störfeldes $B_{\rm S}$ bestimmen.
+\kor{\begin{align}
+	\mu_{\rm K} &= \SI{5.10(20)e-27}{\tesla\per\ampere}\\
+	B_{\rm S} &=  \SI{34(11)}{\micro\tesla}
+\end{align}}
 
-Der Literaturwert für das Kernmagneton beträgt nach dem~\citet{codata} ??
+Der Literaturwert für das Kernmagneton beträgt nach dem~\kor{\citet{codata}}
 \begin{equation}
 	\mu_{\rm K,Lit} = \SI{5.05078e-27}{\tesla\per\ampere}.
 \end{equation}
 
-Der experimentell ermittelte Wert ist im Rahmen seiner Fehler mit dem Literaturwert vereinbar. Das Ergebnis für den Betrag des Störfeldes $B_{\rm S}$ liegt im Bereich der Stärke des Erdmagnetfeldes, was wir auch erwartet hatten. Den Wert des Störfeldes im Raum haben wir zudem in Versuchsteil~\ref{auswertung5} durch die Bestimmung der Resonanzfrequenz bestimmt. Die beiden erhaltenen Werte sind im Rahmen ihrer Fehler leider nicht mehr vereinbar. Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war. ??
+Der experimentell ermittelte Wert ist im Rahmen seiner Fehler mit dem Literaturwert vereinbar. Das Ergebnis für den Betrag des Störfeldes $B_{\rm S}$ liegt im Bereich der Stärke des Erdmagnetfeldes, was wir auch erwartet hatten. Den Wert des Störfeldes im Raum haben wir zudem in Versuchsteil~\ref{auswertung5} durch die Bestimmung der Resonanzfrequenz bestimmt. \kor{Der hier erhaltenen Fehler für das Störfeld ist aufgrund der ungenauen Strommessung sehr groß, sodass die beiden erhaltenen Werte im Rahmen ihrer Fehler gut miteinander vereinbar sind}. %Dies liegt an systematischen Fehlerquellen in der Messung. So ist es möglich, dass die Resonanzfrequenz nicht exakt eingestellt war oder der Spulenstrom in den beiden Messungen für positive und negative Richtung doch nicht exakt gleich war.
 
-Um nun noch den Winkel  des Störfeldes zu bestimmen, verwenden wir die Differenz der Frequenzquadrate nach~\citet{anleitung},
+Um nun noch den Winkel  des Störfeldes zu bestimmen, verwenden wir die Differenz der Frequenzquadrate nach~\kor{Praktikumsanleitung  \citep{anleitung}},
 \begin{equation}
 	\nu^2(+I_{\rm HH}) - \nu^2(-I_{\rm HH}) = 4\frac{g^2\mu_{\rm K}^2}{h^2} \left( c I_{\rm HH} B_{\rm S} \cos\phi \right)
 	\label{eq.stoerwinkel}
@@ -580,13 +587,13 @@ Die Auftragung der Differenz der Frequenzquadrate über den Helmholtzspulenstrom
 	\end{center}
 \end{figure}
 
-Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden $m_{\rm Diff} = \SI[per-mode=symbol]{3434(27)e2}{\hertz\squared\per\milli\ampere}$ mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
+Aus Abbildung~\ref{fig.stoerwinkel} erhalten wir für die Steigung der Ausgleichsgeraden \kor{$m_{\rm Diff} = \SI[per-mode=symbol]{344(25)e3}{\hertz\squared\per\milli\ampere}$} mit dem Fehler durch die Geraden minimaler und maximaler Steigung.
 Mit Gleichung~\eqref{eq.stoerwinkel} erhalten wir somit den Winkel des Störfeldes.
-\begin{equation}
-	\phi = \SI{64.67(32)}{\degree}
-\end{equation}
-?
-Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_{\rm Diff}$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel $\phi = \SI{64.67(32)}{\degree}$ relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
+\kor{\begin{equation}
+	\phi = \SI{64.7(85)}{\degree}
+\end{equation}}
+
+Der Fehler im Winkel $\phi$ folgt nach Gauß'scher Fehlerfortpflanzung aus den Fehlern für das Störfeld $B_\mathrm{S}$, der ermittelten Steigung $m_{\rm Diff}$ und dem Kernmagneton $\mu_{\rm K}$. Das Störfeld im unseren Experiment ist also mit einem Winkel \kor{$\phi = \SI{64.7(85)}{\degree}$} relativ zum Feld der Helmholtzspulen ausgerichtet. Wir vermuten, dass das Feld in Richtung Zimmerdecke (oder entgegengesetzt) zeigt. Dies liegt daran, dass wir den Polarisator als Hauptstörquelle ausmachen und dieser in dieser Richtung im Raum steht.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -622,8 +629,8 @@ Aus den Messungen für verschiedenen Pumpspannungen, also Wassergeschwindigkeite
 	\end{center}
 \end{figure}
 
-Da die Temperatur im Versuch nicht konstant gehalten konnte, haben wir bei jeder Messung die Temperatur mit einem batteriebetriebenen Thermometer gemessen und für die gemeinsame Auftragung bei verschieden Wassergeschwindigkeiten gemittelt. Die Fehler in Abbildung~\ref{fig.relaxation} resultieren bei der Zeitdifferenz aus einem Ablesefehler von \SI{0.05}{\second} und in der Signalhöhe aus einem Ablesefehler von \SI{0.02}{\volt} und der Ungenauigkeit in S/H-Signal von \SI{5}{\percent}.
-Die Messung ist zudem nur aussagekräftig, wenn Strömungen turbulent sind. Die minimale Fließgeschwindigkeit kann mit einer Reynoldszahl von 3000 bestimmt werden. Bei über $R = 3000$ spricht man von turbulenter und unter $R=2000$ von laminarer Strömung. Mit folgender Formel aus~\citet{anleitung}
+Da die Temperatur im Versuch nicht konstant gehalten konnte, haben wir bei jeder Messung die Temperatur mit einem batteriebetriebenen Thermometer gemessen und für die gemeinsame Auftragung bei verschieden Wassergeschwindigkeiten gemittelt. \kor{Der Fehler für den Temperaturwert bei etwa \SI{20}{\celsius} ist deutlich kleiner, da dies der Arbeitstemperatur entspricht, die während der Messreihe nahezu unverändert bleibt.} Die Fehler in Abbildung~\ref{fig.relaxation} resultieren bei der Zeitdifferenz aus einem Ablesefehler von \SI{0.05}{\second} und in der Signalhöhe aus einem Ablesefehler von \SI{0.02}{\volt} und der Ungenauigkeit in S/H-Signal von \SI{5}{\percent}.
+Die Messung ist zudem nur aussagekräftig, wenn Strömungen turbulent sind. Die minimale Fließgeschwindigkeit kann mit einer Reynoldszahl von 3000 bestimmt werden. Bei über $R = 3000$ spricht man von turbulenter und unter $R=2000$ von laminarer Strömung. Mit folgender Formel aus~\kor{Praktikumsanleitung  \citep{anleitung}}
 \begin{equation}
 	R=\frac{2\rho rv}{\eta}
 \end{equation}
@@ -662,21 +669,21 @@ Um eine zusätzliche Abschätzung zu bekommen, ab welcher Geschwindigkeit die St
 \end{equation}
 Hier wurde die Länge mit maximalen Fehler $L = (3.765-0.050)\SI{}{\meter}$ verwendet um einen sicheren Wert für $t_{\rm max}$ zu erhalten, der folglich fehlerfrei ist. Folglich können wir nur die Messwerte verwenden, für die $t_v<t_{\rm max}$ gilt. Diese Bedingung wurde bei den Fitkurven in Abbildung~\ref{fig.relaxation} und der Auswertung berücksichtigt.
 
-An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen gefittet und mit $\mathrm{d}M_{z}(t) = -1/T_1 M_{z}(t)\mathrm{d}t$ nach~\citet{anleitung} die Relaxationszeit $T_1$ bestimmt. Die erhaltenen Werte sind in Tabelle~\ref{tab.relaxationszeiten} aufgetragen.
+An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen gefittet und mit $\mathrm{d}M_{z}(t) = -1/T_1 M_{z}(t)\mathrm{d}t$ nach~\kor{Praktikumsanleitung  \citep{anleitung}} die Relaxationszeit $T_1$ bestimmt. Die erhaltenen Werte sind in Tabelle~\ref{tab.relaxationszeiten} aufgetragen.
 
 \begin{table}
 	\begin{center}
-	\begin{tabular}{cc}
+\kor{\begin{tabular}{cc}
 		\hline
 		$T[\textdegree\mathrm{C}]$ & $T_1[1/\mathrm{s}]$\\
 		\hline
-		\SI{13.86(94)}{\celsius} & $3.6 \pm 1.7$\\ %3.647301884	1.701329412
-		\SI{34.00(10)}{\celsius} & $4.6 \pm 1.5$\\ %4.606282289	1.51535674
-		\SI{42.52(69)}{\celsius} & $5.5 \pm 1.9$\\ %5.487573373	1.937461341
-		\SI{63.0(22)}{\celsius}  & $9.8 \pm 6.1$\\ %9.814701108	6.141836515
+		\SI{14(1)}{\celsius} & $3.6^{+1.5}_{-1.9}$\\ %3.647301884	1.701329412
+		\SI{34.0(2)}{\celsius} & $4.6^{+1.6}_{-1.5}$\\ %4.606282289	1.51535674
+		\SI{42.5(7)}{\celsius} & $5.5^{+1.9}_{-1.9}$\\ %5.487573373	1.937461341
+		\SI{63(2)}{\celsius}  & $9.8^{+6.1}_{-6.1}$\\ %9.814701108	6.141836515
 		\hline
-	\end{tabular}
-	\caption{Relaxationszeiten für verschiedenen Temperaturen ?? ??}
+	\end{tabular}}
+	\caption{Relaxationszeiten für verschiedenen Temperaturen.}
 	\label{tab.relaxationszeiten}
 	\end{center}
 \end{table}
@@ -706,7 +713,7 @@ Durch Einsetzten von Gleichung~\eqref{eq.tv} in Gleichung~\eqref{eq.kontinuitaet
 \begin{equation}
 	v_2 = \SI{3.10(24)}{\meter\per\second}. %\frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right)
 \end{equation}
-In Versuchsteil~\ref{auswertung5} konnten ?? wir die Wassergeschwindigkeit auf etwa \SI{3}{\second} abgeschätzen, was unser Ergebnis bestätigt. Das hier erhaltenen Ergebnis wird für die Berechnungen in Versuchsteil~\ref{auswertung5} verwendet.
+In Versuchsteil~\ref{auswertung5} konnten \note{} wir die Wassergeschwindigkeit auf etwa \SI{3}{\second} abgeschätzen, was unser Ergebnis bestätigt. Das hier erhaltenen Ergebnis wird für die Berechnungen in Versuchsteil~\ref{auswertung5} verwendet.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -723,9 +730,9 @@ Das Aufnehmen von Amplituden- und Frequenz-Sweeps in der Nähe der Resonanzfrequ
 Die Form des Messsignals im Phasenraum entsprach dabei nur bedingt unseren theoretischen Erwartungen. 
 Die Drehwinkel der Magnetisierung im Manipulator wurden den Einstrahlamplitude eindeutig zugeordnet~\eqref{auswertung5}.
 
- Mit Hilfe eines Helmholtzspulenpaares konnten wir verschieden starke statische Magnetfelder bereitstellen. Aus der Untersuchung der entsprechenden Resonanzfrequenzen konnten wir das im Raum vorhandenen Störfeld $\vec{B}_{\rm S}$ berechnen. Die Stärke des Störfeldes betrug $B_{\rm S} = \SI{34.74(31)}{\micro\tesla}$ und hatte einen Winkel von $\phi = \SI{64.67(36)}{\degree}$~\eqref{auswertung6} zum Helmholtzspulenfeld. 
-Der Betrag des Störfeldes stimmt dabei gut mit der bestimmten Resonanzfrequenz aus den Frequenz-Sweeps überein~\eqref{auswertung5}. Den Wert für das Kernmagneton konnten wir mit $\mu_{\rm K} = \SI[separate-uncertainty=false, per-mode=symbol]{5.098(51)e-27}{\tesla\per\ampere}$ in Übereinstimmung mit dem Literaturwert bestimmen~\eqref{auswertung6}.
-Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit bei maximaler Pumpenleistung auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ in der Manipulatorspule bestimmen. Daraus errechneten wir die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur zu $\SI{3.6(17)}{1\per\second}$ ~\eqref{auswertung7}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung und deren Manipulation  untersuchen und die vorhergesagt Dynamik zu großen Teilen bestätigen. 
+ Mit Hilfe eines Helmholtzspulenpaares konnten wir verschieden starke statische Magnetfelder bereitstellen. Aus der Untersuchung der entsprechenden Resonanzfrequenzen konnten wir das im Raum vorhandenen Störfeld $\vec{B}_{\rm S}$ berechnen. Die Stärke des Störfeldes betrug $B_{\rm S} = \SI{34(11)}{\micro\tesla}$ und hatte einen Winkel von $\phi = \SI{64.7(85)}{\degree}$~\eqref{auswertung6} zum Helmholtzspulenfeld. 
+Der Betrag des Störfeldes stimmt dabei gut mit der bestimmten Resonanzfrequenz aus den Frequenz-Sweeps überein~\eqref{auswertung5}. Den Wert für das Kernmagneton konnten wir mit $\mu_{\rm K} = \SI[separate-uncertainty=false, per-mode=symbol]{5.10(20)e-27}{\tesla\per\ampere}$ in Übereinstimmung mit dem Literaturwert bestimmen~\eqref{auswertung6}.
+Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit bei maximaler Pumpenleistung auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ in der Manipulatorspule bestimmen. Daraus errechneten wir die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur zu $4.6^{+1.6}_{-1.5}\,\SI{}{1\per\second}$ ~\eqref{auswertung7}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung und deren Manipulation  untersuchen und die vorhergesagt Dynamik zu großen Teilen bestätigen. 
 
 \small
 \bibliographystyle{dinat}

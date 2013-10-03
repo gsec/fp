@@ -24,8 +24,8 @@ B = data[:8500,0]
 
 R_H = data[:8500,1]
 
-delta = 50
-step = 100
+delta = 20
+step = 10
 
 Mittelwertkandidaten=range(0,16000,step)
 counts = zeros(len(Mittelwertkandidaten))
@@ -69,7 +69,7 @@ print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mi
 
 ax = fig.add_subplot(111)
 subplots_adjust(top=0.87, right=0.96)
-ax.plot(B*100, R_H, "b", label=u"Messwerte $R_\mathrm{H}$")
+ax.plot(B*100, R_H, "b:", label=u"Messwerte $R_\mathrm{H}$")
 ax.plot([0,0],[0,0], "r", label=u"Anzahl von Messpunkten")
 ax.plot([0,0],[0,0], "g--", label=u"Niveau der Hall-Plateaus")
 
