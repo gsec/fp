@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 from pylab import *
 from matplotlib.ticker import AutoMinorLocator, AutoLocator
 
+rc('font', family = 'serif', serif = 'STIXGeneral')
 txt_filename_to_open=[]
 line=[]
 colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
@@ -57,7 +58,7 @@ plt.plot([0, 1.6*2.5], [0, 2800*2.5], 'b-', lw=2, label="Fit")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5+200], 'b--', lw=1, label="Fehlergeraden")
 plt.plot([0, 1.6*2.5], [0, 2800*2.5-200], 'b--', lw=1)
 plt.legend(loc=0)	
-plt.savefig("02-Hallsteigung.pdf")
+#plt.savefig("02-Hallsteigung.pdf")
 show()
 
 

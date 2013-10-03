@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{4}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -7,33 +7,38 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
 
-\bibitem[Kittel(1996)]{kittel}
-\dinatlabel{Kittel 1996} \textsc{Kittel}, Charles:
-\newblock \emph{{Introduction to Solid State Physics}}.
-\newblock 7th.
-\newblock New York~: John Wiley \& Sons, Inc., 1996
+\bibitem[Ando(1974)]{ando}
+\dinatlabel{Ando 1974} \textsc{Ando}, T.:
+\newblock Theory of quantum transport in a two-dimensional electron system
+  under magnetic fields. IV. Oscillatory conductivity.
+\newblock In: \emph{J. Phys. Soc. Japan}
+\newblock 37 (1974), Nr.~1233
 
-\bibitem[Melissinos(1966)]{mellissinos}
-\dinatlabel{Melissinos 1966} \textsc{Melissinos}, Adrian~C.:
-\newblock \emph{Experiments in Modern Physics}.
-\newblock New York and London~: Academic Press, 1966. --
-\newblock {\small insbesondere Abschnitt 3.3 aus dem Buch}
+\bibitem[Batke(2010)]{anleitung}
+\dinatlabel{Batke 2010} \textsc{Batke}, Edwin:
+\newblock \emph{Anleitung - Quanten-Hall-Effekt}.
+\newblock Physikalisches Institut der Universit"at W"urzburg.
+\newblock Juli 2010. --
+\newblock URL
+  \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Aufgabenstellung_QHE.pdf}.
+  --
+\newblock Physikalisches Fortgeschrittenen Praktikum
 
-\bibitem[Singh(2001)]{singh}
-\dinatlabel{Singh 2001} \textsc{Singh}, Jasprit:
-\newblock \emph{Semiconductor Devices: Basic Principles}.
-\newblock New York~: John Wiley \& Sons, 2001
+\bibitem[Janssen(2011)]{janssen}
+\dinatlabel{Janssen 2011} \textsc{Janssen}, N. E.; Goebel R.; Williams J. M.;
+  Tzalenchuk A.; Yakimova R. et~a.:
+\newblock Graphene, universality of the quantum Hall effect and redefinition of
+  the SI system.
+\newblock In: \emph{New J. Phys. 13 (9), S. 93026.}
+\newblock 37 (2011), Nr.~1233. --
+\newblock DOI: 10.1088/1367-2630/13/9/093026
 
-\bibitem[Sze()]{sze}
-\dinatlabel{Sze } \textsc{Sze}, S.~M.:
-\newblock \emph{Physics of Semiconductor Devices}.
-\newblock Second Edition.
-\newblock John Wiley \& Sons
-
-\bibitem[Wikipedia(2007)]{tellur}
-\dinatlabel{Wikipedia 2007} \textsc{Wikipedia}:
-\newblock \emph{Tellur}.
-\newblock April 2007. --
-\newblock URL \url{http://de.wikipedia.org/wiki/Tellur}
+\bibitem[{Universität des Saarlandes}(2013)]{saarland}
+\dinatlabel{{Universität des Saarlandes} 2013} \textsc{{Universität des
+  Saarlandes}}:
+\newblock \emph{Materialkonstanten}.
+\newblock September 2013. --
+\newblock URL
+  \url{http://www.uni-saarland.de/fileadmin/user_upload/Professoren/fr74_ProfMoeller/Vorlesung/V_Erster_Studienabschnitt_Bachelor/V_B_Aktuelle_Semester/V_B_WS09_10/fermidirac.htm}
 
 \end{thebibliography}

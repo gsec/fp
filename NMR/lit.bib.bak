@@ -8,22 +8,37 @@
 	note = {Physikalisches Fortgeschrittenen Praktikum},
 }
 
-
+@misc{codata,
+	author = {{Committee on Data for Science and Technology}},
+	title = {CODATA - International Council for Science},
+	year = {2013},
+	month = {Oktober},
+	url={http://www.codata.org/}
+	}
 
 @phdthesis{mueller,
 	author = {Herbert M"uller},
 	title = {Magnetische Kernresonanz},
 	month = {Februar},
 	year = {1990},
-	school = {Physikalisches Institut der Universit"at W"uerzburg},
+	school = {Physikalisches Institut der Universit"at W"urzburg},
 	url = {http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Staatsexamensarbeit_Mueller_NMR.pdf}
 }
 
-%@book{mellissinos,
-%author = {Adrian C. Melissinos},
-%title = {Experiments in Modern Physics},
-%year = 1966,
-%address = {New York and London},
-%publisher = {Academic Press},
-%note = "{\small insbesondere Abschnitt 3.3 aus dem Buch}"
-%}
+@misc{rabi,
+	author = {{The Nobel Foundation}},
+	title = {Isodor Isaac Rabi - Biographical},
+	year = {2013},
+	url = {http://www.nobelprize.org/nobel_prizes/physics/laureates/1944/rabi-bio.html},
+}
+
+@article{nmr,
+	author = {Ioannis Koktzoglou},
+	title = {4D Dark Blood Arterial Wall Magnetic Resonance Imaging: Methodology and Demonstration in the Carotid Arteries},
+	year = {2013},
+	month = {April},
+	journal = {Magnetic Resonance in Medicine},
+	volume= {69},
+	number = {4},
+	pages = {956--965}
+}

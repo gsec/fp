@@ -1,0 +1,13 @@
+# -*- coding: utf-8 -*-
+
+
+from scipy import *
+from scipy import optimize
+from matplotlib import rc
+from numpy import *
+import matplotlib.pyplot as plt
+
+# from fitting import *
+from pylab import *
+
+

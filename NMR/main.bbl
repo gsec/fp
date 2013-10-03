@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -7,8 +7,19 @@
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax\def\url#1{\texttt{#1}}\fi
 
-\bibitem[mellissinos()]{mellissinos}
-\dinatlabel{mellissinos }
+\bibitem[{Committee on Data for Science and Technology}(2013)]{codata}
+\dinatlabel{{Committee on Data for Science and Technology} 2013}
+  \textsc{{Committee on Data for Science and Technology}}:
+\newblock \emph{CODATA - International Council for Science}.
+\newblock Oktober 2013. --
+\newblock URL \url{http://www.codata.org/}
+
+\bibitem[Koktzoglou(2013)]{nmr}
+\dinatlabel{Koktzoglou 2013} \textsc{Koktzoglou}, Ioannis:
+\newblock 4D Dark Blood Arterial Wall Magnetic Resonance Imaging: Methodology
+  and Demonstration in the Carotid Arteries.
+\newblock In: \emph{Magnetic Resonance in Medicine}
+\newblock 69 (2013), April, Nr.~4, S.~956--965
 
 \bibitem[M"uller(1990)]{mueller}
 \dinatlabel{M"uller 1990} \textsc{M"uller}, Herbert:
@@ -26,5 +37,12 @@
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/NMR_Anleitung_Jul2009.pdf}.
   --
 \newblock Physikalisches Fortgeschrittenen Praktikum
+
+\bibitem[{The Nobel Foundation}(2013)]{rabi}
+\dinatlabel{{The Nobel Foundation} 2013} \textsc{{The Nobel Foundation}}:
+\newblock \emph{Isodor Isaac Rabi - Biographical}.
+\newblock 2013. --
+\newblock URL
+  \url{http://www.nobelprize.org/nobel_prizes/physics/laureates/1944/rabi-bio.html}
 
 \end{thebibliography}
