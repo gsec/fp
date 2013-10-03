@@ -71,7 +71,11 @@
 \usepackage[numbers]{natbib}
 \usepackage{paralist}
 \usepackage{upgreek}
-\newcommand{\kor}[1]{{\color{green}#1}}
+\definecolor{darkblue}{rgb}{0,0,.4}
+\definecolor{darkred}{rgb}{.5,0,0}
+\definecolor{darkgreen}{rgb}{0,.5,0}
+
+\newcommand{\kor}[1]{{\color{darkgreen}#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -239,28 +243,30 @@ Die beschriebene Verschiebung in der Magnetfeldstärke war gering und betrug $\S
 Für die Auswertung der Hall-Plateaus wurde für jede gemessenen Temperatur ein eigenes Diagramm erstellt. In Abbildung~\ref{hallplateau} ist die Auswertung für die Messung bei $T=\SI{1.5}{\kelvin}$ gezeigt. Die Diagramme für die Temperaturen $T = \SI{4.2}{\kelvin}$, \SI{3.0}{\kelvin} und \SI{2.1}{\kelvin} sind im Anhang~\ref{Anhang} in Abbildung~\ref{hallplateau42}, \ref{hallplateau30} und~\ref{hallplateau21} gezeigt.
 
 In der blauen Kurve aus Abbildung~\ref{hallplateau} wurde der Verlauf des Hall-Widerstandes $R_{\rm H}$ aus den hysterese-bereinigten Daten über dem Magnetfeld $B$ aufgetragen.
-Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von $\pm \SI{50}{\ohm}$ um einen Mittelwert in dem wir die Anzahl an Messpunkten zählen und den Mittelwert über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} variieren. Aus der Anzahl der Messpunkte in diesem Bereich ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}. %, die ebenfalls über das Magnetfeld aufgetragen wird. nop.
-Durch dieses Zählverfahren ergeben sich an den Stellen der Plateaus klar erkennbare Peaks, an dessen Maximum der Wert des Hall-Plateaus ausgelesen werden kann. Mit dieser Methode und der verwendeten Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit von \SI{10}{\ohm}. Die Messfehler der Lock-in-Verstärker ($<0.1\%$) wurden im Vergleich zu der Ablesegenauigkeit im Graphen vernachlässigt. 
+Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von \kor{$\pm \SI{20}{\ohm}$} um einen \kor{Wert} in dem wir die Anzahl an Messpunkten zählen und den \kor{Wert} über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} variieren. Aus der Anzahl der Messpunkte in diesem Bereich ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}. %, die ebenfalls über das Magnetfeld aufgetragen wird. nop.
+\kor{Im zweiten Plateau ist zu erkennen, dass kein richtiges Plateau ausgebildet ist, sondern der Widerstandsverlauf abnimmt und dann wieder zunimmt \note{Warum}. Aus diesem Grund ergibt sich durch unsere Auswertemethode je ein Peak für die beiden Maxima im Plateau. Um den Wert des Plateaus zu ermitteln haben wir die Mitte der beiden Maxima verwendet, da wir hier das Plateau erwarten.}
+
+Durch dieses Zählverfahren ergeben sich an den Stellen der Plateaus klar erkennbare Peaks, an deren Maxima der Wert des Hall-Plateaus ausgelesen werden kann. Mit dieser Methode und der verwendeten Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit von \SI{20}{\ohm} die aus dem jeweils ausgelesenen Bereich für jeden Wert resultiert. \kor{Der aus oben beschriebenen Rauschen resultierende Messfehler der Lock-in-Verstärker von \SI{0.1}{\percent} wurden im Vergleich zu der Ablesegenauigkeit im Graphen vernachlässigt. }
 
 Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir zusammen mit den Füllfaktoren für jede Temperatur in Tabelle~\ref{klitzing} aufgetragen.
 
 \begin{table}[htp]
 	\begin{center}
-	\begin{tabular}{r|rrrr}
+\kor{\begin{tabular}{r|rrrr}
 		$\nu$\textbackslash$T$ & \SI{4.2}{\kelvin} & \SI{3.0}{\kelvin} & \SI{2.1}{\kelvin} & \SI{1.5}{\kelvin} \\
 		\hline
-		2  & \SI{12430}{\ohm} & \SI{12420}{\ohm} & \SI{12420}{\ohm} & \SI{12430}{\ohm}\\
-		3  &      \--- &  \SI{8970}{\ohm} &  \SI{8690}{\ohm} &  \SI{8390}{\ohm}\\
-		4  &  \SI{6220}{\ohm} &  \SI{6200}{\ohm} &  \SI{6210}{\ohm} &  \SI{6220}{\ohm}\\
-		5  &      \--- &      \--- &  \SI{5330}{\ohm} &  \SI{5280}{\ohm}\\
-		6  &  \SI{4150}{\ohm} &  \SI{4130}{\ohm} &  \SI{4140}{\ohm} &  \SI{4140}{\ohm}\\
-		8  &  \SI{3120}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm} &  \SI{3100}{\ohm}\\
-		10 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2480}{\ohm}\\
-		12 &  \SI{2070}{\ohm} &  \SI{2080}{\ohm} &  \SI{2060}{\ohm} &  \SI{2060}{\ohm}\\
-		14 &  \SI{1760}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm} &  \SI{1780}{\ohm}\\
+		2  & \SI{12460}{\ohm} & \SI{12440}{\ohm} & \SI{12450}{\ohm} & \SI{12450}{\ohm}\\
+		3  &      \--- &  \SI{8950}{\ohm} &  \SI{8430}{\ohm} &  \SI{8430}{\ohm}\\
+		4  &  \SI{6240}{\ohm} &  \SI{6220}{\ohm} &  \SI{6230}{\ohm} &  \SI{6230}{\ohm}\\
+		5  &      \--- &      \--- &  \SI{5290}{\ohm} &  \SI{5290}{\ohm}\\
+		6  &  \SI{4170}{\ohm} &  \SI{4150}{\ohm} &  \SI{4160}{\ohm} &  \SI{4160}{\ohm}\\
+		8  &  \SI{3120}{\ohm} &  \SI{3120}{\ohm} &  \SI{3120}{\ohm} &  \SI{3120}{\ohm}\\
+		10 &  \SI{2490}{\ohm} &  \SI{2480}{\ohm} &  \SI{2490}{\ohm} &  \SI{2490}{\ohm}\\
+		12 &  \SI{2060}{\ohm} &  \SI{2060}{\ohm} &  \SI{2070}{\ohm} &  \SI{2070}{\ohm}\\
+		14 &  \SI{1760}{\ohm} &  \SI{1750}{\ohm} &  \SI{1770}{\ohm} &  \SI{1770}{\ohm}\\
 		\hline
-	\end{tabular}
-	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten.}
+	\end{tabular}}
+	\caption{Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit einem Fehler von \SI{20}{\ohm}.}
 	\label{klitzing}	
 	\end{center}
 \end{table}
@@ -275,15 +281,15 @@ Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet.
 
 \begin{table}[htp]
 \begin{center}
-	\begin{tabular}{rr}
+	\kor{\begin{tabular}{rr}
 		\hline
 		$T\,[\mathrm{K}]$ & $\overline{R_{\rm K}\nu}\,[\mathrm{k}\Upomega]$\\
 		\hline
 		4.2 & \SI{24.8(12)}{\kilo\ohm} \\
-		3.0 & \SI{25.2(13)}{\kilo\ohm} \\
-		2.1 & \SI{25.2(13)}{\kilo\ohm} \\
-		1.5 & \SI{25.0(13)}{\kilo\ohm}
-	\end{tabular}
+		3.0 & \SI{25.0(13)}{\kilo\ohm} \\
+		2.1 & \SI{25.1(13)}{\kilo\ohm} \\
+		1.5 & \SI{25.1(13)}{\kilo\ohm}
+	\end{tabular}}
 	\caption{Aus Tabelle~\ref{klitzing} berechnete gemittelte Werte für $R_{\rm K}\nu$ mit Fehler.}
 	\label{klitzing2}
 \end{center}
@@ -295,9 +301,9 @@ Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet.
 %Beim Vergleich der Werte untereinander lässt sich feststellen, dass die Werte bis auf den Wert bei der Temperatur von \SI{4.2}{\kelvin} exakt übereinstimmen. Der Wert für \SI{4.2}{\kelvin} besitzt eine Abweichung von \SI{20}{\ohm} was allerdings mit den vorhandenen Fehlern vereinbar ist. [hat irgendwie keine Aussage]
 
 Aus diesen Werten können wir nun die Klitzing-Konstante bestimmen zu
-\begin{equation}
-	R_{\rm K} = \SI{25.1(13)}{\kilo\ohm}.
-\end{equation}
+\kor{\begin{equation}
+	R_{\rm K} = \SI{25.0(13)}{\kilo\ohm}.
+\end{equation}}
 Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ zeigt sich eine große Abweichung, die jedoch im Rahmen des (großen) Fehler vereinbar ist. Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen, der eventuell in einem falsch angegebenen Widerstand zu suchen ist. Der Vorwiderstand ist demnach nach unseren erhaltenen Wert circa \SI{18}{\ohm} größer als angegebenen. Diese Abweichung wäre völlig im Rahmen der Fehlertoleranz des Widerstandes ($<\SI{1}{\percent}$).
 
 
