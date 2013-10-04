@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  19 SEP 2013 23:50
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  3 OCT 2013 16:45
 entering extended mode
 **main.tex
 (C:\Users\Daniel\fp\QHE\main.tex
@@ -1354,23 +1354,23 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 (Font)                  U/eur/m/n --> U/eur/b/n on input line 38.
 )
 (C:\Users\Daniel\fp\QHE\main.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption3 Info: subfig package 1.2 or 1.3 is loaded.
-LaTeX Info: Redefining \subref on input line 78.
+LaTeX Info: Redefining \subref on input line 82.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package lastpage Info: Please have a look at the pagesLTS package at
@@ -1379,7 +1379,7 @@ Package lastpage Info: Please have a look at the pagesLTS package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pagesLTS.tds.zip
-(lastpage)             ! on input line 78.
+(lastpage)             ! on input line 82.
 
 (C:\Users\Daniel\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1395,7 +1395,7 @@ Package lastpage Info: Please have a look at the pagesLTS package at
 \everyMPtoPDFconversion=\toks69
 )
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring ON on input line 78.
+Package hyperref Info: Link coloring ON on input line 82.
  ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\oberdiek\refcount.sty"
@@ -1407,9 +1407,9 @@ Package: gettitlestring 2009/12/18 v1.3 Cleanup title references (HO)
 )
 \c@section@level=\count319
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
  (C:\Users\Daniel\fp\QHE\main.out) (C:\Users\Daniel\fp\QHE\main.out)
 \@outlinefile=\write5
 
@@ -1494,20 +1494,20 @@ cts\translator-basic-dictionary\translator-basic-dictionary-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
 \c_siunitx_mathsf_int=\count320
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+LaTeX Font Info:    Try loading font information for U+msa on input line 82.
 
 ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 82.
 
 ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 \c_siunitx_mathtt_int=\count321
 
-Underfull \hbox (badness 1199) in paragraph at lines 134--138
-\OT1/cmr/m/n/10 so schei-nen die beim La-dungs-trans-port be-tei-lig-ten
+Underfull \hbox (badness 1048) in paragraph at lines 138--142
+\OT1/cmr/m/n/10 Hall-Effekts [][]2.1[][] mit dem des Quanten-Hall-Effekts
  []
 
 
@@ -1519,33 +1519,33 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 3724) in paragraph at lines 145--147
+Underfull \hbox (badness 3724) in paragraph at lines 149--151
 \OT1/cmr/m/n/10 mit der Zy-klo-tron-fre-quenz $\OML/cmm/m/it/10 ![]$ \OT1/cmr/m
 /n/10 und der Landau-
  []
 
 
-Underfull \hbox (badness 3148) in paragraph at lines 150--154
+Underfull \hbox (badness 3148) in paragraph at lines 154--158
 \OT1/cmr/m/n/10 ein an-de-rer be-mer-kens-wer-ter Ef-fekt auf, der als
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 157--160
+Underfull \hbox (badness 1953) in paragraph at lines 161--164
 \OT1/cmr/m/n/10 Ent-ar-tungs-grad der Land-au-ni-ve-aus ent-spricht. Bei
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 157--160
+Underfull \hbox (badness 2205) in paragraph at lines 161--164
 \OT1/cmr/m/n/10 man misst den be-schrie-be-nen Shubnikow-de-Haas-
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 157--160
+Underfull \hbox (badness 1931) in paragraph at lines 161--164
 \OT1/cmr/m/n/10 Land-au-ni-ve-aus un-ter-halb der Fer-mi-ener-gie be-setzt
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--160
+Underfull \hbox (badness 10000) in paragraph at lines 161--164
 
  []
 
@@ -1557,149 +1557,137 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: Bilder/hallbar.pdf Graphic file (type pdf)
 
 <use Bilder/hallbar.pdf> [2 <C:/Users/Daniel/fp/QHE/Bilder/hallbar.pdf>]
-Underfull \hbox (badness 2042) in paragraph at lines 206--207
-[]\OT1/cmr/m/n/10 Durch Be-stim-mung der Hall-Plateaus k[]onnen wir
- []
-
-
-Underfull \hbox (badness 7362) in paragraph at lines 217--218
+Underfull \hbox (badness 7362) in paragraph at lines 222--223
 \OT1/cmr/m/n/10 Die ge-mes-se-nen Span-nun-gen []uber die Lock-In-
  []
 
-<Data-Plots/05-1,5-Hallplateaus.pdf, id=104, 505.89pt x 331.4784pt>
+<Data-Plots/05-1,5-Hallplateaus.pdf, id=104, 505.89pt x 361.35pt>
 File: Data-Plots/05-1,5-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/05-1,5-Hallplateaus.pdf> [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 249.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 268.
 
 
 ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 249.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
 
-Underfull \hbox (badness 1292) in paragraph at lines 296--297
+Underfull \hbox (badness 1292) in paragraph at lines 303--306
 []\OT1/cmr/m/n/10 Aus die-sen Wer-ten k[]onnen wir nun die Klitzing-
  []
 
-
-Underfull \hbox (badness 1418) in paragraph at lines 299--301
-\OT1/cmr/m/n/10 Der Ver-gleich mit dem Li-te-ra-tur-wert von $\OML/cmm/m/it/10 
-R[] \OT1/cmr/m/n/10 =$
- []
-
-<Data-Plots/02-Hallsteigung.pdf, id=122, 578.16pt x 433.62pt>
+<Data-Plots/02-Hallsteigung.pdf, id=126, 578.16pt x 433.62pt>
 File: Data-Plots/02-Hallsteigung.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-Hallsteigung.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3068) has occurred while \output is active []
 
  [4 <C:/Users/Daniel/fp/QHE/Data-Plots/05-1,5-Hallplateaus.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 329--379
+Underfull \hbox (badness 10000) in paragraph at lines 337--387
 
  []
 
-[5 <C:/Users/Daniel/fp/QHE/Data-Plots/02-Hallsteigung.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 392.
+               Default added (so using `tbp') on input line 400.
 
-<Data-Plots/06-Fourietransformation.pdf, id=280, 578.16pt x 433.62pt>
+<Data-Plots/06-Fourietransformation.pdf, id=236, 578.16pt x 433.62pt>
 File: Data-Plots/06-Fourietransformation.pdf Graphic file (type pdf)
 
 <use Data-Plots/06-Fourietransformation.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 395--395
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 []\OT1/cmr/bx/n/9 Abb. 4: |\OT1/cmr/m/n/9 Disktre-te Fou-rie-trans-for-ma-ti-on
  des
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 395--395
+Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \OT1/cmr/m/n/9 L[]angsiwderstandes auf-ge-tra-gen []uber die Pe-ri-
  []
 
-
-Overfull \hbox (8.82712pt too wide) in paragraph at lines 413--425
+[5 <C:/Users/Daniel/fp/QHE/Data-Plots/02-Hallsteigung.pdf>]
+Overfull \hbox (8.82712pt too wide) in paragraph at lines 421--433
  [] 
  []
 
 [6 <C:/Users/Daniel/fp/QHE/Data-Plots/06-Fourietransformation.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 441.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 449.
 
 
 ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (3.37987pt too wide) in paragraph at lines 450--460
+Overfull \hbox (3.37987pt too wide) in paragraph at lines 458--468
  [] 
  []
 
-
-Underfull \vbox (badness 2277) has occurred while \output is active []
-
-
-<Data-Plots/11-4,2-2,1-zyklotron-B.pdf, id=350, 505.89pt x 331.4784pt>
+<Data-Plots/11-4,2-2,1-zyklotron-B.pdf, id=364, 505.89pt x 331.4784pt>
 File: Data-Plots/11-4,2-2,1-zyklotron-B.pdf Graphic file (type pdf)
 
 <use Data-Plots/11-4,2-2,1-zyklotron-B.pdf>
-<Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf, id=354, 505.89pt x 331.4784pt>
+<Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf, id=368, 505.89pt x 331.4784pt>
 File: Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf Graphic file (type pdf)
 
-<use Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf> [7 <C:/Users/Daniel/fp/QHE/Data-P
-lots/11-4,2-2,1-zyklotron-B.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 507--507
+<use Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 515--515
 []\OT1/cmr/bx/n/9 Tab. 6: |\OT1/cmr/m/n/9 Be-rech-nung des Zy-klo-tron-mas-sen-
 
  []
 
-
-Underfull \hbox (badness 1092) in paragraph at lines 537--538
+[7 <C:/Users/Daniel/fp/QHE/Data-Plots/11-4,2-2,1-zyklotron-B.pdf> <C:/Users/Dan
+iel/fp/QHE/Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>]
+Underfull \hbox (badness 1092) in paragraph at lines 546--547
 \OT1/cmr/m/n/10 F[]ur Elek-tro-nen, die sich im Festk[]orper auf-hal-ten,
  []
 
-[8 <C:/Users/Daniel/fp/QHE/Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 563--563
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--572
 []\OT1/cmr/bx/n/9 Tab. 7: |\OT1/cmr/m/n/9 Fermi-Energie /-Wellenvektor und -
  []
 
+[8]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 582.
+               Default added (so using `tbp') on input line 591.
 
-<Data-Plots/07-maxima_ablesen.pdf, id=548, 578.16pt x 433.62pt>
+<Data-Plots/07-maxima_ablesen.pdf, id=562, 578.16pt x 433.62pt>
 File: Data-Plots/07-maxima_ablesen.pdf Graphic file (type pdf)
 
 <use Data-Plots/07-maxima_ablesen.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 585--585
+Underfull \hbox (badness 10000) in paragraph at lines 594--594
 []\OT1/cmr/bx/n/9 Abb. 7: |\OT1/cmr/m/n/9 Ab-ge-le-se-ne Wer-te der ma-xi-ma-le
 n
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 585--585
+Underfull \hbox (badness 4634) in paragraph at lines 594--594
 \OT1/cmr/m/n/9 L[]angsspannung. Die Feh-ler wur-den an-hand der
  []
 
 
-Underfull \hbox (badness 2426) in paragraph at lines 590--591
+Underfull \hbox (badness 2426) in paragraph at lines 599--600
 \OT1/cmr/m/n/10 Energie in-ner-halb der spin-auf-ge-spal-te-nen Landau-
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 599.
+               Default added (so using `tbp') on input line 608.
 
-<Data-Plots/07-Spinaufspaltung.pdf, id=551, 578.16pt x 433.62pt>
+<Data-Plots/07-Spinaufspaltung.pdf, id=565, 578.16pt x 433.62pt>
 File: Data-Plots/07-Spinaufspaltung.pdf Graphic file (type pdf)
 
 <use Data-Plots/07-Spinaufspaltung.pdf>
-Underfull \hbox (badness 1859) in paragraph at lines 624--642
+Underfull \hbox (badness 1859) in paragraph at lines 633--651
 \OT1/cmr/m/n/10 Mit dem F-Praktikumsversuch zum Quanten-Hall-
  []
 
-[9 <C:/Users/Daniel/fp/QHE/Data-Plots/07-maxima_ablesen.pdf>]
-(C:\Users\Daniel\fp\QHE\main.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9 <C:/Users/Daniel/fp/QHE/Data-Plots/07-maxima_ablesen.pdf> <C:/Users/Daniel/
+fp/QHE/Data-Plots/07-Spinaufspaltung.pdf>] (C:\Users\Daniel\fp\QHE\main.bbl
 Underfull \hbox (badness 2302) in paragraph at lines 18--26
 []\OT1/cmr/m/sc/9 Batke\OT1/cmr/m/n/9 , Ed-win:  \OT1/cmr/m/it/9 An-lei-tung - 
 Quanten-Hall-Effekt\OT1/cmr/m/n/9 .
@@ -1738,51 +1726,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 $\OT1/cmtt/m/n/9 Erster _ Studienabschnitt _ Bachelor / V _ B _ Aktuelle _$
  []
 
-) <Data-Plots/02-4,2-Hallplateaus.pdf, id=620, 505.89pt x 331.4784pt>
+) <Data-Plots/02-4,2-Hallplateaus.pdf, id=674, 505.89pt x 361.35pt>
 File: Data-Plots/02-4,2-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-4,2-Hallplateaus.pdf>
-Overfull \hbox (10.0pt too wide) in paragraph at lines 689--690
+Overfull \hbox (10.0pt too wide) in paragraph at lines 698--699
  [] 
  []
 
-<Data-Plots/03-3,0-Hallplateaus.pdf, id=621, 505.89pt x 331.4784pt>
+<Data-Plots/03-3,0-Hallplateaus.pdf, id=675, 505.89pt x 361.35pt>
 File: Data-Plots/03-3,0-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/03-3,0-Hallplateaus.pdf>
-Overfull \hbox (10.0pt too wide) in paragraph at lines 696--697
+Overfull \hbox (10.0pt too wide) in paragraph at lines 705--706
  [] 
  []
 
-<Data-Plots/04-2,1-Hallplateaus.pdf, id=622, 505.89pt x 331.4784pt>
+<Data-Plots/04-2,1-Hallplateaus.pdf, id=676, 505.89pt x 361.35pt>
 File: Data-Plots/04-2,1-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/04-2,1-Hallplateaus.pdf>
-Overfull \hbox (10.0pt too wide) in paragraph at lines 703--704
+Overfull \hbox (10.0pt too wide) in paragraph at lines 712--713
  [] 
  []
 
 AED: lastpage setting LastPage 
-[10 <C:/Users/Daniel/fp/QHE/Data-Plots/07-Spinaufspaltung.pdf> <C:/Users/Daniel
-/fp/QHE/Data-Plots/02-4,2-Hallplateaus.pdf>] [11
+[10 <C:/Users/Daniel/fp/QHE/Data-Plots/02-4,2-Hallplateaus.pdf> <C:/Users/Danie
+l/fp/QHE/Data-Plots/03-3,0-Hallplateaus.pdf>] [11
 
- <C:/Users/Daniel/fp/QHE/Data-Plots/03-3,0-Hallplateaus.pdf> <C:/Users/Daniel/f
-p/QHE/Data-Plots/04-2,1-Hallplateaus.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 711.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 711.
+ <C:/Users/Daniel/fp/QHE/Data-Plots/04-2,1-Hallplateaus.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 720.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 720.
  (C:\Users\Daniel\fp\QHE\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 711.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 720.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 946D7765C3448BCAA79CD255DE59C8B5;894.
  ) 
 Here is how much of TeX's memory you used:
- 26375 strings out of 494019
- 509667 string characters out of 3139519
- 598281 words of memory out of 3000000
- 29014 multiletter control sequences out of 15000+200000
+ 26378 strings out of 494019
+ 509700 string characters out of 3139519
+ 598382 words of memory out of 3000000
+ 29017 multiletter control sequences out of 15000+200000
  21884 words of font info for 82 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 69i,19n,57p,896b,789s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,19n,57p,896b,791s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/cm-super/cm-super
 -ts1.enc}<C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfon
 ts/cm/cmbx9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public
@@ -1815,9 +1802,9 @@ s/type1/public/amsfonts/euler/eurm7.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9
 .3972/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/Büro/LaT
 ex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/Dani
 el/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (11 pages, 852734 bytes).
+Output written on main.pdf (11 pages, 1188462 bytes).
 PDF statistics:
- 1011 PDF objects out of 1200 (max. 8388607)
+ 1068 PDF objects out of 1200 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

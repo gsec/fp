@@ -24,8 +24,8 @@ B = data[:8500,0]
 
 R_H = data[:8500,1]
 
-delta = 50
-step = 100
+delta = 20
+step = 10
 
 Mittelwertkandidaten=range(0,16000,step)
 counts = zeros(len(Mittelwertkandidaten))
@@ -40,7 +40,8 @@ for i in range(len(Mittelwertkandidaten)):
 
 
 maximum1=max(counts[11000/step:16000/step])
-maximum2=max(counts[8000/step:10000/step])
+maximum21=max(counts[8450/step:8800/step])
+maximum22=max(counts[8200/step:8450/step])
 maximum3=max(counts[5000/step:8000/step])
 maximum4=max(counts[5000/step:5600/step])
 maximum5=max(counts[3800/step:4200/step])
@@ -50,7 +51,8 @@ maximum8=max(counts[1900/step:2200/step])
 maximum9=max(counts[1600/step:1900/step])
 
 wertmaximum1=argmax(counts[11000/step:16000/step])+11000/step
-wertmaximum2=argmax(counts[8000/step:10000/step])+8000/step
+wertmaximum21=argmax(counts[8450/step:8800/step])+8450/step
+wertmaximum22=argmax(counts[8200/step:8450/step])+8200/step
 wertmaximum3=argmax(counts[5000/step:8000/step])+5000/step
 wertmaximum4=argmax(counts[5000/step:5600/step])+5000/step
 wertmaximum5=argmax(counts[3800/step:4200/step])+3800/step
@@ -59,41 +61,47 @@ wertmaximum7=argmax(counts[2300/step:2600/step])+2300/step
 wertmaximum8=argmax(counts[1900/step:2200/step])+1900/step
 wertmaximum9=argmax(counts[1600/step:1900/step])+1600/step
 
+Mittelwertkandidatenmax2 = (Mittelwertkandidaten[wertmaximum21] + Mittelwertkandidaten[wertmaximum22])/2
+
 print "Laenge Mittelwertkandidaten:", len(Mittelwertkandidaten)
-print "Maxima:", maximum1, maximum2, maximum3, maximum4, maximum5, maximum6, maximum7, maximum8, maximum8
-print "argmax:", wertmaximum1, wertmaximum2, wertmaximum3, wertmaximum4, wertmaximum5, wertmaximum6, wertmaximum7, wertmaximum8, wertmaximum9
-print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mittelwertkandidaten[wertmaximum2], Mittelwertkandidaten[wertmaximum3], Mittelwertkandidaten[wertmaximum4], Mittelwertkandidaten[wertmaximum5], Mittelwertkandidaten[wertmaximum6], Mittelwertkandidaten[wertmaximum7], Mittelwertkandidaten[wertmaximum8], Mittelwertkandidaten[wertmaximum9]
+print "Maxima:", maximum1, maximum21, maximum22, maximum3, maximum4, maximum5, maximum6, maximum7, maximum8, maximum8
+print "argmax:", wertmaximum1, wertmaximum21, wertmaximum22, wertmaximum3, wertmaximum4, wertmaximum5, wertmaximum6, wertmaximum7, wertmaximum8, wertmaximum9
+print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mittelwertkandidatenmax2, Mittelwertkandidaten[wertmaximum3], Mittelwertkandidaten[wertmaximum4], Mittelwertkandidaten[wertmaximum5], Mittelwertkandidaten[wertmaximum6], Mittelwertkandidaten[wertmaximum7], Mittelwertkandidaten[wertmaximum8], Mittelwertkandidaten[wertmaximum9]
 
 #lines = plt.plot(0,12500,2000,12500, "g--")
 #plt.setp(lines, color="g", linewidth=2.0)
 
 ax = fig.add_subplot(111)
 subplots_adjust(top=0.87, right=0.96)
-ax.plot(B*100, R_H, "b", label=u"Messwerte $R_\mathrm{H}$")
-ax.plot([0,0],[0,0], "r", label=u"Anzahl von Messpunkten")
+ax.plot(B, R_H, "b,", label=u"Messwerte $R_\mathrm{H}$", markeredgecolor="b")
+ax.plot([0,0],[0,0], "r", label=u"Anzahl von Messpunkten" + "\n" + u"in einem Bereich von $\pm 20\,\Omega$")
+ax.plot([0,0],[0,0], "g--", label=u"Niveau der Hall-Plateaus")
 
 ax.set_xlabel(u"Magnetfeld $B[T]$")
 ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}[\Omega]$")
 ax.xaxis.label.set_color('blue')
+plt.xlim([0,9]) ####
 
 ax2 = ax.twiny()
 ax2.plot(counts,Mittelwertkandidaten, "r", label=u"liste")
 ax2.xaxis.label.set_color('red')
 ax2.set_xlabel(r"Anzahl $N$")
+plt.xlim([0,maximum1+500]) ####
 
 ax.legend(loc=4)
 #ax2.legend(loc=4)
 
-ax2.plot([0,1000],[Mittelwertkandidaten[wertmaximum1],Mittelwertkandidaten[wertmaximum1]], "g--")
-ax2.plot([0,660],[Mittelwertkandidaten[wertmaximum2],Mittelwertkandidaten[wertmaximum2]], "g--")
-ax2.plot([0,540],[Mittelwertkandidaten[wertmaximum3],Mittelwertkandidaten[wertmaximum3]], "g--")
-ax2.plot([0,453],[Mittelwertkandidaten[wertmaximum4],Mittelwertkandidaten[wertmaximum4]], "g--")
-ax2.plot([0,402],[Mittelwertkandidaten[wertmaximum5],Mittelwertkandidaten[wertmaximum5]], "g--")
-ax2.plot([0,330],[Mittelwertkandidaten[wertmaximum6],Mittelwertkandidaten[wertmaximum6]], "g--")
-ax2.plot([0,290],[Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertmaximum7]], "g--")
-ax2.plot([0,262],[Mittelwertkandidaten[wertmaximum8],Mittelwertkandidaten[wertmaximum8]], "g--")
-ax2.plot([0,238],[Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertmaximum9]], "g--")
+ax.plot([0,7.8],[Mittelwertkandidaten[wertmaximum1],Mittelwertkandidaten[wertmaximum1]], "g--")
+ax.plot([0,4.8],[Mittelwertkandidatenmax2,Mittelwertkandidatenmax2], "g--")
+ax.plot([0,3.7],[Mittelwertkandidaten[wertmaximum3],Mittelwertkandidaten[wertmaximum3]], "g--")
+ax.plot([0,2.8],[Mittelwertkandidaten[wertmaximum4],Mittelwertkandidaten[wertmaximum4]], "g--")
+ax.plot([0,2.4],[Mittelwertkandidaten[wertmaximum5],Mittelwertkandidaten[wertmaximum5]], "g--")
+ax.plot([0,1.8],[Mittelwertkandidaten[wertmaximum6],Mittelwertkandidaten[wertmaximum6]], "g--")
+ax.plot([0,1.45],[Mittelwertkandidaten[wertmaximum7],Mittelwertkandidaten[wertmaximum7]], "g--")
+ax.plot([0,1.2],[Mittelwertkandidaten[wertmaximum8],Mittelwertkandidaten[wertmaximum8]], "g--")
+ax.plot([0,1.05],[Mittelwertkandidaten[wertmaximum9],Mittelwertkandidaten[wertmaximum9]], "g--")
 
+plt.ylim([-200,16000]) ####
 
 #text(750, Mittelwertkandidaten[wertmaximum1]+500, r"$\nu = 2$", va='center', ha='center')
 #text(300, Mittelwertkandidaten[wertmaximum2]+500, r"$\nu = 3$", va='center', ha='center')
