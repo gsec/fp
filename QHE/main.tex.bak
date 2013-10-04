@@ -219,7 +219,7 @@ Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums
 
 
 
-Die gemessenen Spannungen über die Lock-In-Verstärker sind von einem Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{e-3}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \SI{5}{\percent} abgeschätzt. Somit können wir den Widerstand für unsere Messungen als Hauptfehlerquelle identifizieren.
+Die gemessenen Spannungen über die Lock-In-Verstärker sind von einem Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{e-3}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \kor{\SI{2}{\percent}} abgeschätzt. Somit können wir den Widerstand für unsere Messungen als Hauptfehlerquelle identifizieren.
 
 Beim Durchfahren des Magnetfeldes von $0$ nach $9$ Tesla konnte ein leichter Hysterese-Effekt festgestellt werden. Das bedeutet, dass der Elektromagnet zwar eine Magnetfeldstärke anzeigt, die wirkliche Feldstärke der angezeigten aber leicht nacheilt. Um diesen Effekt auszugleichen, wurden die Aufnahmen für jede Messung in beide 
 Richtungen durchgefahren. Bei diesen zwei Datensätzen wurde dann gleichzeitig das Magnetfeld des Up-sweeps erniedrigt und die Down-sweeps erhöht, bis die Daten symmetrisch in der Mitte der Hysterese zusammen fielen.
@@ -266,7 +266,7 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir zusammen
 		14 &  \SI{1760}{\ohm} &  \SI{1750}{\ohm} &  \SI{1770}{\ohm} &  \SI{1770}{\ohm}\\
 		\hline
 	\end{tabular}
-	\caption{Abgelesene Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit einer Ungenauigkeit aus dem Vorwiderstand von \SI{2}{\percent}\note{} und einem Ablesefehler von \SI{20}{\ohm}.}}
+	\caption{Abgelesene Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit dem Fehler aus der Ungenauigkeit des Vorwiderstandes von \SI{2}.}}
 	\label{klitzing}	
 	\end{center}
 \end{table}
@@ -274,10 +274,9 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir zusammen
 Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils einen ähnlichen Wert,
 %leider nicht den gleichen
 der der Klitzing-Konstante nahe kommt. 
-Wie schon zu Beginn der Auswertung bemerkt, ist die Hauptfehlerquelle die geschätzten Ungenauigkeit von \SI{0.05}{\percent} des Vorwiderstandes. Aufgrund der Linearität von Spannung und Widerstand, besitzen die erhaltenen Werte ebenso eine Unsicherheit von \SI{5}{\percent}. 
+Wie schon zu Beginn der Auswertung bemerkt, ist die Hauptfehlerquelle die geschätzten Ungenauigkeit von \kor{\SI{2}{\percent}} des Vorwiderstandes. \kor{Der Ablesefehler von \SI{20}{\ohm} aus der Abbildung~\ref{hallplateau} kann also vernachlässigt werden.} %Aufgrund der Linearität von Spannung und Widerstand, besitzen die erhaltenen Werte ebenso eine Unsicherheit von \kor{\SI{2}{\percent}}. 
 
-Für jede Temperatur wurde ein Bestwert der Klitzing-Konstante bestimmt. Dazu wurden die Widerstandswerte der Plateaus jeweils mit den entsprechenden Füllfaktoren multipliziert und für den Bestwert gemittelt, wobei der Fehler der Widerstandswerte von \SI{5}{\percent} mit beachtet wurde.
-Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet. 
+\kor{Für jede Temperatur bestimmen wir einen Wert für die Klitzing-Konstante. Dazu verwenden wir nur die Widerstandswerte der Plateaus mit geradzahligen $\nu$. \note{Begründung warum ungerade Plateaus weggelassen wurden} Die Werte werden jeweils mit dem entsprechenden Füllfaktor multipliziert. Die erhaltenen Werte besitzen alle nahezu gleiche Größe und Fehler, wodurch wir für jede gemessene Temperatur einen gemittelten Wert angeben können, der in Tabelle~\ref{klitzing2} aufgetragen ist.}
 
 \begin{table}[htp]
 \begin{center}
@@ -285,15 +284,17 @@ Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet.
 		\hline
 		$T\,[\mathrm{K}]$ & $\overline{R_{\rm K}\nu}\,[\mathrm{k}\Upomega]$\\
 		\hline
-		4.2 & \SI{24.8(12)}{\kilo\ohm} \\
-		3.0 & \SI{25.0(13)}{\kilo\ohm} \\
-		2.1 & \SI{25.1(13)}{\kilo\ohm} \\
-		1.5 & \SI{25.1(13)}{\kilo\ohm}
+		4.2 & \SI{24.87(50)}{\kilo\ohm} \\
+		3.0 & \SI{24.80(50)}{\kilo\ohm} \\
+		2.1 & \SI{24.89(50)}{\kilo\ohm} \\
+		1.5 & \SI{24.89(50)}{\kilo\ohm}
 	\end{tabular}}
 	\caption{Aus Tabelle~\ref{klitzing} berechnete gemittelte Werte für $R_{\rm K}\nu$ mit Fehler.}
 	\label{klitzing2}
 \end{center}
 \end{table}
+
+\kor{Beim Vergleich sehen wir eine sehr gute Übereinstimmung für die Werte bei verschiedenen Temperaturen. Dies ist auch zu erwarten, da die Klitzing-Konstante, als ein über Naturkonstanten definierte Konstante, unabhängig von der Temperatur, den selben Wert besitzen sollte.}
 
 %Aus der Ablesegenauigkeit der Auswertmethode von $10\Upomega$ lässt sich der Fehler der in Tabelle~\ref{klitzing} gemittelten Klitzing-Konstanten für verschieden Temperaturen berechnen. 
 %Die Messfehler aus denen die Widerstandswerte berechnet wurden sind im Vergleich zu der Ablesegenauigkeit vernachlässigbar ($<0.1\%$). 
@@ -302,9 +303,9 @@ Die sich ergebenden Bestwerte sind in Tabelle~\ref{klitzing2} aufgelistet.
 
 Aus diesen Werten können wir nun die Klitzing-Konstante bestimmen zu
 \kor{\begin{equation}
-	R_{\rm K} = \SI{25.0(13)}{\kilo\ohm}.
+	R_{\rm K} = \SI{24.87(50)}{\kilo\ohm}.
 \end{equation}}
-Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ zeigt sich eine große Abweichung, die jedoch im Rahmen des (großen) Fehler vereinbar ist. Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen, der eventuell in einem falsch angegebenen Widerstand zu suchen ist. Der Vorwiderstand ist demnach nach unseren erhaltenen Wert circa \SI{18}{\ohm} größer als angegebenen. Diese Abweichung wäre völlig im Rahmen der Fehlertoleranz des Widerstandes ($<\SI{1}{\percent}$).
+Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ zeigt sich eine große Abweichung, \kor{die auch im Rahmen des Fehlers nicht mehr vereinbar ist.} Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen, der  eventuell in einem falsch angegebenen Widerstand zu suchen ist. Der Vorwiderstand ist demnach nach unseren erhaltenen Wert circa \SI{18}{\ohm} größer als angegebenen. Diese Abweichung wäre völlig im Rahmen der Fehlertoleranz des Widerstandes ($<\SI{1}{\percent}$).
 
 
 \subsection{Bestimmung der Oberflächenladungsdichte}
