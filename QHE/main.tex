@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -307,13 +307,14 @@ Aus diesen Werten können wir nun die Klitzing-Konstante bestimmen zu
 Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ zeigt sich eine große Abweichung, die jedoch im Rahmen des (großen) Fehler vereinbar ist. Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen, der eventuell in einem falsch angegebenen Widerstand zu suchen ist. Der Vorwiderstand ist demnach nach unseren erhaltenen Wert circa \SI{18}{\ohm} größer als angegebenen. Diese Abweichung wäre völlig im Rahmen der Fehlertoleranz des Widerstandes ($<\SI{1}{\percent}$).
 
 
-\subsection{Bestimmung der Oberflächenladungsdichte}
+\subsection{Bestimmung der Oberflächenladungsträgerdichte}
+\label{a2}
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
-Die Oberflächenladungsdiche des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
+Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Hallsteigung.pdf}
-		\caption{Hall-Widerstand als Funktion des Magnetfeldes. An die Kurve wird nach Augenmaß eine Ursprungsgerade angelegt}.
+		\caption{Hall-Widerstand als Funktion des Magnetfeldes. An die Kurve wird nach Augenmaß eine Ursprungsgerade angelegt.}
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
@@ -543,19 +544,19 @@ Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der r
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Fermi-Energie /-Wellenvektor und -Geschwindigkeit}
 \label{a5}
-Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \cite{saarland} $m^*=0.067 m_\mathrm{e}$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
+Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \citet{saarland} $m^*=0.067 m_\mathrm{e}$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
 \begin{equation}
 E_{\rm F}=\frac{\hbar^2 k_{\rm F}^2}{2 m^*}.
 \end{equation}
-Auf der anderen Seite ergibt sich Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2\,DEG den konstanten Wert $D(E)=\frac{\hbar^2 \pi}{m^*}$ \citep{anleitung}.
-Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeit:
+Auf der anderen Seite ergibt sich die Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2\,DEG den konstanten Wert $D(E)=\hbar^2 \pi/m^*$.
+Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeiten nach \citet{Anleitung} mit den in \ref{nswerte} ermittelten Werten für $N_\mathrm{S}$:
 \begin{align}
 E_{\rm F}&=N_\mathrm{S} \cdot \frac{\hbar^2 \pi}{m^*}\\
 k_{\rm F}&=\sqrt{2 \pi N_\mathrm{S}}\\
 v_{\rm F}&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_\mathrm{S}}
 \end{align}
 Für nicht verschwindende Magnetfelder ist zu bemerken, dass je nach Eichung der Wellenwektor $\vec{k}$ keine sinnvolle Quantenzahl mehr darstellt und die Energiedispersion durch die Laundau-Quantenzahlen beschrieben wird.
-Für $B=0$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
+Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
 
 \begin{table}[htp]
 	\begin{center}
@@ -577,11 +578,11 @@ Für $B=0$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Bestimmung der Spinaufspaltung}
 \label{a6}
-Wie in Aufgabe 2 gesehen fällt der Längswiderstand periodisch mit dem inversen Magnetfeld auf Null ab. Den maximalen Widerstand misst man hingegen, wenn die Fermi-Energie (d.h. das chemisches Potential) genau innerhalb der Landau-Niveaus liegt. Dies ist der Fall wenn
+Wie in \ref{a2} gesehen, fällt der Längswiderstand periodisch mit dem inversen Magnetfeld auf Null ab. Den maximalen Widerstand misst man hingegen, wenn die Fermi-Energie (d.h. das chemisches Potential) genau innerhalb der Landau-Niveaus liegt. Dies ist der Fall wenn
 \begin{equation}
 E_{\rm F}=\hbar \omega_{\rm c}\left( n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
-In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor g des Elektronen und GaAs bestimmt werden, der mit der relativen Magnetisierung folgenden Zusammenhang besitzt.
+In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor $g$ der Elektronen im GaAs bestimmt werden, der mit der relativen Magnetisierung folgenden Zusammenhang besitzt.
 \begin{equation}
 M=\frac{g \mu_{\rm B} B}{\hbar \omega_{\rm c}}
 \label{lande}
@@ -596,7 +597,7 @@ In einem ersten Schritt werden nun aus den Graphen des Längswiderstandes die in
 	\end{center}
 \end{figure}
 
-In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ aufgetragen, um sie bis zu $\frac{1}{B}=0$ zu extrapolieren. Am Schnittpunkt mit der $x$-Achse verschwinden beide Seiten der Identität
+In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ in \ref{spinaufspaltung} aufgetragen, um sie bis zu $1/B=0$ zu extrapolieren. Am Schnittpunkt mit der $x$-Achse verschwinden beide Seiten der Identität
 \begin{equation}
 \frac{1}{B_{n\pm}}=\frac{\hbar e}{m_{\rm c}}\frac{1}{E_{\rm F}}\left(n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
@@ -608,7 +609,7 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 \begin{figure}[]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/07-Spinaufspaltung.pdf}
-		\caption{Bestimmung der Schnittpunkte mit x-Achse. Die in Abbildung \ref{maxima}ausgelesenen Messpunkte werden linear bis zum Punkt $B\rightarrow \infty$ extrapoliert und der Schnittpunkt mit der x-Achse abgelesen. Die Fehler werden jeweils mithilfe zweier Hilfsgeraden abgeschätzt.}
+		\caption{Bestimmung der Schnittpunkte mit $x$-Achse. Die in Abbildung \ref{maxima} ausgelesenen Messpunkte werden linear bis zum Punkt $B\rightarrow \infty$ extrapoliert und der Schnittpunkt mit der $x$-Achse abgelesen. Die Fehler werden jeweils mithilfe zweier Hilfsgeraden abgeschätzt.}
 		\label{spinaufspaltung}
 	\end{center}
 \end{figure}
