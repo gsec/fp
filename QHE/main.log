@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  3 OCT 2013 16:45
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  4 OCT 2013 09:50
 entering extended mode
 **main.tex
 (C:\Users\Daniel\fp\QHE\main.tex
@@ -1506,8 +1506,13 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 \c_siunitx_mathtt_int=\count321
 
-Underfull \hbox (badness 1048) in paragraph at lines 138--142
-\OT1/cmr/m/n/10 Hall-Effekts [][]2.1[][] mit dem des Quanten-Hall-Effekts
+
+Package natbib Warning: Citation `batke' on page 1 undefined on input line 141.
+
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 138--142
+\OT1/cmr/m/n/10 so schei-nen die beim La-dungs-trans-port be-tei-lig-ten
  []
 
 
@@ -1530,18 +1535,18 @@ Underfull \hbox (badness 3148) in paragraph at lines 154--158
  []
 
 
-Underfull \hbox (badness 1953) in paragraph at lines 161--164
-\OT1/cmr/m/n/10 Ent-ar-tungs-grad der Land-au-ni-ve-aus ent-spricht. Bei
+Underfull \hbox (badness 1590) in paragraph at lines 161--164
+\OT1/cmr/m/n/10 nen und St[]orstellen, ver-brei-tert. Zu-dem kann die
  []
 
 
-Underfull \hbox (badness 2205) in paragraph at lines 161--164
-\OT1/cmr/m/n/10 man misst den be-schrie-be-nen Shubnikow-de-Haas-
+Underfull \hbox (badness 1132) in paragraph at lines 161--164
+\OT1/cmr/m/n/10 Als letz-tes wer-den hin-rei-chend tie-fe Tem-pe-ra-tu-ren
  []
 
 
-Underfull \hbox (badness 1931) in paragraph at lines 161--164
-\OT1/cmr/m/n/10 Land-au-ni-ve-aus un-ter-halb der Fer-mi-ener-gie be-setzt
+Underfull \hbox (badness 1769) in paragraph at lines 161--164
+\OT1/cmr/m/n/10 ben[]otigt, da-mit nur Land-au-ni-ve-aus un-ter-halb der
  []
 
 
@@ -1553,7 +1558,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 161--164
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-<Bilder/hallbar.pdf, id=81, 904.50421pt x 475.15016pt>
+<Bilder/hallbar.pdf, id=80, 904.50421pt x 475.15016pt>
 File: Bilder/hallbar.pdf Graphic file (type pdf)
 
 <use Bilder/hallbar.pdf> [2 <C:/Users/Daniel/fp/QHE/Bilder/hallbar.pdf>]
@@ -1561,39 +1566,38 @@ Underfull \hbox (badness 7362) in paragraph at lines 222--223
 \OT1/cmr/m/n/10 Die ge-mes-se-nen Span-nun-gen []uber die Lock-In-
  []
 
-<Data-Plots/05-1,5-Hallplateaus.pdf, id=104, 505.89pt x 361.35pt>
+<Data-Plots/05-1,5-Hallplateaus.pdf, id=105, 505.89pt x 361.35pt>
 File: Data-Plots/05-1,5-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/05-1,5-Hallplateaus.pdf> [3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 268.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 269.
 
 
 ("C:\Program Files\Büro\LaTex\MiKTeX 2.9.3972\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 268.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 269.
 
 Underfull \hbox (badness 1292) in paragraph at lines 303--306
 []\OT1/cmr/m/n/10 Aus die-sen Wer-ten k[]onnen wir nun die Klitzing-
  []
 
-<Data-Plots/02-Hallsteigung.pdf, id=126, 578.16pt x 433.62pt>
+[4 <C:/Users/Daniel/fp/QHE/Data-Plots/05-1,5-Hallplateaus.pdf>]
+<Data-Plots/02-Hallsteigung.pdf, id=227, 578.16pt x 433.62pt>
 File: Data-Plots/02-Hallsteigung.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-Hallsteigung.pdf>
-Underfull \vbox (badness 3068) has occurred while \output is active []
-
- [4 <C:/Users/Daniel/fp/QHE/Data-Plots/05-1,5-Hallplateaus.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 337--387
 
  []
 
+[5 <C:/Users/Daniel/fp/QHE/Data-Plots/02-Hallsteigung.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 400.
 
-<Data-Plots/06-Fourietransformation.pdf, id=236, 578.16pt x 433.62pt>
+<Data-Plots/06-Fourietransformation.pdf, id=295, 578.16pt x 433.62pt>
 File: Data-Plots/06-Fourietransformation.pdf Graphic file (type pdf)
 
 <use Data-Plots/06-Fourietransformation.pdf>
@@ -1607,7 +1611,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--403
 \OT1/cmr/m/n/9 L[]angsiwderstandes auf-ge-tra-gen []uber die Pe-ri-
  []
 
-[5 <C:/Users/Daniel/fp/QHE/Data-Plots/02-Hallsteigung.pdf>]
+
 Overfull \hbox (8.82712pt too wide) in paragraph at lines 421--433
  [] 
  []
@@ -1623,31 +1627,34 @@ Overfull \hbox (3.37987pt too wide) in paragraph at lines 458--468
  [] 
  []
 
-<Data-Plots/11-4,2-2,1-zyklotron-B.pdf, id=364, 505.89pt x 331.4784pt>
+
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+
+<Data-Plots/11-4,2-2,1-zyklotron-B.pdf, id=365, 505.89pt x 331.4784pt>
 File: Data-Plots/11-4,2-2,1-zyklotron-B.pdf Graphic file (type pdf)
 
 <use Data-Plots/11-4,2-2,1-zyklotron-B.pdf>
-<Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf, id=368, 505.89pt x 331.4784pt>
+<Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf, id=369, 505.89pt x 331.4784pt>
 File: Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf Graphic file (type pdf)
 
-<use Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>
+<use Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf> [7 <C:/Users/Daniel/fp/QHE/Data-P
+lots/11-4,2-2,1-zyklotron-B.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 515--515
 []\OT1/cmr/bx/n/9 Tab. 6: |\OT1/cmr/m/n/9 Be-rech-nung des Zy-klo-tron-mas-sen-
 
  []
 
-[7 <C:/Users/Daniel/fp/QHE/Data-Plots/11-4,2-2,1-zyklotron-B.pdf> <C:/Users/Dan
-iel/fp/QHE/Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>]
+
 Underfull \hbox (badness 1092) in paragraph at lines 546--547
 \OT1/cmr/m/n/10 F[]ur Elek-tro-nen, die sich im Festk[]orper auf-hal-ten,
  []
 
-
+[8 <C:/Users/Daniel/fp/QHE/Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 572--572
 []\OT1/cmr/bx/n/9 Tab. 7: |\OT1/cmr/m/n/9 Fermi-Energie /-Wellenvektor und -
  []
 
-[8]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 591.
@@ -1686,8 +1693,8 @@ Underfull \hbox (badness 1859) in paragraph at lines 633--651
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9 <C:/Users/Daniel/fp/QHE/Data-Plots/07-maxima_ablesen.pdf> <C:/Users/Daniel/
-fp/QHE/Data-Plots/07-Spinaufspaltung.pdf>] (C:\Users\Daniel\fp\QHE\main.bbl
+ [9 <C:/Users/Daniel/fp/QHE/Data-Plots/07-maxima_ablesen.pdf>]
+(C:\Users\Daniel\fp\QHE\main.bbl
 Underfull \hbox (badness 2302) in paragraph at lines 18--26
 []\OT1/cmr/m/sc/9 Batke\OT1/cmr/m/n/9 , Ed-win:  \OT1/cmr/m/it/9 An-lei-tung - 
 Quanten-Hall-Effekt\OT1/cmr/m/n/9 .
@@ -1726,7 +1733,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--43
 $\OT1/cmtt/m/n/9 Erster _ Studienabschnitt _ Bachelor / V _ B _ Aktuelle _$
  []
 
-) <Data-Plots/02-4,2-Hallplateaus.pdf, id=674, 505.89pt x 361.35pt>
+) <Data-Plots/02-4,2-Hallplateaus.pdf, id=634, 505.89pt x 361.35pt>
 File: Data-Plots/02-4,2-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-4,2-Hallplateaus.pdf>
@@ -1734,7 +1741,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 698--699
  [] 
  []
 
-<Data-Plots/03-3,0-Hallplateaus.pdf, id=675, 505.89pt x 361.35pt>
+<Data-Plots/03-3,0-Hallplateaus.pdf, id=635, 505.89pt x 361.35pt>
 File: Data-Plots/03-3,0-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/03-3,0-Hallplateaus.pdf>
@@ -1742,7 +1749,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 705--706
  [] 
  []
 
-<Data-Plots/04-2,1-Hallplateaus.pdf, id=676, 505.89pt x 361.35pt>
+<Data-Plots/04-2,1-Hallplateaus.pdf, id=636, 505.89pt x 361.35pt>
 File: Data-Plots/04-2,1-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/04-2,1-Hallplateaus.pdf>
@@ -1751,60 +1758,70 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 712--713
  []
 
 AED: lastpage setting LastPage 
-[10 <C:/Users/Daniel/fp/QHE/Data-Plots/02-4,2-Hallplateaus.pdf> <C:/Users/Danie
-l/fp/QHE/Data-Plots/03-3,0-Hallplateaus.pdf>] [11
+[10 <C:/Users/Daniel/fp/QHE/Data-Plots/07-Spinaufspaltung.pdf> <C:/Users/Daniel
+/fp/QHE/Data-Plots/02-4,2-Hallplateaus.pdf>] [11
 
- <C:/Users/Daniel/fp/QHE/Data-Plots/04-2,1-Hallplateaus.pdf>]
+ <C:/Users/Daniel/fp/QHE/Data-Plots/03-3,0-Hallplateaus.pdf> <C:/Users/Daniel/f
+p/QHE/Data-Plots/04-2,1-Hallplateaus.pdf>]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 720.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 720.
- (C:\Users\Daniel\fp\QHE\main.aux)
+(C:\Users\Daniel\fp\QHE\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 720.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 946D7765C3448BCAA79CD255DE59C8B5;894.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 26378 strings out of 494019
- 509700 string characters out of 3139519
- 598382 words of memory out of 3000000
- 29017 multiletter control sequences out of 15000+200000
+ 26380 strings out of 494019
+ 509715 string characters out of 3139519
+ 596382 words of memory out of 3000000
+ 29019 multiletter control sequences out of 15000+200000
  21884 words of font info for 82 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 69i,19n,57p,896b,791s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,19n,57p,899b,812s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/enc/dvips/cm-super/cm-super
 -ts1.enc}<C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfon
-ts/cm/cmbx9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public
-/amsfonts/cm/cmcsc10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/typ
-e1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/f
-onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.
-9.3972/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/Büro/LaTex/Mi
-KTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/Büro/L
-aTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
-/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Progra
-m Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
-C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/am
-sfonts/cm/cmr5.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/pub
-lic/amsfonts/cm/cmr6.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fon
-ts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.39
-72/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/Büro/LaTex/MiK
-TeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/Büro/L
-aTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files
-/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Progra
-m Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:
-/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmti10
+ts/cm/cmbx10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/publi
+c/amsfonts/cm/cmbx9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type
+1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/f
+onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.
+9.3972/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/Büro/LaTex/M
+iKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/Büro/
+LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program File
+s/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
+am Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C
+:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmmib
+10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts
+/cm/cmr10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/p
+ublic/amsfonts/cm/cmr5.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/t
+ype1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/f
+onts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.
+3972/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/Büro/LaTex/MiKTe
+X 2.9.3972/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/Büro/L
+aTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
+s/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Progr
+am Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C
+:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/cm/cmsy9
 .pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/c
-m/cmti9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/ams
-fonts/cm/cmtt9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/pub
-lic/amsfonts/euler/eurm10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/font
-s/type1/public/amsfonts/euler/eurm7.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9
-.3972/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/Büro/LaT
-ex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Users/Dani
-el/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (11 pages, 1188462 bytes).
+m/cmti10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/am
+sfonts/cm/cmti9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/pu
+blic/amsfonts/cm/cmtt9.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/t
+ype1/public/amsfonts/euler/eurm10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3
+972/fonts/type1/public/amsfonts/euler/eurm7.pfb><C:/Program Files/Büro/LaTex/Mi
+KTeX 2.9.3972/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/
+Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Us
+ers/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
+
+Output written on main.pdf (11 pages, 1198699 bytes).
 PDF statistics:
- 1068 PDF objects out of 1200 (max. 8388607)
+ 1072 PDF objects out of 1200 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
