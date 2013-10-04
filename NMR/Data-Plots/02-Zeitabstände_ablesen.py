@@ -10,7 +10,8 @@ rc('font', family = 'serif', serif = 'STIXGeneral')
 Alle_Daten_plotten = False #True
 Einen_Datensatz_schoen_plotten = True
 read_start=10 # Erste Zeile, die eingelesen wird
-abgelesene_Werte_plotten = True #False 
+abgelesene_Werte_plotten = False #False #
+Signalhoehen_plotten = True
 # ------------------------------------------
 
 Plots=0
@@ -72,7 +73,7 @@ if Einen_Datensatz_schoen_plotten==True:
     plt.ylabel("Messsignal [arb. u.]")
     plt.xlim([0.049,0.0885])
     plt.ylim([-1.02841,0.0441123])
-    title("Zeitdifferenz zwischen zwei Resonanzen \n  Analysatorfrquenz:4715023Hz")
+    title("Zeitdifferenz zwischen zwei Resonanzen \n  Analysatorfrequenz:4715023Hz")
     font = {'family' : 'serif',
             'weight' : 'normal',
             'size'   : 20}
@@ -121,6 +122,29 @@ if abgelesene_Werte_plotten==True:
     plt.legend(loc=0)	
     # plt.savefig("Hallsteigung.pdf")
 # ------------------------------------------ 
+
+if Signalhoehen_plotten==True:
+    Signalhoehen=array([0.2923985,0.4460165,0.551707,0.5760975,0.6004875,0.6665,0.663496,0.7051985,0.738354,0.715488])
+    Fehler_Signalhoehe=([0.0248985,0.0182925,0.012195,0.0101625,0.0101625,0.009191,0.014228,0.0331555,0.022866,0.022866])
+    Delta_t=array([0.0024179,0.0049609,0.0064221,0.0077509,0.0094095,0.0104384,0.0116039,0.012877,0.0145956,0.0161026])
+    Fehler_t=0.0002
+    
+    Plots+=1    
+    plt.figure(Plots)
+    plt.xlabel("Zeitdifferenz $t_{12}$ [s]")
+    plt.ylabel("Messsignal $S_2$ [arb. u.]")    
+    #plt.xlim([0.002817,0.0203311])
+    #plt.ylim([4704.51,4722.39])
+    title(u'Signalh\xf6hen im Resonanzfall')
+    font = {'family' : 'serif',
+            'weight' : 'normal',
+            'size'   : 20}
+    matplotlib.rc('font', **font)
+    subplots_adjust(left=0.13, bottom=0.12, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
+    plt.errorbar(Delta_t,Signalhoehen,xerr=0.0002,yerr=Fehler_Signalhoehe,label=u"bestimmte Signalh\xf6hen",fmt='r.')
+    xdata=linspace(0,0.02,1000)
+    plt.legend(loc=0)	
+
 
 show()
 
