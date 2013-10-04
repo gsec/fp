@@ -25,7 +25,7 @@ B = data[:8500,0]
 R_H = data[:8500,1]
 
 delta = 20
-step = 10
+step = 100
 
 Mittelwertkandidaten=range(0,16000,step)
 counts = zeros(len(Mittelwertkandidaten))
@@ -82,11 +82,11 @@ ax.set_ylabel(u"Hallwiderstand $R_{\mathrm{Hall}}[\Omega]$")
 ax.xaxis.label.set_color('blue')
 plt.xlim([0,9]) ####
 
-ax2 = ax.twiny()
-ax2.plot(counts,Mittelwertkandidaten, "r", label=u"liste")
-ax2.xaxis.label.set_color('red')
-ax2.set_xlabel(r"Anzahl $N$")
-plt.xlim([0,maximum1+500]) ####
+# ax2 = ax.twiny()
+# ax2.plot(counts,Mittelwertkandidaten, "r", label=u"liste")
+# ax2.xaxis.label.set_color('red')
+# ax2.set_xlabel(r"Anzahl $N$")
+# plt.xlim([0,maximum1+500]) ####
 
 ax.legend(loc=4)
 #ax2.legend(loc=4)
@@ -159,6 +159,6 @@ plt.ylim([-200,16000]) ####
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-fig.savefig("04-2,1-Hallplateaus.pdf")
+#fig.savefig("04-2,1-Hallplateaus.pdf")
 
 show()

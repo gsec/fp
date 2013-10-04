@@ -162,6 +162,6 @@ plt.ylim([-200,16000]) ####
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-fig.savefig("05-1,5-Hallplateaus.pdf")
+##fig.savefig("05-1,5-Hallplateaus.pdf")
 
 show()

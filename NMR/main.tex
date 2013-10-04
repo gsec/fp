@@ -337,7 +337,19 @@ und
 \begin{align}
 	B_0=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}.
 \end{align}
-\kor{Weiterhin untersuchen wir, wie sich die Signalstärke eines Peaks mit dem Abstand zum vorherigen Peak verändert. Aus der }
+\kor{Weiterhin untersuchen wir, wie sich die Signalstärke eines Peaks mit dem Abstand zum vorherigen Peak verändert. Die Signalhöhen werden dazu aus den einzelnen Graphen für die verschiedenen Analysatorfrequenzen abgelesen. Da die Signalstärke nicht in jeder Periode gleich ist,  lesen wir aus der Schwankung der Signalstärken über zehn Perioden einen Fehler ab. Die Beträge der Signalstärken werden in \ref{signalstaerken} aufgetragen und zeigen deutlich, dass die Signalstärke zunimmt, je weiter das letzte Signal zurück liegt.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/02-Signale.pdf}
+		\caption{Abgelesene Signalstärken in Abhängigkeit zur Zeitdifferenz zum vorherigen Peak.}
+		\label{signalstaerken}
+	\end{center}
+\end{figure}
+
+Der Verlauf lässt sich verstehen, wenn man bedenkt, dass sich während dem Resonanzfall die Polarisation ihrem Gleichgewichtszustand annähert. Dadurch schwächt sich die Polarisation und damit die Signalstärke schnell ab, wird aber durch nachfließendes Wasser erneuert.
+Während bei kleinen Zeitdifferenzen nur wenig polarisiertes Wasser in die Spule nachfließen konnte und wir ein schwaches Signal messen, sättigt das Signal bei großen Zeitabständen.
+}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -394,10 +406,10 @@ Die Resonanzfrequenz entspricht der Präzessionsfrequenz der Protonen in einer F
 \begin{align}
 	B_{\mathrm{Raum}}=\frac{2 \pi \nu_{\mathrm{res}}}{\gamma_p}=\SI[separate-uncertainty=false]{35.46(5)}{\micro\tesla}.
 \end{align}
-Diese Feldstärke liegt in der Größenordnung der Erd-Magnetfeldstärke. ??
-Aus der Verschiebung lässt sich außerdem ableiten, dass das Wasser etwa $3$ Sekunden von der Einstrahlspule bis zu Analysator benötigt hat.
-Eine genauere Berechnung der Wassergeschwindigkeit folgt in \ref{wg}.
-% Teil B
+Diese Feldstärke liegt in der Größenordnung der Erd-Magnetfeldstärke. 
+\kor{Aus der Verschiebung lässt sich außerdem ableiten, dass das Messsignal des Analysators der eingestellten Frequenz am Manipulator etwa $3$ Sekunden nacheilt. Dies lässt sich zum Teil damit erklären, dass das Wasser eine gewisse Zeit vom Manipulator zum Analysator benötigt.
+Jedoch zeigt die in \ref{wg} berechnete Wassergeschwindigkeit, dass diese nicht alleine für den Verzug verantwortlich sein kann. Was im Messaufbau noch zu einem Verzug führen kann, konnten wir nicht klären.
+}
 
 Im Magnetfeld des Raumes soll nun untersucht werden, wie sich das Messsignal in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität verhält.
 Wir messen für Spannungen von $\SI{10}{\milli\volt}$ bis $\SI{100}{\milli\volt}$ bei Frequenzen von $\SI{1200}{\hertz}$ bis $\SI{1800}{\hertz}$.
@@ -421,9 +433,9 @@ Bewegt sich der Spin auf der Achse dieser Leiterschleife, kann die Gleichung mit
 \begin{align}
 	\Phi(n=1)= \overset{\infty}{\underset{-\infty}{\int}}  \frac{\gamma \mu_0 I}{4}  \frac{r^2}{(r^2+l^2)^{\frac{3}{2}}} \frac{\mathrm{d}l}{v}
 \end{align}
-umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt. ??
+umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt.
 Das bedeutet, dass jede der $125$ Spulen diesen Beitrag zum Drehwinkel liefert.
-Der Gesamtdrehwinkel bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ ergibt sich dann nach dem lösen des Integrals zu
+\kor{Dieses Modell beschreibt das Verhalten unserer Experimentes nicht exakt, da sich das Wasser nicht auf einer geraden Linie aus dem unendlichen durch unsere Leiterschleife bewegt. Die Genauigkeit des Modells lässt sich abschätzen, wenn man nur bis zu einem endlichen Wert integriert und die Resultate vergleicht. Wir verkürzen die Strecke der Protonenbewegung im Modell auf eine Spulenlänge vor und nach der Spule und erhalten eine Abweichung von $\SI{2.3}{\percent}$. Im Rahmen dieses Fehlers können wir den Gesamtdrehwinkel bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ berechnen:}
 \begin{align}
 	\Phi_{\SI{45}{\milli\volt}}=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = \SI{3.14(67)}{}.
 \end{align}
@@ -713,7 +725,7 @@ Durch Einsetzten von Gleichung~\eqref{eq.tv} in Gleichung~\eqref{eq.kontinuitaet
 \begin{equation}
 	v_2 = \SI{3.10(24)}{\meter\per\second}. %\frac{1}{t_v}\left( L_1 \left( \frac{d_1}{d_2} \right)^2 + L_2\right)
 \end{equation}
-In Versuchsteil~\ref{auswertung5} konnten \note{} wir die Wassergeschwindigkeit auf etwa \SI{3}{\second} abgeschätzen, was unser Ergebnis bestätigt. Das hier erhaltenen Ergebnis wird für die Berechnungen in Versuchsteil~\ref{auswertung5} verwendet.
+Das hier erhaltenen Ergebnis wird für die Berechnungen in Versuchsteil~\ref{auswertung5} verwendet.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

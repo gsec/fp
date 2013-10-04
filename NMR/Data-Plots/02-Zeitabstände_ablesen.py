@@ -135,13 +135,13 @@ if Signalhoehen_plotten==True:
     plt.ylabel("Messsignal $S_2$ [arb. u.]")    
     #plt.xlim([0.002817,0.0203311])
     #plt.ylim([4704.51,4722.39])
-    title(u'Signalh\xf6hen im Resonanzfall')
+    title(u'Signalst\xe4rken nach der Zeit $t_{12}$') 
     font = {'family' : 'serif',
             'weight' : 'normal',
             'size'   : 20}
     matplotlib.rc('font', **font)
     subplots_adjust(left=0.13, bottom=0.12, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
-    plt.errorbar(Delta_t,Signalhoehen,xerr=0.0002,yerr=Fehler_Signalhoehe,label=u"bestimmte Signalh\xf6hen",fmt='r.')
+    plt.errorbar(Delta_t,Signalhoehen,xerr=0.0002,yerr=Fehler_Signalhoehe,label=u"abgelesene Signalh\xf6hen",fmt='r.')
     xdata=linspace(0,0.02,1000)
     plt.legend(loc=0)	
 

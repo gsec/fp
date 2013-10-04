@@ -59,7 +59,7 @@ plt.ylabel(u"Intensit\xe4t [mV]")
 plt.xlabel(u"Frequenz [Hz]")
 # plt.zlabel(u"Signal [arb.u.]")
 print type(matplotlib.colors.Normalize(abs(Signal)))
-ax.scatter(Frequenz-18, Amplitude, Signal,s=15, c=abs(Signal), cmap="jet")#, rstride=1, cstride=1, cmap=cm.coolwarm,
+ax.scatter(Frequenz-18, Amplitude/2, Signal,s=15, c=abs(Signal), cmap="jet")#, rstride=1, cstride=1, cmap=cm.coolwarm,
 ax.set_xlabel(u'Frequenz [Hz]')
 ax.set_ylabel(u"Intensit\xe4t [mV]")
 ax.set_zlabel('Signal [arb.u.]')
