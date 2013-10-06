@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  4 OCT 2013 15:22
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  4 OCT 2013 22:35
 entering extended mode
 **main.tex
 (C:\Users\Daniel\fp\QHE\main.tex
@@ -1637,6 +1637,16 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `klitzing' on page 5 undefined on input line 333.
 
 
+Overfull \hbox (5.89372pt too wide) in paragraph at lines 386--387
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--392
+\OT1/cmr/m/n/10 Glei-chung [] er-mit-tel-ten La-dungs-tr[]agerdichten
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 342--392
 
  []
@@ -1661,7 +1671,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 408--408
  []
 
 [6 <C:/Users/Daniel/fp/QHE/Data-Plots/06-Fourietransformation.pdf>]
-Overfull \hbox (8.82712pt too wide) in paragraph at lines 426--438
+Overfull \hbox (3.8271pt too wide) in paragraph at lines 426--438
  [] 
  []
 
@@ -1859,7 +1869,7 @@ KTeX 2.9.3972/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files/
 Büro/LaTex/MiKTeX 2.9.3972/fonts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Us
 ers/Daniel/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
 
-Output written on main.pdf (11 pages, 1199303 bytes).
+Output written on main.pdf (11 pages, 1199279 bytes).
 PDF statistics:
  1074 PDF objects out of 1200 (max. 8388607)
  84 named destinations out of 1000 (max. 500000)
