@@ -42,7 +42,7 @@ ax.plot([1.15392-delta,1.15392+delta],[1.702035,1.702035], "g")
 ax.plot([1.15392-delta,1.15392+delta],[(1.251573+1.236789)/2,(1.251573+1.236789)/2], "g")
 
 ax.yaxis.label.set_color('blue')
-ax.set_xlim(0.80,1.25)
+ax.set_xlim(0.75,1.25)
 ax.set_ylim(1,2)
 
 #ax.set_xlim(0.9,1.1)
@@ -65,7 +65,7 @@ ax2.plot([1.15341,1.15341],[0.906818,(0.313229+0.372053)/2], "g--")
 ax2.plot([1.15341-delta,1.15341+delta],[0.906818,0.906818], "g")
 ax2.plot([1.15341-delta,1.15341+delta],[(0.313229+0.372053)/2,(0.313229+0.372053)/2], "g")
 ax2.yaxis.label.set_color('red')
-ax2.set_xlim(0.80,1.25)
+ax2.set_xlim(0.75,1.25)
 ax2.set_ylim(0,1)
 
 #ax2.set_xlim(0.9,1.1)
