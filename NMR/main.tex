@@ -72,7 +72,7 @@
 
 \newcommand{\tra}{$\rightarrow $}
 \newcommand{\Tra}{$\Rightarrow $}
-\renewcommand{\note}[1]{{\color{red}#1??}}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -85,7 +85,8 @@
 \definecolor{darkred}{rgb}{.5,0,0}
 \definecolor{darkgreen}{rgb}{0,.5,0}
 
-\newcommand{\kor}[1]{{\color{darkgreen}#1}}
+%\newcommand{\kor}[1]{{\color{darkgreen}#1}}
+\newcommand{\kor}[1]{{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %ToDo:
 
@@ -111,8 +112,9 @@
   \vspace{1em}
 
 \centerline{Betreuer: Dr. Charles Gould \hfill
-   Versuchsdurchführung am 18. Oktober 2013}
-\centerline{\hfill  Protokollabgabe am 25. Oktober 2013}
+   Versuchsdurchführung am 18. September 2013}
+\centerline{\hfill  Protokollabgabe am 25. September 2013}
+\centerline{\hfill  Zweitabgabe am 07. Oktober 2013}
  
 
 \vspace{2em}
@@ -232,7 +234,7 @@ Die gesamte Beschaltung des Messaufbaus ist in Abbildung~\ref{fig.beschaltung} g
 \subsection{Eichen des Funktionsgenerators}
 \label{auswertung1}
 
-Um die \kor{Abweichung der eingestellten Ausgangsspannung des Funktionsgenerators bei Belastung} zu bestimmen, wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} \kor{für die Spitze/Spitze Werte} und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Cosinus-Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Der Fehler der Werte ergibt sich aus der Ungenauigkeit in \kor{den Spitze/Spitze Werten} des Funktionsgenerators von \SI{2}{\percent}. Der Fehler der Fitfunktion kann gegen den Fehler in \kor{den Spannungswerten} vernachlässigt werden. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden \kor{$U_{\rm Oszi}$} und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
+Um die \kor{Abweichung der eingestellten Ausgangsspannung des Funktionsgenerators bei Belastung} zu bestimmen, wird dieser mit dem Oszillographen verbunden. Mit den eingestellten Werten von \SI{50}{\milli\volt} bzw. \SI{100}{\milli\volt} \kor{für die Spitze/Spitze Werte} und \SI{1.3}{\kilo\hertz} bzw. \SI{2.6}{\kilo\hertz} in der Frequenz des Funktionsgenerators messen wir das Cosinus-Signal über den Oszillator, der für die Aufnahme mit dem Computer verbunden ist. An die erhaltenen Messsignale fitten wir jeweils eine Cosinus-Funktion um die Schwankung, die durch die diskrete Zeitauflösung zustande kommt, auszugleichen. Der Fehler der Werte ergibt sich aus der Ungenauigkeit in \kor{den Spitze/Spitze Werten $U_{\rm FG,PP}$} des Funktionsgenerators von \SI{2}{\percent}. Der Fehler der Fitfunktion kann gegen den Fehler in \kor{den Spannungswerten} vernachlässigt werden. Für die vier Messungen vergleichen wir jeweils die Spitze/Spitze Werte, die Amplituden \kor{$U_{\rm Oszi}$} und den Effektivwert. Die Werte sind in Tabelle~\ref{tab.funktionsgenerator} aufgelistet.
 
 \begin{table}[htp]
 \begin{center}
@@ -254,9 +256,9 @@ Um die \kor{Abweichung der eingestellten Ausgangsspannung des Funktionsgenerator
 \end{center}
 \end{table}
 
-Aus dem Vergleich der Werte in Tabelle~\ref{tab.funktionsgenerator} ergibt sich im Rahmen der Fehler kein Unterschied zwischen den Werten am Oszillographen und den eingestellten Werten. Anhand der berechneten Werte erkennt man, dass die Genauigkeit des Funktionsgenerators auch bei unterschiedlichen Amplituden und Frequenzen erhalten bleibt.
+\kor{Aus dem Vergleich der Werte in Tabelle~\ref{tab.funktionsgenerator} erkennen wir, dass die Spitze/Spitze Werte am Oszillographen im Rahmen der Fehler genau doppelt so groß sind, wie die eingestellten Werte am Funktionsgenerator. Dies liegt daran, dass der Oszillograph einen sehr großen Widerstand im Vergleich zum Funktionsgenerator besitzt, dieser aber auf eine Belastung von \SI{50}{\ohm} eingestellt ist. Zudem erkennen wir, dass sich die Werte für verschiedene Frequenzen nicht unterscheiden. Das ist sehr wichtig, da wir später bei einer eingestellten Spannung über verschiedene Frequenzen messen wollen.}
 
-Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenwiderstand. Allerdings ist der Spule um, den Strom zu begrenzen und messbar zu machen ein Vorwiderstand von \SI{47}{\ohm} eingebaut~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $f_{\rm ES}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die \kor{Spitze/Spitze Werte} $\kor{U_{\rm PP}} = \SI{10}{\milli\volt}$, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und eine ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $f_{\rm ES}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
+Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenwiderstand. Allerdings ist der Spule ein Vorwiderstand von \SI{47}{\ohm} eingebaut, um den Strom zu begrenzen und messbar zu machen~\citep{anleitung}. Aus dem zusätzlichen Ausgangswiderstand des Funktionsgenerator von \SI{50}{\ohm} wird die Amplitude der Ausgangsspannung reduziert~\citep{anleitung}. Um für nachfolgende Messungen einen Eichfaktor $f_{\rm ES}$ zu erhalten haben wir obige Messung für eine Frequenz von \SI{1.3}{\kilo\hertz} und die \kor{Spitze/Spitze Werte} $\kor{U_{\rm PP}} = \SI{10}{\milli\volt}$, \SI{20}{\milli\volt}, \SI{50}{\milli\volt}, \SI{100}{\milli\volt}, \SI{200}{\milli\volt} und \SI{500}{\milli\volt} wiederholt. Hierbei haben wir jeweils eine Messung mit und eine ohne angeschlossener Einstrahlspule aufgenommen. Zur Bestimmung des Eichfaktors $f_{\rm ES}$ haben wir in Abbildung~\ref{fig.eichfaktor} die gemessenen Spannungen mit angeschlossener Spule $U_{\rm ES}$ über die eingestellten Spannungen des Funktionsgenerators $U_{\rm FG}$ aufgetragen.
 
 \begin{figure}[htp]
 	\includegraphics[width=\columnwidth]{Data-Plots/03-Effektivwert-es-fg.pdf}
@@ -434,7 +436,7 @@ Bewegt sich der Spin auf der Achse dieser Leiterschleife, kann die Gleichung mit
 \end{align}
 umgeschrieben werden, wobei $r$ den Radius der Spule, $l$ den Abstand vom Mittelpunkt der Leiterschleife und $v$ die Wassergeschwindigkeit angibt.
 Das bedeutet, dass jede der $125$ Spulen diesen Beitrag zum Drehwinkel liefert.
-\kor{Dieses Modell beschreibt das Verhalten unserer Experimentes nicht exakt, da sich das Wasser nicht auf einer geraden Linie aus dem unendlichen durch unsere Leiterschleife bewegt. Die Genauigkeit des Modells lässt sich abschätzen, wenn man nur bis zu einem endlichen Wert integriert und die Resultate vergleicht. Wir verkürzen die Strecke der Protonenbewegung im Modell auf eine Spulenlänge vor und nach der Spule und erhalten eine Abweichung von $\SI{2.3}{\percent}$. Im Rahmen dieses Fehlers können wir den Gesamtdrehwinkel bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ berechnen:}
+\kor{Dieses Modell beschreibt das Verhalten unseres Experimentes nicht exakt, da sich das Wasser nicht auf einer geraden Linie aus dem unendlichen durch unsere Leiterschleife bewegt. Die Genauigkeit des Modells lässt sich abschätzen, wenn man nur bis zu einem endlichen Wert integriert und die Resultate vergleicht. Wir verkürzen die Strecke der Protonenbewegung im Modell auf eine Spulenlänge vor und nach der Spule und erhalten eine Abweichung von $\SI{2.3}{\percent}$. Im Rahmen dieses Fehlers können wir den Gesamtdrehwinkel bei einer Einstrahlamplitude von $\SI{45}{\milli\volt}$ berechnen:}
 \begin{align}
 	\Phi_{\SI{45}{\milli\volt}}=  \frac{\gamma \mu_0  \frac{f_{ES} U_{\mathrm{ES}}}{R_{\mathrm{ES}}} N}{2 v} = \SI{3.14(67)}{}.
 \end{align}
@@ -466,7 +468,7 @@ Die beste Symmetrisierung ergibt die Wahl der Parameter zu $k=0.85$ und $l=1.14$
 
 \kor{
 Da wir die Messung sowohl von hohen zu niedrigen, als auch von niedrigen zu hohen Intensitäten durchgeführt haben, können wir die Verschiebung der Datenpunkte wie in \ref{auswertung5} aufheben. Außerdem messen wir am Anfang der Messung ein Artefakt, das vermutlich dadurch entstanden ist, dass die Einstrahlspule kurz vor der Messung bereits aktiv war. Wir entscheiden uns daher hier den Sweep von hohen zu niedrigen Einstrahlintensitäten zu plotten und finden deshalb das Artefakt bei hohen Intensitäten.
-Die symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer theoretisch erwarteten Kurve gezeichnet. Die theoretische Kurve beschreibt die Funktion \ref{theospin} im Resonanzfall mit den Parametern $c=0.27$ und dem Parameter $p=70$, der als Proportionalitätskonstante zwischen der Einstrahlintensität und dem Spindrehwinkel den Einfluss der Wassergeschwindigkeit und der Spulengeometrie erfasst.
+Die symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer theoretisch erwarteten Kurve gezeichnet. Die theoretische Kurve beschreibt die Funktion \eqref{theospin} im Resonanzfall mit den Parametern $c=0.27$ und dem Parameter $p=70$, der als Proportionalitätskonstante zwischen der Einstrahlintensität und dem Spindrehwinkel den Einfluss der Wassergeschwindigkeit und der Spulengeometrie erfasst.
 
 \begin{figure}[htp]
 	\begin{center}
@@ -477,7 +479,7 @@ Die symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer theoreti
 \end{figure}
 
 Die Theorie beschreibt unser Experiment mit den verwendeten Parametern nur qualitativ und wir finden kein anderes Parameterset, dass unser Experiment genauer beschreibt.
-Die Theorie Berücksichtigt nach \cite{anleitung} unterschiedliche Wassergeschwindigkeiten in der Manipulatorspule was den Abfall der Intensitäten bei größeren Drehwinkeln erklärt.
+Die Theorie Berücksichtigt nach \citep{anleitung} unterschiedliche Wassergeschwindigkeiten in der Manipulatorspule was den Abfall der Intensitäten bei größeren Drehwinkeln erklärt.
 Auffällig ist eine sich ändernde Periodendauer der Oszillation der experimentellen Daten. 
 Dies wird vom theoretischen Modell nicht erfasst, sondern kann theoretisch nur erklärt werden, wenn sich während des Durchfahrens der Einstrahlintensität das Verhältnis zwischen Resonanzfrequenz und Einstrahlfrequenz verändert.
 }
@@ -700,7 +702,7 @@ An die Messdaten aus Abbildung~\ref{fig.relaxation} wurden Exponentialfunktionen
 	\begin{center}
 \kor{\begin{tabular}{cc}
 		\hline
-		$T[\textdegree\mathrm{C}]$ & $T_1[1/\mathrm{s}]$\\
+		$T[\SI{}{\celsius}]$ & $T_1[1/\mathrm{s}]$\\
 		\hline
 		\SI{14(1)}{\celsius} & $3.6^{+1.5}_{-1.9}$\\ %3.647301884	1.701329412
 		\SI{34.0(2)}{\celsius} & $4.6^{+1.6}_{-1.5}$\\ %4.606282289	1.51535674
@@ -750,14 +752,14 @@ Das hier erhaltenen Ergebnis wird für die Berechnungen in Versuchsteil~\ref{aus
 %
 In dem Praktikumsversuch zur magnetischen Kernresonanz konnten wir mit einem Aufbau nach Abbildung~\eqref{fig.versuchsaufbau} Protonen in einem Wasserkreislauf polarisieren, deren Magnetisierung nachweisen und manipulieren.
 Nach dem eichen der Messgeräte~\eqref{auswertung1} konnten wir die Resonanzfrequenz der Protonenspins im Magnetfeld des Analysators $\nu_{\rm res} = \SI{4712.31(20)}{\kilo\hertz}$~\eqref{auswertung2} bestimmen.
-Daraus leißen sich Magnetfeldstärke des Dauermagneten im Analysator zu $B_0 = \SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}$ und die Energieaufspaltung $\Delta E = \SI[separate-uncertainty=false]{19.48854(83)e-9}{\electronvolt}$ berechnen~\eqref{auswertung3}. Durch Variation des Polarisationsstroms $I_{\rm pol}$ bestätigen wir den linearen Zusammenhang zwischen Polarisationsfeldstärke und Messsignal~\eqref{auswertung4}.
+Daraus ließen sich Magnetfeldstärke des Dauermagneten im Analysator zu $B_0 = \SI[separate-uncertainty=false]{0.1106761(47)}{\tesla}$ und die Energieaufspaltung $\Delta E = \SI[separate-uncertainty=false]{19.48854(83)e-9}{\electronvolt}$ berechnen~\eqref{auswertung3}. Durch Variation des Polarisationsstroms $I_{\rm pol}$ bestätigen wir den linearen Zusammenhang zwischen Polarisationsfeldstärke und Messsignal~\eqref{auswertung4}.
 Das Aufnehmen von Amplituden- und Frequenz-Sweeps in der Nähe der Resonanzfrequenz ermöglichte den Phasenraum von Einstrahlamplitude und Frequenz darstellen~\eqref{phasenraum}. 
 Die Form des Messsignals im Phasenraum entsprach dabei nur bedingt unseren theoretischen Erwartungen. 
 Die Drehwinkel der Magnetisierung im Manipulator wurden den Einstrahlamplitude eindeutig zugeordnet~\eqref{auswertung5}.
 
  Mit Hilfe eines Helmholtzspulenpaares konnten wir verschieden starke statische Magnetfelder bereitstellen. Aus der Untersuchung der entsprechenden Resonanzfrequenzen konnten wir das im Raum vorhandenen Störfeld $\vec{B}_{\rm S}$ berechnen. Die Stärke des Störfeldes betrug $B_{\rm S} = \SI{34(11)}{\micro\tesla}$ und hatte einen Winkel von $\phi = \SI{64.7(85)}{\degree}$~\eqref{auswertung6} zum Helmholtzspulenfeld. 
 Der Betrag des Störfeldes stimmt dabei gut mit der bestimmten Resonanzfrequenz aus den Frequenz-Sweeps überein~\eqref{auswertung5}. Den Wert für das Kernmagneton konnten wir mit $\mu_{\rm K} = \SI[separate-uncertainty=false, per-mode=symbol]{5.10(20)e-27}{\tesla\per\ampere}$ in Übereinstimmung mit dem Literaturwert bestimmen~\eqref{auswertung6}.
-Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit bei maximaler Pumpenleistung auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ in der Manipulatorspule bestimmen. Daraus errechneten wir die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur zu $4.6^{+1.6}_{-1.5}\,\SI{}{1\per\second}$ ~\eqref{auswertung7}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung und deren Manipulation  untersuchen und die vorhergesagt Dynamik zu großen Teilen bestätigen. 
+Mit einer detaillierten Analyse des Signals bei verschiedenen Wassergeschwindigkeiten konnten wir die Wassergeschwindigkeit bei maximaler Pumpenleistung auf $\SI[per-mode=symbol]{3.10(24)}{\meter\per\second}$ in der Manipulatorspule bestimmen. Daraus errechneten wir die Relaxationszeit $T_1$ der Protonen bei Raumtemperatur zu \kor{$4.6^{+1.6}_{-1.5}\,\SI{}{1\per\second}$} ~\eqref{auswertung7}. Die Untersuchung der Relaxationszeit für verschiedene Wassertemperaturen zeigt ein uns unerwartetes Ergebnis, dass die Protonen bei höherer Wassertemperatur langsamer relaxieren. Insgesamt konnten wir die Magnetisierung und deren Manipulation  untersuchen und die vorhergesagt Dynamik zu großen Teilen bestätigen. 
 
 \small
 \bibliographystyle{dinat}
