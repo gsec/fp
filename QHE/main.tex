@@ -315,13 +315,13 @@ Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ 
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
 Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. 
 \kor{
-An den linearen Teil der Messdaten von \SI{0}{\tesla} \--- \SI{1}{\tesla} wurde eine Ursprungsgerade gefittet, wobei sich die Fehlergeraden aus dem Fehler in der Widerstandsmessung von \SI{2}{\percent} ergeben.
+An den linearen Teil der Messdaten von \SI{0}{\tesla} \--- \SI{1}{\tesla} wurde eine Ursprungsgerade gefittet, wobei sich die Fehlergeraden aus dem Fehler in der Widerstandsmessung von \SI{2}{\percent} ergeben. Zur besseren Darstellung wird in Abbildung~\ref{hallsteigung} nur der Bereich von $0\---\SI{1.3}{\tesla}$ gezeigt.
 }
 %Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Hallsteigung.pdf}
-		\caption{Hall-Widerstand als Funktion des Magnetfeldes. An die Kurve wird nach Augenmaß eine Ursprungsgerade angelegt.}
+		\caption{\kor{Hall-Widerstand als Funktion des Magnetfeldes. Fit- und Fehlergeraden sind an die Daten bei kleinen Magnetfeldern angelegt.}\note{Fehlerbalken an Wert} \note{Fit an erste Messdaten - Hysterese}}
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
@@ -576,7 +576,7 @@ k_{\rm F}&=\sqrt{2 \pi N_\mathrm{S}}\\
 v_{\rm F}&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_\mathrm{S}}
 \end{align}
 Für nicht verschwindende Magnetfelder ist zu bemerken, dass je nach Eichung der Wellenwektor $\vec{k}$ keine sinnvolle Quantenzahl mehr darstellt und die Energiedispersion durch die Laundau-Quantenzahlen beschrieben wird.
-Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
+Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie/ -Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
 
 \begin{table}[htp]
 	\begin{center}
@@ -590,7 +590,7 @@ Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwi
 			1.5 &11.71(36)	&0.1437(44)&	248.3(77)\\
 			\hline
 		\end{tabular}
-		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen}
+		\caption{Fermi-Energie/ -Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen. \note{muss nur noch mit richtigen $N_s$ Werten korrigiert werden.}}
 		\label{fermitabelle}
 	\end{center}
 \end{table}
@@ -633,12 +633,12 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 		\label{spinaufspaltung}
 	\end{center}
 \end{figure}
-\begin{equation}
-M=|0.160(80)-0.560(80)|=0.40(11).
-\end{equation}
+\kor{\begin{equation}
+M=\left| 0.162(80)-0.559(81)\right|=0.40(11).
+\end{equation}}
 Daraus ergibt sich nach \eqref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
 \begin{equation}
-g=\frac{M \hbar e}{\mu_{\rm B} m_{\rm c}}=-0.80\pm29.
+g=\frac{M \hbar e}{\mu_{\rm B} m_{\rm c}}=-0.80\pm29 \note{noch nicht berechnet}.
 \end{equation}
 Diese Wert ist fast doppelt so hoch, wie der in der Literatur \citep{anleitung} angegebene Wert von $g=-0.44$ im Einteilchenbild. Damit wird deutlich, dass Mehrteilcheneffekte beim Quanten-Hall-Effekt nicht zu vernachlässigen sind und das magnetische Moment der Elektronen im Kollektiv stärker ist als die Summe der Einzelmagnetisierungen.
 Die Bestimmung der Ladungsträgerdichte aus diesem Plot ist mathematisch ähnlich, wenn auch ungenauer, zur Bestimmung mittels Schubnikow-de-Haas-Oszillationen.
