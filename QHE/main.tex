@@ -313,7 +313,11 @@ Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ 
 \subsection{Bestimmung der Oberflächenladungsträgerdichte}
 \label{a2}
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
-Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
+Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. 
+\kor{
+An den linearen Teil der Messdaten von \SI{0}{\tesla} \--- \SI{1}{\tesla} wurde eine Ursprungsgerade gefittet, wobei sich die Fehlergeraden aus dem Fehler in der Widerstandsmessung von \SI{2}{\percent} ergeben.
+}
+%Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Hallsteigung.pdf}
@@ -321,11 +325,11 @@ Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arte
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
-Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante $A_{\rm H}=\SI[per-mode=symbol]{1775(100)}{\ohm\per\tesla}$ und aus dieser die Oberflächenladungsdichte
-\begin{equation}
-N_{\rm S}=\frac{1}{A_{\rm H} e} = \SI{3.52(20)e11}{\per\square\centi\meter}.
+Als Steigung erhalten wir bei $\SI{4.2}{\kelvin}$ die Hall-konstante \kor{$A_{\rm H}=\SI[per-mode=symbol]{1741(34)}{\ohm\per\tesla}$} und aus dieser die Oberflächenladungsdichte
+\kor{\begin{equation}
+N_{\rm S}=\frac{1}{A_{\rm H} e} = \SI{3.584(70)e11}{\per\square\centi\meter}.
 \label{ns1}
-\end{equation}
+\end{equation}}
 
 Die Ergebnisse der anderen Temperaturen sind in Tabelle \ref{nswerte} aufgeführt.
 Verglichen mit den Fehlern der Geradensteigung unterscheiden sich die einzelnen Steigungen bei unterschiedlichen Temperaturen nur wenig. Dies ist intuitiv klar, da die Ladungsträgerdichte beim untersuchten 2\,DEG des GaAs/AlGaAs-System nicht von der Temperatur abhängen sollte.
@@ -428,10 +432,10 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 			\hline
 			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S2}$ & $N_{\rm S3}$ & $\overline{N_{\rm S}}$\\
 			\hline
-			4.2 & 3.52(20) & \kor{3.45(12)} & 3.517(79) & 3.455(93)\\
-			3.0 & 3.61(20) & \kor{3.37(16)} & 3.517(79) & 3.48(10)\\
-			2.1 & 3.58(20) & \kor{3.41(14)} & 3.517(79) & 3.447(97)\\
-			1.5 & 2.58(20) & \kor{3.42(15)} & 3.517(79) & 3.29(10)\\
+			4.2 & \kor{3.584(70)} & \kor{3.45(12)} & 3.517(79) & 3.455(93)\\
+			3.0 & \kor{3.634(71)} & \kor{3.37(16)} & 3.517(79) & 3.48(10)\\
+			2.1 & \kor{3.637(71)} & \kor{3.41(14)} & 3.517(79) & 3.447(97)\\
+			1.5 & \kor{3.636(71)} & \kor{3.42(15)} & 3.517(79) & 3.29(10)\\
 			\hline
 			\hline
 			 &  &  &  &3.419(98)\\
