@@ -29,6 +29,7 @@ delta=0.005
 ax = fig.add_subplot(111)
 ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $4.2\,\mathrm{K}$')
 ax.plot([0,0],[0,0], "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
+ax.plot([0,0],[0,0], "g", label=u'abgelesene Stellen')
 ax.plot([0.885485,0.885485],[(1.180796+1.118072)/2,1.24356], "g:")
 ax.plot([0.885485-delta,0.885485+delta],[(1.180796+1.118072)/2,(1.180796+1.118072)/2], "g")
 ax.plot([0.885485-delta,0.885485+delta],[1.24356,1.24356], "g")

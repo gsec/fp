@@ -482,14 +482,14 @@ Für den Fehler der Längswiderstände können die Fehler in den gemessenen Span
 \subsection{Zyklotronmasse}
 \label{a4}
 
-In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein sind. \kor{In unserem Fall wählen wir die Oszillationen um \SI{1}{\tesla}, was aus Versuchsteil~\ref{a1} etwa 14 besetzte Landau-Niveaus entspricht.} So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
+In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein sind. So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
 \begin{equation}
 	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\mathrm{arcosh}\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
 	\label{eq:zyklotronmasse}
 \end{equation}
 bestimmt werden, wobei $A(B,T,\tau)$ die Amplitude der Oszillation der Längsspannung entspricht.
 
-Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. \kor{Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und sind für das Temperaturpaar (\SI{4.2}{\kelvin},\SI{2.1}{\kelvin}) in Abbildung~\ref{zyklotronmasse} und für die Temperaturpaare (\SI{3.0}{\kelvin},\SI{1.5}{\kelvin}) in Abbildung~\ref{fig:zyklotronmasse2}, abgebildet.}
+Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. \kor{Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und sind für das Temperaturpaar (\SI{4.2}{\kelvin},\SI{2.1}{\kelvin}) in Abbildung~\ref{fig:zyklotronmasse} und für die Temperaturpaare (\SI{3.0}{\kelvin},\SI{1.5}{\kelvin}) in Abbildung~\ref{fig:zyklotronmasse2}, abgebildet.}
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/11-4,2-2,1-zyklotron-B.pdf}
@@ -497,53 +497,62 @@ Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Te
 		\label{fig:zyklotronmasse}
 	\end{center}
 \end{figure}
-Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragung über $1/B$ verändert den Wert der Amplituden nicht. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
+\kor{
+Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} und Abbildung~\ref{fig:zyklotronmasse2} das Amplitudenverhältnis an drei verschiedenen Stellen um \SI{1}{\tesla} ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragung über $1/B$ liefert die selben Amplitudenwerte und werden daher nicht extra aufgeführt. Der Bereich um \SI{1}{\tesla} entspricht in unserem Fall nach Versuchsteil~\ref{a1} etwa 14 besetzte Landau-Niveaus, was den maximal sichtbaren Niveaus entspricht. Zudem sind Amplituden bei niedrigeren $B$-Feldwerten, aufgrund ihrer Größe, leider nicht mehr sinnvoll ablesbar, wie in Abbildung~\ref{fig:zyklotronmasse} zu erkennen ist.
+}
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/13-3,0-1,5-zyklotron-B.pdf}
-		\caption{Auftragung der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
+		\caption{Auftragung der Längsspannung über dem Magnetfeld bei $T=\SI{3.0}{\kelvin}$ und \SI{1.5}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
 		\label{fig:zyklotronmasse2}
 	\end{center}
 \end{figure}
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{c|ccc}
+		\kor{\begin{tabular}{c|ccc}
 			\hline
 			$T[\mathrm{K}]$ & $\frac{A(B,T_2)}{A(B,T_1)}$ & $B[\mathrm{T}]$ & $\frac{m_{\rm c}}{m_{\rm e}}$\\
 			\hline
-			 		& 0.295 & 0.885 & 0.0412 \\
-			4.2/2.1 & 0.498 & 1.002 & 0.0358 \\
-			 		& 0.758 & 1.153 & 0.0250 \\
+			 		& 2.222 & 0.885 & 0.0412 \\
+			4.2/2.1 & 1.674 & 1.002 & 0.0358 \\
+			 		& 1.232 & 1.153 & 0.0250 \\
 			\hline
-					& 0.570 & 0.794 & 0.0418 \\
-			3.0/1.5 & 0.761 & 0.886 & 0.0310 \\
-					& 0.972 & 1.003 & 0.0108 \\
-		\end{tabular}
+					& 1.477 & 0.794 & 0.0339 \\
+			3.0/1.5 & 1.206 & 0.886 & 0.0254 \\
+					& 1.011 & 1.003 & 0.0067 \\
+		\end{tabular}}
 		\caption{Berechnung des Zyklotronmassenverhältnisses.}
 		\label{tab:zyklotronmasse}
 	\end{center}
 \end{table}
 
-Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
-\begin{align}
-	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.03402 \pm 0.0058 \label{zyklotron1}\\
-	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.0278 \pm 0.011 \label{zyklotron2}
-\end{align}
-ergeben. Das gesamte gemittelte Massenverhältnis ist somit
-\begin{equation}
-	\frac{m_{\rm c}}{m_{\rm e}} = 0.0318 \pm 0.0076.
-	\label{zyklotronmasse}
-\end{equation}
-Die Ablesefehler der Amplituden und des $B$-Feldes der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte werden vernachlässigt, da der Fehler der korrekten Temperaturbestimmung deutlich höher eingeschätzt wird.
-Wie sich eine Abweichung von der Bedingung $T_{1}=2T_{2}$ auf die Massenbestimmung auswirkt ist im Detail nicht bekannt, der Fehler kann jedoch aus Diskrepanz der Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt werden.
+\kor{
+Die erhaltenen Werte für das Verhältnis der Zyklotronmasse zur Elektronenmasse aus Tabelle~\ref{tab:zyklotronmasse}, weichen stark voneinander ab. Wir erkennen eine systematische Abweichung der Werte hin zu höheren Magnetfeldern, wobei wir theoretisch gleichbleibende Werte erwartet hätten. Allerdings gilt, die zum auswerten verwendete Formel~\eqref{eq:zyklotronmasse} streng nur für die oben genannten Bedingungen. Da wir nicht wissen wie ungenau die Formel bei geringen Abweichungen ist und wann die Bedingung $E_{\rm F} \gg \hbar\omega_{\rm c}$ erfüllt ist, müssen wir anhand der Ergebnisse davon ausgehen, dass die genannten Bedingungen, im betrachteten Bereich, nicht erfüllt waren. Folglich kann eine Fehlerabschätzung der Werte ebenfalls nicht sinnvoll betrachtet werden.
 
-Für GaAs ist die Zyklotronmasse gleich der effektiven Masse. Somit können wir unseren Wert mit dem Literaturwert für die effektive Masse von GaAs nach~\citet{saarland} vergleichen.
+Allerdings können wir unsere Werte einen Vergleich mit der Literatur unterziehen. Für GaAs ist die Zyklotronmasse gleich der effektiven Masse und ist nach~\citet{saarland} gegeben durch
 \begin{equation}
-	\frac{m^*}{m_{\rm e}} = 0.067
+	\frac{m^*}{m_{\rm e}} = 0.067.
 \end{equation}
 
-Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$, welche im Experiment nicht sehr exakt realisiert werden konnte.
+Der Bestwert aus unserer Messung ergibt sich für das Temperaturpaar $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ bei einem Magnetfeld von \SI{0.885}{\tesla} zu $m_{\rm c}/m_{\rm e} = 0.0412$. Der Wert besitzt immer noch eine große Abweichung vom Literaturwert. Folglich sind auch hier die nötigen Bedingungen noch nicht erfüllt gewesen um die Zyklotronmasse mit Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} zu bestimmen.
+
+}
+
+%Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
+%\begin{align}
+%	\SI{4.2}{\kelvin}\text{ und }\SI{2.1}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.03402 \pm 0.0058 \label{zyklotron1}\\
+%	\SI{3.0}{\kelvin}\text{ und }\SI{1.5}{\kelvin}: && \frac{m_{\rm c}}{m_{\rm e}} &= 0.0278 \pm 0.011 \label{zyklotron2}
+%\end{align}
+%ergeben. Das gesamte gemittelte Massenverhältnis ist somit
+%\begin{equation}
+%	\frac{m_{\rm c}}{m_{\rm e}} = 0.0318 \pm 0.0076.
+%	\label{zyklotronmasse}
+%\end{equation}
+%Die Ablesefehler der Amplituden und des $B$-Feldes der in Tabelle~\ref{tab:zyklotronmasse} aufgetragenen Werte werden vernachlässigt, da der Fehler der korrekten Temperaturbestimmung deutlich höher eingeschätzt wird.
+%Wie sich eine Abweichung von der Bedingung $T_{1}=2T_{2}$ auf die Massenbestimmung auswirkt ist im Detail nicht bekannt, der Fehler kann jedoch aus Diskrepanz der Werte in~\eqref{zyklotron1} und~\eqref{zyklotron2} für die Temperaturpaare aus Standardabweichung der Werte in Tabelle~\ref{tab:zyklotronmasse} bestimmt werden.
+
+%Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der richtigen Größenordnung liegen, allerdings mit der effektiven Masse von GaAs nicht vereinbar sind. Die verwendete Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} ist jedoch nur gültig für die Bedingung $T_1=2T_2$, welche im Experiment nicht sehr exakt realisiert werden konnte.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %

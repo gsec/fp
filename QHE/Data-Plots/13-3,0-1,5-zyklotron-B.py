@@ -29,6 +29,7 @@ delta=0.005
 ax = fig.add_subplot(111)
 ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $3.0\,\mathrm{K}$')
 ax.plot([0,0],[0,0], "r", label=u'L\xe4ngsspannung $1.5\,\mathrm{K}$')
+ax.plot([0,0],[0,0], "g", label=u'abgelesene Stellen')
 ax.plot([0.792618,0.792618],[0.420798+0.65,(0.32332+0.65+0.289283+0.65)/2], "g:")
 ax.plot([0.792618-delta,0.792618+delta],[0.420798+0.65,0.420798+0.65], "g")
 ax.plot([0.792618-delta,0.792618+delta],[(0.32332+0.65+0.289283+0.65)/2,(0.32332+0.65+0.289283+0.65)/2], "g")
@@ -43,7 +44,7 @@ ax.plot([1.00299-delta,1.00299+delta],[(0.343169+0.65+0.345374+0.65)/2,(0.343169
 
 ax.yaxis.label.set_color('blue')
 ax.set_xlim(0.66,1.1)
-ax.set_ylim(0.9,1.9)
+ax.set_ylim(0.9,1.5) #ax.set_ylim(0.9,1.9)
 
 #ax.set_xlim(0.9,1.1)
 #ax.set_ylim(1,2)
@@ -66,7 +67,7 @@ ax2.plot([1.00355-delta,1.00355+delta],[0.745995,0.745995], "g")
 ax2.plot([1.00355-delta,1.00355+delta],[(0.28649+0.323747)/2,(0.28649+0.323747)/2], "g")
 ax2.yaxis.label.set_color('red')
 ax2.set_xlim(0.66,1.1)
-ax2.set_ylim(0.25,1.25)
+ax2.set_ylim(0.25,0.9) #ax2.set_ylim(0.25,1.25)
 
 #ax2.set_xlim(0.9,1.1)
 #ax2.set_ylim(0,1)
