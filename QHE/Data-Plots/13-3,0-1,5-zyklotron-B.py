@@ -9,7 +9,7 @@ from numpy import *
 
 rc('font', family = 'serif', serif = 'STIXGeneral')
 fig = plt.figure(num=None, figsize=(7, 5), dpi=150, facecolor='w', edgecolor='k')
-
+fig.suptitle(u'Amplitudenverh\xe4ltnisse $T=3.0\,\mathrm{K}$ und $T=1.5\,\mathrm{K}$ \xfcber $B$', fontsize=14, fontweight='bold')
 #def f(U):
 #   return 297.0 -25.87*U + 1.908*U**2 - 0.4020*U**3;
 
@@ -24,14 +24,25 @@ B2 = data2[:4706,1]
 
 U_xx = data[:4795,2]
 U_xx2 = data2[:4706,2]
+delta=0.005
 
 ax = fig.add_subplot(111)
-ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $4.2\,\mathrm{K}$')
-ax.plot([0.792618,0.792618],[0.420798+0.65,0.32332+0.65], "g:")
-ax.plot([0.885362,0.885362],[0.564149+0.65,0.345374+0.65], "g:")
-ax.plot([1.00299,1.00299],[0.789982+0.65,0.343169+0.65], "g:")
+ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $3.0\,\mathrm{K}$')
+ax.plot([0,0],[0,0], "r", label=u'L\xe4ngsspannung $1.5\,\mathrm{K}$')
+ax.plot([0.792618,0.792618],[0.420798+0.65,(0.32332+0.65+0.289283+0.65)/2], "g:")
+ax.plot([0.792618-delta,0.792618+delta],[0.420798+0.65,0.420798+0.65], "g")
+ax.plot([0.792618-delta,0.792618+delta],[(0.32332+0.65+0.289283+0.65)/2,(0.32332+0.65+0.289283+0.65)/2], "g")
+
+ax.plot([0.885362,0.885362],[0.564149+0.65,(0.345374+0.65+0.32332+0.65)/2], "g:")
+ax.plot([0.885362-delta,0.885362+delta],[0.564149+0.65,0.564149+0.65], "g")
+ax.plot([0.885362-delta,0.885362+delta],[(0.345374+0.65+0.32332+0.65)/2,(0.345374+0.65+0.32332+0.65)/2], "g")
+
+ax.plot([1.00299,1.00299],[0.789982+0.65,(0.343169+0.65+0.345374+0.65)/2], "g:")
+ax.plot([1.00299-delta,1.00299+delta],[0.789982+0.65,0.789982+0.65], "g")
+ax.plot([1.00299-delta,1.00299+delta],[(0.343169+0.65+0.345374+0.65)/2,(0.343169+0.65+0.345374+0.65)/2], "g")
+
 ax.yaxis.label.set_color('blue')
-ax.set_xlim(0.75,1.1)
+ax.set_xlim(0.66,1.1)
 ax.set_ylim(0.9,1.9)
 
 #ax.set_xlim(0.9,1.1)
@@ -42,11 +53,19 @@ ax.set_ylabel(u"L\xe4ngsspannung $U_{\mathrm{xx,4.2}}$")
 
 ax2 = ax.twinx()
 ax2.plot(B2, U_xx2, "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
-ax2.plot([0.796011,0.796011],[0.51469,0.343928], "g--")
-ax2.plot([0.887058,0.887058],[0.610938,0.323747], "g--")
-ax2.plot([1.00355,1.00355],[0.745995,0.28649], "g--")
+ax2.plot([0.796011,0.796011],[0.51469,(0.343928+0.347239)/2], "g--")
+ax2.plot([0.796011-delta,0.796011+delta],[0.51469,0.51469], "g")
+ax2.plot([0.796011-delta,0.796011+delta],[(0.343928+0.347239)/2,(0.343928+0.347239)/2], "g")
+
+ax2.plot([0.887058,0.887058],[0.610938,(0.323747+0.343928)/2], "g--")
+ax2.plot([0.887058-delta,0.887058+delta],[0.610938,0.610938], "g")
+ax2.plot([0.887058-delta,0.887058+delta],[(0.323747+0.343928)/2,(0.323747+0.343928)/2], "g")
+
+ax2.plot([1.00355,1.00355],[0.745995,(0.28649+0.323747)/2], "g--")
+ax2.plot([1.00355-delta,1.00355+delta],[0.745995,0.745995], "g")
+ax2.plot([1.00355-delta,1.00355+delta],[(0.28649+0.323747)/2,(0.28649+0.323747)/2], "g")
 ax2.yaxis.label.set_color('red')
-ax2.set_xlim(0.75,1.1)
+ax2.set_xlim(0.66,1.1)
 ax2.set_ylim(0.25,1.25)
 
 #ax2.set_xlim(0.9,1.1)
@@ -55,8 +74,7 @@ ax2.set_ylim(0.25,1.25)
 
 ax2.set_ylabel(u"L\xe4ngsspannung $U_{xx,2.1}$")
 
-ax.legend(loc=0)
-ax2.legend(loc=0)
+ax.legend(loc=2)
 
 # y = log(data[:,1]/(8e-3*1.63e-3*2.74e-3))
 # y = log(data[:,1]*(1.63e-3*2.74e-3)/(8e-3*4.2e-3))
@@ -85,6 +103,6 @@ ax2.legend(loc=0)
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-#fig.savefig("11-4,2-2,1-zyklotron-B.pdf")
+fig.savefig("13-3,0-1,5-zyklotron-B.pdf")
 
 show()

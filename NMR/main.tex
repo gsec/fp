@@ -9,7 +9,7 @@
 \usepackage[ngerman]{babel} 
 
 
-%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%1
 
 \usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
 \sisetup{       
@@ -184,6 +184,7 @@ Befinden sich die Protonen nicht dauerhaft im zirkularen polarisiertem Magnetfel
 In der Realität kämpft man mit zwei Herausforderungen: Erstens entspricht die Anregungsfrequenz oft nicht der Frequenz, mit der die Protonen um die $z$-Achse präzedieren und zum andern ist die Zeit $t_\mathrm{Spule}$ aufgrund unterschiedlicher Geschwindigkeiten der Protonen nicht identisch. Die Abweichung der Anregungsfrequenz kann zumindest für unendlich große Relaxationszeiten analytisch gelöst werden. Die normierte $z$-Komponente der Magnetisierung ergibt sich dabei zu
 \begin{align}
 	\frac{M_z(\Phi, \nu)}{M(t=0)}=\frac{\left[ u(\nu)^2+\cos(\Phi)\sqrt{1+u(\nu)^2} \right]}{1+u(\nu)^2},
+	\label{theospin}
 \end{align}
 wobei $u(\nu)$ die Abweichung von der Resonanzfrequenz berücksichtigt.
 Die unterschiedliche Verweildauer der Protonen in der Spule kann bei turbulenter Strömung mit einer Gaußverteilung des Drehwinkels berücksichtigt werden. 
@@ -264,7 +265,7 @@ Die Einstrahlspule im Manipulator besitzt einen vernachlässigbar kleinen Innenw
 \end{figure}
 
 Die Werte in Abbildung~\ref{fig.eichfaktor} sind mit den entsprechenden Fehlern in der Amplitude des Funktionsgenerators (\SI{2}{\percent}) aufgetragen. Zur Bestimmung der Steigung haben wir eine ausgleichende Gerade mit Fehlergeraden an die Daten gelegt. Die Fehler des Fits können vernachlässigt werden.
-Für den gemessenen Eichfaktor ergibt sich somit ??
+Für den gemessenen Eichfaktor ergibt sich somit 
 \begin{equation}
 	f_{\rm ES} = \frac{U_{\rm ES}}{U_{\rm FG}} = \kor{\SI{0.967(19)}{}}
 	\label{eq.eichfaktor}
@@ -329,7 +330,7 @@ Der Fehler der Resonanzfrequenz ergibt sich auch der Unsicherheit der Zeitdiffer
 		\label{resonanzfrequenz}
 	\end{center}
 \end{figure}
-?? Die Energieaufspaltung und die Magnetfeldstärke des Dauermagneten ergeben sich nun zu
+Die Energieaufspaltung und die Magnetfeldstärke des Dauermagneten ergeben sich nun zu
 \begin{align}
 	\Delta E =h\nu_{\mathrm{res}}=\SI[separate-uncertainty=false]{19.48854(83) e-9}{\electronvolt}
 \end{align}
@@ -348,8 +349,7 @@ und
 \end{figure}
 
 Der Verlauf lässt sich verstehen, wenn man bedenkt, dass sich während dem Resonanzfall die Polarisation ihrem Gleichgewichtszustand annähert. Dadurch schwächt sich die Polarisation und damit die Signalstärke schnell ab, wird aber durch nachfließendes Wasser erneuert.
-Während bei kleinen Zeitdifferenzen nur wenig polarisiertes Wasser in die Spule nachfließen konnte und wir ein schwaches Signal messen, sättigt das Signal bei großen Zeitabständen.
-}
+Während bei kleinen Zeitdifferenzen nur wenig polarisiertes Wasser in die Spule nachfließen konnte und wir ein schwaches Signal messen, sättigt das Signal bei großen Zeitabständen.}
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -374,7 +374,7 @@ Um die Linearität des Messsignals in Abhängigkeit vom Magnetfeld zu untersuche
 	\end{center}
 \end{figure}
 
-Mit Abbildung~\ref{fig.polarisationsstrom} können wir die Linearität des Messsignals $S2$ zur Polarisationsstromstärke $I_{\rm pol}$ sehr gut bestätigen. Die Fehler im $B$-Feld ergeben sich aus der Ungenauigkeit der Strommessung am Polarisator von \SI{2}{\percent} und der Bestimmung des Magnetfeldes mit der Hallsonde. ?? Der Fehler im Messsignal schätzen wir auf \SI{4}{\percent}. Durch die Anzahl der Messungen können statistische Schwankungen vernachlässigt werden. Der Fehler resultiert somit nur aus der Ungenauigkeit in der Einstellung der Resonanz, sowie der Phase des S/H-Verstärkers.
+Mit Abbildung~\ref{fig.polarisationsstrom} können wir die Linearität des Messsignals $S2$ zur Polarisationsstromstärke $I_{\rm pol}$ sehr gut bestätigen. Die Fehler im $B$-Feld ergeben sich aus der Ungenauigkeit der Strommessung am Polarisator von \SI{2}{\percent} und der Bestimmung des Magnetfeldes mit der Hallsonde. Der Fehler im Messsignal schätzen wir auf \SI{4}{\percent}. Durch die Anzahl der Messungen können statistische Schwankungen vernachlässigt werden. Der Fehler resultiert somit nur aus der Ungenauigkeit in der Einstellung der Resonanz, sowie der Phase des S/H-Verstärkers.
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Messung der Spindrehung im Störfeld}
@@ -408,8 +408,7 @@ Die Resonanzfrequenz entspricht der Präzessionsfrequenz der Protonen in einer F
 \end{align}
 Diese Feldstärke liegt in der Größenordnung der Erd-Magnetfeldstärke. 
 \kor{Aus der Verschiebung lässt sich außerdem ableiten, dass das Messsignal des Analysators der eingestellten Frequenz am Manipulator etwa $3$ Sekunden nacheilt. Dies lässt sich zum Teil damit erklären, dass das Wasser eine gewisse Zeit vom Manipulator zum Analysator benötigt.
-Jedoch zeigt die in \ref{wg} berechnete Wassergeschwindigkeit, dass diese nicht alleine für den Verzug verantwortlich sein kann. Was im Messaufbau noch zu einem Verzug führen kann, konnten wir nicht klären.
-}
+Jedoch zeigt die in \ref{wg} berechnete Wassergeschwindigkeit, dass diese nicht alleine für den Verzug verantwortlich sein kann. Was im Messaufbau noch zu einem Verzug führen kann, konnten wir nicht klären.}
 
 Im Magnetfeld des Raumes soll nun untersucht werden, wie sich das Messsignal in Abhängigkeit der Einstrahl-Frequenz und der /-Intensität verhält.
 Wir messen für Spannungen von $\SI{10}{\milli\volt}$ bis $\SI{100}{\milli\volt}$ bei Frequenzen von $\SI{1200}{\hertz}$ bis $\SI{1800}{\hertz}$.
@@ -421,7 +420,7 @@ Die Messpunkte sind in \cref{phasenraum} dargestellt.
 		\label{phasenraum}
 	\end{center}
 \end{figure}
-?? Man erkennt, dass sich die Intensität des Messsignals bei etwa $\SI{45}{\milli\volt}$ Einstrahlamplitude komplett das Vorzeichen gewechselt hat. 
+Man erkennt, dass sich die Intensität des Messsignals bei etwa $\SI{45}{\milli\volt}$ Einstrahlamplitude komplett das Vorzeichen gewechselt hat. 
 Die Analysatorspule gewinnt an diesem Punkt Energie aus den polarisierten Protonen, deren Spin von der Einstrahlspule zuvor in die höherenergetische Richtung gedreht wurde.
 Wir überprüfen, ob sich der Spin bei den verwendeten Einstellungen tatsächlich um $180$\textdegree\ dreht, indem wir folgende Überlegung machen:
 Durchquert ein Spin eine Leiterschleife, deren Magnetfeld mit der Resonanzfrequenz oszilliert, dann wird der Spin um
@@ -464,45 +463,59 @@ Die Messung auf der Resonanzfrequenz soll nun genauer untersucht werden.
 Vor dem Plotten werden die Messignale durch die Abbildung $S=k(1-\sqrt{1+l \Delta n})$ auf die Populationsunterschiede für Spin-up und Spin-down umgerechnet.
 So wird der Einfluss des Detektors berücksichtigt.
 Die beste Symmetrisierung ergibt die Wahl der Parameter zu $k=0.85$ und $l=1.14$. 
-Die symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer symmetrischen Kurve geplottet.
+
+\kor{
+Da wir die Messung sowohl von hohen zu niedrigen, als auch von niedrigen zu hohen Intensitäten durchgeführt haben, können wir die Verschiebung der Datenpunkte wie in \ref{auswertung5} aufheben. Außerdem messen wir am Anfang der Messung ein Artefakt, das vermutlich dadurch entstanden ist, dass die Einstrahlspule kurz vor der Messung bereits aktiv war. Wir entscheiden uns daher hier den Sweep von hohen zu niedrigen Einstrahlintensitäten zu plotten und finden deshalb das Artefakt bei hohen Intensitäten.
+Die symmetrisierten Messwerte sind in \cref{symmetr} zusammen mit einer theoretisch erwarteten Kurve gezeichnet. Die theoretische Kurve beschreibt die Funktion \ref{theospin} im Resonanzfall mit den Parametern $c=0.27$ und dem Parameter $p=70$, der als Proportionalitätskonstante zwischen der Einstrahlintensität und dem Spindrehwinkel den Einfluss der Wassergeschwindigkeit und der Spulengeometrie erfasst.
 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/11-Spindrehkurve.pdf}
-		\caption{?? Symmetrisierte Daten im Vergleich zur Theorie.}
+		\caption{Symmetrisierte Messpunkte im Vergleich mit einer theoretisch erwarteten Spinkurve.}
 		\label{symmetr}
 	\end{center}
 \end{figure}
 
-Wir finden keine gute Übereinstimmung mit der Theorie.??
+Die Theorie beschreibt unser Experiment mit den verwendeten Parametern nur qualitativ und wir finden kein anderes Parameterset, dass unser Experiment genauer beschreibt.
 Die Theorie Berücksichtigt nach \cite{anleitung} unterschiedliche Wassergeschwindigkeiten in der Manipulatorspule was den Abfall der Intensitäten bei größeren Drehwinkeln erklärt.
 Auffällig ist eine sich ändernde Periodendauer der Oszillation der experimentellen Daten. 
-Diese kann theoretisch nur erklärt werden, wenn sich während des Durchfahrens der Einstrahlintensität das Verhältnis zwischen Resonanzfrequenz und Einstrahlfrequenz verändert.
-?? Die beschriebene Symmetrisierung der Daten lässt den Nullpunkt unverändert. 
+Dies wird vom theoretischen Modell nicht erfasst, sondern kann theoretisch nur erklärt werden, wenn sich während des Durchfahrens der Einstrahlintensität das Verhältnis zwischen Resonanzfrequenz und Einstrahlfrequenz verändert.
+}
+
+Die beschriebene Symmetrisierung der Daten lässt den Nullpunkt unverändert. 
 Trotzdem ist eine unterschiedlich lange obere und untere Halbperiode zu erkennen.
 Dieser Effekt wird ebenfalls von der theoretischen Kurve nicht erfasst und könnte mit einem Signaloffset des Analysators erklärt werden.
 Ein anderer Schnitt durch den Phasenraum ist in \cref{halbwertsbreite} gezeichnet.
 \begin{figure}[htp]
 	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/13-Halbwertsfrequenz.pdf}
-		\caption{Schnitt durch Phasenraum im Punkt $\SI{45}{\milli\volt}$.}
+		\includegraphics[width=\columnwidth]{Data-Plots/13-Halbwertsfrequenz180.pdf}
+		\caption{Schnitt durch Phasenraum mit Einstrahlintensität $\SI{45}{\milli\volt}$.}
 		\label{halbwertsbreite}
 	\end{center}
 \end{figure}
-??
+
 Die Daten wurden wieder mit den oben bestimmten $k$- und $l$-Parametern symmetrisiert.
 Die experimentelle Halbwertsbreite beträgt
 \begin{align}
 	\nu_\mathrm{Halb}= \SI{134(3)}{\hertz}.
 \end{align}
-Eine theoretische Kurve kann nur in ungenügendem Maße den experimentellen Verlauf beschreiben.
-Der experimentell bestimmte Peak ist deutlich schmäler ?? als der theoretische und es sind keine Oszillationen bei größeren Frequenzen zu sehen.
+\kor{
+Der theoretisch erwartete Verlauf wurde für die Resonanzfrequenz $\nu_\mathrm{res}=\SI{1510}{\hertz}$ und einer einstrahlenden Magnetfeldstärke von $\SI{1.1}{\micro\tesla}$ gefittet.
+Abweichungen des Experiments von der theoretisch erwarteten Kurve sind zum einen, dass der Peak der Resonanzfrequenz im Experiment bei gleicher Höhe eine geringere Halbwertsbreite besitzt. Außerdem fehlen die von der Theorie vorhergesagten Oszillationen für weiter abweichende Frequenzen ganz.}
 Während die Theorie von einem homogenen Magnetischen Feld ausgeht, sind die Protonen im Experiment, während sie sich der Einstrahlspule nähern, auch schwächeren Magnetfeldern ausgesetzt. 
-In diesen schwächeren Magnetfeldern, wirkt sich eine Abweichung der Einstrahlfrequenz stärker auf das Signal aus, was zu schmäleren Peaks führt.
-Die Theorie beschreibt deshalb diesen Resonanzpeak nur ungenau.\\
-Ebenfalls keine Übereinstimmung zwischen Theorie und Experiment finden wir für den Fall der $360$\textdegree -Drehung.
-Hier sagt die Theorie ein Minimum des Signals bei der Resonanzfrequenz voraus. 
-Wir messen aber bei allen Einstrahlintensitäten ein maximales Signal bei der Resonanzfrequenz.
+In diesen schwächeren Magnetfeldern, wirkt sich eine Abweichung der Einstrahlfrequenz stärker auf das Signal aus, was zu schmäleren Peaks führt.\\
+\kor{Für den Fall einer  $360$\textdegree -Drehung sagt die Theorie ein Minimum des Signals bei der Resonanzfrequenz voraus. Wir messen aber bei allen Einstrahlintensitäten ein maximales Signal bei der Resonanzfrequenz. Die theoretische Kurve wurde mit den gleichen Parametern wie in \ref{halbwertsbreite} berechnet.
+Die theoretischen und experimentellen Daten hierzu in \ref{halbwertsbreite2} geplottet.}
+
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Data-Plots/13-Halbwertsfrequenz360.pdf}
+		\caption{Schnitt durch Phasenraum  mit Einstrahlintensität $\SI{90}{\milli\volt}$.}
+		\label{halbwertsbreite2}
+	\end{center}
+\end{figure}
+
 Obwohl die Theorie nicht alle Einzelheiten des Experimentes berücksichtigt, hilft sie uns dennoch, die Vorgänge bei der Manipulation von Spins in ihren Grundzügen zu verstehen.
 
 % ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

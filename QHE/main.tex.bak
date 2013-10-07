@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -310,13 +310,14 @@ Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ 
 %Der Vorwiderstand ist demnach nach unseren erhaltenen Wert circa \SI{18}{\ohm} größer als angegebenen. Diese Abweichung wäre völlig im Rahmen der Fehlertoleranz des Widerstandes ($<\SI{1}{\percent}$).
 
 
-\subsection{Bestimmung der Oberflächenladungsdichte}
+\subsection{Bestimmung der Oberflächenladungsträgerdichte}
+\label{a2}
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
-Die Oberflächenladungsdiche des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
+Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/02-Hallsteigung.pdf}
-		\caption{Hall-Widerstand als Funktion des Magnetfeldes. An die Kurve wird nach Augenmaß eine Ursprungsgerade angelegt}.
+		\caption{Hall-Widerstand als Funktion des Magnetfeldes. An die Kurve wird nach Augenmaß eine Ursprungsgerade angelegt.}
 		\label{hallsteigung}
 	\end{center}
 \end{figure}
@@ -344,12 +345,12 @@ Die aus den ausgelesenen $B$-Feldern, sowie die nach Gleichung~\eqref{eq.Ns} erm
 	\begin{center}
 	\kor{\begin{tabular}{r|rrr|r}
 		\hline
-			$T[\mathrm{K}]$ & $\nu$ & $B[\mathrm{T}]$ & $N_{\rm s}[10^{15}\,\mathrm{m}^{-2}]$ & $\overline{N_{\rm s}}$\\
+			$T[\mathrm{K}]$ & $\nu$ & $B[\mathrm{T}]$ & $N_{\rm s}[10^{15}\,\mathrm{m}^{-2}]$ & $\overline{N_{\rm s}}[10^{15}\,\mathrm{m}^{-2}]$\\
 		\hline
 			 &  2 & 7.13(38) & 3.45(18)&\\
 			 &  4 & 3.52(10) & 3.41(10)&\\
 			 &  6 & 2.375(44) & 3.446(64)&\\
-			4.2 &  8 & 1.778(60) & 3.44(12)& 3.458(51)\\
+			4.2 &  8 & 1.778(60) & 3.44(12)& 3.45(12)\\
 			 & 10 & 1.430(62) & 3.46(15)&\\
 			 & 12 & 1.198(47) & 3.48(14)&\\
 			 & 14 & 1.041(49) & 3.53(16)&\\
@@ -357,7 +358,7 @@ Die aus den ausgelesenen $B$-Feldern, sowie die nach Gleichung~\eqref{eq.Ns} erm
 			 &  2 & 7.11(55) & 3.44(26)&\\
 			 &  3 & 4.497(25) & 3.26(18)&\\
 			 &  4 & 3.44(24) & 3.33(23)&\\
-			3.0 &  6 & 2.32(12) & 3.37(17)& 3.361(64)\\
+			3.0 &  6 & 2.32(12) & 3.37(17)& 3.37(16)\\
 			 &  8 & 1.760(70) & 3.40(14)&\\
 			 & 10 & 1.431(50) & 3.46(12)&\\
 			 & 12 & 1.202(43) & 3.49(12)&\\
@@ -367,7 +368,7 @@ Die aus den ausgelesenen $B$-Feldern, sowie die nach Gleichung~\eqref{eq.Ns} erm
 			 &  3 & 4.52(36) & 3.29(26)&\\
 			 &  4 & 3.46(21) & 3.35(20)&\\
 			 &  5 & 2.807(88) & 3.39(11)&\\
-			2.1 &  6 & 2.33(11) & 3.38(15)& 3.402(62)\\
+			2.1 &  6 & 2.33(11) & 3.38(15)& 3.41(14)\\
 			 &  8 & 1.765(61) & 3.42(12)&\\
 			 & 10 & 1.412(48) & 3.42(11)&\\
 			 & 12 & 1.193(36) & 3.46(11)&\\
@@ -377,7 +378,7 @@ Die aus den ausgelesenen $B$-Feldern, sowie die nach Gleichung~\eqref{eq.Ns} erm
 			 &  3 & 4.53(36) & 3.29(26)&\\
 			 &  4 & 3.47(22) & 3.36(21)&\\
 			 &  5 & 2.816(83) & 3.40(10)&\\
-			1.5 &  6 & 2.32(11) & 4.37(16)& 3.411(59)\\
+			1.5 &  6 & 2.32(11) & 4.37(16)& 3.42(15)\\
 			 &  8 & 1.764(61) & 3.34(12)&\\
 			 & 10 & 1.423(45) & 3.44(11)&\\
 			 & 12 & 1.191(44) & 3.45(13)&\\
@@ -388,7 +389,7 @@ Die aus den ausgelesenen $B$-Feldern, sowie die nach Gleichung~\eqref{eq.Ns} erm
 	\label{ladungstraegerdichte2}
 	\end{center}
 \end{table}
-Der Fehler der gemittelten Ladungsträgerdichten wurden mit Gauß'scher Fehlerfortpflanzung aus den Einzelwerten bestimmt.\\
+\kor{Für den Wert und den Fehler der gemittelten Ladungsträgerdichten $\overline{N_{\rm S}}$ wurden die Einzelwerte mit ihren Fehlern gewichtet und gemittelt.}\\
 
 \subsubsection*{Durch die Frequenz der Shubnikov-de Haas Oszillation}
 Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \eqref{entartung} und \eqref{fuellfaktor} der Füllfaktor und mit ihm der Längswiderstand periodisch. Dabei lässt sich schreiben
@@ -427,10 +428,10 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 			\hline
 			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S2}$ & $N_{\rm S3}$ & $\overline{N_{\rm S}}$\\
 			\hline
-			4.2 & 3.52(20) & \kor{3.458(51)} & 3.517(79) & 3.455(93)\\
-			3.0 & 3.61(20) & \kor{3.361(64)} & 3.517(79) & 3.48(10)\\
-			2.1 & 3.58(20) & \kor{3.402(62)} & 3.517(79) & 3.447(97)\\
-			1.5 & 2.58(20) & \kor{3.411(59)} & 3.517(79) & 3.29(10)\\
+			4.2 & 3.52(20) & \kor{3.45(12)} & 3.517(79) & 3.455(93)\\
+			3.0 & 3.61(20) & \kor{3.37(16)} & 3.517(79) & 3.48(10)\\
+			2.1 & 3.58(20) & \kor{3.41(14)} & 3.517(79) & 3.447(97)\\
+			1.5 & 2.58(20) & \kor{3.42(15)} & 3.517(79) & 3.29(10)\\
 			\hline
 			\hline
 			 &  &  &  &3.419(98)\\
@@ -444,7 +445,7 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 \subsection{Leitfähigkeit, Hall-Faktor und Elektronenbeweglichkeit}
 \label{a3}
 
-Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2\,DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte sind nach Praktikumsanleitung~\citep{anleitung} definiert als
+Aus den gemessenen Werten für die Spannungen bei ausgeschalteten Magnetfeld $B=\SI{0}{\tesla}$ können wir die Leitfähigkeit des 2\,DEG $\sigma_{\rm 2D}$, den Hall-Faktor $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$ bestimmen. Die Werte ergeben sich nach der Praktikumsanleitung~\citep{anleitung} als
 \begin{align}
 	\sigma_{\rm 2D} &= N_{\rm s} e^2 \frac{\tau}{m^*} = \frac{L}{R_{xx} W}\\
 	A_{\rm H} 		&= -\frac{1}{N_{\rm s}e}\\
@@ -456,21 +457,23 @@ Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\mete
 	\frac{L}{W} = 3.
 \end{equation}
 
-Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen. Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von $5\%$. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
+Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen. 
+\kor{Für den Wert der Ladungsträgerdichte wurde der berechnete Werte aus \ref{ladungstraegerdichte2} verwendet.}
+Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von \kor{\SI{2}{\percent}}. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{ccccc}
+		\kor{\begin{tabular}{ccccc}
 			\hline
 			$T[\rm K]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\frac{1}{\Upomega}]$ & $A_{\rm H}\left[ \frac{\mathrm{m}^2}{\mathrm{C}} \right]$ & $\mu \left[ \frac{\mathrm{m}^2}{\mathrm{C}\Upomega} \right]$\\
 			\hline
-			4.2 & 521(26) & 0.00575(29) & 1799(60) & 10.35(52)\\
-			3.0 & 505(25) & 0.00593(30) & 1783(61) & 10.59(53)\\
-			2.1 & 247(12) & 0.01212(61) & 1809(63) & 21.9(1.1)\\
-			1.5 & 244(12) & 0.01227(61) & 1981(75) & 24.3(1.2)\\
+			4.2 & 521(10) & 0.00576(12) & 1808(61) & 10.409(20)\\
+			3.0 & 505(10) & 0.00594(12) & 1852(90) & 11.000(26)\\
+			2.1 & 247.4(4.9) & 0.01213(24) & 1829(75) & 22.173(23)\\
+			1.5 & 244.3(4.9) & 0.01228(25) & 1826(78) & 22.424(23)\\
 			\hline
-		\end{tabular}
-		\caption{Ergebnisse für die Leitfähigkeit $\sigma_{\rm 2D}$, die Hall-Konstante $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$.}
+		\end{tabular}}
+		\caption{Ergebnisse für die Leitfähigkeit $\sigma_{\rm 2D}$, die Hall-Konstante $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$.\note{Werte stimmen noch nicht. Welche Ladungsträgerdichte sollte hier verwendet werden?}}
 		\label{tab.leithallbeweg}
 	\end{center}
 \end{table}
@@ -479,14 +482,14 @@ Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemesse
 \subsection{Zyklotronmasse}
 \label{a4}
 
-In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein. So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
+In diesem Abschnitt wollen wir die Zyklotronmasse bestimmen. Hierzu nutzen wir aus, dass die Amplituden der Oszillationen in der Längsspannung temperaturabhängig sind. Betrachten wir den Grenzfall $E_{\rm F} \gg \hbar\omega_{\rm c}$, also dass viele Landau-Niveaus besetzt und die Magnetfelder klein sind. \kor{In unserem Fall wählen wir die Oszillationen um \SI{1}{\tesla}, was aus Versuchsteil~\ref{a1} etwa 14 besetzte Landau-Niveaus entspricht.} So kann die Zyklotronmasse $m_{\rm c}$ für geringe Abhängigkeit der Streuzeit $\tau$ und $T_{1} = 2T_{2}$ nach~\citet{ando} aus dem Verhältnis
 \begin{equation}
 	\frac{m_{\rm c}}{m_{\rm e}} = \frac{\hbar e B}{m_{\rm e}} \frac{1}{\pi^2 k_{\rm B} T_{1}}\mathrm{arcosh}\frac{A(B,T_2,\tau)}{A(B,T_1,\tau)}
 	\label{eq:zyklotronmasse}
 \end{equation}
 bestimmt werden, wobei $A(B,T,\tau)$ die Amplitude der Oszillation der Längsspannung entspricht.
 
-Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und in Abbildung~\ref{fig:zyklotronmasse} bzw. Abbildung~\ref{fig:zyklotronmasse2} abgebildet.
+Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Temperaturpaare $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ und $(\SI{3.0}{\kelvin},\SI{1.5}{\kelvin})$. Die Werte der Längsspannungen wurden über $B$ bzw. $1/B$ aufgetragen und sind für das Temperaturpaar (\SI{4.2}{\kelvin},\SI{2.1}{\kelvin}) in Abbildung~\ref{zyklotron1} Abbildung~\ref{fig:zyklotronmasse} bzw. Abbildung~\ref{fig:zyklotronmasse2} abgebildet.
 \begin{figure}[htp]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/11-4,2-2,1-zyklotron-B.pdf}
@@ -497,7 +500,7 @@ Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Te
 Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} das Amplitudenverhältnis an drei verschiedenen Stellen ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragung über $1/B$ verändert den Wert der Amplituden nicht. Die Auftragung der Längsspannung über $1/B$ und die ausgewerteten Stellen sind in Abbildung~\ref{fig:zyklotronmasse2} gezeigt.
 \begin{figure}[htp]
 	\begin{center}
-		\includegraphics[width=\columnwidth]{Data-Plots/12-4,2-2,1-zyklotron-1-B.pdf}
+		\includegraphics[width=\columnwidth]{Data-Plots/13-3,0-1,5-zyklotron-B.pdf}
 		\caption{Auftragung der Längsspannung über $1/B$ bei $T=\SI{4.2}{\kelvin}$ und \SI{2.1}{\kelvin}, zur Ermittlung des Amplitudenverhältnisses und der Zyklotronmasse.}
 		\label{fig:zyklotronmasse2}
 	\end{center}
@@ -548,19 +551,19 @@ Aus dem Vergleich mit dem Literaturwert erkennen wir, dass unsere Werte in der r
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Fermi-Energie /-Wellenvektor und -Geschwindigkeit}
 \label{a5}
-Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \cite{saarland} $m^*=0.067 m_\mathrm{e}$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
+Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der Dispersionsrelation durch eine effektive Masse der Elektronen berücksichtigt werden. Für den Fall von GaAs beträgt der Literaturwert für die effektive Masse nach \citet{saarland} $m^*=0.067 m_\mathrm{e}$. Mit dieser Korrektur kann die Dispersion der Elektronen in einem gewissen Rahmen weiterhin als parabolisch angesehen werden:
 \begin{equation}
 E_{\rm F}=\frac{\hbar^2 k_{\rm F}^2}{2 m^*}.
 \end{equation}
-Auf der anderen Seite ergibt sich Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2\,DEG den konstanten Wert $D(E)=\frac{\hbar^2 \pi}{m^*}$ \citep{anleitung}.
-Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeit:
+Auf der anderen Seite ergibt sich die Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2\,DEG den konstanten Wert $D(E)=\hbar^2 \pi/m^*$.
+Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeiten nach \citet{Anleitung} mit den in \ref{nswerte} ermittelten Werten für $N_\mathrm{S}$:
 \begin{align}
 E_{\rm F}&=N_\mathrm{S} \cdot \frac{\hbar^2 \pi}{m^*}\\
 k_{\rm F}&=\sqrt{2 \pi N_\mathrm{S}}\\
 v_{\rm F}&=\frac{\hbar\sqrt{2 \pi}}{m^*} \sqrt{N_\mathrm{S}}
 \end{align}
 Für nicht verschwindende Magnetfelder ist zu bemerken, dass je nach Eichung der Wellenwektor $\vec{k}$ keine sinnvolle Quantenzahl mehr darstellt und die Energiedispersion durch die Laundau-Quantenzahlen beschrieben wird.
-Für $B=0$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
+Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit in Tabelle \ref{fermitabelle} aufgelistet.
 
 \begin{table}[htp]
 	\begin{center}
@@ -582,11 +585,11 @@ Für $B=0$ sind die Werte für Fermi-Energie /-Wellenvektor und -Geschwindigkeit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \subsection{Bestimmung der Spinaufspaltung}
 \label{a6}
-Wie in Aufgabe 2 gesehen fällt der Längswiderstand periodisch mit dem inversen Magnetfeld auf Null ab. Den maximalen Widerstand misst man hingegen, wenn die Fermi-Energie (d.h. das chemisches Potential) genau innerhalb der Landau-Niveaus liegt. Dies ist der Fall wenn
+Wie in \ref{a2} gesehen, fällt der Längswiderstand periodisch mit dem inversen Magnetfeld auf Null ab. Den maximalen Widerstand misst man hingegen, wenn die Fermi-Energie (d.h. das chemisches Potential) genau innerhalb der Landau-Niveaus liegt. Dies ist der Fall wenn
 \begin{equation}
 E_{\rm F}=\hbar \omega_{\rm c}\left( n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
-In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor g des Elektronen und GaAs bestimmt werden, der mit der relativen Magnetisierung folgenden Zusammenhang besitzt.
+In diesem Abschnitt soll die relative Spinaufspaltung $M$ und daraus der Landé-Faktor $g$ der Elektronen im GaAs bestimmt werden, der mit der relativen Magnetisierung folgenden Zusammenhang besitzt.
 \begin{equation}
 M=\frac{g \mu_{\rm B} B}{\hbar \omega_{\rm c}}
 \label{lande}
@@ -601,7 +604,7 @@ In einem ersten Schritt werden nun aus den Graphen des Längswiderstandes die in
 	\end{center}
 \end{figure}
 
-In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ aufgetragen, um sie bis zu $\frac{1}{B}=0$ zu extrapolieren. Am Schnittpunkt mit der $x$-Achse verschwinden beide Seiten der Identität
+In Abbildung \ref{maxima} wurden die Magnetfeldstärken abgelesen, die gemessen wurden, während sich die Fermi-Energie innerhalb der spinaufgespaltenen Landau-Niveaus befindet, angefangen von $n=1$ ganz links bis $n=4$ rechts. Diese inversen Magnetfeldstärken werden nun über die Landau-Quantenzahl $n$ jeweils für $n+$ und $n-$ in \ref{spinaufspaltung} aufgetragen, um sie bis zu $1/B=0$ zu extrapolieren. Am Schnittpunkt mit der $x$-Achse verschwinden beide Seiten der Identität
 \begin{equation}
 \frac{1}{B_{n\pm}}=\frac{\hbar e}{m_{\rm c}}\frac{1}{E_{\rm F}}\left(n+\frac{1}{2}\pm\frac{M}{2}\right).
 \end{equation}
@@ -613,7 +616,7 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 \begin{figure}[]
 	\begin{center}
 		\includegraphics[width=\columnwidth]{Data-Plots/07-Spinaufspaltung.pdf}
-		\caption{Bestimmung der Schnittpunkte mit x-Achse. Die in Abbildung \ref{maxima}ausgelesenen Messpunkte werden linear bis zum Punkt $B\rightarrow \infty$ extrapoliert und der Schnittpunkt mit der x-Achse abgelesen. Die Fehler werden jeweils mithilfe zweier Hilfsgeraden abgeschätzt.}
+		\caption{Bestimmung der Schnittpunkte mit $x$-Achse. Die in Abbildung \ref{maxima} ausgelesenen Messpunkte werden linear bis zum Punkt $B\rightarrow \infty$ extrapoliert und der Schnittpunkt mit der $x$-Achse abgelesen. Die Fehler werden jeweils mithilfe zweier Hilfsgeraden abgeschätzt.}
 		\label{spinaufspaltung}
 	\end{center}
 \end{figure}

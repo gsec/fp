@@ -40,7 +40,7 @@ if  Alle_Daten_plotten == True :
     subplots_adjust(left=0.18, bottom=0.12, right=0.96, top=0.92, wspace=0.2, hspace=0.2)
     # plt.plot(t1,S1,"b.", label="off")
     plt.plot(t1,ex_data,"r.", label="Messpunkte")
-    plt.plot(t1,theo_data,"b.", label="Theorie")
+    plt.plot(t1,theo_data,"b.", label="Theoretisch erwarteter Verlauf")
     plt.plot([1300,1700],[0.1721,0.1721],"k--")
     s=0.05
     plt.plot([1477,1477,1477,1544,1544,1544],[0.0035-s,0.0035+s,0.0035,0.0035,0.0035-s,0.0035+s],"r")
