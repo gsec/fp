@@ -590,7 +590,7 @@ Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie/ -Wellenvektor und -Geschwi
 			1.5 &11.71(36)	&0.1437(44)&	248.3(77)\\
 			\hline
 		\end{tabular}
-		\caption{Fermi-Energie /-Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen. \note{muss nur noch mit richtigen N_s Werten korrigiert werden.}}
+		\caption{Fermi-Energie/ -Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen. \note{muss nur noch mit richtigen $N_s$ Werten korrigiert werden.}}
 		\label{fermitabelle}
 	\end{center}
 \end{table}
@@ -633,8 +633,8 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 		\label{spinaufspaltung}
 	\end{center}
 \end{figure}
-\kor{begin{equation}
-M=|0.162(80)-0.559(81)|=0.40(11).
+\kor{\begin{equation}
+M=\left| 0.162(80)-0.559(81)\right|=0.40(11).
 \end{equation}}
 Daraus ergibt sich nach \eqref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
 \begin{equation}
