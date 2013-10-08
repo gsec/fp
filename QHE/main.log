@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  8 OCT 2013 11:49
+This is pdfTeX, Version 3.1415926-1.40.11 (MiKTeX 2.9) (preloaded format=pdflatex 2013.9.13)  8 OCT 2013 15:30
 entering extended mode
 **main.tex
 (C:\Users\Daniel\fp\QHE\main.tex
@@ -1602,7 +1602,7 @@ Underfull \hbox (badness 1292) in paragraph at lines 310--313
 File: Data-Plots/02-Hallsteigung.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-Hallsteigung.pdf>
-Overfull \hbox (5.89372pt too wide) in paragraph at lines 397--398
+Overfull \hbox (5.8937pt too wide) in paragraph at lines 397--398
  [][] 
  []
 
@@ -1621,13 +1621,13 @@ File: Data-Plots/06-Fourietransformation.pdf Graphic file (type pdf)
 
 <use Data-Plots/06-Fourietransformation.pdf>
 Underfull \hbox (badness 10000) in paragraph at lines 424--424
-[]\OT1/cmr/bx/n/9 Abb. 4: |\OT1/cmr/m/n/9 Disktre-te Fou-rie-trans-for-ma-ti-on
- des
+[]\OT1/cmr/bx/n/9 Abb. 4: |\OT1/cmr/m/n/9 Dis-kre-te Fou-rier-trans-for-ma-ti-o
+n des
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 424--424
-\OT1/cmr/m/n/9 L[]angsiwderstandes auf-ge-tra-gen []uber die Pe-ri-
+\OT1/cmr/m/n/9 L[]angswiderstandes auf-ge-tra-gen []uber die Pe-ri-
  []
 
 [6]
@@ -1645,7 +1645,7 @@ File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 File: Data-Plots/11-4,2-2,1-zyklotron-B.pdf Graphic file (type pdf)
 
 <use Data-Plots/11-4,2-2,1-zyklotron-B.pdf>
-<Data-Plots/13-3,0-1,5-zyklotron-B.pdf, id=399, 505.89pt x 331.4784pt>
+<Data-Plots/13-3,0-1,5-zyklotron-B.pdf, id=397, 505.89pt x 331.4784pt>
 File: Data-Plots/13-3,0-1,5-zyklotron-B.pdf Graphic file (type pdf)
 
 <use Data-Plots/13-3,0-1,5-zyklotron-B.pdf>
@@ -1674,7 +1674,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 623--623
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 641.
 
-<Data-Plots/07-maxima_ablesen.pdf, id=574, 578.16pt x 433.62pt>
+<Data-Plots/07-maxima_ablesen.pdf, id=572, 578.16pt x 433.62pt>
 File: Data-Plots/07-maxima_ablesen.pdf Graphic file (type pdf)
 
 <use Data-Plots/07-maxima_ablesen.pdf>
@@ -1688,25 +1688,35 @@ Underfull \hbox (badness 4634) in paragraph at lines 644--644
 \OT1/cmr/m/n/9 L[]angsspannung. Die Feh-ler wur-den an-hand der
  []
 
-
-Underfull \hbox (badness 2426) in paragraph at lines 649--650
-\OT1/cmr/m/n/10 Energie in-ner-halb der spin-auf-ge-spal-te-nen Landau-
- []
-
 [9 <C:/Users/Daniel/fp/QHE/Data-Plots/07-maxima_ablesen.pdf>]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 658.
 
-<Data-Plots/07-Spinaufspaltung.pdf, id=638, 589.00049pt x 444.4605pt>
+<Data-Plots/07-Spinaufspaltung.pdf, id=635, 589.00049pt x 444.4605pt>
 File: Data-Plots/07-Spinaufspaltung.pdf Graphic file (type pdf)
 
 <use Data-Plots/07-Spinaufspaltung.pdf>
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1024) has occurred while \output is active []
 
 
-Underfull \hbox (badness 1859) in paragraph at lines 702--703
-\OT1/cmr/m/n/10 Mit dem F-Praktikumsversuch zum Quanten-Hall-
+Underfull \hbox (badness 2042) in paragraph at lines 702--703
+\OT1/cmr/m/n/10 Mit dem Fortgeschrittenen-Praktikumsversuch zum
+ []
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 702--703
+\OT1/cmr/m/n/10 wei-sen. Es konn-ten ganz-zah-li-ge Hall-Plateaus bis
+ []
+
+
+Underfull \hbox (badness 5637) in paragraph at lines 702--703
+\OT1/cmr/m/n/10 zur Quan-ten-zahl 14 bei $[] []$ be-ob-ach-tet wer-
+ []
+
+
+Underfull \hbox (badness 1430) in paragraph at lines 702--703
+\OT1/cmr/m/n/10 die ge-naues-ten Er-geb-nis-se. Oh-ne Ma-gnet-feld wur-
  []
 
 (C:\Users\Daniel\fp\QHE\main.bbl
@@ -1748,7 +1758,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--49
 $\OT1/cmtt/m/n/9 Erster _ Studienabschnitt _ Bachelor / V _ B _ Aktuelle _$
  []
 
-) <Data-Plots/02-4,2-Hallplateaus.pdf, id=735, 505.89pt x 361.35pt>
+) <Data-Plots/02-4,2-Hallplateaus.pdf, id=731, 505.89pt x 361.35pt>
 File: Data-Plots/02-4,2-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/02-4,2-Hallplateaus.pdf>
@@ -1756,7 +1766,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 749--750
  [] 
  []
 
-<Data-Plots/03-3,0-Hallplateaus.pdf, id=736, 505.89pt x 361.35pt>
+<Data-Plots/03-3,0-Hallplateaus.pdf, id=732, 505.89pt x 361.35pt>
 File: Data-Plots/03-3,0-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/03-3,0-Hallplateaus.pdf>
@@ -1764,7 +1774,7 @@ Overfull \hbox (10.0pt too wide) in paragraph at lines 756--757
  [] 
  []
 
-<Data-Plots/04-2,1-Hallplateaus.pdf, id=737, 505.89pt x 361.35pt>
+<Data-Plots/04-2,1-Hallplateaus.pdf, id=733, 505.89pt x 361.35pt>
 File: Data-Plots/04-2,1-Hallplateaus.pdf Graphic file (type pdf)
 
 <use Data-Plots/04-2,1-Hallplateaus.pdf>
@@ -1821,9 +1831,9 @@ fonts/euler/eurm10.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/fonts/type1
 /public/amsfonts/euler/eurm7.pfb><C:/Program Files/Büro/LaTex/MiKTeX 2.9.3972/f
 onts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/Daniel/AppData/Roaming/
 MiKTeX/2.9/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (11 pages, 1174958 bytes).
+Output written on main.pdf (11 pages, 1174683 bytes).
 PDF statistics:
- 1114 PDF objects out of 1200 (max. 8388607)
+ 1112 PDF objects out of 1200 (max. 8388607)
  83 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
