@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\newcommand{\note}[1]{{\color{red}#1??}}
+\renewcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -400,12 +400,17 @@ Wird die Probe einem steigendem Magnetfeld ausgesetzt, so ändert sich gemäß \
 \begin{equation}
 \frac{1}{B}=\frac{e}{N_{\rm LL} h}=\frac{e}{N_\mathrm{S} h} \nu.
 \end{equation}
-Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun ableiten und diskret fourie-transformieren. Als Periodendauer in $\frac{1}{B}$ können wir
+Die Periodizität von $\frac{1}{B}$ bestimmen wir aus der Periodizität des gemessenen Längswiderstandes. Dabei wird zunächst aus den gemessenen Daten die Funktion Längswiderstand in Abhängigkeit der inversen Magnetfeldstärke gewonnen. Anschließend werden diese Daten linear interpoliert und ein neuer Datensatz mit äquidistanten $\frac{1}{B}$-Schritten erzeugt. Diese Daten lassen sich nun ableiten und diskret fourie-transformieren. \kor{Als kleinste Frequenz lesen wir 
 \begin{equation}
-T_{\frac{1}{B}}=(1375\pm 31) \cdot 10^{-4}\SI{}{\per\tesla}
+f_{B}=\SI{7.63(35)}{\tesla}
+\label{Bfrequenz}
+\end{equation}
+in Graphik \ref{fft} ab, was einer Periodizität in $\frac{1}{B}$ von
+\begin{equation}
+T_{\frac{1}{B}}=(1311\pm 60) \cdot 10^{-4}\SI{}{\per\tesla}
 \label{periodizitaet}
 \end{equation}
-aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der diskreten Fourietransformation beschränkt und als halben Abstand zur nächsten Datenpunkt im Graphen angenommen.
+entspricht. Neben der Hauptfrequenz sind auch höhere Harmonische im Spektrum zu erkennen, die aber für die Auswertung nicht entscheidend sind.} Die Genauigkeit des abgelesenen Wertes wird durch die Auflösung der diskreten Fourietransformation beschränkt und als halben Abstand zur nächsten Datenpunkt im Graphen angenommen.
 
 \begin{figure}[]
 	\begin{center}
@@ -418,10 +423,12 @@ aus der Graphen \ref{fft} ablesen. Die Genauigkeit wird durch die Auflösung der
 Die Periodendauer $T_{\frac{1}{B}}$ entspricht dabei nach \eqref{periodizitaet} der Periodizität der ganzen geraden Zahlen mit dem Faktor $\frac{2 e}{N_\mathrm{S} h}$ multipliziert. Dies liegt daran, dass vor allem bei kleinen Magnetfeldern die Spinaufspaltung zwischen den zwei Niveaus einer Landau-Quantenzahl nicht groß genug ist und beim Durchfahren des Magnetfeldes jeweils zwei Niveaus simultan gefüllt werden.
 
 Durch die Periodendauer $T_{\frac{1}{B}}$ wird somit der Wert für die Ladungsträgerdichte festgelegt.
+\kor{
 \begin{equation}
-N_\mathrm{S}=\frac{2 e}{T_{\frac{1}{B}} h}=\SI{3.517(079)e11}{\per\square\centi\meter}
+N_\mathrm{S}=\frac{2 e}{T_{\frac{1}{B}} h}=\SI{3.69(17)e11}{\per\square\centi\meter}
 \label{ns_periode}
 \end{equation}
+}
 Auch diese Methode wurde auf alle Messdaten der unterschiedlichen Temperaturen angewandt. Da die Fouriertransformation auf diskreten Werten geschieht, kann die Periodizität nur diskrete Werte annehmen. Bei den unterschiedlichen Temperaturen wurde jeweils exakt der selbe Wert abgelesen.
 
 Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermittelten Werte für $N_\mathrm{S}$ in Tabelle \ref{nswerte} ein und bilden die, mit den inversen Fehlern gewichteten, Mittelwerte $\overline{N_\mathrm{S}}(T)$ die wir für die weiteren Rechnungen verwenden.
@@ -432,13 +439,13 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 			\hline
 			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S2}$ & $N_{\rm S3}$ & $\overline{N_{\rm S}}$\\
 			\hline
-			4.2 & \kor{3.584(70)} & \kor{3.45(12)} & 3.517(79) & 3.455(93)\\
-			3.0 & \kor{3.634(71)} & \kor{3.37(16)} & 3.517(79) & 3.48(10)\\
-			2.1 & \kor{3.637(71)} & \kor{3.41(14)} & 3.517(79) & 3.447(97)\\
-			1.5 & \kor{3.636(71)} & \kor{3.42(15)} & 3.517(79) & 3.29(10)\\
+			4.2 & \kor{3.584(70)} & \kor{3.45(12)} & \kor{3.69(17)} & \kor{3.567(61)}\\
+			3.0 & \kor{3.634(71)} & \kor{3.37(16)} & \kor{3.69(17)} & \kor{3.583(66)}\\
+			2.1 & \kor{3.637(71)} & \kor{3.41(14)} & \kor{3.69(17)} & \kor{3.589(64)}\\
+			1.5 & \kor{3.636(71)} & \kor{3.42(15)} & \kor{3.69(17)} & \kor{3.594(65)}\\
 			\hline
 			\hline
-			 &  &  &  &3.419(98)\\
+			 &  &  &  &3.583(64)\\
 		\end{tabular}
 		\caption{Werte für die Ladungsträgerkonzentration $N_{\rm S}$ in \SI[per-mode=symbol]{e11}{1\per\centi\meter\squared} mit $N_{\rm S1}$ für die Werte aus der Hall-Steigung, $N_{\rm S2}$ aus den Hall-Plateaus und $N_{\rm S3}$ aus der Shubnikov-de Haas Oszillation. Die letzte Spalte mit $\overline{N_{\rm S}}$ entspricht den mit den inversen Fehlern gewichteten $N_{\rm S}$-Werten der verschiedenen Methoden.}
 		\label{nswerte}
