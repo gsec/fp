@@ -163,7 +163,7 @@ plt.plot((0.2416784,4),(0,0.515763),"--", color="blue")
 plt.plot((0.48058,4),(0,0.440961),"--", color="blue")
 plt.plot((0.63984,4),(0,0.46096),"--", color="blue")
 
-plt.errorbar((0.161620,0.559675),(0,0),xerr=(0.08502,0.079225),color="green",fmt='.',label="Ablesepunkte", linewidth=2)
+plt.errorbar((0.165,0.5627),(0,0),xerr=(0.0812,0.0785),color="green",fmt='.',label="Ablesepunkte", linewidth=2)
 plt.errorbar(npunkte_plus[0],npunkte_plus[1],yerr=Fehler_plus,color="red",fmt='x',label="abgelesene Werte")
 plt.errorbar(npunkte_minus[0],npunkte_minus[1],yerr=Fehler_minus,color="red",fmt='x')
 #plt.set_xlabel(txt_file[0][0])

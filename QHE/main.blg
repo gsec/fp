@@ -1,4 +1,9 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+Case mismatch error between cite keys Anleitung and anleitung
+---line 123 of file main.aux
+ : \citation{Anleitung
+ :                    }
+I'm skipping whatever remains of this command
 The style file: dinat.bst
 Database file #1: lit.bib
 Too many commas in name 1 of "Janssen,T J B M; Fletcher, N. E.; Goebel, R.; Williams, J. M.; Tzalenchuk, A.; Yakimova, R. et al." for entry janssen
@@ -49,4 +54,4 @@ Too many commas in name 1 of "Janssen,T J B M; Fletcher, N. E.; Goebel, R.; Will
 while executing---line 1950 of file dinat.bst
 Too many commas in name 1 of "Janssen,T J B M; Fletcher, N. E.; Goebel, R.; Williams, J. M.; Tzalenchuk, A.; Yakimova, R. et al." for entry janssen
 while executing---line 1950 of file dinat.bst
-(There were 24 error messages)
+(There were 25 error messages)

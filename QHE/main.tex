@@ -92,10 +92,10 @@
 % =============================================================================
   \vspace{-2em}
   \noindent {\small Mithilfe einer AlGaAs/GaAs Heterostruktur wurde der Quanten-Hall-Effekt
-  nachgewiesen. Die Klitzing-Konstante wurde zu $\SI{25.1}{\kilo\ohm}$ bestimmt und Hall-Plateaus bis
+  nachgewiesen. Die Klitzing-Konstante wurde zu $\SI{24.87}{\kilo\ohm}$ bestimmt und Hall-Plateaus bis
   zum Füllfaktor 14 beobachtet. Mit verschiedenen Methoden wurde die 
-  Ladungsträgerkonzentration im 2\,DEG untersucht, die sich als weitgehendst 
-  temperaturunabhängig herausstellte. Bei niedrigen Temperaturen wurde die Zeeman-Aufspaltung beobachtet und 	quantitativ untersucht, um den Landé-Faktor zu bestimmen.   }
+  Ladungsträgerkonzentration im 2\,DEG untersucht, die sich mit $\SI{3.56e15}{\per\square\centi\meter}$ genauso wie die Fermi-Energie mit $\SI{12.7}{\milli\eV}$ als weitgehendst 
+  temperaturunabhängig herausstellte. Bei niedrigen Temperaturen wurde die Zeeman-Aufspaltung beobachtet und daraus den Landé-Faktor zu $-11.9$ bestimmt.   }
 \end{abstract}
 
   \vspace{1em}
@@ -266,8 +266,9 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir zusammen
 		14 &  \SI{1760}{\ohm} &  \SI{1750}{\ohm} &  \SI{1770}{\ohm} &  \SI{1770}{\ohm}\\
 		\hline
 	\end{tabular}
-	\caption{Abgelesene Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit dem Fehler aus der Ungenauigkeit des Vorwiderstandes von \SI{2}.}}
+	\caption{Abgelesene Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit dem Fehler aus der Ungenauigkeit des Vorwiderstandes von \SI{2}.}
 	\label{klitzing}	
+	}
 	\end{center}
 \end{table}
 
@@ -315,7 +316,7 @@ Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ 
 \subsubsection*{Durch die Steigung des Hall-Widerstandes}
 Die Oberflächenladungsträgerdichte des 2\,DEGs wird auf drei verschiedene Arten bestimmt und die Ergebnisse untereinander verglichen. Dabei achten wir auf Unterschiede bei unterschiedlichen Temperaturen. 
 \kor{
-An den linearen Teil der Messdaten von \SI{0}{\tesla} \--- \SI{1}{\tesla} wurde eine Ursprungsgerade gefittet, wobei sich die Fehlergeraden aus dem Fehler in der Widerstandsmessung von \SI{2}{\percent} ergeben. Zur besseren Darstellung wird in Abbildung~\ref{hallsteigung} nur der Bereich von $0\---\SI{1.3}{\tesla}$ gezeigt.
+An den linearen Teil der Messdaten von wurde eine Gerade angefittet, die den linearen Teil der Messpunkte beinhaltet. Wie schließen dabei den untersten Teil der Messwerte von \SI{0}{\tesla} \--- \SI{0.2}{\tesla} aus dem Fit aus, da in diesem Bereich noch Hystereseeffekte zu sehen sind. Den Fehler des Fits vernachlässigen wir aufgrund der großen Datenmenge im Vergleich zum Fehler des einzelnen Messpunkte entsprechend der Überlegungen in Aufgabenteil \ref{Auswertung}. Zur besseren Darstellung wird in Abbildung~\ref{hallsteigung} nur der Bereich von $\SI{0}{\tesla}$\--$\SI{1.3}{\tesla}$ gezeigt.
 }
 %Zuerst legen wir nach Augenmaß eine Gerade durch den unteren Teil der Hallmessung, in der der Hallwiderstand näherungsweise Linear ist. Der statistische Fehler wir mit Hilfe zwei Hilfsgeraden in Abbildung \ref{hallsteigung} nach Augenmaß abgeschätzt. Dabei schließen die Hilfsgeraden die Messpunkte ein, die beim Messen von niedrigen zu hohen Magnetfeldern und umgekehrt entstanden sind. 
 \begin{figure}[htp]
@@ -439,13 +440,13 @@ Um die Ergebnisse aller drei Methoden zusammen zu fassen, tragen wir die ermitte
 			\hline
 			$T[1/\mathrm{K}]$ & $N_{\rm S1}$ & $N_{\rm S2}$ & $N_{\rm S3}$ & $\overline{N_{\rm S}}$\\
 			\hline
-			4.2 & \kor{3.584(70)} & \kor{3.45(12)} & \kor{3.69(17)} & \kor{3.567(61)}\\
-			3.0 & \kor{3.634(71)} & \kor{3.37(16)} & \kor{3.69(17)} & \kor{3.583(66)}\\
-			2.1 & \kor{3.637(71)} & \kor{3.41(14)} & \kor{3.69(17)} & \kor{3.589(64)}\\
-			1.5 & \kor{3.636(71)} & \kor{3.42(15)} & \kor{3.69(17)} & \kor{3.594(65)}\\
+			4.2 & \kor{3.5619(89)} & \kor{3.45(12)} & \kor{3.69(17)} & \kor{3.560(14)}\\
+			3.0 & \kor{3.6715(94)} & \kor{3.37(16)} & \kor{3.69(17)} & \kor{3.567(15)}\\
+			2.1 & \kor{3.5560(95)} & \kor{3.41(14)} & \kor{3.69(17)} & \kor{3.554(15)}\\
+			1.5 & \kor{3.5542(97)} & \kor{3.42(15)} & \kor{3.69(17)} & \kor{3.553(15)}\\
 			\hline
 			\hline
-			 &  &  &  &3.583(64)\\
+			 &  &  &  &\kor{3.559(15)}\\
 		\end{tabular}
 		\caption{Werte für die Ladungsträgerkonzentration $N_{\rm S}$ in \SI[per-mode=symbol]{e11}{1\per\centi\meter\squared} mit $N_{\rm S1}$ für die Werte aus der Hall-Steigung, $N_{\rm S2}$ aus den Hall-Plateaus und $N_{\rm S3}$ aus der Shubnikov-de Haas Oszillation. Die letzte Spalte mit $\overline{N_{\rm S}}$ entspricht den mit den inversen Fehlern gewichteten $N_{\rm S}$-Werten der verschiedenen Methoden.}
 		\label{nswerte}
@@ -470,7 +471,7 @@ Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\mete
 
 Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen. 
 \kor{Für den Wert der Ladungsträgerdichte wurde der berechnete Werte aus \ref{ladungstraegerdichte2} verwendet.}
-Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von \kor{\SI{2}{\percent}}. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
+Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von \kor{\SI{0.2}{\percent}}. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
 
 \begin{table}[htp]
 	\begin{center}
@@ -576,7 +577,7 @@ Für Elektronen, die sich im Festkörper aufhalten, können die Korrekturen der 
 E_{\rm F}=\frac{\hbar^2 k_{\rm F}^2}{2 m^*}.
 \end{equation}
 Auf der anderen Seite ergibt sich die Ladungsträgerdichte als Integral über die Zustandsdichte bis zur Fermienergie. Die Zustandsdichte besitzt im 2\,DEG den konstanten Wert $D(E)=\hbar^2 \pi/m^*$.
-Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeiten nach \citet{Anleitung} mit den in \ref{nswerte} ermittelten Werten für $N_\mathrm{S}$:
+Damit ergeben sich für die Fermi-Energie, den Fermi-Wellenvektor und die Fermi-Geschwindigkeiten nach \citet{anleitung} mit den in \ref{nswerte} ermittelten Werten für $N_\mathrm{S}$:
 \begin{align}
 E_{\rm F}&=N_\mathrm{S} \cdot \frac{\hbar^2 \pi}{m^*}\\
 k_{\rm F}&=\sqrt{2 \pi N_\mathrm{S}}\\
@@ -587,18 +588,21 @@ Für $B=\SI{0}{T}$ sind die Werte für Fermi-Energie/ -Wellenvektor und -Geschwi
 
 \begin{table}[htp]
 	\begin{center}
-		\begin{tabular}{rrrrr}
+		\kor{
+		\begin{tabular}{rrrrr}			
 			\hline
-			$T[\frac{1}{\mathrm{K}}]$ & $E_{\rm F}[\mathrm{eV}]$ & $k_{\rm F}[\SI{}{\per\nano\meter}]$ & $v_{\rm F}[\SI{}{\kilo\meter\per\second}]$\\
+			$T[\frac{1}{\mathrm{K}}]$ & $E_{\rm F}[\mathrm{meV}]$ & $k_{\rm F}[\SI{}{\per\nano\meter}]$ & $v_{\rm F}[\SI{}{\kilo\meter\per\second}]$\\
 			\hline
-			4.2 &12.35(33)	&0.1473(40)&	254.6(69)\\
-			3.0 &12.43(36)	&0.1478(42)&	255.5(73)\\
-			2.1 &12.32(34)	&0.1472(42)&	254.3(72)\\
-			1.5 &11.71(36)	&0.1437(44)&	248.3(77)\\
+			4.2 &12.724(49)	&0.1496(29)&	258.5(50)\\
+			3.0 &12.755(52)	&0.1497(31)&	258.7(53)\\
+			2.1 &12.700(52)	&0.1494(31)&	258.2(53)\\
+			1.5 &11.698(54)	&0.1494(31)&	258.2(54)\\
+			
 			\hline
 		\end{tabular}
-		\caption{Fermi-Energie/ -Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen. \note{muss nur noch mit richtigen $N_s$ Werten korrigiert werden.}}
+		\caption{Fermi-Energie/ -Wellenvektor und -Geschwindigkeit für verschiedene Temperaturen.}
 		\label{fermitabelle}
+		}
 	\end{center}
 \end{table}
 %
@@ -641,13 +645,15 @@ Wir lesen die Schnittpunkte in Graphik \ref{spinaufspaltung} ab und erhalten fü
 	\end{center}
 \end{figure}
 \kor{\begin{equation}
-M=\left| 0.162(80)-0.559(81)\right|=0.40(11).
+M=\left| 0.165(81)-0.56(79)\right|=0.40(11).
 \end{equation}}
-Daraus ergibt sich nach \eqref{zyklotronmasse} und \eqref{lande} der Landé-Faktor zu
+Daraus ergibt sich nach  \eqref{lande} und dem Literaturwert für die Zyklotronmasse $m_{\rm c}=0.067 m_{\rm e} $ \cite{saarland} der Landé-Faktor zu
+\kor{
 \begin{equation}
-g=\frac{M \hbar e}{\mu_{\rm B} m_{\rm c}}=-0.80\pm29 \note{noch nicht berechnet}.
+g=\frac{M \hbar e}{\mu_{\rm B} m_{\rm c}}=-11.9\pm3.3.
 \end{equation}
-Diese Wert ist fast doppelt so hoch, wie der in der Literatur \citep{anleitung} angegebene Wert von $g=-0.44$ im Einteilchenbild. Damit wird deutlich, dass Mehrteilcheneffekte beim Quanten-Hall-Effekt nicht zu vernachlässigen sind und das magnetische Moment der Elektronen im Kollektiv stärker ist als die Summe der Einzelmagnetisierungen.
+}
+Diese Wert ist deutlich höher, als der in der Literatur \citep{anleitung} angegebene Wert von $g=-0.44$ im Einteilchenbild. Damit wird deutlich, dass Mehrteilcheneffekte beim Quanten-Hall-Effekt nicht zu vernachlässigen sind und das magnetische Moment der Elektronen im Kollektiv stärker ist als die Summe der Einzelmagnetisierungen.
 Die Bestimmung der Ladungsträgerdichte aus diesem Plot ist mathematisch ähnlich, wenn auch ungenauer, zur Bestimmung mittels Schubnikow-de-Haas-Oszillationen.
 Wir erhalten mit zwei Landau-Niveaus pro Landau Quantenzahl
 \begin{equation}
@@ -657,26 +663,25 @@ N_\mathrm{S}=\frac{2e}{h}\frac{\Delta n}{\Delta \frac{1}{B}}=\SI{3.69(083)e11}{\
 % =============================================================================
 \section{Zusammenfassung}
 \label{Zusammenfassung}
-
+\kor{
 Mit dem F-Praktikumsversuch zum Quanten-Hall-Effekt konnten wir die Quantisierung
 der elektronischen Zustände und deren Einfluss auf die makroskopischen Eigenschaften 
 der Probe nachweisen. Es konnten ganzzahlige Hall-Plateaus bis zur Quantenzahl 14 bei 
 $\SI{1.5}{K}$ beobachtet werden. Die bestimmte Klitzing-Konstante weichte 
-mit $\SI{25.1}{\kilo\ohm}$ etwa $\SI{3}{\percent}$ vom Literaturwert ab.
+mit $\SI{24.867(54)}{\kilo\ohm}$ deutlich vom Literaturwert ab.
 Wir verwendeten unterschiedliche Methoden, um die Ladungsträgerkonzentration unserer
-Probe zu bestimmen. Dabei lieferte die Auswertung der Hall-Plateaus die genauesten 
+Probe zu bestimmen. Dabei lieferte die Auswertung der Hall-Steigung die genauesten 
 Ergebnisse. Ohne Magnetfeld wurden Längswiderstand, Leitfähigkeit und Beweglichkeit 
 der Elektronen untersucht, wobei wir eine deutliche Leitfähigkeitszunahme untehalb von 
 $\SI{3}{\kelvin}$ messen konnten. Aus der Oszillationen der Längsspannung bei niedrigen 
 Magnetfeldstärken wurde die Zyklotronmasse der Elektronen in GaAs bestimmt. Die 
-Analyse war nicht sehr genau und die bestimmte Masse mit $0.032\,m_e$ nur etwa halb 
-so groß wie der Literaturwert. Aus der Ladungsträgerdichte wurde die Fermi-Geschwindigkeit 
-bestimmt und macht mit etwa $\SI[per-mode=symbol]{250}{\kilo\meter\per\second}$ den fermionischen Charakter
+Analyse war nicht ohne Einschränkungen möglich und die bestimmte Masse lag mit $0.044\,m_e$ deutlich unter dem Literaturwert. Aus der Ladungsträgerdichte wurde die Fermi-Geschwindigkeit 
+bestimmt und machte mit etwa $\SI[per-mode=symbol]{250}{\kilo\meter\per\second}$ den fermionischen Charakter
 der Elektronen deutlich. Zuletzt wurden bei tiefen Temperaturen die Zeeman-Aufspaltung 
-beobachtet und daraus der Landé-Faktor zu bestimmen. Dieser lag mit $-0.80$ deutlich über
+beobachtet und daraus der Landé-Faktor bestimmt. Dieser lag mit $-11.9\pm3.3$ deutlich über
 dem Wert des Elektrons im Einteilchenbild, was den Mehrteilchen-Charakter des Experiments
-deutlich macht.
-
+verdeutlicht.
+}
 
 %
 % =============================================================================
