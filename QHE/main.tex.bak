@@ -219,7 +219,7 @@ Die Temperaturmessung im Experiment war über die Dampfdruckregelung des Heliums
 
 
 
-Die gemessenen Spannungen über die Lock-In-Verstärker sind von einem Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{e-3}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \kor{\SI{2}{\percent}} abgeschätzt. Somit können wir den Widerstand für unsere Messungen als Hauptfehlerquelle identifizieren.
+Die gemessenen Spannungen über die Lock-In-Verstärker sind von einem Rauschen überlagert. Um das Rauschen abzuschätzen, haben wir vor dem Einschalten des Magnetfeldes die Messung je ca. \SI{30}{\second} früher gestartet. Hieraus bestimmen wir den Fehler für die Spannungsmessungen von $U_{\rm Shunt}$, $U_{xx}$ und $U_{\rm Hall}$ zu \SI{e-3}{\milli\volt}. Der Fehler des Shuntwiderstandes war nicht bekannt und wird von uns auf \kor{\SI{0.2}{\percent}, dies entspricht einer Abweichung von \SI{10}{\ohm},} abgeschätzt. Somit können wir den Widerstand für unsere Messungen als Hauptfehlerquelle identifizieren.
 
 Beim Durchfahren des Magnetfeldes von $0$ nach $9$ Tesla konnte ein leichter Hysterese-Effekt festgestellt werden. Das bedeutet, dass der Elektromagnet zwar eine Magnetfeldstärke anzeigt, die wirkliche Feldstärke der angezeigten aber leicht nacheilt. Um diesen Effekt auszugleichen, wurden die Aufnahmen für jede Messung in beide 
 Richtungen durchgefahren. Bei diesen zwei Datensätzen wurde dann gleichzeitig das Magnetfeld des Up-sweeps erniedrigt und die Down-sweeps erhöht, bis die Daten symmetrisch in der Mitte der Hysterese zusammen fielen.
@@ -244,7 +244,7 @@ Für die Auswertung der Hall-Plateaus wurde für jede gemessenen Temperatur ein 
 
 In der blauen Kurve aus Abbildung~\ref{hallplateau} wurde der Verlauf des Hall-Widerstandes $R_{\rm H}$ aus den hysterese-bereinigten Daten über dem Magnetfeld $B$ aufgetragen.
 Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von \kor{$\pm \SI{20}{\ohm}$} um einen \kor{Wert} in dem wir die Anzahl an Messpunkten zählen und den \kor{Wert} über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} variieren. Aus der Anzahl der Messpunkte in diesem Bereich ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}. %, die ebenfalls über das Magnetfeld aufgetragen wird. nop.
-\kor{Im zweiten Plateau ist zu erkennen, dass kein richtiges Plateau ausgebildet ist. Der Widerstandsverlauf nimmt hier unerwarteterweise ab und dann wieder zu. Wir vermuten den richtigen Wert des Plateaus in der Mitte der beiden Maxima, wobei wir uns den Effekt nicht erklären können. Durch unsere Auswertemethode ergibt sich je ein Peak für die beiden Maxima im Plateau. Um den Wert des Plateaus zu ermitteln haben wir folglich die Mitte der beiden Maxima verwendet.}
+\kor{Im zweiten Plateau ist zu erkennen, dass kein richtiges Plateau ausgebildet ist. Der Widerstand nimmt hier unerwarteterweise ab und dann wieder zu. Der Effekt lässt sich aufgrund von Inhomogenitäten in der Probe verstehen, sodass Teile der Probe das Plateau früher erreichen als andere. Wir vermuten den richtigen Wert des Plateaus in der Mitte der beiden Maxima. Durch unsere Auswertemethode ergibt sich je ein Peak für die beiden Maxima im Plateau. Um den Wert des Plateaus zu ermitteln haben wir folglich die Mitte der beiden Maxima verwendet, wobei der Fehler hier der Dicke des Plateaus entspricht, und so aus dem Abstand der Maxima von \SI{70}{\ohm} resultiert.}
 
 Durch dieses Zählverfahren ergeben sich an den Stellen der Plateaus klar erkennbare Peaks, an deren Maxima der Wert des Hall-Plateaus ausgelesen werden kann. Mit dieser Methode und der verwendeten Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit von \SI{20}{\ohm} die aus dem jeweils ausgelesenen Bereich für jeden Wert resultiert. \kor{Der aus oben beschriebenen Rauschen resultierende Messfehler der Lock-in-Verstärker von \SI{0.1}{\percent} wurden im Vergleich zu der Ablesegenauigkeit im Graphen vernachlässigt. }
 
@@ -266,15 +266,18 @@ Die für jedes sichtbare Niveau ausgelesenen Widerstandswerte haben wir zusammen
 		14 &  \SI{1760}{\ohm} &  \SI{1750}{\ohm} &  \SI{1770}{\ohm} &  \SI{1770}{\ohm}\\
 		\hline
 	\end{tabular}
-	\caption{Abgelesene Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit dem Fehler aus der Ungenauigkeit des Vorwiderstandes von \SI{2}.}}
-	\label{klitzing}	
+	\caption{Abgelesene Werte von $R_\nu$ in $\left[\Upomega\right]$ für die erkennbaren Hall-Plateaus bei verschiedenen Temperaturwerten mit dem Fehler aus der Ungenauigkeit des Vorwiderstandes von \SI{0.2}{\percent} und der Ablesegenauigkeit von \SI{20}{\ohm}.}
+	\label{klitzing}
+	}
 	\end{center}
 \end{table}
 
 Die erhaltenen Werte für die ganzen Zahlen $\nu$ ergeben multipliziert mit den Messwerten $R_{\nu}$ jeweils einen ähnlichen Wert,
 %leider nicht den gleichen
 der der Klitzing-Konstante nahe kommt. 
-Wie schon zu Beginn der Auswertung bemerkt, ist die Hauptfehlerquelle die geschätzten Ungenauigkeit von \kor{\SI{2}{\percent}} des Vorwiderstandes. \kor{Der Ablesefehler von \SI{20}{\ohm} aus der Abbildung~\ref{hallplateau} kann also vernachlässigt werden.} %Aufgrund der Linearität von Spannung und Widerstand, besitzen die erhaltenen Werte ebenso eine Unsicherheit von \kor{\SI{2}{\percent}}. 
+\kor{
+Die Fehlerquellen sind hier zum einen die Ungenauigkeit von \kor{\SI{0.2}{\percent}} des Vorwiderstandes sowie die Ablesegenauigkeit von \SI{20}{\ohm} aus Abbildung~\ref{hallplateau}. Für das Plateau mit Füllfaktor $\nu=3$ ergibt sich, aufgrund der Plateaudicke, ein größerer Ablesefehler von \SI{70}{\ohm}.
+} %Aufgrund der Linearität von Spannung und Widerstand, besitzen die erhaltenen Werte ebenso eine Unsicherheit von \kor{\SI{2}{\percent}}. 
 
 \kor{Für jede Temperatur bestimmen wir einen Wert für die Klitzing-Konstante. Dazu verwenden wir nur die Widerstandswerte der Plateaus mit geradzahligen $\nu$. \note{Begründung warum ungerade Plateaus weggelassen wurden} Die Werte werden jeweils mit dem entsprechenden Füllfaktor multipliziert. Die erhaltenen Werte besitzen alle nahezu gleiche Größe und Fehler, wodurch wir für jede gemessene Temperatur einen gemittelten Wert angeben können, der in Tabelle~\ref{klitzing2} aufgetragen ist.}
 
@@ -284,10 +287,10 @@ Wie schon zu Beginn der Auswertung bemerkt, ist die Hauptfehlerquelle die gesch�
 		\hline
 		$T\,[\mathrm{K}]$ & $\overline{R_{\rm K}\nu}\,[\mathrm{k}\Upomega]$\\
 		\hline
-		4.2 & \SI{24.87(50)}{\kilo\ohm} \\
-		3.0 & \SI{24.80(50)}{\kilo\ohm} \\
-		2.1 & \SI{24.89(50)}{\kilo\ohm} \\
-		1.5 & \SI{24.89(50)}{\kilo\ohm}
+		4.2 & \SI{24.873(54)}{\kilo\ohm} \\
+		3.0 & \SI{24.804(53)}{\kilo\ohm} \\
+		2.1 & \SI{24.894(54)}{\kilo\ohm} \\
+		1.5 & \SI{24.894(54)}{\kilo\ohm}
 	\end{tabular}}
 	\caption{Aus Tabelle~\ref{klitzing} berechnete gemittelte Werte für $R_{\rm K}\nu$ mit Fehler.}
 	\label{klitzing2}
@@ -303,7 +306,7 @@ Wie schon zu Beginn der Auswertung bemerkt, ist die Hauptfehlerquelle die gesch�
 
 Aus diesen Werten können wir nun die Klitzing-Konstante bestimmen zu
 \kor{\begin{equation}
-	R_{\rm K} = \SI{24.87(50)}{\kilo\ohm}.
+	R_{\rm K} = \SI{24.867(54)}{\kilo\ohm}.
 \end{equation}}
 Der Vergleich mit dem Literaturwert von $R_{\rm H} = \SI{25.812807}{\kilo\ohm}$ zeigt sich eine große Abweichung, \kor{die auch im Rahmen des Fehlers nicht mehr vereinbar ist.} Die Abweichung ist somit auf einen systematischen Fehler in der Messung zurückzuführen. 
 \kor{Dieser Fehler resultiert wahrscheinlich aus einer falsch eingestellten Phase der Lock-In-Verstärker, woraus systematisch zu niedrige Messwerte folgen.}
@@ -462,8 +465,8 @@ Aus der Länge $L=\SI{600}{\micro\meter}$ und der Breite $W=\SI{200}{\micro\mete
 \end{equation}
 
 Aus den erhaltenen Werte für den Längswiderstand $R_{xx}$ bei den vier gemessenen Temperaturen werden folglich die Leitfähigkeit, der Hall-Faktor und die Elektronenbeweglichkeit nach~\eqref{eq.leithallbeweg} berechnet und in Tabelle~\ref{tab.leithallbeweg} aufgetragen. 
-\kor{Für den Wert der Ladungsträgerdichte wurde der berechnete Werte aus \ref{ladungstraegerdichte2} verwendet.}
-Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von \kor{\SI{2}{\percent}}. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
+\kor{Für die Werte der Ladungsträgerdichten wurden die berechneten Werte aus \ref{ladungstraegerdichte2} verwendet.}
+Für den Fehler der Längswiderstände können die Fehler in den gemessenen Spannungen vernachlässigt werden, da der Fehler im Shuntwiderstand deutlich darüber liegt. Somit besitzen unsere Werte von $R_{xx}$ eine Abweichung von \kor{\SI{0.2}{\percent}}. Die Fehler für die berechneten Werte ergeben sich aus Gauß'scher Fehlerfortplanzung.
 
 \begin{table}[htp]
 	\begin{center}
@@ -471,13 +474,13 @@ Für den Fehler der Längswiderstände können die Fehler in den gemessenen Span
 			\hline
 			$T[\rm K]$ & $R_{xx}[\Upomega]$ & $\sigma_{\rm 2D}[\frac{1}{\Upomega}]$ & $A_{\rm H}\left[ \frac{\mathrm{m}^2}{\mathrm{C}} \right]$ & $\mu \left[ \frac{\mathrm{m}^2}{\mathrm{C}\Upomega} \right]$\\
 			\hline
-			4.2 & 521(10) & 0.00576(12) & 1808(61) & 10.409(20)\\
-			3.0 & 505(10) & 0.00594(12) & 1852(90) & 11.000(26)\\
-			2.1 & 247.4(4.9) & 0.01213(24) & 1829(75) & 22.173(23)\\
-			1.5 & 244.3(4.9) & 0.01228(25) & 1826(78) & 22.424(23)\\
+			4.2 & 521(10) & 5.76(12) & 1750.0(6.9) & 10.1000(22)\\
+			3.0 & 505(10) & 5.94(12) & 1749.8(7.4) & 10.3948(23)\\
+			2.1 & 247.4(4.9) & 12.13(24) & 1756.2(7.4) & 21.2960(23)\\
+			1.5 & 244.3(4.9) & 12.28(25) & 1756.7(7.4) & 21.5703(23)\\
 			\hline
 		\end{tabular}}
-		\caption{Ergebnisse für die Leitfähigkeit $\sigma_{\rm 2D}$, die Hall-Konstante $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$.\note{Werte stimmen noch nicht. Welche Ladungsträgerdichte sollte hier verwendet werden?}}
+		\caption{Ergebnisse für die Leitfähigkeit $\sigma_{\rm 2D}$ mit $10^{-3}$ angegeben, die Hall-Konstante $A_{\rm H}$ und die Elektronenbeweglichkeit $\mu$.}
 		\label{tab.leithallbeweg}
 	\end{center}
 \end{table}
@@ -502,7 +505,7 @@ Aufgrund der Bedingung $T_{1}=2T_{2}$ verwenden wir aus unseren Messungen die Te
 	\end{center}
 \end{figure}
 \kor{
-Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} und Abbildung~\ref{fig:zyklotronmasse2} das Amplitudenverhältnis an drei verschiedenen Stellen um \SI{1}{\tesla} ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragung über $1/B$ liefert die selben Amplitudenwerte und werden daher nicht extra aufgeführt. Der Bereich um \SI{1}{\tesla} entspricht in unserem Fall nach Versuchsteil~\ref{a1} etwa 14 besetzte Landau-Niveaus, was den maximal sichtbaren Niveaus entspricht. Zudem sind Amplituden bei niedrigeren $B$-Feldwerten, aufgrund ihrer Größe, leider nicht mehr sinnvoll ablesbar, wie in Abbildung~\ref{fig:zyklotronmasse} zu erkennen ist.
+Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} und Abbildung~\ref{fig:zyklotronmasse2} das Amplitudenverhältnis an drei verschiedenen Stellen bei möglichst geringen $B$-Feldern ab und tragen die Werte in Tabelle~\ref{tab:zyklotronmasse} auf. Die Auftragungen über $1/B$ liefert die selben Amplitudenwerte und werden daher nicht extra aufgeführt. Der Bereich unter \SI{1}{\tesla} entspricht in unserem Fall nach Versuchsteil~\ref{a1} über 14 besetzte Landau-Niveaus. Zudem sind Amplituden bei niedrigeren $B$-Feldwerten, aufgrund ihrer Größe, leider nicht mehr sinnvoll ablesbar, wie in Abbildung~\ref{fig:zyklotronmasse} bzw.~\ref{fig:zyklotronmasse2} zu erkennen ist.
 }
 \begin{figure}[htp]
 	\begin{center}
@@ -518,13 +521,15 @@ Für die Auswertung lesen wir aus Abbildung~\ref{fig:zyklotronmasse} und Abbildu
 			\hline
 			$T[\mathrm{K}]$ & $\frac{A(B,T_2)}{A(B,T_1)}$ & $B[\mathrm{T}]$ & $\frac{m_{\rm c}}{m_{\rm e}}$\\
 			\hline
-			 		& 2.222 & 0.885 & 0.0412 \\
-			4.2/2.1 & 1.674 & 1.002 & 0.0358 \\
-			 		& 1.232 & 1.153 & 0.0250 \\
+			 		& 2.894 & 0.795 & 0.0444 \\
+			4.2/2.1 & 2.222 & 0.885 & 0.0412 \\
+			 		& 1.674 & 1.001 & 0.0358 \\
 			\hline
-					& 1.477 & 0.794 & 0.0339 \\
-			3.0/1.5 & 1.206 & 0.886 & 0.0254 \\
-					& 1.011 & 1.003 & 0.0067 \\
+					& 2.441 & 0.604 & 0.0422 \\
+			3.0/1.5 & 2.173 & 0.656 & 0.0420 \\
+					& 1.815 & 0.718 & 0.0392 \\
+
+					
 		\end{tabular}}
 		\caption{Berechnung des Zyklotronmassenverhältnisses.}
 		\label{tab:zyklotronmasse}
@@ -539,8 +544,8 @@ Allerdings können wir unsere Werte einen Vergleich mit der Literatur unterziehe
 	\frac{m^*}{m_{\rm e}} = 0.067.
 \end{equation}
 
-Der Bestwert aus unserer Messung ergibt sich für das Temperaturpaar $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ bei einem Magnetfeld von \SI{0.885}{\tesla} zu $m_{\rm c}/m_{\rm e} = 0.0412$. Der Wert besitzt immer noch eine große Abweichung vom Literaturwert. Folglich sind auch hier die nötigen Bedingungen noch nicht erfüllt gewesen um die Zyklotronmasse mit Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} zu bestimmen.
-
+Der Bestwert aus unserer Messung ergibt sich für das Temperaturpaar $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ bei einem Magnetfeld von \SI{0.795}{\tesla} zu $m_{\rm c}/m_{\rm e} = 0.0444$. Der Wert besitzt immer noch eine große Abweichung vom Literaturwert. Folglich sind auch hier die nötigen Bedingungen noch nicht erfüllt gewesen um die Zyklotronmasse mit Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} zu bestimmen.
+Da schon möglichst kleine Magnetfelder betrachtet wurden um eine hohe Besetzung zu erhalten, vermuten wir, dass die Bedingung Temperatur im Experiment ebenfalls nicht erfüllt werden konnte.
 }
 
 %Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte

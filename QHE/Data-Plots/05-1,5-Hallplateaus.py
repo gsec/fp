@@ -68,7 +68,7 @@ print "Maxima:", maximum1, maximum21, maximum22, maximum3, maximum4, maximum5, m
 print "argmax:", wertmaximum1, wertmaximum21, wertmaximum22, wertmaximum3, wertmaximum4, wertmaximum5, wertmaximum6, wertmaximum7, wertmaximum8, wertmaximum9
 print "Mittelwertkandidaten der Maxima:", Mittelwertkandidaten[wertmaximum1], Mittelwertkandidatenmax2, Mittelwertkandidaten[wertmaximum3], Mittelwertkandidaten[wertmaximum4], Mittelwertkandidaten[wertmaximum5], Mittelwertkandidaten[wertmaximum6], Mittelwertkandidaten[wertmaximum7], Mittelwertkandidaten[wertmaximum8], Mittelwertkandidaten[wertmaximum9]
 
-
+print Mittelwertkandidaten[wertmaximum21], Mittelwertkandidaten[wertmaximum22]
 #lines = plt.plot(0,12500,2000,12500, "g--")
 #plt.setp(lines, color="g", linewidth=2.0)
 
