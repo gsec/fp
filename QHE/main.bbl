@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 % this bibliography was produced with the style dinat.bst v2.5
 \makeatletter
 \newcommand{\dinatlabel}[1]%
@@ -23,6 +23,12 @@
   \url{http://www.physik.uni-wuerzburg.de/fileadmin/11999999/Aufgabenstellung_QHE.pdf}.
   --
 \newblock Physikalisches Fortgeschrittenen Praktikum
+
+\bibitem[Batke(Sommersemester 2013)]{batke}
+\dinatlabel{Batke Sommersemester 2013} \textsc{Batke}, Edwin:
+\newblock \emph{Vorlesungsskript - Elektronisch Eigenschaften
+  quasi-zweidimensionaler Ladungsträgersysteme in Halbleitern}.
+\newblock Sommersemester 2013
 
 \bibitem[Janssen(2011)]{janssen}
 \dinatlabel{Janssen 2011} \textsc{Janssen}, N. E.; Goebel R.; Williams J. M.;
