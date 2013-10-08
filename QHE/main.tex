@@ -65,7 +65,7 @@
 \allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
 % in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
 
-\renewcommand{\note}[1]{{\color{red}#1??}}
+\newcommand{\note}[1]{{\color{red}#1??}}
 
 \usepackage{url}
 \usepackage[numbers]{natbib}
@@ -75,8 +75,8 @@
 \definecolor{darkred}{rgb}{.5,0,0}
 \definecolor{darkgreen}{rgb}{0,.5,0}
 
-\newcommand{\kor}[1]{{\color{darkgreen}#1}}
-%\newcommand{\kor}[1]{{#1}}
+%\newcommand{\kor}[1]{{\color{darkgreen}#1}}
+\newcommand{\kor}[1]{{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -248,7 +248,7 @@ In der blauen Kurve aus Abbildung~\ref{hallplateau} wurde der Verlauf des Hall-W
 Zur Auswertung der Hall-Plateaus definieren wir uns einen kleinen Bereich von \kor{$\pm \SI{20}{\ohm}$} um einen \kor{Wert} in dem wir die Anzahl an Messpunkten zählen und den \kor{Wert} über den gesamten Bereich mit einer Schrittweite von \SI{10}{\ohm} variieren. Aus der Anzahl der Messpunkte in diesem Bereich ergibt sich die rote Kurve in Abbildung~\ref{hallplateau}. %, die ebenfalls über das Magnetfeld aufgetragen wird. nop.
 Durch dieses Zählverfahren ergeben sich an den Stellen der Plateaus klar erkennbare Peaks, an deren Maxima der Wert des Hall-Plateaus ausgelesen werden kann. 
 \kor{Im Bereich zwischen  \SI{4}{\tesla} \--- \SI{5}{\tesla} ist zu erkennen, dass der Hallwiderstand mit zunehmendem Magnetfeld nicht nur konstant bleibt, sondern sogar abnimmt.
-Der Effekt könnten sich durch Inhomogenitäten in der Probe erklären lassen. Dadurch erreichen Teile der Probe das Plateau früher als andere, wodurch der Längswiderstand in diesem Bereich früher einbricht und zu einem niedrigeren Hallwiderstand führen kann . Wir vermuten den richtigen Wert des Plateaus in der Mitte der beiden Extrema. Durch unsere Auswertemethode ergibt sich je ein Peak für die beiden Extrema im Plateau. Um den Wert des Plateaus zu ermitteln haben wir folglich die Mitte der beiden Maxima verwendet, wobei der Fehler aus dem Abstand der Maxima von \SI{70}{\ohm} resultiert.}
+Der Effekt könnten sich durch Inhomogenitäten in der Probe erklären lassen. Dadurch erreichen Teile der Probe das Plateau früher als andere, wodurch der Längswiderstand in diesem Bereich früher einbricht und zu einem niedrigeren Hallwiderstand führen kann. Wir vermuten den richtigen Wert des Plateaus in der Mitte der beiden Extrema. Durch unsere Auswertemethode ergibt sich je ein Peak für die beiden Extrema im Plateau. Um den Wert des Plateaus zu ermitteln haben wir folglich die Mitte der beiden Maxima verwendet, wobei der Fehler aus dem Abstand der Maxima von \SI{70}{\ohm} resultiert.}
 
 
 Mit dieser Methode und der verwendeten Schrittweite erhalten wir in der Kurve eine Ablesegenauigkeit von \SI{20}{\ohm} die aus dem jeweils ausgelesenen Bereich für jeden Wert resultiert. \kor{Der aus oben beschriebenen Rauschen resultierende Messfehler der Lock-in-Verstärker von \SI{0.1}{\percent} wurden im Vergleich zu der Ablesegenauigkeit im Graphen vernachlässigt. }
@@ -553,24 +553,26 @@ Für die Auswertung lesen wir aus den beiden Abbildungen das Amplitudenverhältn
 					& 2.441 & 0.604 & 0.0422 \\
 			3.0/1.5 & 2.173 & 0.656 & 0.0420 \\
 					& 1.815 & 0.718 & 0.0392 \\
-
-					
+			\hline					
 		\end{tabular}}
 		\caption{Berechnung des Zyklotronmassenverhältnisses.}
 		\label{tab:zyklotronmasse}
 	\end{center}
 \end{table}
-
 \kor{
 Die erhaltenen Werte für das Verhältnis der Zyklotronmasse zur Elektronenmasse aus Tabelle~\ref{tab:zyklotronmasse}, weichen stark voneinander ab. Wir erkennen eine systematische Abweichung der Werte hin zu höheren Magnetfeldern, wobei wir theoretisch gleichbleibende Werte erwartet hätten. Da die Formel~\eqref{eq:zyklotronmasse} nur kleine Magnetfelder gilt und wir nicht wissen, wie ungenau die Formel bei größeren Magnetfelder ist und wann die Bedingung $E_{\rm F} \gg \hbar\omega_{\rm c}$ erfüllt ist, müssen wir anhand der Ergebnisse davon ausgehen, dass die genannten Bedingungen, im betrachteten Bereich, unzureichend erfüllt waren. Die Fehler der Werte werden folglich durch systematische Fehler bestimmt und  eine Fehlerabschätzung der Werte halten wir für nicht sinnvoll.
 
-Allerdings können wir unsere Werte einen Vergleich mit der Literatur unterziehen. Für GaAs ist die Zyklotronmasse gleich der effektiven Masse und ist gegeben durch ~\cite{saarland}
+\vspace{-.2cm}
+
+Allerdings können wir unsere Werte einen Vergleich mit der Literatur unterziehen. Für GaAs ist die Zyklotronmasse gleich der effektiven Masse und ist gegeben durch~\cite{saarland}
 \begin{equation}
 	\frac{m^*}{m_{\rm e}} = 0.067.
 \end{equation}
 
+\vspace{-.35cm}
+
 Der Wert aus unserer Messung, der den Literaturwert am nächsten kommt, ergibt sich für das Temperaturpaar $(\SI{4.2}{\kelvin},\SI{2.1}{\kelvin})$ bei einem Magnetfeld von \SI{0.795}{\tesla} zu $m_{\rm c}/m_{\rm e} = 0.0444$. Der Wert besitzt immer noch eine große Abweichung vom Literaturwert. Folglich sind auch hier die nötigen Bedingungen noch nicht erfüllt gewesen, um die Zyklotronmasse mit Formel~\eqref{eq:zyklotronmasse} nach~\citet{ando} zu bestimmen.
-Ebenfalls möglich ist, dass dass die Bedingung der Temperaturen im Experiment ebenfalls nicht hundertprozentig erfüllt werden konnte.
+Ebenfalls möglich ist, dass die Bedingung der Temperaturen im Experiment ebenfalls nicht hundertprozentig erfüllt werden konnte.
 }
 
 %Aus Tabelle~\ref{tab:zyklotronmasse} werden je die drei Massenverhältnisse der Temperaturpaare gemittelt, wodurch sich die Werte
