@@ -22,12 +22,17 @@ colors = [(1.0, 0.0, 0.0), (0.75, 0, 0.75)]
 # ------------------  Eingaben  ------------
 Eingaben=['4,2-Hallwiderstand-Magnetfeld_bereinigt.dat','3,0-Hallwiderstand-Magnetfeld_bereinigt.dat','2,1-Hallwiderstand-Magnetfeld_bereinigt.dat','1,5-Hallwiderstand-Magnetfeld_bereinigt.dat']
 
-Fall=4
+Fall=0
 txt_filename_to_open.append(Eingaben[Fall])
 line.append(1)
-fehlerR=0.02
+fehlerR=0.002
 # ------------------------------------------
 txt_file = [i.strip().split() for i in open(txt_filename_to_open[0]).readlines()]
+
+obere_grenzen=[0.999,0.8,0.75,0.7]
+obere_grenze = obere_grenzen[Fall]
+untere_grenze = 0.2
+
 
 #txt_file.remove(txt_file[0])
 U_H=[]
@@ -60,15 +65,16 @@ ydata=U_H
 fitx=[]
 fity=[]
 for i in range(len(B)):
-	if B[i] < 0.9999:
-		fitx=append(fitx,B[i])
-		fity=append(fity,U_H[i])
-		# print "i=", i, "B=", B[i], "fitx=", fitx[i], "U_H=", U_H[i]
+	if B[i] > untere_grenze:
+		if B[i] < obere_grenze:
+			fitx=append(fitx,B[i])
+			fity=append(fity,U_H[i])
+			# print "i=", i, "B=", B[i], "fitx=", fitx[i], "U_H=", U_H[i]
 
 # Fitfunktion an Daten mit niedrigen B-Feld
-fitfunc = lambda p, fitx: p[0]*fitx
+fitfunc = lambda p, fitx: p[0]*fitx+p[1]
 errfunc = lambda p, fitx, fity: fitfunc(p, fitx) - fity
-p0 = [0]
+p0 = [0,0]
 pbest, success = optimize.leastsq(errfunc, p0, args=(fitx, fity))
 
 steigung_min = ((fitfunc(pbest, fitx)[-1]-fehlerR*fitfunc(pbest, fitx)[-1]) - fitfunc(pbest, fitx)[0])/(fitx[-1] - fitx[0])
@@ -82,8 +88,9 @@ plt.plot(xdata,ydata,color=colors[0],label="Messwerte")
 plt.plot(fitx, fitfunc(pbest, fitx), "b", label="ausgleichende Ursprungsgerade" + "\n" + "an Messdaten bis $1\mathrm{T}$")
 plt.plot([fitx[0],fitx[-1]], [fitfunc(pbest, fitx)[0],fitfunc(pbest, fitx)[-1]-fehlerR*fitfunc(pbest, fitx)[-1]], "b--", label="Fehlergeraden mit Fehler" + "\n" + "aus Widerstandsmessung")
 plt.plot([fitx[0],fitx[-1]], [fitfunc(pbest, fitx)[0],fitfunc(pbest, fitx)[-1]+fehlerR*fitfunc(pbest, fitx)[-1]], "b--")
+
 # Fehlerbalken an letzten (Mess-)Datenwert für Fitgerade
-plt.errorbar([fitx[-1],fitx[-1]], [fity[-1],fity[-1]], yerr=fehlerR*fity[-1], fmt="r")
+# plt.errorbar([fitx[-1],fitx[-1]], [fity[-1],fity[-1]], yerr=fehlerR*fity[-1], fmt="r")
 
 # plt.plot([0, 1.6*2.5], [0, 2800*2.5], 'b-', lw=2, label="Fit")
 # plt.plot([0, 1.6*2.5], [0, 2800*2.5+200], 'b--', lw=1, label="Fehlergeraden")
