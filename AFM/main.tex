@@ -37,12 +37,20 @@
 
 %%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
 \pagestyle{scrheadings}                           % Apply userdefined settings
 \setheadsepline{.5 pt}                            % Width of seperation line
 \setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
 \cfoot{\thepage}                                  % Page numbering 
 
+%%%%%%%%%%%%%%%%%%%%%% commands      %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{formal/commands}
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\secref}[1]{section~\ref{sec:#1}}
+
+\graphicspath{{Bilder/}}
 %%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \columnsep20pt                                  % Width inbetween \twocolumns
@@ -110,23 +118,75 @@ decades. In contrast to other scanning imaging techniques as the STM or SEM, the
 atomic force microscope (AFM) is capable to deliver up to atomic resolution 
 without the need of a vacuum or special treatment of the probe prior to 
 analysis. This allows us to examine a broader variety of samples under easily 
-achievable conditions.  
+achievable conditions.
 
-Funktionsweise AFM\\
+\subsection{Work principle of the AFM}
+%Funktionsweise AFM\\
+The principle of the atomic force microscope are the forces that act between two 
+pieces of matter when brought close to each other. More precisely we bring a 
+sharp tip into a distance of a few nano meters to  a surface we want to examine.  
+scale the main contribution are Van-der-Waals forces which arise from 
+polarisation fluctuations in the material.
+In \figref{afm_scheme} one can see the main parts required to run the AFM. 
+The sample is mounted on a xyz-stage consisting of different piezo elements. 
+This enables us to move the sample in xy-direction for the scanning of the 
+probe, as well as in the z direction for height compensation. A reflecting 
+cantilever is positioned above the sample. A laser beam will reflect on the 
+cantilever and hits a segmented photodiode. If the cantilever moves, the 
+laser beam will change the angle of deflection, detectable by the photodiode.
+From the intensity change on the diode segments one can calculate the height 
+difference of the material.
+
+\begin{figure}
+    \centering
+    \includegraphics{Bilder/afm_scheme.pdf}
+    \caption{Simplified illustration of an atomic force microscope}
+    \label{fig:afm_scheme}
+\end{figure}
+
+\subsection{Refinements}
+Instead of mapping the intensity change on the diode to the force and 
+subsequently to the probe height, often a different approach is used. The tip is 
+set to apply a constant force on the probe. If the force changes, the piezo in 
+z-direction is altered to move the probe to a height where the force is equal to 
+the set point defined before. This has the advantage that the force between tip 
+and probe is approximately constant and therefore it is less likely to damage 
+the sample or the tip. This is ensured via a feedback loop between the the diode 
+and the piezo element as seen in \figref{control_loop}.
+
+\begin{figure}
+    \centering
+    \includegraphics{Bilder/control_loop.pdf}
+    \caption{Principle of a feedback loop with disturbance $z(t)$, output 
+        $r(t)$, control signal $u(t)$, measured output $x(t)$ and error signal 
+        $e(t)$.}
+    \label{fig:control_loop}
+\end{figure}
+
+The height information accquired via this method is more strongly connected to 
+the actual sample surface. The mapping is done between the piezo voltage as 
+opposed to the strength of the diode, the angle of the lase beam and the 
+distances between those elements. Therefore introducing less error sources and 
+leading to a more accurate signal.
+
 Relevanz für die Aufnahme der GaSb Proben\\
 
 
 \section{Data Aquisition}
 \label{dataaquisition}
-In order to acquire the topology of the samples surface the computer records the z-position in combination with the x- and y-position of the 
-Auswirkungen der PI-Parameter\\
-To optimize the quality of the pictures we can adjust the P- and I-values. These values refer to the proportional and integral-gain of the z-controllers feedback loop respectively. To 
+In order to acquire the topology of the samples surface the computer records the 
+z-position in combination with the x- and y-position of the Auswirkungen der 
+PI-Parameter\\
+To optimize the quality of the pictures we can adjust the P- and I-values. These 
+values refer to the proportional and integral-gain of the z-controllers feedback 
+loop respectively. To 
 
-For a topographical imaging mode, a feedback loop (Fig. 4.3) is
-implemented to keep the cantilever deflection constant by changing the tip height (z)
-while scanning in x and y. In this way, a nearly constant force is maintained between the
-tip and sample, and the topographical image is created by recording the voltage applied to
-the z-piezo as a function of the x and y position. As the tip is scanned, lateral force are
+For a topographical imaging mode, a feedback loop (Fig. 4.3) is implemented to 
+keep the cantilever deflection constant by changing the tip height (z) while 
+scanning in x and y. In this way, a nearly constant force is maintained between 
+the tip and sample, and the topographical image is created by recording the 
+voltage applied to the z-piezo as a function of the x and y position. As the tip 
+is scanned,  lateral force are
 
 
 Format\\
