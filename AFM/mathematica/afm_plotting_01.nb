@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     46917,       1273]
-NotebookOptionsPosition[     43204,       1159]
-NotebookOutlinePosition[     43665,       1177]
-CellTagsIndexPosition[     43622,       1174]
+NotebookDataLength[     53957,       1423]
+NotebookOptionsPosition[     50270,       1311]
+NotebookOutlinePosition[     50732,       1329]
+CellTagsIndexPosition[     50689,       1326]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42,14 +42,16 @@ Cell[BoxData[{
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-  "basewin", " ", "=", " ", "\"\<D:\\\\Git\\\\F-Praktikum\\\\AFM\>\""}], ";", 
-  "                   ", 
+   RowBox[{
+   "basewin", " ", "=", " ", "\"\<D:\\\\Git\\\\F-Praktikum\\\\AFM\>\""}], 
+   ";"}], "                   ", 
   RowBox[{"(*", " ", 
    RowBox[{
    "vergiss", " ", "nicht", " ", "den", " ", "backslash", " ", "mit", " ", 
     "backslash", " ", "zu", " ", 
     RowBox[{
-     RowBox[{"escapen", "!!"}], "!"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"escapen", "!!"}], "!"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
   RowBox[{"subdir", " ", "=", " ", "\"\<data-plots\>\""}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
@@ -122,7 +124,8 @@ Cell[BoxData[
   SequenceForm[1, ": ", "00-Referenzmessung-mit-Gitter Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.59022568416123*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487156134`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -132,7 +135,8 @@ Cell[BoxData[
   SequenceForm[2, ": ", "00-Referenzmessung-mit-Gitter Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.59022568416323*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487256136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -142,7 +146,8 @@ Cell[BoxData[
   SequenceForm[3, ": ", "00-Referenzmessung-mit-Gitter Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841642303`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487256136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -152,7 +157,8 @@ Cell[BoxData[
   SequenceForm[4, ": ", "00-Referenzmessung-mit-Gitter Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.59022568416623*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487256136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -162,7 +168,8 @@ Cell[BoxData[
   SequenceForm[5, ": ", "01-Gitter-schneller Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841672306`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487256136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -172,7 +179,8 @@ Cell[BoxData[
   SequenceForm[6, ": ", "01-Gitter-schneller Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841692305`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487256136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -182,7 +190,8 @@ Cell[BoxData[
   SequenceForm[7, ": ", "01-Gitter-schneller Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684170231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487256136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -192,7 +201,8 @@ Cell[BoxData[
   SequenceForm[8, ": ", "01-Gitter-schneller Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684171231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848735614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -202,7 +212,8 @@ Cell[BoxData[
   SequenceForm[9, ": ", "02-Gitter-sehr-langsam Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684173231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848735614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -212,7 +223,8 @@ Cell[BoxData[
   SequenceForm[10, ": ", "02-Gitter-sehr-langsam Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841742306`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848735614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -222,7 +234,8 @@ Cell[BoxData[
   SequenceForm[11, ": ", "02-Gitter-sehr-langsam Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684176231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848735614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -232,7 +245,8 @@ Cell[BoxData[
   SequenceForm[12, ": ", "02-Gitter-sehr-langsam Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841782312`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848735614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -242,7 +256,8 @@ Cell[BoxData[
   SequenceForm[13, ": ", "03-Gitter-ohne-P Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684179231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848745614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -252,7 +267,8 @@ Cell[BoxData[
   SequenceForm[14, ": ", "03-Gitter-ohne-P Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684180231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848745614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -262,7 +278,8 @@ Cell[BoxData[
   SequenceForm[15, ": ", "03-ZDUMMY Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684182231*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848745614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -272,7 +289,8 @@ Cell[BoxData[
   SequenceForm[16, ": ", "03-ZDUMMY Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841832314`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848745614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -282,7 +300,8 @@ Cell[BoxData[
   SequenceForm[17, ": ", "08-FP-1 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841852317`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848745614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -292,7 +311,8 @@ Cell[BoxData[
   SequenceForm[18, ": ", "08-FP-1 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841862316`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848755614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -302,7 +322,8 @@ Cell[BoxData[
   SequenceForm[19, ": ", "08-FP-1 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841872315`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848755614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -312,7 +333,8 @@ Cell[BoxData[
   SequenceForm[20, ": ", "08-FP-1 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684189232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848755614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -322,7 +344,8 @@ Cell[BoxData[
   SequenceForm[21, ": ", "09-FP-1 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684190232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848755614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -332,7 +355,8 @@ Cell[BoxData[
   SequenceForm[22, ": ", "09-FP-1 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684192232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848755614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -342,7 +366,8 @@ Cell[BoxData[
   SequenceForm[23, ": ", "09-FP-1 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684193232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848755614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -352,7 +377,8 @@ Cell[BoxData[
   SequenceForm[24, ": ", "09-FP-1 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684195232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487656136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -362,7 +388,8 @@ Cell[BoxData[
   SequenceForm[25, ": ", "10-FP-3 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684196232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487656136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -372,7 +399,8 @@ Cell[BoxData[
   SequenceForm[26, ": ", "10-FP-3 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256841972322`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487656136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -382,7 +410,8 @@ Cell[BoxData[
   SequenceForm[27, ": ", "10-FP-3 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684199232*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958487656136`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -392,7 +421,8 @@ Cell[BoxData[
   SequenceForm[28, ": ", "10-FP-3 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842002325`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848775614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -402,7 +432,8 @@ Cell[BoxData[
   SequenceForm[29, ": ", "11-FP-3 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842012324`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848775614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -412,7 +443,8 @@ Cell[BoxData[
   SequenceForm[30, ": ", "11-FP-3 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842032323`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848775614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -422,7 +454,8 @@ Cell[BoxData[
   SequenceForm[31, ": ", "11-FP-3 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842042327`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848775614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -432,7 +465,8 @@ Cell[BoxData[
   SequenceForm[32, ": ", "11-FP-3 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684206233*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848775614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -442,7 +476,8 @@ Cell[BoxData[
   SequenceForm[33, ": ", "12-FP-3 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842072325`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848785614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -452,7 +487,8 @@ Cell[BoxData[
   SequenceForm[34, ": ", "12-FP-3 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684209233*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848785614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -462,7 +498,8 @@ Cell[BoxData[
   SequenceForm[35, ": ", "12-FP-3 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684211233*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848785614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -472,7 +509,8 @@ Cell[BoxData[
   SequenceForm[36, ": ", "12-FP-3 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684212233*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848785614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -482,7 +520,8 @@ Cell[BoxData[
   SequenceForm[37, ": ", "13-FP-4 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842142334`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848785614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -492,7 +531,8 @@ Cell[BoxData[
   SequenceForm[38, ": ", "13-FP-4 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684215233*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848795614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -502,7 +542,8 @@ Cell[BoxData[
   SequenceForm[39, ": ", "13-FP-4 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842162333`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848795614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -512,7 +553,8 @@ Cell[BoxData[
   SequenceForm[40, ": ", "13-FP-4 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684218233*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848795614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -522,7 +564,8 @@ Cell[BoxData[
   SequenceForm[41, ": ", "14-FP-7-Al Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684220234*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848795614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -532,7 +575,8 @@ Cell[BoxData[
   SequenceForm[42, ": ", "14-FP-7-Al Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842212334`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848795614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -542,7 +586,8 @@ Cell[BoxData[
   SequenceForm[43, ": ", "14-FP-7-Al Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684222234*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848795614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -552,7 +597,8 @@ Cell[BoxData[
   SequenceForm[44, ": ", "14-FP-7-Al Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684225234*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488056135`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -562,7 +608,8 @@ Cell[BoxData[
   SequenceForm[45, ": ", "15-FP-7-Al Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842262335`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488056135`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -572,7 +619,8 @@ Cell[BoxData[
   SequenceForm[46, ": ", "15-FP-7-Al Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842282343`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488056135`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -582,7 +630,8 @@ Cell[BoxData[
   SequenceForm[47, ": ", "15-FP-7-Al Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842292337`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488056135`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -592,7 +641,8 @@ Cell[BoxData[
   SequenceForm[48, ": ", "15-FP-7-Al Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684231234*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488056135`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -602,7 +652,8 @@ Cell[BoxData[
   SequenceForm[49, ": ", "16-FP-7-Al Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684232234*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488056135`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -612,7 +663,8 @@ Cell[BoxData[
   SequenceForm[50, ": ", "16-FP-7-Al Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842332344`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488156137`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -622,7 +674,8 @@ Cell[BoxData[
   SequenceForm[51, ": ", "16-FP-7-Al Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842352343`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488156137`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -632,7 +685,8 @@ Cell[BoxData[
   SequenceForm[52, ": ", "16-FP-7-Al Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842362347`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488156137`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -642,7 +696,8 @@ Cell[BoxData[
   SequenceForm[53, ": ", "17-FP-2 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842382345`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488156137`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -652,7 +707,8 @@ Cell[BoxData[
   SequenceForm[54, ": ", "17-FP-2 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684239235*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488156137`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -662,7 +718,8 @@ Cell[BoxData[
   SequenceForm[55, ": ", "17-FP-2 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684241235*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.5902958488156137`*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -672,7 +729,8 @@ Cell[BoxData[
   SequenceForm[56, ": ", "17-FP-2 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842422347`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848825614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -682,7 +740,8 @@ Cell[BoxData[
   SequenceForm[57, ": ", "18-FP-5 Image 1.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842432346`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848825614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -692,7 +751,8 @@ Cell[BoxData[
   SequenceForm[58, ": ", "18-FP-5 Image 2.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.5902256842452345`*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848825614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -702,7 +762,8 @@ Cell[BoxData[
   SequenceForm[59, ": ", "18-FP-5 Image 3.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684246235*^9}],
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848825614*^9}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -712,7 +773,8 @@ Cell[BoxData[
   SequenceForm[60, ": ", "18-FP-5 Image 4.txt"],
   Editable->False]], "Print",
  CellChangeTimes->{3.5902244051080723`*^9, 3.5902246125709386`*^9, 
-  3.590225684248235*^9}]
+  3.59022568416123*^9, 3.590295721825436*^9, 3.59029581068556*^9, 
+  3.590295848825614*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -850,13 +912,15 @@ Cell[BoxData[{
    3.589989447719164*^9, 3.589989505525909*^9}, {3.589989606591914*^9, 
    3.589989606636223*^9}, {3.5899897325275593`*^9, 3.589989739871602*^9}, {
    3.590000022458971*^9, 3.590000022705081*^9}, {3.5902247227672415`*^9, 
-   3.5902247633775644`*^9}, {3.5902254024561176`*^9, 3.5902254032911654`*^9}}],
+   3.5902247633775644`*^9}, {3.5902254024561176`*^9, 
+   3.5902254032911654`*^9}, {3.590310649892722*^9, 3.5903106509427233`*^9}, {
+   3.590326020256714*^9, 3.590326022136717*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i$$ = 3, $CellContext`j$$ = 
-    1., $CellContext`k$$ = 0, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i$$ = 0, $CellContext`j$$ = 
+    1, $CellContext`k$$ = 0, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
@@ -866,16 +930,16 @@ Cell[BoxData[
       1. -> "Height", 0 -> "Derrivative"}}, {{
        Hold[$CellContext`k$$], 0, "Scanning Direction"}, {
       0 -> "Forward", 1. -> "Backward"}}}, Typeset`size$$ = {
-    1353., {444., 449.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`i$5372$$ = 
-    0, $CellContext`j$5373$$ = False, $CellContext`k$5374$$ = False}, 
+    1457., {438., 443.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`i$12854$$ = 
+    0, $CellContext`j$12855$$ = False, $CellContext`k$12856$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`i$$ = 0, $CellContext`j$$ = 
         1, $CellContext`k$$ = 0}, "ControllerVariables" :> {
-        Hold[$CellContext`i$$, $CellContext`i$5372$$, 0], 
-        Hold[$CellContext`j$$, $CellContext`j$5373$$, False], 
-        Hold[$CellContext`k$$, $CellContext`k$5374$$, False]}, 
+        Hold[$CellContext`i$$, $CellContext`i$12854$$, 0], 
+        Hold[$CellContext`j$$, $CellContext`j$12855$$, False], 
+        Hold[$CellContext`k$$, $CellContext`k$12856$$, False]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -895,7 +959,7 @@ Cell[BoxData[
          1. -> "Height", 0 -> "Derrivative"}}, {{$CellContext`k$$, 0, 
           "Scanning Direction"}, {0 -> "Forward", 1. -> "Backward"}}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{1408., {522., 527.}},
+     ImageSizeCache->{1512., {516., 521.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -924,50 +988,31 @@ Cell[BoxData[
    3.589989607328719*^9, 3.590000042566668*^9, 3.590001843123473*^9, 
    3.59000212259256*^9, 3.590224346211704*^9, 3.5902244053010836`*^9, {
    3.5902247260214276`*^9, 3.5902247455595455`*^9}, 3.590224783040689*^9, 
-   3.5902254616725044`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox[
-   RowBox[{"ListPlot3D", "::", "arrayerr"}], "MessageName"], 
-  RowBox[{
-  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(\\({0.`, 0.`, 0.`}\\)\\), \
-\\(\\({3.518341`, 0.`, 0.`}\\)\\), \\(\\({7.036682`, 0.`, 0.`}\\)\\), \
-\\(\\({10.555024`, 0.`, 0.`}\\)\\), \\(\\({14.073365`, 0.`, 0.`}\\)\\), \
-\\(\\({17.591706`, 0.`, 0.`}\\)\\), \\(\\({21.110047`, 0.`, 0.`}\\)\\), \
-\\(\\({24.628388`, 0.`, 0.`}\\)\\), \\(\\({28.146729`, 0.`, 0.`}\\)\\), \
-\\(\\({1.641893`, 0.117635`, 0.117635`}\\)\\), \\(\\({5.160234`, 0.117635`, \
-0.117635`}\\)\\), \\(\\({8.678575`, 0.117635`, 0.117635`}\\)\\), \
-\\(\\({12.196916`, 0.117635`, 0.117635`}\\)\\), \\(\\(\[LeftSkeleton] 25 \
-\[RightSkeleton]\\)\\), \\(\\({13.604253`, 0.470538`, 0.470538`}\\)\\), \
-\\(\\({17.122594`, 0.470538`, 0.470538`}\\)\\), \\(\\({20.640935`, 0.470538`, \
-0.470538`}\\)\\), \\(\\({24.159276`, 0.470538`, 0.470538`}\\)\\), \
-\\(\\({27.677617`, 0.470538`, 0.470538`}\\)\\), \\(\\({1.17278`, 0.588173`, \
-0.588173`}\\)\\), \\(\\({4.691122`, 0.588173`, 0.588173`}\\)\\), \
-\\(\\({8.209463`, 0.588173`, 0.588173`}\\)\\), \\(\\({11.727804`, 0.588173`, \
-0.588173`}\\)\\), \\(\\({15.246145`, 0.588173`, 0.588173`}\\)\\), \
-\\(\\({18.764486`, 0.588173`, 0.588173`}\\)\\), \\(\\({22.282827`, 0.588173`, \
-0.588173`}\\)\\), \\(\\(\[LeftSkeleton] 2135 \[RightSkeleton]\\)\\)}\\)\
-\[NoBreak] must be a valid array or a list of valid arrays. \
-\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
-ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot3D\\\", ButtonNote -> \
-\\\"ListPlot3D::arrayerr\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.5902275077865353`*^9}]
-}, Open  ]]
+   3.5902254616725044`*^9, 3.590295722015436*^9, 3.5902958108955607`*^9, 
+   3.5902958534556203`*^9, 3.590310652022725*^9, 3.5903260233267183`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["TESTSECTION", "Subsubtitle",
- CellChangeTimes->{{3.590002685064601*^9, 3.590002689444353*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"data", "[", "50", "]"}]], "Input",
- CellChangeTimes->{{3.590225612374124*^9, 3.5902256167503743`*^9}, {
-  3.590225761397648*^9, 3.590225791294358*^9}, {3.5902262272232914`*^9, 
-  3.590226230831498*^9}}],
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Zeilenlaenge", "=", "256"}], ";", " ", 
+  RowBox[{"Datansatz", "=", "50"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"datamatrix", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"data", "[", "Datansatz", "]"}], "\[LeftDoubleBracket]", 
+     RowBox[{
+      RowBox[{"1", "+", 
+       RowBox[{"i", "*", "Zeilenlaenge"}]}], ";;", 
+      RowBox[{"Zeilenlaenge", "*", 
+       RowBox[{"(", 
+        RowBox[{"1", "+", "i"}], ")"}]}]}], "\[RightDoubleBracket]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "0", ",", 
+      RowBox[{"Zeilenlaenge", "-", "1"}]}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.590295871895646*^9, 3.59029588153566*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
@@ -990,68 +1035,92 @@ Cell[BoxData[
          RowBox[{"{", 
           RowBox[{
            RowBox[{"{", 
-            RowBox[{"0.`", ",", "0.`", ",", "0.024881`"}], "}"}], ",", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0.`", ",", "0.`", ",", "0.024881`"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0.195555`", ",", "0.`", ",", "0.0245933`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"0.391111`", ",", "0.`", ",", "0.0246162`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"0.586666`", ",", "0.`", ",", "0.0243285`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"0.782221`", ",", "0.`", ",", "0.0243514`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"0.977776`", ",", "0.`", ",", "0.0240637`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"1.173332`", ",", "0.`", ",", "0.0240867`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"1.368887`", ",", "0.`", ",", "0.0241096`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"1.564442`", ",", "0.`", ",", "0.0241326`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"1.759998`", ",", "0.`", ",", "0.0238448`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"1.955553`", ",", "0.`", ",", "0.0238678`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"2.151108`", ",", "0.`", ",", "0.0238907`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"2.346664`", ",", "0.`", ",", "0.0239137`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"2.542219`", ",", "0.`", ",", "0.0242473`"}], "}"}], 
+             ",", 
+             RowBox[{"\[LeftSkeleton]", "229", "\[RightSkeleton]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"47.519936`", ",", "0.`", ",", "0.0400873`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"47.715492`", ",", "0.`", ",", "0.0401102`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"47.911047`", ",", "0.`", ",", "0.0401332`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"48.106602`", ",", "0.`", ",", "0.0401561`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"48.302158`", ",", "0.`", ",", "0.0404897`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"48.497713`", ",", "0.`", ",", "0.041134`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"48.693268`", ",", "0.`", ",", "0.041157`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"48.888824`", ",", "0.`", ",", "0.0411799`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"49.084379`", ",", "0.`", ",", "0.0412028`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"49.279934`", ",", "0.`", ",", "0.0415365`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"49.475489`", ",", "0.`", ",", "0.0415594`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"49.671045`", ",", "0.`", ",", "0.0415823`"}], "}"}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{"49.8666`", ",", "0.`", ",", "0.0416053`"}], "}"}]}], 
+            "}"}], ",", 
+           RowBox[{"\[LeftSkeleton]", "254", "\[RightSkeleton]"}], ",", 
            RowBox[{"{", 
-            RowBox[{"0.195555`", ",", "0.`", ",", "0.0245933`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"0.391111`", ",", "0.`", ",", "0.0246162`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"0.586666`", ",", "0.`", ",", "0.0243285`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"0.782221`", ",", "0.`", ",", "0.0243514`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"0.977776`", ",", "0.`", ",", "0.0240637`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1.173332`", ",", "0.`", ",", "0.0240867`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1.368887`", ",", "0.`", ",", "0.0241096`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1.564442`", ",", "0.`", ",", "0.0241326`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1.759998`", ",", "0.`", ",", "0.0238448`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1.955553`", ",", "0.`", ",", "0.0238678`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"2.151108`", ",", "0.`", ",", "0.0238907`"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"2.346664`", ",", "0.`", ",", "0.0239137`"}], "}"}], ",", 
-           RowBox[{"\[LeftSkeleton]", "65511", "\[RightSkeleton]"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"47.715492`", ",", "49.995`", ",", "0.00621014`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"47.911047`", ",", "49.995`", ",", "0.00623309`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"48.106602`", ",", "49.995`", ",", "0.00625603`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"48.302158`", ",", "49.995`", ",", "0.00627898`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"48.497713`", ",", "49.995`", ",", "0.00599125`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"48.693268`", ",", "49.995`", ",", "0.00570353`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"48.888824`", ",", "49.995`", ",", "0.00541581`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"49.084379`", ",", "49.995`", ",", "0.00512808`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"49.279934`", ",", "49.995`", ",", "0.00515103`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"49.475489`", ",", "49.995`", ",", "0.0048633`"}], "}"}], 
-           ",", 
-           RowBox[{"{", 
-            RowBox[{"49.671045`", ",", "49.995`", ",", "0.00457558`"}], "}"}],
-            ",", 
-           RowBox[{"{", 
-            RowBox[{"49.8666`", ",", "49.995`", ",", "0.00459852`"}], "}"}]}],
-           "}"}],
+            RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], 
+          "}"}],
          Short[#, 5]& ],
         Background->GrayLevel[1],
         BaseStyle->{Deployed -> False},
@@ -1073,7 +1142,7 @@ Cell[BoxData[
           Background->None],
          Appearance->Automatic,
          ButtonFunction:>OutputSizeLimit`ButtonFunction[
-          Identity, 74, 23528940282336071891, 5/2],
+          Identity, 13, 23529409998841654142, 5/2],
          Enabled->True,
          Evaluator->Automatic,
          Method->"Queued"], "\[ThinSpace]", 
@@ -1090,7 +1159,7 @@ Cell[BoxData[
           Background->None],
          Appearance->Automatic,
          ButtonFunction:>OutputSizeLimit`ButtonFunction[
-          Identity, 74, 23528940282336071891, 5 2],
+          Identity, 13, 23529409998841654142, 5 2],
          Enabled->True,
          Evaluator->Automatic,
          Method->"Queued"], "\[ThinSpace]", 
@@ -1107,7 +1176,7 @@ Cell[BoxData[
           Background->None],
          Appearance->Automatic,
          ButtonFunction:>OutputSizeLimit`ButtonFunction[
-          Identity, 74, 23528940282336071891, Infinity],
+          Identity, 13, 23529409998841654142, Infinity],
          Enabled->True,
          Evaluator->Automatic,
          Method->"Queued"], "\[ThinSpace]", 
@@ -1151,14 +1220,97 @@ Cell[BoxData[
     FrameMargins->5],
    Deploy,
    DefaultBaseStyle->"Deploy"],
-  Out[74]]], "Output",
- CellChangeTimes->{3.590226233107628*^9}]
-}, Open  ]]
-}, Open  ]]
+  Out[13]]], "Output",
+ CellChangeTimes->{3.5902960998462505`*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Ad", "=", "0"}], ";", 
+  RowBox[{"Au", "=", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", "=", "1"}], ",", " ", 
+    RowBox[{"i", "<", 
+     RowBox[{"Zeilenlaenge", "-", "1"}]}], ",", "\[IndentingNewLine]", "\t", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"k", "=", "1"}], ",", " ", 
+       RowBox[{"k", "<", 
+        RowBox[{"Zeilenlaenge", "-", "1"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Ad", "+=", 
+         RowBox[{
+          RowBox[{"Norm", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+               "datamatrix", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", 
+               RowBox[{"i", "+", "1"}], "\[RightDoubleBracket]"}], "-", 
+              RowBox[{
+               RowBox[{
+               "datamatrix", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}]}], ")"}], "\[Cross]", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"datamatrix", "\[LeftDoubleBracket]", 
+                RowBox[{"k", "+", "1"}], "\[RightDoubleBracket]"}], 
+               "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "-", 
+              RowBox[{
+               RowBox[{
+               "datamatrix", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "i", 
+               "\[RightDoubleBracket]"}]}], ")"}]}], "]"}], "/", "2"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"Au", "+=", 
+         RowBox[{
+          RowBox[{"Norm", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+               "datamatrix", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", 
+               RowBox[{"i", "+", "1"}], "\[RightDoubleBracket]"}], "-", 
+              RowBox[{
+               RowBox[{"datamatrix", "\[LeftDoubleBracket]", 
+                RowBox[{"k", "+", "1"}], "\[RightDoubleBracket]"}], 
+               "\[LeftDoubleBracket]", 
+               RowBox[{"i", "+", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
+            "\[Cross]", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"datamatrix", "\[LeftDoubleBracket]", 
+                RowBox[{"k", "+", "1"}], "\[RightDoubleBracket]"}], 
+               "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "-", 
+              RowBox[{
+               RowBox[{"datamatrix", "\[LeftDoubleBracket]", 
+                RowBox[{"k", "+", "1"}], "\[RightDoubleBracket]"}], 
+               "\[LeftDoubleBracket]", 
+               RowBox[{"i", "+", "1"}], "\[RightDoubleBracket]"}]}], ")"}]}], 
+           "]"}], "/", "2"}]}], "\[IndentingNewLine]", ";", 
+        RowBox[{"k", "+=", "1"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"i", "+=", "1"}]}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"A", "=", 
+  RowBox[{"Ad", "+", "Au"}]}]}], "Input",
+ CellChangeTimes->{{3.5902957863755264`*^9, 3.590295788275529*^9}}]
+}, Open  ]],
+
+Cell["TESTSECTION", "Subsubtitle",
+ CellChangeTimes->{{3.590002685064601*^9, 3.590002689444353*^9}}]
 }, Open  ]]
 },
-WindowSize->{1908, 1053},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{1904, 925},
+WindowMargins->{{0, Automatic}, {Automatic, -40}},
 Magnification->1.100000023841858,
 FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
 StyleDefinitions->"Default.nb",
@@ -1181,99 +1333,97 @@ Cell[579, 22, 240, 3, 55, "Subtitle"],
 Cell[822, 27, 94, 1, 32, "Input"],
 Cell[CellGroupData[{
 Cell[941, 32, 160, 2, 32, "Subsubtitle"],
-Cell[1104, 36, 1801, 38, 153, "Input"],
-Cell[2908, 76, 381, 9, 53, "Input"]
+Cell[1104, 36, 1829, 40, 153, "Input"],
+Cell[2936, 78, 381, 9, 53, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3326, 90, 153, 2, 32, "Subsubtitle"],
+Cell[3354, 92, 153, 2, 32, "Subsubtitle"],
 Cell[CellGroupData[{
-Cell[3504, 96, 690, 16, 32, "Input"],
+Cell[3532, 98, 690, 16, 32, "Input"],
 Cell[CellGroupData[{
-Cell[4219, 116, 358, 8, 24, "Print"],
-Cell[4580, 126, 358, 8, 24, "Print"],
-Cell[4941, 136, 361, 8, 24, "Print"],
-Cell[5305, 146, 358, 8, 24, "Print"],
-Cell[5666, 156, 341, 8, 24, "Print"],
-Cell[6010, 166, 341, 8, 24, "Print"],
-Cell[6354, 176, 339, 8, 24, "Print"],
-Cell[6696, 186, 339, 8, 24, "Print"],
-Cell[7038, 196, 345, 8, 24, "Print"],
-Cell[7386, 206, 349, 8, 24, "Print"],
-Cell[7738, 216, 347, 8, 24, "Print"],
-Cell[8088, 226, 349, 8, 24, "Print"],
-Cell[8440, 236, 335, 8, 24, "Print"],
-Cell[8778, 246, 335, 8, 24, "Print"],
-Cell[9116, 256, 321, 8, 24, "Print"],
-Cell[9440, 266, 323, 8, 24, "Print"],
-Cell[9766, 276, 319, 8, 24, "Print"],
-Cell[10088, 286, 319, 8, 24, "Print"],
-Cell[10410, 296, 319, 8, 24, "Print"],
-Cell[10732, 306, 317, 8, 24, "Print"],
-Cell[11052, 316, 317, 8, 24, "Print"],
-Cell[11372, 326, 317, 8, 24, "Print"],
-Cell[11692, 336, 317, 8, 24, "Print"],
-Cell[12012, 346, 317, 8, 24, "Print"],
-Cell[12332, 356, 317, 8, 24, "Print"],
-Cell[12652, 366, 319, 8, 24, "Print"],
-Cell[12974, 376, 317, 8, 24, "Print"],
-Cell[13294, 386, 319, 8, 24, "Print"],
-Cell[13616, 396, 319, 8, 24, "Print"],
-Cell[13938, 406, 319, 8, 24, "Print"],
-Cell[14260, 416, 319, 8, 24, "Print"],
-Cell[14582, 426, 317, 8, 24, "Print"],
-Cell[14902, 436, 319, 8, 24, "Print"],
-Cell[15224, 446, 317, 8, 24, "Print"],
-Cell[15544, 456, 317, 8, 24, "Print"],
-Cell[15864, 466, 317, 8, 24, "Print"],
-Cell[16184, 476, 319, 8, 24, "Print"],
-Cell[16506, 486, 317, 8, 24, "Print"],
-Cell[16826, 496, 319, 8, 24, "Print"],
-Cell[17148, 506, 317, 8, 24, "Print"],
-Cell[17468, 516, 323, 8, 24, "Print"],
-Cell[17794, 526, 325, 8, 24, "Print"],
-Cell[18122, 536, 323, 8, 24, "Print"],
-Cell[18448, 546, 323, 8, 24, "Print"],
-Cell[18774, 556, 325, 8, 24, "Print"],
-Cell[19102, 566, 325, 8, 24, "Print"],
-Cell[19430, 576, 325, 8, 24, "Print"],
-Cell[19758, 586, 323, 8, 24, "Print"],
-Cell[20084, 596, 323, 8, 24, "Print"],
-Cell[20410, 606, 325, 8, 24, "Print"],
-Cell[20738, 616, 325, 8, 24, "Print"],
-Cell[21066, 626, 325, 8, 24, "Print"],
-Cell[21394, 636, 319, 8, 24, "Print"],
-Cell[21716, 646, 317, 8, 24, "Print"],
-Cell[22036, 656, 317, 8, 24, "Print"],
-Cell[22356, 666, 319, 8, 24, "Print"],
-Cell[22678, 676, 319, 8, 24, "Print"],
-Cell[23000, 686, 319, 8, 24, "Print"],
-Cell[23322, 696, 317, 8, 24, "Print"],
-Cell[23642, 706, 317, 8, 24, "Print"]
+Cell[4247, 118, 428, 9, 24, "Print"],
+Cell[4678, 129, 428, 9, 24, "Print"],
+Cell[5109, 140, 428, 9, 24, "Print"],
+Cell[5540, 151, 428, 9, 24, "Print"],
+Cell[5971, 162, 408, 9, 24, "Print"],
+Cell[6382, 173, 408, 9, 24, "Print"],
+Cell[6793, 184, 408, 9, 24, "Print"],
+Cell[7204, 195, 406, 9, 24, "Print"],
+Cell[7613, 206, 412, 9, 24, "Print"],
+Cell[8028, 217, 414, 9, 24, "Print"],
+Cell[8445, 228, 414, 9, 24, "Print"],
+Cell[8862, 239, 414, 9, 24, "Print"],
+Cell[9279, 250, 402, 9, 24, "Print"],
+Cell[9684, 261, 402, 9, 24, "Print"],
+Cell[10089, 272, 388, 9, 24, "Print"],
+Cell[10480, 283, 388, 9, 24, "Print"],
+Cell[10871, 294, 384, 9, 24, "Print"],
+Cell[11258, 305, 384, 9, 24, "Print"],
+Cell[11645, 316, 384, 9, 24, "Print"],
+Cell[12032, 327, 384, 9, 24, "Print"],
+Cell[12419, 338, 384, 9, 24, "Print"],
+Cell[12806, 349, 384, 9, 24, "Print"],
+Cell[13193, 360, 384, 9, 24, "Print"],
+Cell[13580, 371, 386, 9, 24, "Print"],
+Cell[13969, 382, 386, 9, 24, "Print"],
+Cell[14358, 393, 386, 9, 24, "Print"],
+Cell[14747, 404, 386, 9, 24, "Print"],
+Cell[15136, 415, 384, 9, 24, "Print"],
+Cell[15523, 426, 384, 9, 24, "Print"],
+Cell[15910, 437, 384, 9, 24, "Print"],
+Cell[16297, 448, 384, 9, 24, "Print"],
+Cell[16684, 459, 384, 9, 24, "Print"],
+Cell[17071, 470, 384, 9, 24, "Print"],
+Cell[17458, 481, 384, 9, 24, "Print"],
+Cell[17845, 492, 384, 9, 24, "Print"],
+Cell[18232, 503, 384, 9, 24, "Print"],
+Cell[18619, 514, 384, 9, 24, "Print"],
+Cell[19006, 525, 384, 9, 24, "Print"],
+Cell[19393, 536, 384, 9, 24, "Print"],
+Cell[19780, 547, 384, 9, 24, "Print"],
+Cell[20167, 558, 390, 9, 24, "Print"],
+Cell[20560, 569, 390, 9, 24, "Print"],
+Cell[20953, 580, 390, 9, 24, "Print"],
+Cell[21346, 591, 392, 9, 24, "Print"],
+Cell[21741, 602, 392, 9, 24, "Print"],
+Cell[22136, 613, 392, 9, 24, "Print"],
+Cell[22531, 624, 392, 9, 24, "Print"],
+Cell[22926, 635, 392, 9, 24, "Print"],
+Cell[23321, 646, 392, 9, 24, "Print"],
+Cell[23716, 657, 392, 9, 24, "Print"],
+Cell[24111, 668, 392, 9, 24, "Print"],
+Cell[24506, 679, 392, 9, 24, "Print"],
+Cell[24901, 690, 386, 9, 24, "Print"],
+Cell[25290, 701, 386, 9, 24, "Print"],
+Cell[25679, 712, 386, 9, 24, "Print"],
+Cell[26068, 723, 384, 9, 24, "Print"],
+Cell[26455, 734, 384, 9, 24, "Print"],
+Cell[26842, 745, 384, 9, 24, "Print"],
+Cell[27229, 756, 384, 9, 24, "Print"],
+Cell[27616, 767, 384, 9, 24, "Print"]
 }, Open  ]]
-}, Open  ]]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[24020, 721, 104, 1, 32, "Subsubtitle"],
-Cell[24127, 724, 861, 17, 32, "Input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25037, 747, 94, 1, 55, "Subtitle"],
-Cell[CellGroupData[{
-Cell[25156, 752, 540, 11, 109, "Subsubsection"],
-Cell[CellGroupData[{
-Cell[25721, 767, 4348, 85, 233, "Input"],
-Cell[30072, 854, 4031, 72, 1067, "Output"],
-Cell[34106, 928, 1674, 26, 81, "Message"]
+Cell[28061, 783, 104, 1, 32, "Subsubtitle"],
+Cell[28168, 786, 861, 17, 32, "Input"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[35829, 960, 100, 1, 32, "Subsubtitle"],
+Cell[29078, 809, 94, 1, 55, "Subtitle"],
 Cell[CellGroupData[{
-Cell[35954, 965, 226, 4, 32, "Input"],
-Cell[36183, 971, 6981, 183, 189, "Output"]
-}, Open  ]]
-}, Open  ]]
+Cell[29197, 814, 540, 11, 109, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[29762, 829, 4450, 87, 233, "Input"],
+Cell[34215, 918, 4156, 73, 1055, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38408, 996, 707, 18, 53, "Input"],
+Cell[39118, 1016, 7702, 207, 189, "Output"]
+}, Open  ]],
+Cell[46835, 1226, 3304, 78, 173, "Input"]
+}, Open  ]],
+Cell[50154, 1307, 100, 1, 32, "Subsubtitle"]
 }, Open  ]]
 }
 ]
