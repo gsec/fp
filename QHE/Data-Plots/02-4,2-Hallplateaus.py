@@ -112,6 +112,6 @@ plt.ylim([-200,16000]) ####
 #text(780,3600, Mittelwertkandidaten[wertmaximum7], va='center', ha='center')
 
 
-fig.savefig("02-4,2-Hallplateaus.pdf")
+# fig.savefig("02-4,2-Hallplateaus.pdf")
 
 show()

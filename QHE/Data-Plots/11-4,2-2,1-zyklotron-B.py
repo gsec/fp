@@ -27,9 +27,14 @@ U_xx2 = data2[:4733,2]
 delta=0.005
 
 ax = fig.add_subplot(111)
-ax.plot(B, U_xx, "b", label=u'L\xe4ngsspannung $4.2\,\mathrm{K}$')
-ax.plot([0,0],[0,0], "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
+ax.plot(B, U_xx, "r", label=u'L\xe4ngsspannung $4.2\,\mathrm{K}$')
+ax.plot([0,0],[0,0], "b", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
 ax.plot([0,0],[0,0], "g", label=u'abgelesene Stellen')
+
+ax.plot([0.795298,0.795298],[1.13162,(1.11804+1.06235)/2], "g:")
+ax.plot([0.795298-delta,0.795298+delta],[1.13162,1.13162], "g")
+ax.plot([0.795298-delta,0.795298+delta],[(1.11804+1.06235)/2,(1.11804+1.06235)/2], "g")
+
 ax.plot([0.885485,0.885485],[(1.180796+1.118072)/2,1.24356], "g:")
 ax.plot([0.885485-delta,0.885485+delta],[(1.180796+1.118072)/2,(1.180796+1.118072)/2], "g")
 ax.plot([0.885485-delta,0.885485+delta],[1.24356,1.24356], "g")
@@ -38,13 +43,14 @@ ax.plot([1.00102,1.00102],[1.418924,(1.236789+1.180796)/2], "g:")
 ax.plot([1.00102-delta,1.00102+delta],[1.418924,1.418924], "g")
 ax.plot([1.00102-delta,1.00102+delta],[(1.236789+1.180796)/2,(1.236789+1.180796)/2], "g")
 
-ax.plot([1.15392,1.15392],[1.702035,(1.251573+1.236789)/2], "g:")
-ax.plot([1.15392-delta,1.15392+delta],[1.702035,1.702035], "g")
-ax.plot([1.15392-delta,1.15392+delta],[(1.251573+1.236789)/2,(1.251573+1.236789)/2], "g")
+# eine Oszillation hoeher
+# ax.plot([1.15392,1.15392],[1.702035,(1.251573+1.236789)/2], "g:")
+# ax.plot([1.15392-delta,1.15392+delta],[1.702035,1.702035], "g")
+# ax.plot([1.15392-delta,1.15392+delta],[(1.251573+1.236789)/2,(1.251573+1.236789)/2], "g")
 
-ax.yaxis.label.set_color('blue')
-ax.set_xlim(0.75,1.25)
-ax.set_ylim(1,2)
+ax.yaxis.label.set_color('red')
+ax.set_xlim(0.67,1.08)
+ax.set_ylim(0.80,1.45) #ax.set_ylim(0.95,1.5)
 
 #ax.set_xlim(0.9,1.1)
 #ax.set_ylim(1,2)
@@ -53,7 +59,11 @@ ax.set_ylabel(u"L\xe4ngsspannung $U_{xx,4.2} [\mathrm{V}]$")
 
 
 ax2 = ax.twinx()
-ax2.plot(B2, U_xx2, "r", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
+ax2.plot(B2, U_xx2, "b", label=u'L\xe4ngsspannung $2.1\,\mathrm{K}$')
+ax2.plot([0.793246,0.793246],[0.524064,(0.406168+0.402214)/2], "g--")
+ax2.plot([0.793246-delta,0.793246+delta],[0.524064,0.524064], "g")
+ax2.plot([0.793246-delta,0.793246+delta],[(0.406168+0.402214)/2,(0.406168+0.402214)/2], "g")
+
 ax2.plot([0.885485,0.885485],[0.611754,(0.399106+0.406196)/2], "g--")
 ax2.plot([0.885485-delta,0.885485+delta],[0.611754,0.611754], "g")
 ax2.plot([0.885485-delta,0.885485+delta],[(0.399106+0.406196)/2,(0.399106+0.406196)/2], "g")
@@ -62,12 +72,13 @@ ax2.plot([1.00306,1.00306],[0.737266,(0.372053+0.399106)/2], "g--")
 ax2.plot([1.00306-delta,1.00306+delta],[0.737266,0.737266], "g")
 ax2.plot([1.00306-delta,1.00306+delta],[(0.372053+0.399106)/2,(0.372053+0.399106)/2], "g")
 
-ax2.plot([1.15341,1.15341],[0.906818,(0.313229+0.372053)/2], "g--")
-ax2.plot([1.15341-delta,1.15341+delta],[0.906818,0.906818], "g")
-ax2.plot([1.15341-delta,1.15341+delta],[(0.313229+0.372053)/2,(0.313229+0.372053)/2], "g")
-ax2.yaxis.label.set_color('red')
-ax2.set_xlim(0.75,1.25)
-ax2.set_ylim(0,1)
+# eine Oszillation hoeher
+# ax2.plot([1.15341,1.15341],[0.906818,(0.313229+0.372053)/2], "g--")
+# ax2.plot([1.15341-delta,1.15341+delta],[0.906818,0.906818], "g")
+# ax2.plot([1.15341-delta,1.15341+delta],[(0.313229+0.372053)/2,(0.313229+0.372053)/2], "g")
+ax2.yaxis.label.set_color('blue')
+ax2.set_xlim(0.67,1.08)
+ax2.set_ylim(0.35,1.05) #ax2.set_ylim(0.25,0.75)
 
 #ax2.set_xlim(0.9,1.1)
 #ax2.set_ylim(0,1)
@@ -105,6 +116,6 @@ ax.legend(loc=2)
 
 #errorbar(x, y, yerr=len(x)*[0.04], xerr=len(x)*[1], fmt="g.", label="Messpunkte mit Fehlerbalken")
 
-fig.savefig("11-4,2-2,1-zyklotron-B.pdf")
+# fig.savefig("11-4,2-2,1-zyklotron-B.pdf")
 
 show()
