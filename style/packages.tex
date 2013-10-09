@@ -1,0 +1,79 @@
+%%%%%%%%%%%%                      PACKAGES                           %%%%%%%%%%%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\usepackage[utf8]{inputenc}		% utf8 encoding für umlaute und sonderzeichen
+\usepackage[ngerman,english]{babel} 	% hyphenations in  different languages
+\usepackage[tbtags]{amsmath}    % tbtags sets the number of split 
+                                % environments at the end 
+\usepackage{amssymb} 	    	% symbols
+\usepackage{amsfonts} 	    	% font
+\usepackage{textcomp} 		    % degree signs -> \textdegree
+\usepackage{siunitx}		    % correct units and spacing
+\usepackage{hyperref}	        % references and links
+\usepackage{graphicx}           % embedd images
+\usepackage{tikz}			    % tikz painting, e.g circled text
+\usepackage{subfig}				% subfigure for mutliple pictures
+\usepackage{color}              % define own colors
+\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
+\usepackage[noabbrev]{cleveref}
+\usepackage{bijan_commands}     % self defined commands and shorthand notations
+                                % !! has to be added manually !!
+
+
+%\usepackage{pdfsync}		    % pdf synchronization (reverse search)
+%\usepackage{booktabs}	        % nice table lines
+%\usepackage{fancyhdr} 			% headers and footers
+%\usepackage{fancybox} 			% boxes with rounded corners 
+%\usepackage{wrapfig} 		    % figures floating beside the text
+%\usepackage{picinpar}			% textbox beside the text
+%\usepackage{placeins}			% float barriers in sections
+%\usepackage{moreverb}
+%\usepackage{listings}
+%\usepackage{pifont} 			% DING fonts (used in the acknowledgement)
+%\usepackage{scrtime}           % current time 
+%\usepackage[numbers,sort&compress]{natbib} 		
+                                % sorted references  with clickable URL 
+%\usepackage{makeidx} 			% index at the end
+%\usepackage[chapter,numbib]{tocbibind}     % add several things to the TOC
+
+
+%%%%%%%%%%%                        SETUP                             %%%%%%%%%%%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+% color:
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{lila}{rgb}{0.3,0,0.3}
+\definecolor{turq}{rgb}{0,0.1,0.4}
+
+% siunitx:
+\sisetup	{separate-uncertainty, per-mode=fraction}
+
+% hyperref:
+\hypersetup{	pdftex,
+                colorlinks=true,
+                backref=page,
+                linkcolor=darkblue,     % usual links
+                filecolor=red,
+                citecolor=turq,  	    % for bibliographic
+                urlcolor=lila,  		% for Emails and URLs
+                pdfpagelabels=true, 	% that the pagenumbering is ok 
+                breaklinks=true,
+                plainpages=false,
+                bookmarks=true, 
+                bookmarksnumbered=false
+                %pdftitle={--title--},
+                %pdfauthor={--author--},
+                %pdfsubject={},
+                %pdfkeywords={--kind-of-work--},
+            }
+
+% hyperref:
+% set black for printing	
+% \hypersetup{
+    % colorlinks,
+    % citecolor=black,
+    % filecolor=black,
+    % linkcolor=black,
+    % urlcolor=black
+    % }
+
+%tocibind:
+%\setcounter{tocdepth}{2} % change to 1 that not so deep (smaller TOC)
