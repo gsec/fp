@@ -1,0 +1,79 @@
+\usepackage{graphicx} % to embedd images
+\usepackage[chapter,numbib]{tocbibind} % to add several things to the TOC
+\setcounter{tocdepth}{2} % change to 1 that not so deep (smaller TOC)
+
+% \usepackage{currvita} % for the CV-section, delivered with this package (curvita.sty)
+%\usepackage{supertabular} % for the abbriviation section
+
+\usepackage{fancyhdr} 			% this is for the headers and footers
+\usepackage{fancybox} 			% boxes with rounded corners (can be used for wrapfigures)
+\usepackage{wrapfig} 				% figures floating beside the text
+%\usepackage{picinpar}				% a textbox beside the text
+\usepackage{tikz}					% tikz painting, e.g circled text
+\usepackage{subfig}				% subfigure for mutliple pictures
+\usepackage{placeins}				%lets you use float barriers in sections
+%\usepackage{moreverb}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}		%utf8 encoding für umlaute und sonderzeichen
+
+% special symbols
+\usepackage{amsmath} 		% symbols
+\usepackage{amssymb} 		% symbols
+\usepackage{amsfonts} 		% font
+\usepackage{pifont} 			% for DING fonts (used in the acknoledgement)
+\usepackage{textcomp} 		% For the degree signs -> \textdegree
+
+% \usepackage{scrtime} % to get the current time / used for the start page, 
+									% as a label when the current file was produced
+\usepackage[numbers,sort&compress]{natbib} 		% to get sorted references with a shown 
+																				% & clickable URL %sort&compress
+%\usepackage{makeidx} 											% to produce the index at the end
+\usepackage[ngerman,english]{babel} 						% For the hyphenations in 
+																				% different languages
+
+\usepackage{pdfsync}		% pdf synchronization (reverse search)
+\usepackage{booktabs}	% nice table lines
+
+\usepackage{siunitx}		% correct units and spacing
+\usepackage{hyperref}	% references and links
+
+% % The following is needed to define further colors for the nice PDF links:
+\usepackage{color} % for nice colors in the links
+\definecolor{darkblue}{rgb}{0,0,0.5}
+\definecolor{lila}{rgb}{0.3,0,0.3}
+\definecolor{turq}{rgb}{0,0.1,0.4}
+
+%
+\sisetup	{
+				separate-uncertainty,
+				per-mode=fraction
+				}
+
+\hypersetup{
+					pdftex,
+					colorlinks=true,
+					backref=page,
+					linkcolor=darkblue, % usual links
+					filecolor=red,
+					citecolor=turq,  	% for bibliographic
+					urlcolor=lila,  		% for Emails etc
+					pdftitle={Laser Frequency Stabilization on Sodium Hyperfine Transitions},
+					pdfauthor={Guilherme Stein},
+					pdfsubject={},
+					pdfkeywords={Bachelor Thesis},
+					pdfpagelabels=true, 				% that the pagenumbering is ok 
+																% (different pagenumbering also in the PDF)
+					breaklinks=true,
+					plainpages=false,
+					bookmarks=true, 
+					bookmarksnumbered=false
+					}
+
+% set black for printing	
+% \hypersetup{
+    % colorlinks,
+    % citecolor=black,
+    % filecolor=black,
+    % linkcolor=black,
+    % urlcolor=black
+    % }

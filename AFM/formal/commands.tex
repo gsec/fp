@@ -1,0 +1,15 @@
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.4pt] (char) {#1};}} 	%circled text with tikz
+			
+\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\secref}[1]{section~\ref{sec:#1}}
+\renewcommand{\eqref}[1]{(\ref{eq:#1})}
+\newcommand{\ket}[1]{\left| #1 \right>}
+\newcommand{\bra}[1]{\left< #1 \right|}
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2}  \, \right| \left. \vphantom{#1} #2 \right>}
+\newcommand{\uuline}[1]{\underline{\underline{#1}}}				% double underline
+\newcommand{\vop}[1]{\ensuremath{\mathbf{\hat{#1}}}} 		% vector operator
+\newcommand{\vect}[1]{\ensuremath{\boldsymbol{#1}}} 			% bold vector
+\newcommand{\abs}[1]{\lvert#1\rvert}										% absolute
+\newcommand{\norm}[1]{\lVert#1\rVert}									% norm
