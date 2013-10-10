@@ -87,7 +87,7 @@ difference of the material.
 
 \begin{figure}
     \centering
-    %\includegraphics{Bilder/afm_scheme.svg}
+    \includegraphics{Bilder/afm_scheme.pdf}
     \caption{Simplified illustration of an atomic force microscope}
     \label{afm_scheme}
 \end{figure}
@@ -104,7 +104,7 @@ and the piezo element as seen in \cref{control_loop}.
 
 \begin{figure}
     \centering
-    %\includegraphics{Bilder/control_loop.pdf}
+    \includegraphics{Bilder/control_loop.pdf}
     \caption{Principle of a feedback loop with disturbance $z(t)$, output 
         $r(t)$, control signal $u(t)$, measured output $x(t)$ and error signal 
         $e(t)$.}
@@ -123,77 +123,149 @@ Relevanz für die Aufnahme der GaSb Proben\\
 
 \section{Data Aquisition}
 \label{dataaquisition}
-In order to acquire the topology of the samples surface the computer records the scanner's $z$-position in combination with the in plane $x$- and $y$-position. These data can be exported from the control software in a special (.ezd) data format. We convert these data back into a list of $x$, $y$ and $z$-coordinates using the \textit{WSxM} software, which is freely available on ??. 
+In order to acquire the topology of the samples surface the computer records the 
+scanner's $z$-position in combination with the in plane $x$- and $y$-position. 
+These data can be exported from the control software in a special (.ezd) data 
+format. We convert these data back into a list of $x$, $y$ and $z$-coordinates 
+using the \textit{WSxM} software, which is freely available on ??. 
 
-While scanning in static force mode is necessary to maintain the force by moving the scanner's $z$-position. This is done by a feedback loop, which compares the a stated force constant to the force calculated from the signal of the photodiode. The difference is called the error signal and is the basis for the PI-controller. This controller includes to variables, the P- and I-values, which can be adjusted at the control software.
-While recording the data we can adjust the P- and I-values to optimize the quality of the pictures and avoid image artifacts. These values refer to the proportional and integral gain of the z-controllers feedback loop respectively. The proportional gain provides a signal which is proportional to the error signal. By increasing this value one should observe a smaller static error signal and a faster adaption to the current height position.
-On the other hand, if this value is set to high, one should observe a overshoots while scanning steps. Even higher P-values lead to more noise as the scanner is reacting oversensitive to little changes in height. The I-value however provides a signal which is proportional to the temporal integral of the error signal. The adaption of this value may have similar effects as adaption the P-value. Nevertheless the signal from the integral controller is lee sensitive to noise.
+While scanning in static force mode is necessary to maintain the force by moving 
+the scanner's $z$-position. This is done by a feedback loop, which compares the 
+a stated force constant to the force calculated from the signal of the 
+photodiode. The difference is called the error signal and is the basis for the 
+PI-controller. This controller includes to variables, the P- and I-values, which 
+can be adjusted at the control software.
+While recording the data we can adjust the P- and I-values to optimize the 
+quality of the pictures and avoid image artifacts. These values refer to the 
+proportional and integral gain of the z-controllers feedback loop respectively. 
+The proportional gain provides a signal which is proportional to the error 
+signal. By increasing this value one should observe a smaller static error 
+signal and a faster adaption to the current height position.
+On the other hand, if this value is set to high, one should observe a overshoots 
+while scanning steps. Even higher P-values lead to more noise as the scanner is 
+reacting oversensitive to little changes in height. The I-value however provides 
+a signal which is proportional to the temporal integral of the error signal. The 
+adaption of this value may have similar effects as adaption the P-value. 
+Nevertheless the signal from the integral controller is lee sensitive to noise.
 
-In the beginning of the experiment we scanned a calibration grid while varying the P- and I-parameter to see the effects on the pictures quality. The calibration grid consists of a grid with two different height levels. By scanning the grid in one direction one should observe steps in the up and down direction. In the following pictures every scan is conducted from the left the right side. Firstly we started with a low I-value and observed the $z$-coordinate adepting very slowly to the actual height of the grid as is shown in \ref{wenigI}.
-
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=0.6\columnwidth]{Bilder/wenigI}
-		\caption{Height profile recorded with the I-gain value set to 5. $\mathrm{P}=9$. Scanning direction is from left to right.}
-		\label{wenigI}
-	\end{center}
-\end{figure}
-
-By increasing the I-value the height is adapting much more quickly but overshoots at the step's edge as well as increasing the amount of noise during the plateaus. The height profile is plotted in \ref{vielI}.
-
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=0.6\columnwidth]{Bilder/vielI}
-		\caption{Height profile recordes with the I-gain value set to 11. $\mathrm{P}=9$. Scanning direction is from left to right.}
-		\label{vielI}
-	\end{center}
-\end{figure}
-
-In the next step the influence of the P-value was observed. With the I-value set to $9$ the p-value was varied from $5$ to $15$. Interestingly an decrease of the P-value to $5$ doesn't change much but increasing the overshoots caused by the I-value, which is set little higher than the optimum value. Simultaneously the overshoots decrease when increasing the P-value. This however has a negative influence on the noise as can be seen in the comparison of \ref{wenigP} and \ref{vielP}.
-
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=0.6\columnwidth]{Bilder/wenigP}
-		\caption{Height profile recordes with the P-gain value set to 5. $\mathrm{I}=9$. Scanning direction is from left to right.}
-		\label{wenigP}
-	\end{center}
-\end{figure}
+In the beginning of the experiment we scanned a calibration grid while varying 
+the P- and I-parameter to see the effects on the pictures quality. The 
+calibration grid consists of a grid with two different height levels. By 
+scanning the grid in one direction one should observe steps in the up and down 
+direction. In the following pictures every scan is conducted from the left the 
+right side. Firstly we started with a low I-value and observed the 
+$z$-coordinate adepting very slowly to the actual height of the grid as is shown 
+in \ref{wenigI}.
 
 \begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=0.6\columnwidth]{Bilder/vielP}
-		\caption{Height profile recordes with the P-gain value set to 15. $\mathrm{I}=9$. Scanning direction is from left to right.}
-		\label{vielP}
-	\end{center}
+    \begin{center}
+        \includegraphics[width=0.6\columnwidth]{Bilder/wenigI}
+        \caption{Height profile recorded with the I-gain value set to 5. 
+        $\mathrm{P}=9$. Scanning direction is from left to right.}
+        \label{wenigI}
+    \end{center}
 \end{figure}
 
-As a trade-off between fast and accurate height adaption and a minimum of noise we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all following measurements, if not stated differently.
-
-Next we want to investigate what influence the speed of scanning has on the image recording. We measure the calibration grid with $\SI{0.7}{\second}$ and $\SI{3}{\second}$ per line. During this period 256 data points are recorded along the scanning axis. 
-For the slow scan speed we observe in \ref{slow} the clear step of the calibration grit without any noticeable overshoot. For the faster scanning speed we can see in \ref{fast} distinct overshoots at the beginning of each step.
+By increasing the I-value the height is adapting much more quickly but 
+overshoots at the step's edge as well as increasing the amount of noise during 
+the plateaus. The height profile is plotted in \ref{vielI}.
 
 \begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=0.6\columnwidth]{Bilder/slow}
-		\caption{Height profile recordes with a scanning sped of $\SI{3}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning direction is from left to right.}
-		\label{slow}
-	\end{center}
+    \begin{center}
+        \includegraphics[width=0.6\columnwidth]{Bilder/vielI}
+        \caption{Height profile recordes with the I-gain value set to 11. 
+        $\mathrm{P}=9$. Scanning direction is from left to right.}
+        \label{vielI}
+    \end{center}
+\end{figure}
+
+In the next step the influence of the P-value was observed. With the I-value set 
+to $9$ the p-value was varied from $5$ to $15$. Interestingly an decrease of the 
+P-value to $5$ doesn't change much but increasing the overshoots caused by the 
+I-value, which is set little higher than the optimum value. Simultaneously the 
+overshoots decrease when increasing the P-value. This however has a negative 
+influence on the noise as can be seen in the comparison of \ref{wenigP} and 
+\ref{vielP}.
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.6\columnwidth]{Bilder/wenigP}
+        \caption{Height profile recordes with the P-gain value set to 5. 
+        $\mathrm{I}=9$. Scanning direction is from left to right.}
+        \label{wenigP}
+    \end{center}
 \end{figure}
 
 \begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=0.6\columnwidth]{Bilder/fast}
-		\caption{Height profile recordes with a scanning sped of $\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning direction is from left to right.}
-		\label{fast}
-	\end{center}
+    \begin{center}
+        \includegraphics[width=0.6\columnwidth]{Bilder/vielP}
+        \caption{Height profile recordes with the P-gain value set to 15. 
+        $\mathrm{I}=9$. Scanning direction is from left to right.}
+        \label{vielP}
+    \end{center}
 \end{figure}
 
-Although we observe artifacts while scanning the calibration grit with  $\SI{0.7}{\second}$ per line it is possible to measure structures without steep gradient with a higher scanning speed without observing overshoots.
+As a trade-off between fast and accurate height adaption and a minimum of noise 
+we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all 
+following measurements, if not stated differently.
+
+Next we want to investigate what influence the speed of scanning has on the 
+image recording. We measure the calibration grid with $\SI{0.7}{\second}$ and 
+$\SI{3}{\second}$ per line. During this period 256 data points are recorded 
+along the scanning axis.  For the slow scan speed we observe in \ref{slow} the 
+clear step of the calibration grit without any noticeable overshoot. For the 
+faster scanning speed we can see in \ref{fast} distinct overshoots at the 
+beginning of each step.
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.6\columnwidth]{Bilder/slow}
+        \caption{Height profile recordes with a scanning sped of 
+        $\SI{3}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
+        direction is from left to right.}
+        \label{slow}
+    \end{center}
+\end{figure}
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.6\columnwidth]{Bilder/fast}
+        \caption{Height profile recordes with a scanning sped of 
+        $\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
+        direction is from left to right.}
+        \label{fast}
+    \end{center}
+\end{figure}
+
+Although we observe artifacts while scanning the calibration grit with  
+$\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
+gradient with a higher scanning speed without observing overshoots.
 
 
 \begin{itemize}
 \item Rauschen- SNR  Arten \\
-\item Methoden und Probleme der Bildbearbeitung\\
+
+\paragraph Methoden und Probleme der Bildbearbeitung\\
+
+When acquiring data there is always an interpretation and processing involved.  
+This is necessary to make sense of the data, especially when dealing with big 
+data sets. This strongly depends on the uses of the data, i.e. getting a general 
+idea of an object or measuring something with great accuracy to search for yet 
+undiscovered principles. While the unprocessed set has little meaning, we edit 
+it and thereby imprint a meaning into the data. Some may argue this leads to 
+wrong data, or at least reduces the quality. On the other hand, there is no such 
+thing as a perfect measurement.  Therefore the data we acquire will never be an 
+exact representation of the object we want to project. We need to make 
+corrections based on our model of the world to increase the quality and, even 
+more crucial, the usefullness of our measurements. \\
+With the AFM we scan a sample with great precision in a rasterized format. Each 
+image consists of discrete coordinates. Our goal is to analyse the samples 
+surface. One step is the removal of systematic errors. If the sample is known to 
+be flat we can make a fit to the underground. While manipulating the data quite 
+a bit, we remove a simple error, e.g. a tilt in the plane known to be something 
+irrelevant for our purpose.
+
+
 \end{itemize}
 
 \section{Sample Analysis}
