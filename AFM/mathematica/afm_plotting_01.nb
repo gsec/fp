@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     53957,       1423]
-NotebookOptionsPosition[     50270,       1311]
-NotebookOutlinePosition[     50732,       1329]
-CellTagsIndexPosition[     50689,       1326]
+NotebookDataLength[     58152,       1516]
+NotebookOptionsPosition[     54209,       1398]
+NotebookOutlinePosition[     54669,       1416]
+CellTagsIndexPosition[     54626,       1413]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -930,7 +930,7 @@ Cell[BoxData[
       1. -> "Height", 0 -> "Derrivative"}}, {{
        Hold[$CellContext`k$$], 0, "Scanning Direction"}, {
       0 -> "Forward", 1. -> "Backward"}}}, Typeset`size$$ = {
-    1457., {438., 443.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    1661.5, {164., 12.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True, $CellContext`i$12854$$ = 
     0, $CellContext`j$12855$$ = False, $CellContext`k$12856$$ = False}, 
     DynamicBox[Manipulate`ManipulateBoxes[
@@ -959,7 +959,7 @@ Cell[BoxData[
          1. -> "Height", 0 -> "Derrivative"}}, {{$CellContext`k$$, 0, 
           "Scanning Direction"}, {0 -> "Forward", 1. -> "Backward"}}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{1512., {516., 521.}},
+     ImageSizeCache->{1717., {164., 169.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -989,7 +989,94 @@ Cell[BoxData[
    3.59000212259256*^9, 3.590224346211704*^9, 3.5902244053010836`*^9, {
    3.5902247260214276`*^9, 3.5902247455595455`*^9}, 3.590224783040689*^9, 
    3.5902254616725044`*^9, 3.590295722015436*^9, 3.5902958108955607`*^9, 
-   3.5902958534556203`*^9, 3.590310652022725*^9, 3.5903260233267183`*^9}]
+   3.5902958534556203`*^9, 3.590310652022725*^9, 3.5903260233267183`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "pspec"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(1 + offset\\)\[NoBreak] \
+is neither an integer nor a list of integers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Part\\\", ButtonNote -> \
+\\\"Part::pspec\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5903953665151825`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Import", "::", "chtype"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"First argument \
+\[NoBreak]\\!\\(\\(\\({\\\"00-Referenzmessung-mit-Gitter Image 1.txt\\\", \
+\\\"00-Referenzmessung-mit-Gitter Image 2.txt\\\", \
+\\\"00-Referenzmessung-mit-Gitter Image 3.txt\\\", \
+\\\"00-Referenzmessung-mit-Gitter Image 4.txt\\\", \\\"01-Gitter-schneller \
+Image 1.txt\\\", \\\"01-Gitter-schneller Image 2.txt\\\", \
+\\\"01-Gitter-schneller Image 3.txt\\\", \\\"01-Gitter-schneller Image \
+4.txt\\\", \\\"02-Gitter-sehr-langsam Image 1.txt\\\", \\(\\(\[LeftSkeleton] \
+33 \[RightSkeleton]\\)\\), \\\"14-FP-7-Al Image 3.txt\\\", \\\"14-FP-7-Al \
+Image 4.txt\\\", \\\"15-FP-7-Al Image 1.txt\\\", \\\"15-FP-7-Al Image 2.txt\\\
+\", \\\"15-FP-7-Al Image 3.txt\\\", \\\"15-FP-7-Al Image 4.txt\\\", \
+\\\"16-FP-7-Al Image 1.txt\\\", \\\"16-FP-7-Al Image 2.txt\\\", \\(\\(\
+\[LeftSkeleton] 10 \[RightSkeleton]\\)\\)}\\)\\) \[LeftDoubleBracket] \\(\\(1 \
++ offset\\)\\) \[RightDoubleBracket]\\)\[NoBreak] is not a valid file, \
+directory, or URL specification. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Import\\\", ButtonNote -> \
+\\\"Import::chtype\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5903953665151825`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Drop", "::", "normal"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Nonatomic expression expected at position \
+\[NoBreak]\\!\\(1\\)\[NoBreak] in \[NoBreak]\\!\\(Drop[\\(\\($Failed, \
+4\\)\\)]\\)\[NoBreak]. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/Drop\
+\\\", ButtonNote -> \\\"Drop::normal\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5903953665307827`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "span"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(1 ;; All ;; res\\)\[NoBreak] is not a \
+valid Span specification. A Span specification should be 1, 2, or 3 integers \
+separated by ;;. (Any of the integers can be omitted or replaced with All.) \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/Part\\\", ButtonNote -> \
+\\\"Part::span\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.5903953665307827`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ListPlot3D", "::", "arrayerr"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(\\(\\(Drop[\\(\\($Failed, 4\\)\\)]\\)\\) \
+\[LeftDoubleBracket] \\(\\(1 ;; All ;; res\\)\\) \[RightDoubleBracket]\\)\
+\[NoBreak] must be a valid array or a list of valid arrays. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/ListPlot3D\\\", ButtonNote -> \
+\\\"ListPlot3D::arrayerr\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.590395366546383*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "pspec"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(1 + offset\\)\[NoBreak] \
+is neither an integer nor a list of integers. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/Part\\\", ButtonNote -> \
+\\\"Part::pspec\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.590395366546383*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1310,7 +1397,7 @@ Cell["TESTSECTION", "Subsubtitle",
 }, Open  ]]
 },
 WindowSize->{1904, 925},
-WindowMargins->{{0, Automatic}, {Automatic, -40}},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 Magnification->1.100000023841858,
 FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
 StyleDefinitions->"Default.nb",
@@ -1415,15 +1502,21 @@ Cell[CellGroupData[{
 Cell[29197, 814, 540, 11, 109, "Subsubsection"],
 Cell[CellGroupData[{
 Cell[29762, 829, 4450, 87, 233, "Input"],
-Cell[34215, 918, 4156, 73, 1055, "Output"]
+Cell[34215, 918, 4156, 73, 351, "Output"],
+Cell[38374, 993, 468, 10, 23, "Message"],
+Cell[38845, 1005, 1340, 23, 62, "Message"],
+Cell[40188, 1030, 500, 10, 23, "Message"],
+Cell[40691, 1042, 570, 11, 23, "Message"],
+Cell[41264, 1055, 577, 11, 23, "Message"],
+Cell[41844, 1068, 466, 10, 23, "Message"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[38408, 996, 707, 18, 53, "Input"],
-Cell[39118, 1016, 7702, 207, 189, "Output"]
+Cell[42347, 1083, 707, 18, 53, "Input"],
+Cell[43057, 1103, 7702, 207, 189, "Output"]
 }, Open  ]],
-Cell[46835, 1226, 3304, 78, 173, "Input"]
+Cell[50774, 1313, 3304, 78, 173, "Input"]
 }, Open  ]],
-Cell[50154, 1307, 100, 1, 32, "Subsubtitle"]
+Cell[54093, 1394, 100, 1, 32, "Subsubtitle"]
 }, Open  ]]
 }
 ]
