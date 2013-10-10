@@ -170,7 +170,7 @@ In the next step the influence of the P-value was observed. With the I-value set
 As a trade-off between fast and accurate height adaption and a minimum of noise we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all following measurements, if not stated differently.
 
 Next we want to investigate what influence the speed of scanning has on the image recording. We measure the calibration grid with $\SI{0.7}{\second}$ and $\SI{3}{\second}$ per line. During this period 256 data points are recorded along the scanning axis. 
-For the slow scan speed we observe in \ref{slow} the clear step of the calibration grit without any noticeable overshoot. For the faster scanning speed we can see in \ref{fast} distinct overshoots at the beginning of each step.
+For the slow scan speed we observe in \ref{slow} the clear step of the calibration grid without any noticeable overshoot. For the faster scanning speed we can see in \ref{fast} distinct overshoots at the beginning of each step.
 
 \begin{figure}[htp]
 	\begin{center}
@@ -188,11 +188,26 @@ For the slow scan speed we observe in \ref{slow} the clear step of the calibrati
 	\end{center}
 \end{figure}
 
-Although we observe artifacts while scanning the calibration grit with  $\SI{0.7}{\second}$ per line it is possible to measure structures without steep gradient with a higher scanning speed without observing overshoots.
+Although we observe artifacts while scanning the calibration grid with  $\SI{0.7}{\second}$ per line it is possible to measure structures without steep gradient with a higher scanning speed without observing overshoots.
 
+During the measurements of the calibration grid the amplitudes of the single steps are much higher than the level of noise. While measuring flatter surfaces this in not the case however. During the measurement of sample \textcircled{?} we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it becomes more and more important to quantify the amount of noise to distinguish between real features and random noise.
+From the difference between the forward and backward scans we can estimate the amount of noise comprised in our data: First we take the data points from one line, forward and backward, and shift them to a maximum overlap. Secondly we calculate the difference between these two scans. From these aberrations we receive a standard deviation between the two scans. Dividing by $\sqrt{2}$  provides the standard deviation of the measurement.
+As an example in \cref{noise} the signal and an area with the size of the measurement's standard deviation is plotted. The signal is calculated by the mean value of the forward and backward scan.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/sn_signal2}
+		\caption{Height profile plotted with an estimation of noise. Two peaks at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible which are much higher than the level of noise. }
+		\label{noise}
+	\end{center}
+\end{figure}
+
+Therefore we can say that the peaks at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are real features while there is no significance for the peaks beyond $\SI{200}{\micro\meter}$.
+
+Additionally to the noise we observe artifacts which can be clearly identified as they only appear in one, either forward or backward direction. The first artifact we want to discuss is shown in \cref{artifact1}. In one single line we can see a periodic pattern with the periodicity of approximately $\SI{2.5}{\micro}{\meter}$. But this can  be found with an other periodicity as well.
 
 \begin{itemize}
-\item Rauschen- SNR  Arten \\
+\item evtl SNR angeben\\
 \item Methoden und Probleme der Bildbearbeitung\\
 \end{itemize}
 
