@@ -1,63 +1,19 @@
+
+         %% %% %% %%         Preamble & Options          %% %% %% %%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \documentclass[paper=a4,fontsize=10pt,DIV=18,twocolumn,parskip=half]{scrartcl}
-\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
-\usepackage{bijan_koma}
-\usepackage[ngerman]{babel} 
-
-
-%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
-\sisetup{       
-  separate-uncertainty,
-  per-mode=fraction
-}
-
-\colorlet{darkblue}{blue!70!black}
-\hypersetup{
-  colorlinks,
-  citecolor=darkblue,
-  filecolor=darkblue,
-  linkcolor=darkblue,
-  urlcolor=black
-}
-
-\crefformat{equation}{Glg.~(#2#1#3)}
-\crefformat{section}{Abschnitt~#2#1#3}
-\crefformat{figure}{Abb.~#2#1#3}
-\crefformat{table}{Tab.~#2#1#3}
-\crefformat{chapter}{Kapitel~#2#1#3}
-
-
-\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
-  \renewcommand{\figurename}{Abb.}
-  \renewcommand{\tablename}{Tab.}
-}
-
-\numberwithin{equation}{section}    % Number equations after sections, e.g. (1.2)
-
-%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
-\pagestyle{scrheadings}                           % Apply userdefined settings
-\setheadsepline{.5 pt}                            % Width of seperation line
-\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
-\cfoot{\thepage}                                  % Page numbering 
-
-%%%%%%%%%%%%%%%%%%%%%% commands      %%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{formal/commands}
-\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
-\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
-\newcommand{\secref}[1]{section~\ref{sec:#1}}
-
-\graphicspath{{Bilder/}}
-%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\columnsep20pt                                  % Width inbetween \twocolumns
-%\onehalfspacing                                 % 1.5 line spacing
+\input{../style/packages}           % defines packages and setups
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
+\numberwithin{equation}{section}    % number equations after sections
+\columnsep20pt                      % width between \twocolumns
 \linespread{1.2}
+\allowdisplaybreaks[1]              % permissiveness of page breaks in equations
+                                    % 1 ="allow page breaks but avoid them" 
+                                    % and 4="break whenever you want".
 
-\setlength{\headheight}{2.0\baselineskip}       % Fixes the 'small headhight'
+%%% Spacings:
+\setlength{\headheight}{2.0\baselineskip}       
+% Fixes the 'small headhight'
 
 \renewcommand*{\chapterheadstartvskip}{\vspace{0\baselineskip}} 
 % Spacing Pagehead-Headline. Standard: 2
@@ -65,22 +21,14 @@
 \renewcommand*{\chapterheadendvskip}{\vspace{\baselineskip}}
 % Spacing Headline-Text
 
-% Spacing in math environments \,\;.. 
-%\thinmuskip=3mu % default
-%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
-%\thickmuskip=5mu plus 5mu % default
-
-\allowdisplaybreaks[1]  % optional argument denoting permissiveness of page breaks 
-% in equations. 1 ="allow page breaks but avoid them" and 4="break whenever you want".
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%% %%%%%%%%%%
 
 
 \begin{document}
 
-\title{Projekt zum Fortgeschrittenen-Praktikum \\ - Rasterkraftmikroskopie}                  
+\title{Projekt zum Fortgeschrittenen-Praktikum \\ - Atomic Force Microscopy}                  
 \author{Guilherme Stein \& Ulrich Müller}         
-\date{}                                % Turn off automatic date
+\date{}                             % Turn off automatic date
 \twocolumn[\begin{@twocolumnfalse}
 \vspace{-3em}
 \maketitle      
@@ -93,8 +41,8 @@
     }
   \vspace{1em}
 
-  \noindent Betreuer: Dr. Paolo Sessi
-  \hfill Versuchsdurchführung: 04. Oktober 2013
+  \noindent Supervisor: Dr. Paolo Sessi
+  \hfill Date of experiment: $4^{\text{th}}$ October 2013
   \begin{flushright}
     % Protokollabgabe: 12. Oktober 2012        
   \end{flushright}
@@ -104,7 +52,7 @@
 \end{@twocolumnfalse}
 ]
 % =============================================================================
-\addtocounter{section}{-1}
+%\addtocounter{section}{-1}
 \section{Expose}
 \input{expose}
 \label{Expose}
@@ -127,7 +75,7 @@ pieces of matter when brought close to each other. More precisely we bring a
 sharp tip into a distance of a few nano meters to  a surface we want to examine.  
 scale the main contribution are Van-der-Waals forces which arise from 
 polarisation fluctuations in the material.
-In \figref{afm_scheme} one can see the main parts required to run the AFM. 
+In \cref{afm_scheme} one can see the main parts required to run the AFM. 
 The sample is mounted on a xyz-stage consisting of different piezo elements. 
 This enables us to move the sample in xy-direction for the scanning of the 
 probe, as well as in the z direction for height compensation. A reflecting 
@@ -141,7 +89,7 @@ difference of the material.
     \centering
     %\includegraphics{Bilder/afm_scheme.svg}
     \caption{Simplified illustration of an atomic force microscope}
-    \label{fig:afm_scheme}
+    \label{afm_scheme}
 \end{figure}
 
 \subsection{Refinements}
@@ -152,7 +100,7 @@ z-direction is altered to move the probe to a height where the force is equal to
 the set point defined before. This has the advantage that the force between tip 
 and probe is approximately constant and therefore it is less likely to damage 
 the sample or the tip. This is ensured via a feedback loop between the the diode 
-and the piezo element as seen in \figref{control_loop}.
+and the piezo element as seen in \cref{control_loop}.
 
 \begin{figure}
     \centering
@@ -160,7 +108,7 @@ and the piezo element as seen in \figref{control_loop}.
     \caption{Principle of a feedback loop with disturbance $z(t)$, output 
         $r(t)$, control signal $u(t)$, measured output $x(t)$ and error signal 
         $e(t)$.}
-    \label{fig:control_loop}
+    \label{control_loop}
 \end{figure}
 
 The height information accquired via this method is more strongly connected to 
@@ -169,8 +117,9 @@ opposed to the strength of the diode, the angle of the lase beam and the
 distances between those elements. Therefore introducing less error sources and 
 leading to a more accurate signal.
 
+%
 Relevanz für die Aufnahme der GaSb Proben\\
-
+%
 
 \section{Data Aquisition}
 \label{dataaquisition}
@@ -255,8 +204,6 @@ Although we observe artifacts while scanning the calibration grit with  $\SI{0.7
 \item Aussagen über Wachstumsmethoden\\
 \end{itemize}
 
-
-
 % =============================================================================
 \begin{thebibliography}{}   
 % =============================================================================
@@ -288,3 +235,70 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 %% =============================================================================
 
 \end{document}
+
+
+
+%% =============================================================================
+%%%%%%%%%%%%%%%%%%% OBSOLETE (can be removed) %%%%%%%%%%%%%%%%%%%%%%%%%%
+%% =============================================================================
+
+%\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
+%\usepackage{bijan_koma}
+%\usepackage[ngerman]{babel} 
+
+%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
+%\sisetup{       
+  %separate-uncertainty,
+  %per-mode=fraction
+%}
+
+%\colorlet{darkblue}{blue!70!black}
+%\hypersetup{
+  %colorlinks,
+  %citecolor=darkblue,
+  %filecolor=darkblue,
+  %linkcolor=darkblue,
+  %urlcolor=black
+%}
+
+%\crefformat{equation}{Glg.~(#2#1#3)}
+%\crefformat{section}{Abschnitt~#2#1#3}
+%\crefformat{figure}{Abb.~#2#1#3}
+%\crefformat{table}{Tab.~#2#1#3}
+%\crefformat{chapter}{Kapitel~#2#1#3}
+
+
+%\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
+  %\renewcommand{\figurename}{Abb.}
+  %\renewcommand{\tablename}{Tab.}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
+%\pagestyle{scrheadings}                           % Apply userdefined settings
+%\setheadsepline{.5 pt}                            % Width of seperation line
+%\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
+%\cfoot{\thepage}                                  % Page numbering 
+
+%%%%%%%%%%%%%%%%%%%%%% commands      %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{formal/commands}
+%\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+%\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+%\newcommand{\secref}[1]{section~\ref{sec:#1}}
+
+%\graphicspath{{Bilder/}}
+%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\onehalfspacing                                 % 1.5 line spacing
+
+% Spacing in math environments \,\;.. 
+%\thinmuskip=3mu % default
+%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
+%\thickmuskip=5mu plus 5mu % default
+
+

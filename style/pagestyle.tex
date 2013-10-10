@@ -1,0 +1,51 @@
+\setlength{\paperwidth}{21cm}%
+\setlength{\paperheight}{29.7cm}%
+% \setlength{\voffset}{-2cm}%
+% \setlength{\hoffset}{0cm}%
+% \setlength{\evensidemargin}{5mm}%
+% \setlength{\oddsidemargin}{5mm}%
+
+\setlength{\voffset}{-1.5cm}%
+\setlength{\hoffset}{0cm}%
+\setlength{\evensidemargin}{5mm}%
+\setlength{\oddsidemargin}{4mm}%
+
+
+\setlength{\topmargin}{5mm}%
+\setlength{\headheight}{8mm}%
+\setlength{\headsep}{8mm}%
+\setlength{\textwidth}{15cm}%
+\setlength{\textheight}{24.1cm}%
+\tolerance=4000%
+\emergencystretch=30pt
+
+\setlength{\parindent}{0em}  % Absaetze erste Zeile nicht einruecken
+
+\pagestyle{fancy}%
+\lhead[\thepage]{\rightmark} \chead[]{} \rhead[\leftmark]{\thepage}
+% \setlength{\footrulewidth}{0pt}
+\lfoot[]{}\cfoot[]{}\rfoot[]{}
+
+%
+% start a new chapter with the chaptername in the heading
+%
+\fancypagestyle{plain}{\fancyhf{}%
+\lhead[\thepage]{\leftmark} \chead[]{}%
+\rhead[\leftmark]{\thepage}
+% \setlength{\footrulewidth}{0pt}
+\lfoot[]{}\cfoot[]{}\rfoot[]{}
+}
+
+%
+% the next commands are for the headerlines on each page. They should be 'normal' in the sense 
+% of upper- and lowercase
+%
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+
+%
+% The next commands are for single words on the next page and for hyphenations which go to 
+% the next page
+%
+\widowpenalty = 5000%
+\clubpenalty = 5000%
