@@ -158,15 +158,6 @@ right side. Firstly we started with a low I-value and observed the
 $z$-coordinate adepting very slowly to the actual height of the grid as is shown 
 in \ref{wenigI}.
 
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/wenigI}
-        %\caption{Height profile recorded with the I-gain value set to 5. 
-        %$\mathrm{P}=9$. Scanning direction is from left to right.}
-        %\label{wenigI}
-    %\end{center}
-%\end{figure}
-
 By increasing the I-value the height is adapting much more quickly but 
 overshoots at the step's edge as well as increasing the amount of noise during 
 the plateaus. The height profile is plotted in \ref{vielI}.
@@ -226,24 +217,6 @@ overshoots decrease when increasing the P-value. This however has a negative
 influence on the noise as can be seen in the comparison of \ref{wenigP} and 
 \ref{vielP}.
 
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/wenigP}
-        %\caption{Height profile recordes with the P-gain value set to 5. 
-        %$\mathrm{I}=9$. Scanning direction is from left to right.}
-        %\label{wenigP}
-    %\end{center}
-%\end{figure}
-
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/vielP}
-        %\caption{Height profile recordes with the P-gain value set to 15. 
-        %$\mathrm{I}=9$. Scanning direction is from left to right.}
-        %\label{vielP}
-    %\end{center}
-%\end{figure}
-
 As a trade-off between fast and accurate height adaption and a minimum of noise 
 we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all 
 following measurements, if not stated differently.
@@ -255,26 +228,6 @@ along the scanning axis.  For the slow scan speed we observe in \ref{slow} the
 clear step of the calibration grit without any noticeable overshoot. For the 
 faster scanning speed we can see in \ref{fast} distinct overshoots at the 
 beginning of each step.
-
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/slow}
-        %\caption{Height profile recordes with a scanning sped of 
-        %$\SI{3}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
-        %direction is from left to right.}
-        %\label{slow}
-    %\end{center}
-%\end{figure}
-
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/fast}
-        %\caption{Height profile recordes with a scanning speed of 
-        %$\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
-        %direction is from left to right.}
-        %\label{fast}
-    %\end{center}
-%\end{figure}
 
 Although we observe artifacts while scanning the calibration grit with  
 $\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
@@ -302,19 +255,30 @@ be flat we can make a fit to the underground. While manipulating the data quite
 a bit, we remove a simple error, i.e. a tilt in the plane known to be something 
 irrelevant for our purpose. In this case even underground fits of higher order 
 might be useful considering deviations created by nonlinearities of the piezo 
-tube or other elements. On this example we want to show how this is done in detail, when it is legitimate and where problems may occur. In \ref{rows} the raw data image from sample \textcircled{7} are plotted.
+tube or other elements. On this example we want to show how this is done in 
+detail, when it is legitimate and where problems may occur. In \ref{rows} the 
+raw data image from sample \textcircled{7} are plotted.
 
 \begin{figure}[htp]
     \begin{center}
         \includegraphics[width=0.7\columnwidth]{Bilder/7}
         \caption{The raw data image from sample \textcircled{7}. }
-        \label{7}
+        \label{rows}
     \end{center}
 \end{figure}
 
-We can clearly identify the horizontal direction in which the tip scanned the sample. After each row the tip is afflicted with a different offset leading to different heights/colors for each row. This offset is not a feature of our sample, so we try to manipulate the data in a way to get rid of this effect.
-In detail this is done by fitting a parabola to each row of our sample, subtracting this parabola from the raw data afterwards. The same method applied on the single column removes the tilt in the $y$-axis. After applying this flatten function the features of our sample are visible much better and the stripy surface has been manly removed. \\
-As mentioned before every correction falsify the data to a certain amount and the method should not be applied without being aware of the problems which may occur.
+We can clearly identify the horizontal direction in which the tip scanned the 
+sample. After each row the tip is afflicted with a different offset leading to 
+different heights/colors for each row. This offset is not a feature of our 
+sample, so we try to manipulate the data in a way to get rid of this effect.
+In detail this is done by fitting a parabola to each row of our sample, 
+subtracting this parabola from the raw data afterwards. The same method applied 
+on the single column removes the tilt in the $y$-axis. After applying this 
+flatten function the features of our sample are visible much better and the 
+stripy surface has been manly removed. \\
+As mentioned before every correction falsify the data to a certain amount and 
+the method should not be applied without being aware of the problems which may 
+occur.
 
 \begin{figure}[htp]
     \begin{center}
@@ -324,7 +288,14 @@ As mentioned before every correction falsify the data to a certain amount and th
     \end{center}
 \end{figure}
 
-In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the middle of the picture we find a peak on a otherwise flat surface. By applying the flatten function we receive the picture shown in \ref{1f}. Horizontally and vertically from the peak a darker cross has emerged. This can be explained in the following way. By fitting over the row/column including the peak the mean height is higher. By subtracting the fitted function from raw data, every row/column including the peak is lowered more than the other ones. This leads to an unwanted artifact near the peak.
+In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the 
+middle of the picture we find a peak on a otherwise flat surface. By applying 
+the flatten function we receive the picture shown in \ref{1f}. Horizontally and 
+vertically from the peak a darker cross has emerged. This can be explained in 
+the following way. By fitting over the row/column including the peak the mean 
+height is higher. By subtracting the fitted function from raw data, every 
+row/column including the peak is lowered more than the other ones. This leads to 
+an unwanted artifact near the peak.
 
 \begin{figure}[htp]
     \begin{center}
@@ -337,12 +308,14 @@ In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the middl
 \begin{figure}[htp]
     \begin{center}
         \includegraphics[width=0.7\columnwidth]{Bilder/1f}
-        \caption{Data of sample \textcircled{1} flattened in row and column. A artifact horizontally and vertically from the peak has emerged.}
+        \caption{Data of sample \textcircled{1} flattened in row and column. A 
+        artifact horizontally and vertically from the peak has emerged.}
         \label{7f}
     \end{center}
 \end{figure}
 
-In summary we consider the flatten method a a legitimate tool for data preparation but one has to be aware of the artifacts which may occur.
+In summary we consider the flatten method a a legitimate tool for data 
+preparation but one has to be aware of the artifacts which may occur.
 
 
 %Implemented in the design of the AFM every scan is 
@@ -407,7 +380,7 @@ patterns is shown in \ref{artifact2}. ??Why
 		\caption{Oval pattern. }
 		\label{artifact2}
 	\end{center}
-\end{figure}
+    \end{figure}
 
 \begin{figure}
 	\begin{center}
@@ -461,75 +434,9 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 \onecolumn
 \pagestyle{empty}
 %% =============================================================================
-%\section{Anhang}
-%\label{Anhang}
+\appendix
+\label{appendix}
+\input{appendix}
 %% =============================================================================
 
 \end{document}
-
-
-
-%% =============================================================================
-%%%%%%%%%%%%%%%%%%% OBSOLETE (can be removed) %%%%%%%%%%%%%%%%%%%%%%%%%%
-%% =============================================================================
-
-%\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
-%\usepackage{bijan_koma}
-%\usepackage[ngerman]{babel} 
-
-%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
-%\sisetup{       
-  %separate-uncertainty,
-  %per-mode=fraction
-%}
-
-%\colorlet{darkblue}{blue!70!black}
-%\hypersetup{
-  %colorlinks,
-  %citecolor=darkblue,
-  %filecolor=darkblue,
-  %linkcolor=darkblue,
-  %urlcolor=black
-%}
-
-%\crefformat{equation}{Glg.~(#2#1#3)}
-%\crefformat{section}{Abschnitt~#2#1#3}
-%\crefformat{figure}{Abb.~#2#1#3}
-%\crefformat{table}{Tab.~#2#1#3}
-%\crefformat{chapter}{Kapitel~#2#1#3}
-
-
-%\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
-  %\renewcommand{\figurename}{Abb.}
-  %\renewcommand{\tablename}{Tab.}
-%}
-
-
-%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
-%\pagestyle{scrheadings}                           % Apply userdefined settings
-%\setheadsepline{.5 pt}                            % Width of seperation line
-%\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
-%\cfoot{\thepage}                                  % Page numbering 
-
-%%%%%%%%%%%%%%%%%%%%%% commands      %%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{formal/commands}
-%\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
-%\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
-%\newcommand{\secref}[1]{section~\ref{sec:#1}}
-
-%\graphicspath{{Bilder/}}
-%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\onehalfspacing                                 % 1.5 line spacing
-
-% Spacing in math environments \,\;.. 
-%\thinmuskip=3mu % default
-%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
-%\thickmuskip=5mu plus 5mu % default
-
-
