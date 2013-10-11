@@ -241,19 +241,35 @@ Although we observe artifacts while scanning the calibration grit with
 $\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
 gradient with a higher scanning speed without observing overshoots.
 
-During the measurements of the calibration grid the amplitudes of the single steps are much higher than the level of noise. While measuring flatter surfaces this in not the case however. During the measurement of sample \textcircled{?} we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it becomes more and more important to quantify the amount of noise to distinguish between real features and random noise.
-From the difference between the forward and backward scans we can estimate the amount of noise comprised in our data: First we take the data points from one line, forward and backward, and shift them to a maximum overlap. Secondly we calculate the difference between these two scans. From these aberrations we receive a standard deviation between the two scans. Dividing by $\sqrt{2}$  provides the standard deviation of the measurement.
-As an example in \cref{noise} the signal and an area with the size of the measurement's standard deviation is plotted. The signal is calculated by the mean value of the forward and backward scan.
+During the measurements of the calibration grid the amplitudes of the single 
+steps are much higher than the level of noise. While measuring flatter surfaces 
+this in not the case however. During the measurement of sample \textcircled{?} 
+we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it 
+becomes more and more important to quantify the amount of noise to distinguish 
+between real features and random noise.
+From the difference between the forward and backward scans we can estimate the 
+amount of noise comprised in our data: First we take the data points from one 
+line, forward and backward, and shift them to a maximum overlap. Secondly we 
+calculate the difference between these two scans. From these aberrations we 
+receive a standard deviation between the two scans. Dividing by $\sqrt{2}$  
+provides the standard deviation of the measurement.
+As an example in \cref{noise} the signal and an area with the size of the 
+measurement's standard deviation is plotted. The signal is calculated by the 
+mean value of the forward and backward scan.
 
 \begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Bilder/sn_signal2}
-		\caption{Height profile plotted with an estimation of noise. Two peaks at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible which are much higher than the level of noise. }
-		\label{noise}
-	\end{center}
+    \begin{center}
+        \includegraphics[width=\columnwidth]{Bilder/sn_signal2}
+        \caption{Height profile plotted with an estimation of noise. Two peaks 
+        at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible 
+        which are much higher than the level of noise. }
+        \label{noise}
+    \end{center}
 \end{figure}
 
-Therefore we can say that the peaks at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are real features while there is no significance for the peaks beyond $\SI{200}{\micro\meter}$.
+Therefore we can say that the peaks at $\SI{100}{\micro\meter}$ and 
+$\SI{185}{\micro\meter}$ are real features while there is no significance for 
+the peaks beyond $\SI{200}{\micro\meter}$.
 
 Additionally to the noise we observe artifacts which can be clearly identified as they only appear in one, either forward or backward direction. One artifact we want to discuss is shown in \cref{artifact1}. In one single line we can see a periodic pattern which is shown in \ref{artifact1}. The the periodicity of this artifact is approximately $\SI{2.5}{\micro\meter}$ but we find oscillations with an other periodicity as well. ??Why\\
 \begin{figure}[htp]
@@ -295,13 +311,20 @@ wrong data, or at least reduces the quality. On the other hand, there is no such
 thing as a perfect measurement.  Therefore the data we acquire will never be an 
 exact representation of the object we want to project. We need to make 
 corrections based on our model of the world to increase the quality and, even 
-more crucial, the usefullness of our measurements. \\
+more crucial, the usefullness of our measurements.  It is absolutely necessaty 
+not to accidentally manipulate the data in a unscientific manner. Thus we need 
+to know all the time what has been done with the data and to document the 
+process of analysis. \\
 With the AFM we scan a sample with great precision in a rasterized format. Each 
 image consists of discrete coordinates. Our goal is to analyse the samples 
 surface. One step is the removal of systematic errors. If the sample is known to 
 be flat we can make a fit to the underground. While manipulating the data quite 
-a bit, we remove a simple error, e.g. a tilt in the plane known to be something 
-irrelevant for our purpose.
+a bit, we remove a simple error, i.e. a tilt in the plane known to be something 
+irrelevant for our purpose. In this case even underground fits of higher order 
+might be useful considering deviations created by nonlinearities of the piezo 
+tube or other elements. Implemented in the design of the AFM every scan is 
+usually done twice, once in forward and once backward direction. This reduces  
+random fluctuations and allows for an estimate of the noise.
 
 
 \section{Sample Analysis}
