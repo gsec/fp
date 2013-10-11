@@ -123,6 +123,7 @@ Relevanz für die Aufnahme der GaSb Proben\\
 
 \section{Data Aquisition}
 \label{dataaquisition}
+\subsection{Parameter of recording}
 In order to acquire the topology of the samples surface the computer records the 
 scanner's $z$-position in combination with the in plane $x$- and $y$-position. 
 These data can be exported from the control software in a special (.ezd) data 
@@ -279,6 +280,76 @@ Although we observe artifacts while scanning the calibration grit with
 $\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
 gradient with a higher scanning speed without observing overshoots.
 
+\subsection{Data preparation}
+When acquiring data there is always an interpretation and processing involved.  
+This is necessary to make sense of the data, especially when dealing with big 
+data sets. This strongly depends on the uses of the data, i.e. getting a general 
+idea of an object or measuring something with great accuracy to search for yet 
+undiscovered principles. While the unprocessed set has little meaning, we edit 
+it and thereby imprint a meaning into the data. Some may argue this leads to 
+wrong data, or at least reduces the quality. On the other hand, there is no such 
+thing as a perfect measurement.  Therefore the data we acquire will never be an 
+exact representation of the object we want to project. We need to make 
+corrections based on our model of the world to increase the quality and, even 
+more crucial, the usefullness of our measurements.  It is absolutely necessaty 
+not to accidentally manipulate the data in a unscientific manner. Thus we need 
+to know all the time what has been done with the data and to document the 
+process of analysis. \\
+With the AFM we scan a sample with great precision in a rasterized format. Each 
+image consists of discrete coordinates. Our goal is to analyse the samples 
+surface. One step is the removal of systematic errors. If the sample is known to 
+be flat we can make a fit to the underground. While manipulating the data quite 
+a bit, we remove a simple error, i.e. a tilt in the plane known to be something 
+irrelevant for our purpose. In this case even underground fits of higher order 
+might be useful considering deviations created by nonlinearities of the piezo 
+tube or other elements. On this example we want to show how this is done in detail, when it is legitimate and where problems may occur. In \ref{rows} the raw data image from sample \textcircled{7} are plotted.
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.7\columnwidth]{Bilder/7}
+        \caption{The raw data image from sample \textcircled{7}. }
+        \label{7}
+    \end{center}
+\end{figure}
+
+We can clearly identify the horizontal direction in which the tip scanned the sample. After each row the tip is afflicted with a different offset leading to different heights/colors for each row. This offset is not a feature of our sample, so we try to manipulate the data in a way to get rid of this effect.
+In detail this is done by fitting a parabola to each row of our sample, subtracting this parabola from the raw data afterwards. The same method applied on the single column removes the tilt in the $y$-axis. After applying this flatten function the features of our sample are visible much better and the stripy surface has been manly removed. \\
+As mentioned before every correction falsify the data to a certain amount and the method should not be applied without being aware of the problems which may occur.
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.7\columnwidth]{Bilder/7f}
+        \caption{Data of sample \textcircled{7} flattened in row and column. }
+        \label{7f}
+    \end{center}
+\end{figure}
+
+In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the middle of the picture we find a peak on a otherwise flat surface. By applying the flatten function we receive the picture shown in \ref{1f}. Horizontally and vertically from the peak a darker cross has emerged. This can be explained in the following way. By fitting over the row/column including the peak the mean height is higher. By subtracting the fitted function from raw data, every row/column including the peak is lowered more than the other ones. This leads to an unwanted artifact near the peak.
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.7\columnwidth]{Bilder/1}
+        \caption{The raw data image from sample \textcircled{1}. }
+        \label{1}
+    \end{center}
+\end{figure}
+
+\begin{figure}[htp]
+    \begin{center}
+        \includegraphics[width=0.7\columnwidth]{Bilder/1f}
+        \caption{Data of sample \textcircled{1} flattened in row and column. A artifact horizontally and vertically from the peak has emerged.}
+        \label{7f}
+    \end{center}
+\end{figure}
+
+In summary we consider the flatten method a a legitimate tool for data preparation but one has to be aware of the artifacts which may occur.
+
+
+%Implemented in the design of the AFM every scan is 
+%usually done twice, once in forward and once backward direction. This reduces  
+%random fluctuations and allows for an estimate of the noise.
+
+\subsection{Signal and noise}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
 this in not the case however. During the measurement of sample \textcircled{?} 
@@ -349,30 +420,7 @@ patterns is shown in \ref{artifact2}. ??Why
 
 \paragraph Methoden und Probleme der Bildbearbeitung\\
 
-When acquiring data there is always an interpretation and processing involved.  
-This is necessary to make sense of the data, especially when dealing with big 
-data sets. This strongly depends on the uses of the data, i.e. getting a general 
-idea of an object or measuring something with great accuracy to search for yet 
-undiscovered principles. While the unprocessed set has little meaning, we edit 
-it and thereby imprint a meaning into the data. Some may argue this leads to 
-wrong data, or at least reduces the quality. On the other hand, there is no such 
-thing as a perfect measurement.  Therefore the data we acquire will never be an 
-exact representation of the object we want to project. We need to make 
-corrections based on our model of the world to increase the quality and, even 
-more crucial, the usefullness of our measurements.  It is absolutely necessaty 
-not to accidentally manipulate the data in a unscientific manner. Thus we need 
-to know all the time what has been done with the data and to document the 
-process of analysis. \\
-With the AFM we scan a sample with great precision in a rasterized format. Each 
-image consists of discrete coordinates. Our goal is to analyse the samples 
-surface. One step is the removal of systematic errors. If the sample is known to 
-be flat we can make a fit to the underground. While manipulating the data quite 
-a bit, we remove a simple error, i.e. a tilt in the plane known to be something 
-irrelevant for our purpose. In this case even underground fits of higher order 
-might be useful considering deviations created by nonlinearities of the piezo 
-tube or other elements. Implemented in the design of the AFM every scan is 
-usually done twice, once in forward and once backward direction. This reduces  
-random fluctuations and allows for an estimate of the noise.
+
 
 
 \section{Sample Analysis}
