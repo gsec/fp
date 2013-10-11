@@ -37,7 +37,10 @@
 % =============================================================================
   \vspace{-2em}
   \noindent {\small 
-  % abstact 
+  During the AFM-laboratory we investigated the surface roughness of four GaSb samples. While an 
+untreated GaSb-wafer shows ditches caused by polishing the overgrow of a $\SI{200}{\nano\meter}$ GaSb
+buffer leads to significant lower surface roughness. Two different growth temperatures were tested.
+The buffer grown at $515$\textdegree~exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ were not removed from the surface as it indicated previous publications \cite{murray}.
     }
   \vspace{1em}
 
@@ -121,14 +124,32 @@ leading to a more accurate signal.
 Relevanz für die Aufnahme der GaSb Proben\\
 %
 
-\section{Data Aquisition}
-\label{dataaquisition}
+\section{The AFM Experiment}
+\label{Experiment}
+\subsection{Samples}
+In the expose we described different samples which would be  interesting for us. Nevertheless 
+due to failure during the growth of the samples we could only execute the measurements of four samples.
+The samples with a short discretion of their properties are listed in \cref{samples}
+
+\begin{tabular}{ c | l }
+  sample & property\\
+  \hline                        
+  \circled{1} & An untreated GaSb wafer   \\
+  \circled{2} & $\SI{200}{\nano\meter}$ GaSb buffer at 485\textdegree \\
+  \circled{3} & $\SI{200}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \circled{4} & $\SI{10}{\nano\meter} $GaSb buffer plus\\
+  &$\SI{30}{\nano\meter}$ AlAsSb plus \\
+  &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \hline  
+  \label{samples}
+\end{tabular}
+
 \subsection{Parameter of recording}
 In order to acquire the topology of the samples surface the computer records the 
 scanner's $z$-position in combination with the in plane $x$- and $y$-position. 
 These data can be exported from the control software in a special (.ezd) data 
 format. We convert these data back into a list of $x$, $y$ and $z$-coordinates 
-using the \textit{WSxM} software, which is freely available on ??. 
+using the \textit{WSxM} software, which is freely available on \cite{nanotec}. 
 
 While scanning in static force mode is necessary to maintain the force by moving 
 the scanner's $z$-position. This is done by a feedback loop, which compares the 
@@ -256,7 +277,7 @@ a bit, we remove a simple error, i.e. a tilt in the plane known to be something
 irrelevant for our purpose. In this case even underground fits of higher order 
 might be useful considering deviations created by nonlinearities of the piezo 
 tube or other elements. On this example we want to show how this is done in 
-detail, when it is legitimate and where problems may occur. In \ref{rows} the 
+detail, when it is legitimate and where problems may occur. In \ref{7} the 
 raw data image from sample \textcircled{7} are plotted.
 
 \begin{figure}
@@ -294,9 +315,9 @@ occur.
 
 
 
-In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the 
+In the \ref{7} the surface of \textcircled{1} is showed. Noticeable in the 
 middle of the picture we find a peak on a otherwise flat surface. By applying 
-the flatten function we receive the picture shown in \ref{1f}. Horizontally and 
+the flatten function we receive the picture shown in \ref{7f}. Horizontally and 
 vertically from the peak a darker cross has emerged. This can be explained in 
 the following way. By fitting over the row/column including the peak the mean 
 height is higher. By subtracting the fitted function from raw data, every 
@@ -366,7 +387,10 @@ as they only appear in one, either forward or backward direction. One artifact
 we want to discuss is shown in \cref{artifact1}. In one single line we can see a 
 periodic pattern which is shown in \ref{artifact1}. The the periodicity of this 
 artifact is approximately $\SI{2.5}{\micro\meter}$ but we find oscillations with 
-an other periodicity as well. ??Why\\
+an other periodicity as well. Artifacts on single lines can be caused by small 
+particles which are pushed over the sample by the tip. This however doesn't 
+explain the regular oscillation.
+
 \begin{figure}
     \begin{center}
         \includegraphics[width=\columnwidth]{Bilder/artifact1}
@@ -378,7 +402,16 @@ an other periodicity as well. ??Why\\
 Furthermore we found pattern which looks like concentric sets of ovals. The 
 distance between two ovals decreases as their size increases. We find these 
 elliptic pattern in every of our GaSb samples. One surface with clearly visible 
-patterns is shown in \ref{artifact2}. ??Why
+patterns is shown in \ref{artifact2}. As these pattern are visible in the forward 
+and backward scanning direction they could be caused by features of the surface.
+On the other hand the ovals don't correlate with the crystal structure or the
+peaks on the surface which commends to an artifact. If it is an artifact it could
+be on the one hand caused by an interference between a plain and a spherical wave. 
+But to explain the pattern shown in \ref{artifact2} the wavelength should be in
+the order of $\SI{200}{\nano\meter}$ which is to short for laser light.
+On the other hand these pattern could be a moiré-pattern caused by the discrete
+lateral resolution which equals $\SI{50}{\micro\meter}/265 = \SI{195}{\nano\meter}$.
+
 
 \begin{figure}
 	\begin{center}
@@ -391,11 +424,21 @@ patterns is shown in \ref{artifact2}. ??Why
 
 \section{Sample Analysis}
 
-On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
+On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
 \begin{itemize}
 \item Rauigkeit der Oberfläche\\
 \item Aussagen über Wachstumsmethoden\\
 \end{itemize}
+
+\section{summary}
+During the AFM-laboratory we investigated the surface if different samples. Starting with a calibration
+grid we investigated the influence of different scanning parameter like P- and I-feedback-loop-values 
+and different scanning speeds. Further more we investigated the roughness of four GaSb samples. While an untreated GaSb-wafer shows ditches caused by polishing the overgrow of $\SI{200}{\nano\meter}$ GaSb
+buffer leads to significant lower surface roughness. Two different growth temperatures were tested.
+The buffer grown at $515$\textdegree exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand we found single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ which were not removed from the surface as it indicated previous publications \cite{murray}.\\
+Different kinds of artifacts were discussed and we showed the advantages and risks of data preparation.
+
+
 
 % =============================================================================
 \begin{thebibliography}{}   
@@ -418,6 +461,7 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
   
 \bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
 
+\bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
 %
 %
