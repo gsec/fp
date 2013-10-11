@@ -157,26 +157,64 @@ right side. Firstly we started with a low I-value and observed the
 $z$-coordinate adepting very slowly to the actual height of the grid as is shown 
 in \ref{wenigI}.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.6\columnwidth]{Bilder/wenigI}
-        \caption{Height profile recorded with the I-gain value set to 5. 
-        $\mathrm{P}=9$. Scanning direction is from left to right.}
-        \label{wenigI}
-    \end{center}
-\end{figure}
+%\begin{figure}
+    %\begin{center}
+        %\includegraphics[width=0.6\columnwidth]{Bilder/wenigI}
+        %\caption{Height profile recorded with the I-gain value set to 5. 
+        %$\mathrm{P}=9$. Scanning direction is from left to right.}
+        %\label{wenigI}
+    %\end{center}
+%\end{figure}
 
 By increasing the I-value the height is adapting much more quickly but 
 overshoots at the step's edge as well as increasing the amount of noise during 
 the plateaus. The height profile is plotted in \ref{vielI}.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.6\columnwidth]{Bilder/vielI}
-        \caption{Height profile recordes with the I-gain value set to 11. 
-        $\mathrm{P}=9$. Scanning direction is from left to right.}
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/wenigI}
+        \caption{I-gain set to 5. $\mathrm{P}=9$. }
+        \label{wenigI}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.45\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/vielI}
+        \caption{I-gain set to 11. 
+        $\mathrm{P}=9$.}
         \label{vielI}
-    \end{center}
+    \end{subfigure}
+     
+    \begin{subfigure}{0.45\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/wenigP}
+        \caption{P-gain set to 5. 
+        $\mathrm{I}=9$.}
+        \label{wenigP}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.45\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/vielP}
+        \caption{P-gain set to 15. 
+        $\mathrm{I}=9$.}
+        \label{vielP}
+    \end{subfigure}
+    
+    \begin{subfigure}{0.45\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/slow}
+        \caption{Scanning speed of $\SI{3}{\second}$ per line. $\mathrm{P}=9$, 
+        $\mathrm{I}=9$.}
+        \label{slow}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.45\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/fast}
+        \caption{Scanning speed of 
+        $\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$.}
+        \label{fast}
+    \end{subfigure}
+    \caption{Height profiles of single lines and the effect of different 
+    feedback parameters and scanning velocities. Scanning direction is from left 
+    to right.}
 \end{figure}
 
 In the next step the influence of the P-value was observed. With the I-value set 
@@ -187,23 +225,23 @@ overshoots decrease when increasing the P-value. This however has a negative
 influence on the noise as can be seen in the comparison of \ref{wenigP} and 
 \ref{vielP}.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.6\columnwidth]{Bilder/wenigP}
-        \caption{Height profile recordes with the P-gain value set to 5. 
-        $\mathrm{I}=9$. Scanning direction is from left to right.}
-        \label{wenigP}
-    \end{center}
-\end{figure}
+%\begin{figure}
+    %\begin{center}
+        %\includegraphics[width=0.6\columnwidth]{Bilder/wenigP}
+        %\caption{Height profile recordes with the P-gain value set to 5. 
+        %$\mathrm{I}=9$. Scanning direction is from left to right.}
+        %\label{wenigP}
+    %\end{center}
+%\end{figure}
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.6\columnwidth]{Bilder/vielP}
-        \caption{Height profile recordes with the P-gain value set to 15. 
-        $\mathrm{I}=9$. Scanning direction is from left to right.}
-        \label{vielP}
-    \end{center}
-\end{figure}
+%\begin{figure}
+    %\begin{center}
+        %\includegraphics[width=0.6\columnwidth]{Bilder/vielP}
+        %\caption{Height profile recordes with the P-gain value set to 15. 
+        %$\mathrm{I}=9$. Scanning direction is from left to right.}
+        %\label{vielP}
+    %\end{center}
+%\end{figure}
 
 As a trade-off between fast and accurate height adaption and a minimum of noise 
 we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all 
@@ -217,25 +255,25 @@ clear step of the calibration grit without any noticeable overshoot. For the
 faster scanning speed we can see in \ref{fast} distinct overshoots at the 
 beginning of each step.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.6\columnwidth]{Bilder/slow}
-        \caption{Height profile recordes with a scanning sped of 
-        $\SI{3}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
-        direction is from left to right.}
-        \label{slow}
-    \end{center}
-\end{figure}
+%\begin{figure}
+    %\begin{center}
+        %\includegraphics[width=0.6\columnwidth]{Bilder/slow}
+        %\caption{Height profile recordes with a scanning sped of 
+        %$\SI{3}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
+        %direction is from left to right.}
+        %\label{slow}
+    %\end{center}
+%\end{figure}
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.6\columnwidth]{Bilder/fast}
-        \caption{Height profile recordes with a scanning speed of 
-        $\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
-        direction is from left to right.}
-        \label{fast}
-    \end{center}
-\end{figure}
+%\begin{figure}
+    %\begin{center}
+        %\includegraphics[width=0.6\columnwidth]{Bilder/fast}
+        %\caption{Height profile recordes with a scanning speed of 
+        %$\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
+        %direction is from left to right.}
+        %\label{fast}
+    %\end{center}
+%\end{figure}
 
 Although we observe artifacts while scanning the calibration grit with  
 $\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
@@ -257,7 +295,7 @@ As an example in \cref{noise} the signal and an area with the size of the
 measurement's standard deviation is plotted. The signal is calculated by the 
 mean value of the forward and backward scan.
 
-\begin{figure}[htp]
+\begin{figure}
     \begin{center}
         \includegraphics[width=\columnwidth]{Bilder/sn_signal2}
         \caption{Height profile plotted with an estimation of noise. Two peaks 
@@ -271,18 +309,28 @@ Therefore we can say that the peaks at $\SI{100}{\micro\meter}$ and
 $\SI{185}{\micro\meter}$ are real features while there is no significance for 
 the peaks beyond $\SI{200}{\micro\meter}$.
 
-Additionally to the noise we observe artifacts which can be clearly identified as they only appear in one, either forward or backward direction. One artifact we want to discuss is shown in \cref{artifact1}. In one single line we can see a periodic pattern which is shown in \ref{artifact1}. The the periodicity of this artifact is approximately $\SI{2.5}{\micro\meter}$ but we find oscillations with an other periodicity as well. ??Why\\
-\begin{figure}[htp]
-	\begin{center}
-		\includegraphics[width=\columnwidth]{Bilder/artifact1}
-		\caption{Height profile plotted with an estimation of noise. Two peaks at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible which are much higher than the level of noise. }
-		\label{artifact1}
-	\end{center}
+Additionally to the noise we observe artifacts which can be clearly identified 
+as they only appear in one, either forward or backward direction. One artifact 
+we want to discuss is shown in \cref{artifact1}. In one single line we can see a 
+periodic pattern which is shown in \ref{artifact1}. The the periodicity of this 
+artifact is approximately $\SI{2.5}{\micro\meter}$ but we find oscillations with 
+an other periodicity as well. ??Why\\
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=\columnwidth]{Bilder/artifact1}
+        \caption{Height profile plotted with an estimation of noise. Two peaks 
+        at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible 
+        which are much higher than the level of noise. }
+        \label{artifact1}
+    \end{center}
 \end{figure}
 
-Furthermore we found pattern which looks like concentric sets of ovals. The distance between two ovals decreases as their size increases. We find these elliptic pattern in every of our GaSb samples. One surface with clearly visible patterns is shown in \ref{artifact2}. ??Why
+Furthermore we found pattern which looks like concentric sets of ovals. The 
+distance between two ovals decreases as their size increases. We find these 
+elliptic pattern in every of our GaSb samples. One surface with clearly visible 
+patterns is shown in \ref{artifact2}. ??Why
 
-\begin{figure}[htp]
+\begin{figure}
 	\begin{center}
 		\includegraphics[width=0.7\columnwidth]{Bilder/artifact2}
 		\caption{Oval pattern. }
@@ -290,11 +338,11 @@ Furthermore we found pattern which looks like concentric sets of ovals. The dist
 	\end{center}
 \end{figure}
 
-\begin{figure}[htp]
+\begin{figure}
 	\begin{center}
 		\includegraphics[width=0.7\columnwidth]{Bilder/artifact3}
 		\caption{Oval pattern. }
-		\label{artifact2}
+		\label{artifact3}
 	\end{center}
 \end{figure}
 

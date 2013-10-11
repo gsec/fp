@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  11 OCT 2013 10:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  11 OCT 2013 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1339,8 +1339,8 @@ File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopat
 hs.code.tex
 File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
-))) (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
-Package: subfig 2005/06/28 ver: 1.3 subfig package
+))) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2012/01/12 v1.1d Sub-captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2012/02/19 v3.2f Customizing captions (AR)
@@ -1358,19 +1358,8 @@ Package caption Info: KOMA-Script document class.
 \c@ContinuedFloat=\count298
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count299
-\sf@farskip=\skip63
-\sf@captopadj=\dimen270
-\sf@capskip=\skip64
-\sf@nearskip=\skip65
-\c@subfigure=\count300
-\c@subfigure@save=\count301
-\c@lofdepth=\count302
-\c@subtable=\count303
-\c@subtable@save=\count304
-\c@lotdepth=\count305
-\sf@top=\skip66
-\sf@bottom=\skip67
+\c@subfigure=\count299
+\c@subtable=\count300
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cleveref/cleveref.sty
 Package: cleveref 2012/03/07{} v0.18.5{} Intelligent cross-referencing
@@ -1385,7 +1374,6 @@ LaTeX Info: Redefining \cpagerefrange on input line 2166.
 LaTeX Info: Redefining \Cpagerefrange on input line 2166.
 LaTeX Info: Redefining \labelcref on input line 2166.
 LaTeX Info: Redefining \labelcpageref on input line 2166.
-Package cleveref Info: `subfig' support loaded on input line 2876.
 Package cleveref Info: loaded `english' language definitions on input line 6907
 .
 Package cleveref Info: no abbreviation of names on input line 6908.
@@ -1395,24 +1383,24 @@ Package: bijan_commands
 )
 
 Package hyperref Warning: Option `pdftex' has already been used,
-(hyperref)                setting the option has no effect on input line 66.
+(hyperref)                setting the option has no effect on input line 67.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 66.
+Package hyperref Info: Option `colorlinks' set `true' on input line 67.
 
 Package hyperref Warning: Option `backref' has already been used,
-(hyperref)                setting the option has no effect on input line 66.
+(hyperref)                setting the option has no effect on input line 67.
 
 
 Package hyperref Warning: Option `pdfpagelabels' has already been used,
-(hyperref)                setting the option has no effect on input line 66.
+(hyperref)                setting the option has no effect on input line 67.
 
-Package hyperref Info: Option `breaklinks' set `true' on input line 66.
-Package hyperref Info: Option `plainpages' set `false' on input line 66.
+Package hyperref Info: Option `breaklinks' set `true' on input line 67.
+Package hyperref Info: Option `plainpages' set `false' on input line 67.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 66.
+(hyperref)                setting the option has no effect on input line 67.
 
-Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 66.
+Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 67.
 
 ) (./main.aux)
 \openout1 = `main.aux'.
@@ -1440,16 +1428,16 @@ LaTeX Font Info:    ... okay on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count306
-\scratchdimen=\dimen271
+\scratchcounter=\count301
+\scratchdimen=\dimen270
 \scratchbox=\box54
-\nofMPsegments=\count307
-\nofMParguments=\count308
+\nofMPsegments=\count302
+\nofMParguments=\count303
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count309
-\MPscratchDim=\dimen272
-\MPnumerator=\count310
-\makeMPintoPDFobject=\count311
+\MPscratchCnt=\count304
+\MPscratchDim=\dimen271
+\MPnumerator=\count305
+\makeMPintoPDFobject=\count306
 \everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1484,7 +1472,7 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count312
+\c@section@level=\count307
 )
 LaTeX Info: Redefining \ref on input line 27.
 LaTeX Info: Redefining \pageref on input line 27.
@@ -1496,9 +1484,8 @@ LaTeX Info: Redefining \nameref on input line 27.
 
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c_siunitx_mathsf_int=\count313
+\c_siunitx_mathsf_int=\count308
 LaTeX Font Info:    Try loading font information for U+msa on input line 27.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1509,7 +1496,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 27.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-\c_siunitx_mathtt_int=\count314
+\c_siunitx_mathtt_int=\count309
  (./expose.tex
 <Bilder/A2749_50_1.jpg, id=37, 642.4pt x 513.92pt>
 File: Bilder/A2749_50_1.jpg Graphic file (type jpg)
@@ -1541,131 +1528,148 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 
  []
 
-<Bilder/wenigI.jpg, id=77, 215.30438pt x 225.84375pt>
+<Bilder/wenigI.jpg, id=78, 215.30438pt x 225.84375pt>
 File: Bilder/wenigI.jpg Graphic file (type jpg)
  <use Bilder/wenigI.jpg>
-Package pdftex.def Info: Bilder/wenigI.jpg used on input line 162.
-(pdftex.def)             Requested size: 143.37843pt x 150.40129pt.
+Package pdftex.def Info: Bilder/wenigI.jpg used on input line 176.
+(pdftex.def)             Requested size: 107.532pt x 112.79753pt.
 
 <Bilder/vielI.jpg, id=79, 215.30438pt x 225.84375pt>
 File: Bilder/vielI.jpg Graphic file (type jpg)
  <use Bilder/vielI.jpg>
-Package pdftex.def Info: Bilder/vielI.jpg used on input line 175.
-(pdftex.def)             Requested size: 143.37843pt x 150.40129pt.
+Package pdftex.def Info: Bilder/vielI.jpg used on input line 182.
+(pdftex.def)             Requested size: 107.532pt x 112.79753pt.
 
-[3 <./Bilder/control_loop.pdf> <./Bilder/wenigI.jpg>]
-<Bilder/wenigP.jpg, id=104, 213.04594pt x 221.32687pt>
+<Bilder/wenigP.jpg, id=80, 213.04594pt x 221.32687pt>
 File: Bilder/wenigP.jpg Graphic file (type jpg)
  <use Bilder/wenigP.jpg>
-Package pdftex.def Info: Bilder/wenigP.jpg used on input line 192.
-(pdftex.def)             Requested size: 143.37843pt x 148.96027pt.
+Package pdftex.def Info: Bilder/wenigP.jpg used on input line 189.
+(pdftex.def)             Requested size: 107.532pt x 111.71344pt.
 
-<Bilder/vielP.jpg, id=105, 213.79875pt x 207.02344pt>
+<Bilder/vielP.jpg, id=81, 213.79875pt x 207.02344pt>
 File: Bilder/vielP.jpg Graphic file (type jpg)
  <use Bilder/vielP.jpg>
-Package pdftex.def Info: Bilder/vielP.jpg used on input line 201.
-(pdftex.def)             Requested size: 143.37843pt x 138.83449pt.
+Package pdftex.def Info: Bilder/vielP.jpg used on input line 196.
+(pdftex.def)             Requested size: 107.532pt x 104.12428pt.
 
-<Bilder/slow.jpg, id=108, 211.54031pt x 225.84375pt>
+<Bilder/slow.jpg, id=82, 211.54031pt x 225.84375pt>
 File: Bilder/slow.jpg Graphic file (type jpg)
  <use Bilder/slow.jpg>
-Package pdftex.def Info: Bilder/slow.jpg used on input line 222.
-(pdftex.def)             Requested size: 143.37843pt x 153.07892pt.
+Package pdftex.def Info: Bilder/slow.jpg used on input line 203.
+(pdftex.def)             Requested size: 107.532pt x 114.80315pt.
 
-<Bilder/fast.jpg, id=109, 211.54031pt x 225.09094pt>
+<Bilder/fast.jpg, id=83, 211.54031pt x 225.09094pt>
 File: Bilder/fast.jpg Graphic file (type jpg)
  <use Bilder/fast.jpg>
-Package pdftex.def Info: Bilder/fast.jpg used on input line 232.
-(pdftex.def)             Requested size: 143.37843pt x 152.56865pt.
+Package pdftex.def Info: Bilder/fast.jpg used on input line 210.
+(pdftex.def)             Requested size: 107.532pt x 114.42047pt.
 
-[4 <./Bilder/vielI.jpg> <./Bilder/wenigP.jpg> <./Bilder/vielP.jpg> <./Bilder/sl
-ow.jpg>] <Bilder/sn_signal2.pdf, id=120, 394.88327pt x 255.1161pt>
+[3 <./Bilder/control_loop.pdf>]
+<Bilder/sn_signal2.pdf, id=111, 394.88327pt x 255.1161pt>
 File: Bilder/sn_signal2.pdf Graphic file (type pdf)
 
 <use Bilder/sn_signal2.pdf>
-Package pdftex.def Info: Bilder/sn_signal2.pdf used on input line 262.
+Package pdftex.def Info: Bilder/sn_signal2.pdf used on input line 300.
 (pdftex.def)             Requested size: 238.96164pt x 154.38269pt.
+ [4 <./Bilder/wenigI.jpg> <./Bilder/vielI.jpg> <./Bilder/wenigP.jpg> <./Bilder/
+vielP.jpg> <./Bilder/slow.jpg> <./Bilder/fast.jpg> <./Bilder/sn_signal2.pdf>]
+<Bilder/artifact1.jpg, id=136, 750.55406pt x 376.40625pt>
+File: Bilder/artifact1.jpg Graphic file (type jpg)
 
+<use Bilder/artifact1.jpg>
+Package pdftex.def Info: Bilder/artifact1.jpg used on input line 320.
+(pdftex.def)             Requested size: 238.96164pt x 119.83789pt.
 
-LaTeX Warning: Reference `artifact1' on page 1 undefined on input line 276.
+<Bilder/artifact2.jpg, id=138, 372.64218pt x 372.64218pt>
+File: Bilder/artifact2.jpg Graphic file (type jpg)
 
+<use Bilder/artifact2.jpg>
+Package pdftex.def Info: Bilder/artifact2.jpg used on input line 335.
+(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+<Bilder/artifact3.jpg, id=139, 372.64218pt x 372.64218pt>
+File: Bilder/artifact3.jpg Graphic file (type jpg)
+
+<use Bilder/artifact3.jpg>
+Package pdftex.def Info: Bilder/artifact3.jpg used on input line 343.
+(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+[5 <./Bilder/artifact1.jpg> <./Bilder/artifact2.jpg> <./Bilder/artifact3.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 381--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--285
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--311
+Underfull \hbox (badness 10000) in paragraph at lines 384--385
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--313
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 319--321
+Underfull \hbox (badness 8075) in paragraph at lines 394--396
 \OT1/cmr/m/n/10 Based Vertical-Cavity Surface-Emitting Lasers.
  []
 
-[5 <./Bilder/fast.jpg> <./Bilder/sn_signal2.pdf>]
-Underfull \hbox (badness 2142) in paragraph at lines 322--325
+
+Underfull \hbox (badness 2142) in paragraph at lines 397--400
 []\OT1/cmr/m/n/10 Weih, Robert; Kamp, Mar-tin; H^^?ofling, Sven
  []
 
 [6
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 420.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 420.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 420.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 420.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7E1D674DC99726DBC530CD72A7826932;316.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 420.
  ) 
 Here is how much of TeX's memory you used:
- 27059 strings out of 494966
- 524143 string characters out of 3178675
- 614608 words of memory out of 3000000
- 29777 multiletter control sequences out of 15000+200000
- 16640 words of font info for 64 fonts, out of 3000000 for 9000
+ 27000 strings out of 494966
+ 523301 string characters out of 3178675
+ 614426 words of memory out of 3000000
+ 29719 multiletter control sequences out of 15000+200000
+ 16332 words of font info for 63 fonts, out of 3000000 for 9000
  36 hyphenation exceptions out of 8191
- 68i,11n,71p,516b,937s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,13n,71p,483b,981s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/gsec/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/gs
 ec/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (6 pages, 418099 bytes).
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (6 pages, 726086 bytes).
 PDF statistics:
  211 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
- 111 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 compressed objects within 2 object streams
+ 27 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 
