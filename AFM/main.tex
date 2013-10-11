@@ -57,8 +57,8 @@ The buffer grown at $515$\textdegree~exhibited a lower surface roughness than th
 % =============================================================================
 %\addtocounter{section}{-1}
 
+\section{Motivation}
 \input{expose}
-
 \newpage
 
 \section{Basics}
@@ -129,7 +129,7 @@ to measure the surface
 \subsection{Samples}
 In the expose we described different samples which would be  interesting for us. Nevertheless 
 due to failure during the growth of the samples we could only execute the measurements of four samples.
-The samples with a short discretion of their properties are listed in \cref{samples}
+The samples with a short discretion of their properties are listed in \cref{samplesprep}
 
 \begin{tabular}{ c | l }
   sample & property\\
@@ -141,7 +141,7 @@ The samples with a short discretion of their properties are listed in \cref{samp
   &$\SI{30}{\nano\meter}$ AlAsSb plus \\
   &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
   \hline  
-  \label{samples}
+  \label{samplesprep}
 \end{tabular}
 
 \subsection{Parameter of recording}
@@ -352,6 +352,7 @@ preparation but one has to be aware of the artifacts which may occur.
 %random fluctuations and allows for an estimate of the noise.
 
 \subsection{Signal and noise}
+\label{san}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
 this in not the case however. During the measurement of sample \circled{4} 
@@ -408,7 +409,7 @@ and backward scanning direction they could be caused by features of the surface.
 On the other hand the ovals don't correlate with the crystal structure or the
 peaks on the surface which commends to an artifact. If it is an artifact it could
 be on the one hand caused by an interference between a plain and a spherical wave. 
-But to explain the pattern shown in \ref{artifact2} the wavelength should be in
+But to explain the pattern which are presented in \ref{artifact2}, the wavelength should be in
 the order of $\SI{200}{\nano\meter}$ which is to short for laser light.
 On the other hand these pattern could be a moiré-pattern caused by the discrete
 lateral resolution which equals $\SI{50}{\micro\meter}/265 = \SI{195}{\nano\meter}$.
@@ -425,9 +426,8 @@ lateral resolution which equals $\SI{50}{\micro\meter}/265 = \SI{195}{\nano\mete
 
 \section{Sample Analysis}
 
-On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
-\begin{itemize}
-\item Rauigkeit der Oberfläche\\
+On the surfaces of our samples we found single accumulations of material typically in the order of several nanometers. Interestingly in the vicinity of these peaks the average height seems to be significantly lower than on the rest of the surface. It seems like every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
+
 
 As mentioned in \cref{motivation} one of the goals of this experiment was to 
 quantify and analyze the roughness $\rho$ of a variety of surfaces. We concluded 
@@ -440,6 +440,23 @@ AFM. In principle it denotes the deviation of a flat surface as:
 \end{align}
 
 For further reference please see \cref{roughness}.  \\
+To estimate the error of this value we calculate the roughness of a randomly generated
+surface with a deviation in height which is equal to the noise estimated in \ref{san}.
+All the values of surface roughness together with this error are presented in \cref{table:r}
+
+\begin{tabular}{ c | l | l }
+  sample & property & roughness $\rho$\\
+  \hline                        
+  \circled{1} & An untreated GaSb wafer &  $2.55(7) \cdot 10^{-5}$\\
+  \circled{2} & $\SI{200}{\nano\meter}$ GaSb buffer at 485\textdegree & $0.61(7) \cdot 10^{-5}$\\
+  \circled{3} & $\SI{200}{\nano\meter}$ GaSb buffer at 515\textdegree & $0.54(7) \cdot 10^{-5}$\\
+  \circled{4} & $\SI{10}{\nano\meter} $GaSb buffer plus & $0.49(7) \cdot 10^{-5}$\\
+  &$\SI{30}{\nano\meter}$ AlAsSb plus \\
+  &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \hline  
+  \label{table:r}  
+\end{tabular}
+
 In sample \circled{1} there are actual scratches on the surface. Since it is the 
 untreated wafer we suspect this arising from a polishment after the fabrication. 
 This sample shows a much larger roughness than the other treated samples. The 
@@ -448,7 +465,7 @@ features across the surface. While the sample \circled{3} is the same as the
 previous one but grown at a higher temperature, we do not find those larger 
 features on the surface and therefore the surface is even smoother. The smallest 
 roughness was measured on sample \circled{4}. On this sample a layer of 
-aluminium was grown, producing a few wider features only little higher than the 
+AlAsSb was grown, producing a few wider features only little higher than the 
 average. But as the overall surface is smoother, this contribution is not as big 
 as to increase the roughness above the other samples. Here the corrected samples 
 were described. Except for the untreated sample \circled{1} the background 
@@ -457,8 +474,6 @@ there is a flattening involved in this correction the largest contribution is
 attributed to the fact that the scan lines are fitted separately. Irregularities 
 and systematic errors arising from the fact of line switching or directional 
 changes are thereby minimized. 
-
-\end{itemize}
 
 \section{summary}
 During the AFM-laboratory we investigated the surface if different samples. Starting with a calibration
