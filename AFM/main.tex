@@ -27,8 +27,8 @@
 \begin{document}
 
 \title{Projekt zum Fortgeschrittenen-Praktikum \\ - Atomic Force Microscopy}                  
-\author{Guilherme Stein \& Ulrich Müller}         \date{}                             
-% Turn off automatic date
+\author{Guilherme Stein \& Ulrich Müller}         
+\date{}                             % Turn off automatic date
 \twocolumn[\begin{@twocolumnfalse}
 \vspace{-3em}
 \maketitle      
@@ -51,11 +51,11 @@
 }
 \vspace{1em}
 
-\noindent Supervisor: Dr. Paolo Sessi
-\hfill Date of experiment: $4^{\text{th}}$ October 2013
-    \begin{flushright}
-        % Protokollabgabe: 12. Oktober 2012        
-      \end{flushright}
+  \noindent Supervisor: Dr. Paolo Sessi
+  \hfill Date of experiment: $4^{\text{th}}$ October 2013
+  \begin{flushright}
+    % Protokollabgabe: 12. Oktober 2012        
+  \end{flushright}
 \end{abstract}
 
 \vspace{2em}
@@ -64,8 +64,8 @@
 % =============================================================================
 %\addtocounter{section}{-1}
 
+\section{Motivation}
 \input{expose}
-
 \newpage
 
 \section{Basics}
@@ -82,7 +82,8 @@ The principle of the atomic force microscope are the forces that act between two
 pieces of matter when brought close to each other. More precisely we bring a 
 sharp tip into a distance of a few nano meters to a surface of interest. At this 
 scale the main contribution are Van-der-Waals forces which arise from 
-polarisation fluctuations in the material. In \cref{afm_scheme} one can see the 
+polarisation fluctuations in the material and the repulsive forces due to 
+Fermi's exclusion principle. In \cref{afm_scheme} one can see the 
 main parts required to run the AFM.  The sample is mounted on a xyz-stage 
 consisting of different piezo elements.  This enables us to move the sample in 
 xy-direction for the scanning of the probe, as well as in the z direction for 
@@ -124,13 +125,19 @@ opposed to the strength of the diode, the angle of the laser beam and the
 distances between those elements. Therefore introducing less error sources and 
 leading to a more accurate signal.
 
+The resolution of the used AFM is within the range of several nanometers. Adequately
+to measure the surface of the GaSb-wafers. These samples are normally characterized 
+by optical microscopy, X-ray diffraction and scanning electron microscopy. As these 
+techniques offer very less information about the sample's surface structure the AFM 
+provides us a new possibility to gain this information.
+
 \section{The AFM Experiment}
 \label{Experiment}
 \subsection{Samples}
 In \cref{motivation} we described different samples of interest. Since we 
 encountered problems during the sample growth, measurements were only performed 
 on four of the samples. The samples are listed with a short description in 
-\cref{samples}.
+\cref{samplesprep}.
 
 \begin{tabular}{ c | l }
   sample & property\\
@@ -142,7 +149,7 @@ on four of the samples. The samples are listed with a short description in
   &$\SI{30}{\nano\meter}$ AlAsSb plus \\
   &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
   \hline  
-  \label{samples}
+  \label{samplesprep}
 \end{tabular}
 
 \subsection{Parameters of recording}
@@ -304,7 +311,7 @@ sample, so we try to manipulate the data in a way to get rid of this effect.
 In detail this is done by fitting a parabola to each row of our sample, 
 subtracting this parabola from the raw data afterwards. The same method applied 
 on the single column removes the tilt in the $y$-axis. After applying this 
-flatten function the features of our sample are much better visible and the 
+flatten function the features of our sample are visible much better and the 
 stripy surface has been manly removed. \\
 As mentioned before every correction falsify the data to a certain amount and 
 the method should not be applied without being aware of the problems which may 
@@ -349,6 +356,7 @@ preparation but one has to be aware of the artifacts which may occur.
 %random fluctuations and allows for an estimate of the noise.
 
 \subsection{Signal and noise}
+\label{san}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
 this in not the case however. During the measurement of sample \circled{4} 
@@ -422,15 +430,8 @@ lateral resolution which equals $\SI{50}{\micro\meter}/265 = \SI{195}{\nano\mete
 
 \section{Sample Analysis}
 
-On the surfaces of our samples we found single accumulations of material 
-typically in the order of several angstroms. Interestingly in the vicinity of 
-these Peaks the average height seems to be significantly lower than on the rest 
-of the surface. It seems like the every peak accumulates material from a radius 
-of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials 
-which cause atoms to move and adsorb at a step while it hinders atoms to leave a 
-plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
-\begin{itemize}
-\item Rauigkeit der Oberfläche\\
+On the surfaces of our samples we found single accumulations of material typically in the order of several nanometers. Interestingly in the vicinity of these peaks the average height seems to be significantly lower than on the rest of the surface. It seems like every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
+
 
 As mentioned in \cref{motivation} one of the goals of this experiment was to 
 quantify and analyze the roughness $\rho$ of a variety of surfaces. We concluded 
@@ -443,6 +444,23 @@ AFM. In principle it denotes the deviation of a flat surface as:
 \end{align}
 
 For further reference please see \cref{roughness}.  \\
+To estimate the error of this value we calculate the roughness of a randomly generated
+surface with a deviation in height which is equal to the noise estimated in \ref{san}.
+All the values of surface roughness together with this error are presented in \cref{table:r}
+
+\begin{tabular}{ c | l | l }
+  sample & property & roughness $\rho$\\
+  \hline                        
+  \circled{1} & An untreated GaSb wafer &  $2.55(7) \cdot 10^{-5}$\\
+  \circled{2} & $\SI{200}{\nano\meter}$ GaSb buffer at 485\textdegree & $0.61(7) \cdot 10^{-5}$\\
+  \circled{3} & $\SI{200}{\nano\meter}$ GaSb buffer at 515\textdegree & $0.54(7) \cdot 10^{-5}$\\
+  \circled{4} & $\SI{10}{\nano\meter} $GaSb buffer plus & $0.49(7) \cdot 10^{-5}$\\
+  &$\SI{30}{\nano\meter}$ AlAsSb plus \\
+  &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \hline  
+  \label{table:r}  
+\end{tabular}
+
 In sample \circled{1} there are actual scratches on the surface. Since it is the 
 untreated wafer we suspect this arising from a polishment after the fabrication. 
 This sample shows a much larger roughness than the other treated samples. The 
@@ -451,7 +469,7 @@ features across the surface. While the sample \circled{3} is the same as the
 previous one but grown at a higher temperature, we do not find those larger 
 features on the surface and therefore the surface is even smoother. The smallest 
 roughness was measured on sample \circled{4}. On this sample a layer of 
-aluminium was grown, producing a few wider features only little higher than the 
+AlAsSb was grown, producing a few wider features only little higher than the 
 average. But as the overall surface is smoother, this contribution is not as big 
 as to increase the roughness above the other samples. Here the corrected samples 
 were described. Except for the untreated sample \circled{1} the background 
@@ -460,8 +478,6 @@ there is a flattening involved in this correction the largest contribution is
 attributed to the fact that the scan lines are fitted separately. Irregularities 
 and systematic errors arising from the fact of line switching or directional 
 changes are thereby minimized. 
-
-\end{itemize}
 
 \section{summary}
 During the AFM experiment we investigated the surface if different samples.  
@@ -500,8 +516,7 @@ Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination
 of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
 31 (3), S. 03C108. DOI: 10.1116/1.4792515.
   
-\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
-stepped substrate. In: surface science letters.
+\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
 
 \bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
