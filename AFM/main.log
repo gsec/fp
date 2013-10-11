@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.14)  10 OCT 2013 14:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  11 OCT 2013 10:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -6,17 +6,9 @@ entering extended mode
 **main.tex
 (./main.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, et
-hiopic, farsi, arabic, pinyin, croatian, bulgarian, ukrainian, russian, slovak,
- czech, danish, dutch, usenglishmax, ukenglish, finnish, french, basque, ngerma
-n, german, swissgerman, ngerman-x-2012-05-30, german-x-2012-05-30, monogreek, g
-reek, ibycus, ancientgreek, hungarian, bengali, tamil, hindi, telugu, gujarati,
- sanskrit, malayalam, kannada, assamese, marathi, oriya, panjabi, italian, lati
-n, latvian, lithuanian, mongolian, mongolianlmc, nynorsk, bokmal, indonesian, e
-speranto, coptic, welsh, irish, interlingua, serbian, serbianc, slovenian, friu
-lan, romansh, estonian, romanian, armenian, uppersorbian, turkish, afrikaans, i
-celandic, kurmanji, polish, portuguese, galician, catalan, spanish, swedish, th
-ai, loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, us
+englishmax, ukenglish, ngerman, german, swissgerman, ngerman-x-2012-05-30, germ
+an-x-2012-05-30, loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2012/05/15 v3.11 KOMA-Script document class (article)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
@@ -323,7 +315,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/var/lib/texmf/tex/generic/babel/babel.sty
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2008/07/08 v3.8m The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/ngermanb.ldf
@@ -1398,7 +1390,7 @@ Package cleveref Info: loaded `english' language definitions on input line 6907
 .
 Package cleveref Info: no abbreviation of names on input line 6908.
 )
-(/usr/share/texmf/tex/latex/bijan/bijan_commands.sty
+(/usr/share/texlive/texmf-dist/tex/latex/bijan_commands.sty
 Package: bijan_commands 
 )
 
@@ -1552,115 +1544,128 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--123
 <Bilder/wenigI.jpg, id=77, 215.30438pt x 225.84375pt>
 File: Bilder/wenigI.jpg Graphic file (type jpg)
  <use Bilder/wenigI.jpg>
-Package pdftex.def Info: Bilder/wenigI.jpg used on input line 136.
+Package pdftex.def Info: Bilder/wenigI.jpg used on input line 162.
 (pdftex.def)             Requested size: 143.37843pt x 150.40129pt.
 
 <Bilder/vielI.jpg, id=79, 215.30438pt x 225.84375pt>
 File: Bilder/vielI.jpg Graphic file (type jpg)
  <use Bilder/vielI.jpg>
-Package pdftex.def Info: Bilder/vielI.jpg used on input line 146.
+Package pdftex.def Info: Bilder/vielI.jpg used on input line 175.
 (pdftex.def)             Requested size: 143.37843pt x 150.40129pt.
 
 [3 <./Bilder/control_loop.pdf> <./Bilder/wenigI.jpg>]
 <Bilder/wenigP.jpg, id=104, 213.04594pt x 221.32687pt>
 File: Bilder/wenigP.jpg Graphic file (type jpg)
  <use Bilder/wenigP.jpg>
-Package pdftex.def Info: Bilder/wenigP.jpg used on input line 156.
+Package pdftex.def Info: Bilder/wenigP.jpg used on input line 192.
 (pdftex.def)             Requested size: 143.37843pt x 148.96027pt.
 
 <Bilder/vielP.jpg, id=105, 213.79875pt x 207.02344pt>
 File: Bilder/vielP.jpg Graphic file (type jpg)
  <use Bilder/vielP.jpg>
-Package pdftex.def Info: Bilder/vielP.jpg used on input line 164.
+Package pdftex.def Info: Bilder/vielP.jpg used on input line 201.
 (pdftex.def)             Requested size: 143.37843pt x 138.83449pt.
 
 <Bilder/slow.jpg, id=108, 211.54031pt x 225.84375pt>
 File: Bilder/slow.jpg Graphic file (type jpg)
  <use Bilder/slow.jpg>
-Package pdftex.def Info: Bilder/slow.jpg used on input line 177.
+Package pdftex.def Info: Bilder/slow.jpg used on input line 222.
 (pdftex.def)             Requested size: 143.37843pt x 153.07892pt.
 
 <Bilder/fast.jpg, id=109, 211.54031pt x 225.09094pt>
 File: Bilder/fast.jpg Graphic file (type jpg)
  <use Bilder/fast.jpg>
-Package pdftex.def Info: Bilder/fast.jpg used on input line 185.
+Package pdftex.def Info: Bilder/fast.jpg used on input line 232.
 (pdftex.def)             Requested size: 143.37843pt x 152.56865pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--196
+[4 <./Bilder/vielI.jpg> <./Bilder/wenigP.jpg> <./Bilder/vielP.jpg> <./Bilder/sl
+ow.jpg>] <Bilder/sn_signal2.pdf, id=120, 394.88327pt x 255.1161pt>
+File: Bilder/sn_signal2.pdf Graphic file (type pdf)
+
+<use Bilder/sn_signal2.pdf>
+Package pdftex.def Info: Bilder/sn_signal2.pdf used on input line 262.
+(pdftex.def)             Requested size: 238.96164pt x 154.38269pt.
+
+
+LaTeX Warning: Reference `artifact1' on page 1 undefined on input line 276.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
 
  []
 
 
-Underfull \vbox (badness 2781) has occurred while \output is active []
-
- [4 <./Bilder/vielI.jpg> <./Bilder/wenigP.jpg> <./Bilder/vielP.jpg> <./Bilder/s
-low.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--205
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
 
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 211--213
+Underfull \hbox (badness 8075) in paragraph at lines 319--321
 \OT1/cmr/m/n/10 Based Vertical-Cavity Surface-Emitting Lasers.
  []
 
-
-Underfull \hbox (badness 2142) in paragraph at lines 214--217
+[5 <./Bilder/fast.jpg> <./Bilder/sn_signal2.pdf>]
+Underfull \hbox (badness 2142) in paragraph at lines 322--325
 []\OT1/cmr/m/n/10 Weih, Robert; Kamp, Mar-tin; H^^?ofling, Sven
  []
 
-[5
+[6
 
- <./Bilder/fast.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7E1D674DC99726DBC530CD72A7826932;316.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 237.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
  ) 
 Here is how much of TeX's memory you used:
- 27043 strings out of 493485
- 523868 string characters out of 3143526
- 616489 words of memory out of 3000000
- 29868 multiletter control sequences out of 15000+200000
- 15655 words of font info for 61 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 68i,11n,71p,575b,904s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf
-/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (5 pages, 321722 bytes).
+ 27059 strings out of 494966
+ 524143 string characters out of 3178675
+ 614608 words of memory out of 3000000
+ 29777 multiletter control sequences out of 15000+200000
+ 16640 words of font info for 64 fonts, out of 3000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 68i,11n,71p,516b,937s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/gsec/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/gs
+ec/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (6 pages, 418099 bytes).
 PDF statistics:
- 175 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 211 PDF objects out of 1000 (max. 8388607)
+ 165 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
