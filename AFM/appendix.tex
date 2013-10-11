@@ -1,58 +1,100 @@
+\section{Sample table}
 
+\label{samples}
 \begin{figure}
+    \vspace{-2em}
     \centering
-    \begin{subfigure}{0.45\columnwidth}
-         \includegraphics[width=\textwidth]{Bilder/s1_gasb_485c_orig.jpg}
-         \caption{Sample \circled{1}: GaSb grown at 485\textdegree C, original 
-         scan.}
+     \begin{subfigure}{0.4\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/s1_raw_orig.jpg}
+         \caption{Sample \circled{1}: GaSb untreated wafer, original scan.  
+         $\rho = 3.62 \cdot 10^{-5}$}
         \label{s1_orig}
     \end{subfigure}
     ~
-    \begin{subfigure}{0.45\columnwidth}
-         \includegraphics[width=\textwidth]{Bilder/s1_gasb_485c_f.jpg}
-         \caption{Sample \circled{1}: GaSb grown at 485\textdegree C, fit.}
+    \begin{subfigure}{0.4\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/s1_raw_f.jpg}
+         \caption{Sample \circled{1}: GaSb untreated wafer, fit.\\  $\rho = 2.55 
+         \cdot 10^{-5}$}
         \label{s1_flat}
     \end{subfigure}
-     
-    \begin{subfigure}{0.45\columnwidth}
-         \includegraphics[width=\textwidth]{Bilder/s2_gasb_515c_orig.jpg}
-         \caption{Sample \circled{2}: GaSb grown at 515\textdegree C, original 
-         scan.}
+
+    \begin{subfigure}{0.4\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/s2_gasb_485c_orig.jpg}
+         \caption{Sample \circled{2}: GaSb grown at 485\textdegree C, original 
+         scan.  $\rho = 1.51 \cdot 10^{-5}$}
         \label{s2_orig}
     \end{subfigure}
     ~
-    \begin{subfigure}{0.45\columnwidth}
-         \includegraphics[width=\textwidth]{Bilder/s2_gasb_515c_f.jpg}
-         \caption{Sample \circled{2}: GaSb grown at 515\textdegree C, fit.}
+    \begin{subfigure}{0.4\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/s2_gasb_485c_f.jpg}
+         \caption{Sample \circled{2}: GaSb grown at 485\textdegree C, fit. \\
+         $\rho = 6.08 \cdot 10^{-6}$}
         \label{s2_flat}
     \end{subfigure}
-    
-    \begin{subfigure}{0.45\columnwidth}
-         \includegraphics[width=\textwidth]{Bilder/s3_raw_orig.jpg}
-         \caption{Sample \circled{3}: GaSb untreated wafer, original scan.}
+     
+    \begin{subfigure}{0.4\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/s3_gasb_515c_orig.jpg}
+         \caption{Sample \circled{3}: GaSb grown at 515\textdegree C, original 
+         scan.
+         $\rho = 1.45 \cdot 10^{-5}$}
         \label{s3_orig}
     \end{subfigure}
     ~
-    \begin{subfigure}{0.45\columnwidth}
-         \includegraphics[width=\textwidth]{Bilder/s3_raw_f.jpg}
-         \caption{Sample \circled{3}: GaSb untreated wafer, fit.}
+    \begin{subfigure}{0.4\columnwidth}
+         \includegraphics[width=\textwidth]{Bilder/s3_gasb_515c_f.jpg}
+         \caption{Sample \circled{3}: GaSb grown at 515\textdegree C, fit. \\
+         $\rho = 5.44 \cdot 10^{-6}$}
         \label{s3_flat}
     \end{subfigure}
-     
-    \begin{subfigure}{0.45\columnwidth}
+    
+    \begin{subfigure}{0.4\columnwidth}
          \includegraphics[width=\textwidth]{Bilder/s4_al_orig.jpg}
-         \caption{Sample \circled{4}: Al grown on wafer, original scan.}
+         \caption{Sample \circled{4}: Al grown on wafer, original scan.  $\rho = 
+         1.11 \cdot 10^{-5}$}
         \label{s4_orig}
     \end{subfigure}
     ~
-    \begin{subfigure}{0.45\columnwidth}
+    \begin{subfigure}{0.4\columnwidth}
          \includegraphics[width=\textwidth]{Bilder/s4_al_f.jpg}
-         \caption{Sample \circled{3}: GaSb untreated wafer, fit.}
+         \caption{Sample \circled{3}: GaSb untreated wafer, fit. \\  
+         $\rho = 4.85 
+         \cdot 10^{-6}$}
         \label{s3_flat}
     \end{subfigure}
-\caption{Height profiles of single lines and the effect of different 
-    feedback parameters and scanning velocities. Scanning direction is from left 
-    to right.}
+\caption{On the left the original data is plotted, on the right the data is 
+background corrected by a parabolic fit. $\rho$ is the normalized roughness of 
+the surface as of \cref{roughness}}
 \end{figure}
 
 
+\section{Roughness calculation}
+\label{roughness}
+Here ``dat'' is a $65536 \times 3$ data array consisting of 256 rows of 256 
+points of a (x,y,z) tupel as coordinates.
+
+\scriptsize
+\lstset{language=Mathematica}
+
+\begin{lstlisting}
+dmatrix[dat_, rowlength_: 2^8] := Partition[data[dat], rowlength]
+
+surface[dat_, rowlength_: 2^8] := 
+    (Ad = 0; Au = 0;
+    For[i = 1, i < rowlength,
+   	    For[k = 1, k < rowlength,
+        Ad += 
+            Norm[(dat[[k]][[i + 1]] - dat[[k]][[i]])\[Cross]
+                (dat[[k + 1]][[i]] - dat[[k]][[i]])]/2;
+        Au += 
+            Norm[(dat[[k]][[i + 1]] - dat[[k + 1]][[i + 1]])\[Cross]
+                (dat[[k + 1]][[i]] - dat[[k + 1]][[i + 1]])]/2; 
+        k += 1];
+   i += 1]; 
+   Return[Ad + Au])
+
+rough[dat_] := 
+ ScientificForm[
+        surface[dmatrix[dat]]/(Last[data[dat]][[1]]*Last[data[dat]][[2]]) -  1
+               ]
+
+\end{lstlisting}

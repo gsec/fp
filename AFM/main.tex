@@ -53,9 +53,7 @@
 ]
 % =============================================================================
 %\addtocounter{section}{-1}
-\section{Expose}
 \input{expose}
-\label{Expose}
 \newpage
 
 \section{Basics}
@@ -257,19 +255,19 @@ irrelevant for our purpose. In this case even underground fits of higher order
 might be useful considering deviations created by nonlinearities of the piezo 
 tube or other elements. On this example we want to show how this is done in 
 detail, when it is legitimate and where problems may occur. In \ref{rows} the 
-raw data image from sample \textcircled{7} are plotted.
+raw data image from sample \circled{7} are plotted.
 
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\columnwidth}
 		\includegraphics[width=\columnwidth]{Bilder/7}
-        \caption{The raw data image from sample \textcircled{4}. }
+        \caption{The raw data image from sample \circled{4}. }
         \label{7}
     \end{subfigure}
     ~
     \begin{subfigure}{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/7f}
-        \caption{Data of sample \textcircled{4} flattened in row and column. }
+        \caption{Data of sample \circled{4} flattened in row and column. }
         \label{7f}
         \label{vielI}
     \end{subfigure}
@@ -294,7 +292,7 @@ occur.
 
 
 
-In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the 
+In the \ref{1} the surface of \circled{1} is showed. Noticeable in the 
 middle of the picture we find a peak on a otherwise flat surface. By applying 
 the flatten function we receive the picture shown in \ref{1f}. Horizontally and 
 vertically from the peak a darker cross has emerged. This can be explained in 
@@ -306,13 +304,13 @@ an unwanted artifact near the peak.
     \centering
     \begin{subfigure}[t]{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/1}
-        \caption{The raw data image from sample \textcircled{1}. }
+        \caption{The raw data image from sample \circled{1}. }
         \label{7}
     \end{subfigure}
     ~
     \begin{subfigure}[t]{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/1f}
-        \caption{Data of sample \textcircled{1} flattened in row and column. A 
+        \caption{Data of sample \circled{1} flattened in row and column. A 
         artifact horizontally and vertically from the peak has emerged.}
         \label{7f}
     \end{subfigure}
@@ -333,7 +331,7 @@ preparation but one has to be aware of the artifacts which may occur.
 \subsection{Signal and noise}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
-this in not the case however. During the measurement of sample \textcircled{4} 
+this in not the case however. During the measurement of sample \circled{4} 
 we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it 
 becomes more and more important to quantify the amount of noise to distinguish 
 between real features and random noise.
@@ -370,7 +368,8 @@ an other periodicity as well. ??Why\\
 \begin{figure}
     \begin{center}
         \includegraphics[width=\columnwidth]{Bilder/artifact1}
-        \caption{Surface of sample \textcircled{4}. One line recorded a periodic oscillation. This artifart is not visible in the backward scan.}
+        \caption{Surface of sample \textcircled{4}. One line recorded a periodic 
+        oscillation. This artifart is not visible in the backward scan.}
         \label{artifact1}
     \end{center}
 \end{figure}
@@ -391,9 +390,48 @@ patterns is shown in \ref{artifact2}. ??Why
 
 \section{Sample Analysis}
 
-On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
+On the surfaces of our samples we found single accumulations of material 
+typically in the order of several angstroms. Interestingly in the vicinity of 
+these Peaks the average height seems to be significantly lower than on the rest 
+of the surface. It seems like the every peak accumulates material from a radius 
+of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials 
+which cause atoms to move and adsorb at a step while it hinders atoms to leave a 
+plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
 \begin{itemize}
 \item Rauigkeit der Oberfläche\\
+
+As mentioned in \cref{motivation} one of the goals of this experiment was to 
+quantify and analyze the roughness $\rho$ of a variety of surfaces. We concluded 
+that an appropriate measure would be the normalized surface area of the 
+interpolated polygons between our background corrected points as measured by the 
+AFM. In principle it denotes the deviation of a flat surface as:
+
+\begin{align}
+    \rho = \frac{S_{\text{polygons}}}{S_{\text{projected}}} - 1
+\end{align}
+
+For further reference please see \cref{roughness}.  \\
+In sample \circled{1} there are actual scratches on the surface. Since it is the 
+untreated wafer we suspect this arising from a polishment after the fabrication. 
+This sample shows a much larger roughness than the other treated samples. The 
+second sample \circled{2} is smooth on most areas, but we find large isolated 
+features across the surface. While the sample \circled{3} is the same as the 
+previous one but grown at a higher temperature, we do not find those larger 
+features on the surface and therefore the surface is even smoother. The smallest 
+roughness was measured on sample \circled{4}. On this sample a layer of 
+aluminium was grown, producing a few wider features only little higher than the 
+average. But as the overall surface is smoother, this contribution is not as big 
+as to increase the roughness above the other samples. Here the corrected samples 
+were described. Except for the untreated sample \circled{1} the background 
+correction yields a decrease of the roughness of about a factor of two. Although 
+there is a flattening involved in this correction the largest contribution is 
+attributed to the fact that the scan lines are fitted separately. Irregularities 
+and systematic errors arising from the fact of line switching or directional 
+changes are thereby minimized. 
+
+
+
+
 \item Aussagen über Wachstumsmethoden\\
 \end{itemize}
 
@@ -416,7 +454,8 @@ Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination
 of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
 31 (3), S. 03C108. DOI: 10.1116/1.4792515.
   
-\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
+\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
+stepped substrate. In: surface science letters.
 
 \end{thebibliography}
 %
@@ -425,7 +464,6 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 \pagestyle{empty}
 %% =============================================================================
 \appendix
-\label{appendix}
 \input{appendix}
 %% =============================================================================
 
