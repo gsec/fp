@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-GNARNARNAR
-=======
-ADSLFLDSLF
-SDFSDFSDFq
->>>>>>> temp2
+
          %% %% %% %%         Preamble & Options          %% %% %% %%
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~%
 \documentclass[paper=a4,fontsize=10pt,DIV=18,twocolumn,parskip=half]{scrartcl}
@@ -42,7 +37,10 @@ SDFSDFSDFq
 % =============================================================================
   \vspace{-2em}
   \noindent {\small 
-  % abstact 
+  During the AFM-laboratory we investigated the surface roughness of four GaSb samples. While an 
+untreated GaSb-wafer shows ditches caused by polishing the overgrow of a $\SI{200}{\nano\meter}$ GaSb
+buffer leads to significant lower surface roughness. Two different growth temperatures were tested.
+The buffer grown at $515$\textdegree~exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ were not removed from the surface as it indicated previous publications \cite{murray}.
     }
   \vspace{1em}
 
@@ -58,9 +56,7 @@ SDFSDFSDFq
 ]
 % =============================================================================
 %\addtocounter{section}{-1}
-\section{Expose}
 \input{expose}
-\label{Expose}
 \newpage
 
 \section{Basics}
@@ -126,14 +122,32 @@ leading to a more accurate signal.
 Relevanz für die Aufnahme der GaSb Proben\\
 %
 
-\section{Data Aquisition}
-\label{dataaquisition}
+\section{The AFM Experiment}
+\label{Experiment}
+\subsection{Samples}
+In the expose we described different samples which would be  interesting for us. Nevertheless 
+due to failure during the growth of the samples we could only execute the measurements of four samples.
+The samples with a short discretion of their properties are listed in \cref{samples}
+
+\begin{tabular}{ c | l }
+  sample & property\\
+  \hline                        
+  \circled{1} & An untreated GaSb wafer   \\
+  \circled{2} & $\SI{200}{\nano\meter}$ GaSb buffer at 485\textdegree \\
+  \circled{3} & $\SI{200}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \circled{4} & $\SI{10}{\nano\meter} $GaSb buffer plus\\
+  &$\SI{30}{\nano\meter}$ AlAsSb plus \\
+  &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \hline  
+  \label{samples}
+\end{tabular}
+
 \subsection{Parameter of recording}
 In order to acquire the topology of the samples surface the computer records the 
 scanner's $z$-position in combination with the in plane $x$- and $y$-position. 
 These data can be exported from the control software in a special (.ezd) data 
 format. We convert these data back into a list of $x$, $y$ and $z$-coordinates 
-using the \textit{WSxM} software, which is freely available on ??. 
+using the \textit{WSxM} software, which is freely available on \cite{nanotec}. 
 
 While scanning in static force mode is necessary to maintain the force by moving 
 the scanner's $z$-position. This is done by a feedback loop, which compares the 
@@ -261,20 +275,25 @@ a bit, we remove a simple error, i.e. a tilt in the plane known to be something
 irrelevant for our purpose. In this case even underground fits of higher order 
 might be useful considering deviations created by nonlinearities of the piezo 
 tube or other elements. On this example we want to show how this is done in 
+<<<<<<< HEAD
 detail, when it is legitimate and where problems may occur. In \ref{rows} the 
+raw data image from sample \circled{7} are plotted.
+=======
+detail, when it is legitimate and where problems may occur. In \ref{7} the 
 raw data image from sample \textcircled{7} are plotted.
+>>>>>>> f82687032639c5d5b4f536532d9b9e686c4fd644
 
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\columnwidth}
 		\includegraphics[width=\columnwidth]{Bilder/7}
-        \caption{The raw data image from sample \textcircled{4}. }
+        \caption{The raw data image from sample \circled{4}. }
         \label{7}
     \end{subfigure}
     ~
     \begin{subfigure}{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/7f}
-        \caption{Data of sample \textcircled{4} flattened in row and column. }
+        \caption{Data of sample \circled{4} flattened in row and column. }
         \label{7f}
         \label{vielI}
     \end{subfigure}
@@ -297,11 +316,15 @@ As mentioned before every correction falsify the data to a certain amount and
 the method should not be applied without being aware of the problems which may 
 occur.
 
-In the \ref{1} the surface of \textcircled{2} is showed. Noticeable in the middle of the picture we find a peak on a otherwise flat surface. By applying the flatten function we receive the picture shown in \ref{1f}. Horizontally and vertically from the peak a darker cross has emerged. This can be explained in the following way. By fitting over the row/column including the peak the mean height is higher. By subtracting the fitted function from raw data, every row/column including the peak is lowered more than the other ones. This leads to an unwanted artifact near the peak.
 
-In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the 
+
+<<<<<<< HEAD
+In the \ref{1} the surface of \circled{1} is showed. Noticeable in the 
+=======
+In the \ref{7} the surface of \textcircled{1} is showed. Noticeable in the 
+>>>>>>> f82687032639c5d5b4f536532d9b9e686c4fd644
 middle of the picture we find a peak on a otherwise flat surface. By applying 
-the flatten function we receive the picture shown in \ref{1f}. Horizontally and 
+the flatten function we receive the picture shown in \ref{7f}. Horizontally and 
 vertically from the peak a darker cross has emerged. This can be explained in 
 the following way. By fitting over the row/column including the peak the mean 
 height is higher. By subtracting the fitted function from raw data, every 
@@ -311,13 +334,13 @@ an unwanted artifact near the peak.
     \centering
     \begin{subfigure}[t]{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/1}
-        \caption{The raw data image from sample \textcircled{1}. }
+        \caption{The raw data image from sample \circled{1}. }
         \label{7}
     \end{subfigure}
     ~
     \begin{subfigure}[t]{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/1f}
-        \caption{Data of sample \textcircled{1} flattened in row and column. A 
+        \caption{Data of sample \circled{1} flattened in row and column. A 
         artifact horizontally and vertically from the peak has emerged.}
         \label{7f}
     \end{subfigure}
@@ -338,7 +361,7 @@ preparation but one has to be aware of the artifacts which may occur.
 \subsection{Signal and noise}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
-this in not the case however. During the measurement of sample \textcircled{4} 
+this in not the case however. During the measurement of sample \circled{4} 
 we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it 
 becomes more and more important to quantify the amount of noise to distinguish 
 between real features and random noise.
@@ -371,11 +394,15 @@ as they only appear in one, either forward or backward direction. One artifact
 we want to discuss is shown in \cref{artifact1}. In one single line we can see a 
 periodic pattern which is shown in \ref{artifact1}. The the periodicity of this 
 artifact is approximately $\SI{2.5}{\micro\meter}$ but we find oscillations with 
-an other periodicity as well. ??Why\\
+an other periodicity as well. Artifacts on single lines can be caused by small 
+particles which are pushed over the sample by the tip. This however doesn't 
+explain the regular oscillation.
+
 \begin{figure}
     \begin{center}
         \includegraphics[width=\columnwidth]{Bilder/artifact1}
-        \caption{Surface of sample \textcircled{4}. One line recorded a periodic oscillation. This artifart is not visible in the backward scan.}
+        \caption{Surface of sample \textcircled{4}. One line recorded a periodic 
+        oscillation. This artifart is not visible in the backward scan.}
         \label{artifact1}
     \end{center}
 \end{figure}
@@ -383,7 +410,16 @@ an other periodicity as well. ??Why\\
 Furthermore we found pattern which looks like concentric sets of ovals. The 
 distance between two ovals decreases as their size increases. We find these 
 elliptic pattern in every of our GaSb samples. One surface with clearly visible 
-patterns is shown in \ref{artifact2}. ??Why
+patterns is shown in \ref{artifact2}. As these pattern are visible in the forward 
+and backward scanning direction they could be caused by features of the surface.
+On the other hand the ovals don't correlate with the crystal structure or the
+peaks on the surface which commends to an artifact. If it is an artifact it could
+be on the one hand caused by an interference between a plain and a spherical wave. 
+But to explain the pattern shown in \ref{artifact2} the wavelength should be in
+the order of $\SI{200}{\nano\meter}$ which is to short for laser light.
+On the other hand these pattern could be a moiré-pattern caused by the discrete
+lateral resolution which equals $\SI{50}{\micro\meter}/265 = \SI{195}{\nano\meter}$.
+
 
 \begin{figure}
 	\begin{center}
@@ -396,11 +432,64 @@ patterns is shown in \ref{artifact2}. ??Why
 
 \section{Sample Analysis}
 
-On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
+<<<<<<< HEAD
+On the surfaces of our samples we found single accumulations of material 
+typically in the order of several angstroms. Interestingly in the vicinity of 
+these Peaks the average height seems to be significantly lower than on the rest 
+of the surface. It seems like the every peak accumulates material from a radius 
+of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials 
+which cause atoms to move and adsorb at a step while it hinders atoms to leave a 
+plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
+=======
+On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
+>>>>>>> f82687032639c5d5b4f536532d9b9e686c4fd644
 \begin{itemize}
 \item Rauigkeit der Oberfläche\\
+
+As mentioned in \cref{motivation} one of the goals of this experiment was to 
+quantify and analyze the roughness $\rho$ of a variety of surfaces. We concluded 
+that an appropriate measure would be the normalized surface area of the 
+interpolated polygons between our background corrected points as measured by the 
+AFM. In principle it denotes the deviation of a flat surface as:
+
+\begin{align}
+    \rho = \frac{S_{\text{polygons}}}{S_{\text{projected}}} - 1
+\end{align}
+
+For further reference please see \cref{roughness}.  \\
+In sample \circled{1} there are actual scratches on the surface. Since it is the 
+untreated wafer we suspect this arising from a polishment after the fabrication. 
+This sample shows a much larger roughness than the other treated samples. The 
+second sample \circled{2} is smooth on most areas, but we find large isolated 
+features across the surface. While the sample \circled{3} is the same as the 
+previous one but grown at a higher temperature, we do not find those larger 
+features on the surface and therefore the surface is even smoother. The smallest 
+roughness was measured on sample \circled{4}. On this sample a layer of 
+aluminium was grown, producing a few wider features only little higher than the 
+average. But as the overall surface is smoother, this contribution is not as big 
+as to increase the roughness above the other samples. Here the corrected samples 
+were described. Except for the untreated sample \circled{1} the background 
+correction yields a decrease of the roughness of about a factor of two. Although 
+there is a flattening involved in this correction the largest contribution is 
+attributed to the fact that the scan lines are fitted separately. Irregularities 
+and systematic errors arising from the fact of line switching or directional 
+changes are thereby minimized. 
+
+
+
+
 \item Aussagen über Wachstumsmethoden\\
 \end{itemize}
+
+\section{summary}
+During the AFM-laboratory we investigated the surface if different samples. Starting with a calibration
+grid we investigated the influence of different scanning parameter like P- and I-feedback-loop-values 
+and different scanning speeds. Further more we investigated the roughness of four GaSb samples. While an untreated GaSb-wafer shows ditches caused by polishing the overgrow of $\SI{200}{\nano\meter}$ GaSb
+buffer leads to significant lower surface roughness. Two different growth temperatures were tested.
+The buffer grown at $515$\textdegree exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand we found single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ which were not removed from the surface as it indicated previous publications \cite{murray}.\\
+Different kinds of artifacts were discussed and we showed the advantages and risks of data preparation.
+
+
 
 % =============================================================================
 \begin{thebibliography}{}   
@@ -421,83 +510,18 @@ Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination
 of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
 31 (3), S. 03C108. DOI: 10.1116/1.4792515.
   
-\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
+\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
+stepped substrate. In: surface science letters.
 
+\bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
 %
 %
 \onecolumn
 \pagestyle{empty}
 %% =============================================================================
-%\section{Anhang}
-%\label{Anhang}
+\appendix
+\input{appendix}
 %% =============================================================================
 
 \end{document}
-
-
-
-%% =============================================================================
-%%%%%%%%%%%%%%%%%%% OBSOLETE (can be removed) %%%%%%%%%%%%%%%%%%%%%%%%%%
-%% =============================================================================
-
-%\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
-%\usepackage{bijan_koma}
-%\usepackage[ngerman]{babel} 
-
-%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
-%\sisetup{       
-  %separate-uncertainty,
-  %per-mode=fraction
-%}
-
-%\colorlet{darkblue}{blue!70!black}
-%\hypersetup{
-  %colorlinks,
-  %citecolor=darkblue,
-  %filecolor=darkblue,
-  %linkcolor=darkblue,
-  %urlcolor=black
-%}
-
-%\crefformat{equation}{Glg.~(#2#1#3)}
-%\crefformat{section}{Abschnitt~#2#1#3}
-%\crefformat{figure}{Abb.~#2#1#3}
-%\crefformat{table}{Tab.~#2#1#3}
-%\crefformat{chapter}{Kapitel~#2#1#3}
-
-
-%\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
-  %\renewcommand{\figurename}{Abb.}
-  %\renewcommand{\tablename}{Tab.}
-%}
-
-
-%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
-%\pagestyle{scrheadings}                           % Apply userdefined settings
-%\setheadsepline{.5 pt}                            % Width of seperation line
-%\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
-%\cfoot{\thepage}                                  % Page numbering 
-
-%%%%%%%%%%%%%%%%%%%%%% commands      %%%%%%%%%%%%%%%%%%%%%%%%%%
-%\input{formal/commands}
-%\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
-%\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
-%\newcommand{\secref}[1]{section~\ref{sec:#1}}
-
-%\graphicspath{{Bilder/}}
-%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\onehalfspacing                                 % 1.5 line spacing
-
-% Spacing in math environments \,\;.. 
-%\thinmuskip=3mu % default
-%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
-%\thickmuskip=5mu plus 5mu % default
-
-
