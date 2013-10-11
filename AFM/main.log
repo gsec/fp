@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  11 OCT 2013 19:33
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.8.24)  11 OCT 2013 20:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1403,10 +1403,52 @@ Package hyperref Info: Option `bookmarksnumbered' set `false' on input line 68.
 
 ) (./main.aux
 
+LaTeX Warning: Label `vielI' multiply defined.
+
+
+LaTeX Warning: Label `vielI@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@vielI' multiply defined.
+
+
+LaTeX Warning: Label `sub@vielI@cref' multiply defined.
+
+
+LaTeX Warning: Label `7' multiply defined.
+
+
+LaTeX Warning: Label `7@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@7' multiply defined.
+
+
+LaTeX Warning: Label `sub@7@cref' multiply defined.
+
+
 LaTeX Warning: Label `7f' multiply defined.
 
 
 LaTeX Warning: Label `7f@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@7f' multiply defined.
+
+
+LaTeX Warning: Label `sub@7f@cref' multiply defined.
+
+
+LaTeX Warning: Label `s3_flat' multiply defined.
+
+
+LaTeX Warning: Label `s3_flat@cref' multiply defined.
+
+
+LaTeX Warning: Label `sub@s3_flat' multiply defined.
+
+
+LaTeX Warning: Label `sub@s3_flat@cref' multiply defined.
 
 )
 \openout1 = `main.aux'.
@@ -1570,107 +1612,91 @@ File: Bilder/fast.jpg Graphic file (type jpg)
 Package pdftex.def Info: Bilder/fast.jpg used on input line 202.
 (pdftex.def)             Requested size: 107.532pt x 114.42047pt.
 
-[3 <./Bilder/control_loop.pdf>] [4 <./Bilder/wenigI.jpg> <./Bilder/vielI.jpg> <
-./Bilder/wenigP.jpg> <./Bilder/vielP.jpg> <./Bilder/slow.jpg> <./Bilder/fast.jp
-g>] <Bilder/7.jpg, id=127, 372.64218pt x 372.64218pt>
+[3 <./Bilder/control_loop.pdf>]
+
+LaTeX Warning: Reference `rows' on page 4 undefined on input line 259.
+
+[4 <./Bilder/wenigI.jpg> <./Bilder/vielI.jpg> <./Bilder/wenigP.jpg> <./Bilder/v
+ielP.jpg> <./Bilder/slow.jpg> <./Bilder/fast.jpg>]
+<Bilder/7.jpg, id=127, 372.64218pt x 372.64218pt>
 File: Bilder/7.jpg Graphic file (type jpg)
  <use Bilder/7.jpg>
-Package pdftex.def Info: Bilder/7.jpg used on input line 264.
-(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
+Package pdftex.def Info: Bilder/7.jpg used on input line 265.
+(pdftex.def)             Requested size: 107.532pt x 107.52896pt.
 
 <Bilder/7f.jpg, id=128, 372.64218pt x 372.64218pt>
 File: Bilder/7f.jpg Graphic file (type jpg)
  <use Bilder/7f.jpg>
-Package pdftex.def Info: Bilder/7f.jpg used on input line 285.
-(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
+Package pdftex.def Info: Bilder/7f.jpg used on input line 271.
+(pdftex.def)             Requested size: 107.532pt x 107.52896pt.
 
 
-LaTeX Warning: Reference `1f' on page 5 undefined on input line 293.
+LaTeX Warning: Reference `1' on page 5 undefined on input line 297.
 
-<Bilder/1.jpg, id=130, 372.64218pt x 372.64218pt>
+
+LaTeX Warning: Reference `1f' on page 5 undefined on input line 299.
+
+<Bilder/1.jpg, id=129, 372.64218pt x 372.64218pt>
 File: Bilder/1.jpg Graphic file (type jpg)
  <use Bilder/1.jpg>
-Package pdftex.def Info: Bilder/1.jpg used on input line 302.
-(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
+Package pdftex.def Info: Bilder/1.jpg used on input line 308.
+(pdftex.def)             Requested size: 107.532pt x 107.52896pt.
 
-<Bilder/1f.jpg, id=131, 372.64218pt x 372.64218pt>
+<Bilder/1f.jpg, id=130, 372.64218pt x 372.64218pt>
 File: Bilder/1f.jpg Graphic file (type jpg)
  <use Bilder/1f.jpg>
-Package pdftex.def Info: Bilder/1f.jpg used on input line 310.
-(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
- [5 <./Bilder/7.jpg> <./Bilder/7f.jpg> <./Bilder/1.jpg> <./Bilder/1f.jpg>]
-<Bilder/sn_signal2.pdf, id=143, 394.88327pt x 255.1161pt>
+Package pdftex.def Info: Bilder/1f.jpg used on input line 314.
+(pdftex.def)             Requested size: 107.532pt x 107.52896pt.
+
+Underfull \hbox (badness 1122) in paragraph at lines 316--316
+\OT1/cmr/m/n/9 ver-ti-cally from the peak
+ []
+
+<Bilder/sn_signal2.pdf, id=132, 394.88327pt x 255.1161pt>
 File: Bilder/sn_signal2.pdf Graphic file (type pdf)
 
 <use Bilder/sn_signal2.pdf>
-Package pdftex.def Info: Bilder/sn_signal2.pdf used on input line 344.
+Package pdftex.def Info: Bilder/sn_signal2.pdf used on input line 352.
 (pdftex.def)             Requested size: 238.96164pt x 154.38269pt.
 
-<Bilder/artifact1.jpg, id=146, 750.55406pt x 376.40625pt>
+<Bilder/artifact1.jpg, id=135, 750.55406pt x 376.40625pt>
 File: Bilder/artifact1.jpg Graphic file (type jpg)
 
 <use Bilder/artifact1.jpg>
-Package pdftex.def Info: Bilder/artifact1.jpg used on input line 364.
+Package pdftex.def Info: Bilder/artifact1.jpg used on input line 372.
 (pdftex.def)             Requested size: 238.96164pt x 119.83789pt.
-
-<Bilder/artifact2.jpg, id=148, 372.64218pt x 372.64218pt>
-File: Bilder/artifact2.jpg Graphic file (type jpg)
-
-<use Bilder/artifact2.jpg>
-Package pdftex.def Info: Bilder/artifact2.jpg used on input line 379.
-(pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
-
-<Bilder/artifact3.jpg, id=149, 372.64218pt x 372.64218pt>
+ [5 <./Bilder/7.jpg> <./Bilder/7f.jpg> <./Bilder/1.jpg> <./Bilder/1f.jpg>]
+<Bilder/artifact3.jpg, id=145, 372.64218pt x 372.64218pt>
 File: Bilder/artifact3.jpg Graphic file (type jpg)
 
 <use Bilder/artifact3.jpg>
-Package pdftex.def Info: Bilder/artifact3.jpg used on input line 387.
+Package pdftex.def Info: Bilder/artifact3.jpg used on input line 385.
 (pdftex.def)             Requested size: 167.27242pt x 167.27234pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 394--395
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--404
-
- []
-
-[6 <./Bilder/sn_signal2.pdf> <./Bilder/artifact1.jpg> <./Bilder/artifact2.jpg>]
-
-Underfull \hbox (badness 10000) in paragraph at lines 405--406
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
-
- []
-
-
-Underfull \hbox (badness 8075) in paragraph at lines 415--417
+Underfull \hbox (badness 8075) in paragraph at lines 404--406
 \OT1/cmr/m/n/10 Based Vertical-Cavity Surface-Emitting Lasers.
  []
 
 
-Underfull \hbox (badness 2142) in paragraph at lines 418--421
+Underfull \hbox (badness 2142) in paragraph at lines 407--410
 []\OT1/cmr/m/n/10 Weih, Robert; Kamp, Mar-tin; H^^?ofling, Sven
  []
 
+[6 <./Bilder/sn_signal2.pdf> <./Bilder/artifact1.jpg> <./Bilder/artifact3.jpg>]
 [7
 
- <./Bilder/artifact3.jpg>] (./appendix.tex
-<Bilder/s1_gasb_485c_orig.jpg, id=182, 784.9325pt x 506.89375pt>
+] (./appendix.tex
+<Bilder/s1_gasb_485c_orig.jpg, id=177, 784.9325pt x 506.89375pt>
 File: Bilder/s1_gasb_485c_orig.jpg Graphic file (type jpg)
 
 <use Bilder/s1_gasb_485c_orig.jpg>
@@ -1681,7 +1707,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-<Bilder/s1_gasb_485c_f.jpg, id=183, 781.92125pt x 468.75125pt>
+<Bilder/s1_gasb_485c_f.jpg, id=178, 781.92125pt x 468.75125pt>
 File: Bilder/s1_gasb_485c_f.jpg Graphic file (type jpg)
 
 <use Bilder/s1_gasb_485c_f.jpg>
@@ -1692,7 +1718,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<Bilder/s2_gasb_515c_orig.jpg, id=184, 780.9175pt x 501.875pt>
+<Bilder/s2_gasb_515c_orig.jpg, id=179, 780.9175pt x 501.875pt>
 File: Bilder/s2_gasb_515c_orig.jpg Graphic file (type jpg)
 
 <use Bilder/s2_gasb_515c_orig.jpg>
@@ -1703,7 +1729,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
-<Bilder/s2_gasb_515c_f.jpg, id=185, 792.9625pt x 484.81125pt>
+<Bilder/s2_gasb_515c_f.jpg, id=180, 792.9625pt x 484.81125pt>
 File: Bilder/s2_gasb_515c_f.jpg Graphic file (type jpg)
 
 <use Bilder/s2_gasb_515c_f.jpg>
@@ -1714,7 +1740,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
-<Bilder/s3_raw_orig.jpg, id=186, 803.0pt x 630.355pt>
+<Bilder/s3_raw_orig.jpg, id=181, 803.0pt x 630.355pt>
 File: Bilder/s3_raw_orig.jpg Graphic file (type jpg)
 
 <use Bilder/s3_raw_orig.jpg>
@@ -1725,7 +1751,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-<Bilder/s3_raw_f.jpg, id=187, 782.925pt x 499.8675pt>
+<Bilder/s3_raw_f.jpg, id=182, 782.925pt x 499.8675pt>
 File: Bilder/s3_raw_f.jpg Graphic file (type jpg)
 
 <use Bilder/s3_raw_f.jpg>
@@ -1736,7 +1762,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-<Bilder/s4_al_orig.jpg, id=188, 800.9925pt x 529.98pt>
+<Bilder/s4_al_orig.jpg, id=183, 800.9925pt x 529.98pt>
 File: Bilder/s4_al_orig.jpg Graphic file (type jpg)
 
 <use Bilder/s4_al_orig.jpg>
@@ -1747,7 +1773,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-<Bilder/s4_al_f.jpg, id=189, 801.99625pt x 489.83pt>
+<Bilder/s4_al_f.jpg, id=184, 801.99625pt x 489.83pt>
 File: Bilder/s4_al_f.jpg Graphic file (type jpg)
  <use Bilder/s4_al_f.jpg>
 Package pdftex.def Info: Bilder/s4_al_f.jpg used on input line 49.
@@ -1758,18 +1784,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
  []
 
 
-LaTeX Warning: Float too large for page by 80.6309pt on input line 55.
+LaTeX Warning: Float too large for page by 80.6309pt on input line 56.
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 442.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 432.
  [8 <./Bilder/s1_gasb_485c_orig.jpg> <./Bilder/s1_gasb_485c_f.jpg> <./Bilder/s2
 _gasb_515c_orig.jpg> <./Bilder/s2_gasb_515c_f.jpg> <./Bilder/s3_raw_orig.jpg> <
 ./Bilder/s3_raw_f.jpg> <./Bilder/s4_al_orig.jpg> <./Bilder/s4_al_f.jpg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 442.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 432.
 
 (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 442.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 442.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 432.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 432.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 7F6AD0FD5479C0C3B9D90DF8B92B88A5;517.
 
@@ -1779,16 +1805,16 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 442.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 432.
  ) 
 Here is how much of TeX's memory you used:
- 27149 strings out of 494966
- 526089 string characters out of 3178675
- 613426 words of memory out of 3000000
- 29844 multiletter control sequences out of 15000+200000
+ 27140 strings out of 494966
+ 525891 string characters out of 3178675
+ 615426 words of memory out of 3000000
+ 29839 multiletter control sequences out of 15000+200000
  16640 words of font info for 64 fonts, out of 3000000 for 9000
  36 hyphenation exceptions out of 8191
- 68i,13n,73p,480b,983s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 68i,13n,73p,590b,983s stack positions out of 5000i,500n,10000p,200000b,50000s
  </home/gsec/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0900.600pk> </home/gs
 ec/.texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-di
@@ -1803,10 +1829,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (8 pages, 2962636 bytes).
+Output written on main.pdf (8 pages, 2874420 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 197 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 210 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 34 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
