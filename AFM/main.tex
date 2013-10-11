@@ -158,15 +158,6 @@ right side. Firstly we started with a low I-value and observed the
 $z$-coordinate adepting very slowly to the actual height of the grid as is shown 
 in \ref{wenigI}.
 
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/wenigI}
-        %\caption{Height profile recorded with the I-gain value set to 5. 
-        %$\mathrm{P}=9$. Scanning direction is from left to right.}
-        %\label{wenigI}
-    %\end{center}
-%\end{figure}
-
 By increasing the I-value the height is adapting much more quickly but 
 overshoots at the step's edge as well as increasing the amount of noise during 
 the plateaus. The height profile is plotted in \ref{vielI}.
@@ -226,24 +217,6 @@ overshoots decrease when increasing the P-value. This however has a negative
 influence on the noise as can be seen in the comparison of \ref{wenigP} and 
 \ref{vielP}.
 
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/wenigP}
-        %\caption{Height profile recordes with the P-gain value set to 5. 
-        %$\mathrm{I}=9$. Scanning direction is from left to right.}
-        %\label{wenigP}
-    %\end{center}
-%\end{figure}
-
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/vielP}
-        %\caption{Height profile recordes with the P-gain value set to 15. 
-        %$\mathrm{I}=9$. Scanning direction is from left to right.}
-        %\label{vielP}
-    %\end{center}
-%\end{figure}
-
 As a trade-off between fast and accurate height adaption and a minimum of noise 
 we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all 
 following measurements, if not stated differently.
@@ -255,26 +228,6 @@ along the scanning axis.  For the slow scan speed we observe in \ref{slow} the
 clear step of the calibration grit without any noticeable overshoot. For the 
 faster scanning speed we can see in \ref{fast} distinct overshoots at the 
 beginning of each step.
-
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/slow}
-        %\caption{Height profile recordes with a scanning sped of 
-        %$\SI{3}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
-        %direction is from left to right.}
-        %\label{slow}
-    %\end{center}
-%\end{figure}
-
-%\begin{figure}
-    %\begin{center}
-        %\includegraphics[width=0.6\columnwidth]{Bilder/fast}
-        %\caption{Height profile recordes with a scanning speed of 
-        %$\SI{0.7}{\second}$ per line. $\mathrm{P}=9$, $\mathrm{I}=9$, scanning 
-        %direction is from left to right.}
-        %\label{fast}
-    %\end{center}
-%\end{figure}
 
 Although we observe artifacts while scanning the calibration grit with  
 $\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
@@ -302,44 +255,50 @@ be flat we can make a fit to the underground. While manipulating the data quite
 a bit, we remove a simple error, i.e. a tilt in the plane known to be something 
 irrelevant for our purpose. In this case even underground fits of higher order 
 might be useful considering deviations created by nonlinearities of the piezo 
-tube or other elements. On this example we want to show how this is done in detail, when it is legitimate and where problems may occur. In \ref{rows} the raw data image from sample \textcircled{7} are plotted.
+tube or other elements. On this example we want to show how this is done in detail, when it is legitimate and where problems may occur. In \ref{7} the raw data image from sample \textcircled{4} are plotted.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/7}
-        \caption{The raw data image from sample \textcircled{7}. }
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\columnwidth}
+		\includegraphics[width=\columnwidth]{Bilder/7}
+        \caption{The raw data image from sample \textcircled{4}. }
         \label{7}
-    \end{center}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.45\columnwidth}
+        \includegraphics[width=\columnwidth]{Bilder/7f}
+        \caption{Data of sample \textcircled{4} flattened in row and column. }
+        \label{7f}
+        \label{vielI}
+    \end{subfigure}
+
+    \caption{Height profiles of single lines and the effect of different 
+    feedback parameters and scanning velocities. Scanning direction is from left 
+    to right.}
 \end{figure}
 
 We can clearly identify the horizontal direction in which the tip scanned the sample. After each row the tip is afflicted with a different offset leading to different heights/colors for each row. This offset is not a feature of our sample, so we try to manipulate the data in a way to get rid of this effect.
 In detail this is done by fitting a parabola to each row of our sample, subtracting this parabola from the raw data afterwards. The same method applied on the single column removes the tilt in the $y$-axis. After applying this flatten function the features of our sample are visible much better and the stripy surface has been manly removed. \\
 As mentioned before every correction falsify the data to a certain amount and the method should not be applied without being aware of the problems which may occur.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/7f}
-        \caption{Data of sample \textcircled{7} flattened in row and column. }
-        \label{7f}
-    \end{center}
-\end{figure}
+In the \ref{1} the surface of \textcircled{2} is showed. Noticeable in the middle of the picture we find a peak on a otherwise flat surface. By applying the flatten function we receive the picture shown in \ref{1f}. Horizontally and vertically from the peak a darker cross has emerged. This can be explained in the following way. By fitting over the row/column including the peak the mean height is higher. By subtracting the fitted function from raw data, every row/column including the peak is lowered more than the other ones. This leads to an unwanted artifact near the peak.
 
-In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the middle of the picture we find a peak on a otherwise flat surface. By applying the flatten function we receive the picture shown in \ref{1f}. Horizontally and vertically from the peak a darker cross has emerged. This can be explained in the following way. By fitting over the row/column including the peak the mean height is higher. By subtracting the fitted function from raw data, every row/column including the peak is lowered more than the other ones. This leads to an unwanted artifact near the peak.
-
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/1}
-        \caption{The raw data image from sample \textcircled{1}. }
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.45\columnwidth}
+        \includegraphics[width=\columnwidth]{Bilder/1}
+        \caption{The raw data image from sample \textcircled{2}.}
         \label{1}
-    \end{center}
-\end{figure}
-
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/1f}
-        \caption{Data of sample \textcircled{1} flattened in row and column. A artifact horizontally and vertically from the peak has emerged.}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.45\columnwidth}
+        \includegraphics[width=\columnwidth]{Bilder/1f}
+        \caption{Data of sample \textcircled{2} flattened in row and column. A 					artifact horizontally and vertically from the peak has emerged.}
         \label{7f}
-    \end{center}
+    \end{subfigure}
+    \caption{Height profiles of single lines and the effect of different 
+    feedback parameters and scanning velocities. Scanning direction is from left 
+    to right.}
 \end{figure}
 
 In summary we consider the flatten method a a legitimate tool for data preparation but one has to be aware of the artifacts which may occur.
@@ -352,7 +311,7 @@ In summary we consider the flatten method a a legitimate tool for data preparati
 \subsection{Signal and noise}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
-this in not the case however. During the measurement of sample \textcircled{?} 
+this in not the case however. During the measurement of sample \textcircled{4} 
 we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it 
 becomes more and more important to quantify the amount of noise to distinguish 
 between real features and random noise.
@@ -389,9 +348,7 @@ an other periodicity as well. ??Why\\
 \begin{figure}
     \begin{center}
         \includegraphics[width=\columnwidth]{Bilder/artifact1}
-        \caption{Height profile plotted with an estimation of noise. Two peaks 
-        at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible 
-        which are much higher than the level of noise. }
+        \caption{Surface of sample \textcircled{4}. One line recorded a periodic oscillation. This artifart is not visible in the backward scan.}
         \label{artifact1}
     \end{center}
 \end{figure}
@@ -403,34 +360,17 @@ patterns is shown in \ref{artifact2}. ??Why
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.7\columnwidth]{Bilder/artifact2}
-		\caption{Oval pattern. }
+		\includegraphics[width=0.7\columnwidth]{Bilder/artifact3}
+		\caption{Oval pattern. Sample \textcircled{4}}
 		\label{artifact2}
 	\end{center}
 \end{figure}
 
-\begin{figure}
-	\begin{center}
-		\includegraphics[width=0.7\columnwidth]{Bilder/artifact3}
-		\caption{Oval pattern. }
-		\label{artifact3}
-	\end{center}
-\end{figure}
-
-
-\paragraph Methoden und Probleme der Bildbearbeitung\\
-
-
-
 
 \section{Sample Analysis}
 
+On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
 \begin{itemize}
-\item Features\\
-\item Linien unterschiedlich\\
-
-\item einzelne hohe Punkte mit Graben außenherum\\
-
 \item Rauigkeit der Oberfläche\\
 \item Aussagen über Wachstumsmethoden\\
 \end{itemize}
@@ -454,6 +394,7 @@ Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination
 of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
 31 (3), S. 03C108. DOI: 10.1116/1.4792515.
   
+\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
 
 \end{thebibliography}
 %
