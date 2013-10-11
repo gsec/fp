@@ -259,12 +259,24 @@ tube or other elements. On this example we want to show how this is done in
 detail, when it is legitimate and where problems may occur. In \ref{rows} the 
 raw data image from sample \textcircled{7} are plotted.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/7}
-        \caption{The raw data image from sample \textcircled{7}. }
-        \label{rows}
-    \end{center}
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.45\columnwidth}
+		\includegraphics[width=\columnwidth]{Bilder/7}
+        \caption{The raw data image from sample \textcircled{4}. }
+        \label{7}
+    \end{subfigure}
+    ~
+    \begin{subfigure}{0.45\columnwidth}
+        \includegraphics[width=\columnwidth]{Bilder/7f}
+        \caption{Data of sample \textcircled{4} flattened in row and column. }
+        \label{7f}
+        \label{vielI}
+    \end{subfigure}
+
+    \caption{Height profiles of single lines and the effect of different 
+    feedback parameters and scanning velocities. Scanning direction is from left 
+    to right.}
 \end{figure}
 
 We can clearly identify the horizontal direction in which the tip scanned the 
@@ -280,13 +292,7 @@ As mentioned before every correction falsify the data to a certain amount and
 the method should not be applied without being aware of the problems which may 
 occur.
 
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/7f}
-        \caption{Data of sample \textcircled{7} flattened in row and column. }
-        \label{7f}
-    \end{center}
-\end{figure}
+In the \ref{1} the surface of \textcircled{2} is showed. Noticeable in the middle of the picture we find a peak on a otherwise flat surface. By applying the flatten function we receive the picture shown in \ref{1f}. Horizontally and vertically from the peak a darker cross has emerged. This can be explained in the following way. By fitting over the row/column including the peak the mean height is higher. By subtracting the fitted function from raw data, every row/column including the peak is lowered more than the other ones. This leads to an unwanted artifact near the peak.
 
 In the \ref{1} the surface of \textcircled{1} is showed. Noticeable in the 
 middle of the picture we find a peak on a otherwise flat surface. By applying 
@@ -311,7 +317,10 @@ an unwanted artifact near the peak.
         \caption{Data of sample \textcircled{1} flattened in row and column. A 
         artifact horizontally and vertically from the peak has emerged.}
         \label{7f}
-    \end{center}
+    \end{subfigure}
+    \caption{Height profiles of single lines and the effect of different 
+    feedback parameters and scanning velocities. Scanning direction is from left 
+    to right.}
 \end{figure}
 
 In summary we consider the flatten method a a legitimate tool for data 
@@ -325,7 +334,7 @@ preparation but one has to be aware of the artifacts which may occur.
 \subsection{Signal and noise}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
-this in not the case however. During the measurement of sample \textcircled{?} 
+this in not the case however. During the measurement of sample \textcircled{4} 
 we observed features which are in order of $\SI{4}{\nano\meter}$.  Here it 
 becomes more and more important to quantify the amount of noise to distinguish 
 between real features and random noise.
@@ -362,9 +371,7 @@ an other periodicity as well. ??Why\\
 \begin{figure}
     \begin{center}
         \includegraphics[width=\columnwidth]{Bilder/artifact1}
-        \caption{Height profile plotted with an estimation of noise. Two peaks 
-        at $\SI{100}{\micro\meter}$ and $\SI{185}{\micro\meter}$ are visible 
-        which are much higher than the level of noise. }
+        \caption{Surface of sample \textcircled{4}. One line recorded a periodic oscillation. This artifart is not visible in the backward scan.}
         \label{artifact1}
     \end{center}
 \end{figure}
@@ -376,34 +383,17 @@ patterns is shown in \ref{artifact2}. ??Why
 
 \begin{figure}
 	\begin{center}
-		\includegraphics[width=0.7\columnwidth]{Bilder/artifact2}
-		\caption{Oval pattern. }
-		\label{artifact2}
-	\end{center}
-    \end{figure}
-
-\begin{figure}
-	\begin{center}
 		\includegraphics[width=0.7\columnwidth]{Bilder/artifact3}
-		\caption{Oval pattern. }
-		\label{artifact3}
+		\caption{Oval pattern. Sample \textcircled{4}}
+		\label{artifact2}
 	\end{center}
 \end{figure}
 
 
-\paragraph Methoden und Probleme der Bildbearbeitung\\
-
-
-
-
 \section{Sample Analysis}
 
+On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
 \begin{itemize}
-\item Features\\
-\item Linien unterschiedlich\\
-
-\item einzelne hohe Punkte mit Graben außenherum\\
-
 \item Rauigkeit der Oberfläche\\
 \item Aussagen über Wachstumsmethoden\\
 \end{itemize}
@@ -427,6 +417,7 @@ Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination
 of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
 31 (3), S. 03C108. DOI: 10.1116/1.4792515.
   
+\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
 
 \end{thebibliography}
 %
@@ -434,9 +425,75 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 \onecolumn
 \pagestyle{empty}
 %% =============================================================================
-\appendix
-\label{appendix}
-\input{appendix}
+%\section{Anhang}
+%\label{Anhang}
 %% =============================================================================
 
 \end{document}
+
+
+
+%% =============================================================================
+%%%%%%%%%%%%%%%%%%% OBSOLETE (can be removed) %%%%%%%%%%%%%%%%%%%%%%%%%%
+%% =============================================================================
+
+%\usepackage[font=small,labelfont=bf,format=plain,margin=10pt]{caption}
+%\usepackage{bijan_koma}
+%\usepackage[ngerman]{babel} 
+
+%%%%%%%%%%%%%%%%%%%%%% Settings for packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[range-phrase={\,\,bis\,\,}]{siunitx}  % Correct typesetting of units
+%\sisetup{       
+  %separate-uncertainty,
+  %per-mode=fraction
+%}
+
+%\colorlet{darkblue}{blue!70!black}
+%\hypersetup{
+  %colorlinks,
+  %citecolor=darkblue,
+  %filecolor=darkblue,
+  %linkcolor=darkblue,
+  %urlcolor=black
+%}
+
+%\crefformat{equation}{Glg.~(#2#1#3)}
+%\crefformat{section}{Abschnitt~#2#1#3}
+%\crefformat{figure}{Abb.~#2#1#3}
+%\crefformat{table}{Tab.~#2#1#3}
+%\crefformat{chapter}{Kapitel~#2#1#3}
+
+
+%\addto\captionsngerman{             % Changes Abbildung->Abb.,etc. in caption 
+  %\renewcommand{\figurename}{Abb.}
+  %\renewcommand{\tablename}{Tab.}
+%}
+
+
+%%%%%%%%%%%%%%%%%%%%%% Headings and seperation lines %%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%\usepackage[automark,markuppercase]{scrpage2}     % AUTOMATIC HEADINGS
+%\pagestyle{scrheadings}                           % Apply userdefined settings
+%\setheadsepline{.5 pt}                            % Width of seperation line
+%\setkomafont{pagehead}{\normalfont}               % Use normalfont for heading
+%\cfoot{\thepage}                                  % Page numbering 
+
+%%%%%%%%%%%%%%%%%%%%%% commands      %%%%%%%%%%%%%%%%%%%%%%%%%%
+%\input{formal/commands}
+%\newcommand{\tabref}[1]{Table~\ref{tab:#1}}
+%\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+%\newcommand{\secref}[1]{section~\ref{sec:#1}}
+
+%\graphicspath{{Bilder/}}
+%%%%%%%%%%%%%%%%%%%%%% Spacings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\onehalfspacing                                 % 1.5 line spacing
+
+% Spacing in math environments \,\;.. 
+%\thinmuskip=3mu % default
+%\medmuskip=4mu plus 2mu minus 4mu % default is 4 mu p2 m4
+%\thickmuskip=5mu plus 5mu % default
+
+
