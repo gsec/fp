@@ -302,22 +302,21 @@ the following way. By fitting over the row/column including the peak the mean
 height is higher. By subtracting the fitted function from raw data, every 
 row/column including the peak is lowered more than the other ones. This leads to 
 an unwanted artifact near the peak.
-
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/1}
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{0.45\columnwidth}
+        \includegraphics[width=\columnwidth]{Bilder/1}
         \caption{The raw data image from sample \textcircled{1}. }
-        \label{1}
-    \end{center}
-\end{figure}
-
-\begin{figure}[htp]
-    \begin{center}
-        \includegraphics[width=0.7\columnwidth]{Bilder/1f}
+        \label{7}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[t]{0.45\columnwidth}
+        \includegraphics[width=\columnwidth]{Bilder/1f}
         \caption{Data of sample \textcircled{1} flattened in row and column. A 
         artifact horizontally and vertically from the peak has emerged.}
         \label{7f}
     \end{subfigure}
+
     \caption{Height profiles of single lines and the effect of different 
     feedback parameters and scanning velocities. Scanning direction is from left 
     to right.}
