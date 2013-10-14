@@ -1,3 +1,34 @@
+\section{Roughness calculation}
+\label{roughness}
+Here ``dat'' is a $65536 \times 3$ data array consisting of 256 rows of 256 
+points of a (x,y,z) tupel as coordinates.
+
+\scriptsize
+\lstset{language=Mathematica}
+
+\begin{lstlisting}
+dmatrix[dat_, rowlength_: 2^8] := Partition[data[dat], rowlength]
+
+surface[dat_, rowlength_: 2^8] := 
+    (Ad = 0; Au = 0;
+    For[i = 1, i < rowlength,
+   	    For[k = 1, k < rowlength,
+        Ad += 
+            Norm[(dat[[k]][[i + 1]] - dat[[k]][[i]])\[Cross]
+                (dat[[k + 1]][[i]] - dat[[k]][[i]])]/2;
+        Au += 
+            Norm[(dat[[k]][[i + 1]] - dat[[k + 1]][[i + 1]])\[Cross]
+                (dat[[k + 1]][[i]] - dat[[k + 1]][[i + 1]])]/2; 
+        k += 1];
+   i += 1]; 
+   Return[Ad + Au])
+
+rough[dat_] := 
+ ScientificForm[
+        surface[dmatrix[dat]]/(Last[data[dat]][[1]]*Last[data[dat]][[2]]) -  1
+               ]
+
+\end{lstlisting}
 \section{Sample table}
 
 \label{samples}
@@ -67,34 +98,4 @@ the surface as of \cref{roughness}}
 \end{figure}
 
 
-\section{Roughness calculation}
-\label{roughness}
-Here ``dat'' is a $65536 \times 3$ data array consisting of 256 rows of 256 
-points of a (x,y,z) tupel as coordinates.
 
-\scriptsize
-\lstset{language=Mathematica}
-
-\begin{lstlisting}
-dmatrix[dat_, rowlength_: 2^8] := Partition[data[dat], rowlength]
-
-surface[dat_, rowlength_: 2^8] := 
-    (Ad = 0; Au = 0;
-    For[i = 1, i < rowlength,
-   	    For[k = 1, k < rowlength,
-        Ad += 
-            Norm[(dat[[k]][[i + 1]] - dat[[k]][[i]])\[Cross]
-                (dat[[k + 1]][[i]] - dat[[k]][[i]])]/2;
-        Au += 
-            Norm[(dat[[k]][[i + 1]] - dat[[k + 1]][[i + 1]])\[Cross]
-                (dat[[k + 1]][[i]] - dat[[k + 1]][[i + 1]])]/2; 
-        k += 1];
-   i += 1]; 
-   Return[Ad + Au])
-
-rough[dat_] := 
- ScientificForm[
-        surface[dmatrix[dat]]/(Last[data[dat]][[1]]*Last[data[dat]][[2]]) -  1
-               ]
-
-\end{lstlisting}
