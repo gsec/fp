@@ -54,9 +54,9 @@
 % =============================================================================
 
 \section{Einleitung}
-\begin{itemize}
-\item Einleitung
-\end{itemize}
+
+Halbleiter spielen heutzutage eine wichtige Rolle in vielen technischen Anwendungen. Die Bandlücke, ein Energiebereich in dem es keine quantenmechanischen Zustände gibt, macht diese Materialklasse interessant für viele Anwendungen in der Elektronik und der Optoelektronik. Silizium zählt dabei zu den indirekten Halbleitern und ist ein wichtiger Bestandteil vieler Metall-Oxid-Halbleiter Bauelemente. Für optisch aktive Halbleiterbauelemente werden in der Regel Halbleiter mit einem direkten Bandübergang verwendet, um eine hohe Wechselwirkung der Elektronen mit Licht zu ermöglichen. Genau diese Wechselwirkung ist für viele Bereiche der Physik von großem Interesse. \\
+Ein etabliertes Werkzeug zur Charakterisierung von Halbleitern ist das Fourier-Transform-Infrarotspektrometers (FTIR). In diesem können Reflexions- und Transmissionsspektren einer Probe mit hoher Auflösung analysiert werden. Daraus lassen sich anschließend die Materialeigenschaften der Probe, wie komplexer Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen. 
 
 % =============================================================================
 
@@ -92,6 +92,9 @@ Wir können jeweils zwei Bereiche der Absorption von Wasser (\ref{Luft2},\ref{Lu
 Deutlich zu erkennen sich dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der Rotations-Schwingungs-Spektren.
 
 \subsection{Signal Rausch Verhältnis}
+Mit geringer Auflösung messen wir ohne eingebaute Probe das Spektrum der Globar-Quelle und normieren es auf eine zweite Messung mit gleichen Einstellungen. Diese Messung wiederholen wir mit $10$, $50$ und $100$ Spiegeldurchläufe (Scans) und untersuchen, wie das Rauschen mit zunehmender Anzahl an Scans abnimmt.\\
+Zur Auswertung wählen wir einen Bereich in dem die Intensität der einzelnen Spektren ausreichend hoch ist. Das heißt einen Bereich ohne Absorptionslinien in der Nähe der maximalen Intensität ($\SI{1000}{\per\centi\meter}$ bis $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \ref{snr} das Rauschen über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
+
 
 \subsection{Brechzahl von GaAs und Si}
 Die untersuchten Proben bestehen aus mehreren hundert Nanometer dicken Schichten.
@@ -99,9 +102,10 @@ Untersucht man das Reflexionsspektrum dieser Schichten, so kommt es zwischen den
 Wir bestimmen an verschiedenen Stellen im Spektrum jeweils den Abstand von $50$ Interferenzmaxima. Die Ablesegenauigkeit der Peaks nehmen wir mit $\SI{\pm 1}{\centi\meter^{-1}}$ an.
 Mit Hilfe der Probendicken (GaAs undotiert: $\SI{470}{\micro\meter}$, GaAs dotiert: $\SI{440}{\micro\meter}$, Si undotiert: $\SI{530}{\micro\meter}$) lässt sich nun der der Realteil des Brechungsindexes der verschiedenen Materialien an verschiedenen Stellen im Spektrum bestimmen.
 
-\begin{tabular}{ l c c c }
+\begin{tabular}{ l | c c c }
   Wellen- & n & n&n\\
   zahl & GaAs undotiert & GaAs dotiert & Si undotiert \\
+  \hline
   500 & 3.452(32) & - & 3.343(34) \\
   1000 & 3.245(28) & - & 3.348(34) \\
   1500 & 3.243(28) & - & 3.369(34) \\
@@ -113,9 +117,11 @@ Mit Hilfe der Probendicken (GaAs undotiert: $\SI{470}{\micro\meter}$, GaAs dotie
 Die entsprechenden Dielektrizitätskonstanten ergeben sich aus dem Quadrat der komplexen Brechungsindizes, 
 zu deren Berechnung uns aber noch die Auswertung der Absorptionsmessung fehlt.
 
+\subsection{Reflexion und Transmission der Proben}
+
+\subsection{Brechzahlen, Extinktions- und Absorptionskoeffizienten}
+
 \begin{itemize}
-\item 4. Reflexion und Transmission der Proben
-\item 5. Brechzahlen, Extinktions- und Absorptionskoeffizienten
 \item 6. Bandlücke und Impulsmatrixelemente
 \item 7. Bandlücke und charakteristische Phononenfrequenz für Si
 \item 8. Beitrag der freien Ladungsträger zur Reflexion
