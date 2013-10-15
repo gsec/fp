@@ -1,0 +1,5 @@
+wichtig:
+Absorption an Luft: Linie bei 1000 löschen. Hängt irgnedwie mit der Plotrang zusammen und wird automatisch gesetzt
+
+unwichtig:
+Mathematica Pakete überprüfen
