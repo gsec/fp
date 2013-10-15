@@ -66,7 +66,7 @@
 
 \section{Motivation}
 \input{expose}
-\newpage
+%\newpage
 
 \section{Basics}
 The relevance of fabrication and therefore also the analysis of structure in the 
@@ -108,7 +108,12 @@ z-direction is altered to move the probe to a height where the force is equal to
 the set point defined before. This has the advantage that the force between tip 
 and probe is approximately constant and therefore it is less likely to damage 
 the sample or the tip. This is ensured via a feedback loop between the the diode 
-and the piezo element as seen in \cref{control_loop}.
+and the piezo element as seen in \cref{control_loop}. The height information 
+accquired via this method is more strongly connected to the actual sample 
+surface. The mapping is done between the piezo voltage as opposed to the 
+strength of the diode, the angle of the laser beam and the distances between 
+those elements. Therefore introducing less error sources and leading to a more 
+accurate signal.
 
 \begin{figure}
     \centering
@@ -119,17 +124,12 @@ and the piezo element as seen in \cref{control_loop}.
     \label{control_loop}
 \end{figure}
 
-The height information accquired via this method is more strongly connected to 
-the actual sample surface. The mapping is done between the piezo voltage as 
-opposed to the strength of the diode, the angle of the laser beam and the 
-distances between those elements. Therefore introducing less error sources and 
-leading to a more accurate signal.
-
-The resolution of the used AFM is within the range of several nanometers. Adequately
-to measure the surface of the GaSb-wafers. These samples are normally characterized 
-by optical microscopy, X-ray diffraction and scanning electron microscopy. As these 
-techniques offer very less information about the sample's surface structure the AFM 
-provides us a new possibility to gain this information.
+The resolution of the used AFM is within the range of several nanometers.  This 
+is adequate to measure the surface of the GaSb-wafers. These samples are 
+normally characterized by optical microscopy, X-ray diffraction and scanning 
+electron microscopy. As these techniques offer very less information about the 
+sample's surface structure the AFM provides us a new possibility to gain this 
+information.
 
 \section{The AFM Experiment}
 \label{Experiment}
@@ -282,7 +282,7 @@ irrelevant for our purpose. In this case even underground fits of higher order
 might be useful considering deviations created by nonlinearities of the piezo 
 tube or other elements. On this example we want to show how this is done in 
 detail, when it is legitimate and where problems may occur. In \ref{7} the 
-raw data image from sample \textcircled{7} are plotted.
+raw data image from sample \circled{7} are plotted.
 
 \begin{figure}
     \centering
@@ -319,7 +319,7 @@ occur.
 
 
 
-In the \ref{7} the surface of \textcircled{1} is showed. Noticeable in the 
+In the \ref{7} the surface of \circled{1} is showed. Noticeable in the 
 middle of the picture we find a peak on a otherwise flat surface. By applying 
 the flatten function we receive the picture shown in \ref{7f}. Horizontally and 
 vertically from the peak a darker cross has emerged. This can be explained in 
@@ -440,7 +440,7 @@ interpolated polygons between our background corrected points as measured by the
 AFM. In principle it denotes the deviation of a flat surface as:
 
 \begin{align}
-    \rho = \frac{S_{\text{polygons}}}{S_{\text{projected}}} - 1
+    \rho = \frac{S_{\text{polygons}}-S_{\text{projected}}}{S_{\text{projected}}} 
 \end{align}
 
 For further reference please see \cref{roughness}.  \\
@@ -479,7 +479,7 @@ attributed to the fact that the scan lines are fitted separately. Irregularities
 and systematic errors arising from the fact of line switching or directional 
 changes are thereby minimized. 
 
-\section{summary}
+\section{Summary}
 During the AFM experiment we investigated the surface if different samples.  
 Starting with a calibration grid we investigated the influence of different 
 scanning parameter like P and I feedback-loop values and different scanning 

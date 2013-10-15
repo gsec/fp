@@ -27,20 +27,43 @@
 \begin{document}
 
 \title{Projekt zum Fortgeschrittenen-Praktikum \\ - Atomic Force Microscopy}                  
-\author{Guilherme Stein \& Ulrich Müller}         
-\date{}                             % Turn off automatic date
+\author{Guilherme Stein \& Ulrich Müller}         \date{}                             
+% Turn off automatic date
 \twocolumn[\begin{@twocolumnfalse}
 \vspace{-3em}
 \maketitle      
 % =============================================================================
 \begin{abstract}      
 % =============================================================================
+<<<<<<< HEAD
+\vspace{-2em}
+    \noindent {\small During the AFM experiment we investigated the surface 
+    roughness of four GaSb samples. While an untreated GaSb wafer shows ditches 
+    caused by polishing the overgrow of a $\SI{200}{\nano\meter}$ GaSb
+    buffer leads to significant lower surface roughness. Two different 
+    growth temperatures were tested.
+    The buffer grown at $515$\textdegree~exhibited a lower surface roughness 
+    than the one grown at $485$\textdegree. Furthermore we tested a sample 
+    with a $\SI{30}{\nano\meter}$ AlAsSb layer on top of a 
+    $\SI{170}{\nano\meter}$ GaSb layer. On the one hand we found even lower 
+    average surface roughness. On the other hand single peaks in range from 
+    $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ were not removed from the 
+    surface as it indicated previous publications \cite{murray}.
+}
+\vspace{1em}
+
+\noindent Supervisor: Dr. Paolo Sessi
+\hfill Date of experiment: $4^{\text{th}}$ October 2013
+    \begin{flushright}
+        % Protokollabgabe: 12. Oktober 2012        
+      \end{flushright}
+=======
   \vspace{-2em}
   \noindent {\small 
-  During the AFM-laboratory we investigated the surface roughness of four GaSb samples. While an 
-untreated GaSb-wafer shows ditches caused by polishing the overgrow of a $\SI{200}{\nano\meter}$ GaSb
+  During the AFM-laboratory we investigated the surface roughness of four gallium antimonide samples. While an 
+untreated GaSb-wafer shows ditches caused by polishing, the overgrow of a $\SI{200}{\nano\meter}$ GaSb
 buffer leads to significant lower surface roughness. Two different growth temperatures were tested.
-The buffer grown at $515$\textdegree~exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ were not removed from the surface as it indicated previous publications \cite{murray}.
+The buffer grown at $515$\textdegree~exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer within the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ were not removed from the surface as it had been indicated by previous publications \cite{murray}.
     }
   \vspace{1em}
 
@@ -49,18 +72,20 @@ The buffer grown at $515$\textdegree~exhibited a lower surface roughness than th
   \begin{flushright}
     % Protokollabgabe: 12. Oktober 2012        
   \end{flushright}
+>>>>>>> 9765c3db61a528ab7111c9c0a54343b67e2cdda5
 \end{abstract}
+
 \vspace{2em}
-%
 \end{@twocolumnfalse}
 ]
 % =============================================================================
 %\addtocounter{section}{-1}
+
+\section{Motivation}
 \input{expose}
 \newpage
 
 \section{Basics}
-%Warum AFM\\
 The relevance of fabrication and therefore also the analysis of structure in the 
 sub-micrometer and even nanometer scale has increased steadily in the past 
 decades. In contrast to other scanning imaging techniques as the STM or SEM, the 
@@ -69,13 +94,26 @@ without the need of a vacuum or special treatment of the probe prior to
 analysis. This allows us to examine a broader variety of samples under easily 
 achievable conditions.
 
-\subsection{Work principle of the AFM}
-%Funktionsweise AFM\\
+\subsection{Principle of the AFM}
 The principle of the atomic force microscope are the forces that act between two 
 pieces of matter when brought close to each other. More precisely we bring a 
-sharp tip into a distance of a few nano meters to  a surface we want to examine.  
+<<<<<<< HEAD
+sharp tip into a distance of a few nano meters to a surface of interest. At this 
 scale the main contribution are Van-der-Waals forces which arise from 
-polarisation fluctuations in the material.
+polarisation fluctuations in the material. In \cref{afm_scheme} one can see the 
+main parts required to run the AFM.  The sample is mounted on a xyz-stage 
+consisting of different piezo elements.  This enables us to move the sample in 
+xy-direction for the scanning of the probe, as well as in the z direction for 
+height compensation. A reflecting cantilever is positioned above the sample. A 
+laser beam reflects on the cantilever and hits a segmented photodiode. If the 
+cantilever moves, the laser beam will change the angle of deflection.  From the 
+intensity change on the diode segments the height difference of the material is 
+derrived.
+=======
+sharp tip into a distance of a few nano meters to  a surface we want to examine.  
+The main contribution are Van-der-Waals forces which arise from 
+polarisation fluctuations in the material and the repulsive forced due to 
+Fermi's exclusion principle.
 In \cref{afm_scheme} one can see the main parts required to run the AFM. 
 The sample is mounted on a xyz-stage consisting of different piezo elements. 
 This enables us to move the sample in xy-direction for the scanning of the 
@@ -85,6 +123,7 @@ cantilever and hits a segmented photodiode. If the cantilever moves, the
 laser beam will change the angle of deflection, detectable by the photodiode.
 From the intensity change on the diode segments one can calculate the height 
 difference of the material.
+>>>>>>> 9765c3db61a528ab7111c9c0a54343b67e2cdda5
 
 \begin{figure}
     \centering
@@ -93,7 +132,7 @@ difference of the material.
     \label{afm_scheme}
 \end{figure}
 
-\subsection{Refinements}
+\subsection{Technical refinements}
 Instead of mapping the intensity change on the diode to the force and 
 subsequently to the probe height, often a different approach is used. The tip is 
 set to apply a constant force on the probe. If the force changes, the piezo in 
@@ -106,28 +145,40 @@ and the piezo element as seen in \cref{control_loop}.
 \begin{figure}
     \centering
     \includegraphics{Bilder/control_loop.pdf}
-    \caption{Principle of a feedback loop with disturbance $z(t)$, output 
-        $r(t)$, control signal $u(t)$, measured output $x(t)$ and error signal 
-        $e(t)$.}
+    \caption{Principle of a feedback loop with characteristic variables: 
+    disturbance $z(t)$, set point $r(t)$, control signal $u(t)$, measured output 
+    $x(t)$ and error signal $e(t)$.}
     \label{control_loop}
 \end{figure}
 
 The height information accquired via this method is more strongly connected to 
 the actual sample surface. The mapping is done between the piezo voltage as 
-opposed to the strength of the diode, the angle of the lase beam and the 
+opposed to the strength of the diode, the angle of the laser beam and the 
 distances between those elements. Therefore introducing less error sources and 
 leading to a more accurate signal.
 
-%
-Relevanz für die Aufnahme der GaSb Proben\\
-%
+<<<<<<< HEAD
+\section{The AFM Experiment}
+\label{Experiment}
+\subsection{Samples}
+In \cref{motivation} we described different samples of interest. Since we 
+encountered problems during the sample growth, measurements were only performed 
+on four of the samples. The samples are listed with a short description in 
+\cref{samples}.
+=======
+The resolution of the used AFM is within the range of several nanometers. Adequately
+to measure the surface of the GaSb-wafers. These samples are normally characterized 
+by optical microscopy, X-ray diffraction and scanning electron microscopy. As these 
+techniques offer very less information about the sample's surface structure the AFM 
+provides us a new possibility to gain this information.
 
 \section{The AFM Experiment}
 \label{Experiment}
 \subsection{Samples}
 In the expose we described different samples which would be  interesting for us. Nevertheless 
 due to failure during the growth of the samples we could only execute the measurements of four samples.
-The samples with a short discretion of their properties are listed in \cref{samples}
+The samples with a short discretion of their properties are listed in \cref{samplesprep}
+>>>>>>> 9765c3db61a528ab7111c9c0a54343b67e2cdda5
 
 \begin{tabular}{ c | l }
   sample & property\\
@@ -139,47 +190,44 @@ The samples with a short discretion of their properties are listed in \cref{samp
   &$\SI{30}{\nano\meter}$ AlAsSb plus \\
   &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
   \hline  
-  \label{samples}
+  \label{samplesprep}
 \end{tabular}
 
-\subsection{Parameter of recording}
+\subsection{Parameters of recording}
 In order to acquire the topology of the samples surface the computer records the 
 scanner's $z$-position in combination with the in plane $x$- and $y$-position. 
 These data can be exported from the control software in a special (.ezd) data 
 format. We convert these data back into a list of $x$, $y$ and $z$-coordinates 
 using the \textit{WSxM} software, which is freely available on \cite{nanotec}. 
 
-While scanning in static force mode is necessary to maintain the force by moving 
-the scanner's $z$-position. This is done by a feedback loop, which compares the 
-a stated force constant to the force calculated from the signal of the 
-photodiode. The difference is called the error signal and is the basis for the 
-PI-controller. This controller includes to variables, the P- and I-values, which 
-can be adjusted at the control software.
-While recording the data we can adjust the P- and I-values to optimize the 
-quality of the pictures and avoid image artifacts. These values refer to the 
+While scanning in static force mode it is necessary to maintain the force 
+constant by moving the scanner's $z$-position. This is done via a feedback loop, 
+which compares the set force to the force calculated from the signal of the 
+photodiode. The difference is called the error signal and is the input for the 
+PI-controller. In the AFM control software the \textbf{P}(roportional) and 
+\textbf{I}(ntegral) parts are adjustable.  While recording the data we can 
+adjust the \textbf{P} and \textbf{I} values to optimize the respose of the 
+feedback loop thus reducing image artifacts.  These values refer to the 
 proportional and integral gain of the z-controllers feedback loop respectively. 
-The proportional gain provides a signal which is proportional to the error 
-signal. By increasing this value one should observe a smaller static error 
-signal and a faster adaption to the current height position.
-On the other hand, if this value is set to high, one should observe a overshoots 
-while scanning steps. Even higher P-values lead to more noise as the scanner is 
-reacting oversensitive to little changes in height. The I-value however provides 
-a signal which is proportional to the temporal integral of the error signal. The 
-adaption of this value may have similar effects as adaption the P-value. 
-Nevertheless the signal from the integral controller is lee sensitive to noise.
+% The proportional gain provides a signal which is proportional to the error 
+% signal. 
+By increasing the \textbf{P} value one should observe a smaller static error and 
+a faster adaption to the current height position. On the other hand, if this 
+value is set to high, overshoots while scanning steps are likely. Even higher 
+\textbf{P} values lead to more noise as the scanner is reacting oversensitive to little 
+changes in height. The \textbf{I} parameter defines the contributes proportional 
+to the time integral of the error signal. 
 
 In the beginning of the experiment we scanned a calibration grid while varying 
-the P- and I-parameter to see the effects on the pictures quality. The 
-calibration grid consists of a grid with two different height levels. By 
+the P and I parameter to estimate the effect on the scan and picture quality.  
+The calibration grid consists of a grid with two different height levels. By 
 scanning the grid in one direction one should observe steps in the up and down 
-direction. In the following pictures every scan is conducted from the left the 
-right side. Firstly we started with a low I-value and observed the 
-$z$-coordinate adepting very slowly to the actual height of the grid as is shown 
-in \ref{wenigI}.
+direction. First we started with a low I value and observed the $z$-coordinate 
+adapting slowly to the actual height of the grid as shown in \ref{wenigI}.
 
-By increasing the I-value the height is adapting much more quickly but 
-overshoots at the step's edge as well as increasing the amount of noise during 
-the plateaus. The height profile is plotted in \ref{vielI}.
+By increasing the I value the height is adapting much quicker but overshoots at 
+the step's edge as well as increasing the amount of noise during the plateaus. 
+The height profile is plotted in \ref{vielI}.
 
 \begin{figure}
     \centering
@@ -228,29 +276,28 @@ the plateaus. The height profile is plotted in \ref{vielI}.
     to right.}
 \end{figure}
 
-In the next step the influence of the P-value was observed. With the I-value set 
-to $9$ the p-value was varied from $5$ to $15$. Interestingly an decrease of the 
-P-value to $5$ doesn't change much but increasing the overshoots caused by the 
-I-value, which is set little higher than the optimum value. Simultaneously the 
-overshoots decrease when increasing the P-value. This however has a negative 
-influence on the noise as can be seen in the comparison of \ref{wenigP} and 
-\ref{vielP}.
+In the next step the influence of the P value was observed. With the I value set 
+to $9$ the P value was varied from $5$ to $15$. Interestingly a decrease of the 
+P value to $5$ does not change much other than increasing the overshoots caused 
+by the I value, which is set little higher than the optimum value. 
+Simultaneously the overshoots decrease when increasing the P-value. This however 
+has a negative influence on the noise shown in the comparison of \ref{wenigP} 
+and \ref{vielP}.
 
 As a trade-off between fast and accurate height adaption and a minimum of noise 
 we choose $\mathrm{I}=9$ and $\mathrm{I}=7$. We use these parameters in all 
 following measurements, if not stated differently.
 
-Next we want to investigate what influence the speed of scanning has on the 
-image recording. We measure the calibration grid with $\SI{0.7}{\second}$ and 
-$\SI{3}{\second}$ per line. During this period 256 data points are recorded 
-along the scanning axis.  For the slow scan speed we observe in \ref{slow} the 
-clear step of the calibration grit without any noticeable overshoot. For the 
-faster scanning speed we can see in \ref{fast} distinct overshoots at the 
-beginning of each step.
+To investigate what influence the speed of scanning has on the image recording 
+we measure the calibration grid with $\SI{0.7}{\second}$ and $\SI{3}{\second}$ 
+per line. During this period 256 data points are recorded along the scanning 
+axis.  At slow scanning speed we observe a clear step of the calibration grid 
+without any noticeable overshoot in \ref{slow}. At a faster scanning speed 
+we can see in \ref{fast} distinct overshoots at the beginning of each step.
 
-Although we observe artifacts while scanning the calibration grit with  
-$\SI{0.7}{\second}$ per line it is possible to measure structures without steep 
-gradient with a higher scanning speed without observing overshoots.
+Although we observe artifacts while scanning the calibration grid with  
+$\SI{0.7}{\second}$ per line it is possible to measure smooth structures 
+at higher scanning speeds without observing overshoots.
 
 \subsection{Data preparation}
 When acquiring data there is always an interpretation and processing involved.  
@@ -259,7 +306,7 @@ data sets. This strongly depends on the uses of the data, i.e. getting a general
 idea of an object or measuring something with great accuracy to search for yet 
 undiscovered principles. While the unprocessed set has little meaning, we edit 
 it and thereby imprint a meaning into the data. Some may argue this leads to 
-wrong data, or at least reduces the quality. On the other hand, there is no such 
+wrong data, or at least reduces its quality. On the other hand, there is no such 
 thing as a perfect measurement.  Therefore the data we acquire will never be an 
 exact representation of the object we want to project. We need to make 
 corrections based on our model of the world to increase the quality and, even 
@@ -275,25 +322,20 @@ a bit, we remove a simple error, i.e. a tilt in the plane known to be something
 irrelevant for our purpose. In this case even underground fits of higher order 
 might be useful considering deviations created by nonlinearities of the piezo 
 tube or other elements. On this example we want to show how this is done in 
-<<<<<<< HEAD
-detail, when it is legitimate and where problems may occur. In \ref{rows} the 
-raw data image from sample \circled{7} are plotted.
-=======
 detail, when it is legitimate and where problems may occur. In \ref{7} the 
 raw data image from sample \textcircled{7} are plotted.
->>>>>>> f82687032639c5d5b4f536532d9b9e686c4fd644
 
 \begin{figure}
     \centering
     \begin{subfigure}{0.45\columnwidth}
 		\includegraphics[width=\columnwidth]{Bilder/7}
-        \caption{The raw data image from sample \circled{4}. }
+        \caption{The raw data image from sample \textcircled{4}. }
         \label{7}
     \end{subfigure}
     ~
     \begin{subfigure}{0.45\columnwidth}
         \includegraphics[width=\columnwidth]{Bilder/7f}
-        \caption{Data of sample \circled{4} flattened in row and column. }
+        \caption{Data of sample \textcircled{4} flattened in row and column. }
         \label{7f}
         \label{vielI}
     \end{subfigure}
@@ -310,7 +352,7 @@ sample, so we try to manipulate the data in a way to get rid of this effect.
 In detail this is done by fitting a parabola to each row of our sample, 
 subtracting this parabola from the raw data afterwards. The same method applied 
 on the single column removes the tilt in the $y$-axis. After applying this 
-flatten function the features of our sample are visible much better and the 
+flatten function the features of our sample are much better visible and the 
 stripy surface has been manly removed. \\
 As mentioned before every correction falsify the data to a certain amount and 
 the method should not be applied without being aware of the problems which may 
@@ -318,11 +360,7 @@ occur.
 
 
 
-<<<<<<< HEAD
-In the \ref{1} the surface of \circled{1} is showed. Noticeable in the 
-=======
 In the \ref{7} the surface of \textcircled{1} is showed. Noticeable in the 
->>>>>>> f82687032639c5d5b4f536532d9b9e686c4fd644
 middle of the picture we find a peak on a otherwise flat surface. By applying 
 the flatten function we receive the picture shown in \ref{7f}. Horizontally and 
 vertically from the peak a darker cross has emerged. This can be explained in 
@@ -359,6 +397,7 @@ preparation but one has to be aware of the artifacts which may occur.
 %random fluctuations and allows for an estimate of the noise.
 
 \subsection{Signal and noise}
+\label{san}
 During the measurements of the calibration grid the amplitudes of the single 
 steps are much higher than the level of noise. While measuring flatter surfaces 
 this in not the case however. During the measurement of sample \circled{4} 
@@ -415,7 +454,7 @@ and backward scanning direction they could be caused by features of the surface.
 On the other hand the ovals don't correlate with the crystal structure or the
 peaks on the surface which commends to an artifact. If it is an artifact it could
 be on the one hand caused by an interference between a plain and a spherical wave. 
-But to explain the pattern shown in \ref{artifact2} the wavelength should be in
+But to explain the pattern which are presented in \ref{artifact2}, the wavelength should be in
 the order of $\SI{200}{\nano\meter}$ which is to short for laser light.
 On the other hand these pattern could be a moiré-pattern caused by the discrete
 lateral resolution which equals $\SI{50}{\micro\meter}/265 = \SI{195}{\nano\meter}$.
@@ -439,12 +478,13 @@ these Peaks the average height seems to be significantly lower than on the rest
 of the surface. It seems like the every peak accumulates material from a radius 
 of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials 
 which cause atoms to move and adsorb at a step while it hinders atoms to leave a 
-plateau. These Potentials are calls Schwoebel barriers \cite{merikoski}.
-=======
-On the surfaces of our samples we found single accumulations of material typically in the order of several angstroms. Interestingly in the vicinity of these Peaks the average height seems to be significantly lower than on the rest of the surface. It seems like the every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
->>>>>>> f82687032639c5d5b4f536532d9b9e686c4fd644
+plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
 \begin{itemize}
 \item Rauigkeit der Oberfläche\\
+=======
+On the surfaces of our samples we found single accumulations of material typically in the order of several nanometers. Interestingly in the vicinity of these peaks the average height seems to be significantly lower than on the rest of the surface. It seems like every peak accumulates material from a radius of around $\SI{1}{\micro\meter}$. This effect can be explained by potentials which cause atoms to move and adsorb at a step while it hinders atoms to leave a plateau. These potentials are calls Schwoebel barriers \cite{merikoski}.
+
+>>>>>>> 9765c3db61a528ab7111c9c0a54343b67e2cdda5
 
 As mentioned in \cref{motivation} one of the goals of this experiment was to 
 quantify and analyze the roughness $\rho$ of a variety of surfaces. We concluded 
@@ -457,6 +497,23 @@ AFM. In principle it denotes the deviation of a flat surface as:
 \end{align}
 
 For further reference please see \cref{roughness}.  \\
+To estimate the error of this value we calculate the roughness of a randomly generated
+surface with a deviation in height which is equal to the noise estimated in \ref{san}.
+All the values of surface roughness together with this error are presented in \cref{table:r}
+
+\begin{tabular}{ c | l | l }
+  sample & property & roughness $\rho$\\
+  \hline                        
+  \circled{1} & An untreated GaSb wafer &  $2.55(7) \cdot 10^{-5}$\\
+  \circled{2} & $\SI{200}{\nano\meter}$ GaSb buffer at 485\textdegree & $0.61(7) \cdot 10^{-5}$\\
+  \circled{3} & $\SI{200}{\nano\meter}$ GaSb buffer at 515\textdegree & $0.54(7) \cdot 10^{-5}$\\
+  \circled{4} & $\SI{10}{\nano\meter} $GaSb buffer plus & $0.49(7) \cdot 10^{-5}$\\
+  &$\SI{30}{\nano\meter}$ AlAsSb plus \\
+  &$\SI{160}{\nano\meter}$ GaSb buffer at 515\textdegree \\
+  \hline  
+  \label{table:r}  
+\end{tabular}
+
 In sample \circled{1} there are actual scratches on the surface. Since it is the 
 untreated wafer we suspect this arising from a polishment after the fabrication. 
 This sample shows a much larger roughness than the other treated samples. The 
@@ -465,7 +522,7 @@ features across the surface. While the sample \circled{3} is the same as the
 previous one but grown at a higher temperature, we do not find those larger 
 features on the surface and therefore the surface is even smoother. The smallest 
 roughness was measured on sample \circled{4}. On this sample a layer of 
-aluminium was grown, producing a few wider features only little higher than the 
+AlAsSb was grown, producing a few wider features only little higher than the 
 average. But as the overall surface is smoother, this contribution is not as big 
 as to increase the roughness above the other samples. Here the corrected samples 
 were described. Except for the untreated sample \circled{1} the background 
@@ -475,21 +532,23 @@ attributed to the fact that the scan lines are fitted separately. Irregularities
 and systematic errors arising from the fact of line switching or directional 
 changes are thereby minimized. 
 
-
-
-
-\item Aussagen über Wachstumsmethoden\\
-\end{itemize}
-
 \section{summary}
-During the AFM-laboratory we investigated the surface if different samples. Starting with a calibration
-grid we investigated the influence of different scanning parameter like P- and I-feedback-loop-values 
-and different scanning speeds. Further more we investigated the roughness of four GaSb samples. While an untreated GaSb-wafer shows ditches caused by polishing the overgrow of $\SI{200}{\nano\meter}$ GaSb
-buffer leads to significant lower surface roughness. Two different growth temperatures were tested.
-The buffer grown at $515$\textdegree exhibited a lower surface roughness than the one grown at $485$\textdegree. Further more we tested a sample with a $\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average surface roughness. On the other hand we found single peaks in range from $\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ which were not removed from the surface as it indicated previous publications \cite{murray}.\\
-Different kinds of artifacts were discussed and we showed the advantages and risks of data preparation.
-
-
+During the AFM experiment we investigated the surface if different samples.  
+Starting with a calibration grid we investigated the influence of different 
+scanning parameter like P and I feedback-loop values and different scanning 
+speeds. Furthermore we investigated the roughness of four GaSb samples. While an 
+untreated GaSb-wafer shows ditches caused by polishing the overgrow of 
+$\SI{200}{\nano\meter}$ GaSb buffer leads to significant lower surface 
+roughness. Two different growth temperatures were tested.
+The buffer grown at $515$\textdegree exhibited a lower surface roughness than 
+the one grown at $485$\textdegree. Further we tested a sample with a 
+$\SI{30}{\nano\meter}$ AlAsSb layer during the GaSb layer, which was itself 
+reduced to $\SI{170}{\nano\meter}$. On the one hand we found even lower average 
+surface roughness. On the other hand we found single peaks in range from 
+$\SI{4}{\nano\meter}$ to $\SI{6}{\nano\meter}$ which were not removed from the 
+surface as it indicated previous publications \cite{murray}.\\
+Different kinds of artifacts were discussed and we showed the advantages and 
+risks of data preparation.
 
 % =============================================================================
 \begin{thebibliography}{}   
