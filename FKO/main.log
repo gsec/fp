@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.1)  16 OCT 2013 01:18
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2013.7.1)  16 OCT 2013 09:11
 entering extended mode
 **main.tex
 (D:\Git\F-Praktikum\FKO\main.tex
@@ -1585,7 +1585,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 159.
 Here is how much of TeX's memory you used:
  28602 strings out of 493921
  555358 string characters out of 3147274
- 614022 words of memory out of 3000000
+ 614023 words of memory out of 3000000
  31444 multiletter control sequences out of 15000+200000
  11565 words of font info for 45 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
