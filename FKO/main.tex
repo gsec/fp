@@ -55,8 +55,20 @@
 
 \section{Einleitung}
 
-Halbleiter spielen heutzutage eine wichtige Rolle in vielen technischen Anwendungen. Die Bandlücke, ein Energiebereich in dem es keine quantenmechanischen Zustände gibt, macht diese Materialklasse interessant für viele Anwendungen in der Elektronik und der Optoelektronik. Silizium zählt dabei zu den indirekten Halbleitern und ist ein wichtiger Bestandteil vieler Metall-Oxid-Halbleiter Bauelemente. Für optisch aktive Halbleiterbauelemente werden in der Regel Halbleiter mit einem direkten Bandübergang verwendet, um eine hohe Wechselwirkung der Elektronen mit Licht zu ermöglichen. Genau diese Wechselwirkung ist für viele Bereiche der Physik von großem Interesse. \\
-Ein etabliertes Werkzeug zur Charakterisierung von Halbleitern ist das Fourier-Transform-Infrarotspektrometers (FTIR). In diesem können Reflexions- und Transmissionsspektren einer Probe mit hoher Auflösung analysiert werden. Daraus lassen sich anschließend die Materialeigenschaften der Probe, wie komplexer Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen. 
+Halbleiter spielen heutzutage eine wichtige Rolle in vielen technischen 
+Anwendungen. Die Bandlücke, ein Energiebereich in dem es keine 
+quantenmechanischen Zustände gibt, macht diese Materialklasse interessant für 
+viele Anwendungen in der Elektronik und der Optoelektronik. Silizium zählt dabei 
+zu den indirekten Halbleitern und ist ein wichtiger Bestandteil vieler 
+Metall-Oxid-Halbleiter Bauelemente. Für optisch aktive Halbleiterbauelemente 
+werden in der Regel Halbleiter mit einem direkten Bandübergang verwendet, um 
+eine hohe Wechselwirkung der Elektronen mit Licht zu ermöglichen. Genau diese 
+Wechselwirkung ist für viele Bereiche der Physik von großem Interesse. \\
+Ein etabliertes Werkzeug zur Charakterisierung von Halbleitern ist das 
+Fourier-Transform-Infrarotspektrometers (FTIR). In diesem können Reflexions- und 
+Transmissionsspektren einer Probe mit hoher Auflösung analysiert werden. Daraus 
+lassen sich anschließend die Materialeigenschaften der Probe, wie komplexer 
+Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen. 
 
 % =============================================================================
 
@@ -70,13 +82,30 @@ Ein etabliertes Werkzeug zur Charakterisierung von Halbleitern ist das Fourier-T
 
 \section{Experimenteller Aufbau}
 
-Alle Reflexions und Transmissionsmessungen finden im einem  FTIR statt, das schematisch in \ref{ftir} dargestellt ist. Dabei wird das Licht, von einer Infrarot-Lichtquelle (Globar-Stab oder Wolfram-Lampe) durch ein Interferometer geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels. Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet. Diese Funktion beschreibt die Abhängigkeit der detektierten Intensität von der Spiegelposition und ist mathematisch eine Fouriertransformation des Frequenzspektrums. Im optischen Strahlengang kann nun der Teil der Intensität gemessen werden, der reflektiert bzw. transmittiert wird. Nach der Messung führt das FTIR die inverse Fouriertransformation aus und man erhält wieder die  Intensität in Abhängigkeit der Frequenz. Um den Einfluss der Probenreflexion und -transmission zu isolieren, wird zu jeder Messung eine Referenzmessung durchgeführt. Dies wird im Fall der Transmissionsmessung mit leerem Probenraum und im Fall der Reflexionsmessung mit einem Goldspiegel durchgeführt, der im untersuchten Frequenzbereich nahezu perfekt reflektiert.
-Untersucht werden vier verschiedene Proben (GaAs dotiert/undotiert und Si dotiert/undotiert), die Gasabsorption an Luft und das Rauschen des Spektrometers.
+Alle Reflexions und Transmissionsmessungen finden im einem  FTIR statt, das 
+schematisch in \ref{ftir} dargestellt ist. Dabei wird das Licht, von einer 
+Infrarot-Lichtquelle (Globar-Stab oder Wolfram-Lampe) durch ein Interferometer 
+geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels. 
+Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet. 
+Diese Funktion beschreibt die Abhängigkeit der detektierten Intensität von der 
+Spiegelposition und ist mathematisch eine Fouriertransformation des 
+Frequenzspektrums. Im optischen Strahlengang kann nun der Teil der Intensität 
+gemessen werden, der reflektiert bzw. transmittiert wird. Nach der Messung führt 
+das FTIR die inverse Fouriertransformation aus und man erhält wieder die  
+Intensität in Abhängigkeit der Frequenz. Um den Einfluss der Probenreflexion und 
+-transmission zu isolieren, wird zu jeder Messung eine Referenzmessung 
+durchgeführt. Dies wird im Fall der Transmissionsmessung mit leerem Probenraum 
+und im Fall der Reflexionsmessung mit einem Goldspiegel durchgeführt, der im 
+untersuchten Frequenzbereich nahezu perfekt reflektiert.
+Untersucht werden vier verschiedene Proben (GaAs dotiert/undotiert und Si 
+dotiert/undotiert), die Gasabsorption an Luft und das Rauschen des 
+Spektrometers.
 
 \begin{figure}
 \centering
     \includegraphics[width=0.4\textwidth]{Bilder/FTIR}
-    \caption{Aufbau des FTIR. Hauptbestandteile sind Lichtquelle, Interferometer, Probenhalter und Detektor.}
+    \caption{Aufbau des FTIR. Hauptbestandteile sind Lichtquelle, 
+    Interferometer, Probenhalter und Detektor.}
     \label{ftir}
 \end{figure}
 
@@ -92,23 +121,49 @@ Untersucht werden vier verschiedene Proben (GaAs dotiert/undotiert und Si dotier
 \section{Auswertung}
 
 \subsection{Gasabsorption in Luft}
-Am Anfang soll die Gasabsorption der Umgebungsluft untersucht werden. 
-Dazu verwenden wir die Globarquelle, die ein kontinuierliches Spektrum von $\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet. 
-Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption identifizieren lässt.
-In \ref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt. 
-Wir können jeweils zwei Bereiche der Absorption von Wasser (\ref{Luft2},\ref{Luft3}) und Kohlenstoffdioxid (\ref{Luft4},\ref{Luft5}) zuordnen. 
-Deutlich zu erkennen sich dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der Rotations-Schwingungs-Spektren.
+Am Anfang soll die Gasabsorption der Umgebungsluft untersucht werden.  Dazu 
+verwenden wir die Globarquelle, die ein kontinuierliches Spektrum von 
+$\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet.  
+Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen 
+Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption 
+identifizieren lässt.
+In \ref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
+jeweils zwei Bereiche der Absorption von Wasser (\ref{Luft2},\ref{Luft3}) und 
+Kohlenstoffdioxid (\ref{Luft4},\ref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
+dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
+Rotations-Schwingungs-Spektren.
 
 \subsection{Signal Rausch Verhältnis}
-Mit geringer Auflösung messen wir ohne eingebaute Probe das Spektrum der Globar-Quelle und normieren es auf eine zweite Messung mit gleichen Einstellungen. Diese Messung wiederholen wir mit $10$, $50$ und $100$ Spiegeldurchläufe (Scans) und untersuchen, wie das Rauschen mit zunehmender Anzahl an Scans abnimmt.\\
-Zur Auswertung wählen wir einen Bereich in dem die Intensität der einzelnen Spektren ausreichend hoch ist. Das heißt einen Bereich ohne Absorptionslinien in der Nähe der maximalen Intensität ($\SI{1000}{\per\centi\meter}$ bis $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \ref{snr} das Rauschen über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
+Mit geringer Auflösung messen wir ohne eingebaute Probe das Spektrum der 
+Globar-Quelle und normieren es auf eine zweite Messung mit gleichen 
+Einstellungen. Diese Messung wiederholen wir mit $10$, $50$ und $100$ 
+Spiegeldurchläufe (Scans) und untersuchen, wie das Rauschen mit zunehmender 
+Anzahl an Scans abnimmt.\\
+Zur Auswertung wählen wir einen Bereich in dem die Intensität der einzelnen 
+Spektren ausreichend hoch ist. Das heißt einen Bereich ohne Absorptionslinien in 
+der Nähe der maximalen Intensität ($\SI{1000}{\per\centi\meter}$ bis 
+$\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR 
+normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen 
+Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und 
+interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen 
+einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \ref{snr} das Rauschen 
+über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit 
+Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten 
+Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
 
 
 \subsection{Brechzahl von GaAs und Si}
-Die untersuchten Proben bestehen aus mehreren hundert Nanometer dicken Schichten.
-Untersucht man das Reflexionsspektrum dieser Schichten, so kommt es zwischen den Grenzflächen dieser Schichten zur Interferenz, die sich als Modulation im Reflexionsspektrum bemerkbar machen. 
-Wir bestimmen an verschiedenen Stellen im Spektrum jeweils den Abstand von $50$ Interferenzmaxima. Die Ablesegenauigkeit der Peaks nehmen wir mit $\SI{\pm 1}{\centi\meter^{-1}}$ an.
-Mit Hilfe der Probendicken (GaAs undotiert: $\SI{470}{\micro\meter}$, GaAs dotiert: $\SI{440}{\micro\meter}$, Si undotiert: $\SI{530}{\micro\meter}$) lässt sich nun der der Realteil des Brechungsindexes der verschiedenen Materialien an verschiedenen Stellen im Spektrum bestimmen.
+Die untersuchten Proben bestehen aus mehreren hundert Nanometer dicken 
+Schichten.
+Untersucht man das Reflexionsspektrum dieser Schichten, so kommt es zwischen den 
+Grenzflächen dieser Schichten zur Interferenz, die sich als Modulation im 
+Reflexionsspektrum bemerkbar machen.  Wir bestimmen an verschiedenen Stellen im 
+Spektrum jeweils den Abstand von $50$ Interferenzmaxima. Die Ablesegenauigkeit 
+der Peaks nehmen wir mit $\SI{\pm 1}{\centi\meter^{-1}}$ an.
+Mit Hilfe der Probendicken (GaAs undotiert: $\SI{470}{\micro\meter}$, GaAs 
+dotiert: $\SI{440}{\micro\meter}$, Si undotiert: $\SI{530}{\micro\meter}$) lässt 
+sich nun der der Realteil des Brechungsindexes der verschiedenen Materialien an 
+verschiedenen Stellen im Spektrum bestimmen.
 
 \begin{tabular}{ l | c c c }
   Wellen- & n & n&n\\
@@ -122,8 +177,9 @@ Mit Hilfe der Probendicken (GaAs undotiert: $\SI{470}{\micro\meter}$, GaAs dotie
   3000 & 3.263(28) & 3.284(27) & 3.394(35) \\
 \end{tabular}
 
-Die entsprechenden Dielektrizitätskonstanten ergeben sich aus dem Quadrat der komplexen Brechungsindizes, 
-zu deren Berechnung uns aber noch die Auswertung der Absorptionsmessung fehlt.
+Die entsprechenden Dielektrizitätskonstanten ergeben sich aus dem Quadrat der 
+komplexen Brechungsindizes, zu deren Berechnung uns aber noch die Auswertung der 
+Absorptionsmessung fehlt.
 
 \subsection{Reflexion und Transmission der Proben}
 
@@ -149,7 +205,8 @@ zu deren Berechnung uns aber noch die Auswertung der Absorptionsmessung fehlt.
 
 \bibitem{ansyco} http://www.ansyco.de/CMS
 
-\bibitem{chriscolose} http://chriscolose.wordpress.com/2010/03/02/global-warming-mapsgraphs-2/
+\bibitem{chriscolose} 
+http://chriscolose.wordpress.com/2010/03/02/global-warming-mapsgraphs-2/
 
 \bibitem{vineis} C.J. Vineis; C.A. Wang; K.F. Jensen (2001): In-situ reflectance 
 monitoring of GaSb substrate oxide desorption 2001.
@@ -159,7 +216,8 @@ Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination
 of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
 31 (3), S. 03C108. DOI: 10.1116/1.4792515.
   
-\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a stepped substrate. In: surface science letters.
+\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
+stepped substrate. In: surface science letters.
 
 \bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
