@@ -36,7 +36,9 @@
 \begin{abstract}      
 % =============================================================================
 \vspace{-2em}
-    \noindent {\small FKO abstact ... }
+    \noindent {\small Mit einem Fourietransformationsinfrarotspektrometer (FTIR) wurden zwei Galliumarsenid und Silizumproben untersucht. Deren Bandlücke wurde im undotierten Fall zu $E_{\mathrm{g,GaAs}} = \SI{1.384}{\eV}$ und $E_{\mathrm{g,SI}}=\SI{1.108}{\eV}$ bestimmt. Für die dotierten Proben wurden die Dotierkonzentrationen zu $N_{GaAs}=\SI{0.9e18}{\per\centi\meter^3}$ und $N_{Si}=\SI{1.1e18}{\per\centi\meter^3}$ berechnet. Im Falle des indirekten Interbandübergangs konnte bei Silizium die Energie der am Übergang beteiligten Phononen zu $\SI{48}{\milli\eV}$ bestimmt werden. Deutlich konnte der Einfluss der Gasabsorption von Wasser und Kohlenstoffdioxid in der Raumluft nachgewiesen werden.   
+    }
+
 \vspace{1em}
 
   \noindent Betreuer: Dr. Christoph Brüne
@@ -73,19 +75,6 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 % =============================================================================
 
 \section{Theorie}
-\begin{itemize}
-\item 6. Bandlücke und Impulsmatrixelemente
-\item 7. Bandlücke und charakteristische Phononenfrequenz für Si
-\item 8. Beitrag der freien Ladungsträger zur Reflexion
-\item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
-\end{itemize}
-
-
-\begin{itemize}
-\item Zusammenhang Dielektrizitätskonstante und komplexer Brechungsindex
-\item Impulsmatrixelement
-\end{itemize}
-
 In diesem Abschnitt werden die wichtigsten Zusammenhänge die für die spätere 
 Betrachtung nötig sind vorstellen. Dabei orientieren wir uns, soweit nicht 
 anders angegeben, an \cref{fko-theorie}.
@@ -374,18 +363,20 @@ Die Ergebnisse sind in Tabelle \ref{ime} dargestellt.
 
 \begin{table}
 	\begin{center}
-\begin{tabular}{ l | c c }
-  Material & Bandlücke/ $\SI{}{\eV}$ & Impulsmatrixelement\\
+\begin{tabular}[r]{ l | c c }
+			&Bandlücke/ $\SI{}{\eV}	$		&Impulsmatrixelement/\\
+  GaAs &  & $10^{-25}$ kg m/s\\
   \hline
-  GaAs undotiert & 1.384(1) & 1.73(1) \\
-  GaAs dotiert & 1.3591(5) & 1.59(3)   
+  undotiert & 1.384(1) & 1.73(1) \\
+ dotiert & 1.3591(5) & 1.59(3)   
 \end{tabular}
 \caption{Ermittelte Werte für die Bandlücke von Galliumarsenid und entsprechende Impulsmatrixelement.}
   \label{ime}  
 	\end{center}
 \end{table}
+
 Die von uns bestimmte Bandlücke von GaAs liegt mit $\SI{1.384}{\eV}$ um $\SI{50}{\milli\eV}$ unterhalb des Literaturwertes von 1.43 eV (bei $\SI{300}{\K}$). Der Grund liegt in der Aufweichung der Bandkante, dem sogenannten Urbachtail, der die Einflüsse von
-Exzitonen, Phononen, Verunreinigungen und Defekte sowie die Dotierungen im Material berücksichtigt. 
+Exzitonen, Phononen, Verunreinigungen und Defekte sowie die Dotierungen im Material berücksichtigt. Im Vergleich können wir erkennen, dass die Dotierung in unseren Proben zu einer Absenkung der Bandlücke führt.
 
 \subsection{Bandlücke und charakteristische Phononenfrequenz für Silizium}
 
@@ -413,9 +404,15 @@ der den Beitrag der Phononenabsorption und \mbox{-emission} beschreibt. Die theo
 Um den Fehler der ermittelten Werte abzuschätzen, haben wir wie in vorherigen Abschnitt die Parameter der Bandlücke und der Phononenenergie variiert und so einen Bereich ermittelt, in dem die theoretische Absorption noch gut das Experiment beschreibt.
 Die Ermittelte Bandlücke von Silizium stimmt gut mit dem Literaturwert von $\SI{1.11}{\eV}$ \cite{kittel} (bei $\SI{300}{\K}$) überein.
 
+\subsection{Beitrag der freien Ladungsträger zur Reflexion}
 
+Um den Beitrag der freien Ladungsträger zur Reflektivität nachvollziehen zu können, plotten wir in \cref{DrudeRef} die Reflektivität im Drudemodell in Abhängigkeit der Wellenzahl für verschiedene Streuzeiten. Wir sehen für hohe Streuzeiten eine Reflektivität von nahezu $1$. An der Plasmakante bei $ w_p^2=\frac{N e^2}{\epsilon_0 m^*}$ fällt dann die Reflektivität asymptotisch auf null ab. Dies kann verstanden werden  wenn man die dielektrische Funktion betrachtet, die an der Plasmakante eine Nullstelle aufweist. Oberhalb und unterhalb der Plasmakante wechselwirkt die äußere elektromagnetische Welle sehr unterschiedlich mit dem Material und kann sich dadurch entweder im Material ausbreiten ($\epsilon > 0$) oder wird absorbiert ($\epsilon < 0$). Überhalb dieser Plasmakante schwingt das elektrische Feld schneller. Die Elektronen werden nur kurz durch das äußere Feld in eine Richtung beschleunigt und nehmen dadurch nur wenig Energie auf. Dadurch wechselwirkt die elektromagnetische Welle
+nur wenig mit dem Material und kann dieses ungehindert durchdringen. Unterhalb werden die Elekronen lange in eine Richtung beschleunigt und nehmen viel Energie. Dies ist besonders dann effektiv, wenn die Elektronen wenig streuen, also lange Streuzeiten besitzen. In diesem Fall dringt die elektromagnetische Welle nur wenig in das Material ein und ein Großteil der Welle wird Reflektiert.
+
+Im Halbleiter spielen sich grundsätzlich ähnliche Prozesse ab. Die wesentlichen Unterschiede hierbei sind jedoch, dass die Hintergrundsdielektrische-Funktion größer als $1$ ist, die Elektronen effektive Massen besitzen, die in unterschiedliche Raumrichtungen unterschiedlich groß sein können und dass das Gitter einen wesentlichen Beitrag zur dielektrischen Funktion spielen kann. In \ref{RefHalbleiter} ist zum Vergleich mit den Drudemodell eine Simulation mit $\epsilon_\infty=3.22^2$, einer effektiven Masse von $0.067m_e$ und einem Einfluss des Atomgitters geplottet.
+
+%\text{$\epsilon $($\omega $) = }\epsilon _s+i\frac{\sigma (\omega )}{\omega \epsilon _0}
 \begin{itemize}
-\item 8. Beitrag der freien Ladungsträger zur Reflexion
 \item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
 \end{itemize}
 
@@ -451,10 +448,12 @@ verwendet.
 % =============================================================================
 
 \subsection{Zusammenfassung}
-\begin{itemize}
-\item Zusammenfassung
-\end{itemize}
 
+Während des Festkörperoptik-Experimentes konnten mit Hilfe eines FTIR-Spektrometer bequem verschiedene Halbleiterproben untersuchen. Zuerst konnten wir ein hochauflösendes Spektrum einer Globar-Lampe aufnehmen und innerhalb dieses Spektrum deutlich die Absorptionslinien von Kohlenstoffdioxid und Wasser nachweisen und im Fall von Kohlenstoffdioxid sogar einzelne Rotations-Schwingungsübergänge auflösen.
+Anschließend wurde das Signal zu Rausch-Verhältnis untersucht und nachgewiesen, dass das Rauschen mit $1/\sqrt{N}$ mit der Anzahl der Spiegeldurchläufe zusammenhängt.\\
+Bei der Untersuchung von Galliumarsenid und Silizium-Proben wurden aus den Relfexions und Tranmissionsspektren aufgenommen. Durch Anfitten von theoretischen Daten konnte die dielektrische Funktion bestimmt und daraus der Brechungsindex berechnet werden.
+Eine gesonderte Betrachtung der der Interbandanregung ermöglichte es die Bandlücke des  GaAs und des undotierten Si zu bestimmen. Wir erhielten für GaAs undotiert $\SI{1.384}{\eV}$ und für GaAs dotiert $\SI{1.36}{\eV}$. Für Silizium, dass eine indirekte Bandlücke besitzt, musste der Einfluss der Phononen angefittet werden. Wir errechneten die Bandlücke von undotiertem Silizium in Übereinstimmung zu $\SI{1.108}{\eV}$. Die Energie der an diesem Prozess beteiligen Phononen wurde auf $\SI{48}{\milli\eV}$ bestimmt. Der Beitrag der freien Ladungsträger wurde in Metallen und in Halbleitern diskutiert und die wesentlichen Unterschiede aufgezeigt. Als letztes konnten durch Anfitten der Reflektivitäten um die Plasmakante die Leitfähigkeitsmassen, die Stromrelaxationszeiten und die Dotierkonzentrationen bestimmt werden. Für Galliumarsenid bestimmten wir eine Dotierkonzentration von $n_e=\SI{0.9e18}{\per\centi\meter^3}$, eine Stomrelaxationszeit von $\tau=\SI{0.1}{\pico\second}$ und einer effektiven Elektronenmasse von $0.06m_e$. Die Dotierkonzentration der Siliziumprobe unterschied sich mit $n_e=\SI{1.1e18}{\per\centi\meter^3}$ nur wenig. Dagegen lagen die Stomrelaxationszeit von $\tau=\SI{0.0095}{\femto\second}$ und die effektive Masse von $0.0055m_e$ deutlich unterhalb der Werte in Galliumarsenid.\\
+Insgesamt konnten die deutlichen Unterschiede der beiden Halbleiterarten sowie der Dotierkonzentrationen erkannt und deren Auswirkungen erklärt werden.
 % =============================================================================
 \begin{thebibliography}{}   
 % =============================================================================
@@ -468,19 +467,6 @@ http://chriscolose.wordpress.com/2010/03/02/global-warming-mapsgraphs-2/
 
 \bibitem{kittel} Kittel, C., Introduction to Solid State Physics, 6th Ed., New York:John Wiley, 1986, p. 185. 
 
-
-
-
-
-\bibitem{murray} Murray, Lee M.; Yildirim, Asli; Provence, Sydney R.; Norton, 
-Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination 
-of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B 
-31 (3), S. 03C108. DOI: 10.1116/1.4792515.
-  
-\bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
-stepped substrate. In: surface science letters.
-
-\bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
 
 \end{document}
