@@ -97,6 +97,7 @@ Diese hängt mit dem komplexen Brechungsindex zusammen:
     \sqrt{\epsilon}=n+i\kappa \\
     \epsilon'=n^2-\kappa^2 \\
     \epsilon''=2n\kappa
+    \label{diel}
 \end{align}
 
 \subsection{Reflexion und Transmission}
@@ -242,11 +243,45 @@ $\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet.
 Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen 
 Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption 
 identifizieren lässt.
-In \cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
+In Abbildung \ref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
 jeweils zwei Bereiche der Absorption von Wasser (\cref{Luft2},\cref{Luft3}) und 
 Kohlenstoffdioxid (\cref{Luft4},\cref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
 dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
 Rotations-Schwingungs-Spektren.
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/Luft1}
+		\caption{Normierte Intensität der Globar-Quelle. Deutlich zu erkennen sind das Absoprtionsspektrum vom Kohlenstoffdioxid in rot und Wasser in blau. }
+		\label{Luft1}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/Luft2}
+        \caption{CO2-Absorptionslinien}
+        \label{Luft2}
+    \end{subfigure}
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/Luft3}
+        \caption{CO2-Absorptionslinien}
+        \label{Luft3}
+    \end{subfigure}
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/Luft4}
+        \caption{Wasser-Absorptionslinien}
+        \label{Luft4}
+    \end{subfigure}
+        \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/Luft5}
+        \caption{Wasser-Absorptionslinien}
+        \label{Luft5}
+    \end{subfigure}
+    \caption{Die stärksten Absorptionslinien im Spektrum sind Wasser- und Kohlenstoffdioxid-Absorptionslinien. Bei den Absorptionslinien von CO2 ist die typische Form der Rotations-Schwingungs-Spektren zu erkennen.}
+    \label{brechzahlen}
+\end{figure}
 
 \subsection{Signal Rausch Verhältnis}
 Mit geringer Auflösung messen wir ohne eingebaute Probe das Spektrum der 
@@ -254,18 +289,34 @@ Globar-Quelle und normieren es auf eine zweite Messung mit gleichen
 Einstellungen. Diese Messung wiederholen wir mit $10$, $50$ und $100$ 
 Spiegeldurchläufe (Scans) und untersuchen, wie das Rauschen mit zunehmender 
 Anzahl an Scans abnimmt.\\
-Zur Auswertung wählen wir einen Bereich in dem die Intensität der einzelnen 
+Die Rauschniveaus sind in Abbildung \ref{snr} geplottet und nehmen merklich mit längerer Messzeit ab.Zur Auswertung wählen wir einen Bereich in dem die Intensität der einzelnen 
 Spektren ausreichend hoch ist. Das heißt einen Bereich ohne Absorptionslinien in 
 der Nähe der maximalen Intensität ($\SI{1000}{\per\centi\meter}$ bis 
 $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR 
 normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen 
 Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und 
 interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen 
-einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \cref{snr} das Rauschen 
+einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \cref{snr3} das Rauschen 
 über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit 
 Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten 
 Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
+Da systematisch Fehler bei unserer Messmethode wegnormiert werden, sollten die Punkte Standardabweichung über $1/\sqrt{N}$ auf einer Ursprungsgeraden liegen. Zwar ist die Tendenz der abnehmenden Standardabweichung deutlich zu erkennen, die Messpunkte lassen sich aber knapp nicht im Rahmen ihrer Fehler mit einer Ursprungsgerade fitten.
 
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/Rausch}
+		\caption{Rauschniveaus von drei Messungen mit unterschiedlicher Messzeit. $N=10$ in rot, $N=50$ in grün und $N=100$ in blau. Die Datenpunkte wurden zur besseren Sichtbarkeit auf der $y$-Achse verschoben. }
+		\label{snr}
+	\end{center}
+\end{figure}
+
+\begin{figure}[htp]
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/Rausch3}
+		\caption{Rauschniveaus von drei Messungen mit unterschiedlicher Messzeit. $N=10$ in rot, $N=50$ in grün und $N=100$ in blau. Die Datenpunkte wurden zur besseren Sichtbarkeit auf der $y$-Achse verschoben. }
+		\label{snr3}
+	\end{center}
+\end{figure}
 
 \subsection{Brechzahl von GaAs und Si}
 Die untersuchten Proben bestehen aus mehreren hundert Nanometer dicken 
@@ -279,8 +330,8 @@ Mit Hilfe der Probendicken lässt sich nun der der Realteil des Brechungsindexes
 der verschiedenen Materialien an verschiedenen Stellen im Spektrum bestimmen.
 
 \begin{tabular}{ l | c c c }
-  Wellen- & n & n&n\\
-  zahl & GaAs undotiert & GaAs dotiert & Si undotiert \\
+  Wellen- & n (GaAs) & n(GaAs)&n(Si)\\
+  zahl & undotiert & dotiert & undotiert \\
   \hline
   500 & 3.452(32) & - & 3.343(34) \\
   1000 & 3.245(28) & - & 3.348(34) \\
@@ -291,7 +342,7 @@ der verschiedenen Materialien an verschiedenen Stellen im Spektrum bestimmen.
 \end{tabular}
 
 Die entsprechenden Dielektrizitätskonstanten ergeben sich aus dem Quadrat der 
-komplexen Brechungsindizes, die jedoch mit dieser nicht bestimmt werden können.
+komplexen Brechungsindizes, die jedoch mit dieser Methode nicht bestimmt werden können.
 
 \subsection{Reflexion und Transmission der Proben}
 
@@ -346,10 +397,10 @@ stark zunimmt. Der Grund dafür liegt in der Anzahl der Zustände, die oberhalb
 der Bandlücke einen Übergang ermöglichen. Im idealisierten Modell nimmt dabei 
 die Zustandsdichte im dreidimensionalen System wurzelförmig zu und immer mehr 
 Lorentzoszillatoren tragen zur Erhöhung des Absorptionskoeffizient bei.\\
-Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen 
-berechnen wir zunächst aus \cref{??} den Imaginärteil $\epsilon^{``}$ des 
+Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen, 
+berechnen wir zunächst aus \cref{diel} den Imaginärteil $\epsilon^{``}$ des 
 undotierten und dotierten GaAs. Nun tragen wir $(\epsilon^{``}\cdot \omega^2)^2$ 
-über die Anregungswellenzahl inTabelle \ref{??} auf. Der theoretische Verlauf 
+über die Anregungswellenzahl in Abbildung \ref{??} auf. Der theoretische Verlauf 
 dieser Funktion oberhalb der Bandlücke entspricht dabei
 
 \begin{align}
@@ -361,7 +412,8 @@ Wir plotten zu dem Messpunkten eine theoretische Kurve, die unserer Meinung nach
 die Steigung nach dem Knick am besten wiedergibt und die Messpunkte etwa am 
 steilsten Punkt tangentiert. Zu dieser Kurve plotten wir zwei Hilfsfunktionen, 
 die die Messdaten etwas weiter ober und unten tangentieren, um eine Abschätzung 
-der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten.
+der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten. In allen 
+folgenden Auswertung verwenden wir die Methode, die Fit-Paramtern wie hier leichtim Rahmen der experimentellen Daten zu variieren und damit den Fehler abzuschätzen.
 Die Ergebnisse sind in Tabelle \ref{ime} dargestellt.
 
 \begin{table}
@@ -422,11 +474,7 @@ aufgelistet.
     \end{center}
 \end{table}
 
-Um den Fehler der ermittelten Werte abzuschätzen, haben wir wie in vorherigen 
-Abschnitt die Parameter der Bandlücke und der Phononenenergie variiert und so 
-einen Bereich ermittelt, in dem die theoretische Absorption noch gut das 
-Experiment beschreibt. Diese Methode wird auch in der folgenden Auswertung von 
-Fit-Paramtern benutzt. Die Ermittelte Bandlücke von Silizium stimmt gut mit dem 
+Die Ermittelte Bandlücke von Silizium stimmt gut mit dem 
 Literaturwert von $\SI{1.11}{\eV}$ \cite{kittel} (bei $\SI{300}{\K}$) überein.
 
 \subsection{Beitrag der freien Ladungsträger zur Reflexion}
