@@ -75,8 +75,32 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 \section{Theorie}
 \begin{itemize}
 \item Zusammenhang Dielektrizitätskonstante und komplexer Brechungsindex
-\item Reflexion an Schichten mit und ohne Interferenz
+\item Impulsmatrixelement
 \end{itemize}
+Trifft Licht auf die Grenzfläche zwischen zwei unterschiedlichen Materialien, so wird ein gewisser Anteil der Intensität reflektiert. Ein anderer Teil des Lichtes gelangt in die Probe und kann dort absorbiert werden. Licht was nicht reflektiert oder absorbiert wird, verlässt die Probe als transmittiertes Licht wieder. Für die drei Koeffizienten diese drei Prozesse gilt deshalb
+
+\begin{align}
+    R+A+T=1.
+\end{align}
+
+Dabei sind die Koeffizienten eindeutig durch den komplexen Brechungsindex der Materialien festgelegt. Luft besitzt einen Brechungsindex von annähernd $1$.
+Die Fresnelschen Formeln, die den Übergang des Lichtes von einem Medium in ein anderes beschreiben, vereinfachen sich bei senkrechtem Einfall deutlich. Man erhält für den Reflexionskoeffizienten
+
+\begin{align}
+    R=(\frac{1-N_2}{1+N_2})^2.
+\end{align}
+
+und für den Transmissionskoeffizienten 
+
+\begin{align}
+    T=(\frac{2}{1+N_2})^2.
+\end{align}
+
+
+Für den Übergang von Luft in ein anderes Medium werden die Koeffizienten 
+
+
+
 
 % =============================================================================
 
@@ -185,8 +209,34 @@ Absorptionsmessung fehlt.
 
 \subsection{Brechzahlen, Extinktions- und Absorptionskoeffizienten}
 
+
+\subsection{Bandlücke und Impulsmatrixelemente}
+
+Erhöht man die Energie, ausgehend von einer Wellenzahl unterhalb der Bandlücke, über die Energie der Bandlücke, so findet man, dass der Absorptionskoeffizient stark zunimmt. Der Grund dafür liegt in der Anzahl der Zustände, die oberhalb der Bandlücke einen Übergang ermöglichen. Im idealisierten Modell nimmt dabei die Zustandsdichte im dreidimensionalen System wurzelförmig zu und immer mehr Lorentzoszillatoren tragen zur Erhöhung des Absorptionskoeffizient bei.\\
+Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen berechnen wir zunächst aus \cref{??} den Imaginärteil $\epsilon^{``}$ des undotierten und dotierten GaAs. Nun tragen wir $(\epsilon^{``}\cdot \omega^2)^2$ über die Anregungswellenzahl in \cref{??} auf. Der theoretische Verlauf dieser Funktion oberhalb der Bandlücke entspricht dabei
+
+\begin{align}
+   (\epsilon^{``}\cdot \omega^2)^2=\frac{e^4 (2\mu)^3 |p_{cv}|^4}{\epsilon_0^2 m_e^4 \hbar^2} \cdot (\hbar \omega - E_g)
+\end{align}
+
+Wir plotten zu dem Messpunkten eine theoretische Kurve, die unserer Meinung nach die Steigung nach dem Knick am besten wiedergibt und die Messpunkte etwa am steilsten Punkt tangentiert. Zu dieser Kurve plotten wir zwei Hilfsfunktionen, die die Messdaten etwas weiter ober und unten tangentieren um eine Abschätzung der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten.
+Die Ergebnisse sind in \cref{} dargestellt.
+
+\begin{tabular}{ l | c c }
+  Material & Bandlücke/ $\SI{}{\eV}$ & Impulsmatrixelement\\
+  \hline
+  GaAs undotiert & 1.384(1) & 1.73(1) \\
+  GaAs dotiert & 1.3591(5) & 1.59(3) \\
+\end{tabular}
+
+Vergleich mit Literatur
+
+
 \begin{itemize}
 \item 6. Bandlücke und Impulsmatrixelemente
+Auflösung des Spektrometers
+Urbachtail 
+Banddispersion
 \item 7. Bandlücke und charakteristische Phononenfrequenz für Si
 \item 8. Beitrag der freien Ladungsträger zur Reflexion
 \item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
