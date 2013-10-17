@@ -103,8 +103,8 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 Alle Reflexions und Transmissionsmessungen finden im einem  FTIR statt, das 
 schematisch in \cref{ftir} dargestellt ist. Dabei wird das Licht, von einer 
 Infrarot-Lichtquelle (Globar-Stab oder Wolfram-Lampe) durch ein Interferometer 
-geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels. 
-Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet. 
+geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels.  
+Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet.  
 Diese Funktion beschreibt die Abhängigkeit der detektierten Intensität von der 
 Spiegelposition und ist mathematisch eine Fouriertransformation des 
 Frequenzspektrums. Im optischen Strahlengang kann nun der Teil der Intensität 
@@ -115,9 +115,27 @@ Intensität in Abhängigkeit der Frequenz. Um den Einfluss der Probenreflexion u
 durchgeführt. Dies wird im Fall der Transmissionsmessung mit leerem Probenraum 
 und im Fall der Reflexionsmessung mit einem Goldspiegel durchgeführt, der im 
 untersuchten Frequenzbereich nahezu perfekt reflektiert.
-Untersucht werden vier verschiedene Proben (GaAs dotiert/undotiert und Si 
-dotiert/undotiert), die Gasabsorption an Luft und das Rauschen des 
-Spektrometers.
+Untersucht werden verschiedene Proben, die Gasabsorption an Luft und das 
+Rauschen des Spektrometers.
+
+Folgende Proben standen uns zur Verfügung:
+
+\begin{tabular}{l | l c }
+        Probe & Material & Schichtdicke   \\
+        \hline
+       \texttt{Sample \circled{1}} & GaAs undotiert & \SI{470}{\micro\meter} \\
+       \texttt{Sample \circled{2}} & GaAs dotiert   & \SI{440}{\micro\meter} \\
+       \texttt{Sample \circled{3}} & Si undotiert   & \SI{530}{\micro\meter} \\
+       \texttt{Sample \circled{4}} & Si dotiert     & \SI{530}{\micro\meter} \\
+    %\hline
+    %lk  \\
+    %& \SI{470}{\micro\meter} 
+    %& \SI{440}{\micro\meter} 
+    %& \SI{530}{\micro\meter} 
+    %& \SI{530}{\micro\meter}  
+
+
+\end{tabular}
 
 \begin{figure}
 \centering
@@ -126,6 +144,7 @@ Spektrometers.
     Interferometer, Probenhalter und Detektor.}
     \label{ftir}
 \end{figure}
+
 
 % =============================================================================
 
@@ -145,10 +164,10 @@ $\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet.
 Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen 
 Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption 
 identifizieren lässt.
-In \cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
-jeweils zwei Bereiche der Absorption von Wasser (\cref{Luft2},\cref{Luft3}) und 
-Kohlenstoffdioxid (\cref{Luft4},\cref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
-dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
+In cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
+jeweils zwei Bereiche der Absorption von Wasser (cref{Luft2},cref{Luft3}) und 
+Kohlenstoffdioxid (cref{Luft4},cref{Luft5}) zuordnen.  Deutlich zu erkennen 
+sich dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
 Rotations-Schwingungs-Spektren.
 
 \subsection{Signal Rausch Verhältnis}
@@ -164,7 +183,7 @@ $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR
 normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen 
 Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und 
 interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen 
-einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \cref{snr} das Rauschen 
+einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in cref{snr} das Rauschen 
 über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit 
 Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten 
 Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
@@ -204,7 +223,7 @@ Absorptionsmessung fehlt.
 \subsection{Brechzahlen, Extinktions- und Absorptionskoeffizienten}
 
 Das OPUS Programm liefert uns eine Tabelle indem für die einzelnen Messungen das 
-Spektrum als x-y-List repräsentiert wird. Um einen größeren Frequenzbereich 
+Spektrum als 2-Tupel von Intensität und Wellenzahl repräsentiert wird. Um einen größeren Frequenzbereich 
 abzudecken, wurde bei der Messung jeweils ein Spektrum mit einem Globar-Stab und 
 einer Wolfram Lampe durchgeführt. Aus den beiden Spektren der jeweiligen Probe, 
 wird das Spektrum, welches zur weiteren Untersuchung benutzt wird, 
