@@ -93,8 +93,32 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 
 \begin{itemize}
 \item Zusammenhang Dielektrizitätskonstante und komplexer Brechungsindex
-\item Reflexion an Schichten mit und ohne Interferenz
+\item Impulsmatrixelement
 \end{itemize}
+Trifft Licht auf die Grenzfläche zwischen zwei unterschiedlichen Materialien, so wird ein gewisser Anteil der Intensität reflektiert. Ein anderer Teil des Lichtes gelangt in die Probe und kann dort absorbiert werden. Licht was nicht reflektiert oder absorbiert wird, verlässt die Probe als transmittiertes Licht wieder. Für die drei Koeffizienten diese drei Prozesse gilt deshalb
+
+\begin{align}
+    R+A+T=1.
+\end{align}
+
+Dabei sind die Koeffizienten eindeutig durch den komplexen Brechungsindex der Materialien festgelegt. Luft besitzt einen Brechungsindex von annähernd $1$.
+Die Fresnelschen Formeln, die den Übergang des Lichtes von einem Medium in ein anderes beschreiben, vereinfachen sich bei senkrechtem Einfall deutlich. Man erhält für den Reflexionskoeffizienten
+
+\begin{align}
+    R=(\frac{1-N_2}{1+N_2})^2.
+\end{align}
+
+und für den Transmissionskoeffizienten 
+
+\begin{align}
+    T=(\frac{2}{1+N_2})^2.
+\end{align}
+
+
+Für den Übergang von Luft in ein anderes Medium werden die Koeffizienten 
+
+
+
 
 % =============================================================================
 
@@ -103,8 +127,8 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 Alle Reflexions und Transmissionsmessungen finden im einem  FTIR statt, das 
 schematisch in \cref{ftir} dargestellt ist. Dabei wird das Licht, von einer 
 Infrarot-Lichtquelle (Globar-Stab oder Wolfram-Lampe) durch ein Interferometer 
-geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels.  
-Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet.  
+geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels. 
+Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet. 
 Diese Funktion beschreibt die Abhängigkeit der detektierten Intensität von der 
 Spiegelposition und ist mathematisch eine Fouriertransformation des 
 Frequenzspektrums. Im optischen Strahlengang kann nun der Teil der Intensität 
@@ -145,7 +169,6 @@ Folgende Proben standen uns zur Verfügung:
     \label{ftir}
 \end{figure}
 
-
 % =============================================================================
 
 \section{Versuchsdurchführung}
@@ -164,10 +187,10 @@ $\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet.
 Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen 
 Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption 
 identifizieren lässt.
-In cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
-jeweils zwei Bereiche der Absorption von Wasser (cref{Luft2},cref{Luft3}) und 
-Kohlenstoffdioxid (cref{Luft4},cref{Luft5}) zuordnen.  Deutlich zu erkennen 
-sich dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
+In \cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
+jeweils zwei Bereiche der Absorption von Wasser (\cref{Luft2},\cref{Luft3}) und 
+Kohlenstoffdioxid (\cref{Luft4},\cref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
+dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
 Rotations-Schwingungs-Spektren.
 
 \subsection{Signal Rausch Verhältnis}
@@ -183,7 +206,7 @@ $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR
 normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen 
 Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und 
 interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen 
-einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in cref{snr} das Rauschen 
+einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \cref{snr} das Rauschen 
 über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit 
 Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten 
 Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
@@ -261,6 +284,38 @@ welche in \cref{brechzahlen} aufgetragen sind.
     \texttt{Sample 3} $\rightarrow$ \text{blau}}
     \label{brechzahlen}
 \end{figure}
+
+\subsection{Bandlücke und Impulsmatrixelemente}
+
+Erhöht man die Energie, ausgehend von einer Wellenzahl unterhalb der Bandlücke, über die Energie der Bandlücke, so findet man, dass der Absorptionskoeffizient stark zunimmt. Der Grund dafür liegt in der Anzahl der Zustände, die oberhalb der Bandlücke einen Übergang ermöglichen. Im idealisierten Modell nimmt dabei die Zustandsdichte im dreidimensionalen System wurzelförmig zu und immer mehr Lorentzoszillatoren tragen zur Erhöhung des Absorptionskoeffizient bei.\\
+Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen berechnen wir zunächst aus \cref{??} den Imaginärteil $\epsilon^{``}$ des undotierten und dotierten GaAs. Nun tragen wir $(\epsilon^{``}\cdot \omega^2)^2$ über die Anregungswellenzahl in \cref{??} auf. Der theoretische Verlauf dieser Funktion oberhalb der Bandlücke entspricht dabei
+
+\begin{align}
+   (\epsilon^{``}\cdot \omega^2)^2=\frac{e^4 (2\mu)^3 |p_{cv}|^4}{\epsilon_0^2 m_e^4 \hbar^2} \cdot (\hbar \omega - E_g)
+\end{align}
+
+Wir plotten zu dem Messpunkten eine theoretische Kurve, die unserer Meinung nach die Steigung nach dem Knick am besten wiedergibt und die Messpunkte etwa am steilsten Punkt tangentiert. Zu dieser Kurve plotten wir zwei Hilfsfunktionen, die die Messdaten etwas weiter ober und unten tangentieren um eine Abschätzung der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten.
+Die Ergebnisse sind in \cref{} dargestellt.
+
+\begin{tabular}{ l | c c }
+  Material & Bandlücke/ $\SI{}{\eV}$ & Impulsmatrixelement\\
+  \hline
+  GaAs undotiert & 1.384(1) & 1.73(1) \\
+  GaAs dotiert & 1.3591(5) & 1.59(3) \\
+\end{tabular}
+
+Vergleich mit Literatur
+
+
+\begin{itemize}
+\item 6. Bandlücke und Impulsmatrixelemente
+Auflösung des Spektrometers
+Urbachtail 
+Banddispersion
+\item 7. Bandlücke und charakteristische Phononenfrequenz für Si
+\item 8. Beitrag der freien Ladungsträger zur Reflexion
+\item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
+\end{itemize}
 % =============================================================================
 
 \subsection{Zusammenfassung}
@@ -288,7 +343,7 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 \bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
 stepped substrate. In: surface science letters.
 
-\bibitem{nanotec} http//www.nanotec.es/products/wsxm/download.php. 
+\bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
 
 \end{document}
