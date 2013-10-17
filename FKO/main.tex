@@ -73,6 +73,24 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 % =============================================================================
 
 \section{Theorie}
+\begin{align}
+    \text{transmission}= & \frac{(1-\rho)^2 \exp(-d\beta \nu )}{1-\rho^2 \exp 
+    (-2d\beta\nu)} \\
+    \text{reflexion}= & \rho+\frac{\rho (1-\rho)^2 \exp (-2 d \beta (\nu 
+    ))}{1-\rho^2 \exp(-2 d \beta \nu )}\\
+    \text{wobei } \beta= & 4 \pi  \nu  \left| \kappa \right|
+    \text{ und }\rho= \frac{\kappa ^2+(n-1)^2}{\kappa ^2+(n+1)^2}
+    \label{trans}
+\end{align}
+
+\begin{itemize}
+\item 6. Bandlücke und Impulsmatrixelemente
+\item 7. Bandlücke und charakteristische Phononenfrequenz für Si
+\item 8. Beitrag der freien Ladungsträger zur Reflexion
+\item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
+\end{itemize}
+
+
 \begin{itemize}
 \item Zusammenhang Dielektrizitätskonstante und komplexer Brechungsindex
 \item Reflexion an Schichten mit und ohne Interferenz
@@ -83,7 +101,7 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 \section{Experimenteller Aufbau}
 
 Alle Reflexions und Transmissionsmessungen finden im einem  FTIR statt, das 
-schematisch in \ref{ftir} dargestellt ist. Dabei wird das Licht, von einer 
+schematisch in \cref{ftir} dargestellt ist. Dabei wird das Licht, von einer 
 Infrarot-Lichtquelle (Globar-Stab oder Wolfram-Lampe) durch ein Interferometer 
 geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels. 
 Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet. 
@@ -127,9 +145,9 @@ $\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet.
 Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen 
 Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption 
 identifizieren lässt.
-In \ref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
-jeweils zwei Bereiche der Absorption von Wasser (\ref{Luft2},\ref{Luft3}) und 
-Kohlenstoffdioxid (\ref{Luft4},\ref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
+In \cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
+jeweils zwei Bereiche der Absorption von Wasser (\cref{Luft2},\cref{Luft3}) und 
+Kohlenstoffdioxid (\cref{Luft4},\cref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
 dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
 Rotations-Schwingungs-Spektren.
 
@@ -146,7 +164,7 @@ $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR
 normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen 
 Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und 
 interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen 
-einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \ref{snr} das Rauschen 
+einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \cref{snr} das Rauschen 
 über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit 
 Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten 
 Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
@@ -185,13 +203,18 @@ Absorptionsmessung fehlt.
 
 \subsection{Brechzahlen, Extinktions- und Absorptionskoeffizienten}
 
-\begin{itemize}
-\item 6. Bandlücke und Impulsmatrixelemente
-\item 7. Bandlücke und charakteristische Phononenfrequenz für Si
-\item 8. Beitrag der freien Ladungsträger zur Reflexion
-\item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
-\end{itemize}
-
+Das OPUS Programm liefert uns eine Tabelle indem für die einzelnen Messungen das 
+Spektrum als x-y-List repräsentiert wird. Um einen größeren Frequenzbereich 
+abzudecken, wurde bei der Messung jeweils ein Spektrum mit einem Globar-Stab und 
+einer Wolfram Lampe durchgeführt. Aus den beiden Spektren der jeweiligen Probe, 
+wird das Spektrum, welches zur weiteren Untersuchung benutzt wird, 
+zusammengesetzt. Dabei wurden versucht, starke Oszillationen zu vermeiden. Diese 
+treten auf, wenn die Intensität der Lampe in einem Frequenzbereich gering ist, 
+und bei der Normierung das Rauschen einen erheblichen Beitrag zum Signal 
+leistet. Auch wurde versucht die Stetigkeit des Spektrums zu erhalten. Um das 
+Rauschen zu mininieren wurde eine Glättung durchgeführt und die resultierenden 
+Punkte zu einer Funktion interpoliert. Diese wurden dann mit folgenden 
+entsprechenden theoretischen Formeln verglichen:
 % =============================================================================
 
 \subsection{Zusammenfassung}
