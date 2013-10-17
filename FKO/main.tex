@@ -243,31 +243,58 @@ entsprechenden theoretischen Formeln verglichen:
 \subsection{Bandlücke und Impulsmatrixelemente}
 
 Erhöht man die Energie, ausgehend von einer Wellenzahl unterhalb der Bandlücke, über die Energie der Bandlücke, so findet man, dass der Absorptionskoeffizient stark zunimmt. Der Grund dafür liegt in der Anzahl der Zustände, die oberhalb der Bandlücke einen Übergang ermöglichen. Im idealisierten Modell nimmt dabei die Zustandsdichte im dreidimensionalen System wurzelförmig zu und immer mehr Lorentzoszillatoren tragen zur Erhöhung des Absorptionskoeffizient bei.\\
-Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen berechnen wir zunächst aus \cref{??} den Imaginärteil $\epsilon^{``}$ des undotierten und dotierten GaAs. Nun tragen wir $(\epsilon^{``}\cdot \omega^2)^2$ über die Anregungswellenzahl in \cref{??} auf. Der theoretische Verlauf dieser Funktion oberhalb der Bandlücke entspricht dabei
+Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen berechnen wir zunächst aus \cref{??} den Imaginärteil $\epsilon^{``}$ des undotierten und dotierten GaAs. Nun tragen wir $(\epsilon^{``}\cdot \omega^2)^2$ über die Anregungswellenzahl inTabelle \ref{??} auf. Der theoretische Verlauf dieser Funktion oberhalb der Bandlücke entspricht dabei
 
 \begin{align}
    (\epsilon^{``}\cdot \omega^2)^2=\frac{e^4 (2\mu)^3 |p_{cv}|^4}{\epsilon_0^2 m_e^4 \hbar^2} \cdot (\hbar \omega - E_g)
 \end{align}
 
-Wir plotten zu dem Messpunkten eine theoretische Kurve, die unserer Meinung nach die Steigung nach dem Knick am besten wiedergibt und die Messpunkte etwa am steilsten Punkt tangentiert. Zu dieser Kurve plotten wir zwei Hilfsfunktionen, die die Messdaten etwas weiter ober und unten tangentieren um eine Abschätzung der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten.
-Die Ergebnisse sind in \cref{} dargestellt.
+Wir plotten zu dem Messpunkten eine theoretische Kurve, die unserer Meinung nach die Steigung nach dem Knick am besten wiedergibt und die Messpunkte etwa am steilsten Punkt tangentiert. Zu dieser Kurve plotten wir zwei Hilfsfunktionen, die die Messdaten etwas weiter ober und unten tangentieren, um eine Abschätzung der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten.
+Die Ergebnisse sind in Tabelle \ref{ime} dargestellt.
 
+\begin{table}
+	\begin{center}
 \begin{tabular}{ l | c c }
   Material & Bandlücke/ $\SI{}{\eV}$ & Impulsmatrixelement\\
   \hline
   GaAs undotiert & 1.384(1) & 1.73(1) \\
-  GaAs dotiert & 1.3591(5) & 1.59(3) \\
+  GaAs dotiert & 1.3591(5) & 1.59(3)   
 \end{tabular}
+\caption{Ermittelte Werte für die Bandlücke von Galliumarsenid und entsprechende Impulsmatrixelement.}
+  \label{ime}  
+	\end{center}
+\end{table}
+Die von uns bestimmte Bandlücke von GaAs liegt mit $\SI{1.384}{\eV}$ um $\SI{50}{\milli\eV}$ unterhalb des Literaturwertes von 1.43 eV (bei $\SI{300}{\K}$). Der Grund liegt in der Aufweichung der Bandkante, dem sogenannten Urbachtail, der die Einflüsse von
+Exzitonen, Phononen, Verunreinigungen und Defekte sowie die Dotierungen im Material berücksichtigt. 
 
-Vergleich mit Literatur
+\subsection{Bandlücke und charakteristische Phononenfrequenz für Silizium}
+
+Bei Silizium handelt es sich um einen indirekten Halbleiter. Daher werden die Übergänge vom Valenz- zum Leitungsband maßgeblich von den Phononen im Material beeinflusst. Wir nutzen den Zusammenhang 
+\begin{align}
+\beta _{\text{em} }=\left(n_{\text{ph}}+1\right)\frac{\left(\hbar \omega -\hbar \omega _{\text{ph}}-E_g\right){}^2}{(\hbar \omega )^2}
+\end{align}
+und 
+\begin{align}
+\beta _{\text{abs} }=<n_{\text{ph}}>\frac{\left(\hbar \omega +\hbar \omega _{\text{ph}}-E_g\right){}^2}{(\hbar \omega )^2}
+\end{align}
+der den Beitrag der Phononenabsorption und \mbox{-emission} beschreibt. Die theoretische Absorption wird dann zusammen mit den experimentellen Daten, als $\sqrt{\beta _{\text{em} }+\beta _{\text{abs} }}\nu $ linearisiert, über der Wellenzahl in \cref{??} geplottet. Der theoretische Verlauf wurde dabei durch Variation der Bandlücke und der Phononenenergie möglichst gut den experimentellen Daten angepasst. Die Werte für den besten Fit sind in \cref{phe} aufgelistet.
+\begin{table}
+	\begin{center}
+\begin{tabular}{ l | c c }
+  Material & Bandlücke/$\SI{}{\eV}$ & Phononenenergie/$\SI{}{\milli\eV}$\\
+  \hline
+  Si undotiert & 1.108(3) & 48(2)
+\end{tabular}
+  \caption{Ermittelte Werte für die Bandlücke von undotiertem Silizium und der Phononenenergie der bei Übergang beteiligten Phononen.}
+  \label{phe}
+	\end{center}
+\end{table}
+
+Um den Fehler der ermittelten Werte abzuschätzen, haben wir wie in vorherigen Abschnitt die Parameter der Bandlücke und der Phononenenergie variiert und so einen Bereich ermittelt, in dem die theoretische Absorption noch gut das Experiment beschreibt.
+Die Ermittelte Bandlücke von Silizium stimmt gut mit dem Literaturwert von $\SI{1.11}{\eV}$ \cite{kittel} (bei $\SI{300}{\K}$) überein.
 
 
 \begin{itemize}
-\item 6. Bandlücke und Impulsmatrixelemente
-Auflösung des Spektrometers
-Urbachtail 
-Banddispersion
-\item 7. Bandlücke und charakteristische Phononenfrequenz für Si
 \item 8. Beitrag der freien Ladungsträger zur Reflexion
 \item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
 \end{itemize}
@@ -288,8 +315,11 @@ Banddispersion
 \bibitem{chriscolose} 
 http://chriscolose.wordpress.com/2010/03/02/global-warming-mapsgraphs-2/
 
-\bibitem{vineis} C.J. Vineis; C.A. Wang; K.F. Jensen (2001): In-situ reflectance 
-monitoring of GaSb substrate oxide desorption 2001.
+\bibitem{kittel} Kittel, C., Introduction to Solid State Physics, 6th Ed., New York:John Wiley, 1986, p. 185. 
+
+
+
+
 
 \bibitem{murray} Murray, Lee M.; Yildirim, Asli; Provence, Sydney R.; Norton, 
 Dennis T.; Boggess, Thomas F.; Prineas, John P. (2013): Causes and elimination 
