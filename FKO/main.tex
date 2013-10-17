@@ -232,8 +232,35 @@ treten auf, wenn die Intensität der Lampe in einem Frequenzbereich gering ist,
 und bei der Normierung das Rauschen einen erheblichen Beitrag zum Signal 
 leistet. Auch wurde versucht die Stetigkeit des Spektrums zu erhalten. Um das 
 Rauschen zu mininieren wurde eine Glättung durchgeführt und die resultierenden 
-Punkte zu einer Funktion interpoliert. Diese wurden dann mit folgenden 
-entsprechenden theoretischen Formeln verglichen:
+Punkte zu einer Funktion interpoliert. Diese wurden dann mit den theoretischen 
+Werten aus \cref{trans} verglichen. Es wurde für die jeweilige Wellenzahl ein $n$ und 
+$\kappa$ gefittet, welche die Differenz aus Theorie und experimentellen Daten 
+verschwinden ließ. Somit erhält man $\kappa(\nu)$, $n(\nu)$ und $\beta(\nu)$ 
+welche in \cref{brechzahlen} aufgetragen sind. 
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/brechzahl}
+        \caption{Realteil vom Brechungsindex $n$}
+        \label{bz}
+    \end{subfigure}
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/extinktion.pdf}
+        \caption{Imaginärteil vom Brechungsindex $\kappa$}
+        \label{ex}
+    \end{subfigure}
+    \begin{subfigure}{\columnwidth}
+        \includegraphics[width=\textwidth]{Bilder/absorption.pdf}
+        \caption{Absorptionskoeffizient $\beta$}
+        \label{ab}
+    \end{subfigure}
+    \caption{Die verschiedenen Koeffizienten unserer untersuchten Proben.  
+    \texttt{Sample 1} $\rightarrow$ \text{rot},
+    \texttt{Sample 2} $\rightarrow$ \text{grün}, 
+    \texttt{Sample 3} $\rightarrow$ \text{blau}}
+    \label{brechzahlen}
+\end{figure}
 % =============================================================================
 
 \subsection{Zusammenfassung}
@@ -261,7 +288,7 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 \bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
 stepped substrate. In: surface science letters.
 
-\bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
+\bibitem{nanotec} http//www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
 
 \end{document}
