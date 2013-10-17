@@ -73,6 +73,16 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 % =============================================================================
 
 \section{Theorie}
+\begin{align}
+    \text{transmission}= & \frac{(1-\rho)^2 \exp(-d\beta \nu )}{1-\rho^2 \exp 
+    (-2d\beta\nu)} \\
+    \text{reflexion}= & \rho+\frac{\rho (1-\rho)^2 \exp (-2 d \beta (\nu 
+    ))}{1-\rho^2 \exp(-2 d \beta \nu )}\\
+    \text{wobei } \beta= & 4 \pi  \nu  \left| \kappa \right|
+    \text{ und }\rho= \frac{\kappa ^2+(n-1)^2}{\kappa ^2+(n+1)^2}
+    \label{trans}
+\end{align}
+
 \begin{itemize}
 \item 6. Bandlücke und Impulsmatrixelemente
 \item 7. Bandlücke und charakteristische Phononenfrequenz für Si
@@ -85,115 +95,30 @@ Brechungsindex, Dotierkonzentrationen und Bandlücken berechnen.
 \item Zusammenhang Dielektrizitätskonstante und komplexer Brechungsindex
 \item Impulsmatrixelement
 \end{itemize}
-
-In diesem Abschnitt werden die wichtigsten Zusammenhänge die für die spätere 
-Betrachtung nötig sind vorstellen. Dabei orientieren wir uns, soweit nicht 
-anders angegeben, an \cref{fko-theorie}.
-
-\subsection{Dispersionsrelation und Brechungsindex}
-
-Aus den Maxwellgleichungen lässt sich die Wellengleichung herleiten, welche für 
-einen Ansatz ebener Wellen uns folgende Dispersionsrelation liefert:
-
-\begin{align}
-    q^2 = \frac{\omega^2}{c^2}\epsilon(\omega)
-\end{align}
-mit dem Wellenvektor $q$, der Frequenz $\omega$ und $c$, der 
-Lichtgeschwindigkeit im Vakuum.
-$\epsilon(\omega)=\epsilon'(\omega)+i\epsilon''(\omega)$ beschreibt dabei die 
-komplexe Dielektrizitätsfunktion. 
-Diese hängt mit dem komplexen Brechungsindex zusammen:
-
-\begin{align}
-    \sqrt{\epsilon}=n+i\kappa
-    \epsilon'=n^2-\kappa^2
-    \epsilon''=2n\kappa
-\end{align}
-
-\subsection{Reflexion und Transmission}
-Trifft Licht auf die Grenzfläche zwischen zwei unterschiedlichen Materialien, so 
-wird ein gewisser Anteil der Intensität reflektiert. Ein anderer Teil des 
-Lichtes gelangt in die Probe und kann dort absorbiert werden. Licht was nicht 
-reflektiert oder absorbiert wird, verlässt die Probe als transmittiertes Licht 
-wieder. Für die drei Koeffizienten diese drei Prozesse gilt deshalb
+Trifft Licht auf die Grenzfläche zwischen zwei unterschiedlichen Materialien, so wird ein gewisser Anteil der Intensität reflektiert. Ein anderer Teil des Lichtes gelangt in die Probe und kann dort absorbiert werden. Licht was nicht reflektiert oder absorbiert wird, verlässt die Probe als transmittiertes Licht wieder. Für die drei Koeffizienten diese drei Prozesse gilt deshalb
 
 \begin{align}
     R+A+T=1.
 \end{align}
 
-Dabei sind die Koeffizienten eindeutig durch den komplexen Brechungsindex der 
-Materialien festgelegt. Luft besitzt einen Brechungsindex von annähernd $1$.
-Die Fresnelschen Formeln, die den Übergang des Lichtes von einem Medium in ein 
-anderes beschreiben, vereinfachen sich bei senkrechtem Einfall deutlich. Man 
-erhält für den Reflexionskoeffizienten
+Dabei sind die Koeffizienten eindeutig durch den komplexen Brechungsindex der Materialien festgelegt. Luft besitzt einen Brechungsindex von annähernd $1$.
+Die Fresnelschen Formeln, die den Übergang des Lichtes von einem Medium in ein anderes beschreiben, vereinfachen sich bei senkrechtem Einfall deutlich. Man erhält für den Reflexionskoeffizienten
 
 \begin{align}
-    R=\left(\frac{1-N_2}{1+N_2}\right)^2.
+    R=(\frac{1-N_2}{1+N_2})^2.
 \end{align}
 
 und für den Transmissionskoeffizienten 
 
 \begin{align}
-    T=\left(\frac{2}{1+N_2}\right)^2.
-\end{align}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\columnwidth]{Bilder/Reflexion.jpg}
-    \caption{Mehrfachreflexion und -transmission an einer planparallelen 
-    Schicht}
-    \label{multi}
-\end{figure}
-
-Für eine planparallele Schicht muss man die wiederholte Reflexion und 
-Transmission berücksichtigen, wie in \cref{multi} illustriert und erhält dabei 
-dabei folgenden Ausdruck:
-\begin{align}
-    T_v= & \frac{(1-\rho)^2 \exp(-d\beta \nu )}{1-\rho^2 \exp (-2d\beta\nu)} \\ 
-    \vspace{2em}
-    R_v= & \rho+\frac{\rho (1-\rho)^2 \exp (-2 d \beta (\nu ))}{1-\rho^2 \exp(-2 
-    d \beta \nu )}\\
-    \vspace{2em}
-    \text{wobei } \beta= & 4 \pi  \nu  \left| \kappa \right|
-    \text{ und }\rho= \frac{\kappa ^2+(n-1)^2}{\kappa ^2+(n+1)^2}
-    \label{trans}
+    T=(\frac{2}{1+N_2})^2.
 \end{align}
 
 
 Für den Übergang von Luft in ein anderes Medium werden die Koeffizienten 
 
-\subsection{Lorentz Oszillator \& Drude Modell}
-
-Aus dem Lorentz-Modell eines Elektrons als Oszillator erhält man eine 
-dielektrische Funktion, die sich, obwohl durch klassische Überlegungen 
-begründet, dem quantenmeschanischem Modell sehr nahe kommt. Dieses wird durch 
-die Übergangsfrequenzen $\omega_j$, den Oszillatorstärken $f_j$ sowie den 
-inversen der Lebensdauer der Zustände $\Gamma_j$:
-
-\begin{align}
-    \epsilon(\omega) = 1 + \frac{e^2}{m\epsilon_0}\sum_j\frac{Nf_j}{\omega_j^2 
-    - \omega^2 - i\Gamma_j\omega}
-    \label{lorentz}
-\end{align}
-
-wobei die Summe aller Oszillatorstärken sich zu eins summiert.
-
-In der Impulsdarstellung lassen sich diese als Matrixelemente des 
-Impulsoperators darstellen:
-\begin{align}
-    f_{ij}=\frac{2}{m\hbar\omega_{ij}}\abs{p_{ij}}^2
-\end{align}
 
 
-Das Drude Modell betrachtet nun freie Ladungsträger mit verschwindenden 
-Resonanzfrequenzen. Mit der sog. Plasmafrequenz 
-$\omega_p=\frac{Ne^2}{m\epsilon_0}$ lässt \cref{lorentz} umformulieren zu:
-
-\begin{align}
-    \epsilon(\omega)=1-\frac{\omega_p\tau^2}{1+\omega^2\tau^2}+
-    i\frac{\omega_p\tau}{\omega+\omega^3\tau^2}
-    \label{drude}
-\end{align}
 
 % =============================================================================
 
@@ -202,8 +127,8 @@ $\omega_p=\frac{Ne^2}{m\epsilon_0}$ lässt \cref{lorentz} umformulieren zu:
 Alle Reflexions und Transmissionsmessungen finden im einem  FTIR statt, das 
 schematisch in \cref{ftir} dargestellt ist. Dabei wird das Licht, von einer 
 Infrarot-Lichtquelle (Globar-Stab oder Wolfram-Lampe) durch ein Interferometer 
-geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels. 
-Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet. 
+geleitet und interferiert in Abhängigkeit der Position des beweglichen Spiegels.  
+Das Frequenzspektrum wird dadurch auf eine neue Funktion $I(L)$ abgebildet.  
 Diese Funktion beschreibt die Abhängigkeit der detektierten Intensität von der 
 Spiegelposition und ist mathematisch eine Fouriertransformation des 
 Frequenzspektrums. Im optischen Strahlengang kann nun der Teil der Intensität 
@@ -244,6 +169,7 @@ Folgende Proben standen uns zur Verfügung:
     \label{ftir}
 \end{figure}
 
+
 % =============================================================================
 
 \section{Versuchsdurchführung}
@@ -262,10 +188,10 @@ $\SI{500}{\per\centi\meter}$ bis zu $\SI{5000}{\per\centi\meter}$ aussendet.
 Dieses Spektrum wird auf dem Weg zum Detektor von der Umgebungsluft an manchen 
 Stellen absorbiert, was uns die Spektralbereiche starker Gasabsorption 
 identifizieren lässt.
-In \cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
-jeweils zwei Bereiche der Absorption von Wasser (\cref{Luft2},\cref{Luft3}) und 
-Kohlenstoffdioxid (\cref{Luft4},\cref{Luft5}) zuordnen.  Deutlich zu erkennen sich 
-dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
+In cref{Luft1} ist das gesamte aufgenommene Spektrum gezeigt.  Wir können 
+jeweils zwei Bereiche der Absorption von Wasser (cref{Luft2},cref{Luft3}) und 
+Kohlenstoffdioxid (cref{Luft4},cref{Luft5}) zuordnen.  Deutlich zu erkennen 
+sich dabei auch die im Fall von Kohlenstoffdioxid die P- und R-Zweige der 
 Rotations-Schwingungs-Spektren.
 
 \subsection{Signal Rausch Verhältnis}
@@ -281,7 +207,7 @@ $\SI{2200}{\per\centi\meter}$). In diesem Bereich erhalten wir vom FTIR
 normierte Intensitätswerte, die um die $1$ schwanken. Aus diesen 
 Intensitätswerten, bestimmen wir die Standardabweichung vom Mittelwert und 
 interpretieren diese als Rauschen der Daten. Um zu untersuchen, ob das Rauschen 
-einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in \cref{snr} das Rauschen 
+einem $1/\sqrt{N}$-Zusammenhang folgt, plotten wir in cref{snr} das Rauschen 
 über $1/\sqrt{N}$. Den Fehler der Standardabweichungen erhalten wir mit 
 Gaußscher Fehlerfortpflanzung aus den Fehlern der einzelnen normierten 
 Intensitätswerten, für die wir wiederum die Größe des Rauschen annehmen.
@@ -330,6 +256,7 @@ treten auf, wenn die Intensität der Lampe in einem Frequenzbereich gering ist,
 und bei der Normierung das Rauschen einen erheblichen Beitrag zum Signal 
 leistet. Auch wurde versucht die Stetigkeit des Spektrums zu erhalten. Um das 
 Rauschen zu mininieren wurde eine Glättung durchgeführt und die resultierenden 
+<<<<<<< HEAD
 Punkte zu einer Funktion interpoliert. Diese wurden dann mit den theoretischen 
 Werten aus \cref{trans} verglichen. Es wurde für die jeweilige Wellenzahl ein $n$ und 
 $\kappa$ gefittet, welche die Differenz aus Theorie und experimentellen Daten 
@@ -359,6 +286,9 @@ welche in \cref{brechzahlen} aufgetragen sind.
     \texttt{Sample 3} $\rightarrow$ \text{blau}}
     \label{brechzahlen}
 \end{figure}
+=======
+Punkte zu einer Funktion interpoliert. Diese wurden dann mit folgenden 
+entsprechenden theoretischen Formeln verglichen:
 
 \subsection{Bandlücke und Impulsmatrixelemente}
 
@@ -391,6 +321,8 @@ Banddispersion
 \item 8. Beitrag der freien Ladungsträger zur Reflexion
 \item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
 \end{itemize}
+
+>>>>>>> 953ff9e90da8aa5ddedd05a30b6fc1ddc1340c53
 % =============================================================================
 
 \subsection{Zusammenfassung}
@@ -403,8 +335,6 @@ Banddispersion
 % =============================================================================
 
 \bibitem{ansyco} http://www.ansyco.de/CMS
-
-\bibitem{fko-theorie}Anleitung Festkörperoptik, Homepage Universität Würzburg
 
 \bibitem{chriscolose} 
 http://chriscolose.wordpress.com/2010/03/02/global-warming-mapsgraphs-2/
@@ -420,7 +350,7 @@ of pyramidal defects in GaSb-based epitaxial layers. In: J. Vac. Sci. Technol. B
 \bibitem{merikoski} J. Merikoski; S.C. Ying (1997): Collective diffusion on a 
 stepped substrate. In: surface science letters.
 
-\bibitem{nanotec} http://www.nanotec.es/products/wsxm/download.php. 
+\bibitem{nanotec} http//www.nanotec.es/products/wsxm/download.php. 
 \end{thebibliography}
 
 \end{document}
