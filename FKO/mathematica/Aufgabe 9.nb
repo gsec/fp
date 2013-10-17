@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    797420,      14243]
-NotebookOptionsPosition[    791842,      14071]
-NotebookOutlinePosition[    792177,      14086]
-CellTagsIndexPosition[    792134,      14083]
+NotebookDataLength[    808144,      14507]
+NotebookOptionsPosition[    802318,      14327]
+NotebookOutlinePosition[    802653,      14342]
+CellTagsIndexPosition[    802610,      14339]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -13792,7 +13792,7 @@ Cell[BoxData[
           "]"}], ",", 
          RowBox[{"reflintga", "[", "\[Nu]", "]"}]}], "}"}], ",", 
        RowBox[{"{", 
-        RowBox[{"\[Nu]", ",", "350", ",", "2800"}], "}"}], ",", 
+        RowBox[{"\[Nu]", ",", "350", ",", "3000"}], "}"}], ",", 
        RowBox[{"PlotRange", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{
@@ -13845,7 +13845,7 @@ Cell[BoxData[
    3.5910301040482273`*^9}, {3.59103018448109*^9, 3.591030222614943*^9}, 
    3.59103025612278*^9, {3.5910303713104057`*^9, 3.5910303912973537`*^9}, {
    3.591030466649151*^9, 3.591030482116406*^9}, {3.591032308267231*^9, 
-   3.591032308385536*^9}}],
+   3.591032308385536*^9}, {3.591032923294859*^9, 3.591032967609661*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -13860,15 +13860,15 @@ Cell[BoxData[
        Hold[$CellContext`meff$$], 0.06}, 0.05, 0.08, 0.005}}, 
     Typeset`size$$ = {800., {175., 180.}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`ne$51367$$ = 0, $CellContext`\[Tau]$51368$$ = 
-    0, $CellContext`meff$51369$$ = 0}, 
+    True, $CellContext`ne$52176$$ = 0, $CellContext`\[Tau]$52177$$ = 
+    0, $CellContext`meff$52178$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`meff$$ = 0.06, $CellContext`ne$$ = 
         0.9, $CellContext`\[Tau]$$ = 0.1}, "ControllerVariables" :> {
-        Hold[$CellContext`ne$$, $CellContext`ne$51367$$, 0], 
-        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$51368$$, 0], 
-        Hold[$CellContext`meff$$, $CellContext`meff$51369$$, 0]}, 
+        Hold[$CellContext`ne$$, $CellContext`ne$52176$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$52177$$, 0], 
+        Hold[$CellContext`meff$$, $CellContext`meff$52178$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -13878,7 +13878,7 @@ Cell[BoxData[
          1, 640 10^(-4), $CellContext`ne$$, $CellContext`\[Tau]$$, \
 $CellContext`meff$$], 
          $CellContext`reflintga[$CellContext`\[Nu]]}, {$CellContext`\[Nu], 
-         350, 2800}, PlotRange -> {{0, 3000}, {0, 0.5}}, 
+         350, 6000}, PlotRange -> {{0, 6000}, {0, 0.5}}, 
         FrameLabel -> {"wave numbers (cm^-1)", "Reflexion"}, 
         PlotLegends`PlotLegend -> {"theory, 440 \[Micro]m", "experiment"}, 
         PlotLegends`LegendPosition -> {1, -0.3}, 
@@ -13903,7 +13903,138 @@ $CellContext`meff$$],
    3.59102861917461*^9, 3.591028841995826*^9, 3.591029656158074*^9, 
    3.5910299601934853`*^9, 3.591030223868664*^9, 3.59103039247895*^9, 
    3.591030488503936*^9, {3.591032267270556*^9, 3.591032283006716*^9}, 
-   3.59103231304349*^9}]
+   3.59103231304349*^9, {3.591032933207814*^9, 3.59103294970646*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Vergleich", " ", "des", " ", "Experiments", " ", "mit", " ", "der", " ", 
+    "Theorie", " ", 
+    RowBox[{"(", 
+     RowBox[{"mit", " ", "Gitterbeitrag"}], ")"}]}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"ref", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"640", "*", 
+            RowBox[{"10", "^", 
+             RowBox[{"-", "4"}]}]}], ",", "ne", ",", "\[Tau]", ",", "meff"}], 
+          "]"}], ",", 
+         RowBox[{"reflintga", "[", "\[Nu]", "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Nu]", ",", "350", ",", "3000"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "3000"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0.5"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+       RowBox[{"FrameLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<wave numbers (\!\(\*SuperscriptBox[\(cm\), \(-1\)]\))\>\"", 
+          ",", "\"\<Reflexion\>\""}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Red", "]"}], ",", "Thick"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "Thick"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Blue", "]"}], ",", "Thick"}], "}"}]}], 
+         "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "800"}], ",", 
+       RowBox[{"PlotLegends", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<Theorie\>\"", ",", "\"\<Experiment\>\""}], "}"}]}]}], 
+      "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"ne", ",", "0.9"}], "}"}], ",", "0.70", ",", "2.00", ",", 
+       "0.1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"\[Tau]", ",", "0.1"}], "}"}], ",", "0.2", ",", "0.001", ",", 
+       "0.005"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"meff", ",", "0.06"}], "}"}], ",", "0.05", ",", "0.08", ",", 
+       "0.005"}], "}"}]}], "]"}], "\n"}]}]], "Input",
+ CellChangeTimes->{{3.591035936075189*^9, 3.5910359521494017`*^9}, {
+  3.5910361525982428`*^9, 3.5910361811259203`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`meff$$ = 0.06, $CellContext`ne$$ = 
+    0.9, $CellContext`\[Tau]$$ = 0.1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`ne$$], 0.9}, 0.7, 2., 0.1}, {{
+       Hold[$CellContext`\[Tau]$$], 0.1}, 0.2, 0.001, 0.005}, {{
+       Hold[$CellContext`meff$$], 0.06}, 0.05, 0.08, 0.005}}, 
+    Typeset`size$$ = {914., {252., 256.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`ne$55650$$ = 0, $CellContext`\[Tau]$55651$$ = 
+    0, $CellContext`meff$55652$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`meff$$ = 0.06, $CellContext`ne$$ = 
+        0.9, $CellContext`\[Tau]$$ = 0.1}, "ControllerVariables" :> {
+        Hold[$CellContext`ne$$, $CellContext`ne$55650$$, 0], 
+        Hold[$CellContext`\[Tau]$$, $CellContext`\[Tau]$55651$$, 0], 
+        Hold[$CellContext`meff$$, $CellContext`meff$55652$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`ref[
+         1, 640 10^(-4), $CellContext`ne$$, $CellContext`\[Tau]$$, \
+$CellContext`meff$$], 
+         $CellContext`reflintga[$CellContext`\[Nu]]}, {$CellContext`\[Nu], 
+         350, 3000}, PlotRange -> {{0, 3000}, {0, 0.5}}, Frame -> True, 
+        FrameLabel -> {
+         "wave numbers (\!\(\*SuperscriptBox[\(cm\), \(-1\)]\))", 
+          "Reflexion"}, PlotStyle -> {{
+           Darker[Red], Thick}, {
+           Darker[Green], Thick}, {
+           Darker[Blue], Thick}}, ImageSize -> 800, 
+        PlotLegends -> {"Theorie", "Experiment"}], 
+      "Specifications" :> {{{$CellContext`ne$$, 0.9}, 0.7, 2., 
+         0.1}, {{$CellContext`\[Tau]$$, 0.1}, 0.2, 0.001, 
+         0.005}, {{$CellContext`meff$$, 0.06}, 0.05, 0.08, 0.005}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{961., {320., 327.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.591035940763739*^9, 3.5910361831631203`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -14012,8 +14143,8 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`nmeff$$ = 0.0055, $CellContext`nne$$ = 
-    1.1, $CellContext`n\[Tau]$$ = 0.0095, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    1.1, $CellContext`n\[Tau]$$ = 0.009499999999999998, Typeset`show$$ = True,
+     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`nne$$], 1.1}, 0.9, 1.4, 0.05}, {{
@@ -14050,7 +14181,7 @@ $CellContext`nmeff$$],
          0.05}, {{$CellContext`n\[Tau]$$, 0.0095}, 0.0005, 0.015, 
          0.005}, {{$CellContext`nmeff$$, 0.0055}, 0.0005, 0.008, 0.0005}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{847., {244., 251.}},
+     ImageSizeCache->{847., {255., 262.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -14063,6 +14194,131 @@ $CellContext`nmeff$$],
  CellChangeTimes->{
   3.591031732464548*^9, {3.591032114444559*^9, 3.591032130429854*^9}, 
    3.591032184160077*^9, 3.5910323238399363`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+   "Vergleich", " ", "des", " ", "Experiments", " ", "mit", " ", "der", " ", 
+    "Theorie", " ", 
+    RowBox[{"(", 
+     RowBox[{"mit", " ", "Gitterbeitrag"}], ")"}]}], "*)"}], "\n", 
+  RowBox[{
+   RowBox[{"Manipulate", "[", 
+    RowBox[{
+     RowBox[{"Plot", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"ref", "[", 
+          RowBox[{"1", ",", 
+           RowBox[{"640", "*", 
+            RowBox[{"10", "^", 
+             RowBox[{"-", "4"}]}]}], ",", "nne", ",", "n\[Tau]", ",", 
+           "nmeff"}], "]"}], ",", 
+         RowBox[{"reflintsi", "[", "\[Nu]", "]"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"\[Nu]", ",", "350", ",", "2800"}], "}"}], ",", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "3000"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0.5"}], "}"}]}], "}"}]}], ",", 
+       RowBox[{"Frame", "\[Rule]", "True"}], ",", 
+       RowBox[{"FrameLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<wave numbers (\!\(\*SuperscriptBox[\(cm\), \(-1\)]\))\>\"", 
+          ",", "\"\<Reflexion\>\""}], "}"}]}], ",", 
+       RowBox[{"PlotStyle", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Red", "]"}], ",", "Thick"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Green", "]"}], ",", "Thick"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Darker", "[", "Blue", "]"}], ",", "Thick"}], "}"}]}], 
+         "}"}]}], ",", 
+       RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"nne", ",", "1.1"}], "}"}], ",", "0.9", ",", "1.40", ",", 
+       "0.05"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"n\[Tau]", ",", "0.0095"}], "}"}], ",", "0.0005", ",", 
+       "0.015", ",", "0.005"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"nmeff", ",", "0.0055"}], "}"}], ",", "0.0005", ",", "0.008", 
+       ",", "0.0005"}], "}"}]}], "]"}], "\n"}]}]], "Input",
+ CellChangeTimes->{3.591036013159341*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`nmeff$$ = 0.0055, $CellContext`nne$$ = 
+    1.1, $CellContext`n\[Tau]$$ = 0.0095, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`nne$$], 1.1}, 0.9, 1.4, 0.05}, {{
+       Hold[$CellContext`n\[Tau]$$], 0.0095}, 0.0005, 0.015, 0.005}, {{
+       Hold[$CellContext`nmeff$$], 0.0055}, 0.0005, 0.008, 0.0005}}, 
+    Typeset`size$$ = {800., {252., 257.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`nne$52980$$ = 0, $CellContext`n\[Tau]$52981$$ = 
+    0, $CellContext`nmeff$52982$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`nmeff$$ = 0.0055, $CellContext`nne$$ = 
+        1.1, $CellContext`n\[Tau]$$ = 0.0095}, "ControllerVariables" :> {
+        Hold[$CellContext`nne$$, $CellContext`nne$52980$$, 0], 
+        Hold[$CellContext`n\[Tau]$$, $CellContext`n\[Tau]$52981$$, 0], 
+        Hold[$CellContext`nmeff$$, $CellContext`nmeff$52982$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`ref[
+         1, 640 10^(-4), $CellContext`nne$$, $CellContext`n\[Tau]$$, \
+$CellContext`nmeff$$], 
+         $CellContext`reflintsi[$CellContext`\[Nu]]}, {$CellContext`\[Nu], 
+         350, 2800}, PlotRange -> {{0, 3000}, {0, 0.5}}, Frame -> True, 
+        FrameLabel -> {
+         "wave numbers (\!\(\*SuperscriptBox[\(cm\), \(-1\)]\))", 
+          "Reflexion"}, PlotStyle -> {{
+           Darker[Red], Thick}, {
+           Darker[Green], Thick}, {
+           Darker[Blue], Thick}}, ImageSize -> 800], 
+      "Specifications" :> {{{$CellContext`nne$$, 1.1}, 0.9, 1.4, 
+         0.05}, {{$CellContext`n\[Tau]$$, 0.0095}, 0.0005, 0.015, 
+         0.005}, {{$CellContext`nmeff$$, 0.0055}, 0.0005, 0.008, 0.0005}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{847., {321., 328.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.59103601425219*^9}]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -14230,16 +14486,24 @@ Cell[CellGroupData[{
 Cell[778109, 13751, 152, 2, 45, "Subsection"],
 Cell[778264, 13755, 604, 12, 55, "Input"],
 Cell[CellGroupData[{
-Cell[778893, 13771, 3034, 76, 143, "Input"],
-Cell[781930, 13849, 2962, 56, 512, "Output"]
+Cell[778893, 13771, 3080, 76, 143, "Input"],
+Cell[781976, 13849, 3007, 56, 512, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[785020, 13910, 2567, 71, 150, "Input"],
+Cell[787590, 13983, 2691, 53, 664, "Output"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[784941, 13911, 152, 2, 45, "Subsection"],
-Cell[785096, 13915, 654, 12, 55, "Input"],
+Cell[790330, 14042, 152, 2, 45, "Subsection"],
+Cell[790485, 14046, 654, 12, 55, "Input"],
 Cell[CellGroupData[{
-Cell[785775, 13931, 3155, 77, 143, "Input"],
-Cell[788933, 14010, 2845, 54, 512, "Output"]
+Cell[791164, 14062, 3155, 77, 143, "Input"],
+Cell[794322, 14141, 2859, 54, 534, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[797218, 14200, 2356, 66, 152, "Input"],
+Cell[799577, 14268, 2677, 52, 666, "Output"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]

@@ -418,6 +418,36 @@ Die Ermittelte Bandlücke von Silizium stimmt gut mit dem Literaturwert von $\SI
 \item 8. Beitrag der freien Ladungsträger zur Reflexion
 \item 9. Leitfähigkeitsmassen, Stromrelaxationszeiten und Dotierkonzentrationen
 \end{itemize}
+
+\subsection{Drude Modell und characteristische Parameter}
+
+In den dotierten Proben wurde die Stromrelaxationszeit $\tau$, die 
+Dotierkonzentration $\eta$ sowie die effektive Masse $m$ bestimmt. Die 
+gemessenen Reflektionsspektren wurden an ein theoretisches Model mit 
+entsprechenden freien Parametern angefittet. Der Fit berücksichtigt die 
+Hochfrequenzleitfähigkeit nach Drude:
+
+\begin{align}
+    \sigma(\omega) = \frac{e^2 \tau n_e}{1-\text{i}\omega\tau} 
+    \frac{1}{m_L},
+\end{align}
+sowie die Beiträge der verschiedenen optischen Phononfrequenzen 
+($\nu_{LO}=\SI{292}{\per\centi\meter}$, $\nu_{TO}=\SI{268}{\per\centi\meter}$) 
+sowie die Phononendämpfung ($\Gamma=\SI{2.5}{\per\centi\meter}$). Für die 
+relative dielektrische Konstante wurde der Wert $\epsilon_{\infty}=10.37$ 
+verwendet.
+
+\begin{tabular}{l c c c}
+    Probe & $\tau$ in $10^{-15}$s & $\eta$ in $10^{18} \frac{1}{\text{cm}}$ &
+   $m$ in $m_e$ \\
+   \hline
+   $\circled{2}$ & $100\pm5$ & $0.9\pm0.1$ & $0.060\pm0.005$ \\
+   $\circled{4}$ & $9.5\pm1.0$ & $1.10\pm0.05$ & $0.0055\pm0.0005$
+\end{tabular}
+
+
+
+
 % =============================================================================
 
 \subsection{Zusammenfassung}
