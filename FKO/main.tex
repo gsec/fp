@@ -400,21 +400,41 @@ Lorentzoszillatoren tragen zur Erhöhung des Absorptionskoeffizient bei.\\
 Um die Bandlücke und das Impulsmatrixelement der Übergänge zu bestimmen, 
 berechnen wir zunächst aus \cref{diel} den Imaginärteil $\epsilon^{``}$ des 
 undotierten und dotierten GaAs. Nun tragen wir $(\epsilon^{``}\cdot \omega^2)^2$ 
-über die Anregungswellenzahl in Abbildung \ref{??} auf. Der theoretische Verlauf 
+über die Anregungswellenzahl in Abbildung \ref{bl_dot} auf. Der theoretische Verlauf 
 dieser Funktion oberhalb der Bandlücke entspricht dabei
+
 
 \begin{align}
    (\epsilon^{``}\cdot \omega^2)^2=\frac{e^4 (2\mu)^3 |p_{cv}|^4}{\epsilon_0^2 
    m_e^4 \hbar^2} \cdot (\hbar \omega - E_g)
 \end{align}
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/bl_dot}
+		\caption{Experimentelle Daten des komplexen Teil der dielektrischen Funktion in blau für undotiertes GaAs. In Rot wurde eine Gerade an die Daten angepasst. Zwei grüne Hilfsgeraden schätzen den Fehler der Steigung und des Achsenabschnittes ab.}
+		\label{bl_dot}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/bl_undot}
+		\caption{Experimentelle Daten des komplexen Teil der dielektrischen Funktion in blau für dotiertes GaAs. In Rot wurde eine Gerade an die Daten angepasst. Zwei grüne Hilfsgeraden schätzen den Fehler der Steigung und des Achsenabschnittes ab.}
+		\label{bl_undot}
+	\end{center}
+\end{figure}
+
 Wir plotten zu dem Messpunkten eine theoretische Kurve, die unserer Meinung nach 
 die Steigung nach dem Knick am besten wiedergibt und die Messpunkte etwa am 
 steilsten Punkt tangentiert. Zu dieser Kurve plotten wir zwei Hilfsfunktionen, 
 die die Messdaten etwas weiter ober und unten tangentieren, um eine Abschätzung 
 der Unsicherheit von Bandlücke und Impulsmatrixelement zu erhalten. In allen 
-folgenden Auswertung verwenden wir die Methode, die Fit-Paramtern wie hier leichtim Rahmen der experimentellen Daten zu variieren und damit den Fehler abzuschätzen.
+folgenden Auswertung verwenden wir die Methode, die Fit-Paramtern wie hier leicht im Rahmen der experimentellen Daten zu variieren und damit den Fehler abzuschätzen.
 Die Ergebnisse sind in Tabelle \ref{ime} dargestellt.
+
+
+
 
 \begin{table}
     \begin{center}
@@ -457,9 +477,9 @@ und
 der den Beitrag der Phononenabsorption und \mbox{-emission} beschreibt. Die 
 theoretische Absorption wird dann zusammen mit den experimentellen Daten, als 
 $\sqrt{\beta _{\text{em} }+\beta _{\text{abs} }}\nu $ linearisiert, über der 
-Wellenzahl in \cref{??} geplottet. Der theoretische Verlauf wurde dabei durch 
+Wellenzahl in Abbildung \ref{phonon_char} geplottet. Der theoretische Verlauf wurde dabei durch 
 Variation der Bandlücke und der Phononenenergie möglichst gut den 
-experimentellen Daten angepasst. Die Werte für den besten Fit sind in \cref{phe} 
+experimentellen Daten angepasst. Die Werte für den besten Fit sind in Tabelle \ref{phe} 
 aufgelistet.
 \begin{table}
     \begin{center}
@@ -474,14 +494,22 @@ aufgelistet.
     \end{center}
 \end{table}
 
-Die Ermittelte Bandlücke von Silizium stimmt gut mit dem 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/phonon_char}
+		\caption{Experimentelle Daten des Absorptionskoeffizienten von undotiertem Silizium in blau für dotiertes GaAs. In Rot wurde eine Bestkurve an die Daten angepasst. Die Grünen Geraden entsprechen dem Beitrag der Phononenabsorption (flach) bzw. -emission (steil).}
+		\label{phonon_char}
+	\end{center}
+\end{figure}
+
+Die ermittelte Bandlücke von Silizium stimmt gut mit dem 
 Literaturwert von $\SI{1.11}{\eV}$ \cite{kittel} (bei $\SI{300}{\K}$) überein.
 
 \subsection{Beitrag der freien Ladungsträger zur Reflexion}
 
 Um den Beitrag der freien Ladungsträger zur Reflektivität nachvollziehen zu 
-können, plotten wir in \cref{DrudeRef} die Reflektivität im Drudemodell in 
-Abhängigkeit der Wellenzahl für verschiedene Streuzeiten. Wir sehen für hohe 
+können, plotten wir in Abbildung \ref{reflexion_metall} die Reflektivität im Drudemodell in 
+Abhängigkeit der Wellenzahl für verschiedene Streuzeiten. Wir erkennen für hohe 
 Streuzeiten eine Reflektivität von nahezu $1$. An der Plasmakante bei $ 
 w_p^2=\frac{N e^2}{\epsilon_0 m^*}$ fällt dann die Reflektivität asymptotisch 
 auf null ab. Dies kann verstanden werden  wenn man die dielektrische Funktion 
@@ -498,14 +526,31 @@ Energie. Dies ist besonders dann effektiv, wenn die Elektronen wenig streuen,
 also lange Streuzeiten besitzen. In diesem Fall dringt die elektromagnetische 
 Welle nur wenig in das Material ein und ein Großteil der Welle wird Reflektiert.
 
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/reflexion_metall}
+		\caption{Theoretische Simulation der Plasmakante von Gold. Geplottet wurden vier verschiedene Relaxationszeiten: $\SI{0.1e-12}{\second}$ (rot), $\SI{0.01e-12}{\second}$ (grün), $\SI{0.001e-12}{\second}$ (blau) und $\SI{0.0001e-12}{\second}$ (schwarz).}
+		\label{reflexion_metall}
+	\end{center}
+\end{figure}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=\columnwidth]{Bilder/reflexion_hl}
+		\caption{Theoretische Simulation der Reflektivität einer Halbleiterprobe. Bei Simulation wurden zusätzlich der Einfluss des Gitters berücksichtigt.}
+		\label{reflexion_hl}
+	\end{center}
+\end{figure}
+
 Im Halbleiter spielen sich grundsätzlich ähnliche Prozesse ab. Die wesentlichen 
 Unterschiede hierbei sind jedoch, dass die Hintergrundsdielektrische-Funktion 
-größer als $1$ ist, die Elektronen effektive Massen besitzen, die in 
+größer als $1$ ist, die Elektronen eine effektive Massen besitzen, die in 
 unterschiedliche Raumrichtungen unterschiedlich groß sein können und dass das 
 Gitter einen wesentlichen Beitrag zur dielektrischen Funktion spielen kann. In 
-\ref{RefHalbleiter} ist zum Vergleich mit den Drudemodell eine Simulation mit 
+\ref{reflexion_hl} ist zum Vergleich mit den Drudemodell eine Simulation mit 
 $\epsilon_\infty=3.22^2$, einer effektiven Masse von $0.067m_e$ und einem 
 Einfluss des Atomgitters geplottet.
+
 
 \subsection{Drude Modell und charakteristische Parameter}
 
@@ -519,6 +564,7 @@ Hochfrequenzleitfähigkeit nach Drude:
     \sigma(\omega) = \frac{e^2 \tau n_e}{1-\text{i}\omega\tau} 
     \frac{1}{m_L},
 \end{align}
+
 sowie die Beiträge der verschiedenen optischen Phononfrequenzen 
 ($\nu_{LO}=\SI{292}{\per\centi\meter}$, $\nu_{TO}=\SI{268}{\per\centi\meter}$) 
 sowie die Phononendämpfung ($\Gamma=\SI{2.5}{\per\centi\meter}$). Für die 
